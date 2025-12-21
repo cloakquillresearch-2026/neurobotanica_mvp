@@ -9,6 +9,8 @@ Features:
 - 2D/3D descriptor computation
 - COA (Certificate of Analysis) QC validation
 - Molecular characterization report generation
+- Cannabis-specific cannabinoid/terpene analysis
+- Entourage effect modeling
 """
 
 from .analyzer import (
@@ -26,6 +28,19 @@ from .analyzer import (
 from .report_generator import (
     ChemPathReportGenerator,
     ReportFormat
+)
+
+from .cannabinoid_analyzer import (
+    CannabinoidAnalyzer,
+    CannabinoidType,
+    TerpeneType,
+    ReceptorTarget,
+    TherapeuticCategory,
+    CannabinoidProfile,
+    TerpeneProfile,
+    SynergyInteraction,
+    EntourageProfile,
+    FormulationRecommendation,
 )
 
 __all__ = [
@@ -46,5 +61,17 @@ __all__ = [
     
     # Report generation
     "ChemPathReportGenerator",
-    "ReportFormat"
+    "ReportFormat",
+    
+    # Cannabis-specific analysis
+    "CannabinoidAnalyzer",
+    "CannabinoidType",
+    "TerpeneType",
+    "ReceptorTarget",
+    "TherapeuticCategory",
+    "CannabinoidProfile",
+    "TerpeneProfile",
+    "SynergyInteraction",
+    "EntourageProfile",
+    "FormulationRecommendation",
 ]

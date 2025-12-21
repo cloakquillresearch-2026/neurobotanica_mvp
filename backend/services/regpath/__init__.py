@@ -6,6 +6,8 @@ Produces manufacturer-facing Regulatory Strategy Memos with:
 - Pathway recommendations (IND/NDA/505(b)(2)/ANDA)
 - Readiness checklists
 - Timeline estimates
+- Schedule III cannabis DEA registration planning
+- FDA botanical drug pathway design
 
 Exposes capabilities via API while keeping decision matrices/weights/heuristics proprietary.
 """
@@ -33,6 +35,21 @@ from .memo_generator import (
     MemoConfig
 )
 
+from .schedule3_strategist import (
+    Schedule3Strategist,
+    RegulatoryPathway as CannabisRegulatoryPathway,
+    DEASchedule,
+    DEALicenseType,
+    SubmissionType,
+    MilestoneStatus,
+    DEARequirement,
+    FDASubmissionMilestone,
+    ClinicalTrialDesign,
+    BotanicalDrugRequirement,
+    DEARegistrationPlan,
+    BotanicalDrugPathway,
+)
+
 __all__ = [
     # Main strategist
     "RegPathStrategist",
@@ -57,5 +74,19 @@ __all__ = [
     # Memo generation
     "RegPathMemoGenerator",
     "MemoFormat",
-    "MemoConfig"
+    "MemoConfig",
+    
+    # Schedule III Cannabis
+    "Schedule3Strategist",
+    "CannabisRegulatoryPathway",
+    "DEASchedule",
+    "DEALicenseType",
+    "SubmissionType",
+    "MilestoneStatus",
+    "DEARequirement",
+    "FDASubmissionMilestone",
+    "ClinicalTrialDesign",
+    "BotanicalDrugRequirement",
+    "DEARegistrationPlan",
+    "BotanicalDrugPathway",
 ]

@@ -10,6 +10,9 @@ Features:
 - Route-aware risk framing
 - Testing plan generation
 - Toxicity memo generation
+- Cannabis safety assessment (Schedule III compliance)
+- Drug-drug interaction prediction
+- Abuse liability assessment
 """
 
 from .assessor import (
@@ -30,6 +33,20 @@ from .memo_generator import (
     ToxPathMemoGenerator,
     MemoFormat,
     MemoConfig
+)
+
+from .cannabis_safety import (
+    CannabisSafetyAssessor,
+    AbuseClass,
+    RiskLevel,
+    InteractionType,
+    InteractionMechanism,
+    VulnerablePopulation,
+    AdverseEvent,
+    DrugInteraction,
+    AbuseLiabilityProfile,
+    SafetyProfile,
+    SafetyRecommendation,
 )
 
 __all__ = [
@@ -53,5 +70,18 @@ __all__ = [
     # Memo generation
     "ToxPathMemoGenerator",
     "MemoFormat",
-    "MemoConfig"
+    "MemoConfig",
+    
+    # Cannabis safety (Schedule III)
+    "CannabisSafetyAssessor",
+    "AbuseClass",
+    "RiskLevel",
+    "InteractionType",
+    "InteractionMechanism",
+    "VulnerablePopulation",
+    "AdverseEvent",
+    "DrugInteraction",
+    "AbuseLiabilityProfile",
+    "SafetyProfile",
+    "SafetyRecommendation",
 ]
