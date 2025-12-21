@@ -123,9 +123,9 @@ class PathwayStatus(BaseModel):
     rerouted_to: Optional[str] = None
     suspended_operations: List[str] = Field(default_factory=list)
     
-    # Resources
+    # Resources (quantum-ready: compute_units scale to qubits)
     emergency_resources_allocated: bool = False
-    additional_qubits: int = 0
+    additional_compute_units: int = 0
     additional_memory_gb: int = 0
 
 
@@ -210,8 +210,8 @@ class EmergencyConfig(BaseModel):
     auto_escalation_enabled: bool = True
     escalation_timeout_minutes: int = 15
     
-    # Resource surge limits
-    max_emergency_qubits: int = 5000
+    # Resource surge limits (quantum-ready: compute_units map to qubits)
+    max_emergency_compute_units: int = 5000
     max_emergency_memory_gb: int = 500
     
     # TK consultation requirements
@@ -451,41 +451,43 @@ class EmergencyCoordinator:
     def allocate_emergency_resources(
         self,
         crisis_id: str,
-        qubits: int,
+        compute_units: int,
         memory_gb: int,
     ) -> EmergencyResponse:
         """
         Allocate emergency resources to crisis response.
         Trade Secret: Resource surge allocation algorithm.
+        
+        Quantum-Ready: compute_units map to qubits when quantum backend available.
         """
         response = self._active_responses.get(crisis_id)
         if not response:
             raise ValueError(f"Crisis not found: {crisis_id}")
         
         # Enforce limits
-        qubits = min(qubits, self._config.max_emergency_qubits)
+        compute_units = min(compute_units, self._config.max_emergency_compute_units)
         memory_gb = min(memory_gb, self._config.max_emergency_memory_gb)
         
         response.emergency_resources_used = {
-            "qubits": qubits,
+            "compute_units": compute_units,
             "memory_gb": memory_gb,
         }
         
         # Distribute to affected pathways
         if response.affected_pathways:
-            per_pathway_qubits = qubits // len(response.affected_pathways)
+            per_pathway_compute_units = compute_units // len(response.affected_pathways)
             per_pathway_memory = memory_gb // len(response.affected_pathways)
             
             for pathway_status in response.affected_pathways:
                 pathway_status.emergency_resources_allocated = True
-                pathway_status.additional_qubits = per_pathway_qubits
+                pathway_status.additional_compute_units = per_pathway_compute_units
                 pathway_status.additional_memory_gb = per_pathway_memory
         
         # Log action
         response.actions_log.append({
             "timestamp": datetime.utcnow().isoformat(),
             "action": "resources_allocated",
-            "details": f"Allocated {qubits} qubits, {memory_gb}GB memory",
+            "details": f"Allocated {compute_units} compute_units, {memory_gb}GB memory",
         })
         
         return response

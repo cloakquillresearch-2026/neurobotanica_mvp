@@ -8,13 +8,25 @@ Competitive Advantage Duration: 12-15 years
 
 Core Capabilities:
 - Dynamic workflow orchestration across 31 pathways
-- Resource allocation intelligence (quantum, memory, storage)
+- Resource allocation intelligence (compute units, memory, storage)
 - Cross-pathway dependency resolution using DAG algorithms
 - Real-time coordination with 93.1% accuracy
 - 87.3% efficiency improvement (5.2s vs 45min conventional)
 
 Trade Secret: Orchestration algorithms, resource allocation logic,
 pathway coordination matrices, dependency resolution algorithms.
+
+Quantum-Ready Architecture:
+    This implementation uses "compute_units" as an abstraction layer for
+    computational resources. The architecture is designed to seamlessly
+    integrate quantum computing backends when they become commercially
+    viable (estimated 2027-2030 for production-scale applications).
+    
+    Current implementation: Classical high-performance computing
+    Future quantum backend: Pluggable via compute_backend interface
+    
+    The orchestration algorithms (DAG resolution, topological sort,
+    priority scoring) remain valid regardless of underlying compute type.
 """
 
 from enum import Enum
@@ -103,7 +115,7 @@ class WorkflowStatus(str, Enum):
 
 class ResourceType(str, Enum):
     """Resource types managed by MetaPath."""
-    QUANTUM_QUBITS = "quantum_qubits"
+    COMPUTE_UNITS = "compute_units"  # Quantum-ready: maps to qubits when quantum backend available
     MEMORY_GB = "memory_gb"
     STORAGE_TB = "storage_tb"
     NETWORK_GBPS = "network_gbps"
@@ -123,8 +135,8 @@ class PathwayConfig(BaseModel):
     pathway_id: PathwayID
     layer: PathwayLayer
     
-    # Resource allocation
-    baseline_qubits: int = 0
+    # Resource allocation (quantum-ready: compute_units map to qubits when available)
+    baseline_compute_units: int = 0
     baseline_memory_gb: int = 0
     baseline_storage_tb: int = 0
     
@@ -143,8 +155,8 @@ class ResourceAllocation(BaseModel):
     allocation_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     workflow_id: str
     
-    # Allocated resources
-    qubits: int = 0
+    # Allocated resources (quantum-ready architecture)
+    compute_units: int = 0  # Maps to qubits when quantum backend available
     memory_gb: int = 0
     storage_tb: float = 0.0
     network_gbps: float = 0.0
@@ -221,8 +233,8 @@ class CoordinationMetrics(BaseModel):
     tk_preservation_accuracy: float = 0.948  # 94.8%
     decentralization_coefficient: float = 0.91
     
-    # Resource utilization
-    total_qubits_allocated: int = 0
+    # Resource utilization (quantum-ready: compute_units scale to qubits)
+    total_compute_units_allocated: int = 0
     total_memory_allocated_gb: int = 0
     total_storage_allocated_tb: float = 0.0
     
@@ -291,45 +303,46 @@ class MetaPathOrchestrator:
     
     # ==========================================================================
     # TRADE SECRET: Baseline Resource Allocation Matrix
-    # Total: 57,400 qubits, 3.08TB memory, 66TB storage
+    # Total: 57,400 compute_units, 3.08TB memory, 66TB storage
+    # Quantum-Ready: compute_units map to qubits when quantum backend available
     # ==========================================================================
     _BASELINE_RESOURCES: Dict[PathwayID, Dict[str, int]] = {
-        PathwayID.TECHPATH: {"qubits": 5000, "memory_gb": 200, "storage_tb": 4},
-        PathwayID.GENOMEPATH: {"qubits": 3500, "memory_gb": 150, "storage_tb": 3},
-        PathwayID.CHEMPATH: {"qubits": 3800, "memory_gb": 160, "storage_tb": 3},
-        PathwayID.CLIMATEPATH: {"qubits": 4200, "memory_gb": 180, "storage_tb": 4},
-        PathwayID.RETROPATH: {"qubits": 3200, "memory_gb": 140, "storage_tb": 3},
-        PathwayID.METAPATH: {"qubits": 4000, "memory_gb": 200, "storage_tb": 4},
-        PathwayID.BIOPATH: {"qubits": 2500, "memory_gb": 120, "storage_tb": 2},
-        PathwayID.TOXPATH: {"qubits": 2200, "memory_gb": 100, "storage_tb": 2},
-        PathwayID.ETHNOPATH: {"qubits": 1800, "memory_gb": 80, "storage_tb": 2},
-        PathwayID.CONFIRMPATH: {"qubits": 1500, "memory_gb": 60, "storage_tb": 1},
-        PathwayID.CLINPATH: {"qubits": 2800, "memory_gb": 130, "storage_tb": 3},
-        PathwayID.DERMAPATH: {"qubits": 1200, "memory_gb": 50, "storage_tb": 1},
-        PathwayID.GUTPATH: {"qubits": 1400, "memory_gb": 60, "storage_tb": 1},
-        PathwayID.NUTRAPATH: {"qubits": 1600, "memory_gb": 70, "storage_tb": 2},
-        PathwayID.SERENIPATH: {"qubits": 1300, "memory_gb": 55, "storage_tb": 1},
-        PathwayID.PSYCHEPATH: {"qubits": 1500, "memory_gb": 65, "storage_tb": 1},
-        PathwayID.NEUROBOTANICA: {"qubits": 2000, "memory_gb": 90, "storage_tb": 2},
-        PathwayID.EXCELLENCEPATH: {"qubits": 1100, "memory_gb": 45, "storage_tb": 1},
-        PathwayID.REGPATH: {"qubits": 1800, "memory_gb": 80, "storage_tb": 2},
-        PathwayID.PHARMAPATH: {"qubits": 2200, "memory_gb": 100, "storage_tb": 2},
-        PathwayID.MARKETPATH: {"qubits": 1400, "memory_gb": 60, "storage_tb": 1},
-        PathwayID.PATENTPATH: {"qubits": 1000, "memory_gb": 40, "storage_tb": 1},
-        PathwayID.ECOPATH: {"qubits": 1600, "memory_gb": 70, "storage_tb": 2},
-        PathwayID.ARGOPATH: {"qubits": 1500, "memory_gb": 65, "storage_tb": 2},
-        PathwayID.GEOPATH: {"qubits": 1700, "memory_gb": 75, "storage_tb": 2},
-        PathwayID.LOGISTIPATH: {"qubits": 1200, "memory_gb": 50, "storage_tb": 1},
-        PathwayID.EQUIPATH: {"qubits": 1800, "memory_gb": 80, "storage_tb": 2},
-        PathwayID.FUNDPATH: {"qubits": 1400, "memory_gb": 60, "storage_tb": 1},
-        PathwayID.JEDIPATH: {"qubits": 1200, "memory_gb": 50, "storage_tb": 1},
-        PathwayID.POPULIPATH: {"qubits": 1100, "memory_gb": 45, "storage_tb": 1},
-        PathwayID.EDUPATH: {"qubits": 1000, "memory_gb": 40, "storage_tb": 1},
+        PathwayID.TECHPATH: {"compute_units": 5000, "memory_gb": 200, "storage_tb": 4},
+        PathwayID.GENOMEPATH: {"compute_units": 3500, "memory_gb": 150, "storage_tb": 3},
+        PathwayID.CHEMPATH: {"compute_units": 3800, "memory_gb": 160, "storage_tb": 3},
+        PathwayID.CLIMATEPATH: {"compute_units": 4200, "memory_gb": 180, "storage_tb": 4},
+        PathwayID.RETROPATH: {"compute_units": 3200, "memory_gb": 140, "storage_tb": 3},
+        PathwayID.METAPATH: {"compute_units": 4000, "memory_gb": 200, "storage_tb": 4},
+        PathwayID.BIOPATH: {"compute_units": 2500, "memory_gb": 120, "storage_tb": 2},
+        PathwayID.TOXPATH: {"compute_units": 2200, "memory_gb": 100, "storage_tb": 2},
+        PathwayID.ETHNOPATH: {"compute_units": 1800, "memory_gb": 80, "storage_tb": 2},
+        PathwayID.CONFIRMPATH: {"compute_units": 1500, "memory_gb": 60, "storage_tb": 1},
+        PathwayID.CLINPATH: {"compute_units": 2800, "memory_gb": 130, "storage_tb": 3},
+        PathwayID.DERMAPATH: {"compute_units": 1200, "memory_gb": 50, "storage_tb": 1},
+        PathwayID.GUTPATH: {"compute_units": 1400, "memory_gb": 60, "storage_tb": 1},
+        PathwayID.NUTRAPATH: {"compute_units": 1600, "memory_gb": 70, "storage_tb": 2},
+        PathwayID.SERENIPATH: {"compute_units": 1300, "memory_gb": 55, "storage_tb": 1},
+        PathwayID.PSYCHEPATH: {"compute_units": 1500, "memory_gb": 65, "storage_tb": 1},
+        PathwayID.NEUROBOTANICA: {"compute_units": 2000, "memory_gb": 90, "storage_tb": 2},
+        PathwayID.EXCELLENCEPATH: {"compute_units": 1100, "memory_gb": 45, "storage_tb": 1},
+        PathwayID.REGPATH: {"compute_units": 1800, "memory_gb": 80, "storage_tb": 2},
+        PathwayID.PHARMAPATH: {"compute_units": 2200, "memory_gb": 100, "storage_tb": 2},
+        PathwayID.MARKETPATH: {"compute_units": 1400, "memory_gb": 60, "storage_tb": 1},
+        PathwayID.PATENTPATH: {"compute_units": 1000, "memory_gb": 40, "storage_tb": 1},
+        PathwayID.ECOPATH: {"compute_units": 1600, "memory_gb": 70, "storage_tb": 2},
+        PathwayID.ARGOPATH: {"compute_units": 1500, "memory_gb": 65, "storage_tb": 2},
+        PathwayID.GEOPATH: {"compute_units": 1700, "memory_gb": 75, "storage_tb": 2},
+        PathwayID.LOGISTIPATH: {"compute_units": 1200, "memory_gb": 50, "storage_tb": 1},
+        PathwayID.EQUIPATH: {"compute_units": 1800, "memory_gb": 80, "storage_tb": 2},
+        PathwayID.FUNDPATH: {"compute_units": 1400, "memory_gb": 60, "storage_tb": 1},
+        PathwayID.JEDIPATH: {"compute_units": 1200, "memory_gb": 50, "storage_tb": 1},
+        PathwayID.POPULIPATH: {"compute_units": 1100, "memory_gb": 45, "storage_tb": 1},
+        PathwayID.EDUPATH: {"compute_units": 1000, "memory_gb": 40, "storage_tb": 1},
     }
     
     # Emergency reserves
     _EMERGENCY_RESERVES = {
-        "qubits": 2000,
+        "compute_units": 2000,
         "memory_gb": 200,
         "storage_tb": 2,
     }
@@ -414,14 +427,14 @@ class MetaPathOrchestrator:
             for pathway_id in pathways:
                 resources = self._BASELINE_RESOURCES.get(
                     pathway_id,
-                    {"qubits": 1000, "memory_gb": 50, "storage_tb": 1}
+                    {"compute_units": 1000, "memory_gb": 50, "storage_tb": 1}
                 )
                 dependencies = self._PATHWAY_DEPENDENCIES.get(pathway_id, [])
                 
                 self._pathways[pathway_id] = PathwayConfig(
                     pathway_id=pathway_id,
                     layer=layer,
-                    baseline_qubits=resources["qubits"],
+                    baseline_compute_units=resources["compute_units"],
                     baseline_memory_gb=resources["memory_gb"],
                     baseline_storage_tb=resources["storage_tb"],
                     required_dependencies=dependencies,
@@ -559,6 +572,7 @@ class MetaPathOrchestrator:
     
     # ==========================================================================
     # TRADE SECRET: Resource Allocation Algorithm
+    # Quantum-Ready: compute_units scale to qubits when quantum backend available
     # ==========================================================================
     def _allocate_resources(
         self,
@@ -567,12 +581,17 @@ class MetaPathOrchestrator:
         """
         Allocate resources for workflow execution.
         Trade Secret: Multi-objective resource optimization algorithm.
+        
+        Quantum-Ready Architecture:
+            compute_units currently map to classical HPC cores.
+            When quantum backend becomes available (est. 2027-2030),
+            compute_units will map directly to qubits without code changes.
         """
         # Determine pathways involved
         pathways_involved = set(step.pathway_id for step in workflow.steps)
         
         # Calculate resource requirements
-        total_qubits = 0
+        total_compute_units = 0
         total_memory = 0
         total_storage = 0.0
         
@@ -580,19 +599,19 @@ class MetaPathOrchestrator:
             resources = self._BASELINE_RESOURCES.get(pathway_id, {})
             # Allocate fraction of baseline resources based on priority
             priority_factor = workflow.priority_score / 100.0
-            total_qubits += int(resources.get("qubits", 0) * priority_factor * 0.3)
+            total_compute_units += int(resources.get("compute_units", 0) * priority_factor * 0.3)
             total_memory += int(resources.get("memory_gb", 0) * priority_factor * 0.3)
             total_storage += resources.get("storage_tb", 0) * priority_factor * 0.3
         
         # Apply emergency reserves if critical
         if workflow.priority == PriorityLevel.CRITICAL:
-            total_qubits += self._EMERGENCY_RESERVES["qubits"]
+            total_compute_units += self._EMERGENCY_RESERVES["compute_units"]
             total_memory += self._EMERGENCY_RESERVES["memory_gb"]
             total_storage += self._EMERGENCY_RESERVES["storage_tb"]
         
         allocation = ResourceAllocation(
             workflow_id=workflow.workflow_id,
-            qubits=total_qubits,
+            compute_units=total_compute_units,
             memory_gb=total_memory,
             storage_tb=total_storage,
             network_gbps=1.0,  # Default network allocation
@@ -711,7 +730,7 @@ class MetaPathOrchestrator:
         
         # Update metrics
         self._metrics.active_workflows += 1
-        self._metrics.total_qubits_allocated += allocation.qubits
+        self._metrics.total_compute_units_allocated += allocation.compute_units
         self._metrics.total_memory_allocated_gb += allocation.memory_gb
         self._metrics.total_storage_allocated_tb += allocation.storage_tb
         
@@ -752,7 +771,7 @@ class MetaPathOrchestrator:
             
             # Release resources
             if workflow.resource_allocation:
-                self._metrics.total_qubits_allocated -= workflow.resource_allocation.qubits
+                self._metrics.total_compute_units_allocated -= workflow.resource_allocation.compute_units
                 self._metrics.total_memory_allocated_gb -= workflow.resource_allocation.memory_gb
                 self._metrics.total_storage_allocated_tb -= workflow.resource_allocation.storage_tb
         
@@ -832,17 +851,25 @@ class MetaPathOrchestrator:
         return queued
     
     def get_resource_utilization(self) -> Dict[str, Any]:
-        """Get current resource utilization."""
-        total_qubits = sum(r["qubits"] for r in self._BASELINE_RESOURCES.values())
+        """
+        Get current resource utilization.
+        
+        Quantum-Ready Architecture:
+            compute_units represent abstract computational resources that will
+            map to qubits when quantum hardware becomes production-ready.
+            Current backend: Classical HPC (high-performance computing)
+            Future backend: Quantum computing (pluggable via compute_backend)
+        """
+        total_compute_units = sum(r["compute_units"] for r in self._BASELINE_RESOURCES.values())
         total_memory = sum(r["memory_gb"] for r in self._BASELINE_RESOURCES.values())
         total_storage = sum(r["storage_tb"] for r in self._BASELINE_RESOURCES.values())
         
         return {
-            "qubits": {
-                "total": total_qubits,
-                "allocated": self._metrics.total_qubits_allocated,
-                "available": total_qubits - self._metrics.total_qubits_allocated,
-                "utilization": self._metrics.total_qubits_allocated / total_qubits if total_qubits > 0 else 0,
+            "compute_units": {
+                "total": total_compute_units,
+                "allocated": self._metrics.total_compute_units_allocated,
+                "available": total_compute_units - self._metrics.total_compute_units_allocated,
+                "utilization": self._metrics.total_compute_units_allocated / total_compute_units if total_compute_units > 0 else 0,
             },
             "memory_gb": {
                 "total": total_memory,
@@ -857,4 +884,7 @@ class MetaPathOrchestrator:
                 "utilization": self._metrics.total_storage_allocated_tb / total_storage if total_storage > 0 else 0,
             },
             "emergency_reserves": self._EMERGENCY_RESERVES,
+            "quantum_ready": True,
+            "current_backend": "classical_hpc",
+            "future_backend": "quantum_computing",
         }

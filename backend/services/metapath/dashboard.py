@@ -100,8 +100,8 @@ class PathwayPerformanceMetrics(BaseModel):
     throughput_per_second: float = 0.0
     error_rate: float = 0.0
     
-    # Resource usage
-    qubits_utilized: int = 0
+    # Resource usage (quantum-ready: compute_units scale to qubits)
+    compute_units_utilized: int = 0
     memory_utilized_gb: int = 0
     storage_utilized_tb: float = 0.0
     
@@ -174,12 +174,19 @@ class GovernanceMetrics(BaseModel):
 
 
 class ResourceUtilization(BaseModel):
-    """System resource utilization."""
-    # Quantum resources
-    total_qubits: int = 57400
-    allocated_qubits: int = 0
-    available_qubits: int = 57400
-    qubit_utilization: float = 0.0
+    """
+    System resource utilization.
+    
+    Quantum-Ready Architecture:
+        compute_units represent abstract computational resources.
+        Current backend: Classical HPC
+        Future backend: Quantum computing (when 57,400+ qubits available)
+    """
+    # Compute resources (quantum-ready: maps to qubits when available)
+    total_compute_units: int = 57400
+    allocated_compute_units: int = 0
+    available_compute_units: int = 57400
+    compute_utilization: float = 0.0
     
     # Memory
     total_memory_gb: int = 3080
@@ -194,9 +201,13 @@ class ResourceUtilization(BaseModel):
     storage_utilization: float = 0.0
     
     # Emergency reserves
-    emergency_qubits: int = 2000
+    emergency_compute_units: int = 2000
     emergency_memory_gb: int = 200
     emergency_storage_tb: int = 2
+    
+    # Quantum-ready metadata
+    quantum_ready: bool = True
+    current_backend: str = "classical_hpc"
     
     # Time
     last_updated: datetime = Field(default_factory=datetime.utcnow)

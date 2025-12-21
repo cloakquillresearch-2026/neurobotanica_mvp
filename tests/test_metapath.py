@@ -202,7 +202,7 @@ class TestMetaPathOrchestrator:
         workflow = orchestrator.create_workflow(name="Resources", steps=steps)
         started = orchestrator.start_workflow(workflow.workflow_id)
         
-        assert started.resource_allocation.qubits > 0
+        assert started.resource_allocation.compute_units > 0
         assert started.resource_allocation.memory_gb > 0
     
     def test_complete_step(self, orchestrator):
@@ -248,8 +248,8 @@ class TestMetaPathOrchestrator:
         util = orchestrator.get_resource_utilization()
         
         # Check total resources are substantial (sum of 31 pathways)
-        # Spec target: ~57,400 qubits, but implementation allocates per pathway
-        assert util["qubits"]["total"] >= 50000
+        # Spec target: ~57,400 compute_units (quantum-ready architecture)
+        assert util["compute_units"]["total"] >= 50000
         assert util["memory_gb"]["total"] >= 2500
         assert util["storage_tb"]["total"] >= 50
     
@@ -257,7 +257,7 @@ class TestMetaPathOrchestrator:
         """Test emergency reserves are maintained."""
         util = orchestrator.get_resource_utilization()
         
-        assert util["emergency_reserves"]["qubits"] == 2000
+        assert util["emergency_reserves"]["compute_units"] == 2000
         assert util["emergency_reserves"]["memory_gb"] == 200
 
 
@@ -604,16 +604,16 @@ class TestEmergencyCoordinator:
         
         allocated = emergency.allocate_emergency_resources(
             crisis_id=response.crisis_id,
-            qubits=3000,
+            compute_units=3000,
             memory_gb=300,
         )
         
-        assert allocated.emergency_resources_used["qubits"] == 3000
+        assert allocated.emergency_resources_used["compute_units"] == 3000
         assert allocated.emergency_resources_used["memory_gb"] == 300
     
     def test_resource_limit_enforcement(self, emergency):
         """Test resource limits are enforced."""
-        emergency._config.max_emergency_qubits = 5000
+        emergency._config.max_emergency_compute_units = 5000
         emergency._config.max_emergency_memory_gb = 500
         
         response = emergency.create_emergency_response(
@@ -626,11 +626,11 @@ class TestEmergencyCoordinator:
         # Try to allocate more than limit
         allocated = emergency.allocate_emergency_resources(
             crisis_id=response.crisis_id,
-            qubits=10000,  # More than limit
+            compute_units=10000,  # More than limit
             memory_gb=1000,
         )
         
-        assert allocated.emergency_resources_used["qubits"] == 5000
+        assert allocated.emergency_resources_used["compute_units"] == 5000
         assert allocated.emergency_resources_used["memory_gb"] == 500
     
     def test_pathway_rerouting(self, emergency):
@@ -945,7 +945,7 @@ class TestTransparencyDashboard:
         """Test resource utilization dashboard."""
         resources = dashboard.get_resource_dashboard()
         
-        assert resources.total_qubits == 57400
+        assert resources.total_compute_units == 57400
         assert resources.total_memory_gb == 3080
         assert resources.total_storage_tb == 66
     

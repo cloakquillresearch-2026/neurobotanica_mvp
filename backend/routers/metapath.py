@@ -201,7 +201,7 @@ async def list_pathways():
             {
                 "pathway_id": p.pathway_id.value,
                 "layer": p.layer.value,
-                "baseline_qubits": p.baseline_qubits,
+                "baseline_compute_units": p.baseline_compute_units,
                 "baseline_memory_gb": p.baseline_memory_gb,
                 "baseline_storage_tb": p.baseline_storage_tb,
                 "is_active": p.is_active,
@@ -233,7 +233,7 @@ async def get_pathway(
         "pathway": {
             "pathway_id": config.pathway_id.value,
             "layer": config.layer.value,
-            "baseline_qubits": config.baseline_qubits,
+            "baseline_compute_units": config.baseline_compute_units,
             "baseline_memory_gb": config.baseline_memory_gb,
             "baseline_storage_tb": config.baseline_storage_tb,
             "is_active": config.is_active,
@@ -324,7 +324,7 @@ async def get_workflow(workflow_id: str):
             for s in workflow.steps
         ],
         "resource_allocation": {
-            "qubits": workflow.resource_allocation.qubits,
+            "compute_units": workflow.resource_allocation.compute_units,
             "memory_gb": workflow.resource_allocation.memory_gb,
             "storage_tb": workflow.resource_allocation.storage_tb,
         } if workflow.resource_allocation else None,
@@ -341,7 +341,7 @@ async def start_workflow(workflow_id: str):
             "status": workflow.status.value,
             "started_at": workflow.started_at.isoformat(),
             "resource_allocation": {
-                "qubits": workflow.resource_allocation.qubits,
+                "compute_units": workflow.resource_allocation.compute_units,
                 "memory_gb": workflow.resource_allocation.memory_gb,
             } if workflow.resource_allocation else None,
             "message": "Workflow started",
@@ -383,7 +383,7 @@ async def get_metrics():
             "decentralization_coefficient": metrics.decentralization_coefficient,
         },
         "resources": {
-            "total_qubits_allocated": metrics.total_qubits_allocated,
+            "total_compute_units_allocated": metrics.total_compute_units_allocated,
             "total_memory_allocated_gb": metrics.total_memory_allocated_gb,
             "total_storage_allocated_tb": metrics.total_storage_allocated_tb,
         },
@@ -687,12 +687,12 @@ async def initiate_response(crisis_id: str, request: InitiateResponseRequest):
 @router.post("/emergency/responses/{crisis_id}/allocate-resources", summary="Allocate emergency resources")
 async def allocate_emergency_resources(
     crisis_id: str,
-    qubits: int = Query(1000, ge=0),
+    compute_units: int = Query(1000, ge=0),
     memory_gb: int = Query(100, ge=0),
 ):
-    """Allocate emergency resources to crisis."""
+    """Allocate emergency resources to crisis (quantum-ready: compute_units scale to qubits)."""
     try:
-        response = _emergency.allocate_emergency_resources(crisis_id, qubits, memory_gb)
+        response = _emergency.allocate_emergency_resources(crisis_id, compute_units, memory_gb)
         return {
             "crisis_id": response.crisis_id,
             "emergency_resources_used": response.emergency_resources_used,
