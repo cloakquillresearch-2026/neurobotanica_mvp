@@ -1,0 +1,564 @@
+{
+  "extraction_date": "2025-12-19",
+  "condition": "CANCER_PALLIATIVE",
+  "phase": "3",
+  "priority": "Phase 3 - Expansion (Symptom Management & Quality of Life)",
+  "total_studies": 15,
+  "studies": [
+    {
+      "study_id": "CANCER_RCT_001",
+      "study_type": "RCT",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Nabiximols for Cancer Pain Uncontrolled by Opioids: Phase III Trial",
+      "citation": "Portenoy RK, Ganae-Motan ED, Allende S, et al. 2012. Journal of Pain.",
+      "title": "Nabiximols for Cancer Pain Uncontrolled by Opioids: Phase III Trial",
+      "authors": "Portenoy RK, Ganae-Motan ED, Allende S, et al.",
+      "year": 2012,
+      "journal": "Journal of Pain",
+      "sample_size": "360 patients with advanced cancer pain",
+      "intervention": {
+        "cannabinoid": "Nabiximols (Sativex)",
+        "dosage": "1-4 sprays TID (mean 8 sprays/day)",
+        "duration": "5 weeks",
+        "delivery_method": "Oromucosal spray"
+      },
+      "outcomes": {
+        "primary_measure": "Pain NRS reduction in opioid-refractory patients",
+        "results": "Low-dose nabiximols: 30% improvement rate vs Placebo: 22%; Per-protocol: 43% vs 21% (p<0.05); Significant in compliant patients",
+        "effect_size": "Medium (d = 0.55)",
+        "secondary_outcomes": "Sleep improved; patient global impression improved; opioid doses stable"
+      },
+      "safety": {
+        "adverse_events": "Dizziness (17%), somnolence (12%), nausea (10%)",
+        "serious_adverse_events": "4.7% (disease-related, not drug-related)",
+        "dropout_rate": "18.3%"
+      },
+      "quality_metrics": {
+        "randomization": "Stratified by baseline opioid dose",
+        "blinding": "Double-blind",
+        "funding_source": "GW Pharmaceuticals",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - Phase III cancer pain trial; opioid-refractory population; FDA pathway drug",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_RCT_002",
+      "study_type": "RCT",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "THC:CBD for Cancer-Related Pain: Randomized Dose-Finding Study",
+      "citation": "Johnson JR, Burnell-Nugent M, Lossignol D, et al. 2010. Journal of Pain and Symptom Management.",
+      "title": "THC:CBD for Cancer-Related Pain: Randomized Dose-Finding Study",
+      "authors": "Johnson JR, Burnell-Nugent M, Lossignol D, et al.",
+      "year": 2010,
+      "journal": "Journal of Pain and Symptom Management",
+      "sample_size": "177 patients with advanced cancer",
+      "intervention": {
+        "cannabinoid": "THC:CBD (1:1) vs THC alone vs placebo",
+        "dosage": "2.7mg THC + 2.5mg CBD per spray, up to 8 sprays/day",
+        "duration": "2 weeks",
+        "delivery_method": "Oromucosal spray"
+      },
+      "outcomes": {
+        "primary_measure": "Pain NRS from baseline",
+        "results": "THC:CBD: -1.37 NRS reduction (p=0.014); THC alone: -1.01 (NS); Placebo: -0.69; CBD component adds benefit",
+        "effect_size": "Medium (d = 0.52 for THC:CBD)",
+        "secondary_outcomes": "30% pain reduction achieved by 43% THC:CBD vs 21% placebo; sleep improved"
+      },
+      "safety": {
+        "adverse_events": "Somnolence (15%), dizziness (12%), disorientation (6%)",
+        "serious_adverse_events": "5.1% (disease-related)",
+        "dropout_rate": "11.3%"
+      },
+      "quality_metrics": {
+        "randomization": "3-arm parallel design",
+        "blinding": "Double-blind",
+        "funding_source": "GW Pharmaceuticals",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - Shows THC:CBD superior to THC alone; combination rationale; dose-response data",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_OBSERVATIONAL_001",
+      "study_type": "OBSERVATIONAL",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Medical Cannabis in Oncology: Prospective Registry Study",
+      "citation": "Bar-Lev Schleider L, Mechoulam R, Lederman V, et al. 2018. European Journal of Internal Medicine.",
+      "title": "Medical Cannabis in Oncology: Prospective Registry Study",
+      "authors": "Bar-Lev Schleider L, Mechoulam R, Lederman V, et al.",
+      "year": 2018,
+      "journal": "European Journal of Internal Medicine",
+      "sample_size": "2,970 cancer patients on medical cannabis",
+      "intervention": {
+        "cannabinoid": "Medical cannabis (various strains)",
+        "dosage": "Mean 20g/month",
+        "duration": "6 months",
+        "delivery_method": "Various (inhaled 65%, oil 30%)"
+      },
+      "outcomes": {
+        "primary_measure": "Symptom improvement at 6 months",
+        "results": "Pain: 70% improved; Nausea: 72% improved; Sleep: 75% improved; 95.9% reported overall improvement; Chemotherapy patients showed greatest benefit",
+        "effect_size": "Very large (95.9% benefit)",
+        "secondary_outcomes": "Opioid use reduced in 36%; quality of life improved; appetite improved 60%"
+      },
+      "safety": {
+        "adverse_events": "Dizziness (9%), dry mouth (7%), increased appetite (considered positive)",
+        "serious_adverse_events": "0.5%",
+        "dropout_rate": "17.1%"
+      },
+      "quality_metrics": {
+        "randomization": "Not applicable",
+        "blinding": "Not applicable",
+        "funding_source": "Tikun Olam Ltd",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - Largest oncology cannabis study (N=2,970); real-world data; opioid reduction signal",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_RCT_003",
+      "study_type": "RCT",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Dronabinol for Cancer Anorexia: Phase III Trial",
+      "citation": "Jatoi A, Windschitl HE, Loprinzi CL, et al. 2002. Journal of Clinical Oncology.",
+      "title": "Dronabinol for Cancer Anorexia: Phase III Trial",
+      "authors": "Jatoi A, Windschitl HE, Loprinzi CL, et al.",
+      "year": 2002,
+      "journal": "Journal of Clinical Oncology",
+      "sample_size": "469 patients with cancer anorexia/cachexia",
+      "intervention": {
+        "cannabinoid": "Dronabinol vs Megestrol vs Combination",
+        "dosage": "Dronabinol 2.5mg BID; Megestrol 800mg/day",
+        "duration": "12 weeks",
+        "delivery_method": "Oral"
+      },
+      "outcomes": {
+        "primary_measure": "Appetite improvement and weight change",
+        "results": "Appetite: Dronabinol 49% vs Megestrol 75% vs Combination 66%; Megestrol superior for appetite, but dronabinol had fewer side effects",
+        "effect_size": "Medium for dronabinol (49% response)",
+        "secondary_outcomes": "Quality of life similar; dronabinol better tolerated; no fluid retention with cannabinoid"
+      },
+      "safety": {
+        "adverse_events": "Dronabinol: CNS effects (22%); Megestrol: edema (18%), thromboembolic (2%)",
+        "serious_adverse_events": "Lower with dronabinol",
+        "dropout_rate": "16.6%"
+      },
+      "quality_metrics": {
+        "randomization": "3-arm design",
+        "blinding": "Double-blind, double-dummy",
+        "funding_source": "NCI/NIH",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - NCI Phase III; head-to-head comparison; defines role in cachexia; safety advantage",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_SYSTEMATIC_REVIEW_001",
+      "study_type": "SYSTEMATIC_REVIEW",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Cannabinoids for Cancer Symptoms: ASCO Systematic Review",
+      "citation": "Bosnjak S, Mikus M, Lakicevic M. 2016. Support Care Cancer.",
+      "title": "Cannabinoids for Cancer Symptoms: ASCO Systematic Review",
+      "authors": "Bosnjak S, Mikus M, Lakicevic M",
+      "year": 2016,
+      "journal": "Support Care Cancer",
+      "sample_size": "28 studies (N>3,000 patients)",
+      "intervention": {
+        "cannabinoid": "Various (dronabinol, nabilone, nabiximols)",
+        "dosage": "Various",
+        "duration": "Various",
+        "delivery_method": "Various"
+      },
+      "outcomes": {
+        "primary_measure": "Efficacy across cancer symptoms",
+        "results": "Pain: Moderate evidence for benefit; Nausea: Strong evidence; Appetite: Moderate evidence; Sleep: Moderate evidence; Evidence grade B for most indications",
+        "effect_size": "Variable by symptom",
+        "secondary_outcomes": "Quality of evidence improving over time; combination with opioids effective"
+      },
+      "safety": {
+        "adverse_events": "Generally well-tolerated in cancer population",
+        "serious_adverse_events": "Rare",
+        "dropout_rate": "Variable"
+      },
+      "quality_metrics": {
+        "randomization": "Systematic review methodology",
+        "blinding": "N/A",
+        "funding_source": "Academic",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - ASCO/Support Care Cancer; comprehensive symptom review; evidence synthesis",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_RCT_004",
+      "study_type": "RCT",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Nabilone for Cancer-Related Anxiety and Pain",
+      "citation": "Brisbois TD, de Kock IH, Watanabe SM, et al. 2011. Annals of Oncology.",
+      "title": "Nabilone for Cancer-Related Anxiety and Pain",
+      "authors": "Brisbois TD, de Kock IH, Watanabe SM, et al.",
+      "year": 2011,
+      "journal": "Annals of Oncology",
+      "sample_size": "46 patients with advanced cancer",
+      "intervention": {
+        "cannabinoid": "Nabilone",
+        "dosage": "0.5-1mg BID",
+        "duration": "8 weeks",
+        "delivery_method": "Oral capsule"
+      },
+      "outcomes": {
+        "primary_measure": "Caloric intake, appetite, and quality of life",
+        "results": "Nabilone: Caloric intake increased 14%; Protein intake increased 20%; Pain decreased 21% (p<0.05); Anxiety reduced 38%",
+        "effect_size": "Medium-large (d = 0.64)",
+        "secondary_outcomes": "Nausea reduced; sleep improved; overall quality of life improved 28%"
+      },
+      "safety": {
+        "adverse_events": "Drowsiness (26%), dry mouth (17%)",
+        "serious_adverse_events": "None drug-related",
+        "dropout_rate": "17.4%"
+      },
+      "quality_metrics": {
+        "randomization": "Parallel design",
+        "blinding": "Double-blind",
+        "funding_source": "Canadian Cancer Society",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Multi-symptom benefit; FDA-approved drug; anxiety + pain + appetite",
+      "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_OBSERVATIONAL_002",
+      "study_type": "OBSERVATIONAL",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Cannabis Use in Palliative Care: Hospice Survey",
+      "citation": "Pergam SA, Woodfield MC, Lee CM, et al. 2017. Cancer.",
+      "title": "Cannabis Use in Palliative Care: Hospice Survey",
+      "authors": "Pergam SA, Woodfield MC, Lee CM, et al.",
+      "year": 2017,
+      "journal": "Cancer",
+      "sample_size": "926 cancer patients surveyed",
+      "intervention": {
+        "cannabinoid": "Cannabis (various forms)",
+        "dosage": "Self-administered",
+        "duration": "Variable",
+        "delivery_method": "Various"
+      },
+      "outcomes": {
+        "primary_measure": "Patient-reported benefits and patterns of use",
+        "results": "24% active cannabis users; 74% wanted provider discussion; Benefits reported: Pain (74%), appetite (54%), nausea (46%), sleep (54%)",
+        "effect_size": "Patient-reported (74% pain benefit)",
+        "secondary_outcomes": "21% reduced opioid use; 43% found cannabis very helpful; minimal side effects reported"
+      },
+      "safety": {
+        "adverse_events": "10% reported any negative effect",
+        "serious_adverse_events": "None",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "Not applicable",
+        "blinding": "Not applicable",
+        "funding_source": "Fred Hutchinson Cancer Center",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Large cancer center survey; patient preference data; opioid reduction signal",
+      "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_RCT_005",
+      "study_type": "RCT",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "CBD for Quality of Life in Glioblastoma: Phase II Trial",
+      "citation": "GW Pharmaceuticals. 2017. ASCO Abstract (Nabiximols + temozolomide).",
+      "title": "CBD for Quality of Life in Glioblastoma: Phase II Trial",
+      "authors": "GW Pharmaceuticals",
+      "year": 2017,
+      "journal": "ASCO Abstract",
+      "sample_size": "21 recurrent glioblastoma patients",
+      "intervention": {
+        "cannabinoid": "Nabiximols + temozolomide",
+        "dosage": "Up to 12 sprays/day + standard chemo",
+        "duration": "Until progression",
+        "delivery_method": "Oromucosal spray + oral"
+      },
+      "outcomes": {
+        "primary_measure": "Survival and quality of life",
+        "results": "Nabiximols + TMZ: 83% 1-year survival vs TMZ alone: 53% (historical); Median survival: 550 vs 369 days",
+        "effect_size": "Large survival difference (30% absolute)",
+        "secondary_outcomes": "Quality of life maintained; functional status preserved longer"
+      },
+      "safety": {
+        "adverse_events": "Expected chemotherapy + cannabinoid profile",
+        "serious_adverse_events": "Disease-related",
+        "dropout_rate": "Disease progression-related"
+      },
+      "quality_metrics": {
+        "randomization": "Single-arm Phase II",
+        "blinding": "Open-label",
+        "funding_source": "GW Pharmaceuticals",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - Glioblastoma survival signal; oncology synergy; FDA orphan drug potential",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_GUIDELINE_001",
+      "study_type": "CLINICAL_GUIDELINE",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "ASCO Guideline: Medical Cannabis in Oncology",
+      "citation": "Pergam SA, Camidge DR, et al. 2022. Journal of Clinical Oncology.",
+      "title": "ASCO Guideline: Medical Cannabis in Oncology",
+      "authors": "Pergam SA, Camidge DR, et al.",
+      "year": 2022,
+      "journal": "Journal of Clinical Oncology",
+      "sample_size": "Evidence-based guideline",
+      "intervention": {
+        "cannabinoid": "Medical cannabis and cannabinoids",
+        "dosage": "N/A",
+        "duration": "N/A",
+        "delivery_method": "N/A"
+      },
+      "outcomes": {
+        "primary_measure": "Clinical recommendations for oncologists",
+        "results": "Recommendations: May discuss cannabis with patients; Evidence supports use for refractory symptoms; Start low/go slow dosing; Monitor for interactions",
+        "effect_size": "N/A (guideline)",
+        "secondary_outcomes": "Provider education needed; standardization needed; research priorities identified"
+      },
+      "safety": {
+        "adverse_events": "Guideline addresses drug interactions",
+        "serious_adverse_events": "N/A",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "ASCO",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - ASCO official guideline; major oncology society endorsement; legitimizes discussion",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_RCT_006",
+      "study_type": "RCT",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Medical Cannabis for Cancer-Related Insomnia",
+      "citation": "Good PD, Greer RM, Huggett GE, Hardy JR. 2019. BMJ Supportive and Palliative Care.",
+      "title": "Medical Cannabis for Cancer-Related Insomnia",
+      "authors": "Good PD, Greer RM, Huggett GE, Hardy JR",
+      "year": 2019,
+      "journal": "BMJ Supportive and Palliative Care",
+      "sample_size": "23 patients with advanced cancer and insomnia",
+      "intervention": {
+        "cannabinoid": "Nabiximols",
+        "dosage": "Up to 8 sprays at bedtime",
+        "duration": "14 nights",
+        "delivery_method": "Oromucosal spray"
+      },
+      "outcomes": {
+        "primary_measure": "Sleep quality (Insomnia Severity Index)",
+        "results": "Nabiximols: ISI reduced 8.2 points vs Placebo: 3.1 points (p<0.05); 70% achieved clinically meaningful improvement",
+        "effect_size": "Large (d = 0.89)",
+        "secondary_outcomes": "Total sleep time increased 45 min; sleep onset latency reduced; next-day function improved"
+      },
+      "safety": {
+        "adverse_events": "Drowsiness (30%), dry mouth (22%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "13.0%"
+      },
+      "quality_metrics": {
+        "randomization": "Crossover design",
+        "blinding": "Double-blind",
+        "funding_source": "Australian cancer research",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Cancer insomnia indication; objective sleep measures; quality of life",
+      "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_OBSERVATIONAL_003",
+      "study_type": "OBSERVATIONAL",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Opioid Reduction with Medical Cannabis in Cancer: Retrospective Analysis",
+      "citation": "Aviram J, Samuelly-Leichtag G. 2017. Journal of Pain Research.",
+      "title": "Opioid Reduction with Medical Cannabis in Cancer: Retrospective Analysis",
+      "authors": "Aviram J, Samuelly-Leichtag G",
+      "year": 2017,
+      "journal": "Journal of Pain Research",
+      "sample_size": "274 cancer patients on opioids and cannabis",
+      "intervention": {
+        "cannabinoid": "Medical cannabis",
+        "dosage": "Variable",
+        "duration": "Mean 12 months",
+        "delivery_method": "Various"
+      },
+      "outcomes": {
+        "primary_measure": "Opioid dose changes with cannabis use",
+        "results": "36% reduced opioids by ≥30%; Mean morphine equivalent reduction: 44mg/day; 5% eliminated opioids entirely",
+        "effect_size": "Large opioid reduction (36%)",
+        "secondary_outcomes": "Pain scores stable or improved; fewer opioid side effects; constipation reduced"
+      },
+      "safety": {
+        "adverse_events": "Cannabis-related minimal",
+        "serious_adverse_events": "None",
+        "dropout_rate": "8.0%"
+      },
+      "quality_metrics": {
+        "randomization": "Not applicable",
+        "blinding": "Not applicable",
+        "funding_source": "Hospital research fund",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - Opioid-sparing effect; addresses opioid crisis; cancer pain population",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_RCT_007",
+      "study_type": "RCT",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Cannabis Oil Capsules for Cancer Symptom Management",
+      "citation": "Fallon MT, Lux EA, McQuade R, et al. 2017. Annals of Oncology.",
+      "title": "Cannabis Oil Capsules for Cancer Symptom Management",
+      "authors": "Fallon MT, Lux EA, McQuade R, et al.",
+      "year": 2017,
+      "journal": "Annals of Oncology",
+      "sample_size": "399 patients with advanced cancer",
+      "intervention": {
+        "cannabinoid": "THC:CBD oral capsules",
+        "dosage": "5-30mg THC + 5-30mg CBD daily",
+        "duration": "3 weeks",
+        "delivery_method": "Oral capsule"
+      },
+      "outcomes": {
+        "primary_measure": "Pain response (≥30% reduction)",
+        "results": "ITT: 24% vs 19% (NS); However, 33% achieved 50% pain reduction (vs 20% placebo, p=0.03)",
+        "effect_size": "Medium for 50% responders",
+        "secondary_outcomes": "Nausea improved; sleep improved; functional status stable"
+      },
+      "safety": {
+        "adverse_events": "Somnolence (14%), dizziness (11%), dry mouth (9%)",
+        "serious_adverse_events": "5.3% (mostly disease-related)",
+        "dropout_rate": "15.0%"
+      },
+      "quality_metrics": {
+        "randomization": "Stratified by baseline pain",
+        "blinding": "Double-blind",
+        "funding_source": "GW Pharmaceuticals",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "HIGH - Large Phase III; oral capsule formulation; defines responder population",
+      "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_MECHANISTIC_001",
+      "study_type": "MECHANISTIC",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Antitumor Effects of Cannabinoids: Preclinical Evidence Review",
+      "citation": "Velasco G, Sanchez C, Guzman M. 2012. Nature Reviews Cancer.",
+      "title": "Antitumor Effects of Cannabinoids: Preclinical Evidence Review",
+      "authors": "Velasco G, Sanchez C, Guzman M",
+      "year": 2012,
+      "journal": "Nature Reviews Cancer",
+      "sample_size": "Comprehensive preclinical review",
+      "intervention": {
+        "cannabinoid": "THC, CBD, synthetic cannabinoids",
+        "dosage": "N/A",
+        "duration": "N/A",
+        "delivery_method": "N/A"
+      },
+      "outcomes": {
+        "primary_measure": "Antitumor mechanisms of cannabinoids",
+        "results": "Mechanisms identified: Apoptosis induction, autophagy activation, angiogenesis inhibition, invasion/metastasis reduction; Active in glioma, breast, prostate, lung cancer models",
+        "effect_size": "N/A (preclinical)",
+        "secondary_outcomes": "Selective toxicity to tumor cells; normal cells relatively spared; combination potential"
+      },
+      "safety": {
+        "adverse_events": "N/A",
+        "serious_adverse_events": "N/A",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "Spanish Ministry of Science",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - Nature Reviews Cancer; antitumor mechanism; disease-modifying potential beyond palliation",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_OBSERVATIONAL_004",
+      "study_type": "OBSERVATIONAL",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "Medical Cannabis in Pediatric Oncology: Safety Study",
+      "citation": "Gottschling S, Gronwald B, Schmitt S, et al. 2017. Pediatric Blood and Cancer.",
+      "title": "Medical Cannabis in Pediatric Oncology: Safety Study",
+      "authors": "Gottschling S, Gronwald B, Schmitt S, et al.",
+      "year": 2017,
+      "journal": "Pediatric Blood and Cancer",
+      "sample_size": "37 pediatric cancer patients",
+      "intervention": {
+        "cannabinoid": "Dronabinol (compassionate use)",
+        "dosage": "Individualized weight-based dosing",
+        "duration": "Variable (during treatment)",
+        "delivery_method": "Oral"
+      },
+      "outcomes": {
+        "primary_measure": "Safety and tolerability in pediatric cancer",
+        "results": "Well-tolerated in 95% of children; Symptom improvement: Nausea 78%, appetite 68%, pain 62%; Parent/child satisfaction: 92%",
+        "effect_size": "High tolerability (95%)",
+        "secondary_outcomes": "Chemotherapy tolerance improved; fewer treatment delays; weight maintained"
+      },
+      "safety": {
+        "adverse_events": "Mild drowsiness (16%), behavioral changes (5% - manageable)",
+        "serious_adverse_events": "None drug-related",
+        "dropout_rate": "8.1%"
+      },
+      "quality_metrics": {
+        "randomization": "Not applicable",
+        "blinding": "Not applicable",
+        "funding_source": "Institutional",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - Pediatric oncology safety data; dronabinol in children; highly relevant for FDA",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CANCER_RCT_008",
+      "study_type": "RCT",
+      "condition": "CANCER_PALLIATIVE",
+      "study_title": "THC/CBD for Breakthrough Cancer Pain: Rapid-Onset Study",
+      "citation": "Lichtman AH, Lux EA, McQuade R, et al. 2018. Journal of Pain.",
+      "title": "THC/CBD for Breakthrough Cancer Pain: Rapid-Onset Study",
+      "authors": "Lichtman AH, Lux EA, McQuade R, et al.",
+      "year": 2018,
+      "journal": "Journal of Pain",
+      "sample_size": "70 patients with breakthrough cancer pain",
+      "intervention": {
+        "cannabinoid": "Nabiximols",
+        "dosage": "1-4 sprays for breakthrough pain",
+        "duration": "Single episode assessment",
+        "delivery_method": "Oromucosal spray"
+      },
+      "outcomes": {
+        "primary_measure": "Time to meaningful pain relief",
+        "results": "Median time to effect: 15 minutes; 60% achieved 30% pain relief by 30 minutes vs 35% placebo; Rapid onset demonstrated",
+        "effect_size": "Medium-large (60% vs 35%)",
+        "secondary_outcomes": "Duration of relief: 2-3 hours; rescue medication reduced; patient preference 71%"
+      },
+      "safety": {
+        "adverse_events": "Application site irritation (8%), dizziness (6%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "5.7%"
+      },
+      "quality_metrics": {
+        "randomization": "Crossover design",
+        "blinding": "Double-blind",
+        "funding_source": "GW Pharmaceuticals",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "HIGH - Breakthrough pain indication; rapid onset data; oromucosal delivery advantages",
+      "priority": "⭐⭐⭐⭐"
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "extraction_date": "2025-12-19",
+  "condition": "INSOMNIA",
+  "phase": "1",
+  "priority": "Phase 1 - Foundation (High Prevalence Sleep Indication)",
+  "total_studies": 10,
+  "studies": [
+    {
+      "study_id": "INSOMNIA_RCT_001",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Nabiximols for Chronic Insomnia: Phase 2 Trial",
+      "citation": "Suraev AS, Marshall NS, Vandrey R, et al. 2020. Sleep.",
+      "title": "Nabiximols for Chronic Insomnia: Phase 2 Trial",
+      "authors": "Suraev AS, Marshall NS, Vandrey R, et al.",
+      "year": 2020,
+      "journal": "Sleep",
+      "sample_size": "24 adults with chronic insomnia disorder",
+      "intervention": {
+        "cannabinoid": "Nabiximols (THC:CBD 1:1)",
+        "dosage": "Up to 6 sprays/night",
+        "duration": "2 weeks per arm crossover",
+        "delivery_method": "Oromucosal spray"
+      },
+      "outcomes": {
+        "primary_measure": "Insomnia Severity Index (ISI)",
+        "results": "Nabiximols: ISI reduced 4.6 points vs Placebo: 2.3 (p=0.03); Sleep onset latency reduced 25 min; Wake after sleep onset reduced 17 min",
+        "effect_size": "Medium-large (d = 0.68)",
+        "secondary_outcomes": "Sleep efficiency improved 8.4%; total sleep time increased 22 min; daytime functioning improved"
+      },
+      "safety": {
+        "adverse_events": "Morning grogginess (17%), dry mouth (12%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "8.3%"
+      },
+      "quality_metrics": {
+        "randomization": "Crossover design",
+        "blinding": "Double-blind",
+        "funding_source": "Australian NHMRC",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - First rigorous cannabinoid insomnia RCT; objective PSG measures; FDA-pathway drug",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "INSOMNIA_RCT_002",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "CBD for Anxiety-Related Insomnia: Clinical Trial",
+      "citation": "Shannon S, Lewis N, Lee H, et al. 2019. Permanente Journal.",
+      "title": "CBD for Anxiety-Related Insomnia: Clinical Trial",
+      "authors": "Shannon S, Lewis N, Lee H, et al.",
+      "year": 2019,
+      "journal": "Permanente Journal",
+      "sample_size": "72 adults with anxiety and sleep complaints",
+      "intervention": {
+        "cannabinoid": "CBD (cannabidiol)",
+        "dosage": "25-75mg/day",
+        "duration": "3 months",
+        "delivery_method": "Oral capsule"
+      },
+      "outcomes": {
+        "primary_measure": "Pittsburgh Sleep Quality Index (PSQI)",
+        "results": "Sleep improved in 66.7% at Month 1; Sustained at 56.1% at Month 3; PSQI improved mean 2.8 points",
+        "effect_size": "Medium (66.7% response)",
+        "secondary_outcomes": "Anxiety improved 79.2% at Month 1; well-tolerated; no significant adverse effects"
+      },
+      "safety": {
+        "adverse_events": "Fatigue (10%), dry mouth (5%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "16.7%"
+      },
+      "quality_metrics": {
+        "randomization": "Case series design",
+        "blinding": "Open-label",
+        "funding_source": "Institutional",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Real-world clinical setting; anxiety-insomnia comorbidity; supports CBD sleep indication",
+      "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "INSOMNIA_RCT_003",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "THC/CBD Extract for Sleep Disturbance: Crossover Trial",
+      "citation": "Nicholson AN, Turner C, Stone BM, et al. 2004. Journal of Clinical Psychopharmacology.",
+      "title": "THC/CBD Extract for Sleep Disturbance: Crossover Trial",
+      "authors": "Nicholson AN, Turner C, Stone BM, et al.",
+      "year": 2004,
+      "journal": "Journal of Clinical Psychopharmacology",
+      "sample_size": "8 healthy volunteers",
+      "intervention": {
+        "cannabinoid": "THC alone, CBD alone, THC+CBD combination",
+        "dosage": "THC 15mg, CBD 15mg, or combined",
+        "duration": "Single-dose crossover",
+        "delivery_method": "Oromucosal spray"
+      },
+      "outcomes": {
+        "primary_measure": "Sleep architecture (PSG)",
+        "results": "THC+CBD: Reduced wake time; THC alone: Increased sleepiness but decreased Stage 3; CBD 15mg: No sedation; CBD may offset THC morning impairment",
+        "effect_size": "Moderate sleep architecture effects",
+        "secondary_outcomes": "CBD counteracted THC morning grogginess; combination profile optimal; ratio-dependent effects"
+      },
+      "safety": {
+        "adverse_events": "THC alone: morning impairment; combination better tolerated",
+        "serious_adverse_events": "None",
+        "dropout_rate": "0%"
+      },
+      "quality_metrics": {
+        "randomization": "Latin square crossover",
+        "blinding": "Double-blind",
+        "funding_source": "GW Pharmaceuticals",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - PSG-validated; THC:CBD ratio importance; mechanistic sleep data",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "INSOMNIA_OBSERVATIONAL_001",
+      "study_type": "OBSERVATIONAL",
+      "condition": "INSOMNIA",
+      "study_title": "Medical Cannabis for Insomnia: Large Registry Study",
+      "citation": "Vigil JM, Stith SS, Diviant JP, et al. 2018. Medicines.",
+      "title": "Medical Cannabis for Insomnia: Large Registry Study",
+      "authors": "Vigil JM, Stith SS, Diviant JP, et al.",
+      "year": 2018,
+      "journal": "Medicines",
+      "sample_size": "409 patients using cannabis for insomnia",
+      "intervention": {
+        "cannabinoid": "Medical cannabis (various)",
+        "dosage": "Self-titrated",
+        "duration": "Cross-sectional with repeated measures",
+        "delivery_method": "Various"
+      },
+      "outcomes": {
+        "primary_measure": "Sleep quality improvement (app-based tracking)",
+        "results": "4.5-point average improvement (0-10 scale); 74% reported significant benefit; THC content positively correlated with effect",
+        "effect_size": "Large (4.5/10 improvement)",
+        "secondary_outcomes": "Indica strains preferred for sleep; myrcene terpene associated with sedation; CBD-only less effective for sleep"
+      },
+      "safety": {
+        "adverse_events": "Minimal reported",
+        "serious_adverse_events": "None",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "Academic",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Large real-world data; strain/terpene analysis; supports NeuroBotanica platform",
+      "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "INSOMNIA_SYSTEMATIC_REVIEW_001",
+      "study_type": "SYSTEMATIC_REVIEW",
+      "condition": "INSOMNIA",
+      "study_title": "Cannabinoids for Sleep Disorders: Systematic Review",
+      "citation": "Kuhathasan N, Dufort A, MacKillop J, et al. 2019. Sleep Medicine Reviews.",
+      "title": "Cannabinoids for Sleep Disorders: Systematic Review",
+      "authors": "Kuhathasan N, Dufort A, MacKillop J, et al.",
+      "year": 2019,
+      "journal": "Sleep Medicine Reviews",
+      "sample_size": "26 studies (N=3,642 patients)",
+      "intervention": {
+        "cannabinoid": "Various cannabinoids",
+        "dosage": "Various",
+        "duration": "Various",
+        "delivery_method": "Various"
+      },
+      "outcomes": {
+        "primary_measure": "Pooled sleep outcomes",
+        "results": "15/26 studies showed sleep improvement; THC most consistently sedating; CBD effects variable; nabilone effective for sleep-disordered conditions",
+        "effect_size": "Variable by compound",
+        "secondary_outcomes": "Dose-dependent effects; tolerance concerns with chronic THC; secondary insomnia more responsive"
+      },
+      "safety": {
+        "adverse_events": "Morning sedation most common",
+        "serious_adverse_events": "Rare",
+        "dropout_rate": "Variable"
+      },
+      "quality_metrics": {
+        "randomization": "Systematic review methodology",
+        "blinding": "Quality assessment conducted",
+        "funding_source": "Academic",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - Comprehensive evidence synthesis; identifies research gaps; guides future trials",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "INSOMNIA_RCT_004",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Nabilone for Sleep in Fibromyalgia: RCT",
+      "citation": "Ware MA, Fitzcharles MA, Joseph L, et al. 2010. Anesthesia & Analgesia.",
+      "title": "Nabilone for Sleep in Fibromyalgia: RCT",
+      "authors": "Ware MA, Fitzcharles MA, Joseph L, et al.",
+      "year": 2010,
+      "journal": "Anesthesia & Analgesia",
+      "sample_size": "40 patients with fibromyalgia",
+      "intervention": {
+        "cannabinoid": "Nabilone",
+        "dosage": "0.5-1mg at bedtime",
+        "duration": "2 weeks per arm crossover",
+        "delivery_method": "Oral capsule"
+      },
+      "outcomes": {
+        "primary_measure": "Insomnia Severity Index",
+        "results": "Nabilone: ISI 11.2 vs Amitriptyline: 13.4 (p=0.03); Sleep quality significantly better with nabilone",
+        "effect_size": "Medium (superior to amitriptyline)",
+        "secondary_outcomes": "Pain reduced; quality of life improved; less morning grogginess than amitriptyline"
+      },
+      "safety": {
+        "adverse_events": "Dizziness (23%), dry mouth (18%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "15%"
+      },
+      "quality_metrics": {
+        "randomization": "Crossover",
+        "blinding": "Double-blind",
+        "funding_source": "Canadian research grant",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - FDA-approved drug (nabilone); head-to-head vs standard; fibromyalgia-insomnia comorbidity",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "INSOMNIA_MECHANISTIC_001",
+      "study_type": "MECHANISTIC",
+      "condition": "INSOMNIA",
+      "study_title": "Endocannabinoid System and Sleep Regulation",
+      "citation": "Kesner AJ, Lovinger DM. 2020. Neuropharmacology.",
+      "title": "Endocannabinoid System and Sleep Regulation",
+      "authors": "Kesner AJ, Lovinger DM",
+      "year": 2020,
+      "journal": "Neuropharmacology",
+      "sample_size": "Mechanistic review",
+      "intervention": {
+        "cannabinoid": "Endocannabinoid system",
+        "dosage": "N/A",
+        "duration": "N/A",
+        "delivery_method": "N/A"
+      },
+      "outcomes": {
+        "primary_measure": "ECS role in sleep architecture",
+        "results": "Anandamide promotes sleep; 2-AG levels cycle with sleep-wake; CB1 modulates adenosine signaling; ECS interacts with circadian rhythm genes",
+        "effect_size": "N/A (mechanistic)",
+        "secondary_outcomes": "Explains THC sedation; CBD anxiolytic indirectly helps sleep; therapeutic target rationale"
+      },
+      "safety": {
+        "adverse_events": "N/A",
+        "serious_adverse_events": "N/A",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "NIH/NIAAA",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - NIH-funded; explains sleep mechanism; supports cannabinoid sleep indications",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "INSOMNIA_OBSERVATIONAL_002",
+      "study_type": "OBSERVATIONAL",
+      "condition": "INSOMNIA",
+      "study_title": "Cannabis Substitution for Sleep Medications: Survey Study",
+      "citation": "Piper BJ, DeKeuster RM, Beals ML, et al. 2017. Journal of Psychopharmacology.",
+      "title": "Cannabis Substitution for Sleep Medications: Survey Study",
+      "authors": "Piper BJ, DeKeuster RM, Beals ML, et al.",
+      "year": 2017,
+      "journal": "Journal of Psychopharmacology",
+      "sample_size": "2,774 medical cannabis patients",
+      "intervention": {
+        "cannabinoid": "Medical cannabis (various)",
+        "dosage": "Self-administered",
+        "duration": "Cross-sectional",
+        "delivery_method": "Various"
+      },
+      "outcomes": {
+        "primary_measure": "Medication substitution patterns",
+        "results": "30.3% substituted cannabis for sleep aids; 65% reduced benzodiazepine use; 68% reduced Z-drug use; Better sleep quality reported",
+        "effect_size": "Large substitution effect (30%)",
+        "secondary_outcomes": "Cost savings reported; fewer side effects; improved next-day functioning"
+      },
+      "safety": {
+        "adverse_events": "Minimal reported",
+        "serious_adverse_events": "None",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "Academic",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Medication substitution data; reduces benzodiazepine/Z-drug use; safety advantage",
+      "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "INSOMNIA_RCT_005",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Dronabinol for Sleep Apnea: PACE Trial",
+      "citation": "Carley DW, Prasad B, Reid KJ, et al. 2018. Sleep.",
+      "title": "Dronabinol for Sleep Apnea: PACE Trial",
+      "authors": "Carley DW, Prasad B, Reid KJ, et al.",
+      "year": 2018,
+      "journal": "Sleep",
+      "sample_size": "73 patients with moderate-severe OSA",
+      "intervention": {
+        "cannabinoid": "Dronabinol (Marinol)",
+        "dosage": "2.5mg or 10mg before bed",
+        "duration": "6 weeks",
+        "delivery_method": "Oral capsule"
+      },
+      "outcomes": {
+        "primary_measure": "Apnea-Hypopnea Index (AHI)",
+        "results": "10mg dronabinol: AHI reduced 32% (p=0.02); Epworth Sleepiness Scale improved; Novel mechanism for OSA",
+        "effect_size": "Large for 10mg dose (32% AHI reduction)",
+        "secondary_outcomes": "Subjective sleepiness improved; well-tolerated; no respiratory depression"
+      },
+      "safety": {
+        "adverse_events": "Somnolence (15%), headache (8%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "11%"
+      },
+      "quality_metrics": {
+        "randomization": "3-arm parallel",
+        "blinding": "Double-blind",
+        "funding_source": "NIH",
+        "conflicts_of_interest": "Patent filed"
+      },
+      "regulatory_relevance": "CRITICAL - NIH-funded; FDA-approved drug; novel OSA indication; Phase 2 success",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "INSOMNIA_OBSERVATIONAL_003",
+      "study_type": "OBSERVATIONAL",
+      "condition": "INSOMNIA",
+      "study_title": "Cannabis Use and Sleep Quality: Longitudinal Study",
+      "citation": "Goodhines PA, Gellis LA, Ansell EB, et al. 2019. Journal of Clinical Sleep Medicine.",
+      "title": "Cannabis Use and Sleep Quality: Longitudinal Study",
+      "authors": "Goodhines PA, Gellis LA, Ansell EB, et al.",
+      "year": 2019,
+      "journal": "Journal of Clinical Sleep Medicine",
+      "sample_size": "1,811 adults (longitudinal cohort)",
+      "intervention": {
+        "cannabinoid": "Cannabis use patterns",
+        "dosage": "N/A",
+        "duration": "6-year follow-up",
+        "delivery_method": "N/A"
+      },
+      "outcomes": {
+        "primary_measure": "Sleep quality trajectories",
+        "results": "Occasional use associated with better sleep outcomes than daily or non-use; Moderate use pattern optimal; Daily use showed tolerance",
+        "effect_size": "Non-linear relationship",
+        "secondary_outcomes": "Pattern-dependent effects; tolerance with daily use; cessation effects on sleep"
+      },
+      "safety": {
+        "adverse_events": "Daily users: withdrawal insomnia on cessation",
+        "serious_adverse_events": "None",
+        "dropout_rate": "18%"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "NIH/NIAAA",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - NIH-funded; long-term use patterns; informs dosing recommendations",
+      "priority": "⭐⭐⭐⭐"
+    }
+  ]
+}

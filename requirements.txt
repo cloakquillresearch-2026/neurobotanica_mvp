@@ -1,0 +1,131 @@
+# NeuroBotanica Python Dependencies
+# Phase 1 Core Requirements
+
+# ============================================
+# WEB FRAMEWORK & API
+# ============================================
+fastapi>=0.104.1             # Modern async web framework
+uvicorn[standard]>=0.24.0    # ASGI server
+pydantic>=2.5.0              # Data validation
+pydantic-settings>=2.0.0     # Settings management
+
+# ============================================
+# DATABASE
+# ============================================
+sqlalchemy>=2.0.23           # ORM and database toolkit
+alembic>=1.13.0              # Database migrations
+# psycopg2-binary>=2.9.9     # PostgreSQL (uncomment for production)
+
+# ============================================
+# CORE CHEMISTRY & MOLECULAR ANALYSIS
+# ============================================
+rdkit>=2023.9.1              # Molecular descriptor calculation, SMILES processing
+# Note: RDKit can be difficult to install via pip on some systems
+# If installation fails, use conda: conda install -c conda-forge rdkit
+
+# ============================================
+# MACHINE LEARNING & DATA SCIENCE
+# ============================================
+scikit-learn>=1.3.0          # ML models (RandomForest, SVM, etc.)
+numpy>=1.24.0                # Numerical computing
+pandas>=2.0.0                # Data manipulation and analysis
+scipy>=1.11.0                # Scientific computing
+joblib>=1.3.0                # Model persistence
+
+# ============================================
+# ASYNC & HTTP
+# ============================================
+aiohttp>=3.9.0               # Async HTTP client for patent searches
+httpx>=0.25.0                # Async HTTP client
+
+# ============================================
+# DEEP LEARNING (Optional - for advanced models)
+# ============================================
+# tensorflow>=2.13.0         # Uncomment if using neural networks
+# torch>=2.0.0               # Uncomment if using PyTorch
+
+# ============================================
+# VISUALIZATION
+# ============================================
+matplotlib>=3.7.0            # Plotting and visualization
+seaborn>=0.12.0              # Statistical data visualization
+plotly>=5.14.0               # Interactive plots
+
+# ============================================
+# NATURAL LANGUAGE PROCESSING (for NORML extraction)
+# ============================================
+# spacy>=3.6.0               # Uncomment if doing NLP tasks
+# transformers>=4.30.0       # Uncomment for transformer models
+
+# ============================================
+# DATA VALIDATION & TYPING
+# ============================================
+pydantic>=2.0.0              # Data validation using Python type annotations
+typing-extensions>=4.7.0     # Extended type hints
+
+# ============================================
+# API & WEB (if building API endpoints)
+# ============================================
+fastapi>=0.100.0             # Modern API framework
+uvicorn>=0.23.0              # ASGI server for FastAPI
+requests>=2.31.0             # HTTP library for API calls
+
+# ============================================
+# DATABASE (for production deployment)
+# ============================================
+# psycopg2-binary>=2.9.6     # Uncomment for PostgreSQL
+# sqlalchemy>=2.0.0          # Uncomment for ORM
+
+# ============================================
+# TESTING
+# ============================================
+pytest>=7.4.0                # Testing framework
+pytest-cov>=4.1.0            # Code coverage for pytest
+pytest-mock>=3.11.0          # Mocking for tests
+
+# ============================================
+# CODE QUALITY
+# ============================================
+black>=23.7.0                # Code formatter
+pylint>=2.17.0               # Code linter
+mypy>=1.4.0                  # Static type checker
+flake8>=6.0.0                # Style guide enforcement
+
+# ============================================
+# UTILITIES
+# ============================================
+python-dotenv>=1.0.0         # Environment variable management
+tqdm>=4.65.0                 # Progress bars
+jsonschema>=4.18.0           # JSON schema validation
+
+# ============================================
+# JUPYTER (Optional - for interactive analysis)
+# ============================================
+# jupyter>=1.0.0             # Uncomment for Jupyter notebooks
+# ipykernel>=6.24.0          # Uncomment for Jupyter kernel
+# ipywidgets>=8.0.0          # Uncomment for interactive widgets
+
+# ============================================
+# DOCUMENTATION (Optional)
+# ============================================
+# sphinx>=7.0.0              # Uncomment for generating documentation
+# sphinx-rtd-theme>=1.2.0    # Uncomment for ReadTheDocs theme
+
+# ============================================
+# CLOUD INTEGRATION (for GCP deployment)
+# ============================================
+# google-cloud-storage>=2.10.0    # Uncomment for GCS
+# google-cloud-aiplatform>=1.26.0 # Uncomment for Vertex AI
+# google-cloud-sql>=2.5.0         # Uncomment for Cloud SQL
+
+# ============================================
+# PATENT FILING TOOLS
+# ============================================
+# reportlab>=4.0.0           # Uncomment for PDF generation
+# python-docx>=0.8.11        # Uncomment for DOCX generation
+
+# ============================================
+# VERSION PINNING FOR STABILITY
+# ============================================
+# These versions are tested and known to work together
+# Update cautiously and test thoroughly after upgrades

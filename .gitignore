@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment variables
+.env
+.env.local
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# Model artifacts (large files)
+*.pkl
+*.h5
+*.pt
+*.pth
+models/*.pkl
+models/*.h5
+
+# Data (if sensitive - remove lines for public data)
+# data/raw/*.csv
+# data/raw/*.json
+# data/processed/*.csv
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS specific
+Thumbs.db
+.DS_Store
+
+# Patent drafts (sensitive)
+patents/drafts/
+*.draft.md
+
+# API keys and secrets (NEVER commit these)
+secrets/
+credentials/
+*.key
+*.pem
+*_secret.json

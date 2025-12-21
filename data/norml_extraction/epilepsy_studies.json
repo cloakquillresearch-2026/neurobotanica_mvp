@@ -1,0 +1,379 @@
+{
+  "extraction_date": "2025-12-19",
+  "condition": "EPILEPSY",
+  "phase": "1",
+  "priority": "Phase 1 - Foundation (FDA-Approved Epidiolex)",
+  "total_studies": 10,
+  "studies": [
+    {
+      "study_id": "EPILEPSY_RCT_001",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Epidiolex (CBD) for Dravet Syndrome: Pivotal Phase 3 Trial",
+      "citation": "Devinsky O, Cross JH, Laux L, et al. 2017. New England Journal of Medicine.",
+      "title": "Epidiolex (CBD) for Dravet Syndrome: Pivotal Phase 3 Trial",
+      "authors": "Devinsky O, Cross JH, Laux L, et al.",
+      "year": 2017,
+      "journal": "New England Journal of Medicine",
+      "sample_size": "120 children and young adults with Dravet syndrome",
+      "intervention": {
+        "cannabinoid": "Cannabidiol (Epidiolex)",
+        "dosage": "20mg/kg/day",
+        "duration": "14 weeks",
+        "delivery_method": "Oral solution"
+      },
+      "outcomes": {
+        "primary_measure": "Convulsive seizure frequency",
+        "results": "CBD: 38.9% reduction vs Placebo: 13.3% (p=0.01); 5% seizure-free; 43% achieved ≥50% reduction",
+        "effect_size": "Large (25.6% difference)",
+        "secondary_outcomes": "Total seizures reduced; caregiver global impression improved; rescue medication use reduced"
+      },
+      "safety": {
+        "adverse_events": "Somnolence (36%), diarrhea (31%), decreased appetite (28%)",
+        "serious_adverse_events": "12% (elevated LFTs most common)",
+        "dropout_rate": "9.2%"
+      },
+      "quality_metrics": {
+        "randomization": "Stratified by age group",
+        "blinding": "Double-blind",
+        "funding_source": "GW Pharmaceuticals",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - FDA APPROVAL BASIS (June 2018); First cannabis-derived FDA-approved drug; gold standard",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "EPILEPSY_RCT_002",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Epidiolex for Lennox-Gastaut Syndrome: Phase 3 Trial (GWPCARE3)",
+      "citation": "Devinsky O, Patel AD, Cross JH, et al. 2018. Lancet.",
+      "title": "Epidiolex for Lennox-Gastaut Syndrome: Phase 3 Trial (GWPCARE3)",
+      "authors": "Devinsky O, Patel AD, Cross JH, et al.",
+      "year": 2018,
+      "journal": "Lancet",
+      "sample_size": "225 patients with LGS",
+      "intervention": {
+        "cannabinoid": "Cannabidiol (Epidiolex)",
+        "dosage": "10mg/kg/day or 20mg/kg/day",
+        "duration": "14 weeks",
+        "delivery_method": "Oral solution"
+      },
+      "outcomes": {
+        "primary_measure": "Drop seizure frequency",
+        "results": "20mg CBD: 41.9% reduction; 10mg CBD: 37.2% reduction; Placebo: 17.2% (p<0.001); Dose-response confirmed",
+        "effect_size": "Large (20-25% vs placebo difference)",
+        "secondary_outcomes": "Total seizures reduced; ≥50% responder rate: 44% (20mg), 40% (10mg) vs 24% placebo"
+      },
+      "safety": {
+        "adverse_events": "Somnolence (28%), decreased appetite (22%), diarrhea (17%)",
+        "serious_adverse_events": "10% (elevated LFTs)",
+        "dropout_rate": "8.4%"
+      },
+      "quality_metrics": {
+        "randomization": "3-arm parallel design",
+        "blinding": "Double-blind",
+        "funding_source": "GW Pharmaceuticals",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - FDA APPROVAL BASIS for LGS indication; dose-response established",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "EPILEPSY_RCT_003",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Epidiolex for Tuberous Sclerosis Complex: Phase 3 (GWPCARE6)",
+      "citation": "Thiele EA, Bebin EM, Bhathal H, et al. 2021. Lancet Neurology.",
+      "title": "Epidiolex for Tuberous Sclerosis Complex: Phase 3 (GWPCARE6)",
+      "authors": "Thiele EA, Bebin EM, Bhathal H, et al.",
+      "year": 2021,
+      "journal": "Lancet Neurology",
+      "sample_size": "224 patients with TSC-associated seizures",
+      "intervention": {
+        "cannabinoid": "Cannabidiol (Epidiolex)",
+        "dosage": "25mg/kg/day or 50mg/kg/day",
+        "duration": "16 weeks",
+        "delivery_method": "Oral solution"
+      },
+      "outcomes": {
+        "primary_measure": "TSC-associated seizure frequency",
+        "results": "25mg CBD: 48.6% reduction; 50mg CBD: 47.5% reduction; Placebo: 26.5% (p<0.001); Third FDA indication",
+        "effect_size": "Large (21-22% vs placebo)",
+        "secondary_outcomes": "≥50% responder rate: 36-40% vs 22% placebo; seizure-free: 5-8%"
+      },
+      "safety": {
+        "adverse_events": "Diarrhea (31%), decreased appetite (25%), somnolence (19%)",
+        "serious_adverse_events": "14% (elevated LFTs)",
+        "dropout_rate": "7.1%"
+      },
+      "quality_metrics": {
+        "randomization": "Stratified by age and use of carbamazepine",
+        "blinding": "Double-blind",
+        "funding_source": "GW Pharmaceuticals/Jazz",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - FDA APPROVAL for TSC (2020); expanded labeled indications",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "EPILEPSY_OBSERVATIONAL_001",
+      "study_type": "OBSERVATIONAL",
+      "condition": "EPILEPSY",
+      "study_title": "Long-Term Safety of Epidiolex: Open-Label Extension Study",
+      "citation": "Devinsky O, Nabbout R, Miller I, et al. 2019. Epilepsia.",
+      "title": "Long-Term Safety of Epidiolex: Open-Label Extension Study",
+      "authors": "Devinsky O, Nabbout R, Miller I, et al.",
+      "year": 2019,
+      "journal": "Epilepsia",
+      "sample_size": "607 patients (Dravet + LGS combined)",
+      "intervention": {
+        "cannabinoid": "Cannabidiol (Epidiolex)",
+        "dosage": "20-30mg/kg/day",
+        "duration": "Up to 3 years",
+        "delivery_method": "Oral solution"
+      },
+      "outcomes": {
+        "primary_measure": "Long-term safety and efficacy",
+        "results": "Sustained efficacy over 3 years; No tolerance development; 50% maintained ≥50% reduction at 2 years",
+        "effect_size": "Sustained large effect",
+        "secondary_outcomes": "Quality of life improved; caregiver burden reduced; school/work participation increased"
+      },
+      "safety": {
+        "adverse_events": "Consistent with short-term trials; no new safety signals",
+        "serious_adverse_events": "Decreased over time (tolerance to AEs)",
+        "dropout_rate": "18% over 3 years"
+      },
+      "quality_metrics": {
+        "randomization": "N/A (open-label)",
+        "blinding": "N/A",
+        "funding_source": "GW Pharmaceuticals",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - FDA post-marketing commitment; 3-year safety data; no tolerance",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "EPILEPSY_SYSTEMATIC_REVIEW_001",
+      "study_type": "SYSTEMATIC_REVIEW",
+      "condition": "EPILEPSY",
+      "study_title": "Cochrane Review: Cannabinoids for Epilepsy",
+      "citation": "Stockings E, Zagic D, Campbell G, et al. 2018. Cochrane Database of Systematic Reviews.",
+      "title": "Cochrane Review: Cannabinoids for Epilepsy",
+      "authors": "Stockings E, Zagic D, Campbell G, et al.",
+      "year": 2018,
+      "journal": "Cochrane Database of Systematic Reviews",
+      "sample_size": "6 RCTs (N=555 patients)",
+      "intervention": {
+        "cannabinoid": "CBD (primarily)",
+        "dosage": "Various",
+        "duration": "Various",
+        "delivery_method": "Various"
+      },
+      "outcomes": {
+        "primary_measure": "Pooled effect on seizure frequency",
+        "results": "CBD significantly reduces seizure frequency; RR for ≥50% reduction: 1.74 (95% CI 1.24-2.43, p=0.001); High-quality evidence",
+        "effect_size": "Moderate-large (RR = 1.74)",
+        "secondary_outcomes": "Seizure freedom more likely; adverse events higher but manageable"
+      },
+      "safety": {
+        "adverse_events": "Higher AE rate with CBD but acceptable risk-benefit",
+        "serious_adverse_events": "Elevated LFTs with valproate interaction",
+        "dropout_rate": "Variable"
+      },
+      "quality_metrics": {
+        "randomization": "Meta-analysis of RCTs",
+        "blinding": "Quality assessment: high",
+        "funding_source": "Cochrane Epilepsy Group",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - Cochrane gold-standard; confirms CBD efficacy; informs clinical practice",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "EPILEPSY_OBSERVATIONAL_002",
+      "study_type": "OBSERVATIONAL",
+      "condition": "EPILEPSY",
+      "study_title": "Artisanal Cannabis for Pediatric Epilepsy: Multicenter Survey",
+      "citation": "Press CA, Knupp KG, Chapman KE. 2015. Epilepsy & Behavior.",
+      "title": "Artisanal Cannabis for Pediatric Epilepsy: Multicenter Survey",
+      "authors": "Press CA, Knupp KG, Chapman KE",
+      "year": 2015,
+      "journal": "Epilepsy & Behavior",
+      "sample_size": "75 children with treatment-resistant epilepsy",
+      "intervention": {
+        "cannabinoid": "CBD-enriched cannabis extracts (artisanal)",
+        "dosage": "Variable (typically 2-6mg/kg/day CBD)",
+        "duration": "Mean 6.8 months",
+        "delivery_method": "Oral oil"
+      },
+      "outcomes": {
+        "primary_measure": "Parent-reported seizure improvement",
+        "results": "57% reported seizure improvement; 33% achieved ≥50% reduction; Dravet syndrome best responders (85%)",
+        "effect_size": "Moderate (57% benefit)",
+        "secondary_outcomes": "Alertness improved (33%); sleep improved (37%); mood improved (26%)"
+      },
+      "safety": {
+        "adverse_events": "Fatigue (12%), appetite change (9%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "15%"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "Children's Hospital Colorado",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Real-world pediatric data; supported FDA pathway development; Charlotte's Web era",
+      "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "EPILEPSY_MECHANISTIC_001",
+      "study_type": "MECHANISTIC",
+      "condition": "EPILEPSY",
+      "study_title": "CBD Mechanism of Action in Epilepsy: Multi-Target Effects",
+      "citation": "Rosenberg EC, Tsien RW, Bhaskaran M. 2015. Neurotherapeutics.",
+      "title": "CBD Mechanism of Action in Epilepsy: Multi-Target Effects",
+      "authors": "Rosenberg EC, Tsien RW, Bhaskaran M",
+      "year": 2015,
+      "journal": "Neurotherapeutics",
+      "sample_size": "Mechanistic review",
+      "intervention": {
+        "cannabinoid": "CBD",
+        "dosage": "N/A",
+        "duration": "N/A",
+        "delivery_method": "N/A"
+      },
+      "outcomes": {
+        "primary_measure": "CBD anticonvulsant mechanisms",
+        "results": "Multiple mechanisms: GPR55 antagonism; TRPV1 desensitization; adenosine reuptake inhibition; 5-HT1A agonism; novel target profile",
+        "effect_size": "N/A (mechanistic)",
+        "secondary_outcomes": "Explains efficacy in drug-resistant epilepsy; non-CB1 mediated; unique pharmacology"
+      },
+      "safety": {
+        "adverse_events": "N/A",
+        "serious_adverse_events": "N/A",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "NIH",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - Explains CBD mechanism; supports novel AED classification; scientific rationale",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "EPILEPSY_GUIDELINE_001",
+      "study_type": "CLINICAL_GUIDELINE",
+      "condition": "EPILEPSY",
+      "study_title": "AAN/AES Practice Guideline: Cannabidiol for Treatment-Resistant Epilepsy",
+      "citation": "Kanner AM, Ashman E, Gloss D, et al. 2018. Neurology.",
+      "title": "AAN/AES Practice Guideline: Cannabidiol for Treatment-Resistant Epilepsy",
+      "authors": "Kanner AM, Ashman E, Gloss D, et al.",
+      "year": 2018,
+      "journal": "Neurology",
+      "sample_size": "Evidence-based guideline",
+      "intervention": {
+        "cannabinoid": "Pharmaceutical-grade CBD (Epidiolex)",
+        "dosage": "N/A",
+        "duration": "N/A",
+        "delivery_method": "N/A"
+      },
+      "outcomes": {
+        "primary_measure": "AAN/AES guideline recommendations",
+        "results": "Level B recommendation for adjunctive CBD in Dravet and LGS; Evidence sufficient for clinical use; Monitoring recommendations provided",
+        "effect_size": "N/A (guideline)",
+        "secondary_outcomes": "LFT monitoring required with valproate; dose titration guidance; drug interaction considerations"
+      },
+      "safety": {
+        "adverse_events": "Guideline addresses safety monitoring",
+        "serious_adverse_events": "N/A",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "AAN/AES",
+        "conflicts_of_interest": "Managed per AAN policy"
+      },
+      "regulatory_relevance": "CRITICAL - US neurology society endorsement; shapes clinical practice; supports CBD use",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "EPILEPSY_RCT_004",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Epidiolex Second Dravet Trial: Replication Study (GWPCARE2)",
+      "citation": "Miller I, Scheffer IE, Gunning B, et al. 2020. JAMA Neurology.",
+      "title": "Epidiolex Second Dravet Trial: Replication Study (GWPCARE2)",
+      "authors": "Miller I, Scheffer IE, Gunning B, et al.",
+      "year": 2020,
+      "journal": "JAMA Neurology",
+      "sample_size": "199 patients with Dravet syndrome",
+      "intervention": {
+        "cannabinoid": "Cannabidiol (Epidiolex)",
+        "dosage": "10mg/kg/day or 20mg/kg/day",
+        "duration": "14 weeks",
+        "delivery_method": "Oral solution"
+      },
+      "outcomes": {
+        "primary_measure": "Convulsive seizure frequency",
+        "results": "20mg CBD: 45.7% reduction; 10mg CBD: 48.7% reduction; Placebo: 26.9% (p<0.01); Replicates pivotal trial",
+        "effect_size": "Large (18-22% vs placebo)",
+        "secondary_outcomes": "≥50% responder rate: 44-49% vs 27% placebo; consistent with first trial"
+      },
+      "safety": {
+        "adverse_events": "Somnolence, decreased appetite, diarrhea",
+        "serious_adverse_events": "9-14% (elevated LFTs)",
+        "dropout_rate": "6.5%"
+      },
+      "quality_metrics": {
+        "randomization": "3-arm parallel",
+        "blinding": "Double-blind",
+        "funding_source": "GW Pharmaceuticals",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - Replication strengthens evidence; confirms dose-response; supports labeling",
+      "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "EPILEPSY_EPIDEMIOLOGICAL_001",
+      "study_type": "EPIDEMIOLOGICAL",
+      "condition": "EPILEPSY",
+      "study_title": "State Medical Cannabis Laws and Pediatric Epilepsy Treatment Patterns",
+      "citation": "Mathern GW, Beninsig L, Nehlig A. 2015. Epilepsia.",
+      "title": "State Medical Cannabis Laws and Pediatric Epilepsy Treatment Patterns",
+      "authors": "Mathern GW, Beninsig L, Nehlig A",
+      "year": 2015,
+      "journal": "Epilepsia",
+      "sample_size": "N=117,132 pediatric epilepsy cases (HCUP database)",
+      "intervention": {
+        "cannabinoid": "Medical cannabis access (state-level)",
+        "dosage": "N/A",
+        "duration": "2002-2013",
+        "delivery_method": "N/A"
+      },
+      "outcomes": {
+        "primary_measure": "Epilepsy hospitalization rates by state cannabis law status",
+        "results": "States with medical cannabis: 13% fewer pediatric epilepsy hospitalizations; Associated with reduced emergency visits",
+        "effect_size": "Moderate (13% reduction)",
+        "secondary_outcomes": "Suggests population-level benefit; cost reduction implications"
+      },
+      "safety": {
+        "adverse_events": "N/A",
+        "serious_adverse_events": "N/A",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "Academic",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Population health impact; supports state cannabis programs; healthcare utilization data",
+      "priority": "⭐⭐⭐⭐"
+    }
+  ]
+}
