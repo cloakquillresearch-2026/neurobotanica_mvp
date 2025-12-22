@@ -1,0 +1,9 @@
+{
+  "test_loss": 0.0630193863596235,
+  "test_tk_to_g_acc@5": 0.8490566037735849,
+  "test_g_to_tk_acc@3": 0.6792452830188679,
+  "best_epoch": 2,
+  "best_val_loss": 0.05974618611591203,
+  "model_parameters": 7350348,
+  "training_date": "2025-12-21T22:10:32.331083"
+}

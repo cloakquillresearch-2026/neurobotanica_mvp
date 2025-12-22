@@ -90,8 +90,26 @@ class HybridGenomePathDataset(Dataset):
     def __getitem__(self, idx):
         corr = self.correlations[idx]
         
-        # Get TK practice
-        tk_id = corr['tk_practice_id']
+        # Handle both TK→Genomic and Genomic→TK directions
+        if corr['direction'] == 'tk_to_genomic':
+            tk_id = corr['tk_practice_id']
+            genomic_target_name = corr['genomic_target']
+        else:  # genomic_to_tk
+            # For genomic→TK, use predicted practice or skip if invalid
+            tk_predicted = corr.get('tk_practice_predicted', '')
+            # Try to match to a real practice ID
+            tk_id = None
+            for pid in self.tk_ids:
+                if pid in tk_predicted or tk_predicted in str(self.tk_practices[pid].get('practice_name', '')):
+                    tk_id = pid
+                    break
+            
+            # If no match, use first TK practice as fallback
+            if tk_id is None:
+                tk_id = self.tk_ids[0]
+            
+            genomic_target_name = corr['genomic_target']
+        
         tk_practice = self.tk_practices[tk_id]
         
         # Get compound mapping (use practice_id as key)
@@ -110,7 +128,7 @@ class HybridGenomePathDataset(Dataset):
         )
         
         # Get genomic target
-        genomic_target_name = corr['genomic_target']
+        genomic_target_name = genomic_target_name
         
         # Find genomic ID (may need to search by gene name)
         genomic_id = None
