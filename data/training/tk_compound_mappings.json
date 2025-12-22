@@ -1,0 +1,52 @@
+{
+  "tk_compound_mappings": {
+    "note": "Mapping of TK practices to active chemical compounds. For MVP, using cannabinoid profiles.",
+    "metadata": {
+      "version": "1.0",
+      "compounds_per_practice": "Variable based on traditional preparation",
+      "source": "Literature review + traditional formulations"
+    },
+    "practices": {
+      "ayurveda_ashwagandha_stress": {
+        "compounds": ["quercetin", "resveratrol"],
+        "notes": "Withanolides have CB1 affinity, adapting generic phytochemicals for MVP"
+      },
+      "tcm_cannabis_pain": {
+        "compounds": ["THC", "CBD", "myrcene", "beta-caryophyllene"],
+        "notes": "Full-spectrum cannabis preparation"
+      },
+      "ayurveda_turmeric_inflammation": {
+        "compounds": ["curcumin", "quercetin"],
+        "notes": "Curcumin is primary anti-inflammatory compound"
+      },
+      "native_american_cannabis_ceremony": {
+        "compounds": ["CBD", "CBN", "limonene", "linalool"],
+        "notes": "Low-THC ceremonial blend with calming terpenes"
+      },
+      "rastafarian_cannabis_meditation": {
+        "compounds": ["THC", "CBD", "myrcene", "pinene"],
+        "notes": "Balanced cannabinoid profile for focus and relaxation"
+      },
+      "generic_high_thc_cannabis": {
+        "compounds": ["THC", "myrcene", "limonene"],
+        "notes": "High-THC cultivar with entourage terpenes"
+      },
+      "generic_high_cbd_cannabis": {
+        "compounds": ["CBD", "linalool", "beta-caryophyllene"],
+        "notes": "CBD-dominant anti-inflammatory profile"
+      },
+      "generic_balanced_cannabis": {
+        "compounds": ["THC", "CBD", "myrcene", "beta-caryophyllene", "pinene"],
+        "notes": "1:1 THC:CBD with diverse terpene profile"
+      },
+      "generic_cbg_cultivar": {
+        "compounds": ["CBG", "limonene", "humulene"],
+        "notes": "CBG-dominant for inflammation/pain"
+      },
+      "generic_cbn_sedative": {
+        "compounds": ["CBN", "CBD", "myrcene", "linalool"],
+        "notes": "Aged cannabis with sedative profile"
+      }
+    }
+  }
+}

@@ -20,6 +20,9 @@ from typing import Dict, List, Tuple, Optional, Union
 import json
 from pathlib import Path
 
+# Import chemical encoder
+from backend.services.genomepath.chemical_encoder import ChemicalEncoder
+
 
 class GenomePathTokenizer:
     """
@@ -58,8 +61,15 @@ class GenomePathTokenizer:
         self.model = SentenceTransformer(model_name, device=device)
         self.embedding_dim = self.model.get_sentence_embedding_dimension()
         
+        # Initialize chemical encoder
+        self.chemical_encoder = ChemicalEncoder(
+            fingerprint_radius=2,  # ECFP4
+            fingerprint_bits=2048,
+            use_features=True
+        )
+        
         # BioBERT models output 768-d embeddings
-        print(f"✅ Tokenizer initialized with {self.embedding_dim}-d embeddings")
+        print(f"✅ Tokenizer initialized with {self.embedding_dim}-d embeddings + 2048-d chemical fingerprints")
         
         self.cache_dir = Path(cache_dir) if cache_dir else None
         if self.cache_dir:
@@ -71,10 +81,11 @@ class GenomePathTokenizer:
         indications: List[str],
         preparation_method: str = "",
         cultural_context: str = "",
-        source_community: str = ""
+        source_community: str = "",
+        active_compounds: Optional[List[str]] = None
     ) -> Dict[str, torch.Tensor]:
         """
-        Encode TK practice into model-ready format.
+        Encode TK practice into model-ready format with chemical fingerprints.
         
         Args:
             practice_name: Name of traditional practice
@@ -82,10 +93,13 @@ class GenomePathTokenizer:
             preparation_method: How it's prepared
             cultural_context: Cultural significance
             source_community: Community attribution
+            active_compounds: List of active chemical compounds (names or SMILES)
             
         Returns:
             Dictionary with:
-            - embeddings: [seq_len, 384] tensor
+            - text_embeddings: [seq_len, 768] tensor (BioBERT)
+            - chemical_fingerprint: [2048] tensor (Morgan ECFP4)
+            - chemical_descriptors: [7] tensor (molecular properties)
             - attention_mask: [seq_len] tensor (1=real, 0=padding)
             - metadata: Original text components
         """
@@ -117,13 +131,25 @@ class GenomePathTokenizer:
             text_components,
             convert_to_tensor=True,
             show_progress_bar=False
-        )  # [seq_len, 384]
+        )  # [seq_len, 768]
         
         # Create attention mask (all real tokens)
         attention_mask = torch.ones(len(text_components), dtype=torch.long)
         
+        # Encode chemical compounds
+        if active_compounds:
+            chemical_result = self.chemical_encoder.encode_compound_list(active_compounds)
+        else:
+            # Default to zero if no compounds provided
+            chemical_result = self.chemical_encoder.encode_compound(None, None)
+            chemical_result['num_compounds'] = torch.tensor(0.0)
+        
         return {
-            'embeddings': embeddings,
+            'text_embeddings': embeddings,  # Renamed from 'embeddings' for clarity
+            'chemical_fingerprint': chemical_result['fingerprint'],  # [2048]
+            'chemical_descriptors': chemical_result['descriptors'],  # [7]
+            'chemical_valid': chemical_result['is_valid'],  # [1]
+            'num_compounds': chemical_result['num_compounds'],  # [1]
             'attention_mask': attention_mask,
             'metadata': {
                 'practice_name': practice_name,
@@ -131,6 +157,7 @@ class GenomePathTokenizer:
                 'preparation_method': preparation_method,
                 'cultural_context': cultural_context,
                 'source_community': source_community,
+                'active_compounds': active_compounds or [],
                 'num_components': len(text_components)
             }
         }
