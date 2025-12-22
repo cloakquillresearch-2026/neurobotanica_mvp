@@ -33,7 +33,7 @@ class GenomePathTokenizer:
         self,
         model_name: str = 'sentence-transformers/all-MiniLM-L6-v2',
         cache_dir: Optional[str] = None,
-        device: Optional[str] = None
+        device: Optional[str] = 'cpu'  # Force CPU for DataLoader compatibility
     ):
         """
         Initialize tokenizer with SentenceTransformer model.
@@ -41,10 +41,11 @@ class GenomePathTokenizer:
         Args:
             model_name: HuggingFace model name (default: all-MiniLM-L6-v2, 384-d)
             cache_dir: Directory to cache embeddings
-            device: Device for model ('cuda', 'cpu', or None for auto-detect)
+            device: Device for model (default: 'cpu' for DataLoader compatibility)
         """
-        if device is None:
-            device = 'cuda' if torch.cuda.is_available() else 'cpu'
+        # Always use CPU for embedding generation in DataLoader
+        # Model tensors will be moved to GPU separately
+        device = 'cpu'
         
         print(f"Loading SentenceTransformer model: {model_name}")
         print(f"Device: {device}")
