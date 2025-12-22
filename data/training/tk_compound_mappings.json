@@ -1,51 +1,163 @@
 {
   "tk_compound_mappings": {
-    "note": "Mapping of TK practices to active chemical compounds. For MVP, using cannabinoid profiles.",
+    "note": "Mapping of TK practices to active chemical compounds. Based on literature and traditional formulations.",
     "metadata": {
-      "version": "1.0",
-      "compounds_per_practice": "Variable based on traditional preparation",
-      "source": "Literature review + traditional formulations"
+      "version": "2.0",
+      "date": "2025-12-21",
+      "total_practices": 30,
+      "compounds_per_practice": "2-5 based on therapeutic use",
+      "source": "Literature review + traditional formulations + cannabinoid/terpene profiles"
     },
     "practices": {
-      "ayurveda_ashwagandha_stress": {
-        "compounds": ["quercetin", "resveratrol"],
-        "notes": "Withanolides have CB1 affinity, adapting generic phytochemicals for MVP"
+      "TK_0000": {
+        "name": "Cannabis for chronic pain relief",
+        "compounds": ["THC", "CBD", "beta-caryophyllene", "myrcene"],
+        "notes": "Full-spectrum pain relief: THC (analgesic), CBD (anti-inflammatory), β-caryophyllene (CB2 agonist), myrcene (sedative)"
       },
-      "tcm_cannabis_pain": {
-        "compounds": ["THC", "CBD", "myrcene", "beta-caryophyllene"],
-        "notes": "Full-spectrum cannabis preparation"
+      "TK_0001": {
+        "name": "Cannabis oil for epilepsy",
+        "compounds": ["CBD", "CBG", "linalool"],
+        "notes": "CBD dominant for seizure control, CBG neuroprotective, linalool anxiolytic"
       },
-      "ayurveda_turmeric_inflammation": {
-        "compounds": ["curcumin", "quercetin"],
-        "notes": "Curcumin is primary anti-inflammatory compound"
-      },
-      "native_american_cannabis_ceremony": {
-        "compounds": ["CBD", "CBN", "limonene", "linalool"],
-        "notes": "Low-THC ceremonial blend with calming terpenes"
-      },
-      "rastafarian_cannabis_meditation": {
-        "compounds": ["THC", "CBD", "myrcene", "pinene"],
-        "notes": "Balanced cannabinoid profile for focus and relaxation"
-      },
-      "generic_high_thc_cannabis": {
+      "TK_0002": {
+        "name": "Hemp seed for appetite stimulation",
         "compounds": ["THC", "myrcene", "limonene"],
-        "notes": "High-THC cultivar with entourage terpenes"
+        "notes": "THC primary appetite stimulant, myrcene enhances effect, limonene mood elevation"
       },
-      "generic_high_cbd_cannabis": {
-        "compounds": ["CBD", "linalool", "beta-caryophyllene"],
-        "notes": "CBD-dominant anti-inflammatory profile"
+      "TK_0003": {
+        "name": "Cannabis topical for arthritis",
+        "compounds": ["CBD", "beta-caryophyllene", "THC"],
+        "notes": "CBD anti-inflammatory, β-caryophyllene CB2 activation, THC local analgesic"
       },
-      "generic_balanced_cannabis": {
-        "compounds": ["THC", "CBD", "myrcene", "beta-caryophyllene", "pinene"],
-        "notes": "1:1 THC:CBD with diverse terpene profile"
+      "TK_0004": {
+        "name": "Cannabis tea for anxiety",
+        "compounds": ["CBD", "linalool", "limonene"],
+        "notes": "CBD anxiolytic, linalool GABAergic, limonene mood elevation"
       },
-      "generic_cbg_cultivar": {
-        "compounds": ["CBG", "limonene", "humulene"],
-        "notes": "CBG-dominant for inflammation/pain"
+      "TK_0005": {
+        "name": "Cannabis resin for migraine",
+        "compounds": ["THC", "CBD", "pinene", "beta-caryophyllene"],
+        "notes": "THC pain relief, CBD anti-inflammatory, pinene bronchodilator, β-caryophyllene CB2"
       },
-      "generic_cbn_sedative": {
-        "compounds": ["CBN", "CBD", "myrcene", "linalool"],
-        "notes": "Aged cannabis with sedative profile"
+      "TK_0006": {
+        "name": "Hemp fiber poultice for inflammation",
+        "compounds": ["CBD", "beta-caryophyllene", "quercetin"],
+        "notes": "CBD/β-caryophyllene anti-inflammatory, quercetin flavonoid antioxidant"
+      },
+      "TK_0007": {
+        "name": "Cannabis tincture for neuropathic pain",
+        "compounds": ["THC", "CBD", "myrcene", "beta-caryophyllene"],
+        "notes": "Balanced cannabinoids for nerve pain, myrcene sedative, β-caryophyllene anti-inflammatory"
+      },
+      "TK_0008": {
+        "name": "Cannabis smoke for asthma",
+        "compounds": ["THC", "pinene", "limonene"],
+        "notes": "THC bronchodilator, pinene anti-inflammatory respiratory, limonene expectorant"
+      },
+      "TK_0009": {
+        "name": "Hemp seed oil for skin conditions",
+        "compounds": ["CBD", "quercetin", "resveratrol"],
+        "notes": "CBD anti-inflammatory skin, quercetin/resveratrol antioxidants for healing"
+      },
+      "TK_0010": {
+        "name": "Cannabis for glaucoma treatment",
+        "compounds": ["THC", "CBD", "myrcene"],
+        "notes": "THC reduces intraocular pressure, CBD neuroprotective, myrcene enhances effect"
+      },
+      "TK_0011": {
+        "name": "Cannabis compress for menstrual pain",
+        "compounds": ["CBD", "THC", "linalool", "beta-caryophyllene"],
+        "notes": "CBD/THC pain relief, linalool muscle relaxant, β-caryophyllene anti-inflammatory"
+      },
+      "TK_0012": {
+        "name": "Hemp protein for muscle recovery",
+        "compounds": ["CBD", "beta-caryophyllene", "quercetin"],
+        "notes": "CBD anti-inflammatory recovery, β-caryophyllene CB2 activation, quercetin antioxidant"
+      },
+      "TK_0013": {
+        "name": "Cannabis for PTSD and trauma",
+        "compounds": ["CBD", "THC", "linalool", "myrcene"],
+        "notes": "CBD anxiolytic/memory consolidation, low THC, linalool GABAergic, myrcene sedative"
+      },
+      "TK_0014": {
+        "name": "Cannabis for multiple sclerosis spasticity",
+        "compounds": ["THC", "CBD", "beta-caryophyllene", "myrcene"],
+        "notes": "1:1 THC:CBD for spasticity (Sativex model), β-caryophyllene anti-inflammatory, myrcene muscle relaxant"
+      },
+      "TK_0015": {
+        "name": "Hemp seed for constipation",
+        "compounds": ["CBD", "quercetin"],
+        "notes": "Fiber primary mechanism, CBD gut motility, quercetin anti-inflammatory bowel"
+      },
+      "TK_0016": {
+        "name": "Cannabis for nausea and vomiting",
+        "compounds": ["THC", "CBD", "limonene"],
+        "notes": "THC primary antiemetic, CBD serotonin modulation, limonene gastric relief"
+      },
+      "TK_0017": {
+        "name": "Cannabis salve for burns",
+        "compounds": ["CBD", "beta-caryophyllene", "quercetin", "linalool"],
+        "notes": "CBD anti-inflammatory healing, β-caryophyllene pain, quercetin antioxidant, linalool antimicrobial"
+      },
+      "TK_0018": {
+        "name": "Cannabis for depression",
+        "compounds": ["THC", "CBD", "limonene", "pinene"],
+        "notes": "Low THC mood elevation, CBD anxiolytic, limonene antidepressant, pinene alertness"
+      },
+      "TK_0019": {
+        "name": "Hemp for hypertension",
+        "compounds": ["CBD", "quercetin", "myrcene"],
+        "notes": "CBD vasodilation, quercetin cardiovascular, myrcene sedative"
+      },
+      "TK_0020": {
+        "name": "Cannabis for Alzheimer's neuroprotection",
+        "compounds": ["CBD", "THC", "pinene", "beta-caryophyllene"],
+        "notes": "CBD neuroprotective/anti-inflammatory, THC amyloid reduction, pinene memory, β-caryophyllene CB2"
+      },
+      "TK_0021": {
+        "name": "Hemp fiber tea for diabetes",
+        "compounds": ["CBD", "quercetin", "myrcene"],
+        "notes": "CBD blood sugar regulation, quercetin insulin sensitivity, myrcene anti-inflammatory"
+      },
+      "TK_0022": {
+        "name": "Cannabis poultice for fractures and bone healing",
+        "compounds": ["CBD", "CBG", "beta-caryophyllene"],
+        "notes": "CBD bone healing, CBG bone formation, β-caryophyllene anti-inflammatory"
+      },
+      "TK_0023": {
+        "name": "Cannabis for chemotherapy side effects",
+        "compounds": ["THC", "CBD", "limonene", "beta-caryophyllene"],
+        "notes": "THC antiemetic/appetite, CBD anti-inflammatory, limonene nausea, β-caryophyllene pain"
+      },
+      "TK_0024": {
+        "name": "Hemp root decoction for fever",
+        "compounds": ["CBD", "quercetin", "linalool"],
+        "notes": "CBD anti-inflammatory, quercetin antipyretic, linalool cooling"
+      },
+      "TK_0025": {
+        "name": "Cannabis for Parkinson's tremor",
+        "compounds": ["CBD", "THC", "myrcene", "beta-caryophyllene"],
+        "notes": "CBD neuroprotective/anti-tremor, THC muscle relaxant, myrcene sedative, β-caryophyllene anti-inflammatory"
+      },
+      "TK_0026": {
+        "name": "Cannabis honey for cough and bronchitis",
+        "compounds": ["CBD", "pinene", "linalool"],
+        "notes": "CBD anti-inflammatory respiratory, pinene bronchodilator, linalool antimicrobial"
+      },
+      "TK_0027": {
+        "name": "Hemp seed for lactation support",
+        "compounds": ["CBD", "quercetin"],
+        "notes": "Nutritional primary, CBD stress reduction, quercetin anti-inflammatory"
+      },
+      "TK_0028": {
+        "name": "Cannabis for fibromyalgia",
+        "compounds": ["THC", "CBD", "myrcene", "linalool", "beta-caryophyllene"],
+        "notes": "Balanced THC:CBD for pain, myrcene sedative, linalool muscle relaxant, β-caryophyllene anti-inflammatory"
+      },
+      "TK_0029": {
+        "name": "Cannabis compress for sciatica",
+        "compounds": ["THC", "CBD", "myrcene", "beta-caryophyllene"],
+        "notes": "THC/CBD nerve pain, myrcene anti-inflammatory, β-caryophyllene CB2 activation"
       }
     }
   }
