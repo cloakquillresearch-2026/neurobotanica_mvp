@@ -131,13 +131,13 @@ class ChemicalEncoder:
             }
         
         # Get descriptors
-        descriptors = self.get_molecular_descriptors(smiles) if self.use_features else np.zeros(7)
+        descriptors = self.get_molecular_descriptors(smiles) if self.use_features else np.zeros(7, dtype=np.float32)
         if descriptors is None:
             descriptors = np.zeros(7, dtype=np.float32)
         
         return {
-            'fingerprint': torch.from_numpy(fp),
-            'descriptors': torch.from_numpy(descriptors),
+            'fingerprint': torch.from_numpy(fp).float(),
+            'descriptors': torch.from_numpy(descriptors).float(),
             'is_valid': torch.tensor(1.0)
         }
     
