@@ -26,6 +26,10 @@ from dataclasses import dataclass
 class ModelConfig:
     """GenomePath model configuration."""
     
+    # Input embedding dimensions (from tokenizer)
+    input_tk_dim: int = 768  # BioBERT embedding dimension
+    input_genomic_dim: int = 768 * 4  # 4 modalities × 768-d each = 3072-d
+    
     # Encoder dimensions
     tk_embedding_dim: int = 512
     genomic_embedding_dim: int = 512
@@ -59,9 +63,9 @@ class TKEncoder(nn.Module):
         super().__init__()
         self.config = config
         
-        # Input projection (from SentenceTransformer embeddings)
-        # SentenceTransformer outputs 384-d, we project to 512-d
-        self.input_projection = nn.Linear(384, config.tk_embedding_dim)
+        # Input projection (from BioBERT embeddings)
+        # BioBERT outputs 768-d, we project to 512-d
+        self.input_projection = nn.Linear(config.input_tk_dim, config.tk_embedding_dim)
         
         # Positional encoding
         self.positional_encoding = nn.Parameter(
@@ -155,9 +159,9 @@ class GenomicEncoder(nn.Module):
         super().__init__()
         self.config = config
         
-        # Input projection (from concatenated features)
-        # Gene embedding (384) + pathway (384) + tissue (384) + disease (384) = 1536-d
-        self.input_projection = nn.Linear(1536, config.genomic_embedding_dim)
+        # Input projection (from concatenated BioBERT features)
+        # Gene embedding (768) + pathway (768) + tissue (768) + disease (768) = 3072-d
+        self.input_projection = nn.Linear(config.input_genomic_dim, config.genomic_embedding_dim)
         
         # Positional encoding
         self.positional_encoding = nn.Parameter(

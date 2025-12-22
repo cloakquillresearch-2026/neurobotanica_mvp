@@ -31,7 +31,7 @@ class GenomePathTokenizer:
     
     def __init__(
         self,
-        model_name: str = 'sentence-transformers/all-MiniLM-L6-v2',
+        model_name: str = 'pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb',
         cache_dir: Optional[str] = None,
         device: Optional[str] = 'cpu'  # Force CPU for DataLoader compatibility
     ):
@@ -39,7 +39,12 @@ class GenomePathTokenizer:
         Initialize tokenizer with SentenceTransformer model.
         
         Args:
-            model_name: HuggingFace model name (default: all-MiniLM-L6-v2, 384-d)
+            model_name: HuggingFace model name
+                - 'pritamdeka/BioBERT-mnli-snli-scinli-scitail-mednli-stsb' (default, BioBERT fine-tuned, 768-d)
+                - 'microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext' (PubMedBERT, 768-d)
+                - 'dmis-lab/biobert-v1.1' (BioBERT base, 768-d)
+                - 'allenai/scibert_scivocab_uncased' (SciBERT, 768-d)
+                - 'sentence-transformers/all-MiniLM-L6-v2' (general, 384-d)
             cache_dir: Directory to cache embeddings
             device: Device for model (default: 'cpu' for DataLoader compatibility)
         """
@@ -53,14 +58,12 @@ class GenomePathTokenizer:
         self.model = SentenceTransformer(model_name, device=device)
         self.embedding_dim = self.model.get_sentence_embedding_dimension()
         
-        # Verify embedding dimension
-        assert self.embedding_dim == 384, f"Expected 384-d embeddings, got {self.embedding_dim}-d"
+        # BioBERT models output 768-d embeddings
+        print(f"✅ Tokenizer initialized with {self.embedding_dim}-d embeddings")
         
         self.cache_dir = Path(cache_dir) if cache_dir else None
         if self.cache_dir:
             self.cache_dir.mkdir(parents=True, exist_ok=True)
-        
-        print(f"✅ Tokenizer initialized with {self.embedding_dim}-d embeddings")
     
     def encode_tk_practice(
         self,

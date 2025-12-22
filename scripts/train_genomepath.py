@@ -470,8 +470,8 @@ def main(epochs=50, batch_size=32, quick_test=False):
     print("Final Evaluation on Test Set...")
     print("=" * 70)
     
-    # Load best model
-    checkpoint = torch.load(checkpoint_dir / 'best_model.pt')
+    # Load best model (weights_only=False for compatibility with numpy in checkpoint)
+    checkpoint = torch.load(checkpoint_dir / 'best_model.pt', weights_only=False)
     model.load_state_dict(checkpoint['model_state_dict'])
     
     test_metrics = evaluate(model, test_loader, criterion, device)
