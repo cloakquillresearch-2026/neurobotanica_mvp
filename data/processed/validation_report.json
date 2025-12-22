@@ -1,0 +1,275 @@
+{
+  "validation_date": "2025-12-21T19:23:28.489624",
+  "overall_status": "PASS",
+  "errors": [],
+  "warnings": [
+    "Average confidence (0.5983) below recommended threshold (0.65)"
+  ],
+  "sacred_knowledge_checks": {
+    "total_sacred_practices": 0,
+    "violations": [],
+    "status": "PASS"
+  },
+  "attribution_checks": {
+    "total_practices": 30,
+    "missing_attribution": [],
+    "status": "PASS"
+  },
+  "quality_metrics": {
+    "total_correlations": 525,
+    "average_confidence": 0.5983,
+    "quality_distribution": {
+      "moderate": 277,
+      "poor": 230,
+      "good": 18
+    },
+    "low_quality_count": 209,
+    "low_quality_correlations": [
+      {
+        "correlation_id": "TK2G_00012",
+        "quality": "poor",
+        "confidence": 0.585,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00020",
+        "quality": "poor",
+        "confidence": 0.5549999999999999,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00022",
+        "quality": "poor",
+        "confidence": 0.5563820896553224,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00023",
+        "quality": "poor",
+        "confidence": 0.5559672331578022,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00025",
+        "quality": "poor",
+        "confidence": 0.5063820896553224,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00026",
+        "quality": "poor",
+        "confidence": 0.5059672331578021,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00028",
+        "quality": "poor",
+        "confidence": 0.47638208965532236,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00029",
+        "quality": "poor",
+        "confidence": 0.4759672331578021,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00031",
+        "quality": "poor",
+        "confidence": 0.43122791963620216,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00032",
+        "quality": "poor",
+        "confidence": 0.4206440827177739,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00033",
+        "quality": "poor",
+        "confidence": 0.5799405917190589,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00034",
+        "quality": "poor",
+        "confidence": 0.3812279196362022,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00035",
+        "quality": "poor",
+        "confidence": 0.37064408271777394,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00036",
+        "quality": "poor",
+        "confidence": 0.5499405917190588,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00037",
+        "quality": "poor",
+        "confidence": 0.35122791963620215,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00038",
+        "quality": "poor",
+        "confidence": 0.3406440827177739,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00059",
+        "quality": "moderate",
+        "confidence": 0.575,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00064",
+        "quality": "poor",
+        "confidence": 0.4725827400159325,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00069",
+        "quality": "poor",
+        "confidence": 0.4225827400159325,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00074",
+        "quality": "poor",
+        "confidence": 0.3925827400159325,
+        "direction": "tk_to_genomic"
+      }
+    ],
+    "status": "WARNING"
+  },
+  "completeness_checks": {
+    "tk_practices": {
+      "total": 30,
+      "conditions_covered": 87,
+      "conditions": [
+        "alzheimers",
+        "anhedonia",
+        "anxiety",
+        "appetite_loss",
+        "appetite_stimulation",
+        "arthritis",
+        "asthma",
+        "athletic_performance",
+        "blood_sugar_regulation",
+        "bone_healing",
+        "bone_pain",
+        "bradykinesia",
+        "bronchitis",
+        "bronchospasm",
+        "bruises",
+        "burns",
+        "cachexia",
+        "cancer_pain",
+        "chemotherapy_nausea",
+        "chronic_pain",
+        "chronic_widespread_pain",
+        "cognitive_decline",
+        "constipation",
+        "cough",
+        "dementia",
+        "depression",
+        "dermatitis",
+        "diabetes",
+        "digestive_health",
+        "dry_skin",
+        "dysmenorrhea",
+        "eczema",
+        "epilepsy",
+        "fatigue",
+        "fever",
+        "fibromyalgia",
+        "fractures",
+        "glaucoma",
+        "headache",
+        "high_blood_pressure",
+        "hypertension",
+        "hypervigilance",
+        "infection",
+        "inflammation",
+        "insomnia",
+        "intraocular_pressure",
+        "joint_pain",
+        "lactation_support",
+        "lower_back_pain",
+        "menstrual_cramps",
+        "metabolic_syndrome",
+        "migraine",
+        "milk_production",
+        "mood_disorders",
+        "multiple_sclerosis",
+        "muscle_recovery",
+        "muscle_spasms",
+        "muscle_spasticity",
+        "nausea",
+        "nerve_pain",
+        "nervousness",
+        "neuralgia",
+        "neurological_disorders",
+        "neuropathic_pain",
+        "neuroprotection",
+        "nightmares",
+        "parkinsons",
+        "pelvic_pain",
+        "postpartum_recovery",
+        "psoriasis",
+        "ptsd",
+        "radiculopathy",
+        "respiratory_distress",
+        "respiratory_inflammation",
+        "rigidity",
+        "sciatica",
+        "seizures",
+        "skin_damage",
+        "sleep_disturbance",
+        "swelling",
+        "trauma",
+        "tremor",
+        "tremors",
+        "vomiting",
+        "wasting_syndrome",
+        "weakness",
+        "wound_healing"
+      ]
+    },
+    "genomic_targets": {
+      "total": 46,
+      "conditions_covered": 16,
+      "conditions": [
+        "PTSD",
+        "alzheimers",
+        "anxiety",
+        "appetite_cachexia",
+        "arthritis",
+        "cancer_palliative",
+        "chronic_pain",
+        "depression",
+        "epilepsy",
+        "glaucoma",
+        "ibd_crohns",
+        "insomnia",
+        "multiple_sclerosis",
+        "nausea",
+        "parkinsons",
+        "tourette_syndrome"
+      ]
+    },
+    "correlations": {
+      "total": 525,
+      "tk_practices_covered": 31,
+      "genomic_targets_covered": 74,
+      "missing_tk_practices": []
+    },
+    "status": "PASS"
+  }
+}

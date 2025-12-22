@@ -1,0 +1,81 @@
+{
+  "instructions": "Use this template to add new TK practices. Follow ethical guidelines for TK documentation.",
+  "ethical_guidelines": [
+    "Only include non-sacred, publicly documented knowledge",
+    "Set ceremonial_significance=true for ANY ceremonial/sacred practices",
+    "Verify community_consent_status before adding",
+    "Provide clear attribution in attribution_notes",
+    "Include literature sources where available",
+    "Respect Indigenous Data Sovereignty principles"
+  ],
+  "practice_template": {
+    "practice_name": "Descriptive name of the practice",
+    "source_community_id": "community_or_tradition_identifier",
+    "knowledge_domain": "One of: pain_management, neurological_disorders, mental_health, etc.",
+    "preparation_method": "Detailed preparation instructions",
+    "indications": [
+      "condition1",
+      "condition2"
+    ],
+    "contraindications": [
+      "contraindication1"
+    ],
+    "cultural_context": "Historical and cultural background",
+    "ceremonial_significance": false,
+    "traditional_dosage": "Traditional dosage information",
+    "preparation_notes": "Additional preparation details",
+    "evidence_level": "One of: historical_documentation, ethnographic_documentation, tramil_validated, published_knowledge",
+    "literature_sources": [
+      "PMID:12345678",
+      "ISBN:1234567890"
+    ],
+    "community_consent_status": "One of: published_knowledge, public_domain, tramil_approved, explicit_consent_granted",
+    "attribution_notes": "Proper attribution to source community/tradition"
+  },
+  "example_non_sacred_practice": {
+    "practice_name": "Cannabis for chronic pain relief",
+    "source_community_id": "traditional_chinese_medicine",
+    "knowledge_domain": "pain_management",
+    "preparation_method": "Decoction of cannabis flowers and leaves",
+    "indications": [
+      "chronic_pain",
+      "inflammation",
+      "muscle_spasms"
+    ],
+    "contraindications": [
+      "pregnancy",
+      "severe_cardiovascular_disease"
+    ],
+    "cultural_context": "Used in TCM for over 2000 years, documented in Shennong Bencaojing (Divine Farmer's Materia Medica)",
+    "ceremonial_significance": false,
+    "traditional_dosage": "3-5g dried material per day",
+    "preparation_notes": "Boiled in water for 30-60 minutes, consumed as tea",
+    "evidence_level": "historical_documentation",
+    "literature_sources": [
+      "PMID:29392251",
+      "ISBN:9780195320794"
+    ],
+    "community_consent_status": "published_knowledge",
+    "attribution_notes": "Traditional Chinese Medicine historical records",
+    "practice_id": "TK_0000",
+    "added_date": "2025-12-21T19:23:27.453056"
+  },
+  "sacred_practice_warning": {
+    "practice_name": "[PROTECTED - DO NOT INCLUDE IN DATABASE]",
+    "source_community_id": "[INDIGENOUS_COMMUNITY_NAME]",
+    "knowledge_domain": "ceremonial",
+    "preparation_method": "[SACRED PREPARATION - REQUIRES EXPLICIT CONSENT]",
+    "indications": [
+      "spiritual_healing"
+    ],
+    "contraindications": [],
+    "cultural_context": "Sacred ceremonial practice - requires community governance approval",
+    "ceremonial_significance": true,
+    "traditional_dosage": "[PROTECTED]",
+    "preparation_notes": "[REQUIRES ELDER APPROVAL AND BENEFIT-SHARING AGREEMENT]",
+    "evidence_level": "ceremonial_knowledge",
+    "literature_sources": [],
+    "community_consent_status": "requires_formal_consent",
+    "attribution_notes": "Protected traditional knowledge - not for commercial use"
+  }
+}

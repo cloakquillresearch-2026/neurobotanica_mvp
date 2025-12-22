@@ -1,0 +1,218 @@
+{
+  "extraction_date": "2025-12-21T19:23:27.369031",
+  "statistics": {
+    "total_genes": 46,
+    "total_pathways": 39,
+    "total_tissues": 31,
+    "conditions_covered": 16,
+    "studies_processed": 197
+  },
+  "top_genes_by_conditions": [
+    [
+      "CNR1",
+      16
+    ],
+    [
+      "CNR2",
+      9
+    ],
+    [
+      "GABRA1",
+      4
+    ],
+    [
+      "HTR2A",
+      4
+    ],
+    [
+      "HTR1A",
+      3
+    ],
+    [
+      "DRD2",
+      3
+    ],
+    [
+      "IL1B",
+      3
+    ],
+    [
+      "TNF",
+      3
+    ],
+    [
+      "COX2",
+      2
+    ],
+    [
+      "BDNF",
+      2
+    ]
+  ],
+  "top_pathways_by_conditions": [
+    [
+      "neuroprotection",
+      3
+    ],
+    [
+      "inflammatory_response",
+      2
+    ],
+    [
+      "stress_response",
+      2
+    ],
+    [
+      "neuroinflammation",
+      2
+    ],
+    [
+      "dopaminergic_transmission",
+      2
+    ],
+    [
+      "motor_control",
+      2
+    ],
+    [
+      "endocannabinoid_system",
+      1
+    ],
+    [
+      "nociception",
+      1
+    ],
+    [
+      "fear_extinction",
+      1
+    ],
+    [
+      "memory_consolidation",
+      1
+    ]
+  ],
+  "top_tissues_by_conditions": [
+    [
+      "hippocampus",
+      5
+    ],
+    [
+      "amygdala",
+      3
+    ],
+    [
+      "prefrontal_cortex",
+      3
+    ],
+    [
+      "cortex",
+      3
+    ],
+    [
+      "spinal_cord",
+      2
+    ],
+    [
+      "brain",
+      2
+    ],
+    [
+      "gut",
+      2
+    ],
+    [
+      "thalamus",
+      2
+    ],
+    [
+      "striatum",
+      2
+    ],
+    [
+      "basal_ganglia",
+      2
+    ]
+  ],
+  "coverage_by_condition": {
+    "chronic_pain": {
+      "genes": 7,
+      "pathways": 3,
+      "tissues": 4
+    },
+    "PTSD": {
+      "genes": 6,
+      "pathways": 3,
+      "tissues": 3
+    },
+    "nausea": {
+      "genes": 4,
+      "pathways": 2,
+      "tissues": 3
+    },
+    "anxiety": {
+      "genes": 5,
+      "pathways": 2,
+      "tissues": 3
+    },
+    "epilepsy": {
+      "genes": 6,
+      "pathways": 3,
+      "tissues": 3
+    },
+    "multiple_sclerosis": {
+      "genes": 6,
+      "pathways": 3,
+      "tissues": 3
+    },
+    "parkinsons": {
+      "genes": 6,
+      "pathways": 3,
+      "tissues": 3
+    },
+    "alzheimers": {
+      "genes": 6,
+      "pathways": 3,
+      "tissues": 3
+    },
+    "glaucoma": {
+      "genes": 4,
+      "pathways": 2,
+      "tissues": 3
+    },
+    "arthritis": {
+      "genes": 6,
+      "pathways": 3,
+      "tissues": 3
+    },
+    "ibd_crohns": {
+      "genes": 6,
+      "pathways": 3,
+      "tissues": 3
+    },
+    "cancer_palliative": {
+      "genes": 5,
+      "pathways": 4,
+      "tissues": 2
+    },
+    "insomnia": {
+      "genes": 5,
+      "pathways": 3,
+      "tissues": 3
+    },
+    "depression": {
+      "genes": 5,
+      "pathways": 3,
+      "tissues": 3
+    },
+    "tourette_syndrome": {
+      "genes": 5,
+      "pathways": 3,
+      "tissues": 3
+    },
+    "appetite_cachexia": {
+      "genes": 5,
+      "pathways": 3,
+      "tissues": 3
+    }
+  }
+}

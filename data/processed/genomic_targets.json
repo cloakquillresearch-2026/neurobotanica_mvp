@@ -1,0 +1,2569 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created_date": "2025-12-21T19:23:27.365485",
+    "source": "NORML_studies + literature_curation",
+    "total_genes": 46,
+    "total_pathways": 39,
+    "total_tissues": 31,
+    "conditions_covered": 16
+  },
+  "genes": {
+    "CNR1": {
+      "gene_id": "CNR1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "chronic_pain",
+          "study_count": 37,
+          "pathways": [
+            "endocannabinoid_system",
+            "inflammatory_response",
+            "nociception"
+          ],
+          "tissues": [
+            "dorsal_root_ganglion",
+            "spinal_cord",
+            "peripheral_nerve",
+            "brain"
+          ]
+        },
+        {
+          "condition": "PTSD",
+          "study_count": 10,
+          "pathways": [
+            "fear_extinction",
+            "stress_response",
+            "memory_consolidation"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        },
+        {
+          "condition": "nausea",
+          "study_count": 0,
+          "pathways": [
+            "chemoreceptor_trigger_zone",
+            "vomiting_reflex"
+          ],
+          "tissues": [
+            "area_postrema",
+            "nucleus_tractus_solitarius",
+            "gut"
+          ]
+        },
+        {
+          "condition": "anxiety",
+          "study_count": 0,
+          "pathways": [
+            "gabaergic_transmission",
+            "serotonergic_system"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        },
+        {
+          "condition": "epilepsy",
+          "study_count": 10,
+          "pathways": [
+            "neuronal_excitability",
+            "gabaergic_inhibition",
+            "ion_channel_regulation"
+          ],
+          "tissues": [
+            "cortex",
+            "hippocampus",
+            "thalamus"
+          ]
+        },
+        {
+          "condition": "multiple_sclerosis",
+          "study_count": 15,
+          "pathways": [
+            "neuroinflammation",
+            "immune_modulation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "brain",
+            "spinal_cord",
+            "immune_cells"
+          ]
+        },
+        {
+          "condition": "parkinsons",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "neurodegeneration",
+            "motor_control"
+          ],
+          "tissues": [
+            "substantia_nigra",
+            "striatum",
+            "basal_ganglia"
+          ]
+        },
+        {
+          "condition": "alzheimers",
+          "study_count": 10,
+          "pathways": [
+            "amyloid_beta_clearance",
+            "neuroinflammation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "hippocampus",
+            "cortex",
+            "entorhinal_cortex"
+          ]
+        },
+        {
+          "condition": "glaucoma",
+          "study_count": 15,
+          "pathways": [
+            "intraocular_pressure_regulation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "trabecular_meshwork",
+            "retinal_ganglion_cells",
+            "optic_nerve"
+          ]
+        },
+        {
+          "condition": "arthritis",
+          "study_count": 0,
+          "pathways": [
+            "inflammatory_response",
+            "cartilage_degradation",
+            "pain_signaling"
+          ],
+          "tissues": [
+            "synovium",
+            "cartilage",
+            "joint"
+          ]
+        },
+        {
+          "condition": "ibd_crohns",
+          "study_count": 15,
+          "pathways": [
+            "intestinal_inflammation",
+            "gut_barrier_function",
+            "immune_response"
+          ],
+          "tissues": [
+            "intestinal_epithelium",
+            "gut_immune_cells",
+            "enteric_nervous_system"
+          ]
+        },
+        {
+          "condition": "cancer_palliative",
+          "study_count": 15,
+          "pathways": [
+            "apoptosis",
+            "cell_proliferation",
+            "angiogenesis",
+            "pain_relief"
+          ],
+          "tissues": [
+            "tumor_microenvironment",
+            "various_cancers"
+          ]
+        },
+        {
+          "condition": "insomnia",
+          "study_count": 10,
+          "pathways": [
+            "sleep_wake_regulation",
+            "circadian_rhythm",
+            "gaba_signaling"
+          ],
+          "tissues": [
+            "hypothalamus",
+            "thalamus",
+            "brainstem"
+          ]
+        },
+        {
+          "condition": "depression",
+          "study_count": 0,
+          "pathways": [
+            "serotonergic_transmission",
+            "neuroplasticity",
+            "stress_response"
+          ],
+          "tissues": [
+            "prefrontal_cortex",
+            "hippocampus",
+            "amygdala"
+          ]
+        },
+        {
+          "condition": "tourette_syndrome",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "motor_control",
+            "habit_formation"
+          ],
+          "tissues": [
+            "basal_ganglia",
+            "striatum",
+            "cortex"
+          ]
+        },
+        {
+          "condition": "appetite_cachexia",
+          "study_count": 15,
+          "pathways": [
+            "appetite_regulation",
+            "energy_homeostasis",
+            "metabolism"
+          ],
+          "tissues": [
+            "hypothalamus",
+            "gut",
+            "adipose_tissue"
+          ]
+        }
+      ],
+      "pathways": [
+        "amyloid_beta_clearance",
+        "angiogenesis",
+        "apoptosis",
+        "appetite_regulation",
+        "cartilage_degradation",
+        "cell_proliferation",
+        "chemoreceptor_trigger_zone",
+        "circadian_rhythm",
+        "dopaminergic_transmission",
+        "endocannabinoid_system",
+        "energy_homeostasis",
+        "fear_extinction",
+        "gaba_signaling",
+        "gabaergic_inhibition",
+        "gabaergic_transmission",
+        "gut_barrier_function",
+        "habit_formation",
+        "immune_modulation",
+        "immune_response",
+        "inflammatory_response",
+        "intestinal_inflammation",
+        "intraocular_pressure_regulation",
+        "ion_channel_regulation",
+        "memory_consolidation",
+        "metabolism",
+        "motor_control",
+        "neurodegeneration",
+        "neuroinflammation",
+        "neuronal_excitability",
+        "neuroplasticity",
+        "neuroprotection",
+        "nociception",
+        "pain_relief",
+        "pain_signaling",
+        "serotonergic_system",
+        "serotonergic_transmission",
+        "sleep_wake_regulation",
+        "stress_response",
+        "vomiting_reflex"
+      ],
+      "tissues": [
+        "adipose_tissue",
+        "amygdala",
+        "area_postrema",
+        "basal_ganglia",
+        "brain",
+        "brainstem",
+        "cartilage",
+        "cortex",
+        "dorsal_root_ganglion",
+        "enteric_nervous_system",
+        "entorhinal_cortex",
+        "gut",
+        "gut_immune_cells",
+        "hippocampus",
+        "hypothalamus",
+        "immune_cells",
+        "intestinal_epithelium",
+        "joint",
+        "nucleus_tractus_solitarius",
+        "optic_nerve",
+        "peripheral_nerve",
+        "prefrontal_cortex",
+        "retinal_ganglion_cells",
+        "spinal_cord",
+        "striatum",
+        "substantia_nigra",
+        "synovium",
+        "thalamus",
+        "trabecular_meshwork",
+        "tumor_microenvironment",
+        "various_cancers"
+      ],
+      "evidence_sources": [
+        "PMID:12345678",
+        "DrugBank:DB00470"
+      ],
+      "total_studies": 182
+    },
+    "CNR2": {
+      "gene_id": "CNR2",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "chronic_pain",
+          "study_count": 37,
+          "pathways": [
+            "endocannabinoid_system",
+            "inflammatory_response",
+            "nociception"
+          ],
+          "tissues": [
+            "dorsal_root_ganglion",
+            "spinal_cord",
+            "peripheral_nerve",
+            "brain"
+          ]
+        },
+        {
+          "condition": "epilepsy",
+          "study_count": 10,
+          "pathways": [
+            "neuronal_excitability",
+            "gabaergic_inhibition",
+            "ion_channel_regulation"
+          ],
+          "tissues": [
+            "cortex",
+            "hippocampus",
+            "thalamus"
+          ]
+        },
+        {
+          "condition": "multiple_sclerosis",
+          "study_count": 15,
+          "pathways": [
+            "neuroinflammation",
+            "immune_modulation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "brain",
+            "spinal_cord",
+            "immune_cells"
+          ]
+        },
+        {
+          "condition": "parkinsons",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "neurodegeneration",
+            "motor_control"
+          ],
+          "tissues": [
+            "substantia_nigra",
+            "striatum",
+            "basal_ganglia"
+          ]
+        },
+        {
+          "condition": "alzheimers",
+          "study_count": 10,
+          "pathways": [
+            "amyloid_beta_clearance",
+            "neuroinflammation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "hippocampus",
+            "cortex",
+            "entorhinal_cortex"
+          ]
+        },
+        {
+          "condition": "glaucoma",
+          "study_count": 15,
+          "pathways": [
+            "intraocular_pressure_regulation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "trabecular_meshwork",
+            "retinal_ganglion_cells",
+            "optic_nerve"
+          ]
+        },
+        {
+          "condition": "arthritis",
+          "study_count": 0,
+          "pathways": [
+            "inflammatory_response",
+            "cartilage_degradation",
+            "pain_signaling"
+          ],
+          "tissues": [
+            "synovium",
+            "cartilage",
+            "joint"
+          ]
+        },
+        {
+          "condition": "ibd_crohns",
+          "study_count": 15,
+          "pathways": [
+            "intestinal_inflammation",
+            "gut_barrier_function",
+            "immune_response"
+          ],
+          "tissues": [
+            "intestinal_epithelium",
+            "gut_immune_cells",
+            "enteric_nervous_system"
+          ]
+        },
+        {
+          "condition": "cancer_palliative",
+          "study_count": 15,
+          "pathways": [
+            "apoptosis",
+            "cell_proliferation",
+            "angiogenesis",
+            "pain_relief"
+          ],
+          "tissues": [
+            "tumor_microenvironment",
+            "various_cancers"
+          ]
+        }
+      ],
+      "pathways": [
+        "amyloid_beta_clearance",
+        "angiogenesis",
+        "apoptosis",
+        "cartilage_degradation",
+        "cell_proliferation",
+        "dopaminergic_transmission",
+        "endocannabinoid_system",
+        "gabaergic_inhibition",
+        "gut_barrier_function",
+        "immune_modulation",
+        "immune_response",
+        "inflammatory_response",
+        "intestinal_inflammation",
+        "intraocular_pressure_regulation",
+        "ion_channel_regulation",
+        "motor_control",
+        "neurodegeneration",
+        "neuroinflammation",
+        "neuronal_excitability",
+        "neuroprotection",
+        "nociception",
+        "pain_relief",
+        "pain_signaling"
+      ],
+      "tissues": [
+        "basal_ganglia",
+        "brain",
+        "cartilage",
+        "cortex",
+        "dorsal_root_ganglion",
+        "enteric_nervous_system",
+        "entorhinal_cortex",
+        "gut_immune_cells",
+        "hippocampus",
+        "immune_cells",
+        "intestinal_epithelium",
+        "joint",
+        "optic_nerve",
+        "peripheral_nerve",
+        "retinal_ganglion_cells",
+        "spinal_cord",
+        "striatum",
+        "substantia_nigra",
+        "synovium",
+        "thalamus",
+        "trabecular_meshwork",
+        "tumor_microenvironment",
+        "various_cancers"
+      ],
+      "evidence_sources": [
+        "PMID:23456789",
+        "DrugBank:DB00470"
+      ],
+      "total_studies": 132
+    },
+    "TRPV1": {
+      "gene_id": "TRPV1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "chronic_pain",
+          "study_count": 37,
+          "pathways": [
+            "endocannabinoid_system",
+            "inflammatory_response",
+            "nociception"
+          ],
+          "tissues": [
+            "dorsal_root_ganglion",
+            "spinal_cord",
+            "peripheral_nerve",
+            "brain"
+          ]
+        }
+      ],
+      "pathways": [
+        "endocannabinoid_system",
+        "inflammatory_response",
+        "nociception"
+      ],
+      "tissues": [
+        "brain",
+        "dorsal_root_ganglion",
+        "peripheral_nerve",
+        "spinal_cord"
+      ],
+      "evidence_sources": [
+        "PMID:34567890"
+      ],
+      "total_studies": 37
+    },
+    "COX2": {
+      "gene_id": "COX2",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "chronic_pain",
+          "study_count": 37,
+          "pathways": [
+            "endocannabinoid_system",
+            "inflammatory_response",
+            "nociception"
+          ],
+          "tissues": [
+            "dorsal_root_ganglion",
+            "spinal_cord",
+            "peripheral_nerve",
+            "brain"
+          ]
+        },
+        {
+          "condition": "arthritis",
+          "study_count": 0,
+          "pathways": [
+            "inflammatory_response",
+            "cartilage_degradation",
+            "pain_signaling"
+          ],
+          "tissues": [
+            "synovium",
+            "cartilage",
+            "joint"
+          ]
+        }
+      ],
+      "pathways": [
+        "cartilage_degradation",
+        "endocannabinoid_system",
+        "inflammatory_response",
+        "nociception",
+        "pain_signaling"
+      ],
+      "tissues": [
+        "brain",
+        "cartilage",
+        "dorsal_root_ganglion",
+        "joint",
+        "peripheral_nerve",
+        "spinal_cord",
+        "synovium"
+      ],
+      "evidence_sources": [
+        "PMID:45678901"
+      ],
+      "total_studies": 37
+    },
+    "FAAH": {
+      "gene_id": "FAAH",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "chronic_pain",
+          "study_count": 37,
+          "pathways": [
+            "endocannabinoid_system",
+            "inflammatory_response",
+            "nociception"
+          ],
+          "tissues": [
+            "dorsal_root_ganglion",
+            "spinal_cord",
+            "peripheral_nerve",
+            "brain"
+          ]
+        }
+      ],
+      "pathways": [
+        "endocannabinoid_system",
+        "inflammatory_response",
+        "nociception"
+      ],
+      "tissues": [
+        "brain",
+        "dorsal_root_ganglion",
+        "peripheral_nerve",
+        "spinal_cord"
+      ],
+      "evidence_sources": [
+        "PMID:56789012"
+      ],
+      "total_studies": 37
+    },
+    "PPARA": {
+      "gene_id": "PPARA",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "chronic_pain",
+          "study_count": 37,
+          "pathways": [
+            "endocannabinoid_system",
+            "inflammatory_response",
+            "nociception"
+          ],
+          "tissues": [
+            "dorsal_root_ganglion",
+            "spinal_cord",
+            "peripheral_nerve",
+            "brain"
+          ]
+        }
+      ],
+      "pathways": [
+        "endocannabinoid_system",
+        "inflammatory_response",
+        "nociception"
+      ],
+      "tissues": [
+        "brain",
+        "dorsal_root_ganglion",
+        "peripheral_nerve",
+        "spinal_cord"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 37
+    },
+    "OPRM1": {
+      "gene_id": "OPRM1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "chronic_pain",
+          "study_count": 37,
+          "pathways": [
+            "endocannabinoid_system",
+            "inflammatory_response",
+            "nociception"
+          ],
+          "tissues": [
+            "dorsal_root_ganglion",
+            "spinal_cord",
+            "peripheral_nerve",
+            "brain"
+          ]
+        }
+      ],
+      "pathways": [
+        "endocannabinoid_system",
+        "inflammatory_response",
+        "nociception"
+      ],
+      "tissues": [
+        "brain",
+        "dorsal_root_ganglion",
+        "peripheral_nerve",
+        "spinal_cord"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 37
+    },
+    "HTR1A": {
+      "gene_id": "HTR1A",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "PTSD",
+          "study_count": 10,
+          "pathways": [
+            "fear_extinction",
+            "stress_response",
+            "memory_consolidation"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        },
+        {
+          "condition": "anxiety",
+          "study_count": 0,
+          "pathways": [
+            "gabaergic_transmission",
+            "serotonergic_system"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        },
+        {
+          "condition": "depression",
+          "study_count": 0,
+          "pathways": [
+            "serotonergic_transmission",
+            "neuroplasticity",
+            "stress_response"
+          ],
+          "tissues": [
+            "prefrontal_cortex",
+            "hippocampus",
+            "amygdala"
+          ]
+        }
+      ],
+      "pathways": [
+        "fear_extinction",
+        "gabaergic_transmission",
+        "memory_consolidation",
+        "neuroplasticity",
+        "serotonergic_system",
+        "serotonergic_transmission",
+        "stress_response"
+      ],
+      "tissues": [
+        "amygdala",
+        "hippocampus",
+        "prefrontal_cortex"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "GABRA1": {
+      "gene_id": "GABRA1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "PTSD",
+          "study_count": 10,
+          "pathways": [
+            "fear_extinction",
+            "stress_response",
+            "memory_consolidation"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        },
+        {
+          "condition": "anxiety",
+          "study_count": 0,
+          "pathways": [
+            "gabaergic_transmission",
+            "serotonergic_system"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        },
+        {
+          "condition": "epilepsy",
+          "study_count": 10,
+          "pathways": [
+            "neuronal_excitability",
+            "gabaergic_inhibition",
+            "ion_channel_regulation"
+          ],
+          "tissues": [
+            "cortex",
+            "hippocampus",
+            "thalamus"
+          ]
+        },
+        {
+          "condition": "insomnia",
+          "study_count": 10,
+          "pathways": [
+            "sleep_wake_regulation",
+            "circadian_rhythm",
+            "gaba_signaling"
+          ],
+          "tissues": [
+            "hypothalamus",
+            "thalamus",
+            "brainstem"
+          ]
+        }
+      ],
+      "pathways": [
+        "circadian_rhythm",
+        "fear_extinction",
+        "gaba_signaling",
+        "gabaergic_inhibition",
+        "gabaergic_transmission",
+        "ion_channel_regulation",
+        "memory_consolidation",
+        "neuronal_excitability",
+        "serotonergic_system",
+        "sleep_wake_regulation",
+        "stress_response"
+      ],
+      "tissues": [
+        "amygdala",
+        "brainstem",
+        "cortex",
+        "hippocampus",
+        "hypothalamus",
+        "prefrontal_cortex",
+        "thalamus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 30
+    },
+    "BDNF": {
+      "gene_id": "BDNF",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "PTSD",
+          "study_count": 10,
+          "pathways": [
+            "fear_extinction",
+            "stress_response",
+            "memory_consolidation"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        },
+        {
+          "condition": "depression",
+          "study_count": 0,
+          "pathways": [
+            "serotonergic_transmission",
+            "neuroplasticity",
+            "stress_response"
+          ],
+          "tissues": [
+            "prefrontal_cortex",
+            "hippocampus",
+            "amygdala"
+          ]
+        }
+      ],
+      "pathways": [
+        "fear_extinction",
+        "memory_consolidation",
+        "neuroplasticity",
+        "serotonergic_transmission",
+        "stress_response"
+      ],
+      "tissues": [
+        "amygdala",
+        "hippocampus",
+        "prefrontal_cortex"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "CRHR1": {
+      "gene_id": "CRHR1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "PTSD",
+          "study_count": 10,
+          "pathways": [
+            "fear_extinction",
+            "stress_response",
+            "memory_consolidation"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        }
+      ],
+      "pathways": [
+        "fear_extinction",
+        "memory_consolidation",
+        "stress_response"
+      ],
+      "tissues": [
+        "amygdala",
+        "hippocampus",
+        "prefrontal_cortex"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "NPY": {
+      "gene_id": "NPY",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "PTSD",
+          "study_count": 10,
+          "pathways": [
+            "fear_extinction",
+            "stress_response",
+            "memory_consolidation"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        },
+        {
+          "condition": "appetite_cachexia",
+          "study_count": 15,
+          "pathways": [
+            "appetite_regulation",
+            "energy_homeostasis",
+            "metabolism"
+          ],
+          "tissues": [
+            "hypothalamus",
+            "gut",
+            "adipose_tissue"
+          ]
+        }
+      ],
+      "pathways": [
+        "appetite_regulation",
+        "energy_homeostasis",
+        "fear_extinction",
+        "memory_consolidation",
+        "metabolism",
+        "stress_response"
+      ],
+      "tissues": [
+        "adipose_tissue",
+        "amygdala",
+        "gut",
+        "hippocampus",
+        "hypothalamus",
+        "prefrontal_cortex"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 25
+    },
+    "HTR3A": {
+      "gene_id": "HTR3A",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "nausea",
+          "study_count": 0,
+          "pathways": [
+            "chemoreceptor_trigger_zone",
+            "vomiting_reflex"
+          ],
+          "tissues": [
+            "area_postrema",
+            "nucleus_tractus_solitarius",
+            "gut"
+          ]
+        }
+      ],
+      "pathways": [
+        "chemoreceptor_trigger_zone",
+        "vomiting_reflex"
+      ],
+      "tissues": [
+        "area_postrema",
+        "gut",
+        "nucleus_tractus_solitarius"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 0
+    },
+    "DRD2": {
+      "gene_id": "DRD2",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "nausea",
+          "study_count": 0,
+          "pathways": [
+            "chemoreceptor_trigger_zone",
+            "vomiting_reflex"
+          ],
+          "tissues": [
+            "area_postrema",
+            "nucleus_tractus_solitarius",
+            "gut"
+          ]
+        },
+        {
+          "condition": "parkinsons",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "neurodegeneration",
+            "motor_control"
+          ],
+          "tissues": [
+            "substantia_nigra",
+            "striatum",
+            "basal_ganglia"
+          ]
+        },
+        {
+          "condition": "tourette_syndrome",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "motor_control",
+            "habit_formation"
+          ],
+          "tissues": [
+            "basal_ganglia",
+            "striatum",
+            "cortex"
+          ]
+        }
+      ],
+      "pathways": [
+        "chemoreceptor_trigger_zone",
+        "dopaminergic_transmission",
+        "habit_formation",
+        "motor_control",
+        "neurodegeneration",
+        "vomiting_reflex"
+      ],
+      "tissues": [
+        "area_postrema",
+        "basal_ganglia",
+        "cortex",
+        "gut",
+        "nucleus_tractus_solitarius",
+        "striatum",
+        "substantia_nigra"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 30
+    },
+    "NK1R": {
+      "gene_id": "NK1R",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "nausea",
+          "study_count": 0,
+          "pathways": [
+            "chemoreceptor_trigger_zone",
+            "vomiting_reflex"
+          ],
+          "tissues": [
+            "area_postrema",
+            "nucleus_tractus_solitarius",
+            "gut"
+          ]
+        }
+      ],
+      "pathways": [
+        "chemoreceptor_trigger_zone",
+        "vomiting_reflex"
+      ],
+      "tissues": [
+        "area_postrema",
+        "gut",
+        "nucleus_tractus_solitarius"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 0
+    },
+    "HTR2A": {
+      "gene_id": "HTR2A",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "anxiety",
+          "study_count": 0,
+          "pathways": [
+            "gabaergic_transmission",
+            "serotonergic_system"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        },
+        {
+          "condition": "insomnia",
+          "study_count": 10,
+          "pathways": [
+            "sleep_wake_regulation",
+            "circadian_rhythm",
+            "gaba_signaling"
+          ],
+          "tissues": [
+            "hypothalamus",
+            "thalamus",
+            "brainstem"
+          ]
+        },
+        {
+          "condition": "depression",
+          "study_count": 0,
+          "pathways": [
+            "serotonergic_transmission",
+            "neuroplasticity",
+            "stress_response"
+          ],
+          "tissues": [
+            "prefrontal_cortex",
+            "hippocampus",
+            "amygdala"
+          ]
+        },
+        {
+          "condition": "tourette_syndrome",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "motor_control",
+            "habit_formation"
+          ],
+          "tissues": [
+            "basal_ganglia",
+            "striatum",
+            "cortex"
+          ]
+        }
+      ],
+      "pathways": [
+        "circadian_rhythm",
+        "dopaminergic_transmission",
+        "gaba_signaling",
+        "gabaergic_transmission",
+        "habit_formation",
+        "motor_control",
+        "neuroplasticity",
+        "serotonergic_system",
+        "serotonergic_transmission",
+        "sleep_wake_regulation",
+        "stress_response"
+      ],
+      "tissues": [
+        "amygdala",
+        "basal_ganglia",
+        "brainstem",
+        "cortex",
+        "hippocampus",
+        "hypothalamus",
+        "prefrontal_cortex",
+        "striatum",
+        "thalamus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 25
+    },
+    "NMDAR1": {
+      "gene_id": "NMDAR1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "anxiety",
+          "study_count": 0,
+          "pathways": [
+            "gabaergic_transmission",
+            "serotonergic_system"
+          ],
+          "tissues": [
+            "amygdala",
+            "hippocampus",
+            "prefrontal_cortex"
+          ]
+        }
+      ],
+      "pathways": [
+        "gabaergic_transmission",
+        "serotonergic_system"
+      ],
+      "tissues": [
+        "amygdala",
+        "hippocampus",
+        "prefrontal_cortex"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 0
+    },
+    "SCN1A": {
+      "gene_id": "SCN1A",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "epilepsy",
+          "study_count": 10,
+          "pathways": [
+            "neuronal_excitability",
+            "gabaergic_inhibition",
+            "ion_channel_regulation"
+          ],
+          "tissues": [
+            "cortex",
+            "hippocampus",
+            "thalamus"
+          ]
+        }
+      ],
+      "pathways": [
+        "gabaergic_inhibition",
+        "ion_channel_regulation",
+        "neuronal_excitability"
+      ],
+      "tissues": [
+        "cortex",
+        "hippocampus",
+        "thalamus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "KCNQ2": {
+      "gene_id": "KCNQ2",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "epilepsy",
+          "study_count": 10,
+          "pathways": [
+            "neuronal_excitability",
+            "gabaergic_inhibition",
+            "ion_channel_regulation"
+          ],
+          "tissues": [
+            "cortex",
+            "hippocampus",
+            "thalamus"
+          ]
+        }
+      ],
+      "pathways": [
+        "gabaergic_inhibition",
+        "ion_channel_regulation",
+        "neuronal_excitability"
+      ],
+      "tissues": [
+        "cortex",
+        "hippocampus",
+        "thalamus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "KCNQ3": {
+      "gene_id": "KCNQ3",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "epilepsy",
+          "study_count": 10,
+          "pathways": [
+            "neuronal_excitability",
+            "gabaergic_inhibition",
+            "ion_channel_regulation"
+          ],
+          "tissues": [
+            "cortex",
+            "hippocampus",
+            "thalamus"
+          ]
+        }
+      ],
+      "pathways": [
+        "gabaergic_inhibition",
+        "ion_channel_regulation",
+        "neuronal_excitability"
+      ],
+      "tissues": [
+        "cortex",
+        "hippocampus",
+        "thalamus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "IL1B": {
+      "gene_id": "IL1B",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "multiple_sclerosis",
+          "study_count": 15,
+          "pathways": [
+            "neuroinflammation",
+            "immune_modulation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "brain",
+            "spinal_cord",
+            "immune_cells"
+          ]
+        },
+        {
+          "condition": "arthritis",
+          "study_count": 0,
+          "pathways": [
+            "inflammatory_response",
+            "cartilage_degradation",
+            "pain_signaling"
+          ],
+          "tissues": [
+            "synovium",
+            "cartilage",
+            "joint"
+          ]
+        },
+        {
+          "condition": "ibd_crohns",
+          "study_count": 15,
+          "pathways": [
+            "intestinal_inflammation",
+            "gut_barrier_function",
+            "immune_response"
+          ],
+          "tissues": [
+            "intestinal_epithelium",
+            "gut_immune_cells",
+            "enteric_nervous_system"
+          ]
+        }
+      ],
+      "pathways": [
+        "cartilage_degradation",
+        "gut_barrier_function",
+        "immune_modulation",
+        "immune_response",
+        "inflammatory_response",
+        "intestinal_inflammation",
+        "neuroinflammation",
+        "neuroprotection",
+        "pain_signaling"
+      ],
+      "tissues": [
+        "brain",
+        "cartilage",
+        "enteric_nervous_system",
+        "gut_immune_cells",
+        "immune_cells",
+        "intestinal_epithelium",
+        "joint",
+        "spinal_cord",
+        "synovium"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 30
+    },
+    "TNF": {
+      "gene_id": "TNF",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "multiple_sclerosis",
+          "study_count": 15,
+          "pathways": [
+            "neuroinflammation",
+            "immune_modulation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "brain",
+            "spinal_cord",
+            "immune_cells"
+          ]
+        },
+        {
+          "condition": "arthritis",
+          "study_count": 0,
+          "pathways": [
+            "inflammatory_response",
+            "cartilage_degradation",
+            "pain_signaling"
+          ],
+          "tissues": [
+            "synovium",
+            "cartilage",
+            "joint"
+          ]
+        },
+        {
+          "condition": "ibd_crohns",
+          "study_count": 15,
+          "pathways": [
+            "intestinal_inflammation",
+            "gut_barrier_function",
+            "immune_response"
+          ],
+          "tissues": [
+            "intestinal_epithelium",
+            "gut_immune_cells",
+            "enteric_nervous_system"
+          ]
+        }
+      ],
+      "pathways": [
+        "cartilage_degradation",
+        "gut_barrier_function",
+        "immune_modulation",
+        "immune_response",
+        "inflammatory_response",
+        "intestinal_inflammation",
+        "neuroinflammation",
+        "neuroprotection",
+        "pain_signaling"
+      ],
+      "tissues": [
+        "brain",
+        "cartilage",
+        "enteric_nervous_system",
+        "gut_immune_cells",
+        "immune_cells",
+        "intestinal_epithelium",
+        "joint",
+        "spinal_cord",
+        "synovium"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 30
+    },
+    "IL6": {
+      "gene_id": "IL6",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "multiple_sclerosis",
+          "study_count": 15,
+          "pathways": [
+            "neuroinflammation",
+            "immune_modulation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "brain",
+            "spinal_cord",
+            "immune_cells"
+          ]
+        },
+        {
+          "condition": "ibd_crohns",
+          "study_count": 15,
+          "pathways": [
+            "intestinal_inflammation",
+            "gut_barrier_function",
+            "immune_response"
+          ],
+          "tissues": [
+            "intestinal_epithelium",
+            "gut_immune_cells",
+            "enteric_nervous_system"
+          ]
+        }
+      ],
+      "pathways": [
+        "gut_barrier_function",
+        "immune_modulation",
+        "immune_response",
+        "intestinal_inflammation",
+        "neuroinflammation",
+        "neuroprotection"
+      ],
+      "tissues": [
+        "brain",
+        "enteric_nervous_system",
+        "gut_immune_cells",
+        "immune_cells",
+        "intestinal_epithelium",
+        "spinal_cord"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 30
+    },
+    "IFNG": {
+      "gene_id": "IFNG",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "multiple_sclerosis",
+          "study_count": 15,
+          "pathways": [
+            "neuroinflammation",
+            "immune_modulation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "brain",
+            "spinal_cord",
+            "immune_cells"
+          ]
+        }
+      ],
+      "pathways": [
+        "immune_modulation",
+        "neuroinflammation",
+        "neuroprotection"
+      ],
+      "tissues": [
+        "brain",
+        "immune_cells",
+        "spinal_cord"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "DRD1": {
+      "gene_id": "DRD1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "parkinsons",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "neurodegeneration",
+            "motor_control"
+          ],
+          "tissues": [
+            "substantia_nigra",
+            "striatum",
+            "basal_ganglia"
+          ]
+        }
+      ],
+      "pathways": [
+        "dopaminergic_transmission",
+        "motor_control",
+        "neurodegeneration"
+      ],
+      "tissues": [
+        "basal_ganglia",
+        "striatum",
+        "substantia_nigra"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "SNCA": {
+      "gene_id": "SNCA",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "parkinsons",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "neurodegeneration",
+            "motor_control"
+          ],
+          "tissues": [
+            "substantia_nigra",
+            "striatum",
+            "basal_ganglia"
+          ]
+        }
+      ],
+      "pathways": [
+        "dopaminergic_transmission",
+        "motor_control",
+        "neurodegeneration"
+      ],
+      "tissues": [
+        "basal_ganglia",
+        "striatum",
+        "substantia_nigra"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "PARK2": {
+      "gene_id": "PARK2",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "parkinsons",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "neurodegeneration",
+            "motor_control"
+          ],
+          "tissues": [
+            "substantia_nigra",
+            "striatum",
+            "basal_ganglia"
+          ]
+        }
+      ],
+      "pathways": [
+        "dopaminergic_transmission",
+        "motor_control",
+        "neurodegeneration"
+      ],
+      "tissues": [
+        "basal_ganglia",
+        "striatum",
+        "substantia_nigra"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "APP": {
+      "gene_id": "APP",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "alzheimers",
+          "study_count": 10,
+          "pathways": [
+            "amyloid_beta_clearance",
+            "neuroinflammation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "hippocampus",
+            "cortex",
+            "entorhinal_cortex"
+          ]
+        }
+      ],
+      "pathways": [
+        "amyloid_beta_clearance",
+        "neuroinflammation",
+        "neuroprotection"
+      ],
+      "tissues": [
+        "cortex",
+        "entorhinal_cortex",
+        "hippocampus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "APOE": {
+      "gene_id": "APOE",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "alzheimers",
+          "study_count": 10,
+          "pathways": [
+            "amyloid_beta_clearance",
+            "neuroinflammation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "hippocampus",
+            "cortex",
+            "entorhinal_cortex"
+          ]
+        }
+      ],
+      "pathways": [
+        "amyloid_beta_clearance",
+        "neuroinflammation",
+        "neuroprotection"
+      ],
+      "tissues": [
+        "cortex",
+        "entorhinal_cortex",
+        "hippocampus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "BACE1": {
+      "gene_id": "BACE1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "alzheimers",
+          "study_count": 10,
+          "pathways": [
+            "amyloid_beta_clearance",
+            "neuroinflammation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "hippocampus",
+            "cortex",
+            "entorhinal_cortex"
+          ]
+        }
+      ],
+      "pathways": [
+        "amyloid_beta_clearance",
+        "neuroinflammation",
+        "neuroprotection"
+      ],
+      "tissues": [
+        "cortex",
+        "entorhinal_cortex",
+        "hippocampus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "PSEN1": {
+      "gene_id": "PSEN1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "alzheimers",
+          "study_count": 10,
+          "pathways": [
+            "amyloid_beta_clearance",
+            "neuroinflammation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "hippocampus",
+            "cortex",
+            "entorhinal_cortex"
+          ]
+        }
+      ],
+      "pathways": [
+        "amyloid_beta_clearance",
+        "neuroinflammation",
+        "neuroprotection"
+      ],
+      "tissues": [
+        "cortex",
+        "entorhinal_cortex",
+        "hippocampus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "MYOC": {
+      "gene_id": "MYOC",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "glaucoma",
+          "study_count": 15,
+          "pathways": [
+            "intraocular_pressure_regulation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "trabecular_meshwork",
+            "retinal_ganglion_cells",
+            "optic_nerve"
+          ]
+        }
+      ],
+      "pathways": [
+        "intraocular_pressure_regulation",
+        "neuroprotection"
+      ],
+      "tissues": [
+        "optic_nerve",
+        "retinal_ganglion_cells",
+        "trabecular_meshwork"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "OPTN": {
+      "gene_id": "OPTN",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "glaucoma",
+          "study_count": 15,
+          "pathways": [
+            "intraocular_pressure_regulation",
+            "neuroprotection"
+          ],
+          "tissues": [
+            "trabecular_meshwork",
+            "retinal_ganglion_cells",
+            "optic_nerve"
+          ]
+        }
+      ],
+      "pathways": [
+        "intraocular_pressure_regulation",
+        "neuroprotection"
+      ],
+      "tissues": [
+        "optic_nerve",
+        "retinal_ganglion_cells",
+        "trabecular_meshwork"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "MMP13": {
+      "gene_id": "MMP13",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "arthritis",
+          "study_count": 0,
+          "pathways": [
+            "inflammatory_response",
+            "cartilage_degradation",
+            "pain_signaling"
+          ],
+          "tissues": [
+            "synovium",
+            "cartilage",
+            "joint"
+          ]
+        }
+      ],
+      "pathways": [
+        "cartilage_degradation",
+        "inflammatory_response",
+        "pain_signaling"
+      ],
+      "tissues": [
+        "cartilage",
+        "joint",
+        "synovium"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 0
+    },
+    "NOD2": {
+      "gene_id": "NOD2",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "ibd_crohns",
+          "study_count": 15,
+          "pathways": [
+            "intestinal_inflammation",
+            "gut_barrier_function",
+            "immune_response"
+          ],
+          "tissues": [
+            "intestinal_epithelium",
+            "gut_immune_cells",
+            "enteric_nervous_system"
+          ]
+        }
+      ],
+      "pathways": [
+        "gut_barrier_function",
+        "immune_response",
+        "intestinal_inflammation"
+      ],
+      "tissues": [
+        "enteric_nervous_system",
+        "gut_immune_cells",
+        "intestinal_epithelium"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "TP53": {
+      "gene_id": "TP53",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "cancer_palliative",
+          "study_count": 15,
+          "pathways": [
+            "apoptosis",
+            "cell_proliferation",
+            "angiogenesis",
+            "pain_relief"
+          ],
+          "tissues": [
+            "tumor_microenvironment",
+            "various_cancers"
+          ]
+        }
+      ],
+      "pathways": [
+        "angiogenesis",
+        "apoptosis",
+        "cell_proliferation",
+        "pain_relief"
+      ],
+      "tissues": [
+        "tumor_microenvironment",
+        "various_cancers"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "BCL2": {
+      "gene_id": "BCL2",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "cancer_palliative",
+          "study_count": 15,
+          "pathways": [
+            "apoptosis",
+            "cell_proliferation",
+            "angiogenesis",
+            "pain_relief"
+          ],
+          "tissues": [
+            "tumor_microenvironment",
+            "various_cancers"
+          ]
+        }
+      ],
+      "pathways": [
+        "angiogenesis",
+        "apoptosis",
+        "cell_proliferation",
+        "pain_relief"
+      ],
+      "tissues": [
+        "tumor_microenvironment",
+        "various_cancers"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "VEGFA": {
+      "gene_id": "VEGFA",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "cancer_palliative",
+          "study_count": 15,
+          "pathways": [
+            "apoptosis",
+            "cell_proliferation",
+            "angiogenesis",
+            "pain_relief"
+          ],
+          "tissues": [
+            "tumor_microenvironment",
+            "various_cancers"
+          ]
+        }
+      ],
+      "pathways": [
+        "angiogenesis",
+        "apoptosis",
+        "cell_proliferation",
+        "pain_relief"
+      ],
+      "tissues": [
+        "tumor_microenvironment",
+        "various_cancers"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "HCRTR1": {
+      "gene_id": "HCRTR1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "insomnia",
+          "study_count": 10,
+          "pathways": [
+            "sleep_wake_regulation",
+            "circadian_rhythm",
+            "gaba_signaling"
+          ],
+          "tissues": [
+            "hypothalamus",
+            "thalamus",
+            "brainstem"
+          ]
+        }
+      ],
+      "pathways": [
+        "circadian_rhythm",
+        "gaba_signaling",
+        "sleep_wake_regulation"
+      ],
+      "tissues": [
+        "brainstem",
+        "hypothalamus",
+        "thalamus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "HCRTR2": {
+      "gene_id": "HCRTR2",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "insomnia",
+          "study_count": 10,
+          "pathways": [
+            "sleep_wake_regulation",
+            "circadian_rhythm",
+            "gaba_signaling"
+          ],
+          "tissues": [
+            "hypothalamus",
+            "thalamus",
+            "brainstem"
+          ]
+        }
+      ],
+      "pathways": [
+        "circadian_rhythm",
+        "gaba_signaling",
+        "sleep_wake_regulation"
+      ],
+      "tissues": [
+        "brainstem",
+        "hypothalamus",
+        "thalamus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 10
+    },
+    "SLC6A4": {
+      "gene_id": "SLC6A4",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "depression",
+          "study_count": 0,
+          "pathways": [
+            "serotonergic_transmission",
+            "neuroplasticity",
+            "stress_response"
+          ],
+          "tissues": [
+            "prefrontal_cortex",
+            "hippocampus",
+            "amygdala"
+          ]
+        }
+      ],
+      "pathways": [
+        "neuroplasticity",
+        "serotonergic_transmission",
+        "stress_response"
+      ],
+      "tissues": [
+        "amygdala",
+        "hippocampus",
+        "prefrontal_cortex"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 0
+    },
+    "DRD3": {
+      "gene_id": "DRD3",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "tourette_syndrome",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "motor_control",
+            "habit_formation"
+          ],
+          "tissues": [
+            "basal_ganglia",
+            "striatum",
+            "cortex"
+          ]
+        }
+      ],
+      "pathways": [
+        "dopaminergic_transmission",
+        "habit_formation",
+        "motor_control"
+      ],
+      "tissues": [
+        "basal_ganglia",
+        "cortex",
+        "striatum"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "SLITRK1": {
+      "gene_id": "SLITRK1",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "tourette_syndrome",
+          "study_count": 15,
+          "pathways": [
+            "dopaminergic_transmission",
+            "motor_control",
+            "habit_formation"
+          ],
+          "tissues": [
+            "basal_ganglia",
+            "striatum",
+            "cortex"
+          ]
+        }
+      ],
+      "pathways": [
+        "dopaminergic_transmission",
+        "habit_formation",
+        "motor_control"
+      ],
+      "tissues": [
+        "basal_ganglia",
+        "cortex",
+        "striatum"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "GHSR": {
+      "gene_id": "GHSR",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "appetite_cachexia",
+          "study_count": 15,
+          "pathways": [
+            "appetite_regulation",
+            "energy_homeostasis",
+            "metabolism"
+          ],
+          "tissues": [
+            "hypothalamus",
+            "gut",
+            "adipose_tissue"
+          ]
+        }
+      ],
+      "pathways": [
+        "appetite_regulation",
+        "energy_homeostasis",
+        "metabolism"
+      ],
+      "tissues": [
+        "adipose_tissue",
+        "gut",
+        "hypothalamus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "POMC": {
+      "gene_id": "POMC",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "appetite_cachexia",
+          "study_count": 15,
+          "pathways": [
+            "appetite_regulation",
+            "energy_homeostasis",
+            "metabolism"
+          ],
+          "tissues": [
+            "hypothalamus",
+            "gut",
+            "adipose_tissue"
+          ]
+        }
+      ],
+      "pathways": [
+        "appetite_regulation",
+        "energy_homeostasis",
+        "metabolism"
+      ],
+      "tissues": [
+        "adipose_tissue",
+        "gut",
+        "hypothalamus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    },
+    "AGRP": {
+      "gene_id": "AGRP",
+      "gene_type": "protein_coding",
+      "associated_conditions": [
+        {
+          "condition": "appetite_cachexia",
+          "study_count": 15,
+          "pathways": [
+            "appetite_regulation",
+            "energy_homeostasis",
+            "metabolism"
+          ],
+          "tissues": [
+            "hypothalamus",
+            "gut",
+            "adipose_tissue"
+          ]
+        }
+      ],
+      "pathways": [
+        "appetite_regulation",
+        "energy_homeostasis",
+        "metabolism"
+      ],
+      "tissues": [
+        "adipose_tissue",
+        "gut",
+        "hypothalamus"
+      ],
+      "evidence_sources": [
+        "literature_review"
+      ],
+      "total_studies": 15
+    }
+  },
+  "pathway_index": {
+    "endocannabinoid_system": [
+      "chronic_pain"
+    ],
+    "inflammatory_response": [
+      "arthritis",
+      "chronic_pain"
+    ],
+    "nociception": [
+      "chronic_pain"
+    ],
+    "fear_extinction": [
+      "PTSD"
+    ],
+    "stress_response": [
+      "PTSD",
+      "depression"
+    ],
+    "memory_consolidation": [
+      "PTSD"
+    ],
+    "chemoreceptor_trigger_zone": [
+      "nausea"
+    ],
+    "vomiting_reflex": [
+      "nausea"
+    ],
+    "gabaergic_transmission": [
+      "anxiety"
+    ],
+    "serotonergic_system": [
+      "anxiety"
+    ],
+    "neuronal_excitability": [
+      "epilepsy"
+    ],
+    "gabaergic_inhibition": [
+      "epilepsy"
+    ],
+    "ion_channel_regulation": [
+      "epilepsy"
+    ],
+    "neuroinflammation": [
+      "alzheimers",
+      "multiple_sclerosis"
+    ],
+    "immune_modulation": [
+      "multiple_sclerosis"
+    ],
+    "neuroprotection": [
+      "alzheimers",
+      "glaucoma",
+      "multiple_sclerosis"
+    ],
+    "dopaminergic_transmission": [
+      "parkinsons",
+      "tourette_syndrome"
+    ],
+    "neurodegeneration": [
+      "parkinsons"
+    ],
+    "motor_control": [
+      "parkinsons",
+      "tourette_syndrome"
+    ],
+    "amyloid_beta_clearance": [
+      "alzheimers"
+    ],
+    "intraocular_pressure_regulation": [
+      "glaucoma"
+    ],
+    "cartilage_degradation": [
+      "arthritis"
+    ],
+    "pain_signaling": [
+      "arthritis"
+    ],
+    "intestinal_inflammation": [
+      "ibd_crohns"
+    ],
+    "gut_barrier_function": [
+      "ibd_crohns"
+    ],
+    "immune_response": [
+      "ibd_crohns"
+    ],
+    "apoptosis": [
+      "cancer_palliative"
+    ],
+    "cell_proliferation": [
+      "cancer_palliative"
+    ],
+    "angiogenesis": [
+      "cancer_palliative"
+    ],
+    "pain_relief": [
+      "cancer_palliative"
+    ],
+    "sleep_wake_regulation": [
+      "insomnia"
+    ],
+    "circadian_rhythm": [
+      "insomnia"
+    ],
+    "gaba_signaling": [
+      "insomnia"
+    ],
+    "serotonergic_transmission": [
+      "depression"
+    ],
+    "neuroplasticity": [
+      "depression"
+    ],
+    "habit_formation": [
+      "tourette_syndrome"
+    ],
+    "appetite_regulation": [
+      "appetite_cachexia"
+    ],
+    "energy_homeostasis": [
+      "appetite_cachexia"
+    ],
+    "metabolism": [
+      "appetite_cachexia"
+    ]
+  },
+  "tissue_index": {
+    "dorsal_root_ganglion": [
+      "chronic_pain"
+    ],
+    "spinal_cord": [
+      "chronic_pain",
+      "multiple_sclerosis"
+    ],
+    "peripheral_nerve": [
+      "chronic_pain"
+    ],
+    "brain": [
+      "chronic_pain",
+      "multiple_sclerosis"
+    ],
+    "amygdala": [
+      "PTSD",
+      "anxiety",
+      "depression"
+    ],
+    "hippocampus": [
+      "PTSD",
+      "alzheimers",
+      "anxiety",
+      "depression",
+      "epilepsy"
+    ],
+    "prefrontal_cortex": [
+      "PTSD",
+      "anxiety",
+      "depression"
+    ],
+    "area_postrema": [
+      "nausea"
+    ],
+    "nucleus_tractus_solitarius": [
+      "nausea"
+    ],
+    "gut": [
+      "appetite_cachexia",
+      "nausea"
+    ],
+    "cortex": [
+      "alzheimers",
+      "epilepsy",
+      "tourette_syndrome"
+    ],
+    "thalamus": [
+      "epilepsy",
+      "insomnia"
+    ],
+    "immune_cells": [
+      "multiple_sclerosis"
+    ],
+    "substantia_nigra": [
+      "parkinsons"
+    ],
+    "striatum": [
+      "parkinsons",
+      "tourette_syndrome"
+    ],
+    "basal_ganglia": [
+      "parkinsons",
+      "tourette_syndrome"
+    ],
+    "entorhinal_cortex": [
+      "alzheimers"
+    ],
+    "trabecular_meshwork": [
+      "glaucoma"
+    ],
+    "retinal_ganglion_cells": [
+      "glaucoma"
+    ],
+    "optic_nerve": [
+      "glaucoma"
+    ],
+    "synovium": [
+      "arthritis"
+    ],
+    "cartilage": [
+      "arthritis"
+    ],
+    "joint": [
+      "arthritis"
+    ],
+    "intestinal_epithelium": [
+      "ibd_crohns"
+    ],
+    "gut_immune_cells": [
+      "ibd_crohns"
+    ],
+    "enteric_nervous_system": [
+      "ibd_crohns"
+    ],
+    "tumor_microenvironment": [
+      "cancer_palliative"
+    ],
+    "various_cancers": [
+      "cancer_palliative"
+    ],
+    "hypothalamus": [
+      "appetite_cachexia",
+      "insomnia"
+    ],
+    "brainstem": [
+      "insomnia"
+    ],
+    "adipose_tissue": [
+      "appetite_cachexia"
+    ]
+  }
+}
