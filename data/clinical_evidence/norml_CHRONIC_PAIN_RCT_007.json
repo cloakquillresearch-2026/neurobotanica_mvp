@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_007",
+  "participants": null,
+  "year": null,
+  "notes": "A randomized, placebo-controlled, crossover trial of cannabis cigarettes in neuropathic pain",
+  "confidence": "medium",
+  "abstract": ""
+}

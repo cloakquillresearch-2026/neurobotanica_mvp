@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone (Cesamet)",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Large (OR = 4.89)",
+  "study_type": "RCT",
+  "source": "NORML:CINV_RCT_005",
+  "participants": "74 patients receiving cisplatin chemotherapy",
+  "year": 1983,
+  "notes": "Nabilone vs Prochlorperazine for CINV: Comparative Trial",
+  "confidence": "medium",
+  "abstract": "Nabilone significantly superior: 52% complete protection vs 18% with prochlorperazine (p<0.01)"
+}

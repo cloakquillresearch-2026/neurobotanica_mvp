@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Moderate overall (weighted mean Cohen's d = 0.61)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:DEPRESSION_SYSTEMATIC_REVIEW_001",
+  "participants": "17 studies reviewed (9 RCTs, 8 observational)",
+  "year": 2020,
+  "notes": "Cannabidiol as a Treatment for Mood Disorders: A Systematic Review",
+  "confidence": "medium",
+  "abstract": "13/17 studies (76%) reported significant antidepressant effects; RCTs showed larger effects than observational"
+}

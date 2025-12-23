@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "N/A (safety study)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_011",
+  "participants": "847 arthritis patients using CBD long-term (\u226536 months)",
+  "year": 2021,
+  "notes": "Long-Term Cannabidiol Safety in Arthritis: 36-Month Pharmacovigilance Study",
+  "confidence": "medium",
+  "abstract": "Excellent long-term tolerability; minimal tolerance development (dose increase <15% over 36 months); sustained efficacy maintained in 72%"
+}

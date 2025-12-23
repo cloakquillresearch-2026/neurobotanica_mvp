@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AMYOTROPHIC_LATERAL_SCLEROSIS_OBSERVATIONAL_003",
+  "participants": null,
+  "year": null,
+  "notes": "The CB2 cannabinoid agonist AM-1241 prolongs survival in a transgenic mouse model of amyotrophic lateral sclerosis when initiated at symptom onset",
+  "confidence": "medium",
+  "abstract": ""
+}

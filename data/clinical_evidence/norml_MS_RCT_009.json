@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (add-on to baclofen, tizanidine, or other)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Medium (Cohen's d = 0.64)",
+  "study_type": "RCT",
+  "source": "NORML:MS_RCT_009",
+  "participants": "276 MS patients on existing antispasticity therapy",
+  "year": 2014,
+  "notes": "Nabiximols as Add-On Therapy for MS Spasticity: Real-World Enriched RCT",
+  "confidence": "medium",
+  "abstract": "Add-on nabiximols: Additional 24% improvement over existing therapy vs placebo add-on: 11% (p<0.001)"
+}

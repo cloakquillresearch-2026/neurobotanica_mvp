@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Large (d = 0.91 for weight)",
+  "study_type": "RCT",
+  "source": "NORML:CACHEXIA_RCT_007",
+  "participants": "28 nursing home residents with anorexia",
+  "year": 2007,
+  "notes": "Dronabinol for Geriatric Anorexia in Nursing Home Residents",
+  "confidence": "medium",
+  "abstract": "Dronabinol: Weight gain +4.2 lbs vs Placebo: -1.1 lbs (p<0.05); BMI improved; Albumin stable"
+}

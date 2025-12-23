@@ -1,0 +1,12 @@
+{
+  "compound": "CBD isolate",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Medium (Cohen's d = 0.58)",
+  "study_type": "RCT",
+  "source": "NORML:MS_RCT_007",
+  "participants": "106 MS patients with resistant spasticity",
+  "year": 2019,
+  "notes": "Cannabidiol for MS Spasticity: CBD-Only Formulation Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 34% responders (NRS \u226530% improvement) vs Placebo: 18%; MAS improved 22% vs 11%"
+}

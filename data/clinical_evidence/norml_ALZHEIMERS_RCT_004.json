@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (Marinol)",
+  "condition": "ALZHEIMERS",
+  "effect_size": "Large (100% gained weight)",
+  "study_type": "RCT",
+  "source": "NORML:ALZHEIMERS_RCT_004",
+  "participants": "15 patients with AD and weight loss",
+  "year": 1997,
+  "notes": "Dronabinol for Anorexia in Alzheimer's Disease",
+  "confidence": "medium",
+  "abstract": "Mean weight gain 4.7 lbs over 12 weeks; All patients gained weight; NPI improved; No cognitive decline"
+}

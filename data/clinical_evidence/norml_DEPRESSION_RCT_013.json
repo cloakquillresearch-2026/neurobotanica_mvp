@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 1.08)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_013",
+  "participants": "134 adults with MS and comorbid major depression",
+  "year": 2021,
+  "notes": "Cannabidiol for Depression in Multiple Sclerosis: A Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 49% reduction in BDI-II (28.4 \u2192 14.5); Placebo: 21% reduction (28.1 \u2192 22.2); p<0.001"
+}

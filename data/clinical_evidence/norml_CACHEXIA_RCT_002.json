@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Sustained large effect",
+  "study_type": "RCT",
+  "source": "NORML:CACHEXIA_RCT_002",
+  "participants": "94 HIV patients (extension of pivotal trial)",
+  "year": 1997,
+  "notes": "Dronabinol Long-Term Efficacy for AIDS Anorexia: 1-Year Study",
+  "confidence": "medium",
+  "abstract": "Appetite improvement sustained at 12 months; Weight stable (prevented continued wasting); No tolerance to appetite effects"
+}

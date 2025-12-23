@@ -1,0 +1,12 @@
+{
+  "compound": "CBD-rich cannabis oil (THC:CBD 4%:15%)",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Large (d = 0.78)",
+  "study_type": "RCT",
+  "source": "NORML:IBD_RCT_003",
+  "participants": "56 patients with mild-moderate Crohn's disease",
+  "year": 2021,
+  "notes": "CBD-Rich Cannabis Oil for Crohn's Disease: Phase II Trial",
+  "confidence": "medium",
+  "abstract": "Cannabis oil: 65% remission vs Placebo: 35% (p=0.04); Significant CDAI reduction (mean -82 points)"
+}

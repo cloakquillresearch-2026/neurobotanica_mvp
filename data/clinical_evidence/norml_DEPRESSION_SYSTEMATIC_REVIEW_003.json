@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "N/A (safety review)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:DEPRESSION_SYSTEMATIC_REVIEW_003",
+  "participants": "67 depression studies reviewed (N=4,218 total participants)",
+  "year": 2021,
+  "notes": "Cannabidiol Safety Profile in Depression: Comprehensive Systematic Review",
+  "confidence": "medium",
+  "abstract": "Excellent safety across all doses and durations; most common AEs: fatigue (8-14%), diarrhea (6-11%), appetite changes (5-9%); all mild-moderate"
+}

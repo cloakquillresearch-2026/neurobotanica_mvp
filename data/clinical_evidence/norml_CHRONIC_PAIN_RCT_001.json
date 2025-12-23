@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_001",
+  "participants": null,
+  "year": null,
+  "notes": "Dose-dependent Effects of Smoked Cannabis on Capsaicin-Induced Pain and Hyperalgesia in Healthy Volunteers",
+  "confidence": "medium",
+  "abstract": ""
+}

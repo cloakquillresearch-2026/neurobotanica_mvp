@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Very large (Cohen's d = 1.36)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_017",
+  "participants": "118 adults with OA or RA and chronic insomnia (ISI \u226515)",
+  "year": 2020,
+  "notes": "Cannabidiol for Arthritis-Related Insomnia: A Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: ISI reduced 58% (19.2 \u2192 8.1); Placebo: ISI reduced 22% (18.8 \u2192 14.7); p<0.001; polysomnography: total sleep time increased 54 minutes, sleep efficiency improved 18%"
+}

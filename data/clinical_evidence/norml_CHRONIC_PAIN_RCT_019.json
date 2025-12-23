@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_019",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabinoids for treatment of chronic non-cancer pain: randomized trial",
+  "confidence": "medium",
+  "abstract": ""
+}

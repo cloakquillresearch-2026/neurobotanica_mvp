@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large (Cohen's d = 0.91)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_002",
+  "participants": "247 psoriatic arthritis patients using CBD",
+  "year": 2020,
+  "notes": "Cannabidiol for Psoriatic Arthritis: Canadian Registry Analysis",
+  "confidence": "medium",
+  "abstract": "58% achieved DAPSA response (reduction \u226550%); mean score 32.1 \u2192 16.4 (49% reduction)"
+}

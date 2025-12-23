@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "Large (Cohen's d = 1.08)",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_022",
+  "participants": "45 adults with sickle cell disease experiencing vaso-occlusive crises",
+  "year": 2021,
+  "notes": "Cannabidiol for Sickle Cell Disease Pain Crises: A Pilot RCT",
+  "confidence": "medium",
+  "abstract": "CBD: Mean crisis duration 2.8 days vs Placebo: 4.6 days (39% reduction); pain scores reduced 47% faster with CBD"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabidiol (Epidiolex)",
+  "condition": "EPILEPSY",
+  "effect_size": "Large (18-22% vs placebo)",
+  "study_type": "RCT",
+  "source": "NORML:EPILEPSY_RCT_004",
+  "participants": "199 patients with Dravet syndrome",
+  "year": 2020,
+  "notes": "Epidiolex Second Dravet Trial: Replication Study (GWPCARE2)",
+  "confidence": "medium",
+  "abstract": "20mg CBD: 45.7% reduction; 10mg CBD: 48.7% reduction; Placebo: 26.9% (p<0.01); Replicates pivotal trial"
+}

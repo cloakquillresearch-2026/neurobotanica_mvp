@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "randomized_controlled_trial",
+  "source": "NORML:ANXIETY_RCT_014",
+  "participants": null,
+  "year": null,
+  "notes": "CBD Prevents THC-Induced Anxiety: Interaction Study",
+  "confidence": "medium",
+  "abstract": ""
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis",
+  "condition": "PARKINSONS",
+  "effect_size": "Large (100% some benefit)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:PD_OBSERVATIONAL_005",
+  "participants": "47 PD patients from cannabis registry",
+  "year": 2017,
+  "notes": "Real-World Cannabis Use for Parkinson's Disease: Registry Analysis",
+  "confidence": "medium",
+  "abstract": "Improvement in 47/47 (100%) for at least one symptom; Mean UPDRS motor improvement: 7.4 points (p<0.001)"
+}

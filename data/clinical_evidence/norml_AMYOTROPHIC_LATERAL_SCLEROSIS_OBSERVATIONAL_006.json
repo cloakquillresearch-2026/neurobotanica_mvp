@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AMYOTROPHIC_LATERAL_SCLEROSIS_OBSERVATIONAL_006",
+  "participants": null,
+  "year": null,
+  "notes": "A systematic review of the effectiveness of medical cannabis for psychiatric, movement, and neurodegenerative disorders",
+  "confidence": "medium",
+  "abstract": ""
+}

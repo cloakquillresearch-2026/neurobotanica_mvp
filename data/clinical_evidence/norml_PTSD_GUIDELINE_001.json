@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis/cannabinoids",
+  "condition": "PTSD",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:PTSD_GUIDELINE_001",
+  "participants": "Evidence-based guideline",
+  "year": 2023,
+  "notes": "VA/DoD Clinical Practice Guideline for PTSD: Cannabis Considerations",
+  "confidence": "medium",
+  "abstract": "Acknowledges veteran cannabis use; notes emerging evidence; recommends neither for nor against pending further RCT data"
+}

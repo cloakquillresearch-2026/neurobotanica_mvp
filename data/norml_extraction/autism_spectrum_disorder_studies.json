@@ -1,0 +1,381 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "AUTISM_SPECTRUM_DISORDER",
+  "phase": "4",
+  "priority": "Phase 4 - Emerging Indications Expansion",
+  "total_studies": 12,
+  "studies": [
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_001",
+      "study_type": "observational",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "The endocannabinoid system and autism spectrum disorders: Insights from animal models",
+      "citation": "Zamberletti et al. 2017. International Journal of Molecular Sciences 18: 1916.",
+      "publication_year": 2017,
+      "journal": "International Journal of Molecular Sciences",
+      "intervention": {
+        "cannabis_type": "",
+        "cannabinoid_profile": "",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": null,
+        "institution": "",
+        "country": "",
+        "randomized": false,
+        "placebo_controlled": false
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_002",
+      "study_type": "observational",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Lower circulating endocannabinoid levels in children with autism spectrum disorder",
+      "citation": "Aran et al. 2019. Molecular Autism 10.",
+      "publication_year": 2019,
+      "journal": "Molecular Autism",
+      "intervention": {
+        "cannabis_type": "",
+        "cannabinoid_profile": "",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": null,
+        "institution": "",
+        "country": "",
+        "randomized": false,
+        "placebo_controlled": false
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_003",
+      "study_type": "observational",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Cannabis and cannabinoid use in autism spectrum disorder: A systematic review",
+      "citation": "da Silva et al. 2021. Trends in Psychiatry and Psychotherapy.",
+      "publication_year": 2021,
+      "journal": "Trends in Psychiatry and Psychotherapy",
+      "intervention": {
+        "cannabis_type": "",
+        "cannabinoid_profile": "",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": null,
+        "institution": "",
+        "country": "",
+        "randomized": false,
+        "placebo_controlled": false
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_004",
+      "study_type": "observational",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Effects of CBD-enriched Cannabis sativa extract on autism spectrum disorder symptoms: An observational study of 18 participants undergoing compassionate use",
+      "citation": "Fleury-Teixeira et al. 2019. Frontiers in Neurology 10.",
+      "publication_year": 2019,
+      "journal": "Frontiers in Neurology",
+      "intervention": {
+        "cannabis_type": "CBD-enriched extract",
+        "cannabinoid_profile": "CBD-dominant",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": 18,
+        "institution": "",
+        "country": "",
+        "randomized": false,
+        "placebo_controlled": false
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_005",
+      "study_type": "observational",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Cannabidiol-based medical cannabis in children with autism: A retrospective feasibility study",
+      "citation": "Aran et al. 2018. Neurology 90.",
+      "publication_year": 2018,
+      "journal": "Neurology",
+      "intervention": {
+        "cannabis_type": "CBD-dominant cannabis extract",
+        "cannabinoid_profile": "CBD-dominant",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": null,
+        "institution": "",
+        "country": "",
+        "randomized": false,
+        "placebo_controlled": false
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_006",
+      "study_type": "observational",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Real life experiences of medical cannabis treatment in autism: Analysis of safety and efficacy",
+      "citation": "Bar-Lev Schleider et al. 2019. Scientific Reports 9: 200.",
+      "publication_year": 2019,
+      "journal": "Scientific Reports",
+      "intervention": {
+        "cannabis_type": "Medical cannabis",
+        "cannabinoid_profile": "",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": null,
+        "institution": "",
+        "country": "",
+        "randomized": false,
+        "placebo_controlled": false
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_007",
+      "study_type": "observational",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Oral cannabidiol use in children in with autism spectrum disorder to treat related symptoms and co-morbidities",
+      "citation": "Barchel et al. 2019. Frontiers in Pharmacology 9: 1521.",
+      "publication_year": 2019,
+      "journal": "Frontiers in Pharmacology",
+      "intervention": {
+        "cannabis_type": "Oral cannabidiol",
+        "cannabinoid_profile": "CBD-dominant",
+        "delivery_method": "oral",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": null,
+        "institution": "",
+        "country": "",
+        "randomized": false,
+        "placebo_controlled": false
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_008",
+      "study_type": "observational",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Autism spectrum disorder and medical cannabis: Review and clinical experience",
+      "citation": "Mostafavi and Gaitanis. 2020. Seminars in Pediatric Neurology 35.",
+      "publication_year": 2020,
+      "journal": "Seminars in Pediatric Neurology",
+      "intervention": {
+        "cannabis_type": "",
+        "cannabinoid_profile": "",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": null,
+        "institution": "",
+        "country": "",
+        "randomized": false,
+        "placebo_controlled": false
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_CASE_SERIES_001",
+      "study_type": "case_series",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "A pediatric patient with autism spectrum disorder and epilepsy using cannabinoid extract as complementary therapy: A case report",
+      "citation": "Andrea-Ponton et al. 2021. Journal of Medical Case Reports.",
+      "publication_year": 2021,
+      "journal": "Journal of Medical Case Reports",
+      "intervention": {
+        "cannabis_type": "Cannabinoid extract",
+        "cannabinoid_profile": "",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": 1,
+        "institution": "",
+        "country": "",
+        "randomized": false,
+        "placebo_controlled": false
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_009",
+      "study_type": "observational",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "CBD-enriched cannabis for autism spectrum disorder: An experience of a single center in Turkey and reviews of the literature",
+      "citation": "Bilge and Ekici. 2021. Journal of Cannabis Research.",
+      "publication_year": 2021,
+      "journal": "Journal of Cannabis Research",
+      "intervention": {
+        "cannabis_type": "CBD-enriched cannabis",
+        "cannabinoid_profile": "CBD-dominant",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": null,
+        "institution": "",
+        "country": "Turkey",
+        "randomized": false,
+        "placebo_controlled": false
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_RCT_001",
+      "study_type": "RCT",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Cannabinoid treatment for autism: A proof-of-concept randomized trials",
+      "citation": "Aran et al. 2021. Molecular Autism 12.",
+      "publication_year": 2021,
+      "journal": "Molecular Autism",
+      "intervention": {
+        "cannabis_type": "Cannabinoid treatment",
+        "cannabinoid_profile": "",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": null,
+        "institution": "",
+        "country": "",
+        "randomized": true,
+        "placebo_controlled": true
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "AUTISM_SPECTRUM_DISORDER_RCT_002",
+      "study_type": "RCT",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Evaluation of the efficacy and safety of cannabidiol-rich cannabis extract in children with autism spectrum disorder: Randomized, double-blind and controlled placebo clinical trial",
+      "citation": "da Silva Junior et al. 2022. Trends in Psychiatry and Psychotherapy.",
+      "publication_year": 2022,
+      "journal": "Trends in Psychiatry and Psychotherapy",
+      "intervention": {
+        "cannabis_type": "Cannabidiol-rich cannabis extract",
+        "cannabinoid_profile": "CBD-dominant",
+        "delivery_method": "",
+        "dosing_information": "",
+        "treatment_duration": ""
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "quantitative_results": [],
+        "adverse_effects": [],
+        "effect_size_category": "unknown"
+      },
+      "study_quality": {
+        "sample_size": null,
+        "institution": "",
+        "country": "Brazil",
+        "randomized": true,
+        "placebo_controlled": true
+      },
+      "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    }
+  ]
+}

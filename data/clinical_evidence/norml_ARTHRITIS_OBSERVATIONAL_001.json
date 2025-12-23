@@ -1,0 +1,12 @@
+{
+  "compound": "CBD (various formulations)",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large (eta-squared = 0.34)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_001",
+  "participants": "1,059 arthritis patients (64% RA, 36% OA) using CBD products",
+  "year": 2020,
+  "notes": "Real-World Use of Cannabidiol for Arthritis: Multi-Center Registry Study",
+  "confidence": "medium",
+  "abstract": "71% reported moderate-to-significant improvement; mean score 7.3 \u2192 3.8 (48% reduction)"
+}

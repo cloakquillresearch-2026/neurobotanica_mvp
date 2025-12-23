@@ -1,0 +1,12 @@
+{
+  "compound": "Smoked cannabis (High THC, High CBD, THC+CBD, Placebo)",
+  "condition": "PTSD",
+  "effect_size": "Moderate within-group improvement",
+  "study_type": "RCT",
+  "source": "NORML:PTSD_RCT_003",
+  "participants": "80 veterans with PTSD",
+  "year": 2021,
+  "notes": "Smoked Cannabis for PTSD: First Randomized Placebo-Controlled Trial",
+  "confidence": "medium",
+  "abstract": "All groups improved; High THC: -9.4 points; No significant between-group differences (high placebo response)"
+}

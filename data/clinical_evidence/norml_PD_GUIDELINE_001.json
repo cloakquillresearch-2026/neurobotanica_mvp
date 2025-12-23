@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis and cannabinoids",
+  "condition": "PARKINSONS",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:PD_GUIDELINE_001",
+  "participants": "Evidence-based guideline review",
+  "year": 2020,
+  "notes": "MDS Evidence-Based Review: Complementary Therapies in Parkinson's Disease",
+  "confidence": "medium",
+  "abstract": "Classification: Insufficient evidence to recommend for motor symptoms; Possibly useful for non-motor symptoms (sleep, pain, QoL); More research needed"
+}

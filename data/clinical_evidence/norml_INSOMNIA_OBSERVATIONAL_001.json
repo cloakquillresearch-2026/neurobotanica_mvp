@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis (various)",
+  "condition": "INSOMNIA",
+  "effect_size": "Large (4.5/10 improvement)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:INSOMNIA_OBSERVATIONAL_001",
+  "participants": "409 patients using cannabis for insomnia",
+  "year": 2018,
+  "notes": "Medical Cannabis for Insomnia: Large Registry Study",
+  "confidence": "medium",
+  "abstract": "4.5-point average improvement (0-10 scale); 74% reported significant benefit; THC content positively correlated with effect"
+}

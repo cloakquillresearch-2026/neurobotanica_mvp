@@ -1,0 +1,12 @@
+{
+  "compound": "CBD (cannabidiol)",
+  "condition": "PTSD",
+  "effect_size": "Large (91% response rate)",
+  "study_type": "RCT",
+  "source": "NORML:PTSD_RCT_004",
+  "participants": "11 adults with PTSD",
+  "year": 2019,
+  "notes": "CBD for PTSD: Pilot Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "91% (10/11) experienced symptom reduction; Mean PCL-5 decreased 28%; Nightmares improved in all patients"
+}

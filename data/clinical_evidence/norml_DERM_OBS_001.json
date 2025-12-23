@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "DERMATOLOGY",
+  "effect_size": "none",
+  "study_type": "observational_cohort",
+  "source": "NORML:DERM_OBS_001",
+  "participants": null,
+  "year": null,
+  "notes": "Medical Cannabis Oil for Chronic Wound Granulation",
+  "confidence": "medium",
+  "abstract": ""
+}

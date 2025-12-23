@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Very large (Cohen's d = 1.24)",
+  "study_type": "RCT",
+  "source": "NORML:CINV_RCT_003",
+  "participants": "72 patients with anticipatory nausea",
+  "year": 2016,
+  "notes": "CBD for Anticipatory Nausea in Chemotherapy: Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 64% reduction in anticipatory nausea vs Placebo: 22%; p<0.001"
+}

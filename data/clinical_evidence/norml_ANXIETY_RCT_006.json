@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "randomized_controlled_trial",
+  "source": "NORML:ANXIETY_RCT_006",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabidiol for the Treatment of Anxiety Disorders: An 8-Week Pilot Study",
+  "confidence": "medium",
+  "abstract": ""
+}

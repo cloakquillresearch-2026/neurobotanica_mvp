@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "N/A (safety study)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_012",
+  "participants": "284 RA patients on concurrent CBD + methotrexate therapy",
+  "year": 2020,
+  "notes": "Cannabidiol and Methotrexate Drug-Drug Interaction Study in Rheumatoid Arthritis",
+  "confidence": "medium",
+  "abstract": "No clinically significant pharmacokinetic interaction detected; MTX efficacy maintained; CBD efficacy maintained; no increased hepatotoxicity; liver enzymes stable"
+}

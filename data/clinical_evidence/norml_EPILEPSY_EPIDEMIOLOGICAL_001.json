@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis access (state-level)",
+  "condition": "EPILEPSY",
+  "effect_size": "Moderate (13% reduction)",
+  "study_type": "EPIDEMIOLOGICAL",
+  "source": "NORML:EPILEPSY_EPIDEMIOLOGICAL_001",
+  "participants": "N=117,132 pediatric epilepsy cases (HCUP database)",
+  "year": 2015,
+  "notes": "State Medical Cannabis Laws and Pediatric Epilepsy Treatment Patterns",
+  "confidence": "medium",
+  "abstract": "States with medical cannabis: 13% fewer pediatric epilepsy hospitalizations; Associated with reduced emergency visits"
+}

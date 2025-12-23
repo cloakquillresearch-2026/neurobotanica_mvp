@@ -1,0 +1,12 @@
+{
+  "compound": "CBD use during disability period",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (OR = 2.08 for RTW, 95% CI: 1.54-2.81)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_014",
+  "participants": "892 employees with depression-related disability claims",
+  "year": 2019,
+  "notes": "Cannabidiol and Depression-Related Workplace Disability: Occupational Health Study",
+  "confidence": "medium",
+  "abstract": "CBD users: 74% returned to work vs 58% in matched controls; faster return (mean 12.8 weeks vs 18.4 weeks); sustained employment at 6 months (82% vs 67%)"
+}

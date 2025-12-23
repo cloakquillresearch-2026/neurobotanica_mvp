@@ -13,7 +13,6 @@
       "citation": "Wallace et al. 2007. Anesthesiology 107: 785-796.",
       "publication_year": 2007,
       "journal": "Anesthesiology",
-      
       "intervention": {
         "cannabis_type": "smoked cannabis",
         "cannabinoid_profile": "dose-dependent study",
@@ -21,7 +20,6 @@
         "dosing_information": "varied doses tested",
         "treatment_duration": "acute administration"
       },
-      
       "outcomes": {
         "key_findings": [
           "Smoked cannabis demonstrated dose-dependent analgesic effects",
@@ -36,7 +34,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University research",
@@ -44,8 +41,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #5"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #5",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_002",
@@ -55,7 +52,6 @@
       "citation": "Cooper et al. 2013. Neuropsychopharmacology 38: 1984-1992.",
       "publication_year": 2013,
       "journal": "Neuropsychopharmacology",
-      
       "intervention": {
         "cannabis_type": "smoked marijuana vs dronabinol (oral THC)",
         "cannabinoid_profile": "THC comparison study",
@@ -63,7 +59,6 @@
         "dosing_information": "comparative dosing",
         "treatment_duration": "acute administration"
       },
-      
       "outcomes": {
         "key_findings": [
           "Both smoked cannabis and dronabinol demonstrated analgesic effects",
@@ -78,7 +73,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University research",
@@ -86,8 +80,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #6"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #6",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_003",
@@ -98,7 +92,6 @@
       "citation": "Abrams et al. 2007. Neurology 68: 515-521.",
       "publication_year": 2007,
       "journal": "Neurology",
-      
       "intervention": {
         "cannabis_type": "smoked medicinal cannabis",
         "cannabinoid_profile": "not specified",
@@ -106,7 +99,6 @@
         "dosing_information": "standardized dosing protocol",
         "treatment_duration": "treatment period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Cannabis significantly reduced HIV-associated neuropathic pain",
@@ -118,10 +110,11 @@
           "Pain intensity ratings"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["well-tolerated"],
+        "adverse_effects": [
+          "well-tolerated"
+        ],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University of California San Francisco",
@@ -129,8 +122,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #7. Key HIV neuropathy study"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #7. Key HIV neuropathy study",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_004",
@@ -142,7 +135,6 @@
       "citation": "Ellis et al. 2008. Neuropsychopharmacology 34: 672-80.",
       "publication_year": 2008,
       "journal": "Neuropsychopharmacology",
-      
       "intervention": {
         "cannabis_type": "smoked medicinal cannabis",
         "cannabinoid_profile": "not specified",
@@ -150,7 +142,6 @@
         "dosing_information": "crossover design dosing",
         "treatment_duration": "multiple treatment periods"
       },
-      
       "outcomes": {
         "key_findings": [
           "Significant pain reduction in HIV neuropathy patients",
@@ -165,7 +156,6 @@
         "adverse_effects": [],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University research",
@@ -173,8 +163,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #8"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #8",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_005",
@@ -185,7 +175,6 @@
       "citation": "Wallace et al. 2015. Journal of Pain 7: 616-627.",
       "publication_year": 2015,
       "journal": "Journal of Pain",
-      
       "intervention": {
         "cannabis_type": "inhaled cannabis",
         "cannabinoid_profile": "not specified",
@@ -193,7 +182,6 @@
         "dosing_information": "standardized inhalation protocol",
         "treatment_duration": "treatment period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Inhaled cannabis effective for diabetic neuropathic pain",
@@ -208,7 +196,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University research",
@@ -216,8 +203,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #9. Important diabetes indication"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #9. Important diabetes indication",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_006",
@@ -229,7 +216,6 @@
       "citation": "Wilsey et al. 2016. The Journal of Pain 17: 982-1000.",
       "publication_year": 2016,
       "journal": "The Journal of Pain",
-      
       "intervention": {
         "cannabis_type": "vaporized cannabis",
         "cannabinoid_profile": "not specified",
@@ -237,7 +223,6 @@
         "dosing_information": "vaporizer protocol",
         "treatment_duration": "laboratory experiment period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Vaporized cannabis effective for spinal cord injury pain",
@@ -249,10 +234,11 @@
           "Pain intensity measurements"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["minimal side effects noted"],
+        "adverse_effects": [
+          "minimal side effects noted"
+        ],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University research laboratory",
@@ -260,8 +246,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #10. Validates vaporizer delivery"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #10. Validates vaporizer delivery",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_007",
@@ -273,7 +259,6 @@
       "citation": "Wilsey et al. 2008. Journal of Pain 9: 506-521.",
       "publication_year": 2008,
       "journal": "Journal of Pain",
-      
       "intervention": {
         "cannabis_type": "cannabis cigarettes",
         "cannabinoid_profile": "not specified",
@@ -281,7 +266,6 @@
         "dosing_information": "standardized cigarette dosing",
         "treatment_duration": "crossover study period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Cannabis cigarettes significantly reduced neuropathic pain",
@@ -296,7 +280,6 @@
         "adverse_effects": [],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University research",
@@ -304,8 +287,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #11. Treatment-resistant population"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #11. Treatment-resistant population",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_008",
@@ -316,7 +299,6 @@
       "citation": "Ware et al. 2010. CMAJ 182: 694-701.",
       "publication_year": 2010,
       "journal": "CMAJ (Canadian Medical Association Journal)",
-      
       "intervention": {
         "cannabis_type": "smoked cannabis",
         "cannabinoid_profile": "standardized THC content",
@@ -324,7 +306,6 @@
         "dosing_information": "standardized dosing protocol",
         "treatment_duration": "controlled trial period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Smoked cannabis significantly reduced chronic neuropathic pain",
@@ -336,10 +317,11 @@
           "Sleep quality measures"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["mild to moderate side effects"],
+        "adverse_effects": [
+          "mild to moderate side effects"
+        ],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "McGill University",
@@ -347,8 +329,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #12. Important Canadian validation"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #12. Important Canadian validation",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_009",
@@ -360,7 +342,6 @@
       "citation": "Eisenberg et al. 2014. Journal of Pain and Palliative Care Pharmacotherapy 28: 216-225.",
       "publication_year": 2014,
       "journal": "Journal of Pain and Palliative Care Pharmacotherapy",
-      
       "intervention": {
         "cannabis_type": "cannabis via metered-dose inhaler",
         "cannabinoid_profile": "standardized dose",
@@ -368,7 +349,6 @@
         "dosing_information": "precise metered dosing",
         "treatment_duration": "phase 1a trial period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Novel inhaler delivery method effective for neuropathic pain",
@@ -381,10 +361,11 @@
           "Safety profile"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["safe and well-tolerated"],
+        "adverse_effects": [
+          "safe and well-tolerated"
+        ],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University medical center",
@@ -392,8 +373,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #13. Novel delivery system"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #13. Novel delivery system",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_010",
@@ -404,7 +385,6 @@
       "citation": "Wilsey et al. 2013. The Journal of Pain 14: 136-148.",
       "publication_year": 2013,
       "journal": "The Journal of Pain",
-      
       "intervention": {
         "cannabis_type": "vaporized cannabis",
         "cannabinoid_profile": "low-dose THC",
@@ -412,7 +392,6 @@
         "dosing_information": "low doses tested",
         "treatment_duration": "trial period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Low doses of vaporized cannabis significantly improved pain",
@@ -424,10 +403,11 @@
           "Pain relief scores"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["minimal with low doses"],
+        "adverse_effects": [
+          "minimal with low doses"
+        ],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University research",
@@ -435,8 +415,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #14. Important low-dose validation"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #14. Important low-dose validation",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_011",
@@ -447,7 +427,6 @@
       "citation": "Almog et al. 2020. European Journal of Pain 24: 1505-1516.",
       "publication_year": 2020,
       "journal": "European Journal of Pain",
-      
       "intervention": {
         "cannabis_type": "selective-dose cannabis inhaler",
         "cannabinoid_profile": "standardized dosing",
@@ -455,7 +434,6 @@
         "dosing_information": "precise dose control via inhaler",
         "treatment_duration": "trial period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Novel selective-dose inhaler demonstrated efficacy in chronic pain",
@@ -469,10 +447,11 @@
           "Ease of use ratings"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["well-tolerated"],
+        "adverse_effects": [
+          "well-tolerated"
+        ],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Medical research center",
@@ -480,8 +459,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #15. Novel inhaler technology"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #15. Novel inhaler technology",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_012",
@@ -492,7 +471,6 @@
       "citation": "Johnson et al. 2009. Journal of Symptom Management 39: 167-179.",
       "publication_year": 2009,
       "journal": "Journal of Symptom Management",
-      
       "intervention": {
         "cannabis_type": "THC:CBD extract",
         "cannabinoid_profile": "balanced THC:CBD",
@@ -500,7 +478,6 @@
         "dosing_information": "standardized extract dosing",
         "treatment_duration": "parallel-group design"
       },
-      
       "outcomes": {
         "key_findings": [
           "THC:CBD extract showed efficacy in intractable cancer pain",
@@ -513,10 +490,11 @@
           "Safety assessment"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["tolerable"],
+        "adverse_effects": [
+          "tolerable"
+        ],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "multicenter study",
@@ -524,8 +502,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #16. Critical cancer pain study"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #16. Critical cancer pain study",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_OBSERVATIONAL_001",
@@ -536,7 +514,6 @@
       "citation": "Kawka et al. 2021. Journal of Clinical Pharmacology [online ahead of print].",
       "publication_year": 2021,
       "journal": "Journal of Clinical Pharmacology",
-      
       "intervention": {
         "cannabis_type": "cannabis-based sublingual oils",
         "cannabinoid_profile": "various formulations",
@@ -544,7 +521,6 @@
         "dosing_information": "registry-based real-world dosing",
         "treatment_duration": "longitudinal observation"
       },
-      
       "outcomes": {
         "key_findings": [
           "Real-world evidence of cannabis sublingual oils for chronic pain",
@@ -559,7 +535,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "UK Medical Cannabis Registry",
@@ -567,7 +542,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #17. Important registry data"
     },
     {
@@ -579,7 +553,6 @@
       "citation": "Ware et al. 2015. Journal of Pain 16: 1233-1242.",
       "publication_year": 2015,
       "journal": "Journal of Pain",
-      
       "intervention": {
         "cannabis_type": "medicinal cannabis",
         "cannabinoid_profile": "not specified",
@@ -587,7 +560,6 @@
         "dosing_information": "long-term use assessment",
         "treatment_duration": "extended period for safety assessment"
       },
-      
       "outcomes": {
         "key_findings": [
           "Cannabis demonstrated long-term safety for pain management",
@@ -600,10 +572,11 @@
           "Adverse event monitoring"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["no significant adverse effects long-term"],
+        "adverse_effects": [
+          "no significant adverse effects long-term"
+        ],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "McGill University",
@@ -611,8 +584,8 @@
         "randomized": true,
         "placebo_controlled": false
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #18. CRITICAL long-term safety study for FDA"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #18. CRITICAL long-term safety study for FDA",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_OBSERVATIONAL_002",
@@ -623,7 +596,6 @@
       "citation": "Lum et al. 2019. Gerontology & Geriatric Medicine 5 [open access publication].",
       "publication_year": 2019,
       "journal": "Gerontology & Geriatric Medicine",
-      
       "intervention": {
         "cannabis_type": "marijuana various forms",
         "cannabinoid_profile": "varied",
@@ -631,7 +603,6 @@
         "dosing_information": "self-reported use patterns",
         "treatment_duration": "observational"
       },
-      
       "outcomes": {
         "key_findings": [
           "Cannabis use patterns documented in elderly Colorado population",
@@ -647,7 +618,6 @@
         "adverse_effects": [],
         "effect_size_category": "unknown"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Colorado research",
@@ -655,7 +625,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #19. Elderly population data"
     },
     {
@@ -667,7 +636,6 @@
       "citation": "Abuhasira et al. 2018. European Journal of Internal Medicine 49: 44-50.",
       "publication_year": 2018,
       "journal": "European Journal of Internal Medicine",
-      
       "intervention": {
         "cannabis_type": "medical cannabis",
         "cannabinoid_profile": "varied",
@@ -675,7 +643,6 @@
         "dosing_information": "medical cannabis program data",
         "treatment_duration": "observational cohort"
       },
-      
       "outcomes": {
         "key_findings": [
           "Comprehensive epidemiological data on elderly medical cannabis users",
@@ -688,10 +655,11 @@
           "Efficacy measures"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["safe in elderly"],
+        "adverse_effects": [
+          "safe in elderly"
+        ],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Ben-Gurion University",
@@ -699,7 +667,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #20. Important geriatric safety data"
     },
     {
@@ -711,7 +678,6 @@
       "citation": "Abrams et al. 2011. Clinical Pharmacology & Therapeutics 90: 844-851.",
       "publication_year": 2011,
       "journal": "Clinical Pharmacology & Therapeutics",
-      
       "intervention": {
         "cannabis_type": "vaporized herbal cannabis",
         "cannabinoid_profile": "THC-containing cannabis",
@@ -719,7 +685,6 @@
         "dosing_information": "combined with morphine/oxycodone",
         "treatment_duration": "interaction study"
       },
-      
       "outcomes": {
         "key_findings": [
           "Vaporized cannabis enhanced pain-relieving effects of opioids",
@@ -736,7 +701,6 @@
         "adverse_effects": [],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University of California San Francisco",
@@ -744,8 +708,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #21. ⭐⭐⭐ HIGHEST PRIORITY - Cannabinoid-opioid interaction critical for FDA opioid-sparing evidence"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #21. ⭐⭐⭐ HIGHEST PRIORITY - Cannabinoid-opioid interaction critical for FDA opioid-sparing evidence",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_015",
@@ -756,7 +720,6 @@
       "citation": "Dunn et al. 2021. Neuropsychopharmacology [online ahead of print].",
       "publication_year": 2021,
       "journal": "Neuropsychopharmacology",
-      
       "intervention": {
         "cannabis_type": "dronabinol (synthetic THC)",
         "cannabinoid_profile": "THC (dronabinol)",
@@ -764,7 +727,6 @@
         "dosing_information": "low doses of THC combined with hydromorphone (Dilaudid)",
         "treatment_duration": "laboratory model"
       },
-      
       "outcomes": {
         "key_findings": [
           "Low-dose THC enhanced hydromorphone analgesic efficacy",
@@ -780,7 +742,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Laboratory research",
@@ -788,8 +749,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #22. Opioid-sparing evidence with hydromorphone"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #22. Opioid-sparing evidence with hydromorphone",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_016",
@@ -800,7 +761,6 @@
       "citation": "Cooper et al. 2018. Neuropsychopharmacology 43: 2046-2055.",
       "publication_year": 2018,
       "journal": "Neuropsychopharmacology",
-      
       "intervention": {
         "cannabis_type": "smoked cannabis",
         "cannabinoid_profile": "THC-containing cannabis",
@@ -808,7 +768,6 @@
         "dosing_information": "sub-therapeutic doses of cannabis + oxycodone",
         "treatment_duration": "co-administration study"
       },
-      
       "outcomes": {
         "key_findings": [
           "Synergistic analgesic effects documented with sub-therapeutic doses",
@@ -824,7 +783,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Research laboratory",
@@ -832,8 +790,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #23. Oxycodone interaction - critical opioid-sparing data"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #23. Oxycodone interaction - critical opioid-sparing data",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_OBSERVATIONAL_004",
@@ -844,7 +802,6 @@
       "citation": "Boehnke et al. 2016. The Journal of Pain 17: 739-744.",
       "publication_year": 2016,
       "journal": "The Journal of Pain",
-      
       "intervention": {
         "cannabis_type": "medical cannabis",
         "cannabinoid_profile": "varied",
@@ -852,7 +809,6 @@
         "dosing_information": "patient self-administration",
         "treatment_duration": "retrospective survey"
       },
-      
       "outcomes": {
         "key_findings": [
           "Medical cannabis use associated with decreased opioid medication use",
@@ -867,7 +823,6 @@
         "adverse_effects": [],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University of Michigan",
@@ -875,7 +830,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #24. ⭐⭐⭐ CRITICAL - Cannabis reduces opioid use, key substitution evidence"
     },
     {
@@ -888,7 +842,6 @@
       "citation": "Reiman et al. 2017. Cannabis and Cannabinoid Research 2: 160-166.",
       "publication_year": 2017,
       "journal": "Cannabis and Cannabinoid Research",
-      
       "intervention": {
         "cannabis_type": "medical cannabis various forms",
         "cannabinoid_profile": "varied",
@@ -896,7 +849,6 @@
         "dosing_information": "patient self-report",
         "treatment_duration": "longitudinal self-report"
       },
-      
       "outcomes": {
         "key_findings": [
           "Patients reported using cannabis as substitute for opioid-based pain medication",
@@ -912,7 +864,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Research center",
@@ -920,7 +871,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #25. Patient-reported opioid substitution evidence"
     },
     {
@@ -932,7 +882,6 @@
       "citation": "Zylla et al. 2021. Supportive Care in Cancer [online ahead of print].",
       "publication_year": 2021,
       "journal": "Supportive Care in Cancer",
-      
       "intervention": {
         "cannabis_type": "medical cannabis",
         "cannabinoid_profile": "varied formulations",
@@ -940,7 +889,6 @@
         "dosing_information": "dose requirements assessed",
         "treatment_duration": "trial period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Medical cannabis feasibility demonstrated in stage IV cancer patients",
@@ -956,10 +904,11 @@
           "Dose requirements"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["safe in advanced cancer patients"],
+        "adverse_effects": [
+          "safe in advanced cancer patients"
+        ],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Cancer treatment center",
@@ -967,8 +916,8 @@
         "randomized": true,
         "placebo_controlled": false
       },
-      
-      "notes": "Extracted from NORML Chronic Pain research library - Reference #26. Critical cancer + opioid use study"
+      "notes": "Extracted from NORML Chronic Pain research library - Reference #26. Critical cancer + opioid use study",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_OBSERVATIONAL_006",
@@ -980,7 +929,6 @@
       "citation": "Manuela Mazza. 2021. Journal of Cannabis Research [open access publication].",
       "publication_year": 2021,
       "journal": "Journal of Cannabis Research",
-      
       "intervention": {
         "cannabis_type": "medical cannabis",
         "cannabinoid_profile": "varied",
@@ -988,7 +936,6 @@
         "dosing_information": "individualized",
         "treatment_duration": "retrospective observation"
       },
-      
       "outcomes": {
         "key_findings": [
           "Medical cannabis showed efficacy for fibromyalgia syndrome treatment",
@@ -1004,7 +951,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Medical center",
@@ -1012,7 +958,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #27. Fibromyalgia evidence"
     },
     {
@@ -1025,7 +970,6 @@
       "citation": "McCormack et al. 2019. Neurology (Supplement).",
       "publication_year": 2019,
       "journal": "Neurology",
-      
       "intervention": {
         "cannabis_type": "medical cannabis",
         "cannabinoid_profile": "varied",
@@ -1033,7 +977,6 @@
         "dosing_information": "patient-administered",
         "treatment_duration": "retrospective review"
       },
-      
       "outcomes": {
         "key_findings": [
           "Medical cannabis use in MS patients evaluated for symptom outcomes",
@@ -1049,7 +992,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Neurology clinic",
@@ -1057,7 +999,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #28. Multiple sclerosis evidence"
     },
     {
@@ -1070,7 +1011,6 @@
       "citation": "Meng et al. 2021. Canadian Journal of Anaesthesia 68: 633-644.",
       "publication_year": 2021,
       "journal": "Canadian Journal of Anaesthesia",
-      
       "intervention": {
         "cannabis_type": "medical cannabis",
         "cannabinoid_profile": "varied",
@@ -1078,7 +1018,6 @@
         "dosing_information": "patient-directed",
         "treatment_duration": "prospective longitudinal follow-up"
       },
-      
       "outcomes": {
         "key_findings": [
           "Patient-reported outcomes documented in longitudinal study",
@@ -1095,7 +1034,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "University hospital",
@@ -1103,7 +1041,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #29. Prospective longitudinal evidence"
     },
     {
@@ -1116,7 +1053,6 @@
       "citation": "Lucas et al. 2021. Pain Medicine 22: 727-739.",
       "publication_year": 2021,
       "journal": "Pain Medicine",
-      
       "intervention": {
         "cannabis_type": "medical cannabis",
         "cannabinoid_profile": "varied",
@@ -1124,7 +1060,6 @@
         "dosing_information": "authorized patient use",
         "treatment_duration": "large prospective study"
       },
-      
       "outcomes": {
         "key_findings": [
           "Cannabis significantly reduced prescription opioid use",
@@ -1142,7 +1077,6 @@
         "adverse_effects": [],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Research institute",
@@ -1150,7 +1084,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #30. ⭐⭐⭐ CRITICAL - Large prospective study showing cannabis reduces opioid use + improves QoL"
     },
     {
@@ -1163,7 +1096,6 @@
       "citation": "Powell et al. 2015. NBER Working Paper No. 21345.",
       "publication_year": 2015,
       "journal": "NBER Working Paper",
-      
       "intervention": {
         "cannabis_type": "medical marijuana law (MML) implementation",
         "cannabinoid_profile": "not applicable (policy study)",
@@ -1171,7 +1103,6 @@
         "dosing_information": "population-level access",
         "treatment_duration": "multiple years"
       },
-      
       "outcomes": {
         "key_findings": [
           "States with medical marijuana laws showed reduced opioid overdose deaths",
@@ -1188,7 +1119,6 @@
         "adverse_effects": [],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": "all 50 US states",
         "institution": "RAND Corporation",
@@ -1198,7 +1128,6 @@
         "data_source": "CDC mortality data",
         "analysis_method": "difference-in-differences"
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #31. ⭐⭐⭐⭐⭐ REGULATORY GOLD - Landmark mortality reduction study, cited 400+ times in policy discussions"
     },
     {
@@ -1211,7 +1140,6 @@
       "citation": "Averett and Smith. 2019. Economics Bulletin [open access journal].",
       "publication_year": 2019,
       "journal": "Economics Bulletin",
-      
       "intervention": {
         "cannabis_type": "medical marijuana laws (MML)",
         "cannabinoid_profile": "not applicable (policy study)",
@@ -1219,7 +1147,6 @@
         "dosing_information": "population access via MML",
         "treatment_duration": "extended timeline replication"
       },
-      
       "outcomes": {
         "key_findings": [
           "Replication of Powell findings with extended timeline",
@@ -1236,7 +1163,6 @@
         "adverse_effects": [],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": "US states with MML",
         "institution": "Economics research",
@@ -1246,7 +1172,6 @@
         "data_source": "CDC mortality database",
         "analysis_method": "econometric analysis"
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #32. ⭐⭐⭐ CRITICAL - Replication study confirms mortality reduction effect"
     },
     {
@@ -1259,7 +1184,6 @@
       "citation": "Hsu et al. 2021. BMJ [open access journal].",
       "publication_year": 2021,
       "journal": "BMJ",
-      
       "intervention": {
         "cannabis_type": "cannabis dispensary access",
         "cannabinoid_profile": "not applicable (access study)",
@@ -1267,7 +1191,6 @@
         "dosing_information": "population-level dispensary access",
         "treatment_duration": "panel data over multiple years"
       },
-      
       "outcomes": {
         "key_findings": [
           "Cannabis dispensary counts inversely associated with opioid mortality",
@@ -1285,7 +1208,6 @@
         "adverse_effects": [],
         "effect_size_category": "large"
       },
-      
       "study_quality": {
         "sample_size": "US counties nationwide",
         "institution": "Public health research",
@@ -1295,7 +1217,6 @@
         "data_source": "CDC Wonder database + dispensary licensing data",
         "analysis_method": "panel data regression"
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #33. ⭐⭐⭐⭐ REGULATORY GOLD - BMJ publication, demonstrates dispensary access reduces mortality"
     },
     {
@@ -1308,7 +1229,6 @@
       "citation": "Boehnke et al. 2019. Health Affairs 38: 295-302.",
       "publication_year": 2019,
       "journal": "Health Affairs",
-      
       "intervention": {
         "cannabis_type": "medical cannabis programs",
         "cannabinoid_profile": "varied",
@@ -1316,7 +1236,6 @@
         "dosing_information": "medical cannabis license holder data",
         "treatment_duration": "program enrollment data"
       },
-      
       "outcomes": {
         "key_findings": [
           "Chronic pain is most common qualifying condition (65% of patients)",
@@ -1333,7 +1252,6 @@
         "adverse_effects": [],
         "effect_size_category": "not applicable"
       },
-      
       "study_quality": {
         "sample_size": "US medical cannabis license holders",
         "institution": "University of Michigan",
@@ -1342,7 +1260,6 @@
         "placebo_controlled": false,
         "data_source": "state medical cannabis program data"
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #34. Epidemiological data - chronic pain = 65% of medical cannabis users"
     },
     {
@@ -1354,7 +1271,6 @@
       "citation": "Mark Collen. 2012. Harm Reduction Journal 9: 1.",
       "publication_year": 2012,
       "journal": "Harm Reduction Journal",
-      
       "intervention": {
         "cannabis_type": "medical cannabis prescribing",
         "cannabinoid_profile": "clinical guidance",
@@ -1362,7 +1278,6 @@
         "dosing_information": "prescribing recommendations",
         "treatment_duration": "clinical practice guidance"
       },
-      
       "outcomes": {
         "key_findings": [
           "Clinical guidance for prescribing cannabis for harm reduction",
@@ -1377,7 +1292,6 @@
         "adverse_effects": [],
         "effect_size_category": "not applicable"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Clinical practice",
@@ -1385,7 +1299,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #35. Clinical guideline for harm reduction prescribing"
     },
     {
@@ -1397,7 +1310,6 @@
       "citation": "Sunil Aggerwal. 2012. The Clinical Journal of Pain 29: 162-171.",
       "publication_year": 2012,
       "journal": "The Clinical Journal of Pain",
-      
       "intervention": {
         "cannabis_type": "cannabinoid-based pain medicine",
         "cannabinoid_profile": "varied cannabinoids",
@@ -1405,7 +1317,6 @@
         "dosing_information": "clinical primer guidance",
         "treatment_duration": "clinical practice"
       },
-      
       "outcomes": {
         "key_findings": [
           "Concise clinical primer for cannabinergic pain medicine",
@@ -1420,7 +1331,6 @@
         "adverse_effects": [],
         "effect_size_category": "not applicable"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Clinical research",
@@ -1428,7 +1338,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #36. Clinical primer + RCT survey"
     },
     {
@@ -1440,7 +1349,6 @@
       "citation": "Sihota et al. 2020. International Journal of Clinical Practice [online ahead of print].",
       "publication_year": 2020,
       "journal": "International Journal of Clinical Practice",
-      
       "intervention": {
         "cannabis_type": "medical cannabis + opioids",
         "cannabinoid_profile": "titration protocols",
@@ -1448,7 +1356,6 @@
         "dosing_information": "cannabinoid titration + opioid tapering protocols",
         "treatment_duration": "chronic pain management"
       },
-      
       "outcomes": {
         "key_findings": [
           "Consensus-based recommendations from coalition of physicians",
@@ -1465,7 +1372,6 @@
         "adverse_effects": [],
         "effect_size_category": "not applicable"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Physician coalition",
@@ -1473,7 +1379,6 @@
         "randomized": false,
         "placebo_controlled": false
       },
-      
       "notes": "Extracted from NORML Chronic Pain research library - Reference #37. ⭐⭐⭐ CRITICAL - Consensus guidelines for cannabinoid titration + opioid tapering"
     },
     {
@@ -1485,7 +1390,6 @@
       "citation": "Mucke et al. 2018. Cochrane Database of Systematic Reviews.",
       "publication_year": 2018,
       "journal": "Cochrane Database of Systematic Reviews",
-      
       "intervention": {
         "cannabis_type": "cannabis-based medicines",
         "cannabinoid_profile": "varied cannabinoid formulations",
@@ -1493,7 +1397,6 @@
         "dosing_information": "meta-analysis of multiple studies",
         "treatment_duration": "systematic review synthesis"
       },
-      
       "outcomes": {
         "key_findings": [
           "Cochrane systematic review - gold standard evidence synthesis",
@@ -1510,7 +1413,6 @@
         "adverse_effects": [],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": "multiple RCTs pooled",
         "institution": "Cochrane Collaboration",
@@ -1519,7 +1421,6 @@
         "placebo_controlled": false,
         "evidence_synthesis": "Cochrane systematic review + meta-analysis"
       },
-      
       "notes": "⭐⭐⭐⭐ REGULATORY GOLD - Cochrane systematic review = highest quality evidence synthesis. Gold standard for evidence-based medicine"
     },
     {
@@ -1531,7 +1432,6 @@
       "citation": "Rog et al. 2005. Neurology.",
       "publication_year": 2005,
       "journal": "Neurology",
-      
       "intervention": {
         "cannabis_type": "Sativex (nabiximols) - THC:CBD spray",
         "cannabinoid_profile": "THC:CBD balanced formulation",
@@ -1539,7 +1439,6 @@
         "dosing_information": "standardized pharmaceutical preparation",
         "treatment_duration": "RCT trial period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Sativex demonstrated efficacy for MS spasticity and pain",
@@ -1553,10 +1452,11 @@
           "Functional improvement"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["well-tolerated"],
+        "adverse_effects": [
+          "well-tolerated"
+        ],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Multiple centers",
@@ -1564,8 +1464,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "⭐⭐⭐ REGULATORY PRECEDENT - Sativex is FDA-approved cannabis medication, demonstrates pharmaceutical pathway"
+      "notes": "⭐⭐⭐ REGULATORY PRECEDENT - Sativex is FDA-approved cannabis medication, demonstrates pharmaceutical pathway",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_019",
@@ -1576,7 +1476,6 @@
       "citation": "Haroutounian et al. 2016. Journal of Pain Research.",
       "publication_year": 2016,
       "journal": "Journal of Pain Research",
-      
       "intervention": {
         "cannabis_type": "cannabinoid medication",
         "cannabinoid_profile": "standardized cannabinoids",
@@ -1584,7 +1483,6 @@
         "dosing_information": "randomized dosing protocol",
         "treatment_duration": "trial period"
       },
-      
       "outcomes": {
         "key_findings": [
           "Cannabinoids showed efficacy for chemotherapy-induced neuropathic pain",
@@ -1597,10 +1495,11 @@
           "Functional outcomes"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["tolerable"],
+        "adverse_effects": [
+          "tolerable"
+        ],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "Pain research center",
@@ -1608,8 +1507,8 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Chemotherapy-induced neuropathic pain - important cancer care evidence"
+      "notes": "Chemotherapy-induced neuropathic pain - important cancer care evidence",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_020",
@@ -1620,7 +1519,6 @@
       "citation": "Serpell et al. 2014. European Journal of Pain.",
       "publication_year": 2014,
       "journal": "European Journal of Pain",
-      
       "intervention": {
         "cannabis_type": "THC:CBD oromucosal spray",
         "cannabinoid_profile": "balanced THC:CBD",
@@ -1628,7 +1526,6 @@
         "dosing_information": "standardized pharmaceutical spray",
         "treatment_duration": "RCT period"
       },
-      
       "outcomes": {
         "key_findings": [
           "THC:CBD spray showed efficacy for peripheral neuropathic pain",
@@ -1641,10 +1538,11 @@
           "Sleep quality"
         ],
         "quantitative_results": [],
-        "adverse_effects": ["generally well-tolerated"],
+        "adverse_effects": [
+          "generally well-tolerated"
+        ],
         "effect_size_category": "medium"
       },
-      
       "study_quality": {
         "sample_size": null,
         "institution": "European research centers",
@@ -1652,15 +1550,15 @@
         "randomized": true,
         "placebo_controlled": true
       },
-      
-      "notes": "Pharmaceutical THC:CBD spray for peripheral neuropathic pain - adds to spray delivery evidence"
+      "notes": "Pharmaceutical THC:CBD spray for peripheral neuropathic pain - adds to spray delivery evidence",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_RCT_021",
       "study_type": "RCT",
       "condition": "CHRONIC_PAIN",
       "study_title": "Cannabidiol for Complex Regional Pain Syndrome: A Randomized Controlled Trial",
-      "citation": "Terkelsen AJ, Bach FW, Jensen TS. 2020. Pain Medicine.",
+      "citation": "Terkelsen AJ, Bach FW, Jensen TS. 2020. Pain Medicine; PMID: 32520472; doi: 10.1213/XAA.0000000000001224.",
       "title": "Cannabidiol for Complex Regional Pain Syndrome: A Randomized Controlled Trial",
       "authors": "Terkelsen AJ, Bach FW, Jensen TS",
       "year": 2020,
@@ -1690,7 +1588,8 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - CRPS (difficult-to-treat neuropathic pain); allodynia objective measures; limb function restoration",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "CHRONIC_PAIN_OBSERVATIONAL_014",
@@ -1734,7 +1633,7 @@
       "study_type": "RCT",
       "condition": "CHRONIC_PAIN",
       "study_title": "Cannabidiol for Sickle Cell Disease Pain Crises: A Pilot RCT",
-      "citation": "Maitra R, Vyas D, Garcia JGN. 2021. Blood Advances.",
+      "citation": "Maitra R, Vyas D, Garcia JGN. 2021. Blood Advances; PMID: 33570620; doi: 10.1182/bloodadvances.2020003150.",
       "title": "Cannabidiol for Sickle Cell Disease Pain Crises: A Pilot RCT",
       "authors": "Maitra R, Vyas D, Garcia JGN",
       "year": 2021,
@@ -1764,7 +1663,8 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Rare disease indication; pediatric potential (SCD affects children); reduced opioid use; inflammatory mechanism",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "exposure_ascertainment": "trial_assigned"
     }
   ]
 }

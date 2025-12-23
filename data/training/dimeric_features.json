@@ -1,0 +1,4220 @@
+[
+  {
+    "compound_1": "THC",
+    "compound_2": "CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "synergistic"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBG",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "synergistic"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBG",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "synergistic"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBDV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBG",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "dronabinol",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "THCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "nabilone",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBDA",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "THC-COOH",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBGA",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "CBDV-A",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "CBG-A",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDP",
+    "compound_2": "CBDP",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGV",
+    "compound_2": "CBGV",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDB",
+    "compound_2": "CBDB",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "8-OH-CBD",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "THCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "dronabinol",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "THCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBDA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "nabilone",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "THCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "THCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBDA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBDV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBG",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "dronabinol",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "THCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBDA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBDV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "THCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "dronabinol",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "nabilone",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "THCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCP",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN-C4",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "8-OH-CBD",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "THCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "THCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBDA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBDA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNV",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBE",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBE",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "THCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "dronabinol",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNV",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNV",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "nabilone",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBE",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBE",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNV",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN-C4",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBE",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGV",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBE",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDB",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN-C4",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "THCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBDV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "dronabinol",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDB",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBDA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGV",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "THCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGV",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBDA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGV",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCP",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGV",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCP",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCP",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDP",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDP",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDP",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCP",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBDA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDP",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "THCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCP",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDP",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "nabilone",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "nabilone",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBE",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBE",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "nabilone",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCP",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDP",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "nabilone",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "THC",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBD",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBN",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBC",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBDV",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "THCV",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "dronabinol",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "THCA",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBCA",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBL",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBT",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBDM",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBNO",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "THCV-A",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "CBGM",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBE",
+    "compound_2": "CBE",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCV",
+    "compound_2": "CBCV",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCP",
+    "compound_2": "THCP",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNV",
+    "compound_2": "CBNV",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN-C4",
+    "compound_2": "CBN-C4",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBN",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "homodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBD",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBN",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBDV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "THCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "dronabinol",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "nabilone",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBDA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "THCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "Delta-8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "11-OH-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "7-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "THC-COOH",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "11-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBGA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBCA",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBL",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBT",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBDM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBNO",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "THCV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBDV-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBG-A",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "Delta8-THC",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBGM",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBE",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBC",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "dronabinol",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "nabilone",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDA",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCA",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta-8-THC",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-THC",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "7-OH-CBD",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THC-COOH",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "11-OH-CBD",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGA",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCA",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBL",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBT",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDM",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBNO",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "THCV-A",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBDV-A",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBG-A",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "Delta8-THC",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBGM",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBE",
+    "compound_2": "CBCV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCV",
+    "compound_2": "THCP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCV",
+    "compound_2": "CBDP",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCV",
+    "compound_2": "CBGV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCV",
+    "compound_2": "CBNV",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCV",
+    "compound_2": "CBN-C4",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCV",
+    "compound_2": "CBDB",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCV",
+    "compound_2": "8-OH-CBD",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  },
+  {
+    "compound_1": "CBCV",
+    "compound_2": "11-OH-CBN",
+    "dimer_type": "heterodimer",
+    "interaction_effect": "unknown"
+  }
+]

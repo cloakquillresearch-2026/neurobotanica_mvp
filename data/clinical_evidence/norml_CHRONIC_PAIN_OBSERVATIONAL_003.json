@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:CHRONIC_PAIN_OBSERVATIONAL_003",
+  "participants": null,
+  "year": null,
+  "notes": "Epidemiological characteristics, safety and efficacy of medical cannabis in the elderly",
+  "confidence": "medium",
+  "abstract": ""
+}

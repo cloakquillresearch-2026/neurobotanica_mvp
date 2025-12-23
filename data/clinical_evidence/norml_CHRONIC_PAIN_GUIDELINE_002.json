@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "clinical guideline",
+  "source": "NORML:CHRONIC_PAIN_GUIDELINE_002",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabinergic pain medicine: a concise clinical primer and survey of randomized-controlled trial results",
+  "confidence": "medium",
+  "abstract": ""
+}

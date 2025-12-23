@@ -1,0 +1,12 @@
+{
+  "compound": "THC (5mg sublingual)",
+  "condition": "GLAUCOMA",
+  "effect_size": "Large (d = 0.94)",
+  "study_type": "RCT",
+  "source": "NORML:GLAUCOMA_RCT_001",
+  "participants": "6 patients with open-angle glaucoma",
+  "year": 2006,
+  "notes": "Sublingual THC for Intraocular Pressure Reduction: Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "THC 5mg: 23% IOP reduction (p<0.01) at 2 hours; Duration: 3-4 hours; Clinically significant in all subjects"
+}

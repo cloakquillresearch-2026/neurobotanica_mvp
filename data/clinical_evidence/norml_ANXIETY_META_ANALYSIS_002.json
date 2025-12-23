@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "systematic_review",
+  "source": "NORML:ANXIETY_META_ANALYSIS_002",
+  "participants": null,
+  "year": null,
+  "notes": "Network Meta-Analysis of Cannabinoids for Psychiatric Disorders Including Anxiety",
+  "confidence": "medium",
+  "abstract": ""
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis (low THC/high CBD)",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Large patient-reported (78% benefit)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:IBD_OBSERVATIONAL_005",
+  "participants": "23 pediatric IBD patients (ages 13-18)",
+  "year": 2019,
+  "notes": "Pediatric IBD and Medical Cannabis: Safety and Efficacy Study",
+  "confidence": "medium",
+  "abstract": "78% reported symptom improvement; abdominal pain reduced 65%; disease activity scores improved"
+}

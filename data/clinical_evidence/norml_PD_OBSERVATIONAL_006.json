@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone",
+  "condition": "PARKINSONS",
+  "effect_size": "Sustained benefit in responders",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:PD_OBSERVATIONAL_006",
+  "participants": "22 PD patients (responders from prior NMS-Nab trial)",
+  "year": 2024,
+  "notes": "Long-term Safety and Efficacy of Open-Label Nabilone on Sleep and Pain in Parkinson's Disease",
+  "confidence": "medium",
+  "abstract": "Nabilone was generally well tolerated; sustained improvements reported in overall NMS burden (CGI-I) and significant improvements in sleep and pain outcomes over 6 months"
+}

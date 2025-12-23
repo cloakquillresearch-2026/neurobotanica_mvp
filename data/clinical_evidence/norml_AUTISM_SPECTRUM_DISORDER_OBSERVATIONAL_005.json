@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AUTISM_SPECTRUM_DISORDER",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_005",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabidiol-based medical cannabis in children with autism: A retrospective feasibility study",
+  "confidence": "medium",
+  "abstract": ""
+}

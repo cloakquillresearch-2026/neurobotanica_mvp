@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Medium-large (60% vs 35%)",
+  "study_type": "RCT",
+  "source": "NORML:CANCER_RCT_008",
+  "participants": "70 patients with breakthrough cancer pain",
+  "year": 2018,
+  "notes": "THC/CBD for Breakthrough Cancer Pain: Rapid-Onset Study",
+  "confidence": "medium",
+  "abstract": "Median time to effect: 15 minutes; 60% achieved 30% pain relief by 30 minutes vs 35% placebo; Rapid onset demonstrated"
+}

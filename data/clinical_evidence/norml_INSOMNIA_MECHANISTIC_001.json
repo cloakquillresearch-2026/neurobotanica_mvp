@@ -1,0 +1,12 @@
+{
+  "compound": "Endocannabinoid system",
+  "condition": "INSOMNIA",
+  "effect_size": "N/A (mechanistic)",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:INSOMNIA_MECHANISTIC_001",
+  "participants": "Mechanistic review",
+  "year": 2020,
+  "notes": "Endocannabinoid System and Sleep Regulation",
+  "confidence": "medium",
+  "abstract": "Anandamide promotes sleep; 2-AG levels cycle with sleep-wake; CB1 modulates adenosine signaling; ECS interacts with circadian rhythm genes"
+}

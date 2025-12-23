@@ -1,0 +1,12 @@
+{
+  "compound": "Endocannabinoid system",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "N/A (mechanistic)",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:CACHEXIA_MECHANISTIC_001",
+  "participants": "Comprehensive mechanistic review",
+  "year": 2005,
+  "notes": "Endocannabinoid System in Appetite Regulation: Comprehensive Review",
+  "confidence": "medium",
+  "abstract": "CB1 receptors regulate: Hypothalamic appetite circuits, mesolimbic reward, GI motility, adipose metabolism; Anandamide and 2-AG orexigenic"
+}

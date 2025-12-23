@@ -1,0 +1,12 @@
+{
+  "compound": "CBD-rich cannabis oil (CBD:THC 20:1)",
+  "condition": "DEPRESSION",
+  "effect_size": "Moderate-large (Cohen's d = 0.71)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_004",
+  "participants": "279 cancer patients with comorbid depression",
+  "year": 2019,
+  "notes": "Cannabidiol for Depression in Cancer Patients: Supportive Care Cohort Study",
+  "confidence": "medium",
+  "abstract": "63% achieved clinically significant improvement (\u22654 point reduction); mean score 12.8 \u2192 7.3"
+}

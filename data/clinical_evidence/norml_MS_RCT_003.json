@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis extract (THC:CBD)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Medium (OR = 2.26, 95% CI: 1.24-4.13)",
+  "study_type": "RCT",
+  "source": "NORML:MS_RCT_003",
+  "participants": "279 MS patients from CAMS extension",
+  "year": 2012,
+  "notes": "Long-Term Follow-Up of CAMS Study: MUSEC Trial",
+  "confidence": "medium",
+  "abstract": "Cannabis extract: 29.4% much improved vs Placebo: 15.7% (p=0.002); NNT = 7.3"
+}

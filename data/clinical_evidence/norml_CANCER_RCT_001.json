@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (Sativex)",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Medium (d = 0.55)",
+  "study_type": "RCT",
+  "source": "NORML:CANCER_RCT_001",
+  "participants": "360 patients with advanced cancer pain",
+  "year": 2012,
+  "notes": "Nabiximols for Cancer Pain Uncontrolled by Opioids: Phase III Trial",
+  "confidence": "medium",
+  "abstract": "Low-dose nabiximols: 30% improvement rate vs Placebo: 22%; Per-protocol: 43% vs 21% (p<0.05); Significant in compliant patients"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD single or short-term dosing",
+  "condition": "DEPRESSION",
+  "effect_size": "Large acute effects (pooled SMD = 0.82)",
+  "study_type": "META_ANALYSIS",
+  "source": "NORML:DEPRESSION_META_ANALYSIS_002",
+  "participants": "12 acute studies (N=486 total participants)",
+  "year": 2019,
+  "notes": "Rapid-Acting Antidepressant Effects of Cannabidiol: Meta-Analysis of Acute Studies",
+  "confidence": "medium",
+  "abstract": "Pooled analysis: CBD shows effects within 2 hours (acute) to 3 days (repeated); comparable to ketamine; faster than traditional antidepressants (2-4 weeks)"
+}

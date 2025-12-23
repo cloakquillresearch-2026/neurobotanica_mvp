@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone",
+  "condition": "INSOMNIA",
+  "effect_size": "Medium (superior to amitriptyline)",
+  "study_type": "RCT",
+  "source": "NORML:INSOMNIA_RCT_004",
+  "participants": "40 patients with fibromyalgia",
+  "year": 2010,
+  "notes": "Nabilone for Sleep in Fibromyalgia: RCT",
+  "confidence": "medium",
+  "abstract": "Nabilone: ISI 11.2 vs Amitriptyline: 13.4 (p=0.03); Sleep quality significantly better with nabilone"
+}

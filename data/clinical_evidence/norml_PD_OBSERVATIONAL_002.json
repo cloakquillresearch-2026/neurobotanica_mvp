@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis (various forms)",
+  "condition": "PARKINSONS",
+  "effect_size": "Variable patient-reported",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:PD_OBSERVATIONAL_002",
+  "participants": "339 PD patients surveyed (85 cannabis users)",
+  "year": 2015,
+  "notes": "Cannabis Use Survey in Parkinson's Disease: Motor and Non-Motor Outcomes",
+  "confidence": "medium",
+  "abstract": "Motor improvement: 45% reported benefit; Most improved: Bradykinesia (31%), muscle rigidity (27%), tremor (25%)"
+}

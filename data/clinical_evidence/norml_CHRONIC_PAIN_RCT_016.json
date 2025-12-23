@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_016",
+  "participants": null,
+  "year": null,
+  "notes": "Impact of co-administration of oxycodone and smoked cannabis on analgesia and abuse liability",
+  "confidence": "medium",
+  "abstract": ""
+}

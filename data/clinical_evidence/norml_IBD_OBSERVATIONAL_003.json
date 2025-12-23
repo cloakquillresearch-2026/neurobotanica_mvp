@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis (various)",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Large across measures",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:IBD_OBSERVATIONAL_003",
+  "participants": "127 IBD patients (88 Crohn's, 39 UC)",
+  "year": 2019,
+  "notes": "Medical Cannabis Registry: IBD Outcomes in 127 Patients",
+  "confidence": "medium",
+  "abstract": "Overall improvement: 79%; Social function: +67%; Work ability: +56%; Pain: -92%; Sleep: +67%"
+}

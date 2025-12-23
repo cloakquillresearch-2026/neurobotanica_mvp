@@ -1,0 +1,12 @@
+{
+  "compound": "WIN 55,212-2 (synthetic CB1 agonist)",
+  "condition": "GLAUCOMA",
+  "effect_size": "Large (20-30% reduction)",
+  "study_type": "RCT",
+  "source": "NORML:GLAUCOMA_RCT_004",
+  "participants": "8 patients with refractory glaucoma",
+  "year": 2001,
+  "notes": "Topical WIN 55,212-2 (Cannabinoid Agonist) for IOP Reduction",
+  "confidence": "medium",
+  "abstract": "WIN 55,212-2: 20-30% IOP reduction; Onset: 30-60 minutes; Duration: 4+ hours; Proof-of-concept for topical delivery"
+}

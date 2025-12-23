@@ -1,0 +1,12 @@
+{
+  "compound": "Smoked cannabis",
+  "condition": "PARKINSONS",
+  "effect_size": "Very large (d = 1.42)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:PD_OBSERVATIONAL_001",
+  "participants": "22 PD patients",
+  "year": 2014,
+  "notes": "Medical Cannabis for Parkinson's Disease: Open-Label Prospective Study",
+  "confidence": "medium",
+  "abstract": "Mean UPDRS improvement: 27.9\u219217.5 (37% reduction, p<0.001); Tremor reduced 44%; Rigidity reduced 31%; Bradykinesia reduced 35%"
+}

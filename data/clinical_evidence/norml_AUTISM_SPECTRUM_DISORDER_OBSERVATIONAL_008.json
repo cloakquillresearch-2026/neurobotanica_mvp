@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AUTISM_SPECTRUM_DISORDER",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_008",
+  "participants": null,
+  "year": null,
+  "notes": "Autism spectrum disorder and medical cannabis: Review and clinical experience",
+  "confidence": "medium",
+  "abstract": ""
+}

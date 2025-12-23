@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis extract oil",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Medium-large (d = 0.72)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:CACHEXIA_OBSERVATIONAL_002",
+  "participants": "24 lung cancer patients with cachexia",
+  "year": 2018,
+  "notes": "Medical Cannabis for Cachexia in Palliative Care: European Study",
+  "confidence": "medium",
+  "abstract": "Appetite score improved 2.4 points (p<0.01); Caloric intake +354 kcal/day; Weight: +1.2 kg (stabilization achieved)"
+}

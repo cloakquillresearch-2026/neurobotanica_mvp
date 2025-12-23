@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "N/A (safety study)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:CINV_OBSERVATIONAL_002",
+  "participants": "312 cancer patients on long-term dronabinol",
+  "year": 2017,
+  "notes": "Long-Term Dronabinol Use in Cancer: 2-Year Safety Study",
+  "confidence": "medium",
+  "abstract": "Excellent long-term tolerability; no tolerance development for antiemetic effect; sustained nausea control in 74%"
+}

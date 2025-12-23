@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Large (40% caloric increase)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:CACHEXIA_OBSERVATIONAL_001",
+  "participants": "30 HIV+ patients with history of cannabis use",
+  "year": 2007,
+  "notes": "Real-World Dronabinol for AIDS Wasting: VA Registry",
+  "confidence": "medium",
+  "abstract": "Caloric intake increased 40% at highest dose; Food intake sustained; No adverse cognitive effects; Mood improved"
+}

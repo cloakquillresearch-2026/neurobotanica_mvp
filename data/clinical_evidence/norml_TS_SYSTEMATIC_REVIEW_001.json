@@ -1,0 +1,12 @@
+{
+  "compound": "THC, nabiximols, dronabinol",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Large (SMD = 0.82)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:TS_SYSTEMATIC_REVIEW_001",
+  "participants": "8 studies (N=190 patients)",
+  "year": 2020,
+  "notes": "Cannabinoids for Tourette Syndrome: Systematic Review and Meta-Analysis",
+  "confidence": "medium",
+  "abstract": "Pooled SMD = -0.82 (95% CI: -1.21 to -0.43, p<0.001); Large effect size; Consistent benefit across studies"
+}

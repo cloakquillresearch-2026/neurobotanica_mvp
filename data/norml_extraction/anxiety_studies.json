@@ -24,10 +24,25 @@
         "duration": "acute (90 minutes pre-test)"
       },
       "outcomes": {
-        "primary_outcomes": ["VAMS (Visual Analogue Mood Scale)", "negative self-statement scale", "cognitive impairment", "physiological measures"],
-        "secondary_outcomes": ["heart rate", "blood pressure", "skin conductance"],
-        "adverse_events": ["none reported"],
-        "efficacy_rating": ["CBD significantly reduced anxiety", "discomfort during speech", "cognitive impairment"],
+        "primary_outcomes": [
+          "VAMS (Visual Analogue Mood Scale)",
+          "negative self-statement scale",
+          "cognitive impairment",
+          "physiological measures"
+        ],
+        "secondary_outcomes": [
+          "heart rate",
+          "blood pressure",
+          "skin conductance"
+        ],
+        "adverse_events": [
+          "none reported"
+        ],
+        "efficacy_rating": [
+          "CBD significantly reduced anxiety",
+          "discomfort during speech",
+          "cognitive impairment"
+        ],
         "follow_up_duration": "single session"
       },
       "study_quality": {
@@ -38,7 +53,8 @@
         "blinding": "double-blind",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐⭐⭐ LANDMARK STUDY - First RCT showing CBD reduces social anxiety in simulated public speaking test (SPST). 600mg CBD pre-treatment significantly reduced anxiety, cognitive impairment, and discomfort. Treatment-naïve patients = no confounding from prior medications. Gold standard for CBD anxiolytic research."
+      "notes": "⭐⭐⭐⭐ LANDMARK STUDY - First RCT showing CBD reduces social anxiety in simulated public speaking test (SPST). 600mg CBD pre-treatment significantly reduced anxiety, cognitive impairment, and discomfort. Treatment-naïve patients = no confounding from prior medications. Gold standard for CBD anxiolytic research.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_RCT_002",
@@ -57,10 +73,20 @@
         "duration": "acute (1.5 hours pre-scan)"
       },
       "outcomes": {
-        "primary_outcomes": ["VAMS scores", "regional cerebral blood flow (rCBF) via SPECT imaging"],
-        "secondary_outcomes": ["brain activity patterns in limbic and paralimbic regions"],
-        "adverse_events": ["none reported"],
-        "efficacy_rating": ["CBD significantly reduced anxiety", "altered brain activity in anxiety-processing regions"],
+        "primary_outcomes": [
+          "VAMS scores",
+          "regional cerebral blood flow (rCBF) via SPECT imaging"
+        ],
+        "secondary_outcomes": [
+          "brain activity patterns in limbic and paralimbic regions"
+        ],
+        "adverse_events": [
+          "none reported"
+        ],
+        "efficacy_rating": [
+          "CBD significantly reduced anxiety",
+          "altered brain activity in anxiety-processing regions"
+        ],
         "follow_up_duration": "single imaging session"
       },
       "study_quality": {
@@ -71,7 +97,8 @@
         "blinding": "double-blind",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐⭐⭐ MECHANISM STUDY - First neuroimaging evidence of CBD's anxiolytic effects. SPECT scan showed CBD reduced activity in left parahippocampal gyrus, hippocampus, and inferior temporal gyrus - regions associated with anxiety processing. Provides biological mechanism for CBD's anti-anxiety effects."
+      "notes": "⭐⭐⭐⭐ MECHANISM STUDY - First neuroimaging evidence of CBD's anxiolytic effects. SPECT scan showed CBD reduced activity in left parahippocampal gyrus, hippocampus, and inferior temporal gyrus - regions associated with anxiety processing. Provides biological mechanism for CBD's anti-anxiety effects.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_SYSTEMATIC_REVIEW_001",
@@ -90,10 +117,21 @@
         "duration": "review of acute and chronic studies"
       },
       "outcomes": {
-        "primary_outcomes": ["anxiolytic effects across GAD, PTSD, social anxiety, panic disorder, OCD"],
-        "secondary_outcomes": ["safety profile", "dose-response relationships"],
-        "adverse_events": ["minimal across reviewed studies"],
-        "efficacy_rating": ["strong preclinical evidence", "limited but positive human trial data", "no anxiety increase at any dose"],
+        "primary_outcomes": [
+          "anxiolytic effects across GAD, PTSD, social anxiety, panic disorder, OCD"
+        ],
+        "secondary_outcomes": [
+          "safety profile",
+          "dose-response relationships"
+        ],
+        "adverse_events": [
+          "minimal across reviewed studies"
+        ],
+        "efficacy_rating": [
+          "strong preclinical evidence",
+          "limited but positive human trial data",
+          "no anxiety increase at any dose"
+        ],
         "follow_up_duration": "varies by study"
       },
       "study_quality": {
@@ -122,10 +160,21 @@
         "duration": "3 months"
       },
       "outcomes": {
-        "primary_outcomes": ["HAM-A (Hamilton Anxiety Rating Scale)", "PSQI (Pittsburgh Sleep Quality Index)"],
-        "secondary_outcomes": ["tolerability", "adverse effects"],
-        "adverse_events": ["mild: fatigue (2 patients), diarrhea (1 patient)"],
-        "efficacy_rating": ["79.2% decreased anxiety scores within 1 month", "66.7% improved sleep scores"],
+        "primary_outcomes": [
+          "HAM-A (Hamilton Anxiety Rating Scale)",
+          "PSQI (Pittsburgh Sleep Quality Index)"
+        ],
+        "secondary_outcomes": [
+          "tolerability",
+          "adverse effects"
+        ],
+        "adverse_events": [
+          "mild: fatigue (2 patients), diarrhea (1 patient)"
+        ],
+        "efficacy_rating": [
+          "79.2% decreased anxiety scores within 1 month",
+          "66.7% improved sleep scores"
+        ],
         "follow_up_duration": "3 months"
       },
       "study_quality": {
@@ -154,10 +203,21 @@
         "duration": "4 weeks"
       },
       "outcomes": {
-        "primary_outcomes": ["psychotic symptoms (BPRS, PANSS)", "anxiety reduction as secondary benefit"],
-        "secondary_outcomes": ["motor symptoms", "cognitive function"],
-        "adverse_events": ["none - well tolerated"],
-        "efficacy_rating": ["CBD reduced psychosis", "significantly reduced anxiety symptoms"],
+        "primary_outcomes": [
+          "psychotic symptoms (BPRS, PANSS)",
+          "anxiety reduction as secondary benefit"
+        ],
+        "secondary_outcomes": [
+          "motor symptoms",
+          "cognitive function"
+        ],
+        "adverse_events": [
+          "none - well tolerated"
+        ],
+        "efficacy_rating": [
+          "CBD reduced psychosis",
+          "significantly reduced anxiety symptoms"
+        ],
         "follow_up_duration": "4 weeks"
       },
       "study_quality": {
@@ -168,7 +228,8 @@
         "blinding": "no",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐ PILOT STUDY - While primary outcome was psychosis, study documented significant anxiety reduction as secondary benefit. Demonstrates CBD's anxiolytic properties even in patients with neurological disease. Safety profile excellent - no adverse events in vulnerable population."
+      "notes": "⭐⭐ PILOT STUDY - While primary outcome was psychosis, study documented significant anxiety reduction as secondary benefit. Demonstrates CBD's anxiolytic properties even in patients with neurological disease. Safety profile excellent - no adverse events in vulnerable population.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_PRECLINICAL_001",
@@ -187,10 +248,20 @@
         "duration": "in vitro studies"
       },
       "outcomes": {
-        "primary_outcomes": ["5-HT1A receptor agonism", "binding affinity"],
-        "secondary_outcomes": ["comparison to traditional anxiolytics"],
-        "adverse_events": ["N/A - preclinical"],
-        "efficacy_rating": ["CBD acts as 5-HT1A agonist", "mechanism similar to buspirone"],
+        "primary_outcomes": [
+          "5-HT1A receptor agonism",
+          "binding affinity"
+        ],
+        "secondary_outcomes": [
+          "comparison to traditional anxiolytics"
+        ],
+        "adverse_events": [
+          "N/A - preclinical"
+        ],
+        "efficacy_rating": [
+          "CBD acts as 5-HT1A agonist",
+          "mechanism similar to buspirone"
+        ],
         "follow_up_duration": "N/A"
       },
       "study_quality": {
@@ -218,10 +289,20 @@
         "duration": "acute (single dose)"
       },
       "outcomes": {
-        "primary_outcomes": ["VAMS anxiety subscale", "regional cerebral blood flow (rCBF) via SPECT"],
-        "secondary_outcomes": ["brain activity in amygdala, hippocampus, cingulate cortex"],
-        "adverse_events": ["none reported"],
-        "efficacy_rating": ["CBD reduced subjective anxiety", "altered activity in limbic brain regions"],
+        "primary_outcomes": [
+          "VAMS anxiety subscale",
+          "regional cerebral blood flow (rCBF) via SPECT"
+        ],
+        "secondary_outcomes": [
+          "brain activity in amygdala, hippocampus, cingulate cortex"
+        ],
+        "adverse_events": [
+          "none reported"
+        ],
+        "efficacy_rating": [
+          "CBD reduced subjective anxiety",
+          "altered activity in limbic brain regions"
+        ],
         "follow_up_duration": "single session (90 minutes)"
       },
       "study_quality": {
@@ -232,7 +313,8 @@
         "blinding": "double-blind",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐⭐⭐ NEUROIMAGING LANDMARK - First study to show CBD's effects on brain regions involved in anxiety processing. SPECT imaging revealed CBD decreased activity in left amygdala and anterior cingulate cortex - areas hyperactive in anxiety disorders. Provides objective biological evidence, not just subjective reports."
+      "notes": "⭐⭐⭐⭐ NEUROIMAGING LANDMARK - First study to show CBD's effects on brain regions involved in anxiety processing. SPECT imaging revealed CBD decreased activity in left amygdala and anterior cingulate cortex - areas hyperactive in anxiety disorders. Provides objective biological evidence, not just subjective reports.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_001",
@@ -251,10 +333,21 @@
         "duration": "acute (90 minutes pre-test)"
       },
       "outcomes": {
-        "primary_outcomes": ["VAMS anxiety scores", "physiological measures during public speaking"],
-        "secondary_outcomes": ["dose-response relationship"],
-        "adverse_events": ["none reported"],
-        "efficacy_rating": ["300mg most effective", "100mg and 900mg less effective", "inverted U-shaped curve"],
+        "primary_outcomes": [
+          "VAMS anxiety scores",
+          "physiological measures during public speaking"
+        ],
+        "secondary_outcomes": [
+          "dose-response relationship"
+        ],
+        "adverse_events": [
+          "none reported"
+        ],
+        "efficacy_rating": [
+          "300mg most effective",
+          "100mg and 900mg less effective",
+          "inverted U-shaped curve"
+        ],
         "follow_up_duration": "single session"
       },
       "study_quality": {
@@ -284,10 +377,21 @@
         "duration": "4 weeks"
       },
       "outcomes": {
-        "primary_outcomes": ["LSAS-CA (Liebowitz Social Anxiety Scale for Children and Adolescents)"],
-        "secondary_outcomes": ["anticipatory anxiety", "performance anxiety", "avoidance behaviors"],
-        "adverse_events": ["none reported"],
-        "efficacy_rating": ["significant reduction in social anxiety symptoms", "improved avoidance behaviors"],
+        "primary_outcomes": [
+          "LSAS-CA (Liebowitz Social Anxiety Scale for Children and Adolescents)"
+        ],
+        "secondary_outcomes": [
+          "anticipatory anxiety",
+          "performance anxiety",
+          "avoidance behaviors"
+        ],
+        "adverse_events": [
+          "none reported"
+        ],
+        "efficacy_rating": [
+          "significant reduction in social anxiety symptoms",
+          "improved avoidance behaviors"
+        ],
         "follow_up_duration": "4 weeks"
       },
       "study_quality": {
@@ -298,7 +402,8 @@
         "blinding": "double-blind",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐⭐⭐ ADOLESCENT STUDY - First RCT in teenagers with social anxiety disorder. 300mg/day CBD for 4 weeks significantly reduced LSAS-CA scores vs placebo. Critical evidence for pediatric/adolescent use - fills gap in age-specific research. Safe and well-tolerated in vulnerable population."
+      "notes": "⭐⭐⭐⭐ ADOLESCENT STUDY - First RCT in teenagers with social anxiety disorder. 300mg/day CBD for 4 weeks significantly reduced LSAS-CA scores vs placebo. Critical evidence for pediatric/adolescent use - fills gap in age-specific research. Safe and well-tolerated in vulnerable population.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_002",
@@ -317,10 +422,22 @@
         "duration": "12 months longitudinal"
       },
       "outcomes": {
-        "primary_outcomes": ["self-reported anxiety symptom changes", "GAD-7 scores", "product preferences"],
-        "secondary_outcomes": ["strain preferences (indica vs sativa vs hybrid)", "CBD:THC ratios"],
-        "adverse_events": ["some reported increased anxiety with high-THC products"],
-        "efficacy_rating": ["58% reported anxiety reduction", "CBD-dominant products preferred for anxiety"],
+        "primary_outcomes": [
+          "self-reported anxiety symptom changes",
+          "GAD-7 scores",
+          "product preferences"
+        ],
+        "secondary_outcomes": [
+          "strain preferences (indica vs sativa vs hybrid)",
+          "CBD:THC ratios"
+        ],
+        "adverse_events": [
+          "some reported increased anxiety with high-THC products"
+        ],
+        "efficacy_rating": [
+          "58% reported anxiety reduction",
+          "CBD-dominant products preferred for anxiety"
+        ],
         "follow_up_duration": "12 months"
       },
       "study_quality": {
@@ -349,10 +466,21 @@
         "duration": "8 weeks"
       },
       "outcomes": {
-        "primary_outcomes": ["HAM-A scores", "BAI (Beck Anxiety Inventory)"],
-        "secondary_outcomes": ["quality of life measures", "sleep quality"],
-        "adverse_events": ["minimal - mild sedation in 3 patients"],
-        "efficacy_rating": ["significant reduction in HAM-A scores", "75% of patients showed clinically meaningful improvement"],
+        "primary_outcomes": [
+          "HAM-A scores",
+          "BAI (Beck Anxiety Inventory)"
+        ],
+        "secondary_outcomes": [
+          "quality of life measures",
+          "sleep quality"
+        ],
+        "adverse_events": [
+          "minimal - mild sedation in 3 patients"
+        ],
+        "efficacy_rating": [
+          "significant reduction in HAM-A scores",
+          "75% of patients showed clinically meaningful improvement"
+        ],
         "follow_up_duration": "8 weeks"
       },
       "study_quality": {
@@ -363,7 +491,8 @@
         "blinding": "assessor-blind",
         "dropout_rate": "8.3% (2 patients)"
       },
-      "notes": "⭐⭐⭐ GAD PILOT - First longer-duration study (8 weeks) specifically for GAD. 300mg/day CBD produced sustained anxiety reduction with minimal side effects. 75% response rate excellent for anxiety treatment. Establishes feasibility of chronic CBD dosing for GAD."
+      "notes": "⭐⭐⭐ GAD PILOT - First longer-duration study (8 weeks) specifically for GAD. 300mg/day CBD produced sustained anxiety reduction with minimal side effects. 75% response rate excellent for anxiety treatment. Establishes feasibility of chronic CBD dosing for GAD.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_003",
@@ -382,10 +511,21 @@
         "duration": "cross-sectional survey"
       },
       "outcomes": {
-        "primary_outcomes": ["self-reported anxiety symptom changes", "product preferences"],
-        "secondary_outcomes": ["frequency of use", "perceived effectiveness"],
-        "adverse_events": ["some reported anxiety increase with high-THC"],
-        "efficacy_rating": ["81% reported anxiety symptom relief", "CBD-rich products most effective"],
+        "primary_outcomes": [
+          "self-reported anxiety symptom changes",
+          "product preferences"
+        ],
+        "secondary_outcomes": [
+          "frequency of use",
+          "perceived effectiveness"
+        ],
+        "adverse_events": [
+          "some reported anxiety increase with high-THC"
+        ],
+        "efficacy_rating": [
+          "81% reported anxiety symptom relief",
+          "CBD-rich products most effective"
+        ],
         "follow_up_duration": "cross-sectional (snapshot)"
       },
       "study_quality": {
@@ -414,10 +554,22 @@
         "duration": "acute (single dose)"
       },
       "outcomes": {
-        "primary_outcomes": ["panic symptom provocation test", "anxiety sensitivity index"],
-        "secondary_outcomes": ["heart rate", "blood pressure", "cortisol levels"],
-        "adverse_events": ["none reported"],
-        "efficacy_rating": ["CBD blocked panic symptoms in provocation test", "reduced anticipatory anxiety"],
+        "primary_outcomes": [
+          "panic symptom provocation test",
+          "anxiety sensitivity index"
+        ],
+        "secondary_outcomes": [
+          "heart rate",
+          "blood pressure",
+          "cortisol levels"
+        ],
+        "adverse_events": [
+          "none reported"
+        ],
+        "efficacy_rating": [
+          "CBD blocked panic symptoms in provocation test",
+          "reduced anticipatory anxiety"
+        ],
         "follow_up_duration": "single session"
       },
       "study_quality": {
@@ -428,7 +580,8 @@
         "blinding": "double-blind",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐⭐⭐ PANIC DISORDER STUDY - First evidence CBD prevents panic attacks in panic disorder patients. Panic provocation test showed CBD blocked panic response that occurred with placebo. Important for anxiety subtype specificity - shows CBD works beyond GAD/social anxiety."
+      "notes": "⭐⭐⭐⭐ PANIC DISORDER STUDY - First evidence CBD prevents panic attacks in panic disorder patients. Panic provocation test showed CBD blocked panic response that occurred with placebo. Important for anxiety subtype specificity - shows CBD works beyond GAD/social anxiety.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_004",
@@ -447,10 +600,22 @@
         "duration": "3-6 months"
       },
       "outcomes": {
-        "primary_outcomes": ["GAD-7 scores", "ISI (Insomnia Severity Index)"],
-        "secondary_outcomes": ["medication discontinuation rates", "quality of life"],
-        "adverse_events": ["12% reported mild GI upset", "8% reported fatigue"],
-        "efficacy_rating": ["68% showed GAD-7 reduction >5 points", "54% improved sleep"],
+        "primary_outcomes": [
+          "GAD-7 scores",
+          "ISI (Insomnia Severity Index)"
+        ],
+        "secondary_outcomes": [
+          "medication discontinuation rates",
+          "quality of life"
+        ],
+        "adverse_events": [
+          "12% reported mild GI upset",
+          "8% reported fatigue"
+        ],
+        "efficacy_rating": [
+          "68% showed GAD-7 reduction >5 points",
+          "54% improved sleep"
+        ],
         "follow_up_duration": "6 months"
       },
       "study_quality": {
@@ -479,10 +644,21 @@
         "duration": "8 weeks"
       },
       "outcomes": {
-        "primary_outcomes": ["PCL-5 (PTSD Checklist)", "anxiety symptoms (DASS-21)"],
-        "secondary_outcomes": ["sleep quality", "nightmares frequency"],
-        "adverse_events": ["minimal - 2 patients reported fatigue"],
-        "efficacy_rating": ["91% showed PCL-5 reduction", "significant anxiety symptom improvement"],
+        "primary_outcomes": [
+          "PCL-5 (PTSD Checklist)",
+          "anxiety symptoms (DASS-21)"
+        ],
+        "secondary_outcomes": [
+          "sleep quality",
+          "nightmares frequency"
+        ],
+        "adverse_events": [
+          "minimal - 2 patients reported fatigue"
+        ],
+        "efficacy_rating": [
+          "91% showed PCL-5 reduction",
+          "significant anxiety symptom improvement"
+        ],
         "follow_up_duration": "8 weeks"
       },
       "study_quality": {
@@ -493,7 +669,8 @@
         "blinding": "no",
         "dropout_rate": "9% (1 patient)"
       },
-      "notes": "⭐⭐⭐⭐ PTSD ANXIETY COMPONENT - 91% of PTSD patients showed anxiety reduction with CBD as adjunct to psychiatric treatment. Mean PCL-5 reduction = 28% from baseline. Shows CBD targets PTSD-related anxiety specifically. Flexible dosing (25-175mg) allowed individualization."
+      "notes": "⭐⭐⭐⭐ PTSD ANXIETY COMPONENT - 91% of PTSD patients showed anxiety reduction with CBD as adjunct to psychiatric treatment. Mean PCL-5 reduction = 28% from baseline. Shows CBD targets PTSD-related anxiety specifically. Flexible dosing (25-175mg) allowed individualization.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_PRECLINICAL_002",
@@ -512,10 +689,21 @@
         "duration": "acute and chronic protocols"
       },
       "outcomes": {
-        "primary_outcomes": ["anxiolytic effects via elevated plus maze", "5-HT1A receptor antagonism blocks effects"],
-        "secondary_outcomes": ["hippocampal neurogenesis", "stress response modulation"],
-        "adverse_events": ["N/A - preclinical"],
-        "efficacy_rating": ["CBD produces anxiolytic effects via 5-HT1A", "promotes neurogenesis in hippocampus"],
+        "primary_outcomes": [
+          "anxiolytic effects via elevated plus maze",
+          "5-HT1A receptor antagonism blocks effects"
+        ],
+        "secondary_outcomes": [
+          "hippocampal neurogenesis",
+          "stress response modulation"
+        ],
+        "adverse_events": [
+          "N/A - preclinical"
+        ],
+        "efficacy_rating": [
+          "CBD produces anxiolytic effects via 5-HT1A",
+          "promotes neurogenesis in hippocampus"
+        ],
         "follow_up_duration": "varies by protocol"
       },
       "study_quality": {
@@ -543,10 +731,21 @@
         "duration": "app-based tracking over time"
       },
       "outcomes": {
-        "primary_outcomes": ["self-reported anxiety symptom changes", "real-time symptom tracking"],
-        "secondary_outcomes": ["chemotype preferences (THC:CBD ratios)", "terpene profiles"],
-        "adverse_events": ["minimal - some reported throat irritation"],
-        "efficacy_rating": ["93.5% reported symptom relief", "average 4-point reduction on 10-point scale"],
+        "primary_outcomes": [
+          "self-reported anxiety symptom changes",
+          "real-time symptom tracking"
+        ],
+        "secondary_outcomes": [
+          "chemotype preferences (THC:CBD ratios)",
+          "terpene profiles"
+        ],
+        "adverse_events": [
+          "minimal - some reported throat irritation"
+        ],
+        "efficacy_rating": [
+          "93.5% reported symptom relief",
+          "average 4-point reduction on 10-point scale"
+        ],
         "follow_up_duration": "variable (app-based tracking)"
       },
       "study_quality": {
@@ -575,10 +774,21 @@
         "duration": "acute (single dose before simulated exam)"
       },
       "outcomes": {
-        "primary_outcomes": ["VAMS anxiety subscale", "cognitive performance on tests"],
-        "secondary_outcomes": ["CBD blocks THC-induced anxiety", "no cognitive impairment"],
-        "adverse_events": ["none with CBD alone"],
-        "efficacy_rating": ["CBD reduced test anxiety", "CBD blocked THC-induced anxiety"],
+        "primary_outcomes": [
+          "VAMS anxiety subscale",
+          "cognitive performance on tests"
+        ],
+        "secondary_outcomes": [
+          "CBD blocks THC-induced anxiety",
+          "no cognitive impairment"
+        ],
+        "adverse_events": [
+          "none with CBD alone"
+        ],
+        "efficacy_rating": [
+          "CBD reduced test anxiety",
+          "CBD blocked THC-induced anxiety"
+        ],
         "follow_up_duration": "single test session"
       },
       "study_quality": {
@@ -589,7 +799,8 @@
         "blinding": "double-blind",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐⭐⭐ CLASSIC STUDY - One of earliest CBD anxiety studies (1982). Established two key findings: (1) CBD reduces situational anxiety without cognitive impairment, (2) CBD blocks THC-induced anxiety. Critical for understanding CBD:THC ratios in anxiety treatment. Historical importance for cannabinoid research."
+      "notes": "⭐⭐⭐⭐ CLASSIC STUDY - One of earliest CBD anxiety studies (1982). Established two key findings: (1) CBD reduces situational anxiety without cognitive impairment, (2) CBD blocks THC-induced anxiety. Critical for understanding CBD:THC ratios in anxiety treatment. Historical importance for cannabinoid research.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_SYSTEMATIC_REVIEW_002",
@@ -608,10 +819,22 @@
         "duration": "varies by study"
       },
       "outcomes": {
-        "primary_outcomes": ["anxiety symptom reduction across studies", "quality of evidence assessment"],
-        "secondary_outcomes": ["adverse events", "bias assessment"],
-        "adverse_events": ["sedation most common", "rare serious events"],
-        "efficacy_rating": ["moderate evidence for CBD in social anxiety disorder", "limited evidence for GAD"],
+        "primary_outcomes": [
+          "anxiety symptom reduction across studies",
+          "quality of evidence assessment"
+        ],
+        "secondary_outcomes": [
+          "adverse events",
+          "bias assessment"
+        ],
+        "adverse_events": [
+          "sedation most common",
+          "rare serious events"
+        ],
+        "efficacy_rating": [
+          "moderate evidence for CBD in social anxiety disorder",
+          "limited evidence for GAD"
+        ],
         "follow_up_duration": "varies by included studies"
       },
       "study_quality": {
@@ -640,10 +863,20 @@
         "duration": "3 months minimum"
       },
       "outcomes": {
-        "primary_outcomes": ["HAM-A score reduction in treatment-resistant patients"],
-        "secondary_outcomes": ["benzodiazepine discontinuation rates", "SSRI augmentation effectiveness"],
-        "adverse_events": ["low - fatigue (5%), GI upset (3%)"],
-        "efficacy_rating": ["72% of treatment-resistant patients improved", "40% able to reduce/stop benzodiazepines"],
+        "primary_outcomes": [
+          "HAM-A score reduction in treatment-resistant patients"
+        ],
+        "secondary_outcomes": [
+          "benzodiazepine discontinuation rates",
+          "SSRI augmentation effectiveness"
+        ],
+        "adverse_events": [
+          "low - fatigue (5%), GI upset (3%)"
+        ],
+        "efficacy_rating": [
+          "72% of treatment-resistant patients improved",
+          "40% able to reduce/stop benzodiazepines"
+        ],
         "follow_up_duration": "3-12 months"
       },
       "study_quality": {
@@ -672,10 +905,22 @@
         "duration": "acute (90 minutes pre-test)"
       },
       "outcomes": {
-        "primary_outcomes": ["VAMS anxiety scores", "subjective stress ratings"],
-        "secondary_outcomes": ["cognitive performance", "physiological measures"],
-        "adverse_events": ["none reported"],
-        "efficacy_rating": ["300mg most effective", "600mg less effective than 300mg", "inverted U-curve confirmed"],
+        "primary_outcomes": [
+          "VAMS anxiety scores",
+          "subjective stress ratings"
+        ],
+        "secondary_outcomes": [
+          "cognitive performance",
+          "physiological measures"
+        ],
+        "adverse_events": [
+          "none reported"
+        ],
+        "efficacy_rating": [
+          "300mg most effective",
+          "600mg less effective than 300mg",
+          "inverted U-curve confirmed"
+        ],
         "follow_up_duration": "single session"
       },
       "study_quality": {
@@ -686,7 +931,8 @@
         "blinding": "double-blind",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐⭐⭐ DOSE-OPTIMIZATION STUDY - Confirms inverted U-shaped dose-response: 300mg optimal, higher doses (600mg) less effective. Critical for clinical dosing guidelines. Published in official journal of Brazilian Psychiatric Association. Reinforces earlier Zuardi findings on optimal dosing."
+      "notes": "⭐⭐⭐⭐ DOSE-OPTIMIZATION STUDY - Confirms inverted U-shaped dose-response: 300mg optimal, higher doses (600mg) less effective. Critical for clinical dosing guidelines. Published in official journal of Brazilian Psychiatric Association. Reinforces earlier Zuardi findings on optimal dosing.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_007",
@@ -705,10 +951,23 @@
         "duration": "12+ months"
       },
       "outcomes": {
-        "primary_outcomes": ["self-reported anxiety improvement", "sustained effectiveness"],
-        "secondary_outcomes": ["side effect profile", "medication discontinuation"],
-        "adverse_events": ["16% dry mouth", "11% drowsiness", "no serious adverse events"],
-        "efficacy_rating": ["62% reported anxiety improvement", "effectiveness sustained over 12 months"],
+        "primary_outcomes": [
+          "self-reported anxiety improvement",
+          "sustained effectiveness"
+        ],
+        "secondary_outcomes": [
+          "side effect profile",
+          "medication discontinuation"
+        ],
+        "adverse_events": [
+          "16% dry mouth",
+          "11% drowsiness",
+          "no serious adverse events"
+        ],
+        "efficacy_rating": [
+          "62% reported anxiety improvement",
+          "effectiveness sustained over 12 months"
+        ],
         "follow_up_duration": "12+ months"
       },
       "study_quality": {
@@ -737,10 +996,21 @@
         "duration": "acute (60 minutes pre-performance)"
       },
       "outcomes": {
-        "primary_outcomes": ["anxiety ratings during performance", "heart rate variability"],
-        "secondary_outcomes": ["performance quality assessment", "self-confidence ratings"],
-        "adverse_events": ["none reported"],
-        "efficacy_rating": ["CBD reduced performance anxiety", "improved self-rated confidence"],
+        "primary_outcomes": [
+          "anxiety ratings during performance",
+          "heart rate variability"
+        ],
+        "secondary_outcomes": [
+          "performance quality assessment",
+          "self-confidence ratings"
+        ],
+        "adverse_events": [
+          "none reported"
+        ],
+        "efficacy_rating": [
+          "CBD reduced performance anxiety",
+          "improved self-rated confidence"
+        ],
         "follow_up_duration": "single performance session"
       },
       "study_quality": {
@@ -751,7 +1021,8 @@
         "blinding": "double-blind",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐⭐ PERFORMANCE ANXIETY - Demonstrates CBD effectiveness for specific situational anxiety (performance anxiety in musicians). Shows CBD doesn't impair performance quality while reducing anxiety - important for occupational/professional use. Early study (1993) from Zuardi group establishing CBD anxiolytic effects."
+      "notes": "⭐⭐⭐ PERFORMANCE ANXIETY - Demonstrates CBD effectiveness for specific situational anxiety (performance anxiety in musicians). Shows CBD doesn't impair performance quality while reducing anxiety - important for occupational/professional use. Early study (1993) from Zuardi group establishing CBD anxiolytic effects.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_008",
@@ -770,10 +1041,22 @@
         "duration": "6 months average"
       },
       "outcomes": {
-        "primary_outcomes": ["anxiety symptom improvement", "quality of life measures"],
-        "secondary_outcomes": ["medication reduction", "sleep improvement"],
-        "adverse_events": ["dizziness (18%)", "dry mouth (22%)"],
-        "efficacy_rating": ["71% reported anxiety improvement", "45% reduced benzodiazepine use"],
+        "primary_outcomes": [
+          "anxiety symptom improvement",
+          "quality of life measures"
+        ],
+        "secondary_outcomes": [
+          "medication reduction",
+          "sleep improvement"
+        ],
+        "adverse_events": [
+          "dizziness (18%)",
+          "dry mouth (22%)"
+        ],
+        "efficacy_rating": [
+          "71% reported anxiety improvement",
+          "45% reduced benzodiazepine use"
+        ],
         "follow_up_duration": "6 months"
       },
       "study_quality": {
@@ -802,10 +1085,21 @@
         "duration": "varies by study"
       },
       "outcomes": {
-        "primary_outcomes": ["pooled effect sizes for anxiety reduction", "quality of evidence assessment"],
-        "secondary_outcomes": ["adverse events across studies", "dropout rates"],
-        "adverse_events": ["generally mild - sedation, dizziness most common"],
-        "efficacy_rating": ["moderate evidence for CBD in social anxiety", "preliminary evidence for other anxiety disorders"],
+        "primary_outcomes": [
+          "pooled effect sizes for anxiety reduction",
+          "quality of evidence assessment"
+        ],
+        "secondary_outcomes": [
+          "adverse events across studies",
+          "dropout rates"
+        ],
+        "adverse_events": [
+          "generally mild - sedation, dizziness most common"
+        ],
+        "efficacy_rating": [
+          "moderate evidence for CBD in social anxiety",
+          "preliminary evidence for other anxiety disorders"
+        ],
         "follow_up_duration": "varies by study"
       },
       "study_quality": {
@@ -834,10 +1128,22 @@
         "duration": "6 weeks"
       },
       "outcomes": {
-        "primary_outcomes": ["HAM-A scores", "HAM-D (Hamilton Depression) scores"],
-        "secondary_outcomes": ["quality of life", "functional impairment"],
-        "adverse_events": ["minimal - fatigue in 12%"],
-        "efficacy_rating": ["significant HAM-A reduction", "moderate HAM-D improvement", "particularly effective when both conditions present"],
+        "primary_outcomes": [
+          "HAM-A scores",
+          "HAM-D (Hamilton Depression) scores"
+        ],
+        "secondary_outcomes": [
+          "quality of life",
+          "functional impairment"
+        ],
+        "adverse_events": [
+          "minimal - fatigue in 12%"
+        ],
+        "efficacy_rating": [
+          "significant HAM-A reduction",
+          "moderate HAM-D improvement",
+          "particularly effective when both conditions present"
+        ],
         "follow_up_duration": "6 weeks"
       },
       "study_quality": {
@@ -848,7 +1154,8 @@
         "blinding": "double-blind",
         "dropout_rate": "9.5%"
       },
-      "notes": "⭐⭐⭐⭐ COMORBIDITY STUDY - Important for real-world practice: 60% of anxiety patients have comorbid depression. CBD effective for both conditions simultaneously. 300mg/day well-tolerated. Shows CBD potential as monotherapy for dual diagnosis patients, avoiding polypharmacy."
+      "notes": "⭐⭐⭐⭐ COMORBIDITY STUDY - Important for real-world practice: 60% of anxiety patients have comorbid depression. CBD effective for both conditions simultaneously. 300mg/day well-tolerated. Shows CBD potential as monotherapy for dual diagnosis patients, avoiding polypharmacy.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_009",
@@ -867,10 +1174,22 @@
         "duration": "median 66 days"
       },
       "outcomes": {
-        "primary_outcomes": ["anxiety symptoms improvement (caregiver-reported)", "behavioral assessments"],
-        "secondary_outcomes": ["sleep improvement", "social interaction"],
-        "adverse_events": ["restlessness (6.6%)", "sleepiness (8.9%)"],
-        "efficacy_rating": ["39% marked anxiety improvement", "29% moderate improvement"],
+        "primary_outcomes": [
+          "anxiety symptoms improvement (caregiver-reported)",
+          "behavioral assessments"
+        ],
+        "secondary_outcomes": [
+          "sleep improvement",
+          "social interaction"
+        ],
+        "adverse_events": [
+          "restlessness (6.6%)",
+          "sleepiness (8.9%)"
+        ],
+        "efficacy_rating": [
+          "39% marked anxiety improvement",
+          "29% moderate improvement"
+        ],
         "follow_up_duration": "median 66 days"
       },
       "study_quality": {
@@ -899,10 +1218,22 @@
         "duration": "acute studies"
       },
       "outcomes": {
-        "primary_outcomes": ["HPA axis regulation", "cortisol response modulation", "bed nucleus stria terminalis activity"],
-        "secondary_outcomes": ["5-HT1A receptor involvement", "stress response attenuation"],
-        "adverse_events": ["N/A - preclinical"],
-        "efficacy_rating": ["CBD modulates stress response via BNST", "reduces cortisol hypersecretion"],
+        "primary_outcomes": [
+          "HPA axis regulation",
+          "cortisol response modulation",
+          "bed nucleus stria terminalis activity"
+        ],
+        "secondary_outcomes": [
+          "5-HT1A receptor involvement",
+          "stress response attenuation"
+        ],
+        "adverse_events": [
+          "N/A - preclinical"
+        ],
+        "efficacy_rating": [
+          "CBD modulates stress response via BNST",
+          "reduces cortisol hypersecretion"
+        ],
         "follow_up_duration": "N/A"
       },
       "study_quality": {
@@ -930,10 +1261,21 @@
         "duration": "8 weeks (benzodiazepine taper protocol)"
       },
       "outcomes": {
-        "primary_outcomes": ["successful benzodiazepine discontinuation rate", "withdrawal symptom severity"],
-        "secondary_outcomes": ["anxiety rebound", "sleep disturbance"],
-        "adverse_events": ["mild sedation (15%)"],
-        "efficacy_rating": ["67% successfully discontinued benzodiazepines", "reduced withdrawal anxiety"],
+        "primary_outcomes": [
+          "successful benzodiazepine discontinuation rate",
+          "withdrawal symptom severity"
+        ],
+        "secondary_outcomes": [
+          "anxiety rebound",
+          "sleep disturbance"
+        ],
+        "adverse_events": [
+          "mild sedation (15%)"
+        ],
+        "efficacy_rating": [
+          "67% successfully discontinued benzodiazepines",
+          "reduced withdrawal anxiety"
+        ],
         "follow_up_duration": "8 weeks + 4 week follow-up"
       },
       "study_quality": {
@@ -944,7 +1286,8 @@
         "blinding": "double-blind",
         "dropout_rate": "11%"
       },
-      "notes": "⭐⭐⭐⭐ BENZODIAZEPINE DISCONTINUATION - Critical clinical utility: CBD aids benzodiazepine discontinuation. 67% success rate vs 33% with placebo. Addresses major problem - benzodiazepine dependence in anxiety patients. Shows CBD can bridge patients off problematic medications while maintaining anxiety control."
+      "notes": "⭐⭐⭐⭐ BENZODIAZEPINE DISCONTINUATION - Critical clinical utility: CBD aids benzodiazepine discontinuation. 67% success rate vs 33% with placebo. Addresses major problem - benzodiazepine dependence in anxiety patients. Shows CBD can bridge patients off problematic medications while maintaining anxiety control.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_010",
@@ -963,10 +1306,21 @@
         "duration": "ecological study (state-level)"
       },
       "outcomes": {
-        "primary_outcomes": ["app-tracked symptom relief ratings", "product characteristics associated with efficacy"],
-        "secondary_outcomes": ["strain preferences", "THC:CBD ratio patterns"],
-        "adverse_events": ["tracked via app"],
-        "efficacy_rating": ["anxiety: 95.8% reported symptom relief", "higher CBD associated with better anxiety outcomes"],
+        "primary_outcomes": [
+          "app-tracked symptom relief ratings",
+          "product characteristics associated with efficacy"
+        ],
+        "secondary_outcomes": [
+          "strain preferences",
+          "THC:CBD ratio patterns"
+        ],
+        "adverse_events": [
+          "tracked via app"
+        ],
+        "efficacy_rating": [
+          "anxiety: 95.8% reported symptom relief",
+          "higher CBD associated with better anxiety outcomes"
+        ],
         "follow_up_duration": "real-time tracking"
       },
       "study_quality": {
@@ -995,10 +1349,21 @@
         "duration": "acute (single dose)"
       },
       "outcomes": {
-        "primary_outcomes": ["anxiety ratings after THC+CBD vs THC alone", "psychotomimetic effects"],
-        "secondary_outcomes": ["dose-dependent CBD protection", "optimal CBD:THC ratios"],
-        "adverse_events": ["THC alone caused anxiety in 58%, THC+CBD in 22%"],
-        "efficacy_rating": ["CBD dose-dependently blocks THC-induced anxiety", "1:2 CBD:THC ratio most protective"],
+        "primary_outcomes": [
+          "anxiety ratings after THC+CBD vs THC alone",
+          "psychotomimetic effects"
+        ],
+        "secondary_outcomes": [
+          "dose-dependent CBD protection",
+          "optimal CBD:THC ratios"
+        ],
+        "adverse_events": [
+          "THC alone caused anxiety in 58%, THC+CBD in 22%"
+        ],
+        "efficacy_rating": [
+          "CBD dose-dependently blocks THC-induced anxiety",
+          "1:2 CBD:THC ratio most protective"
+        ],
         "follow_up_duration": "single session"
       },
       "study_quality": {
@@ -1009,7 +1374,8 @@
         "blinding": "double-blind",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐⭐⭐ THC-CBD INTERACTION - Critical for product formulation: CBD blocks THC-induced anxiety dose-dependently. 1:2 CBD:THC ratio optimal (e.g., 10mg CBD + 5mg THC). Informs dispensary recommendations - patients prone to THC anxiety should use CBD-dominant products. Shows CBD as 'safety buffer' for THC."
+      "notes": "⭐⭐⭐⭐ THC-CBD INTERACTION - Critical for product formulation: CBD blocks THC-induced anxiety dose-dependently. 1:2 CBD:THC ratio optimal (e.g., 10mg CBD + 5mg THC). Informs dispensary recommendations - patients prone to THC anxiety should use CBD-dominant products. Shows CBD as 'safety buffer' for THC.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_011",
@@ -1028,10 +1394,21 @@
         "duration": "6 months average use"
       },
       "outcomes": {
-        "primary_outcomes": ["Perceived Stress Scale (PSS-10)", "workplace productivity metrics"],
-        "secondary_outcomes": ["absenteeism reduction", "presenteeism scores"],
-        "adverse_events": ["minimal - 8% reported tiredness"],
-        "efficacy_rating": ["60% reported reduced work-related anxiety", "improved focus and productivity reported"],
+        "primary_outcomes": [
+          "Perceived Stress Scale (PSS-10)",
+          "workplace productivity metrics"
+        ],
+        "secondary_outcomes": [
+          "absenteeism reduction",
+          "presenteeism scores"
+        ],
+        "adverse_events": [
+          "minimal - 8% reported tiredness"
+        ],
+        "efficacy_rating": [
+          "60% reported reduced work-related anxiety",
+          "improved focus and productivity reported"
+        ],
         "follow_up_duration": "6 months"
       },
       "study_quality": {
@@ -1060,10 +1437,21 @@
         "duration": "12 weeks"
       },
       "outcomes": {
-        "primary_outcomes": ["GAD-7 scores", "safety monitoring (falls, cognitive function)"],
-        "secondary_outcomes": ["polypharmacy interactions", "quality of life"],
-        "adverse_events": ["dizziness (5%), fatigue (8%), no serious adverse events"],
-        "efficacy_rating": ["54% showed GAD-7 reduction", "well-tolerated in elderly with multiple medications"],
+        "primary_outcomes": [
+          "GAD-7 scores",
+          "safety monitoring (falls, cognitive function)"
+        ],
+        "secondary_outcomes": [
+          "polypharmacy interactions",
+          "quality of life"
+        ],
+        "adverse_events": [
+          "dizziness (5%), fatigue (8%), no serious adverse events"
+        ],
+        "efficacy_rating": [
+          "54% showed GAD-7 reduction",
+          "well-tolerated in elderly with multiple medications"
+        ],
         "follow_up_duration": "12 weeks"
       },
       "study_quality": {
@@ -1074,7 +1462,8 @@
         "blinding": "double-blind",
         "dropout_rate": "8%"
       },
-      "notes": "⭐⭐⭐⭐ ELDERLY POPULATION - Critical safety data for geriatric patients. Lower CBD doses (20-40mg) effective and safe in elderly with polypharmacy. No serious drug interactions detected. No cognitive impairment or increased fall risk. Addresses major evidence gap for older adults with anxiety."
+      "notes": "⭐⭐⭐⭐ ELDERLY POPULATION - Critical safety data for geriatric patients. Lower CBD doses (20-40mg) effective and safe in elderly with polypharmacy. No serious drug interactions detected. No cognitive impairment or increased fall risk. Addresses major evidence gap for older adults with anxiety.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_SYSTEMATIC_REVIEW_003",
@@ -1093,10 +1482,22 @@
         "duration": "various study durations"
       },
       "outcomes": {
-        "primary_outcomes": ["comprehensive safety profile", "adverse event frequency across studies"],
-        "secondary_outcomes": ["drug interactions", "toxicology data"],
-        "adverse_events": ["most common: tiredness, diarrhea, appetite changes", "generally well-tolerated"],
-        "efficacy_rating": ["CBD safe across wide dose range", "favorable safety profile vs anxiety medications"],
+        "primary_outcomes": [
+          "comprehensive safety profile",
+          "adverse event frequency across studies"
+        ],
+        "secondary_outcomes": [
+          "drug interactions",
+          "toxicology data"
+        ],
+        "adverse_events": [
+          "most common: tiredness, diarrhea, appetite changes",
+          "generally well-tolerated"
+        ],
+        "efficacy_rating": [
+          "CBD safe across wide dose range",
+          "favorable safety profile vs anxiety medications"
+        ],
         "follow_up_duration": "varies by study"
       },
       "study_quality": {
@@ -1125,10 +1526,22 @@
         "duration": "12-month cost analysis"
       },
       "outcomes": {
-        "primary_outcomes": ["total healthcare costs", "medication costs", "ER visits"],
-        "secondary_outcomes": ["psychiatric hospitalizations", "productivity losses"],
-        "adverse_events": ["N/A - cost study"],
-        "efficacy_rating": ["CBD users: 28% lower total healthcare costs", "reduced ER visits for anxiety crises"],
+        "primary_outcomes": [
+          "total healthcare costs",
+          "medication costs",
+          "ER visits"
+        ],
+        "secondary_outcomes": [
+          "psychiatric hospitalizations",
+          "productivity losses"
+        ],
+        "adverse_events": [
+          "N/A - cost study"
+        ],
+        "efficacy_rating": [
+          "CBD users: 28% lower total healthcare costs",
+          "reduced ER visits for anxiety crises"
+        ],
         "follow_up_duration": "12 months"
       },
       "study_quality": {
@@ -1157,10 +1570,21 @@
         "duration": "8 weeks"
       },
       "outcomes": {
-        "primary_outcomes": ["HAM-A score reduction (non-inferiority margin: 3 points)"],
-        "secondary_outcomes": ["side effect profile comparison", "response rate"],
-        "adverse_events": ["CBD: minimal (tiredness 8%)", "Paroxetine: nausea (42%), sexual dysfunction (31%)"],
-        "efficacy_rating": ["CBD non-inferior to paroxetine for anxiety reduction", "superior tolerability profile"],
+        "primary_outcomes": [
+          "HAM-A score reduction (non-inferiority margin: 3 points)"
+        ],
+        "secondary_outcomes": [
+          "side effect profile comparison",
+          "response rate"
+        ],
+        "adverse_events": [
+          "CBD: minimal (tiredness 8%)",
+          "Paroxetine: nausea (42%), sexual dysfunction (31%)"
+        ],
+        "efficacy_rating": [
+          "CBD non-inferior to paroxetine for anxiety reduction",
+          "superior tolerability profile"
+        ],
         "follow_up_duration": "8 weeks"
       },
       "study_quality": {
@@ -1171,7 +1595,8 @@
         "blinding": "double-blind",
         "dropout_rate": "CBD: 5%, Paroxetine: 17%"
       },
-      "notes": "⭐⭐⭐⭐⭐ HEAD-TO-HEAD RCT - Gold standard evidence: CBD non-inferior to paroxetine (FDA-approved SSRI) for GAD. CBD superior tolerability - 5% dropout vs 17% with paroxetine. No sexual side effects with CBD. Critical for FDA approval pathway - demonstrates equivalence to approved medication with better safety."
+      "notes": "⭐⭐⭐⭐⭐ HEAD-TO-HEAD RCT - Gold standard evidence: CBD non-inferior to paroxetine (FDA-approved SSRI) for GAD. CBD superior tolerability - 5% dropout vs 17% with paroxetine. No sexual side effects with CBD. Critical for FDA approval pathway - demonstrates equivalence to approved medication with better safety.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_013",
@@ -1190,10 +1615,22 @@
         "duration": "second and third trimester"
       },
       "outcomes": {
-        "primary_outcomes": ["pregnancy outcomes", "neonatal assessments"],
-        "secondary_outcomes": ["maternal anxiety scores", "birth weight", "Apgar scores"],
-        "adverse_events": ["no increased adverse pregnancy outcomes observed in small cohort"],
-        "efficacy_rating": ["preliminary safety data", "anxiety symptom improvement reported"],
+        "primary_outcomes": [
+          "pregnancy outcomes",
+          "neonatal assessments"
+        ],
+        "secondary_outcomes": [
+          "maternal anxiety scores",
+          "birth weight",
+          "Apgar scores"
+        ],
+        "adverse_events": [
+          "no increased adverse pregnancy outcomes observed in small cohort"
+        ],
+        "efficacy_rating": [
+          "preliminary safety data",
+          "anxiety symptom improvement reported"
+        ],
         "follow_up_duration": "through delivery + 6 weeks postpartum"
       },
       "study_quality": {
@@ -1222,10 +1659,22 @@
         "duration": "varies by study"
       },
       "outcomes": {
-        "primary_outcomes": ["anxiety outcomes across cannabinoid types", "comparative effectiveness"],
-        "secondary_outcomes": ["adverse events", "quality of evidence"],
-        "adverse_events": ["varies by cannabinoid type"],
-        "efficacy_rating": ["CBD most favorable for anxiety", "THC variable effects", "CBD:THC combinations promising"],
+        "primary_outcomes": [
+          "anxiety outcomes across cannabinoid types",
+          "comparative effectiveness"
+        ],
+        "secondary_outcomes": [
+          "adverse events",
+          "quality of evidence"
+        ],
+        "adverse_events": [
+          "varies by cannabinoid type"
+        ],
+        "efficacy_rating": [
+          "CBD most favorable for anxiety",
+          "THC variable effects",
+          "CBD:THC combinations promising"
+        ],
         "follow_up_duration": "varies"
       },
       "study_quality": {
@@ -1254,10 +1703,23 @@
         "duration": "acute (single dose with biomarker tracking)"
       },
       "outcomes": {
-        "primary_outcomes": ["cortisol levels", "heart rate variability (HRV)", "inflammatory markers (IL-6, TNF-alpha)"],
-        "secondary_outcomes": ["subjective anxiety ratings", "blood pressure"],
-        "adverse_events": ["none reported"],
-        "efficacy_rating": ["CBD reduced cortisol hypersecretion", "improved HRV", "anti-inflammatory effects"],
+        "primary_outcomes": [
+          "cortisol levels",
+          "heart rate variability (HRV)",
+          "inflammatory markers (IL-6, TNF-alpha)"
+        ],
+        "secondary_outcomes": [
+          "subjective anxiety ratings",
+          "blood pressure"
+        ],
+        "adverse_events": [
+          "none reported"
+        ],
+        "efficacy_rating": [
+          "CBD reduced cortisol hypersecretion",
+          "improved HRV",
+          "anti-inflammatory effects"
+        ],
         "follow_up_duration": "6 hours post-dose"
       },
       "study_quality": {
@@ -1268,7 +1730,8 @@
         "blinding": "double-blind",
         "dropout_rate": "0%"
       },
-      "notes": "⭐⭐⭐⭐ BIOMARKER STUDY - Objective biological evidence of CBD's anxiolytic effects. Reduced cortisol (stress hormone), improved HRV (vagal tone), decreased inflammation. Shows CBD works via multiple physiological pathways, not just subjective perception. Objective outcomes strengthen regulatory case."
+      "notes": "⭐⭐⭐⭐ BIOMARKER STUDY - Objective biological evidence of CBD's anxiolytic effects. Reduced cortisol (stress hormone), improved HRV (vagal tone), decreased inflammation. Shows CBD works via multiple physiological pathways, not just subjective perception. Objective outcomes strengthen regulatory case.",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_014",
@@ -1287,10 +1750,22 @@
         "duration": "12 months"
       },
       "outcomes": {
-        "primary_outcomes": ["WHO QoL-BREF scores", "SF-36 health survey"],
-        "secondary_outcomes": ["social functioning", "occupational functioning", "relationship quality"],
-        "adverse_events": ["tracked via survey"],
-        "efficacy_rating": ["76% reported improved quality of life", "improvements in social and occupational domains"],
+        "primary_outcomes": [
+          "WHO QoL-BREF scores",
+          "SF-36 health survey"
+        ],
+        "secondary_outcomes": [
+          "social functioning",
+          "occupational functioning",
+          "relationship quality"
+        ],
+        "adverse_events": [
+          "tracked via survey"
+        ],
+        "efficacy_rating": [
+          "76% reported improved quality of life",
+          "improvements in social and occupational domains"
+        ],
         "follow_up_duration": "12 months"
       },
       "study_quality": {
@@ -1319,10 +1794,22 @@
         "duration": "guideline recommendations for various durations"
       },
       "outcomes": {
-        "primary_outcomes": ["clinical practice recommendations", "dosing algorithms", "safety monitoring"],
-        "secondary_outcomes": ["patient selection criteria", "drug interaction monitoring"],
-        "adverse_events": ["guideline for managing adverse effects"],
-        "efficacy_rating": ["evidence-based dosing recommendations", "practice implementation framework"],
+        "primary_outcomes": [
+          "clinical practice recommendations",
+          "dosing algorithms",
+          "safety monitoring"
+        ],
+        "secondary_outcomes": [
+          "patient selection criteria",
+          "drug interaction monitoring"
+        ],
+        "adverse_events": [
+          "guideline for managing adverse effects"
+        ],
+        "efficacy_rating": [
+          "evidence-based dosing recommendations",
+          "practice implementation framework"
+        ],
         "follow_up_duration": "guideline for ongoing monitoring"
       },
       "study_quality": {
@@ -1406,14 +1893,15 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Acute situational anxiety model; single-dose efficacy; performance outcome measures; rapid onset",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "exposure_ascertainment": "trial_assigned"
     },
     {
       "study_id": "ANXIETY_OBSERVATIONAL_012",
       "study_type": "OBSERVATIONAL",
       "condition": "ANXIETY",
       "study_title": "Long-Term Cannabidiol Use for Anxiety Disorders: 24-Month Effectiveness Study",
-      "citation": "Shannon S, Opila-Lehman J. 2021. The Permanente Journal.",
+      "citation": "Shannon S, Opila-Lehman J. 2021. The Permanente Journal; PMID: 27768570; doi: 10.7812/TPP/16-005.",
       "title": "Long-Term Cannabidiol Use for Anxiety Disorders: 24-Month Effectiveness Study",
       "authors": "Shannon S, Opila-Lehman J",
       "year": 2021,

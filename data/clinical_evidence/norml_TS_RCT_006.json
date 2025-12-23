@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Medium-large (d = 0.71)",
+  "study_type": "RCT",
+  "source": "NORML:TS_RCT_006",
+  "participants": "16 adults with TS",
+  "year": 2019,
+  "notes": "Nabilone for Tourette Syndrome: Pilot Randomized Trial",
+  "confidence": "medium",
+  "abstract": "Nabilone: 35% tic reduction vs Placebo: 12% (p<0.05); Proof of concept for FDA-approved cannabinoid"
+}

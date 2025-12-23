@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AMYOTROPHIC_LATERAL_SCLEROSIS_OBSERVATIONAL_004",
+  "participants": null,
+  "year": null,
+  "notes": "Changes in endocannabinoid receptors and enzymes in the spinal cord of SOD1(G93A) transgenic mice and evaluation of Sativex-like combination of phytocannabinoids: Interest for future therapies in amyotrophic lateral sclerosis",
+  "confidence": "medium",
+  "abstract": ""
+}

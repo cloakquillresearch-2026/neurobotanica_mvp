@@ -1,0 +1,12 @@
+{
+  "compound": "CBD oral + topical combination",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large (Cohen's d = 1.15)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_001",
+  "participants": "136 adults with active RA (DAS28-CRP >3.2)",
+  "year": 2020,
+  "notes": "Efficacy of Cannabidiol for Rheumatoid Arthritis: A Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 38% reduction in DAS28-CRP (5.8 \u2192 3.6); Placebo: 11% reduction (5.7 \u2192 5.1); p<0.001"
+}

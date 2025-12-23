@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol, nabilone",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:CINV_GUIDELINE_001",
+  "participants": "Guideline based on systematic evidence review",
+  "year": 2017,
+  "notes": "ASCO Clinical Practice Guideline: Antiemetics Including Cannabinoids",
+  "confidence": "medium",
+  "abstract": "Grade 2A recommendation: Cannabinoids may be useful for BREAKTHROUGH CINV; Consider for refractory patients; Position as rescue therapy"
+}

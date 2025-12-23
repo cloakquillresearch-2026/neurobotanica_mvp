@@ -1,0 +1,12 @@
+{
+  "compound": "Endocannabinoid system modulation",
+  "condition": "IBD_CROHNS",
+  "effect_size": "N/A (review)",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:IBD_MECHANISTIC_001",
+  "participants": "Comprehensive review of preclinical/clinical evidence",
+  "year": 2015,
+  "notes": "Endocannabinoid System in IBD: Therapeutic Target Review",
+  "confidence": "medium",
+  "abstract": "CB1/CB2 receptor upregulation in inflamed mucosa; Anti-inflammatory: TNF-\u03b1\u2193, IL-1\u03b2\u2193, IL-6\u2193; Gut motility regulation; Epithelial barrier protection"
+}

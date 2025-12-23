@@ -1,0 +1,32 @@
+{
+  "training_completed": "2025-12-23T08:59:01.353338",
+  "best_epoch": 2,
+  "test_metrics": {
+    "loss": 0.8710061311721802,
+    "tk_to_genomic_loss": 0.8824887275695801,
+    "genomic_to_tk_loss": 0.8537821769714355,
+    "tk_acc@1": 0.0,
+    "tk_acc@3": 0.0,
+    "tk_acc@5": 0.0,
+    "tk_acc@10": 0.06896551724137931,
+    "g_acc@1": 0.10344827586206896,
+    "g_acc@3": 0.27586206896551724,
+    "tk_mrr": 0.025032612661923005,
+    "g_mrr": 0.22523440236421985,
+    "bidirectional_consistency": 0.0
+  },
+  "hyperparameters": {
+    "batch_size": 32,
+    "epochs": 2,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01
+  },
+  "model_config": {
+    "tk_embedding_dim": 512,
+    "genomic_embedding_dim": 512,
+    "bridge_dim": 256,
+    "num_transformer_layers": 4,
+    "num_attention_heads": 8,
+    "total_parameters": 31225804
+  }
+}

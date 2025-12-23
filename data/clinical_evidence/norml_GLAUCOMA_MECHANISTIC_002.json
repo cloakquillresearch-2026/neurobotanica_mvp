@@ -1,0 +1,12 @@
+{
+  "compound": "THC, CBD, HU-210 (synthetic)",
+  "condition": "GLAUCOMA",
+  "effect_size": "N/A (mechanistic)",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:GLAUCOMA_MECHANISTIC_002",
+  "participants": "In vitro and animal model study",
+  "year": 2008,
+  "notes": "Neuroprotective Effects of Cannabinoids on Retinal Ganglion Cells",
+  "confidence": "medium",
+  "abstract": "Cannabinoids protect RGCs from: glutamate excitotoxicity (40% improved survival), ischemia (35% improved survival), oxidative stress (45% improved survival)"
+}

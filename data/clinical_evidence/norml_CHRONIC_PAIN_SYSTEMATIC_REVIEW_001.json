@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "systematic review",
+  "source": "NORML:CHRONIC_PAIN_SYSTEMATIC_REVIEW_001",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabis-based medicines for chronic neuropathic pain: Cochrane systematic review and meta-analysis",
+  "confidence": "medium",
+  "abstract": ""
+}

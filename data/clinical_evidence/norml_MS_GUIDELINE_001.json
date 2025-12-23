@@ -1,0 +1,12 @@
+{
+  "compound": "Oral cannabis extract, THC, nabiximols",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:MS_GUIDELINE_001",
+  "participants": "Guideline based on systematic evidence review",
+  "year": 2014,
+  "notes": "AAN Clinical Practice Guideline: Complementary and Alternative Medicine in MS",
+  "confidence": "medium",
+  "abstract": "Level A recommendation: Oral cannabis extract EFFECTIVE for spasticity and pain; Level B: Nabiximols probably effective for spasticity, pain, bladder; THC probably effective for spasticity and pain"
+}

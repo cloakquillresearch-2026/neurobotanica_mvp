@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis extract (THC:CBD) or synthetic THC (Marinol)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Medium for subjective (d=0.62), small for objective (d=0.21)",
+  "study_type": "RCT",
+  "source": "NORML:MS_RCT_002",
+  "participants": "667 MS patients (largest cannabinoid MS trial)",
+  "year": 2003,
+  "notes": "Cannabinoids for Treatment of Spasticity and Other Symptoms Related to MS (CAMS Study)",
+  "confidence": "medium",
+  "abstract": "No significant difference on Ashworth; BUT patient-reported spasticity improved 61% (p<0.001); mobility improved; pain reduced 42%"
+}

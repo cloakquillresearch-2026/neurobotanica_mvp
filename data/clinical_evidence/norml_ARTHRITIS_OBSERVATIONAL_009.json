@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large protective effect (HR = 0.43, 95% CI: 0.26-0.71)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_009",
+  "participants": "1,872 arthritis patients on CBD (compared to 1,872 matched controls on NSAIDs)",
+  "year": 2020,
+  "notes": "Cannabidiol and Cardiovascular Safety in Arthritis Patients: Cohort Study",
+  "confidence": "medium",
+  "abstract": "CBD users: 1.2% MACE rate vs NSAID users: 2.8% MACE rate (p=0.002); 57% lower cardiovascular risk"
+}

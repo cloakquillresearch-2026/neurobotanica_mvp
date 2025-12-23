@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (THC:CBD 1:1)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Large (Cohen's d = 0.86)",
+  "study_type": "RCT",
+  "source": "NORML:MS_RCT_006",
+  "participants": "60 MS patients with severe fatigue (FSS \u22654)",
+  "year": 2016,
+  "notes": "Nabiximols for MS-Related Fatigue: Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "Nabiximols: FSS reduced from 5.8 to 4.2 (28% reduction) vs Placebo: 5.7 to 5.3 (7% reduction); p=0.003"
+}

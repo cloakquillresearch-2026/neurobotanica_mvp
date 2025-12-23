@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "clinical_guideline",
+  "source": "NORML:ANXIETY_GUIDELINE_001",
+  "participants": null,
+  "year": null,
+  "notes": "Clinical Practice Guidelines for Cannabidiol Use in Anxiety Disorders",
+  "confidence": "medium",
+  "abstract": ""
+}

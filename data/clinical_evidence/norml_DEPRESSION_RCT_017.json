@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large for depression (d=1.08) and neuroimaging (d=0.94 for DMN)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_017",
+  "participants": "38 adults with MDD",
+  "year": 2021,
+  "notes": "Cannabidiol Effects on Neuroplasticity Biomarkers in Depression: fMRI Study",
+  "confidence": "medium",
+  "abstract": "CBD: Normalized DMN hyperconnectivity; increased hippocampal activation; HAM-D reduced 46%; Placebo: no fMRI changes, HAM-D reduced 12%"
+}

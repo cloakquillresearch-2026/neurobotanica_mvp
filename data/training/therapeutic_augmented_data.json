@@ -1,0 +1,34 @@
+{
+  "total_samples": 2145,
+  "original_samples": 195,
+  "synthetic_samples": 1950,
+  "augmentation_factor": 10,
+  "features": [
+    "molecular_weight",
+    "logP",
+    "h_bond_donors",
+    "h_bond_acceptors",
+    "rotatable_bonds",
+    "tpsa",
+    "num_aromatic_rings",
+    "num_stereocenters",
+    "sp3_fraction",
+    "complexity",
+    "qed",
+    "bbb_penetration",
+    "has_phenol",
+    "num_terpene_synergies",
+    "avg_synergy_evidence_tier",
+    "target_encoded"
+  ],
+  "efficacy_distribution": {
+    "mean": 0.5023090330292668,
+    "std": 0.13001336468439836,
+    "min": 0.0,
+    "max": 0.9384769694732065
+  },
+  "samples_by_evidence": {
+    "with_direct_evidence": 55,
+    "inferred": 2090
+  }
+}

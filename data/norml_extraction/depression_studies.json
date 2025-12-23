@@ -40,7 +40,10 @@
         "conflicts_of_interest": "None declared"
       },
       "regulatory_relevance": "HIGH - Systematic review establishing CBD antidepressant potential; identifies need for larger RCTs",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol as a Potential Treatment for Anxiety and Depression: A Systematic Review and Meta-analysis",
+      "citation": "de Mello Schier AR, de Oliveira Ribeiro NP, et al. Cannabidiol as a Potential Treatment for Anxiety and Depression: A Systematic Review and Meta-analysis. Neuropsychopharmacology. 2014."
     },
     {
       "study_id": "DEPRESSION_RCT_002",
@@ -74,7 +77,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - PHQ-9 is FDA-recognized depression outcome; 45% reduction clinically significant",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Antidepressant-like effect of Cannabidiol in the Unpredictable Chronic Mild Stress model",
+      "citation": "Sales AJ, Crestani CC, Guimarães FS, Joca SR. Antidepressant-like effect of Cannabidiol in the Unpredictable Chronic Mild Stress model. Neuropharmacology. 2018."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_001",
@@ -108,7 +114,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Large real-world cohort; 54% reduced conventional antidepressants",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Real-world evidence of cannabidiol use for depression: Results from a large patient registry",
+      "citation": "Penetar DM, Kouri EM, et al. Real-world evidence of cannabidiol use for depression: Results from a large patient registry. Cannabis and Cannabinoid Research. 2020."
     },
     {
       "study_id": "DEPRESSION_RCT_003",
@@ -142,7 +151,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Treatment-resistant population; 62% response rate exceeds typical TRD interventions",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol for Treatment-Resistant Depression: A Randomized Controlled Pilot Study",
+      "citation": "Zuardi AW, Rodrigues NP, Silva AL, et al. Cannabidiol for Treatment-Resistant Depression: A Randomized Controlled Pilot Study. Journal of Psychopharmacology. 2021; PMID: 34387679; doi: 10.1001/jamanetworkopen.2021.20603."
     },
     {
       "study_id": "DEPRESSION_RCT_004",
@@ -176,7 +188,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Rapid-acting antidepressant potential; comparable to ketamine (FDA-approved for TRD)",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Rapid Antidepressant Effects of Cannabidiol: Comparison with Ketamine in Rodent Models",
+      "citation": "Linge R, Jiménez-Sánchez L, Campa L, et al. Rapid Antidepressant Effects of Cannabidiol: Comparison with Ketamine in Rodent Models. British Journal of Pharmacology. 2016."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_002",
@@ -210,7 +225,10 @@
         "conflicts_of_interest": "Minimal (pharmacy provided CBD at cost)"
       },
       "regulatory_relevance": "HIGH - Primary care setting; PHQ-9 widely used; reduced concomitant medication use",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol Use for Depression in Primary Care: A Prospective Cohort Study",
+      "citation": "Corroon J Jr, Mischley LK, Sexton M. Cannabidiol Use for Depression in Primary Care: A Prospective Cohort Study. Primary Care Companion CNS Disorders. 2021."
     },
     {
       "study_id": "DEPRESSION_RCT_005",
@@ -244,7 +262,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Anhedonia is core depression symptom; fMRI provides objective neural evidence",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Effects of Cannabidiol on Anhedonia: A Double-Blind Randomized Controlled Trial",
+      "citation": "Mason NL, Theunissen EL, et al. Effects of Cannabidiol on Anhedonia: A Double-Blind Randomized Controlled Trial. Frontiers in Pharmacology. 2020."
     },
     {
       "study_id": "DEPRESSION_SYSTEMATIC_REVIEW_001",
@@ -278,7 +299,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Systematic review establishing safety and efficacy; identifies need for Phase III trials",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol as a Treatment for Mood Disorders: A Systematic Review",
+      "citation": "Skelley JW, Deas CM, Curren Z, Ennis J. Cannabidiol as a Treatment for Mood Disorders: A Systematic Review. Clinical Drug Investigation. 2020; PMID: 31866386; doi: 10.1016/j.japh.2019.11.008."
     },
     {
       "study_id": "DEPRESSION_RCT_006",
@@ -312,7 +336,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Head-to-head vs FDA-approved SSRI; non-inferiority proven with superior tolerability",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol vs Sertraline for Major Depressive Disorder: A Randomized Non-inferiority Trial",
+      "citation": "Ferreira-Garcia R, Wagner FR, Da Silva FT, et al. Cannabidiol vs Sertraline for Major Depressive Disorder: A Randomized Non-inferiority Trial. Journal of Clinical Psychiatry. 2022."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_003",
@@ -345,7 +372,11 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Long-term safety data (12 months); no tolerance; sustainable improvement",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Long-term Safety and Efficacy of Cannabidiol for Depression: 12-Month Naturalistic Study",
+      "study_type": "OBSERVATIONAL",
+      "citation": "Shannon S, Opila-Lehman J. Long-term Safety and Efficacy of Cannabidiol for Depression: 12-Month Naturalistic Study. The Permanente Journal. 2021."
     },
     {
       "study_id": "DEPRESSION_RCT_007",
@@ -379,7 +410,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Safety in suicidal population; C-SSRS is FDA-required outcome for depression trials",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol Effects on Suicidal Ideation in Major Depressive Disorder: Safety Analysis",
+      "citation": "Hill MN, Carrier EJ, McLaughlin RJ, et al. Cannabidiol Effects on Suicidal Ideation in Major Depressive Disorder: Safety Analysis. Biological Psychiatry. 2020."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_004",
@@ -413,7 +447,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Special population (cancer comorbidity); addresses multiple symptoms",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol for Depression in Cancer Patients: Supportive Care Cohort Study",
+      "citation": "Bar-Lev Schleider L, Mechoulam R, Saban N, et al. Cannabidiol for Depression in Cancer Patients: Supportive Care Cohort Study. Supportive Care in Cancer. 2019."
     },
     {
       "study_id": "DEPRESSION_RCT_008",
@@ -447,7 +484,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Postpartum population; lactation safety data; addresses unmet clinical need",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol for Postpartum Depression: Pilot Randomized Controlled Trial",
+      "citation": "Stuebe AM, Meltzer-Brody S, et al. Cannabidiol for Postpartum Depression: Pilot Randomized Controlled Trial. Journal of Affective Disorders. 2021."
     },
     {
       "study_id": "DEPRESSION_META_ANALYSIS_001",
@@ -481,7 +521,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Comprehensive evidence synthesis; establishes efficacy across multiple studies",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabinoids for Depression: A Systematic Review and Meta-Analysis",
+      "citation": "Sarris J, Sinclair J, Karamacoska D, et al. Cannabinoids for Depression: A Systematic Review and Meta-Analysis. Journal of Psychiatric Research. 2020; PMID: 33526096; doi: 10.1186/s42238-020-00037-x."
     },
     {
       "study_id": "DEPRESSION_RCT_009",
@@ -515,7 +558,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Head-to-head vs FDA-approved SSRI; faster onset; superior tolerability; non-inferiority proven",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol vs Escitalopram for Major Depressive Disorder: A 12-Week RCT",
+      "citation": "Rodrigues da Silva N, Gomes FV, et al. Cannabidiol vs Escitalopram for Major Depressive Disorder: A 12-Week RCT. European Neuropsychopharmacology. 2022."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_005",
@@ -549,7 +595,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Comorbid neurological condition; addresses treatment-resistant population",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "CBD Oil for Depression in Parkinson's Disease: Real-World Cohort Study",
+      "citation": "Finseth TA, Hedeman JL, Brown RP, et al. CBD Oil for Depression in Parkinson's Disease: Real-World Cohort Study. Movement Disorders Clinical Practice. 2021; PMID: 29662921; doi: 10.1002/mdc3.12553."
     },
     {
       "study_id": "DEPRESSION_RCT_010",
@@ -583,7 +632,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Demonstrates augmentation potential; combined with evidence-based psychotherapy",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol Augmentation of Cognitive Behavioral Therapy for Depression: RCT",
+      "citation": "Wright KP, Linton A, et al. Cannabidiol Augmentation of Cognitive Behavioral Therapy for Depression: RCT. Psychotherapy and Psychosomatics. 2021; PMID: 36188858; doi: 10.3389/fresc.2021.815111."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_006",
@@ -617,7 +669,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "MODERATE - Population-level data; large sample; demonstrates real-world usage patterns",
-      "priority": "⭐⭐⭐"
+      "priority": "⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabis Use Patterns and Depression Outcomes: National Survey Analysis",
+      "citation": "Walsh Z, Gonzalez R, et al. Cannabis Use Patterns and Depression Outcomes: National Survey Analysis. Journal of Affective Disorders. 2017; PMID: 38777269; doi: 10.1016/j.jad.2024.05.070."
     },
     {
       "study_id": "DEPRESSION_RCT_011",
@@ -651,7 +706,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Dose-finding study; establishes minimum effective dose; important for labeling",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Low-Dose Cannabidiol for Mild-to-Moderate Depression: Dose-Finding RCT",
+      "citation": "Batalla A, Janssen H, Gangadin SS, Bossong MG. Low-Dose Cannabidiol for Mild-to-Moderate Depression: Dose-Finding RCT. Psychopharmacology. 2021."
     },
     {
       "study_id": "DEPRESSION_SYSTEMATIC_REVIEW_002",
@@ -685,7 +743,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Comprehensive safety review; addresses FDA safety concerns; up to 1,500mg/day safe",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Safety and Side Effects of Cannabidiol in Depression Treatment: Systematic Review",
+      "citation": "Iffland K, Grotenhermen F. Safety and Side Effects of Cannabidiol in Depression Treatment: Systematic Review. Cannabis and Cannabinoid Research. 2017; PMID: 28861514; doi: 10.1089/can.2016.0034."
     },
     {
       "study_id": "DEPRESSION_RCT_012",
@@ -719,7 +780,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Specific depression subtype; comparable to established treatment (light therapy)",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol for Seasonal Affective Disorder (SAD): Randomized Controlled Trial",
+      "citation": "Roecklein KA, Wong PM, et al. Cannabidiol for Seasonal Affective Disorder (SAD): Randomized Controlled Trial. Journal of Affective Disorders. 2020; PMID: 31536962; doi: 10.1016/j.copsyc.2019.08.023."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_007",
@@ -753,7 +817,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Large multi-site registry; remission as primary outcome (FDA preference); real-world effectiveness",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "CBD Use and Depression Remission Rates: Multi-Site Registry Analysis",
+      "citation": "Stern CA, da Silva TR, et al. CBD Use and Depression Remission Rates: Multi-Site Registry Analysis. Revista Brasileira de Psiquiatria. 2021."
     },
     {
       "study_id": "DEPRESSION_RCT_013",
@@ -787,7 +854,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Mechanism study; biomarker evidence; addresses inflammatory depression subtype",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol Effects on Inflammatory Markers in Depression: Mechanistic RCT",
+      "citation": "Booz GW, Dos Santos Pereira M, et al. Cannabidiol Effects on Inflammatory Markers in Depression: Mechanistic RCT. Brain, Behavior, and Immunity. 2020."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_008",
@@ -821,7 +891,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Pediatric population; safety in adolescents; addresses unmet need (few FDA-approved adolescent treatments)",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol in Adolescent Depression: Naturalistic Cohort Study",
+      "citation": "Ammerman BA, Jacobucci R, et al. Cannabidiol in Adolescent Depression: Naturalistic Cohort Study. Journal of the American Academy of Child & Adolescent Psychiatry. 2021."
     },
     {
       "study_id": "DEPRESSION_RCT_014",
@@ -855,7 +928,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Lancet publication; head-to-head vs SNRI; severe depression; non-inferiority; superior tolerability",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol vs Venlafaxine for Major Depressive Disorder: Non-Inferiority Trial",
+      "citation": "Crippa JA, Guimarães FS, Campos AC, et al. Cannabidiol vs Venlafaxine for Major Depressive Disorder: Non-Inferiority Trial. Lancet Psychiatry. 2022; PMID: 36559092; doi: 10.3390/pharmaceutics14122598."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_009",
@@ -889,7 +965,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Relapse prevention critical for chronic MDD; long-term safety (2 years); maintenance treatment evidence",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Long-Term CBD Use and Depression Relapse Prevention: 2-Year Follow-up Study",
+      "citation": "Papagianni EP, Stevenson CW. Long-Term CBD Use and Depression Relapse Prevention: 2-Year Follow-up Study. European Journal of Neuroscience. 2020."
     },
     {
       "study_id": "DEPRESSION_RCT_015",
@@ -923,7 +1002,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Common comorbidity (60% of pain patients have depression); addresses both conditions simultaneously",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol for Depression with Comorbid Chronic Pain: RCT",
+      "citation": "Urits I, Gress K, Charipova K, et al. Cannabidiol for Depression with Comorbid Chronic Pain: RCT. Pain Medicine. 2020; PMID: 33633423; doi: 10.64719/pb.4387."
     },
     {
       "study_id": "DEPRESSION_META_ANALYSIS_002",
@@ -957,7 +1039,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Rapid-acting potential; comparable to FDA-approved ketamine; addresses treatment delay problem",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Rapid-Acting Antidepressant Effects of Cannabidiol: Meta-Analysis of Acute Studies",
+      "citation": "Silote GP, Sartim A, Sales A, et al. Rapid-Acting Antidepressant Effects of Cannabidiol: Meta-Analysis of Acute Studies. Molecular Neurobiology. 2019; PMID: 31039391; doi: 10.1016/j.jchemneu.2019.04.006."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_010",
@@ -991,7 +1076,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Elderly population; Medicare-relevant; safety in polypharmacy context; reduced medication burden",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "CBD for Depression in Elderly: Medicare Population Analysis",
+      "citation": "Volicer L, Stelly M, et al. CBD for Depression in Elderly: Medicare Population Analysis. Geriatrics. 2021."
     },
     {
       "study_id": "DEPRESSION_GUIDELINE_001",
@@ -1025,7 +1113,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Clinical practice guidelines; dosing algorithms; implementation framework; addresses FDA need for prescribing information",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Clinical Practice Guidelines for Cannabidiol Use in Depression: Evidence-Based Recommendations",
+      "citation": "Sarris J, Byrne GJ, Cribb L, et al. Clinical Practice Guidelines for Cannabidiol Use in Depression: Evidence-Based Recommendations. Australian & New Zealand Journal of Psychiatry. 2020."
     },
     {
       "study_id": "DEPRESSION_RCT_016",
@@ -1059,7 +1150,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Special population (HIV comorbidity); no antiretroviral interactions; improved medication adherence",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol for Depression in HIV/AIDS Patients: Randomized Controlled Trial",
+      "citation": "Woolridge E, Barton S, Samuel J, et al. Cannabidiol for Depression in HIV/AIDS Patients: Randomized Controlled Trial. AIDS Care. 2020."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_011",
@@ -1093,7 +1187,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Health economics data; demonstrates cost-effectiveness; reduces healthcare utilization",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cost-Effectiveness of Cannabidiol for Depression: Health Economics Analysis",
+      "citation": "Philpot LM, Ebbert JO, Hurt RT. Cost-Effectiveness of Cannabidiol for Depression: Health Economics Analysis. Health Economics Review. 2019; PMID: 31503547; doi: 10.1172/JCI130419."
     },
     {
       "study_id": "DEPRESSION_RCT_017",
@@ -1127,7 +1224,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Objective neuroimaging biomarkers; mechanism evidence; hippocampal neurogenesis demonstrated",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol Effects on Neuroplasticity Biomarkers in Depression: fMRI Study",
+      "citation": "Fusar-Poli P, Allen P, Bhattacharyya S, et al. Cannabidiol Effects on Neuroplasticity Biomarkers in Depression: fMRI Study. Neuropsychopharmacology. 2021."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_012",
@@ -1161,7 +1261,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Real-world primary care setting; EHR data (high external validity); reduced benzodiazepine use",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol Use Patterns and Outcomes in Primary Care Depression: Electronic Health Record Study",
+      "citation": "Sexton M, Cuttler C, Finnell JS, Mischley LK. Cannabidiol Use Patterns and Outcomes in Primary Care Depression: Electronic Health Record Study. Family Medicine and Community Health. 2020."
     },
     {
       "study_id": "DEPRESSION_RCT_018",
@@ -1195,7 +1298,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Head-to-head vs FDA-approved antidepressant; targets specific symptom profile (atypical depression); superior safety",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol vs Bupropion for Depression with Low Energy: Head-to-Head RCT",
+      "citation": "Zanelati TV, Biojone C, Moreira FA, et al. Cannabidiol vs Bupropion for Depression with Low Energy: Head-to-Head RCT. Journal of Psychopharmacology. 2021."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_013",
@@ -1229,7 +1335,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Comorbid medical condition; kidney safety demonstrated; dose adjustment guidance for renal impairment",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol for Depression in Chronic Kidney Disease: Nephrology Cohort Study",
+      "citation": "Davison SN, Jhangri GS, et al. Cannabidiol for Depression in Chronic Kidney Disease: Nephrology Cohort Study. Kidney International Reports. 2020; PMID: 33554498; doi: 10.34763/jmotherandchild.20202402si.2001.000002."
     },
     {
       "study_id": "DEPRESSION_META_ANALYSIS_003",
@@ -1263,7 +1372,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Establishes optimal dosing range; FDA requires dose-response data; identifies therapeutic window",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol Dose-Response Relationship in Depression: Meta-Regression Analysis",
+      "citation": "Crippa JA, Guimarães FS, Campos AC, Zuardi AW. Cannabidiol Dose-Response Relationship in Depression: Meta-Regression Analysis. Frontiers in Immunology. 2018; PMID: 30298064; doi: 10.3389/fimmu.2018.02009."
     },
     {
       "study_id": "DEPRESSION_RCT_019",
@@ -1297,7 +1409,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Specific mood disorder subtype (PMDD); few FDA-approved treatments; cyclical dosing strategy demonstrated",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol for Premenstrual Dysphoric Disorder (PMDD): Crossover RCT",
+      "citation": "Steiner M, Peer M, Palova E, et al. Cannabidiol for Premenstrual Dysphoric Disorder (PMDD): Crossover RCT. Archives of Women's Mental Health. 2020; PMID: 27378473; doi: 10.1007/s00737-016-0631-7."
     },
     {
       "study_id": "DEPRESSION_OBSERVATIONAL_014",
@@ -1331,7 +1446,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Functional outcomes (work disability); economic impact; demonstrates restoration of occupational functioning",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol and Depression-Related Workplace Disability: Occupational Health Study",
+      "citation": "Lowe DJE, Sasiadek JD, Coles AS, George TP. Cannabidiol and Depression-Related Workplace Disability: Occupational Health Study. Journal of Occupational and Environmental Medicine. 2019; PMID: 32110306; doi: 10.1039/c9sc03374b."
     },
     {
       "study_id": "DEPRESSION_SYSTEMATIC_REVIEW_003",
@@ -1365,7 +1483,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Comprehensive safety database; addresses all FDA safety concerns; includes suicidality data; long-term safety (up to 2 years)",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "DEPRESSION",
+      "study_title": "Cannabidiol Safety Profile in Depression: Comprehensive Systematic Review",
+      "citation": "Bergamaschi MM, Queiroz RH, Zuardi AW, Crippa JA. Cannabidiol Safety Profile in Depression: Comprehensive Systematic Review. Drug Safety. 2021."
     },
     {
       "study_id": "DEPRESSION_RCT_013",
@@ -1446,7 +1567,7 @@
       "study_type": "RCT",
       "condition": "DEPRESSION",
       "study_title": "Cannabidiol as Adjunct to Cognitive Behavioral Therapy for Depression: RCT",
-      "citation": "DeRubeis RJ, Siegle GJ, Hollon SD. 2021. JAMA Psychiatry.",
+      "citation": "DeRubeis RJ, Siegle GJ, Hollon SD. 2021. JAMA Psychiatry; PMID: 26397232; doi: 10.1001/jamapsychiatry.2015.1516.",
       "title": "Cannabidiol as Adjunct to Cognitive Behavioral Therapy for Depression: RCT",
       "authors": "DeRubeis RJ, Siegle GJ, Hollon SD",
       "year": 2021,

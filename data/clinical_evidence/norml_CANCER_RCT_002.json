@@ -1,0 +1,12 @@
+{
+  "compound": "THC:CBD (1:1) vs THC alone vs placebo",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Medium (d = 0.52 for THC:CBD)",
+  "study_type": "RCT",
+  "source": "NORML:CANCER_RCT_002",
+  "participants": "177 patients with advanced cancer",
+  "year": 2010,
+  "notes": "THC:CBD for Cancer-Related Pain: Randomized Dose-Finding Study",
+  "confidence": "medium",
+  "abstract": "THC:CBD: -1.37 NRS reduction (p=0.014); THC alone: -1.01 (NS); Placebo: -0.69; CBD component adds benefit"
+}

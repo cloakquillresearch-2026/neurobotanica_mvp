@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (Marinol)",
+  "condition": "GLAUCOMA",
+  "effect_size": "Medium-large (d = 0.68)",
+  "study_type": "RCT",
+  "source": "NORML:GLAUCOMA_RCT_006",
+  "participants": "9 patients with ocular hypertension",
+  "year": 2002,
+  "notes": "Dronabinol vs Placebo for Ocular Hypertension: Crossover Trial",
+  "confidence": "medium",
+  "abstract": "Dronabinol 2.5mg: 16% IOP reduction; 5mg: 22% IOP reduction; Significant vs placebo (p<0.05)"
+}

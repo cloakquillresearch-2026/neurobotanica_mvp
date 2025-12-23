@@ -1,0 +1,12 @@
+{
+  "compound": "THC:CBD oral capsules",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Medium for 50% responders",
+  "study_type": "RCT",
+  "source": "NORML:CANCER_RCT_007",
+  "participants": "399 patients with advanced cancer",
+  "year": 2017,
+  "notes": "Cannabis Oil Capsules for Cancer Symptom Management",
+  "confidence": "medium",
+  "abstract": "ITT: 24% vs 19% (NS); However, 33% achieved 50% pain reduction (vs 20% placebo, p=0.03)"
+}

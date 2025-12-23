@@ -1,0 +1,12 @@
+{
+  "compound": "NIDA cannabis cigarettes",
+  "condition": "GLAUCOMA",
+  "effect_size": "N/A (case study)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:GLAUCOMA_OBSERVATIONAL_001",
+  "participants": "Robert Randall case (IND patient 1978-2001)",
+  "year": 1998,
+  "notes": "Long-Term Cannabis Use for Glaucoma: 20-Year Case Series",
+  "confidence": "medium",
+  "abstract": "Maintained IOP control for 20+ years; Vision preserved beyond expected progression; First medical cannabis IND granted"
+}

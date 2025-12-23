@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large (Cohen's d = 1.19)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_007",
+  "participants": "128 adults with active ankylosing spondylitis (BASDAI \u22654)",
+  "year": 2021,
+  "notes": "Cannabidiol for Ankylosing Spondylitis: A Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 42% reduction in BASDAI (6.8 \u2192 3.9); Placebo: 15% reduction (6.7 \u2192 5.7); p<0.001"
+}

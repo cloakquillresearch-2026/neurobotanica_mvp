@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (Marinol)",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Non-inferior (OR = 1.37, 95% CI: 0.68-2.81)",
+  "study_type": "RCT",
+  "source": "NORML:CINV_RCT_001",
+  "participants": "64 patients receiving moderately emetogenic chemotherapy",
+  "year": 2007,
+  "notes": "Dronabinol vs Ondansetron for Chemotherapy-Induced Nausea: Head-to-Head RCT",
+  "confidence": "medium",
+  "abstract": "Dronabinol: 71% complete response vs Ondansetron: 64% vs Combination: 78%; Dronabinol non-inferior to ondansetron"
+}

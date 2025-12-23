@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Large (d = 0.89)",
+  "study_type": "RCT",
+  "source": "NORML:CANCER_RCT_006",
+  "participants": "23 patients with advanced cancer and insomnia",
+  "year": 2019,
+  "notes": "Medical Cannabis for Cancer-Related Insomnia",
+  "confidence": "medium",
+  "abstract": "Nabiximols: ISI reduced 8.2 points vs Placebo: 3.1 points (p<0.05); 70% achieved clinically meaningful improvement"
+}

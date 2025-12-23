@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Medium (OR = 0.42)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:IBD_OBSERVATIONAL_004",
+  "participants": "95 Crohn's patients (43 cannabis users, 52 non-users)",
+  "year": 2014,
+  "notes": "Cannabis and Need for Surgery in Crohn's Disease: Retrospective Analysis",
+  "confidence": "medium",
+  "abstract": "Cannabis users: 23% surgery vs Non-users: 42% surgery (p<0.05); NNT = 5 to prevent one surgery"
+}

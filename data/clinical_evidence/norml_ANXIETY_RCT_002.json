@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "randomized_controlled_trial",
+  "source": "NORML:ANXIETY_RCT_002",
+  "participants": null,
+  "year": null,
+  "notes": "Neural Basis of Anxiolytic Effects of Cannabidiol (CBD) in Generalized Social Anxiety Disorder: A Preliminary Report",
+  "confidence": "medium",
+  "abstract": ""
+}

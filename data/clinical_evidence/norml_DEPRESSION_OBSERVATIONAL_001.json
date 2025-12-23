@@ -1,0 +1,12 @@
+{
+  "compound": "CBD-dominant products (CBD:THC ratio >20:1)",
+  "condition": "DEPRESSION",
+  "effect_size": "Moderate (eta-squared = 0.31)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_001",
+  "participants": "1,847 patients with depression diagnosis using CBD products",
+  "year": 2020,
+  "notes": "Real-world evidence of cannabidiol use for depression: Results from a large patient registry",
+  "confidence": "medium",
+  "abstract": "68% reported moderate-to-significant improvement; mean symptom reduction from 7.2 to 3.9 (46% decrease)"
+}

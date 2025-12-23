@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 0.91)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_005",
+  "participants": "24 adults with depression and prominent anhedonia (SHAPS score \u226520)",
+  "year": 2020,
+  "notes": "Effects of Cannabidiol on Anhedonia: A Double-Blind Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD significantly reduced anhedonia scores at 2-3 hours post-dose (35% reduction); placebo: 8% reduction"
+}

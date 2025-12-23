@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol 2.5mg BID",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Medium for LBM",
+  "study_type": "RCT",
+  "source": "NORML:CACHEXIA_RCT_009",
+  "participants": "82 patients (dronabinol arm)",
+  "year": 2016,
+  "notes": "Anamorelin vs Dronabinol in Cancer Cachexia: Head-to-Head",
+  "confidence": "medium",
+  "abstract": "Dronabinol: LBM +1.8 kg; Handgrip stable; Appetite improved; Different mechanism than ghrelin agonist"
+}

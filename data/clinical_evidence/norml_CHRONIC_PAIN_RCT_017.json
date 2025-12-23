@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_017",
+  "participants": null,
+  "year": null,
+  "notes": "A randomized trial of medical cannabis patients with stage IV cancers to assess feasibility, dose requirements, impact on pain and opioid use, safety, and overall patient satisfaction",
+  "confidence": "medium",
+  "abstract": ""
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "THC (dronabinol)",
+  "condition": "PTSD",
+  "effect_size": "Significant neural effects",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:PTSD_MECHANISTIC_001",
+  "participants": "29 healthy adults (mechanistic)",
+  "year": 2013,
+  "notes": "Endocannabinoid System and Fear Extinction: Implications for PTSD",
+  "confidence": "medium",
+  "abstract": "THC enhanced fear extinction recall; Reduced amygdala reactivity to extinguished fear cues; vmPFC-amygdala connectivity enhanced"
+}

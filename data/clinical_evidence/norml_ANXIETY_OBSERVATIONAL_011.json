@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ANXIETY",
+  "effect_size": "Large (Cohen's d = 0.94)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ANXIETY_OBSERVATIONAL_011",
+  "participants": "53 children with autism spectrum disorder (ages 5-18) experiencing severe anxiety",
+  "year": 2019,
+  "notes": "Cannabidiol for Anxiety in Autism Spectrum Disorder: Observational Study",
+  "confidence": "medium",
+  "abstract": "61% of participants showed significant anxiety improvement (PARS reduction \u226525%); mean PARS score reduced from 18.4 to 10.7"
+}

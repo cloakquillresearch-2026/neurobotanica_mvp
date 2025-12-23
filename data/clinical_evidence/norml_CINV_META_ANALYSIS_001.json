@@ -1,0 +1,12 @@
+{
+  "compound": "Various (dronabinol, nabilone, nabiximols)",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Large vs placebo (OR = 3.82)",
+  "study_type": "META_ANALYSIS",
+  "source": "NORML:CINV_META_ANALYSIS_001",
+  "participants": "28 trials (N=1,772 patients)",
+  "year": 2015,
+  "notes": "Meta-Analysis of Cannabinoids vs Standard Antiemetics for CINV",
+  "confidence": "medium",
+  "abstract": "Cannabinoids vs placebo: OR = 3.82 (95% CI: 1.55-9.42, p=0.004); Cannabinoids vs conventional antiemetics: comparable efficacy"
+}

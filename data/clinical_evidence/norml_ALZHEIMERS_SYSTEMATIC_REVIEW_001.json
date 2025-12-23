@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabinoids (dronabinol)",
+  "condition": "ALZHEIMERS",
+  "effect_size": "Promising signals",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:ALZHEIMERS_SYSTEMATIC_REVIEW_001",
+  "participants": "Limited studies at time of review",
+  "year": 2009,
+  "notes": "Cannabinoids for Dementia: Cochrane Systematic Review",
+  "confidence": "medium",
+  "abstract": "Insufficient evidence for firm conclusions; dronabinol shows promise for behavioral symptoms; more RCTs needed"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "EPILEPSY",
+  "effect_size": "N/A (mechanistic)",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:EPILEPSY_MECHANISTIC_001",
+  "participants": "Mechanistic review",
+  "year": 2015,
+  "notes": "CBD Mechanism of Action in Epilepsy: Multi-Target Effects",
+  "confidence": "medium",
+  "abstract": "Multiple mechanisms: GPR55 antagonism; TRPV1 desensitization; adenosine reuptake inhibition; 5-HT1A agonism; novel target profile"
+}

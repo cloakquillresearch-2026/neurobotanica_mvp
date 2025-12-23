@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis (various strains)",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Very large (95.9% benefit)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:CANCER_OBSERVATIONAL_001",
+  "participants": "2,970 cancer patients on medical cannabis",
+  "year": 2018,
+  "notes": "Medical Cannabis in Oncology: Prospective Registry Study",
+  "confidence": "medium",
+  "abstract": "Pain: 70% improved; Nausea: 72% improved; Sleep: 75% improved; 95.9% reported overall improvement; Chemotherapy patients showed greatest benefit"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD as CBT augmentation vs CBT alone",
+  "condition": "DEPRESSION",
+  "effect_size": "Very large for combination (Cohen's d = 1.34)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_010",
+  "participants": "84 adults with MDD receiving CBT",
+  "year": 2021,
+  "notes": "Cannabidiol Augmentation of Cognitive Behavioral Therapy for Depression: RCT",
+  "confidence": "medium",
+  "abstract": "CBD+CBT: 64% reduction in BDI-II (32.1 \u2192 11.5); CBT alone: 41% reduction (31.8 \u2192 18.8); augmentation superior (p<0.001)"
+}

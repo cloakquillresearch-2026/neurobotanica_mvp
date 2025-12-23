@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:CHRONIC_PAIN_OBSERVATIONAL_005",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabis as a substitute for opioid-based pain medication: Patient self-report",
+  "confidence": "medium",
+  "abstract": ""
+}

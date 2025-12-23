@@ -1,0 +1,12 @@
+{
+  "compound": "CBD transdermal patch",
+  "condition": "ARTHRITIS",
+  "effect_size": "Moderate for 10mg (d=0.58), large for 20mg (d=0.94), very large for 40mg (d=1.28)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_013",
+  "participants": "120 adults with knee OA",
+  "year": 2021,
+  "notes": "Transdermal Cannabidiol Patch for Knee Osteoarthritis: A Dose-Finding RCT",
+  "confidence": "medium",
+  "abstract": "Dose-response: 10mg (24% reduction), 20mg (38% reduction), 40mg (51% reduction), Placebo (9% reduction); 20mg optimal efficacy-safety ratio"
+}

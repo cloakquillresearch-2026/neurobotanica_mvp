@@ -1,0 +1,12 @@
+{
+  "compound": "CBD (100mg) + Low-dose naltrexone (4.5mg)",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Large (OR = 4.88)",
+  "study_type": "RCT",
+  "source": "NORML:IBD_RCT_005",
+  "participants": "40 patients with moderate Crohn's",
+  "year": 2013,
+  "notes": "Low-Dose Naltrexone Plus CBD for Crohn's Disease",
+  "confidence": "medium",
+  "abstract": "Combination: 75% response vs Placebo: 38% (p<0.01); 50% achieved remission"
+}

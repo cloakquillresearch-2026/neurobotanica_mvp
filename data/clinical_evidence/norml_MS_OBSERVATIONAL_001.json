@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (THC:CBD 1:1)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Sustained response (OR = 2.8 for continuation)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:MS_OBSERVATIONAL_001",
+  "participants": "1,534 MS patients on nabiximols (national registry)",
+  "year": 2017,
+  "notes": "Long-Term Safety and Effectiveness of Nabiximols in MS: Italian Registry",
+  "confidence": "medium",
+  "abstract": "68% responders maintained at 12 months; 72% continued therapy; no tolerance development; effectiveness sustained"
+}

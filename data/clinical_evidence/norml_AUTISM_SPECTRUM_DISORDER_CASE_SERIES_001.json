@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AUTISM_SPECTRUM_DISORDER",
+  "effect_size": "none",
+  "study_type": "case_series",
+  "source": "NORML:AUTISM_SPECTRUM_DISORDER_CASE_SERIES_001",
+  "participants": null,
+  "year": null,
+  "notes": "A pediatric patient with autism spectrum disorder and epilepsy using cannabinoid extract as complementary therapy: A case report",
+  "confidence": "medium",
+  "abstract": ""
+}

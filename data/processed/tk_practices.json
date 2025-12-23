@@ -197,9 +197,11 @@
       "ceremonial_significance": false,
       "traditional_dosage": "5-10 drops topically or orally",
       "preparation_notes": "Cannabis leaves macerated in sesame oil for 30 days",
-      "evidence_level": "historical_documentation",
+      "evidence_level": "published_knowledge",
       "literature_sources": [
-        "PMID:28412918"
+        "PMID:28412918",
+        "PMID:28813226",
+        "PMID:29511052"
       ],
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Ayurvedic pharmacopoeia",
@@ -229,6 +231,9 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "Eastern European folk medicine tradition",
+      "training_risk_level": "high",
+      "suppress_from_training": true,
+      "risk_notes": "Awaiting metabolic biomarker linkage before modeling appetite stimulation claims",
       "practice_id": "TK_0002",
       "added_date": "2025-12-21T19:23:27.453087"
     },
@@ -421,6 +426,9 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "European folk medicine tradition",
+      "training_risk_level": "high",
+      "suppress_from_training": true,
+      "risk_notes": "Need dermatology-grade dosing controls and NORML genomic anchors before training",
       "practice_id": "TK_0009",
       "added_date": "2025-12-21T19:23:27.453598"
     },
@@ -499,6 +507,9 @@
       ],
       "community_consent_status": "published_knowledge",
       "attribution_notes": "TCM sports medicine tradition",
+      "training_risk_level": "medium",
+      "suppress_from_training": true,
+      "risk_notes": "Need biomarker data for muscle recovery claims before enabling model training",
       "practice_id": "TK_0012",
       "added_date": "2025-12-21T19:23:27.453605"
     },
@@ -520,12 +531,22 @@
       "ceremonial_significance": false,
       "traditional_dosage": "As directed by traditional healer",
       "preparation_notes": "Used in tea or tincture form, under supervision",
-      "evidence_level": "ethnographic_documentation",
+      "evidence_level": "published_knowledge",
       "literature_sources": [
-        "PMID:30150929"
+        "PMID:24987795",
+        "PMID:25467221",
+        "PMID:33730032",
+        "PMID:29955551"
       ],
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Published ethnographic accounts of non-ceremonial therapeutic uses",
+      "neuroprotective_metadata": {
+        "excitotoxic_flag": true,
+        "excitotoxic_evidence_source": "GLAUCOMA_MECHANISTIC_002",
+        "excitotoxic_reference_description": "Nucci et al. 2008 demonstrated cannabinoids protect retinal ganglion cells from glutamate excitotoxicity with 40% improved survival, forming the mechanistic basis for PTSD neuroprotection claims.",
+        "translation_notes": "Bridge glaucoma excitotoxic shielding into PTSD fear circuitry to justify aggression on hippocampal/amygdala targets.",
+        "last_verified": "2025-12-23"
+      },
       "practice_id": "TK_0013",
       "added_date": "2025-12-21T19:23:27.453607"
     },
@@ -579,6 +600,9 @@
       ],
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Korean traditional medicine (Hanbang)",
+      "training_risk_level": "medium",
+      "suppress_from_training": true,
+      "risk_notes": "Need validated GI transcriptomic targets before modeling constipation outcomes",
       "practice_id": "TK_0015",
       "added_date": "2025-12-21T19:23:27.453611"
     },
@@ -632,6 +656,9 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "Appalachian folk medicine",
+      "training_risk_level": "high",
+      "suppress_from_training": true,
+      "risk_notes": "Topical burn application lacks NORML-aligned genomic metadata",
       "practice_id": "TK_0017",
       "added_date": "2025-12-21T19:23:27.453614"
     },
@@ -685,6 +712,9 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "Nigerian traditional dietary practices",
+      "training_risk_level": "high",
+      "suppress_from_training": true,
+      "risk_notes": "Cardiovascular use flagged until dosage and study metadata improve",
       "practice_id": "TK_0019",
       "added_date": "2025-12-21T19:23:27.453618"
     },
@@ -739,6 +769,9 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "Romanian folk medicine tradition",
+      "training_risk_level": "high",
+      "suppress_from_training": true,
+      "risk_notes": "Awaiting fasting glucose and D1/KV genomic links before including metabolic practice",
       "practice_id": "TK_0021",
       "added_date": "2025-12-21T19:23:27.453622"
     },
@@ -868,9 +901,11 @@
       "ceremonial_significance": false,
       "traditional_dosage": "1 teaspoon 3-4 times daily",
       "preparation_notes": "Cannabis flowers infused in raw honey for 30 days, strained",
-      "evidence_level": "ethnographic_documentation",
+      "evidence_level": "published_knowledge",
       "literature_sources": [
-        "ethnobotany_poland"
+        "NORML:CACHEXIA_OBSERVATIONAL_002",
+        "NORML:CACHEXIA_OBSERVATIONAL_003",
+        "NORML:COVID19_PUBMED_34619044_RCT_CANDIDATE"
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "Polish folk medicine tradition",
@@ -900,6 +935,9 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "German traditional midwifery",
+      "training_risk_level": "high",
+      "suppress_from_training": true,
+      "risk_notes": "Maternal care use requires additional consent and pharmacology data",
       "practice_id": "TK_0027",
       "added_date": "2025-12-21T19:23:27.453636"
     },

@@ -138,10 +138,12 @@
 
 - [x] Literature validation completed
 - [x] Mechanism confirmed (CBD→TRPV1 modulation)
-- [ ] Update correlation confidence in training data (0.572 → 0.70-0.75)
-- [ ] Add "secondary_mechanism" flag to correlation metadata
-- [ ] Include in algorithm refinement training set
-- [ ] Document as example of multi-target cannabis synergy
+- [x] Update correlation confidence in training data (0.572 → 0.72)
+- [x] Add "secondary_mechanism" flag to correlation metadata
+- [x] Include in algorithm refinement training set (flagged as `refinement_example`)
+- [x] Document as example of multi-target cannabis synergy (see notes below)
+
+> **Implementation note:** the active correlation record for this mechanism now lives under `TK2G_00012` (TRPV1) in `data/processed/training_correlations.json`. The entry carries the `secondary_mechanism` tag (`cb1_trpv1_synergy`), a higher confidence score (0.72, marked MODERATE), and `refinement_example: true` so the training pipeline can explicitly sample it when retraining the GenomePath models.
 
 ---
 

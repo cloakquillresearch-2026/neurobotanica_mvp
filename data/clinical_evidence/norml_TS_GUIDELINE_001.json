@@ -1,0 +1,12 @@
+{
+  "compound": "THC, cannabinoids",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:TS_GUIDELINE_001",
+  "participants": "Evidence-based guideline",
+  "year": 2011,
+  "notes": "European Guidelines for Tourette Syndrome: Cannabis Section",
+  "confidence": "medium",
+  "abstract": "THC recommended as third-line treatment for adults with treatment-resistant TS; Evidence level B; Benefits outweigh risks in refractory cases"
+}

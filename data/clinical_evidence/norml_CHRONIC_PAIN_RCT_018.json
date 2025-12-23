@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_018",
+  "participants": null,
+  "year": null,
+  "notes": "Sativex: a randomized controlled trial of nabiximols in the treatment of spasticity in MS patients",
+  "confidence": "medium",
+  "abstract": ""
+}

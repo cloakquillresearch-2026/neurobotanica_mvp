@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis use patterns",
+  "condition": "INSOMNIA",
+  "effect_size": "Non-linear relationship",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:INSOMNIA_OBSERVATIONAL_003",
+  "participants": "1,811 adults (longitudinal cohort)",
+  "year": 2019,
+  "notes": "Cannabis Use and Sleep Quality: Longitudinal Study",
+  "confidence": "medium",
+  "abstract": "Occasional use associated with better sleep outcomes than daily or non-use; Moderate use pattern optimal; Daily use showed tolerance"
+}

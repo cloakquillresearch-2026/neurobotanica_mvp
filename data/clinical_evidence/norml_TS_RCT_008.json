@@ -1,0 +1,12 @@
+{
+  "compound": "Vaporized cannabis products (THC 10%, THC/CBD 9%/9%, CBD 13%)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Mixed (primary negative; secondary positive)",
+  "study_type": "RCT",
+  "source": "NORML:TS_RCT_008",
+  "participants": "12 adults randomized; 9 completed (crossover)",
+  "year": 2023,
+  "notes": "A Double-Blind, Randomized, Controlled Crossover Trial of Cannabis in Adults with Tourette Syndrome",
+  "confidence": "medium",
+  "abstract": "No statistically significant product effect on MRVTRS; THC 10% (and to a lesser extent THC/CBD 9%/9%) improved secondary outcomes (premonitory urge/distress/global improvement) vs placebo"
+}

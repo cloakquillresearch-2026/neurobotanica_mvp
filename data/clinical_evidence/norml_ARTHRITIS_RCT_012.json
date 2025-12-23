@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large (Cohen's d = 1.14)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_012",
+  "participants": "148 adults with fibromyalgia (ACR 2016 criteria)",
+  "year": 2020,
+  "notes": "Cannabidiol for Fibromyalgia Pain: A Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 41% reduction in FIQ (68.3 \u2192 40.3); Placebo: 16% reduction (67.8 \u2192 57.0); p<0.001"
+}

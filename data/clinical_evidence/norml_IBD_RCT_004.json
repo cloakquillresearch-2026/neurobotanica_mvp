@@ -1,0 +1,12 @@
+{
+  "compound": "CBD-rich cannabis extract",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Small for remission (d = 0.08)",
+  "study_type": "RCT",
+  "source": "NORML:IBD_RCT_004",
+  "participants": "60 patients with active ulcerative colitis",
+  "year": 2018,
+  "notes": "Cannabis for Ulcerative Colitis: Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "Cannabis: 28% remission vs Placebo: 26%; Not significant for remission but 59% had clinical response"
+}

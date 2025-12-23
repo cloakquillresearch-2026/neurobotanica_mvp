@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (Marinol)",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Very large for appetite (d = 1.45)",
+  "study_type": "RCT",
+  "source": "NORML:CACHEXIA_RCT_001",
+  "participants": "139 HIV patients with AIDS wasting syndrome",
+  "year": 1995,
+  "notes": "Dronabinol for AIDS Wasting Syndrome: FDA Pivotal Trial",
+  "confidence": "medium",
+  "abstract": "Dronabinol: Appetite improved 38% vs Placebo: -8% (p<0.001); Weight: +0.1 kg/week vs -0.4 kg/week placebo; Prevented wasting"
+}

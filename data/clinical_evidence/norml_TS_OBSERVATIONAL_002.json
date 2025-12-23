@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis (prescription)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Large (82% benefit)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:TS_OBSERVATIONAL_002",
+  "participants": "64 German TS patients on cannabis",
+  "year": 2013,
+  "notes": "Medical Cannabis for Tourette Syndrome: German Retrospective Study",
+  "confidence": "medium",
+  "abstract": "82% reported substantial tic reduction; 75% improved daily functioning; 68% reduced other psychiatric medications"
+}

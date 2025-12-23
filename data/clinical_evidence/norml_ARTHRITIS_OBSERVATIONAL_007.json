@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large protective effect (Cohen's d = 1.18 for radiographic stability)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_007",
+  "participants": "318 RA patients using CBD long-term (\u226512 months)",
+  "year": 2021,
+  "notes": "Cannabidiol and Disease-Modifying Effects in Rheumatoid Arthritis: Longitudinal Study",
+  "confidence": "medium",
+  "abstract": "CBD users: Mean Sharp score increase 1.2 units vs historical controls: 4.8 units (75% less progression); sustained low disease activity in 69%"
+}

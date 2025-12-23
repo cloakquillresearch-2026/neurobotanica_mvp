@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "N/A (safety review)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:DEPRESSION_SYSTEMATIC_REVIEW_002",
+  "participants": "43 studies reviewed (depression-specific analysis)",
+  "year": 2017,
+  "notes": "Safety and Side Effects of Cannabidiol in Depression Treatment: Systematic Review",
+  "confidence": "medium",
+  "abstract": "Excellent safety profile; no serious adverse events attributed to CBD; well-tolerated even at high doses (1,500mg/day)"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol vs Megestrol vs Combination",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Medium for dronabinol (49% response)",
+  "study_type": "RCT",
+  "source": "NORML:CANCER_RCT_003",
+  "participants": "469 patients with cancer anorexia/cachexia",
+  "year": 2002,
+  "notes": "Dronabinol for Cancer Anorexia: Phase III Trial",
+  "confidence": "medium",
+  "abstract": "Appetite: Dronabinol 49% vs Megestrol 75% vs Combination 66%; Megestrol superior for appetite, but dronabinol had fewer side effects"
+}

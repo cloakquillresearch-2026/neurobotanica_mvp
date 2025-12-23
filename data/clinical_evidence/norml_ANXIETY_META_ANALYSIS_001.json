@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "systematic_review",
+  "source": "NORML:ANXIETY_META_ANALYSIS_001",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabinoids for Anxiety Disorders: A Meta-Analysis of Clinical Trials",
+  "confidence": "medium",
+  "abstract": ""
+}

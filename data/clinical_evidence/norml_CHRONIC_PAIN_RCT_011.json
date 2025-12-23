@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_011",
+  "participants": null,
+  "year": null,
+  "notes": "The pharmacokinetics, efficacy, safety, and ease of use of a novel selective-dose inhaler in patients with chronic pain: A randomized, double-blinded, placebo-controlled trial",
+  "confidence": "medium",
+  "abstract": ""
+}

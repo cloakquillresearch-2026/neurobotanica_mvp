@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (synthetic THC)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Null overall; large in subgroup (HR = 0.56)",
+  "study_type": "RCT",
+  "source": "NORML:MS_RCT_010",
+  "participants": "498 patients with primary or secondary progressive MS",
+  "year": 2013,
+  "notes": "Cannabinoids for Progressive MS: Neuroprotection Trial",
+  "confidence": "medium",
+  "abstract": "No significant difference in primary endpoint (HR = 0.92, p=0.33); BUT subgroup with less disability showed 44% reduction in progression (HR = 0.56, p=0.01)"
+}

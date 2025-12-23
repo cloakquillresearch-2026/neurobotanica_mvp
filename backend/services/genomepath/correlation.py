@@ -12,7 +12,7 @@ Core Capabilities:
 """
 
 from enum import Enum
-from typing import Dict, List, Optional, Tuple, Any
+from typing import Dict, List, Optional, Tuple, Any, Set
 from pydantic import BaseModel, Field
 from datetime import datetime
 import uuid
@@ -193,11 +193,24 @@ class TKGenomicCorrelator:
         "depression": ["5-HT1A", "5-HT2A", "BDNF", "CB1"],
         "seizure": ["GABA-A", "NMDA", "voltage-gated sodium channels"],
         "neuroprotection": ["CB2", "BDNF", "NGF", "antioxidant pathways"],
+        "alzheimers": ["APP", "BACE1", "PSEN1", "APOE", "GSK3B", "BDNF", "amyloid pathways"],
+        "dementia": ["APP", "BACE1", "PSEN1", "microglial activation pathways", "CB2"],
+        "cognitive_decline": ["BDNF", "NGF", "synaptic plasticity pathways", "APP"],
+        "parkinsons": ["SNCA", "PARK2", "LRRK2", "DRD2", "DRD3"],
+        "tremor": ["SNCA", "PARK2", "DRD2", "GABRA1"],
+        "rigidity": ["SNCA", "PARK2", "DRD2"],
+        "bradykinesia": ["SNCA", "PARK2", "LRRK2"],
         
         # Sleep & sedation
         "insomnia": ["GABA-A", "melatonin receptors", "adenosine A1"],
         "sedative": ["GABA-A", "5-HT2A", "histamine H1"],
         
+        # Stress & trauma
+        "ptsd": ["CRHR1", "CRHR2", "NR3C1", "FKBP5", "BDNF"],
+        "trauma": ["CRHR1", "CRHR2", "NR3C1"],
+        "nightmares": ["CRHR1", "CRHR2", "5-HT2A", "BDNF"],
+        "hypervigilance": ["CRHR1", "NR3C1", "FKBP5"],
+
         # Appetite & metabolism
         "appetite": ["CB1", "ghrelin", "leptin", "NPY"],
         "nausea": ["5-HT3", "CB1", "dopamine D2"],
@@ -210,6 +223,118 @@ class TKGenomicCorrelator:
         # Cancer & cell proliferation
         "anticancer": ["apoptosis pathways", "cell cycle checkpoints", "CB2"],
         "antiproliferative": ["p53", "caspases", "EGFR"],
+    }
+
+    # ------------------------------------------------------------------
+    # Target guardrails: limit specific targets to validated indications
+    # ------------------------------------------------------------------
+    _TARGET_INDICATION_GUARDRAILS: Dict[str, Set[str]] = {
+        "ppar-gamma": {
+            "diabetes",
+            "metabolic_syndrome",
+            "insulin_resistance",
+            "obesity",
+            "appetite_cachexia",
+            "ibd_crohns",
+        },
+        "ppar-alpha": {
+            "diabetes",
+            "metabolic_syndrome",
+            "insulin_resistance",
+            "dyslipidemia",
+        },
+        "ppara": {
+            "diabetes",
+            "metabolic_syndrome",
+            "insulin_resistance",
+            "dyslipidemia",
+        },
+        "ampk": {
+            "diabetes",
+            "metabolic_syndrome",
+            "neuroprotection",
+            "muscle_recovery",
+            "fatigue",
+        },
+        "trpv1": {
+            "chronic_pain",
+            "neuropathic_pain",
+            "arthritis",
+            "pain_management",
+            "migraine",
+            "wound_healing",
+            "burns",
+        },
+        "cb1": {
+            "pain",
+            "chronic_pain",
+            "neuropathic_pain",
+            "arthritis",
+            "inflammation",
+            "analgesic",
+            "pain_management",
+            "migraine",
+            "sleep_disturbance",
+            "insomnia",
+            "sedative",
+        },
+        "cb2": {
+            "pain",
+            "chronic_pain",
+            "neuropathic_pain",
+            "arthritis",
+            "inflammation",
+            "analgesic",
+            "pain_management",
+            "migraine",
+            "sleep_disturbance",
+            "insomnia",
+            "sedative",
+            "immune_modulation",
+        },
+        "gaba-a": {
+            "anxiety",
+            "insomnia",
+            "sleep_disturbance",
+            "sedative",
+            "seizure",
+            "epilepsy",
+        },
+        "5-ht1a": {
+            "anxiety",
+            "depression",
+            "mood_disorders",
+            "sleep_disturbance",
+            "insomnia",
+        },
+        "bdnf": {
+            "neuroprotection",
+            "cognitive_decline",
+            "alzheimers",
+            "dementia",
+            "depression",
+            "ptsd",
+        },
+        "amyloid pathways": {
+            "alzheimers",
+            "dementia",
+            "cognitive_decline",
+            "neuroprotection",
+        },
+        "sodium channels": {
+            "seizure",
+            "epilepsy",
+            "neuropathic_pain",
+            "nerve_pain",
+            "neuralgia",
+        },
+        "voltage-gated sodium channels": {
+            "seizure",
+            "epilepsy",
+            "neuropathic_pain",
+            "nerve_pain",
+            "neuralgia",
+        },
     }
     
     # ==========================================================================
@@ -233,6 +358,8 @@ class TKGenomicCorrelator:
         CorrelationQuality.MODERATE: 0.60,
         CorrelationQuality.POOR: 0.0,
     }
+
+    _TISSUE_CONFIDENCE_FLOOR = 0.20
     
     def __init__(self):
         self._correlation_results: Dict[str, CorrelationResult] = {}
@@ -261,14 +388,23 @@ class TKGenomicCorrelator:
         predicted_targets = bridge_result.target_predictions
         confidence_scores = bridge_result.confidence_scores
         
+        normalized_indications = traditional_indications or []
+
         # Generate hypothesis for each target
         for target in predicted_targets:
+            if not self._target_allowed_for_indications(target, normalized_indications):
+                continue
+
             hypothesis = self._generate_genomic_hypothesis(
                 tk_vector=tk_vector,
                 target_gene_id=target,
                 base_confidence=confidence_scores.get(target, 0.5),
-                traditional_indications=traditional_indications or [],
+                traditional_indications=normalized_indications,
             )
+
+            if not hypothesis:
+                continue
+
             hypotheses.append(hypothesis)
             self._genomic_hypotheses[hypothesis.hypothesis_id] = hypothesis
         
@@ -301,7 +437,7 @@ class TKGenomicCorrelator:
         target_gene_id: str,
         base_confidence: float,
         traditional_indications: List[str],
-    ) -> GenomicHypothesis:
+    ) -> Optional[GenomicHypothesis]:
         """Generate single genomic hypothesis with confidence scoring."""
         # Identify target type
         target_type = self._classify_target_type(target_gene_id)
@@ -326,6 +462,11 @@ class TKGenomicCorrelator:
         tissue_conf = self._calculate_tissue_confidence(
             target_gene_id, tissue_expression, traditional_indications
         )
+
+        # Enforce a minimum tissue confidence before surfacing hypothesis
+        if tissue_conf < self._TISSUE_CONFIDENCE_FLOOR:
+            return None
+
         pathway_conf = self._calculate_pathway_confidence(
             target_gene_id, pathways
         )
@@ -370,6 +511,28 @@ class TKGenomicCorrelator:
         )
         
         return hypothesis
+
+    def _target_allowed_for_indications(
+        self,
+        target_gene_id: str,
+        indications: List[str],
+    ) -> bool:
+        """Ensure sensitive targets only pair with validated indications."""
+        guardrails = self._TARGET_INDICATION_GUARDRAILS.get(target_gene_id.lower())
+        if not guardrails:
+            return True
+        normalized = self._normalize_indications(indications)
+        return bool(guardrails.intersection(normalized))
+
+    def _normalize_indications(self, indications: List[str]) -> Set[str]:
+        """Normalize indication strings for guardrail comparisons."""
+        normalized: Set[str] = set()
+        for indication in indications or []:
+            base = indication.strip().lower().replace("-", " ")
+            normalized.add(base)
+            normalized.add(base.replace(" ", "_"))
+            normalized.update(part for part in base.split() if part)
+        return normalized
     
     def _classify_target_type(self, target_gene_id: str) -> GenomicTargetType:
         """Classify genomic target type."""
@@ -419,6 +582,10 @@ class TKGenomicCorrelator:
         # Target-specific patterns
         if target_gene_id in ["CB1", "GABA-A", "5-HT1A"]:
             tissues.extend(["brain", "CNS"])
+        if target_gene_id in ["CRHR1", "CRHR2"]:
+            tissues.extend(["amygdala", "hypothalamus", "pituitary"])
+        if target_gene_id in ["5-HT2A", "5-HT2C"]:
+            tissues.extend(["prefrontal cortex", "amygdala", "cortex"])
         if target_gene_id in ["CB2", "TNF-alpha", "IL-6"]:
             tissues.extend(["immune cells", "spleen"])
         if target_gene_id in ["COX2", "TRPV1"]:
@@ -430,6 +597,16 @@ class TKGenomicCorrelator:
             tissues.append("peripheral nerves")
         if "brain" in indication_lower or "neuro" in indication_lower:
             tissues.append("brain")
+        if any(term in indication_lower for term in ["alzheimers", "dementia", "cognitive"]):
+            tissues.extend(["hippocampus", "cerebral cortex", "microglia"])
+        if any(term in indication_lower for term in ["seizure", "epilepsy"]):
+            tissues.extend(["hippocampus", "temporal cortex", "thalamus"])
+        if "neuropath" in indication_lower or "nerve" in indication_lower:
+            tissues.append("dorsal root ganglia")
+        if "respiratory" in indication_lower or "bronch" in indication_lower or "cough" in indication_lower:
+            tissues.extend(["lung", "bronchial epithelium"])
+        if any(term in indication_lower for term in ["ptsd", "trauma", "nightmare", "hypervigilance", "stress"]):
+            tissues.extend(["amygdala", "hippocampus", "prefrontal cortex"])
         
         return list(set(tissues))[:5]  # Top 5 unique
     
@@ -464,12 +641,22 @@ class TKGenomicCorrelator:
             diseases.extend(["chronic pain", "neuropathic pain"])
         if "anxiety" in indication_lower:
             diseases.extend(["generalized anxiety disorder", "PTSD"])
+        if any(term in indication_lower for term in ["ptsd", "trauma", "nightmare", "hypervigilance", "stress"]):
+            diseases.extend([
+                "post-traumatic stress disorder",
+                "trauma-related stress disorders",
+                "nightmare disorder",
+            ])
         if "depression" in indication_lower:
             diseases.append("major depressive disorder")
         if "inflammation" in indication_lower:
             diseases.extend(["inflammatory bowel disease", "arthritis"])
         if "seizure" in indication_lower or "epilepsy" in indication_lower:
-            diseases.append("epilepsy")
+            diseases.extend(["epilepsy", "dravet syndrome", "lennox-gastaut syndrome"])
+        if any(term in indication_lower for term in ["alzheimers", "dementia", "cognitive"]):
+            diseases.extend(["alzheimer's disease", "alzheimer-type dementia", "mild cognitive impairment"])
+        if "respiratory" in indication_lower or "bronch" in indication_lower or "cough" in indication_lower:
+            diseases.extend(["chronic bronchitis", "airway inflammation"])
         
         return list(set(diseases))[:5]
     
@@ -487,8 +674,16 @@ class TKGenomicCorrelator:
         indication_lower = " ".join(indications).lower()
         if "brain" in tissue_expression and "neuro" in indication_lower:
             base_confidence += 0.15
+        if any(t in tissue_expression for t in ["hippocampus", "cerebral cortex"]) and any(term in indication_lower for term in ["alzheimers", "dementia", "cognitive"]):
+            base_confidence += 0.10
+        if any(t in tissue_expression for t in ["hippocampus", "temporal cortex", "thalamus"]) and any(term in indication_lower for term in ["seizure", "epilepsy"]):
+            base_confidence += 0.12
         if "immune" in " ".join(tissue_expression) and "inflammation" in indication_lower:
             base_confidence += 0.15
+        if any(t in tissue_expression for t in ["lung", "bronchial epithelium"]) and (
+            "respiratory" in indication_lower or "bronch" in indication_lower or "cough" in indication_lower
+        ):
+            base_confidence += 0.10
         
         return min(base_confidence, 0.95)
     
@@ -532,7 +727,21 @@ class TKGenomicCorrelator:
     ) -> float:
         """Calculate confidence based on literature support (simplified)."""
         # Well-known targets have higher confidence
-        well_known = ["CB1", "CB2", "COX2", "TRPV1", "5-HT1A", "GABA-A"]
+        well_known = [
+            "CB1",
+            "CB2",
+            "COX2",
+            "TRPV1",
+            "5-HT1A",
+            "5-HT2A",
+            "5-HT2C",
+            "GABA-A",
+            "NMDA",
+            "CRHR1",
+            "CRHR2",
+            "sodium channels",
+            "voltage-gated sodium channels",
+        ]
         if target_gene_id in well_known:
             return 0.80
         return 0.60

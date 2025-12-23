@@ -1,0 +1,12 @@
+{
+  "compound": "Oral THC",
+  "condition": "GLAUCOMA",
+  "effect_size": "Dose-dependent (18-28%)",
+  "study_type": "RCT",
+  "source": "NORML:GLAUCOMA_RCT_005",
+  "participants": "18 glaucoma patients",
+  "year": 1981,
+  "notes": "Oral Delta-9-THC for Glaucoma: Dose-Response Study",
+  "confidence": "medium",
+  "abstract": "5mg: 18% IOP reduction; 10mg: 24% IOP reduction; 20mg: 28% IOP reduction; Clear dose-response relationship"
+}

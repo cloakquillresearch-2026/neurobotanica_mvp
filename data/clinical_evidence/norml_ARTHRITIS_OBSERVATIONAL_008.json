@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large (Cohen's d = 0.96)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_008",
+  "participants": "584 arthritis patients (RA, OA, PsA) with sleep disturbance using CBD",
+  "year": 2020,
+  "notes": "Cannabidiol for Arthritis-Related Sleep Disturbance: Multi-Center Study",
+  "confidence": "medium",
+  "abstract": "73% achieved clinically meaningful sleep improvement (PSQI reduction \u22653 points); mean score 12.8 \u2192 6.2"
+}

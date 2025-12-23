@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "PARKINSONS",
+  "effect_size": "Large (d = 1.12)",
+  "study_type": "RCT",
+  "source": "NORML:PD_RCT_006",
+  "participants": "6 PD patients with psychosis",
+  "year": 2008,
+  "notes": "CBD for Psychosis in Parkinson's Disease: Randomized Trial",
+  "confidence": "medium",
+  "abstract": "BPRS: Significant reduction (p<0.05); PPQ: Significant reduction (p<0.05); Psychotic symptoms reduced without motor worsening"
+}

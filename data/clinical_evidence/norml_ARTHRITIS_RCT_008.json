@@ -1,0 +1,12 @@
+{
+  "compound": "CBD + MTX vs MTX alone",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large (RR = 1.58, 95% CI: 1.29-1.93)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_008",
+  "participants": "204 adults with early RA (<2 years duration, MTX-naive)",
+  "year": 2021,
+  "notes": "Cannabidiol Adjunctive to Methotrexate in Early Rheumatoid Arthritis: RCT",
+  "confidence": "medium",
+  "abstract": "CBD+MTX: 68% achieved ACR50 vs MTX alone: 43%; p<0.001; DAS28-CRP remission: 52% vs 29%"
+}

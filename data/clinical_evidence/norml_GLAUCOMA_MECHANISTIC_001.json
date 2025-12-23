@@ -1,0 +1,12 @@
+{
+  "compound": "N/A - receptor mapping study",
+  "condition": "GLAUCOMA",
+  "effect_size": "N/A (mechanistic)",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:GLAUCOMA_MECHANISTIC_001",
+  "participants": "Human and animal ocular tissue analysis",
+  "year": 1998,
+  "notes": "CB1 Receptor Distribution in Human Eye and IOP Regulation Mechanism",
+  "confidence": "medium",
+  "abstract": "CB1 receptors present in ciliary body, trabecular meshwork, retina; CB1 activation reduces aqueous humor production; Mechanism confirmed for IOP lowering"
+}

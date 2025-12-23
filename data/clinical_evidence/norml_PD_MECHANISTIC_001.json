@@ -1,0 +1,12 @@
+{
+  "compound": "Endocannabinoid system modulation",
+  "condition": "PARKINSONS",
+  "effect_size": "N/A (mechanistic)",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:PD_MECHANISTIC_001",
+  "participants": "Comprehensive mechanistic review",
+  "year": 2011,
+  "notes": "Endocannabinoid System in Basal Ganglia and Parkinson's Disease",
+  "confidence": "medium",
+  "abstract": "CB1 receptors dense in basal ganglia; CB1 antagonism may reduce L-DOPA dyskinesia; CB2 activation neuroprotective; Anandamide elevated in PD CSF"
+}

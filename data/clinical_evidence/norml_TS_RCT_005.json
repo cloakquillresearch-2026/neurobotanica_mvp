@@ -1,0 +1,12 @@
+{
+  "compound": "PEA + CBD combination",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Medium (d = 0.52)",
+  "study_type": "RCT",
+  "source": "NORML:TS_RCT_005",
+  "participants": "34 adults with TS",
+  "year": 2023,
+  "notes": "Palmitoylethanolamide (PEA) Plus CBD for Tourette Syndrome",
+  "confidence": "medium",
+  "abstract": "PEA+CBD: 28% tic reduction; Premonitory urges reduced; Non-psychoactive alternative showed promise"
+}

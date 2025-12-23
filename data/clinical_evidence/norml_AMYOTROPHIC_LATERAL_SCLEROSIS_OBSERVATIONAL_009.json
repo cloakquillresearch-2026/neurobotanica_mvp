@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AMYOTROPHIC_LATERAL_SCLEROSIS_OBSERVATIONAL_009",
+  "participants": null,
+  "year": null,
+  "notes": "Can cannabinoids be a potential therapeutic tool in amyotrophic lateral sclerosis?",
+  "confidence": "medium",
+  "abstract": ""
+}

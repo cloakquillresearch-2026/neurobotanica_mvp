@@ -1,0 +1,12 @@
+{
+  "compound": "CBD oral",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large (Cohen's d = 1.08)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_009",
+  "participants": "196 adults with symptomatic hip OA (ACR criteria)",
+  "year": 2021,
+  "notes": "Cannabidiol for Osteoarthritis Hip Pain: A Multicenter RCT",
+  "confidence": "medium",
+  "abstract": "CBD: 46% reduction in WOMAC pain (14.2 \u2192 7.7); Placebo: 19% reduction (14.0 \u2192 11.3); p<0.001"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (THC:CBD 1:1)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Large (Cohen's d = 0.84)",
+  "study_type": "RCT",
+  "source": "NORML:MS_RCT_001",
+  "participants": "572 MS patients with refractory spasticity",
+  "year": 2011,
+  "notes": "Sativex (Nabiximols) for Multiple Sclerosis Spasticity: Pivotal Phase III Trial",
+  "confidence": "medium",
+  "abstract": "Nabiximols: 74% responders (\u226530% improvement) vs Placebo: 51%; significant difference p<0.001"
+}

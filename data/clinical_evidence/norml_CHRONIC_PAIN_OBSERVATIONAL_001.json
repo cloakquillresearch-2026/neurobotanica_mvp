@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:CHRONIC_PAIN_OBSERVATIONAL_001",
+  "participants": null,
+  "year": null,
+  "notes": "Clinical outcome data of first cohort of chronic pain patients treated with cannabis-based sublingual oils in the United Kingdom - analysis from the UK Medical Cannabis Registry",
+  "confidence": "medium",
+  "abstract": ""
+}

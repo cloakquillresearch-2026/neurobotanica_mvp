@@ -1,0 +1,12 @@
+{
+  "compound": "CBD oral + topical gel",
+  "condition": "ARTHRITIS",
+  "effect_size": "Very large for pain (d=1.38), large for radiographic stability (d=1.12)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_015",
+  "participants": "108 adults with erosive hand OA (radiographic confirmation)",
+  "year": 2021,
+  "notes": "Cannabidiol for Erosive Hand Osteoarthritis: A Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: AUSCAN pain reduced 54% (11.2 \u2192 5.1), radiographic progression 0.4 units vs Placebo: pain reduced 18%, progression 1.8 units; p<0.001"
+}

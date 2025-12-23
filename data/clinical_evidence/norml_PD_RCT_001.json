@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "PARKINSONS",
+  "effect_size": "Medium for QoL (d = 0.62)",
+  "study_type": "RCT",
+  "source": "NORML:PD_RCT_001",
+  "participants": "21 PD patients without dementia",
+  "year": 2014,
+  "notes": "CBD for Parkinson's Disease Tremor and Motor Symptoms: Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD 300mg: Quality of life improved 26% vs Placebo (p<0.05); No significant motor improvement on UPDRS"
+}

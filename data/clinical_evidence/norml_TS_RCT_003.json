@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (THC:CBD)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Medium-large (d = 0.68)",
+  "study_type": "RCT",
+  "source": "NORML:TS_RCT_003",
+  "participants": "97 adults with Tourette syndrome / chronic tic disorders",
+  "year": 2023,
+  "notes": "Nabiximols for Tourette Syndrome: Phase II Trial (CANNA-TICS)",
+  "confidence": "medium",
+  "abstract": "Nabiximols: TTS reduced 14.0 vs Placebo: 5.6 (p=0.003); Highly significant; Effect maintained at 13 weeks"
+}

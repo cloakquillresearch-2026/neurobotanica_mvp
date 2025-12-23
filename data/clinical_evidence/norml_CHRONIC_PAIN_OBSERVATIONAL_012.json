@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:CHRONIC_PAIN_OBSERVATIONAL_012",
+  "participants": null,
+  "year": null,
+  "notes": "Association between county level cannabis dispensary counts and opioid related mortality rates in the United States: panel data study",
+  "confidence": "medium",
+  "abstract": ""
+}

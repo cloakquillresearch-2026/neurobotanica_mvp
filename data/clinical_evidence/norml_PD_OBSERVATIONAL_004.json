@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis",
+  "condition": "PARKINSONS",
+  "effect_size": "Variable by symptom",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:PD_OBSERVATIONAL_004",
+  "participants": "339 PD patients (25% cannabis users)",
+  "year": 2004,
+  "notes": "Neuroprotective Potential of Cannabis in Parkinson's: Longitudinal Study",
+  "confidence": "medium",
+  "abstract": "45.9% cannabis users reported symptom relief; Specific improvements: Rest tremor (30%), bradykinesia (44%), dyskinesia (14%)"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis, CBD",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Variable but generally favorable",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:IBD_SYSTEMATIC_REVIEW_001",
+  "participants": "3 RCTs (N=93 patients)",
+  "year": 2018,
+  "notes": "Cannabis and Cannabinoids for IBD: Cochrane Systematic Review",
+  "confidence": "medium",
+  "abstract": "Limited RCT data but promising signals; remission rates 40-45% vs 10-35% placebo in individual trials"
+}

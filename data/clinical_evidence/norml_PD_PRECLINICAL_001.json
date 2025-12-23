@@ -1,0 +1,12 @@
+{
+  "compound": "Various cannabinoids in animal models",
+  "condition": "PARKINSONS",
+  "effect_size": "N/A (preclinical review)",
+  "study_type": "PRECLINICAL_REVIEW",
+  "source": "NORML:PD_PRECLINICAL_001",
+  "participants": "Review of preclinical studies",
+  "year": 2016,
+  "notes": "Cannabinoid Neuroprotection in Parkinson's Disease Models: Comprehensive Review",
+  "confidence": "medium",
+  "abstract": "THC: Dopaminergic neuron protection in 6-OHDA and MPTP models; CBD: Anti-inflammatory, antioxidant; THCV: CB2 receptor-mediated protection"
+}

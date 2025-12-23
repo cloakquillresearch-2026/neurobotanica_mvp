@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_005",
+  "participants": null,
+  "year": null,
+  "notes": "Efficacy of inhaled cannabis on painful diabetic neuropathy",
+  "confidence": "medium",
+  "abstract": ""
+}

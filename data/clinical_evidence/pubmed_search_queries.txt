@@ -1,0 +1,279 @@
+# PubMed Search Queries - Clinical Evidence Expansion
+# Generated: 2025-12-23
+# Copy and paste these directly into PubMed Advanced Search
+
+
+================================================================================
+# THC
+================================================================================
+
+## HIGH PRIORITY - Systematic Reviews & Meta-Analyses
+
+1. chronic pain
+   ("delta-9-tetrahydrocannabinol"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+2. chronic pain
+   ("THC"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+3. chronic pain
+   ("dronabinol"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+4. neuropathic pain
+   ("delta-9-tetrahydrocannabinol"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+5. neuropathic pain
+   ("THC"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+6. neuropathic pain
+   ("dronabinol"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+7. cancer pain
+   ("delta-9-tetrahydrocannabinol"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+8. cancer pain
+   ("THC"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+9. cancer pain
+   ("dronabinol"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+10. PTSD
+   ("delta-9-tetrahydrocannabinol"[Title/Abstract] AND "PTSD"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+
+## MEDIUM PRIORITY - Randomized Controlled Trials
+
+1. chronic pain
+   ("delta-9-tetrahydrocannabinol"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+2. chronic pain
+   ("THC"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+3. chronic pain
+   ("dronabinol"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+4. neuropathic pain
+   ("delta-9-tetrahydrocannabinol"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+5. neuropathic pain
+   ("THC"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+
+================================================================================
+# CBD
+================================================================================
+
+## HIGH PRIORITY - Systematic Reviews & Meta-Analyses
+
+1. chronic pain
+   ("cannabidiol"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+2. chronic pain
+   ("CBD"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+3. chronic pain
+   ("epidiolex"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+4. neuropathic pain
+   ("cannabidiol"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+5. neuropathic pain
+   ("CBD"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+6. neuropathic pain
+   ("epidiolex"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+7. cancer pain
+   ("cannabidiol"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+8. cancer pain
+   ("CBD"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+9. cancer pain
+   ("epidiolex"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+10. PTSD
+   ("cannabidiol"[Title/Abstract] AND "PTSD"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+
+## MEDIUM PRIORITY - Randomized Controlled Trials
+
+1. chronic pain
+   ("cannabidiol"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+2. chronic pain
+   ("CBD"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+3. chronic pain
+   ("epidiolex"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+4. neuropathic pain
+   ("cannabidiol"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+5. neuropathic pain
+   ("CBD"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+
+================================================================================
+# CBN
+================================================================================
+
+## HIGH PRIORITY - Systematic Reviews & Meta-Analyses
+
+1. chronic pain
+   ("cannabinol"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+2. chronic pain
+   ("CBN"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+3. neuropathic pain
+   ("cannabinol"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+4. neuropathic pain
+   ("CBN"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+5. cancer pain
+   ("cannabinol"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+6. cancer pain
+   ("CBN"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+7. PTSD
+   ("cannabinol"[Title/Abstract] AND "PTSD"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+8. PTSD
+   ("CBN"[Title/Abstract] AND "PTSD"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+9. anxiety
+   ("cannabinol"[Title/Abstract] AND "anxiety"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+10. anxiety
+   ("CBN"[Title/Abstract] AND "anxiety"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+
+## MEDIUM PRIORITY - Randomized Controlled Trials
+
+1. chronic pain
+   ("cannabinol"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+2. chronic pain
+   ("CBN"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+3. neuropathic pain
+   ("cannabinol"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+4. neuropathic pain
+   ("CBN"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+5. cancer pain
+   ("cannabinol"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+
+================================================================================
+# CBG
+================================================================================
+
+## HIGH PRIORITY - Systematic Reviews & Meta-Analyses
+
+1. chronic pain
+   ("cannabigerol"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+2. chronic pain
+   ("CBG"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+3. neuropathic pain
+   ("cannabigerol"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+4. neuropathic pain
+   ("CBG"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+5. cancer pain
+   ("cannabigerol"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+6. cancer pain
+   ("CBG"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+7. PTSD
+   ("cannabigerol"[Title/Abstract] AND "PTSD"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+8. PTSD
+   ("CBG"[Title/Abstract] AND "PTSD"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+9. anxiety
+   ("cannabigerol"[Title/Abstract] AND "anxiety"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+10. anxiety
+   ("CBG"[Title/Abstract] AND "anxiety"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+
+## MEDIUM PRIORITY - Randomized Controlled Trials
+
+1. chronic pain
+   ("cannabigerol"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+2. chronic pain
+   ("CBG"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+3. neuropathic pain
+   ("cannabigerol"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+4. neuropathic pain
+   ("CBG"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+5. cancer pain
+   ("cannabigerol"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+
+================================================================================
+# THCV
+================================================================================
+
+## HIGH PRIORITY - Systematic Reviews & Meta-Analyses
+
+1. chronic pain
+   ("tetrahydrocannabivarin"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+2. chronic pain
+   ("THCV"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+3. neuropathic pain
+   ("tetrahydrocannabivarin"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+4. neuropathic pain
+   ("THCV"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+5. cancer pain
+   ("tetrahydrocannabivarin"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+6. cancer pain
+   ("THCV"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+7. PTSD
+   ("tetrahydrocannabivarin"[Title/Abstract] AND "PTSD"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+8. PTSD
+   ("THCV"[Title/Abstract] AND "PTSD"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+9. anxiety
+   ("tetrahydrocannabivarin"[Title/Abstract] AND "anxiety"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+10. anxiety
+   ("THCV"[Title/Abstract] AND "anxiety"[Title/Abstract] AND ("systematic review"[Publication Type] OR "meta-analysis"[Publication Type]))
+
+
+## MEDIUM PRIORITY - Randomized Controlled Trials
+
+1. chronic pain
+   ("tetrahydrocannabivarin"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+2. chronic pain
+   ("THCV"[Title/Abstract] AND "chronic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+3. neuropathic pain
+   ("tetrahydrocannabivarin"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+4. neuropathic pain
+   ("THCV"[Title/Abstract] AND "neuropathic pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+
+5. cancer pain
+   ("tetrahydrocannabivarin"[Title/Abstract] AND "cancer pain"[Title/Abstract] AND "randomized controlled trial"[Publication Type])
+

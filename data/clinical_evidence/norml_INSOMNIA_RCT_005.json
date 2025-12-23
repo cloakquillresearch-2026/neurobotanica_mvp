@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (Marinol)",
+  "condition": "INSOMNIA",
+  "effect_size": "Large for 10mg dose (32% AHI reduction)",
+  "study_type": "RCT",
+  "source": "NORML:INSOMNIA_RCT_005",
+  "participants": "73 patients with moderate-severe OSA",
+  "year": 2018,
+  "notes": "Dronabinol for Sleep Apnea: PACE Trial",
+  "confidence": "medium",
+  "abstract": "10mg dronabinol: AHI reduced 32% (p=0.02); Epworth Sleepiness Scale improved; Novel mechanism for OSA"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_020",
+  "participants": null,
+  "year": null,
+  "notes": "Efficacy of THC:CBD oromucosal spray in patients with peripheral neuropathic pain",
+  "confidence": "medium",
+  "abstract": ""
+}

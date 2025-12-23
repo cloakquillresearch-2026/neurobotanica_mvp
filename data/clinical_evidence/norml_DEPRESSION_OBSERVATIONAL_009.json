@@ -1,0 +1,12 @@
+{
+  "compound": "CBD maintenance therapy",
+  "condition": "DEPRESSION",
+  "effect_size": "Large protective effect (HR = 0.29, 95% CI: 0.21-0.41)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_009",
+  "participants": "412 patients with recurrent MDD in remission",
+  "year": 2020,
+  "notes": "Long-Term CBD Use and Depression Relapse Prevention: 2-Year Follow-up Study",
+  "confidence": "medium",
+  "abstract": "CBD maintenance: 23% relapse rate; Historical controls (no maintenance): 58% relapse rate (p<0.001)"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis/cannabinoids",
+  "condition": "ALZHEIMERS",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:ALZHEIMERS_GUIDELINE_001",
+  "participants": "Evidence-based guideline",
+  "year": 2019,
+  "notes": "Canadian Guidelines for Cannabis in Older Adults with Dementia",
+  "confidence": "medium",
+  "abstract": "Weak recommendation for cannabinoids in treatment-resistant dementia-related agitation; Start low, go slow; Monitor for sedation/falls"
+}

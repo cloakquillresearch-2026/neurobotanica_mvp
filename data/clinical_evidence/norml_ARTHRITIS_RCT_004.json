@@ -1,0 +1,12 @@
+{
+  "compound": "CBD transdermal gel",
+  "condition": "ARTHRITIS",
+  "effect_size": "Moderate for low dose (d=0.64), large for high dose (d=1.18)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_004",
+  "participants": "64 adults with inflammatory arthritis (RA or PsA)",
+  "year": 2016,
+  "notes": "Transdermal Cannabidiol for Inflammatory Arthritis: A Preclinical and Clinical Study",
+  "confidence": "medium",
+  "abstract": "Low dose (6.2mg): 31% pain reduction; High dose (62mg): 48% pain reduction; Placebo: 8% reduction; dose-dependent response"
+}

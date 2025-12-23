@@ -1,0 +1,12 @@
+{
+  "compound": "CBD vs Naproxen (NSAID) head-to-head",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large for both (CBD: d=1.22; Naproxen: d=1.09)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_011",
+  "participants": "224 adults with knee OA (Kellgren-Lawrence grade 2-3)",
+  "year": 2021,
+  "notes": "Cannabidiol vs Naproxen for Osteoarthritis: Non-Inferiority Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 47% reduction (58.3 \u2192 30.9); Naproxen: 43% reduction (57.8 \u2192 33.0); Non-inferiority proven (margin 10%, p=0.014)"
+}

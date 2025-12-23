@@ -1,0 +1,12 @@
+{
+  "compound": "Pharmaceutical-grade CBD (Epidiolex)",
+  "condition": "EPILEPSY",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:EPILEPSY_GUIDELINE_001",
+  "participants": "Evidence-based guideline",
+  "year": 2018,
+  "notes": "AAN/AES Practice Guideline: Cannabidiol for Treatment-Resistant Epilepsy",
+  "confidence": "medium",
+  "abstract": "Level B recommendation for adjunctive CBD in Dravet and LGS; Evidence sufficient for clinical use; Monitoring recommendations provided"
+}

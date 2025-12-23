@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis extract (2.5mg THC + 1mg CBD per capsule)",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Small (NS)",
+  "study_type": "RCT",
+  "source": "NORML:CACHEXIA_RCT_006",
+  "participants": "243 patients with cancer anorexia-cachexia",
+  "year": 2006,
+  "notes": "Cannabis Extract vs Placebo for Cancer Anorexia-Cachexia Syndrome",
+  "confidence": "medium",
+  "abstract": "ITT: No significant difference vs placebo; Per-protocol: Trend toward benefit; High placebo response rate noted"
+}

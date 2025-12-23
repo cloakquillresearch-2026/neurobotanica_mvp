@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (THC:CBD)",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Medium-large for both (d = 0.72 pain, d = 0.81 nausea)",
+  "study_type": "RCT",
+  "source": "NORML:CINV_RCT_007",
+  "participants": "199 cancer patients with pain and nausea",
+  "year": 2013,
+  "notes": "Cannabinoid-Opioid Combination for CINV and Cancer Pain",
+  "confidence": "medium",
+  "abstract": "Nabiximols: 43% pain response + 54% nausea improvement; Placebo: 21% pain + 26% nausea; dual benefit demonstrated"
+}

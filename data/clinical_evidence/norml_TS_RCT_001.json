@@ -1,0 +1,12 @@
+{
+  "compound": "THC (delta-9-THC)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Large (d = 0.84)",
+  "study_type": "RCT",
+  "source": "NORML:TS_RCT_001",
+  "participants": "12 adults with Tourette syndrome",
+  "year": 2002,
+  "notes": "THC for Tourette Syndrome: First Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "THC: Tic frequency reduced 35%; Tic severity reduced 41% (p<0.05); Global impression improved in 11/12 patients"
+}

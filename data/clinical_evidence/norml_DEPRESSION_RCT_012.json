@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Very large (Cohen's d = 1.29)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_012",
+  "participants": "58 adults with winter-pattern SAD (DSM-5 criteria)",
+  "year": 2020,
+  "notes": "Cannabidiol for Seasonal Affective Disorder (SAD): Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 56% reduction in SIGH-SAD scores (38.2 \u2192 16.8); Placebo: 21% reduction (37.9 \u2192 30.0); p<0.001"
+}

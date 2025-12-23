@@ -1,0 +1,12 @@
+{
+  "compound": "CBD various doses",
+  "condition": "DEPRESSION",
+  "effect_size": "Peak effect at 300-600mg (pooled SMD = 0.74); 150mg (SMD = 0.42); >600mg (SMD = 0.71)",
+  "study_type": "META_ANALYSIS",
+  "source": "NORML:DEPRESSION_META_ANALYSIS_003",
+  "participants": "31 studies with dose-outcome data (N=2,347 participants)",
+  "year": 2018,
+  "notes": "Cannabidiol Dose-Response Relationship in Depression: Meta-Regression Analysis",
+  "confidence": "medium",
+  "abstract": "Inverted U-curve confirmed: Optimal range 300-600mg/day; 150mg threshold for effect; no additional benefit above 600mg; low doses (<100mg) minimal effect"
+}

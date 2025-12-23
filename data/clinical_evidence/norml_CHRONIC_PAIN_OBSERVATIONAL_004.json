@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:CHRONIC_PAIN_OBSERVATIONAL_004",
+  "participants": null,
+  "year": null,
+  "notes": "Medical cannabis use is associated with decreased opiate medication use in a retrospective cross-sectional survey of patients with chronic pain",
+  "confidence": "medium",
+  "abstract": ""
+}

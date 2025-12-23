@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol, nabilone, levonantradol, nabiximols",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Large vs placebo (RR = 3.82); comparable to antiemetics",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:CINV_SYSTEMATIC_REVIEW_001",
+  "participants": "23 RCTs (N=1,772 patients)",
+  "year": 2015,
+  "notes": "Cannabinoids for Chemotherapy-Induced Nausea and Vomiting: Cochrane Review",
+  "confidence": "medium",
+  "abstract": "Cannabinoids superior to placebo: RR = 3.82 (95% CI: 1.55-9.42); Cannabinoids similar to conventional antiemetics: RR = 1.28 (95% CI: 0.89-1.84)"
+}

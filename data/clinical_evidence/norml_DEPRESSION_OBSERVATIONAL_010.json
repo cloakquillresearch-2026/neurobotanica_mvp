@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 0.87)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_010",
+  "participants": "628 elderly patients (\u226565 years) with depression",
+  "year": 2021,
+  "notes": "CBD for Depression in Elderly: Medicare Population Analysis",
+  "confidence": "medium",
+  "abstract": "53% achieved clinically meaningful improvement (\u22655 point reduction); mean GDS 11.2 \u2192 5.8"
+}

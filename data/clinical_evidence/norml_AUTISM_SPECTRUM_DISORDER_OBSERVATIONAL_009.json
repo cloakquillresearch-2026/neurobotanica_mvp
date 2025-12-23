@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AUTISM_SPECTRUM_DISORDER",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_009",
+  "participants": null,
+  "year": null,
+  "notes": "CBD-enriched cannabis for autism spectrum disorder: An experience of a single center in Turkey and reviews of the literature",
+  "confidence": "medium",
+  "abstract": ""
+}

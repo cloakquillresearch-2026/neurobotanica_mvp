@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_015",
+  "participants": null,
+  "year": null,
+  "notes": "Within-subject, double-blinded, randomized, and placebo-controlled evaluation of the combined effects of the cannabinoid dronabinol and the opioid hydromorphone in a human laboratory model",
+  "confidence": "medium",
+  "abstract": ""
+}

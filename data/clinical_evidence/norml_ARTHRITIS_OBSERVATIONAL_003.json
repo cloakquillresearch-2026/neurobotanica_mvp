@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large sustained effect (Cohen's d = 0.84 at 18 months)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_003",
+  "participants": "412 RA patients using CBD long-term",
+  "year": 2021,
+  "notes": "Long-Term Cannabidiol Use in Rheumatoid Arthritis: 18-Month Safety and Efficacy Study",
+  "confidence": "medium",
+  "abstract": "67% maintained low disease activity (DAS28-CRP <3.2) at 18 months; minimal tolerance development (dose increase <20% over 18 months)"
+}

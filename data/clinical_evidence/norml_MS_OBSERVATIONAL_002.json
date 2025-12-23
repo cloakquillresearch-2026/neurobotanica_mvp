@@ -1,0 +1,12 @@
+{
+  "compound": "Various cannabinoid formulations",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Medium protective effect (HR = 0.69)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:MS_OBSERVATIONAL_002",
+  "participants": "498 MS patients (longitudinal cohort)",
+  "year": 2015,
+  "notes": "Cannabinoids and Disease Progression in Multiple Sclerosis",
+  "confidence": "medium",
+  "abstract": "Cannabinoid users: 31% slower EDSS progression over 4 years vs non-users (HR = 0.69, p=0.02); neuroprotective signal"
+}

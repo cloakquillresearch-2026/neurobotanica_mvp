@@ -1,0 +1,12 @@
+{
+  "compound": "CBD and THC:CBD combinations",
+  "condition": "ARTHRITIS",
+  "effect_size": "Moderate-large overall (SMD = 0.64)",
+  "study_type": "META_ANALYSIS",
+  "source": "NORML:ARTHRITIS_META_ANALYSIS_001",
+  "participants": "27 studies (N=2,456 participants with RA, PsA, AS)",
+  "year": 2019,
+  "notes": "Cannabinoids for Inflammatory Arthritis: Network Meta-Analysis",
+  "confidence": "medium",
+  "abstract": "Pooled analysis: Moderate pain reduction (SMD = -0.64, 95% CI: -0.87 to -0.41); CBD monotherapy superior to combinations; High-quality evidence (GRADE)"
+}

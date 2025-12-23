@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone (Cesamet)",
+  "condition": "PTSD",
+  "effect_size": "Very large (d = 1.9)",
+  "study_type": "RCT",
+  "source": "NORML:PTSD_RCT_002",
+  "participants": "10 Canadian military veterans",
+  "year": 2015,
+  "notes": "Nabilone for PTSD-Related Nightmares in Military Veterans",
+  "confidence": "medium",
+  "abstract": "Nabilone: 72% nightmare reduction vs Placebo: 13%; CAPS improved from 24.6 to 9.0 (p<0.001)"
+}

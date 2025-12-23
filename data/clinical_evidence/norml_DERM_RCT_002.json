@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "DERMATOLOGY",
+  "effect_size": "none",
+  "study_type": "randomized_controlled_trial",
+  "source": "NORML:DERM_RCT_002",
+  "participants": null,
+  "year": null,
+  "notes": "Palmitoylethanolamide Cream for Pediatric Atopic Dermatitis",
+  "confidence": "medium",
+  "abstract": ""
+}

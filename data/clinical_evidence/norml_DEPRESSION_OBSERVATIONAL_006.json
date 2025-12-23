@@ -1,0 +1,12 @@
+{
+  "compound": "CBD-predominant cannabis products",
+  "condition": "DEPRESSION",
+  "effect_size": "Moderate (OR = 0.58, 95% CI: 0.49-0.69)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_006",
+  "participants": "8,610 adults from national health survey with depression history",
+  "year": 2017,
+  "notes": "Cannabis Use Patterns and Depression Outcomes: National Survey Analysis",
+  "confidence": "medium",
+  "abstract": "CBD users: Lower current depression scores (PHQ-9 mean 8.2 vs 12.7 in non-users, p<0.001); 42% lower odds of moderate-severe depression"
+}

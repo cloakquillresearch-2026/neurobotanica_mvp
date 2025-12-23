@@ -1,0 +1,12 @@
+{
+  "compound": "CBD adjunctive to standard care",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 1.04)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_007",
+  "participants": "68 adults with MDD and suicidal ideation (C-SSRS score \u22652)",
+  "year": 2020,
+  "notes": "Cannabidiol Effects on Suicidal Ideation in Major Depressive Disorder: Safety Analysis",
+  "confidence": "medium",
+  "abstract": "CBD group: 58% reduction in suicidal ideation severity (C-SSRS 3.2 \u2192 1.3); Placebo: 22% reduction (3.1 \u2192 2.4)"
+}

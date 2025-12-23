@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis (authorized)",
+  "condition": "PTSD",
+  "effect_size": "Large (33% symptom reduction)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:PTSD_OBSERVATIONAL_003",
+  "participants": "24 patients with treatment-resistant PTSD",
+  "year": 2017,
+  "notes": "Medical Cannabis Authorization and PTSD Symptoms: Canadian Longitudinal Study",
+  "confidence": "medium",
+  "abstract": "PCL-5 reduced from 56.7 to 38.2 (33% reduction, p<0.001); 75% achieved clinically meaningful improvement"
+}

@@ -22,6 +22,12 @@ Target metrics:
 Trade Secret: TS-GP-001 ($6.2B value)
 """
 
+CURRICULUM_CONFIDENCE_THRESHOLD = 0.75
+CURRICULUM_EPOCHS = 10
+LOW_CONFIDENCE_WEIGHT_SCALE = 3.0
+HARD_NEGATIVE_K = 3
+HARD_NEGATIVE_WEIGHT = 0.6
+
 import sys
 from pathlib import Path
 
@@ -32,6 +38,7 @@ sys.path.insert(0, str(project_root))
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from torch.utils.data import DataLoader, SubsetRandomSampler, WeightedRandomSampler
 from torch.utils.tensorboard import SummaryWriter
 import json
 from datetime import datetime
@@ -43,59 +50,82 @@ from backend.services.genomepath.tokenizer import GenomePathTokenizer
 from backend.services.genomepath.dataset import (
     GenomePathDataset,
     create_data_splits,
-    create_dataloaders
+    collate_fn
 )
 
 
 class BidirectionalLoss(nn.Module):
-    """
-    Bidirectional loss for TK↔Genomic prediction.
+    """Bidirectional loss with curriculum-aware hard negative sampling."""
     
-    Combines TK→Genomic and Genomic→TK losses with confidence weighting.
-    """
-    
-    def __init__(self, tk_to_genomic_weight=0.6, genomic_to_tk_weight=0.4):
+    def __init__(
+        self,
+        tk_to_genomic_weight=0.6,
+        genomic_to_tk_weight=0.4,
+        hard_negative_weight=0.5,
+        hard_negative_k=2
+    ):
         super().__init__()
         self.tk_weight = tk_to_genomic_weight
         self.genomic_weight = genomic_to_tk_weight
+        self.hard_negative_weight = hard_negative_weight
+        self.hard_negative_k = hard_negative_k
         self.bce = nn.BCELoss(reduction='none')  # Per-sample loss
-        
+    
+    def _build_hard_negative_mask(self, predictions, targets):
+        """Return mask that highlights top-K mismatched predictions per sample."""
+        if self.hard_negative_k <= 0:
+            return torch.zeros_like(predictions)
+        batch_size, num_classes = predictions.size()
+        mask = torch.zeros_like(predictions)
+        top_k = max(1, min(num_classes, self.hard_negative_k * 3))
+        values, indices = torch.topk(predictions, k=top_k, dim=1)
+        for i in range(batch_size):
+            selected = 0
+            for idx in indices[i]:
+                if targets[i, idx] < 0.5:
+                    mask[i, idx] = 1.0
+                    selected += 1
+                if selected == self.hard_negative_k:
+                    break
+        return mask
+    
     def forward(self, outputs, targets, confidences):
-        """
-        Calculate bidirectional loss.
-        
-        Args:
-            outputs: Model outputs dict
-            targets: Dict with 'tk_to_genomic' and 'genomic_to_tk' targets
-            confidences: Confidence scores for weighting
-            
-        Returns:
-            Total loss, TK→G loss, G→TK loss
-        """
-        # TK → Genomic loss
-        tk_to_g_loss = self.bce(
+        """Calculate bidirectional loss with confidence weighting and negatives."""
+        # TK → Genomic loss components
+        tk_loss_matrix = self.bce(
             outputs['tk_to_genomic_scores'],
             targets['tk_to_genomic']
-        )  # [batch, 46]
+        )
+        confidence_weights = confidences.unsqueeze(1)
+        tk_pos_loss = (tk_loss_matrix * confidence_weights).mean()
+        tk_loss = tk_pos_loss
+        if self.hard_negative_k > 0:
+            tk_neg_mask = self._build_hard_negative_mask(
+                outputs['tk_to_genomic_scores'].detach(),
+                targets['tk_to_genomic']
+            )
+            if tk_neg_mask.sum() > 0:
+                tk_neg_loss = (tk_loss_matrix * tk_neg_mask).sum() / (tk_neg_mask.sum() + 1e-8)
+                tk_loss = tk_loss + self.hard_negative_weight * tk_neg_loss
         
-        # Weight by confidence (higher confidence = higher weight)
-        confidence_weights = confidences.unsqueeze(1)  # [batch, 1]
-        tk_to_g_loss = (tk_to_g_loss * confidence_weights).mean()
-        
-        # Genomic → TK loss
-        genomic_to_tk_loss = self.bce(
+        # Genomic → TK loss components
+        g_loss_matrix = self.bce(
             outputs['genomic_to_tk_scores'],
             targets['genomic_to_tk']
-        )  # [batch, 30]
-        genomic_to_tk_loss = (genomic_to_tk_loss * confidence_weights).mean()
-        
-        # Combined loss
-        total_loss = (
-            self.tk_weight * tk_to_g_loss +
-            self.genomic_weight * genomic_to_tk_loss
         )
+        g_pos_loss = (g_loss_matrix * confidence_weights).mean()
+        g_loss = g_pos_loss
+        if self.hard_negative_k > 0:
+            g_neg_mask = self._build_hard_negative_mask(
+                outputs['genomic_to_tk_scores'].detach(),
+                targets['genomic_to_tk']
+            )
+            if g_neg_mask.sum() > 0:
+                g_neg_loss = (g_loss_matrix * g_neg_mask).sum() / (g_neg_mask.sum() + 1e-8)
+                g_loss = g_loss + self.hard_negative_weight * g_neg_loss
         
-        return total_loss, tk_to_g_loss, genomic_to_tk_loss
+        total_loss = self.tk_weight * tk_loss + self.genomic_weight * g_loss
+        return total_loss, tk_loss, g_loss
 
 
 def accuracy_at_k(predictions, targets, k=5):
@@ -384,9 +414,37 @@ def main(epochs=50, batch_size=32, quick_test=False):
     
     # Create splits
     train_ds, val_ds, test_ds = create_data_splits(dataset, seed=42)
-    train_loader, val_loader, test_loader = create_dataloaders(
-        train_ds, val_ds, test_ds, batch_size=BATCH_SIZE
+
+    # Build static loaders for evaluation splits
+    val_loader = DataLoader(
+        val_ds,
+        batch_size=BATCH_SIZE,
+        shuffle=False,
+        collate_fn=collate_fn,
+        num_workers=0
     )
+    test_loader = DataLoader(
+        test_ds,
+        batch_size=BATCH_SIZE,
+        shuffle=False,
+        collate_fn=collate_fn,
+        num_workers=0
+    )
+
+    # Pre-compute curriculum/weighting metadata for the training subset
+    raw_train_indices = getattr(train_ds, 'indices', list(range(len(train_ds))))
+    high_conf_relative_indices = []
+    train_sample_weights = []
+    for relative_idx, raw_idx in enumerate(raw_train_indices):
+        confidence = dataset.get_confidence(raw_idx)
+        if confidence >= CURRICULUM_CONFIDENCE_THRESHOLD:
+            high_conf_relative_indices.append(relative_idx)
+            weight = 1.0
+        else:
+            weight = 1.0 + (CURRICULUM_CONFIDENCE_THRESHOLD - confidence) * LOW_CONFIDENCE_WEIGHT_SCALE
+        train_sample_weights.append(weight)
+    train_sample_weights_tensor = torch.tensor(train_sample_weights, dtype=torch.double)
+    min_curriculum_batch = max(4, BATCH_SIZE // 2)
     
     # Initialize model
     print("\n" + "=" * 70)
@@ -397,7 +455,10 @@ def main(epochs=50, batch_size=32, quick_test=False):
     print(f"Parameters: {model.count_parameters():,}")
     
     # Loss and optimizer
-    criterion = BidirectionalLoss()
+    criterion = BidirectionalLoss(
+        hard_negative_weight=HARD_NEGATIVE_WEIGHT,
+        hard_negative_k=HARD_NEGATIVE_K
+    )
     optimizer = optim.AdamW(model.parameters(), lr=LEARNING_RATE, weight_decay=WEIGHT_DECAY)
     scheduler = optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=EPOCHS)
     
@@ -410,29 +471,42 @@ def main(epochs=50, batch_size=32, quick_test=False):
     patience_counter = 0
     
     for epoch in range(1, EPOCHS + 1):
-        print(f"\nEpoch {epoch}/{EPOCHS}")
+        curriculum_active = (
+            epoch <= CURRICULUM_EPOCHS and
+            len(high_conf_relative_indices) >= min_curriculum_batch
+        )
+        if curriculum_active:
+            sampler = SubsetRandomSampler(high_conf_relative_indices)
+            phase_label = 'curriculum-high'
+        else:
+            sampler = WeightedRandomSampler(
+                train_sample_weights_tensor,
+                num_samples=len(train_sample_weights_tensor),
+                replacement=True
+            )
+            phase_label = 'mixed-confidence'
+        train_loader = DataLoader(
+            train_ds,
+            batch_size=BATCH_SIZE,
+            sampler=sampler,
+            collate_fn=collate_fn,
+            num_workers=0
+        )
+        print(f"\nEpoch {epoch}/{EPOCHS} [{phase_label}]")
         print("-" * 70)
         
-        # Train
         train_metrics = train_epoch(model, train_loader, criterion, optimizer, device, epoch)
-        
-        # Validate every epoch
         val_metrics = evaluate(model, val_loader, criterion, device)
-        
-        # Update learning rate
         scheduler.step()
         
-        # Log metrics
         writer.add_scalar('Loss/train', train_metrics['loss'], epoch)
         writer.add_scalar('Loss/val', val_metrics['loss'], epoch)
         writer.add_scalar('Accuracy/tk_acc@5', val_metrics['tk_acc@5'], epoch)
         writer.add_scalar('Accuracy/g_acc@3', val_metrics['g_acc@3'], epoch)
         writer.add_scalar('Metrics/MRR_tk', val_metrics['tk_mrr'], epoch)
         writer.add_scalar('Metrics/MRR_g', val_metrics['g_mrr'], epoch)
-        writer.add_scalar('Metrics/bidirectional_consistency', val_metrics['bidirectional_consistency'], epoch)
-        writer.add_scalar('LR', optimizer.param_groups[0]['lr'], epoch)
+        writer.add_scalar('Metrics/consistency', val_metrics['bidirectional_consistency'], epoch)
         
-        # Print summary
         print(f"\nTrain Loss: {train_metrics['loss']:.4f}")
         print(f"Val Loss:   {val_metrics['loss']:.4f}")
         print(f"TK→G Acc@5: {val_metrics['tk_acc@5']:.2%} (target ≥70%)")
@@ -441,11 +515,9 @@ def main(epochs=50, batch_size=32, quick_test=False):
         print(f"TK MRR: {val_metrics['tk_mrr']:.4f}")
         print(f"G MRR: {val_metrics['g_mrr']:.4f}")
         
-        # Save best model
         if val_metrics['loss'] < best_val_loss:
             best_val_loss = val_metrics['loss']
             patience_counter = 0
-            
             checkpoint = {
                 'epoch': epoch,
                 'model_state_dict': model.state_dict(),
@@ -460,7 +532,6 @@ def main(epochs=50, batch_size=32, quick_test=False):
             patience_counter += 1
             print(f"Patience: {patience_counter}/{PATIENCE}")
         
-        # Early stopping
         if patience_counter >= PATIENCE:
             print(f"\n⚠️ Early stopping triggered after {epoch} epochs")
             break

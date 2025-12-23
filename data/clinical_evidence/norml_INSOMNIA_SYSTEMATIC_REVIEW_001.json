@@ -1,0 +1,12 @@
+{
+  "compound": "Various cannabinoids",
+  "condition": "INSOMNIA",
+  "effect_size": "Variable by compound",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:INSOMNIA_SYSTEMATIC_REVIEW_001",
+  "participants": "26 studies (N=3,642 patients)",
+  "year": 2019,
+  "notes": "Cannabinoids for Sleep Disorders: Systematic Review",
+  "confidence": "medium",
+  "abstract": "15/26 studies showed sleep improvement; THC most consistently sedating; CBD effects variable; nabilone effective for sleep-disordered conditions"
+}

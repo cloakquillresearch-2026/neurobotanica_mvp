@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (Marinol)",
+  "condition": "ALZHEIMERS",
+  "effect_size": "Large (46% reduction)",
+  "study_type": "RCT",
+  "source": "NORML:ALZHEIMERS_RCT_001",
+  "participants": "15 patients with Alzheimer's disease",
+  "year": 2006,
+  "notes": "Dronabinol for Agitation in Alzheimer's Disease: Pilot RCT",
+  "confidence": "medium",
+  "abstract": "NPI agitation reduced 46% (p<0.01); Motor activity increased (circadian improvement); Weight gain in 6 patients"
+}

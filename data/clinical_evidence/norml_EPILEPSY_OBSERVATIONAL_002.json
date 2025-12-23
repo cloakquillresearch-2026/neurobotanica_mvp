@@ -1,0 +1,12 @@
+{
+  "compound": "CBD-enriched cannabis extracts (artisanal)",
+  "condition": "EPILEPSY",
+  "effect_size": "Moderate (57% benefit)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:EPILEPSY_OBSERVATIONAL_002",
+  "participants": "75 children with treatment-resistant epilepsy",
+  "year": 2015,
+  "notes": "Artisanal Cannabis for Pediatric Epilepsy: Multicenter Survey",
+  "confidence": "medium",
+  "abstract": "57% reported seizure improvement; 33% achieved \u226550% reduction; Dravet syndrome best responders (85%)"
+}

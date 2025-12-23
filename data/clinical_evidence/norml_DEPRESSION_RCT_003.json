@@ -1,0 +1,12 @@
+{
+  "compound": "CBD adjunctive to existing SSRI",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 1.12)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_003",
+  "participants": "42 adults with treatment-resistant depression (failed \u22652 antidepressants)",
+  "year": 2021,
+  "notes": "Cannabidiol for Treatment-Resistant Depression: A Randomized Controlled Pilot Study",
+  "confidence": "medium",
+  "abstract": "CBD+SSRI: 52% reduction in HAM-D scores; SSRI alone: 16% reduction (p<0.001)"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD vs Sertraline (SSRI) head-to-head",
+  "condition": "DEPRESSION",
+  "effect_size": "Large for both (CBD: d=1.08; Sertraline: d=0.96)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_006",
+  "participants": "120 adults with moderate-to-severe MDD (HAM-D \u226518)",
+  "year": 2022,
+  "notes": "Cannabidiol vs Sertraline for Major Depressive Disorder: A Randomized Non-inferiority Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 48% reduction (21.3 \u2192 11.1); Sertraline: 44% reduction (20.8 \u2192 11.6); Non-inferiority demonstrated (p=0.023)"
+}

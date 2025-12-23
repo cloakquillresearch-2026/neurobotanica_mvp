@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "observational_quality_of_life",
+  "source": "NORML:ANXIETY_OBSERVATIONAL_014",
+  "participants": null,
+  "year": null,
+  "notes": "Quality of Life Improvements in Anxiety Patients Using Medical Cannabis: 12-Month Cohort",
+  "confidence": "medium",
+  "abstract": ""
+}

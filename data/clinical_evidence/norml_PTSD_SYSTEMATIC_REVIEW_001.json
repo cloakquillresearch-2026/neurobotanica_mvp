@@ -1,0 +1,12 @@
+{
+  "compound": "Various cannabinoids",
+  "condition": "PTSD",
+  "effect_size": "Medium-large (SMD = 0.51-0.89)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:PTSD_SYSTEMATIC_REVIEW_001",
+  "participants": "12 studies (N=560 patients)",
+  "year": 2020,
+  "notes": "Cannabinoids for PTSD: Systematic Review and Meta-Analysis",
+  "confidence": "medium",
+  "abstract": "Overall benefit for PTSD symptoms; Nightmares most responsive (SMD = -0.89); Global symptoms improved (SMD = -0.51)"
+}

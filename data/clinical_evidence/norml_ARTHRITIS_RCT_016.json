@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large for both (d=0.94 arthritis, d=1.12 depression)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_016",
+  "participants": "142 adults with RA or PsA and comorbid depression (PHQ-9 \u226510)",
+  "year": 2021,
+  "notes": "Cannabidiol for Inflammatory Arthritis and Depression Comorbidity: RCT",
+  "confidence": "medium",
+  "abstract": "CBD: DAS28-CRP reduced 36% (4.8 \u2192 3.1), PHQ-9 reduced 52% (14.2 \u2192 6.8); Placebo: DAS28 reduced 15%, PHQ-9 reduced 21%; both p<0.001"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Inhaled cannabis vs oral dronabinol",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Similar efficacy, faster onset (p<0.01 for time)",
+  "study_type": "RCT",
+  "source": "NORML:CINV_RCT_010",
+  "participants": "56 patients with acute CINV",
+  "year": 2001,
+  "notes": "Inhaled Cannabis vs Oral Dronabinol for Acute CINV",
+  "confidence": "medium",
+  "abstract": "Inhaled: Onset 10 minutes, 76% response; Oral: Onset 60-90 minutes, 68% response; Faster onset with inhalation"
+}

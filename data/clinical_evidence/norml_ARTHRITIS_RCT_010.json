@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large (incidence rate ratio = 0.33, 95% CI: 0.21-0.52)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_010",
+  "participants": "112 adults with gout (\u22652 flares in past year)",
+  "year": 2020,
+  "notes": "Cannabidiol for Gout Flare Prevention: A Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: Mean 0.8 flares vs Placebo: 2.4 flares (67% reduction); p<0.001; time to first flare longer (median 18 weeks vs 6 weeks)"
+}

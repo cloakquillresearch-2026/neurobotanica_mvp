@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "randomized_controlled_trial",
+  "source": "NORML:ANXIETY_RCT_004",
+  "participants": null,
+  "year": null,
+  "notes": "Effects of Cannabidiol (CBD) on Regional Cerebral Blood Flow",
+  "confidence": "medium",
+  "abstract": ""
+}

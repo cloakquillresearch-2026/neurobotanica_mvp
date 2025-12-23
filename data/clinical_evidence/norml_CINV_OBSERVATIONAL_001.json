@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Large patient satisfaction (78% positive)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:CINV_OBSERVATIONAL_001",
+  "participants": "264 cancer patients using dronabinol for CINV",
+  "year": 2013,
+  "notes": "Real-World Effectiveness of Dronabinol for CINV: Cancer Center Registry",
+  "confidence": "medium",
+  "abstract": "78% reported good/excellent nausea control; 70% reported improved appetite; 62% reported improved quality of life"
+}

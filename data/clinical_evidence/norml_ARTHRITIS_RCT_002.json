@@ -1,0 +1,12 @@
+{
+  "compound": "CBD topical cream",
+  "condition": "ARTHRITIS",
+  "effect_size": "Very large (Cohen's d = 1.32)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_002",
+  "participants": "182 adults with knee OA (Kellgren-Lawrence grade 2-3)",
+  "year": 2020,
+  "notes": "Topical Cannabidiol for Osteoarthritis Knee Pain: A Randomized Placebo-Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 49% reduction in WOMAC pain (13.8 \u2192 7.0); Placebo: 16% reduction (13.5 \u2192 11.3); p<0.001"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "observational_preclinical",
+  "source": "NORML:ANXIETY_PRECLINICAL_001",
+  "participants": null,
+  "year": null,
+  "notes": "Involvement of 5-HT1A Receptors in the Anxiolytic-Like Effects of Cannabidiol",
+  "confidence": "medium",
+  "abstract": ""
+}

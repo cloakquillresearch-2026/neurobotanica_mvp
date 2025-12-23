@@ -1,0 +1,12 @@
+{
+  "compound": "Oral THC + timolol",
+  "condition": "GLAUCOMA",
+  "effect_size": "Large additive effect",
+  "study_type": "RCT",
+  "source": "NORML:GLAUCOMA_RCT_008",
+  "participants": "12 patients with open-angle glaucoma",
+  "year": 1982,
+  "notes": "Combination Cannabinoid-Beta Blocker Therapy for Glaucoma",
+  "confidence": "medium",
+  "abstract": "Timolol alone: 24% reduction; Timolol + THC: 36% reduction; Additive effect (p<0.01); Greater IOP control achieved"
+}

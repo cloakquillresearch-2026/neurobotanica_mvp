@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ANXIETY",
+  "effect_size": "Very large (Cohen's d = 1.51)",
+  "study_type": "RCT",
+  "source": "NORML:ANXIETY_RCT_011",
+  "participants": "72 professional musicians with performance anxiety",
+  "year": 2019,
+  "notes": "Cannabidiol for Performance Anxiety in Musicians: A Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD significantly reduced performance anxiety: VAMS anxiety score 24.1 (CBD) vs 54.6 (placebo), p<0.001; 56% reduction"
+}

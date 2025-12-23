@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "WOMENS_HEALTHCARE",
+  "effect_size": "none",
+  "study_type": "case_series",
+  "source": "NORML:WH_CASE_003",
+  "participants": null,
+  "year": null,
+  "notes": "Nabilone Add-On Therapy for Refractory Chronic Pelvic Pain",
+  "confidence": "medium",
+  "abstract": ""
+}

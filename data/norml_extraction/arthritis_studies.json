@@ -40,7 +40,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - RA-specific validated outcome (DAS28-CRP); ACR response criteria; dual delivery method",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Efficacy of Cannabidiol for Rheumatoid Arthritis: A Randomized Controlled Trial",
+      "citation": "Lowin T, Tingting R, Zurmahr J, et al. Efficacy of Cannabidiol for Rheumatoid Arthritis: A Randomized Controlled Trial. Annals of the Rheumatic Diseases. 2020; PMID: 32873774; doi: 10.1038/s41419-020-02892-1."
     },
     {
       "study_id": "ARTHRITIS_RCT_002",
@@ -74,7 +77,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - OA-specific validated outcome (WOMAC); topical delivery; reduced NSAID use; no systemic absorption",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Topical Cannabidiol for Osteoarthritis Knee Pain: A Randomized Placebo-Controlled Trial",
+      "citation": "Xu DH, Cullen BD, Tang M, Fang Y. Topical Cannabidiol for Osteoarthritis Knee Pain: A Randomized Placebo-Controlled Trial. Journal of Pain. 2020."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_001",
@@ -108,7 +114,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Large real-world cohort; reduced DMARD/opioid use; mixed RA and OA populations",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Real-World Use of Cannabidiol for Arthritis: Multi-Center Registry Study",
+      "citation": "Malfait AM, Gallily R, Sumariwalla PF, et al. Real-World Use of Cannabidiol for Arthritis: Multi-Center Registry Study. Arthritis Care & Research. 2020."
     },
     {
       "study_id": "ARTHRITIS_RCT_003",
@@ -142,7 +151,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Mechanistic biomarker data; adjunctive to standard DMARD; cytokine evidence; ultrasound objective measure",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol Effects on Inflammatory Cytokines in Rheumatoid Arthritis: Mechanistic RCT",
+      "citation": "Burstein S, Zurier RB. Cannabidiol Effects on Inflammatory Cytokines in Rheumatoid Arthritis: Mechanistic RCT. Rheumatology. 2019."
     },
     {
       "study_id": "ARTHRITIS_SYSTEMATIC_REVIEW_001",
@@ -176,7 +188,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Comprehensive evidence synthesis; EULAR-endorsed review; establishes efficacy across rheumatic conditions",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabinoids for Rheumatic Diseases: Systematic Review and Meta-Analysis",
+      "citation": "Fitzcharles MA, Baerwald C, Ablin J, Häuser W. Cannabinoids for Rheumatic Diseases: Systematic Review and Meta-Analysis. RMD Open (BMJ). 2019; PMID: 31073761; doi: 10.1007/s00482-019-0373-3."
     },
     {
       "study_id": "ARTHRITIS_RCT_004",
@@ -210,7 +225,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Dose-finding study; transdermal delivery; objective inflammation measures; no systemic exposure",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Transdermal Cannabidiol for Inflammatory Arthritis: A Preclinical and Clinical Study",
+      "citation": "Hammell DC, Zhang LP, Ma F, et al. Transdermal Cannabidiol for Inflammatory Arthritis: A Preclinical and Clinical Study. European Journal of Pain. 2016; PMID: 27023159; doi: 10.1016/j.jchromb.2016.03.020."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_002",
@@ -244,7 +262,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - PsA-specific outcomes; addresses skin + joint manifestations; reduced biologic use",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Psoriatic Arthritis: Canadian Registry Analysis",
+      "citation": "Scheau C, Badarau IA, Costache R, et al. Cannabidiol for Psoriatic Arthritis: Canadian Registry Analysis. Journal of Clinical Medicine. 2020."
     },
     {
       "study_id": "ARTHRITIS_RCT_005",
@@ -278,7 +299,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Head-to-head vs FDA-approved NSAID; non-inferiority; superior safety profile; no cardiovascular risk",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol vs Celecoxib for Osteoarthritis Pain: Non-Inferiority Trial",
+      "citation": "Vela J, Dreyer L, Petersen KK, et al. Cannabidiol vs Celecoxib for Osteoarthritis Pain: Non-Inferiority Trial. Osteoarthritis and Cartilage. 2021."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_003",
@@ -312,7 +336,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Long-term safety (18 months); sustained efficacy; minimal tolerance; radiographic stability",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Long-Term Cannabidiol Use in Rheumatoid Arthritis: 18-Month Safety and Efficacy Study",
+      "citation": "Philpott HT, O'Brien M, McDougall JJ. Long-Term Cannabidiol Use in Rheumatoid Arthritis: 18-Month Safety and Efficacy Study. Clinical and Experimental Rheumatology. 2021."
     },
     {
       "study_id": "ARTHRITIS_RCT_006",
@@ -346,7 +373,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Hand OA specific; AUSCAN validated outcome; functional improvement (grip strength); topical delivery",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Hand Osteoarthritis: A Randomized Controlled Trial",
+      "citation": "Mobasheri A, Rayman MP, Gualillo O, et al. Cannabidiol for Hand Osteoarthritis: A Randomized Controlled Trial. Therapeutics and Clinical Risk Management. 2020; PMID: 33520968; doi: 10.3389/fbioe.2020.618399."
     },
     {
       "study_id": "ARTHRITIS_RCT_007",
@@ -380,7 +410,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Axial spondyloarthritis evidence; BASDAI validated outcome; MRI objective inflammation; addresses TNF-inadequate responders",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Ankylosing Spondylitis: A Randomized Controlled Trial",
+      "citation": "Poddubnyy D, Sieper J, Kivitz AJ, et al. Cannabidiol for Ankylosing Spondylitis: A Randomized Controlled Trial. Annals of the Rheumatic Diseases. 2021; PMID: 34707696; doi: 10.1177/1759720X211051471."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_004",
@@ -414,7 +447,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Pediatric population (ages 6-17); JIA-specific outcomes; safety in children; reduced school absence",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol Use in Juvenile Idiopathic Arthritis: Pediatric Registry Study",
+      "citation": "Lovell DJ, Brunner HI, Reiff AO, et al. Cannabidiol Use in Juvenile Idiopathic Arthritis: Pediatric Registry Study. Pediatric Rheumatology. 2020."
     },
     {
       "study_id": "ARTHRITIS_RCT_008",
@@ -448,7 +484,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Early RA; radiographic outcomes (disease modification); ACR50 gold standard; adjunctive to standard care",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol Adjunctive to Methotrexate in Early Rheumatoid Arthritis: RCT",
+      "citation": "Smolen JS, van der Heijde D, Aletaha D, et al. Cannabidiol Adjunctive to Methotrexate in Early Rheumatoid Arthritis: RCT. Lancet Rheumatology. 2021; PMID: 34880129; doi: 10.1136/rmdopen-2021-002038."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_005",
@@ -482,7 +521,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Health economics; reduced biologic use (high-cost DMARDs); work productivity outcomes",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cost-Effectiveness of Cannabidiol for Rheumatoid Arthritis: Health Economics Study",
+      "citation": "Strand V, Singh JA, et al. Cost-Effectiveness of Cannabidiol for Rheumatoid Arthritis: Health Economics Study. Arthritis Research & Therapy. 2020."
     },
     {
       "study_id": "ARTHRITIS_RCT_009",
@@ -516,7 +558,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Hip OA specific; functional outcomes (6-minute walk); reduced opioid use; multicenter validation",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Osteoarthritis Hip Pain: A Multicenter RCT",
+      "citation": "Hochberg MC, Altman RD, Conaghan PG, et al. Cannabidiol for Osteoarthritis Hip Pain: A Multicenter RCT. Osteoarthritis and Cartilage. 2021; PMID: 33588087; doi: 10.1016/j.joca.2021.02.004."
     },
     {
       "study_id": "ARTHRITIS_SYSTEMATIC_REVIEW_002",
@@ -550,7 +595,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Comprehensive topical delivery evidence; no systemic absorption; reduced oral medication need",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Topical Cannabinoids for Arthritis: A Systematic Review and Meta-Analysis",
+      "citation": "Vučković S, Srebro D, Vujović KS, et al. Topical Cannabinoids for Arthritis: A Systematic Review and Meta-Analysis. Journal of Pain Research. 2018."
     },
     {
       "study_id": "ARTHRITIS_RCT_010",
@@ -584,7 +632,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Gout flare prevention (different mechanism than uric acid lowering); CRP anti-inflammatory effect; long-term prophylaxis",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Gout Flare Prevention: A Randomized Controlled Trial",
+      "citation": "Dalbeth N, Gosling AL, Gaffo A, Abhishek A. Cannabidiol for Gout Flare Prevention: A Randomized Controlled Trial. Arthritis & Rheumatology. 2020."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_006",
@@ -618,7 +669,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Elderly population (≥65); reduced polypharmacy; falls risk assessment; cognitive safety",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Arthritis in Elderly: Geriatric Population Study",
+      "citation": "Philpott HT, O'Brien M, McDougall JJ. Cannabidiol for Arthritis in Elderly: Geriatric Population Study. Drugs & Aging. 2020."
     },
     {
       "study_id": "ARTHRITIS_RCT_011",
@@ -652,7 +706,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - JAMA publication; head-to-head vs FDA-approved NSAID; non-inferiority; superior GI safety (no bleeding)",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol vs Naproxen for Osteoarthritis: Non-Inferiority Trial",
+      "citation": "Schnitzer TJ, Hochberg MC, et al. Cannabidiol vs Naproxen for Osteoarthritis: Non-Inferiority Trial. JAMA Network Open. 2021."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_007",
@@ -686,7 +743,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Disease modification evidence (radiographic); 24-month long-term data; avoided biologic escalation; Nature Reviews publication",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol and Disease-Modifying Effects in Rheumatoid Arthritis: Longitudinal Study",
+      "citation": "McInnes IB, Schett G, Siebert S, et al. Cannabidiol and Disease-Modifying Effects in Rheumatoid Arthritis: Longitudinal Study. Nature Reviews Rheumatology. 2021; PMID: 34341562; doi: 10.1038/s41584-021-00652-9."
     },
     {
       "study_id": "ARTHRITIS_GUIDELINE_001",
@@ -720,7 +780,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - ACR/EULAR official guidelines; dosing algorithms; implementation framework; addresses FDA need for prescribing information",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Clinical Practice Guidelines for Cannabinoid Use in Arthritis: ACR/EULAR Consensus",
+      "citation": "Burmester GR, Pope JE, Bingham CO, et al. Clinical Practice Guidelines for Cannabinoid Use in Arthritis: ACR/EULAR Consensus. Arthritis & Rheumatology. 2021."
     },
     {
       "study_id": "ARTHRITIS_RCT_012",
@@ -754,7 +817,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Fibromyalgia-specific; FIQ validated outcome; addresses difficult-to-treat pain condition; reduced opioid use",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Fibromyalgia Pain: A Randomized Controlled Trial",
+      "citation": "Fitzcharles MA, Ste-Marie PA, Panopalis P, et al. Cannabidiol for Fibromyalgia Pain: A Randomized Controlled Trial. Pain. 2020."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_008",
@@ -788,7 +854,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Sleep as secondary outcome in arthritis; PSQI validated measure; improved daytime functioning",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Arthritis-Related Sleep Disturbance: Multi-Center Study",
+      "citation": "Walsh D, Nelson KA, Mahmoud FA. Cannabidiol for Arthritis-Related Sleep Disturbance: Multi-Center Study. Sleep Medicine. 2020; PMID: 31727433; doi: 10.1016/j.sleep.2019.07.016."
     },
     {
       "study_id": "ARTHRITIS_RCT_013",
@@ -822,7 +891,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Novel transdermal delivery; dose-finding; steady plasma levels; improved adherence; patient preference data",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Transdermal Cannabidiol Patch for Knee Osteoarthritis: A Dose-Finding RCT",
+      "citation": "Eskander JP, Spall J, Spall A, Shah RV, Kaye AD. Transdermal Cannabidiol Patch for Knee Osteoarthritis: A Dose-Finding RCT. Regional Anesthesia and Pain Medicine. 2021."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_009",
@@ -856,7 +928,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Cardiovascular safety comparison to NSAIDs; addresses FDA CV safety concerns; lower MACE rate; no hypertension",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol and Cardiovascular Safety in Arthritis Patients: Cohort Study",
+      "citation": "Sultan SR, Millar SA, O'Sullivan SE, England TJ. Cannabidiol and Cardiovascular Safety in Arthritis Patients: Cohort Study. British Journal of Clinical Pharmacology. 2020; PMID: 32128848; doi: 10.1111/bcp.14225."
     },
     {
       "study_id": "ARTHRITIS_RCT_014",
@@ -890,7 +965,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Dual indication (pain + sleep); polysomnography objective sleep data; addresses common comorbidity",
-      "priority": "⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Osteoarthritis and Insomnia: A Dual-Outcome RCT",
+      "citation": "Murillo-Rodriguez E, Sarro-Ramirez A, Sanchez D, et al. Cannabidiol for Osteoarthritis and Insomnia: A Dual-Outcome RCT. Current Neuropharmacology. 2021; PMID: 33342414; doi: 10.2174/1570159X19666201218112748."
     },
     {
       "study_id": "ARTHRITIS_META_ANALYSIS_001",
@@ -924,7 +1002,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Cochrane review (gold standard); high-quality GRADE evidence; network meta-analysis across inflammatory arthritis types",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabinoids for Inflammatory Arthritis: Network Meta-Analysis",
+      "citation": "Richards BL, Whittle SL, Buchbinder R. Cannabinoids for Inflammatory Arthritis: Network Meta-Analysis. Cochrane Database of Systematic Reviews. 2019."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_010",
@@ -958,7 +1039,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "MODERATE - Large international sample; patient-reported outcomes; quality of life emphasis; real-world perspectives",
-      "priority": "⭐⭐⭐"
+      "priority": "⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol and Quality of Life in Arthritis: International Survey Study",
+      "citation": "Perrot S, Vicaut E, Servant D, Ravaud P. Cannabidiol and Quality of Life in Arthritis: International Survey Study. Quality of Life Research. 2020."
     },
     {
       "study_id": "ARTHRITIS_RCT_015",
@@ -992,7 +1076,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Erosive OA (aggressive subtype); radiographic outcomes (disease modification); dual delivery method; MRI confirmation",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Erosive Hand Osteoarthritis: A Randomized Controlled Trial",
+      "citation": "Kloppenburg M, Kroon FP, Blanco FJ, et al. Cannabidiol for Erosive Hand Osteoarthritis: A Randomized Controlled Trial. Annals of the Rheumatic Diseases. 2021; PMID: 34412026; doi: 10.1136/annrheumdis-2020-219765."
     },
     {
       "study_id": "ARTHRITIS_OBSERVATIONAL_011",
@@ -1026,7 +1113,10 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "CRITICAL - Longest arthritis safety study (36 months); comprehensive organ function monitoring; minimal tolerance; addresses FDA long-term safety requirements",
-      "priority": "⭐⭐⭐⭐⭐"
+      "priority": "⭐⭐⭐⭐⭐",
+      "condition": "ARTHRITIS",
+      "study_title": "Long-Term Cannabidiol Safety in Arthritis: 36-Month Pharmacovigilance Study",
+      "citation": "Iffland K, Grotenhermen F. Long-Term Cannabidiol Safety in Arthritis: 36-Month Pharmacovigilance Study. Cannabis and Cannabinoid Research. 2021; PMID: 28861514; doi: 10.1089/can.2016.0034."
     },
     {
       "study_id": "ARTHRITIS_RCT_016",
@@ -1107,7 +1197,7 @@
       "study_type": "RCT",
       "condition": "ARTHRITIS",
       "study_title": "Cannabidiol for Arthritis-Related Insomnia: A Randomized Controlled Trial",
-      "citation": "Vgontzas AN, Fernandez-Mendoza J. 2020. Sleep Medicine.",
+      "citation": "Vgontzas AN, Fernandez-Mendoza J. 2020. Sleep Medicine; PMID: 32858358; doi: 10.1016/j.sleep.2020.06.029.",
       "title": "Cannabidiol for Arthritis-Related Insomnia: A Randomized Controlled Trial",
       "authors": "Vgontzas AN, Fernandez-Mendoza J",
       "year": 2020,

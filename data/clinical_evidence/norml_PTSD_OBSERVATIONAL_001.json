@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis (various)",
+  "condition": "PTSD",
+  "effect_size": "Large (75% symptom reduction)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:PTSD_OBSERVATIONAL_001",
+  "participants": "404 PTSD patients in medical cannabis program",
+  "year": 2018,
+  "notes": "Medical Cannabis and PTSD: Large Prospective Registry Study",
+  "confidence": "medium",
+  "abstract": "75% reduction in PTSD symptoms at 12 months; PCL-5 mean reduction of 28 points; 63% no longer met criteria"
+}

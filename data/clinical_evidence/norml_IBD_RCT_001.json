@@ -1,0 +1,12 @@
+{
+  "compound": "Inhaled cannabis (23% THC)",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Very large (OR = 7.5)",
+  "study_type": "RCT",
+  "source": "NORML:IBD_RCT_001",
+  "participants": "21 patients with moderate-severe Crohn's disease",
+  "year": 2013,
+  "notes": "Cannabis Induces Clinical Remission in Crohn's Disease: Randomized Placebo-Controlled Trial",
+  "confidence": "medium",
+  "abstract": "Cannabis: 45% remission vs Placebo: 10% (p=0.03); 90% clinical response (CDAI >100 point reduction) vs 40% placebo"
+}

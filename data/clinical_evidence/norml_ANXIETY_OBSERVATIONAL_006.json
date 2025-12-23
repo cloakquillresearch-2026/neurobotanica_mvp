@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "observational_retrospective_cohort",
+  "source": "NORML:ANXIETY_OBSERVATIONAL_006",
+  "participants": null,
+  "year": null,
+  "notes": "CBD for Treatment-Resistant Anxiety: A Retrospective Chart Review",
+  "confidence": "medium",
+  "abstract": ""
+}

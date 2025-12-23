@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis oil (THC+CBD)",
+  "condition": "ALZHEIMERS",
+  "effect_size": "Large (72% improved)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ALZHEIMERS_OBSERVATIONAL_001",
+  "participants": "60 dementia patients treated with cannabis oil",
+  "year": 2018,
+  "notes": "Medical Cannabis for Dementia: Large Israeli Registry",
+  "confidence": "medium",
+  "abstract": "CGI-S improved in 72%; Delusions reduced; Agitation reduced 50%; Sleep disturbance improved 67%; Caregiver distress significantly reduced"
+}

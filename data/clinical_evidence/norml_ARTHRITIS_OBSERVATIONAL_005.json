@@ -1,0 +1,12 @@
+{
+  "compound": "CBD adjunctive therapy",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large cost difference (mean $4,260, 95% CI: $3,580-$4,940)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_005",
+  "participants": "2,347 RA patients (CBD users vs matched controls)",
+  "year": 2020,
+  "notes": "Cost-Effectiveness of Cannabidiol for Rheumatoid Arthritis: Health Economics Study",
+  "confidence": "medium",
+  "abstract": "CBD users: $8,420/year vs Controls: $12,680/year (33% cost reduction); driven by fewer biologic escalations, ER visits, and joint procedures"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol, nabilone, cannabis extract",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Small-medium (SMD = 0.41)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:CACHEXIA_SYSTEMATIC_REVIEW_001",
+  "participants": "5 RCTs (N=934 patients)",
+  "year": 2018,
+  "notes": "Cannabinoids for Cachexia and Anorexia: Cochrane Review",
+  "confidence": "medium",
+  "abstract": "Low-quality evidence for appetite improvement; Moderate effect vs placebo (SMD = 0.41); Weight stabilization more than gain"
+}

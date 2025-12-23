@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (Sativex)",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Medium-large (d = 0.72)",
+  "study_type": "RCT",
+  "source": "NORML:IBD_RCT_006",
+  "participants": "48 Crohn's patients with persistent abdominal pain",
+  "year": 2020,
+  "notes": "Nabiximols for Abdominal Pain in Crohn's Disease",
+  "confidence": "medium",
+  "abstract": "Nabiximols: 58% pain reduction vs Placebo: 31% (p<0.05); 67% achieved \u226530% pain reduction"
+}

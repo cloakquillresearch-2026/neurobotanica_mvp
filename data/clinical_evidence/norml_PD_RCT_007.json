@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone (synthetic THC analogue)",
+  "condition": "PARKINSONS",
+  "effect_size": "Medium (enriched withdrawal)",
+  "study_type": "RCT",
+  "source": "NORML:PD_RCT_007",
+  "participants": "47 enrolled for titration; 19 responders randomized (enriched enrollment randomized withdrawal)",
+  "year": 2020,
+  "notes": "Non-Motor Symptoms in Parkinson's Disease are Reduced by Nabilone",
+  "confidence": "medium",
+  "abstract": "At week 4, change in MDS-UPDRS-I favored continued nabilone vs placebo withdrawal (difference reported 1.63 points; p=0.030); effect driven by improvements in anxious mood and night-time sleep problems"
+}

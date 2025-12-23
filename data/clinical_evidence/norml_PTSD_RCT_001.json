@@ -1,0 +1,12 @@
+{
+  "compound": "MDMA (comparator study - contextual for cannabis research)",
+  "condition": "PTSD",
+  "effect_size": "Large (d = 0.91)",
+  "study_type": "RCT",
+  "source": "NORML:PTSD_RCT_001",
+  "participants": "90 patients with severe PTSD",
+  "year": 2021,
+  "notes": "MDMA-Assisted Therapy for PTSD: Phase 3 Trial Results",
+  "confidence": "medium",
+  "abstract": "67% no longer met PTSD criteria vs 32% placebo; Sets precedent for psychoactive therapy FDA approval"
+}

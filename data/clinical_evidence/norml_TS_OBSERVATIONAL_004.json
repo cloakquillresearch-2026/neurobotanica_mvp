@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (prescription)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Large (76% response)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:TS_OBSERVATIONAL_004",
+  "participants": "38 treatment-resistant TS patients",
+  "year": 2019,
+  "notes": "Cannabinoid Therapy for Treatment-Resistant Tic Disorders: Multicenter Study",
+  "confidence": "medium",
+  "abstract": "CGI response: 76% improved; Tics reduced 45%; Comorbidities (ADHD, OCD) also improved in 62%"
+}

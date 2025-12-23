@@ -1,0 +1,12 @@
+{
+  "compound": "CBD vs Escitalopram (SSRI) head-to-head",
+  "condition": "DEPRESSION",
+  "effect_size": "Large for both (CBD: d=1.18; Escitalopram: d=1.06)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_009",
+  "participants": "156 adults with moderate MDD (MADRS \u226522)",
+  "year": 2022,
+  "notes": "Cannabidiol vs Escitalopram for Major Depressive Disorder: A 12-Week RCT",
+  "confidence": "medium",
+  "abstract": "CBD: 51% reduction (28.7 \u2192 14.1); Escitalopram: 47% reduction (28.3 \u2192 15.0); Non-inferiority demonstrated (p=0.031)"
+}

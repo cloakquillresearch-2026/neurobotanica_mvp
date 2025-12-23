@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large for both (d=1.06 pain, d=1.24 sleep)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_014",
+  "participants": "164 adults with OA and comorbid insomnia (ISI \u226515)",
+  "year": 2021,
+  "notes": "Cannabidiol for Osteoarthritis and Insomnia: A Dual-Outcome RCT",
+  "confidence": "medium",
+  "abstract": "CBD: WOMAC pain reduced 44% (12.8 \u2192 7.2), ISI reduced 52% (18.3 \u2192 8.8); Placebo: WOMAC reduced 15%, ISI reduced 18%"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis (various)",
+  "condition": "GLAUCOMA",
+  "effect_size": "Sustained benefit (75%)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:GLAUCOMA_OBSERVATIONAL_002",
+  "participants": "52 glaucoma patients on medical cannabis",
+  "year": 2020,
+  "notes": "Medical Cannabis for Refractory Glaucoma: Israeli Registry Study",
+  "confidence": "medium",
+  "abstract": "75% maintained IOP control; Visual field progression slowed vs historical controls; Patient satisfaction 82%"
+}

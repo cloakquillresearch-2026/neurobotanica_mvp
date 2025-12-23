@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Moderate-large (Cohen's d = 0.76)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_002",
+  "participants": "387 primary care patients with depression (PHQ-9 \u226510)",
+  "year": 2021,
+  "notes": "Cannabidiol Use for Depression in Primary Care: A Prospective Cohort Study",
+  "confidence": "medium",
+  "abstract": "Mean PHQ-9 reduction: 6.8 points (from 15.3 to 8.5); 58% achieved response (\u226550% reduction)"
+}

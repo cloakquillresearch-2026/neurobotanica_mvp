@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "observational_prospective_cohort",
+  "source": "NORML:ANXIETY_OBSERVATIONAL_002",
+  "participants": null,
+  "year": null,
+  "notes": "Changes in Anxiety and Depression Symptoms Attributable to Cannabis Use: A 12-Month Observational Study",
+  "confidence": "medium",
+  "abstract": ""
+}

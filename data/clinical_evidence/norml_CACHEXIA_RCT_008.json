@@ -1,0 +1,12 @@
+{
+  "compound": "Smoked cannabis vs oral dronabinol",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Large for both (>500 kcal increase)",
+  "study_type": "RCT",
+  "source": "NORML:CACHEXIA_RCT_008",
+  "participants": "10 HIV+ men with clinically significant weight loss",
+  "year": 2005,
+  "notes": "Smoked Cannabis vs Dronabinol for Appetite in HIV+ Patients",
+  "confidence": "medium",
+  "abstract": "Both increased caloric intake similarly (+500-700 kcal); Smoked: Faster onset; Dronabinol: Longer duration; Both effective"
+}

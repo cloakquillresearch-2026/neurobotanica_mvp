@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AMYOTROPHIC_LATERAL_SCLEROSIS_OBSERVATIONAL_008",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabis and amyotrophic lateral sclerosis: hypothetical and practical applications, and a call for clinical trials",
+  "confidence": "medium",
+  "abstract": ""
+}

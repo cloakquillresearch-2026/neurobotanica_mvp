@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (THC:CBD 1:1)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Large (Cohen's d = 0.92)",
+  "study_type": "RCT",
+  "source": "NORML:MS_RCT_004",
+  "participants": "66 MS patients with central neuropathic pain",
+  "year": 2005,
+  "notes": "Nabiximols for Neuropathic Pain in Multiple Sclerosis",
+  "confidence": "medium",
+  "abstract": "Nabiximols: Mean pain reduction 2.7 points vs Placebo: 1.4 points (p=0.005); 41% reduction"
+}

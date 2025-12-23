@@ -37,7 +37,8 @@ class DatasetValidator:
             "sacred_knowledge_checks": {},
             "attribution_checks": {},
             "quality_metrics": {},
-            "completeness_checks": {}
+            "completeness_checks": {},
+            "excitotoxic_checks": {}
         }
     
     def load_datasets(self):
@@ -230,9 +231,12 @@ class DatasetValidator:
         
         missing_tk_in_corr = []
         for practice in self.tk_practices:
-            if not practice.get("ceremonial_significance"):  # Exclude sacred
-                if practice.get("practice_id") not in corr_tk_practices:
-                    missing_tk_in_corr.append(practice.get("practice_name"))
+            if practice.get("ceremonial_significance"):
+                continue
+            if practice.get("suppress_from_training"):
+                continue
+            if practice.get("practice_id") not in corr_tk_practices:
+                missing_tk_in_corr.append(practice.get("practice_name"))
         
         self.validation_results["completeness_checks"] = {
             "tk_practices": {
@@ -263,6 +267,54 @@ class DatasetValidator:
             print(f"   ⚠️  {len(missing_tk_in_corr)} TK practices not in correlations")
         else:
             print(f"   ✅ Complete coverage achieved")
+
+    def validate_ptsd_excitotoxic_flag(self):
+        """Ensure PTSD-related practices carry the excitotoxic protection flag."""
+
+        print()
+        print("🧠 Validating PTSD excitotoxic protection metadata...")
+
+        missing_metadata = []
+        for practice in self.tk_practices:
+            indications = {ind.lower() for ind in practice.get("indications", [])}
+            if "ptsd" not in indications:
+                continue
+
+            neuro_meta = practice.get("neuroprotective_metadata", {}) or {}
+            if not neuro_meta.get("excitotoxic_flag"):
+                missing_metadata.append({
+                    "practice_id": practice.get("practice_id"),
+                    "practice_name": practice.get("practice_name"),
+                    "issue": "Missing excitotoxic_flag"
+                })
+                continue
+
+            if not neuro_meta.get("excitotoxic_evidence_source"):
+                missing_metadata.append({
+                    "practice_id": practice.get("practice_id"),
+                    "practice_name": practice.get("practice_name"),
+                    "issue": "Missing excitotoxic_evidence_source"
+                })
+
+        status = "PASS" if not missing_metadata else "FAIL"
+        self.validation_results["excitotoxic_checks"] = {
+            "ptsd_practice_count": sum(
+                1 for practice in self.tk_practices
+                if "ptsd" in {ind.lower() for ind in practice.get("indications", [])}
+            ),
+            "violations": missing_metadata,
+            "status": status
+        }
+
+        if missing_metadata:
+            for violation in missing_metadata:
+                self.validation_results["errors"].append(
+                    f"PTSD excitotoxic metadata violation: {violation['practice_name']} - {violation['issue']}"
+                )
+            self.validation_results["overall_status"] = "FAIL"
+            print(f"   ❌ {len(missing_metadata)} PTSD practices missing required metadata")
+        else:
+            print("   ✅ All PTSD practices include excitotoxic metadata")
     
     def export_validation_report(self, output_path: str = "data/processed/validation_report.json"):
         """Export validation report."""
@@ -302,6 +354,7 @@ class DatasetValidator:
         print(f"  Community Attribution: {self.validation_results['attribution_checks'].get('status', 'NOT RUN')}")
         print(f"  Correlation Quality: {self.validation_results['quality_metrics'].get('status', 'NOT RUN')}")
         print(f"  Dataset Completeness: {self.validation_results['completeness_checks'].get('status', 'NOT RUN')}")
+        print(f"  PTSD Excitotoxic Metadata: {self.validation_results['excitotoxic_checks'].get('status', 'NOT RUN')}")
         print()
 
 
@@ -324,6 +377,7 @@ def main():
     validator.validate_community_attribution()
     validator.validate_correlation_quality()
     validator.validate_completeness()
+    validator.validate_ptsd_excitotoxic_flag()
     
     # Export report
     validator.export_validation_report()

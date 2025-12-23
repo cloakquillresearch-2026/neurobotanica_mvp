@@ -1,0 +1,12 @@
+{
+  "compound": "CBD dose comparison",
+  "condition": "DEPRESSION",
+  "effect_size": "150mg: moderate (d=0.64); 300mg: large (d=0.82)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_011",
+  "participants": "72 adults with mild-moderate depression (BDI-II 14-28)",
+  "year": 2021,
+  "notes": "Low-Dose Cannabidiol for Mild-to-Moderate Depression: Dose-Finding RCT",
+  "confidence": "medium",
+  "abstract": "Dose-response: 50mg (22% reduction), 150mg (38% reduction), 300mg (41% reduction), Placebo (9% reduction); 150mg optimal efficacy-safety ratio"
+}

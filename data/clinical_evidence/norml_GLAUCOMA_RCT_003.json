@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone (oral)",
+  "condition": "GLAUCOMA",
+  "effect_size": "Large, equivalent to standard therapy",
+  "study_type": "RCT",
+  "source": "NORML:GLAUCOMA_RCT_003",
+  "participants": "18 patients with ocular hypertension",
+  "year": 1980,
+  "notes": "Nabilone vs Timolol for Ocular Hypertension: Comparative Trial",
+  "confidence": "medium",
+  "abstract": "Nabilone: 26% IOP reduction; Timolol: 27% IOP reduction; Non-inferior; Both clinically effective"
+}

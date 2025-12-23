@@ -1,0 +1,12 @@
+{
+  "compound": "CBD and THC:CBD combinations",
+  "condition": "ARTHRITIS",
+  "effect_size": "Moderate overall (SMD = 0.58)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:ARTHRITIS_SYSTEMATIC_REVIEW_001",
+  "participants": "18 studies reviewed (N=1,404 participants with RA, OA, fibromyalgia)",
+  "year": 2019,
+  "notes": "Cannabinoids for Rheumatic Diseases: Systematic Review and Meta-Analysis",
+  "confidence": "medium",
+  "abstract": "Pooled analysis: Moderate pain reduction (SMD = -0.58, 95% CI: -0.82 to -0.34); CBD alone superior to THC:CBD combinations"
+}

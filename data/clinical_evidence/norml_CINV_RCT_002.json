@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone (Cesamet)",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Large (Cohen's d = 0.98)",
+  "study_type": "RCT",
+  "source": "NORML:CINV_RCT_002",
+  "participants": "88 patients receiving highly emetogenic chemotherapy",
+  "year": 2015,
+  "notes": "Nabilone for Delayed Chemotherapy-Induced Nausea: Randomized Trial",
+  "confidence": "medium",
+  "abstract": "Nabilone: 68% reduction in delayed nausea vs Placebo: 31% reduction; p<0.001; NNT = 3 for clinically meaningful improvement"
+}

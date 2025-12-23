@@ -171,9 +171,10 @@ class TherapeuticPredictionModel(BaseModel):
             learning_rate=learning_rate,
             max_depth=max_depth,
             random_state=random_state,
-            subsample=0.8,
-            min_samples_split=5,
-            min_samples_leaf=2
+            subsample=0.7,              # Increased regularization (was 0.8)
+            min_samples_split=10,       # Increased from 5 to prevent overfitting
+            min_samples_leaf=5,         # Increased from 2 to require more samples per leaf
+            max_features='sqrt'         # Add feature subsampling for regularization
         )
         self.random_state = random_state
     
@@ -474,39 +475,58 @@ class DimerPotentialModel(BaseModel):
         self,
         X: pd.DataFrame,
         y: pd.Series,
+        sample_weights: pd.Series = None,
         test_size: float = 0.2
     ) -> ModelMetrics:
         """Train dimer potential prediction model."""
         import time
         start_time = time.time()
-        
         self.feature_names = list(X.columns)
-        
         # Scale features
         X_scaled = self.scaler.fit_transform(X)
-        
         # Split
         X_train, X_test, y_train, y_test = train_test_split(
             X_scaled, y,
             test_size=test_size,
             random_state=self.random_state
         )
-        
         # Train
-        self.model.fit(X_train, y_train)
-        
+        if sample_weights is not None:
+            w_train = sample_weights.iloc[X_train.index] if hasattr(X_train, 'index') else sample_weights[:len(X_train)]
+            self.model.fit(X_train, y_train, sample_weight=w_train)
+        else:
+            self.model.fit(X_train, y_train)
         # Evaluate
         train_score = self.model.score(X_train, y_train)
         test_score = self.model.score(X_test, y_test)
-        
         # Cross-validation
-        cv_scores = cross_val_score(
-            self.model, X_scaled, y,
-            cv=5, scoring='r2'
-        )
-        
+        from sklearn.model_selection import KFold
+        if sample_weights is not None:
+            # Manual cross-validation to support sample weights
+            kf = KFold(n_splits=5, shuffle=True, random_state=self.random_state)
+            cv_scores = []
+            for train_idx, test_idx in kf.split(X_scaled):
+                X_tr, X_te = X_scaled[train_idx], X_scaled[test_idx]
+                y_tr, y_te = y.iloc[train_idx], y.iloc[test_idx]
+                w_tr = sample_weights.iloc[train_idx]
+                model_cv = GradientBoostingRegressor(
+                    n_estimators=self.model.n_estimators,
+                    learning_rate=self.model.learning_rate,
+                    max_depth=self.model.max_depth,
+                    random_state=self.random_state,
+                    subsample=self.model.subsample,
+                    min_samples_split=self.model.min_samples_split
+                )
+                model_cv.fit(X_tr, y_tr, sample_weight=w_tr)
+                score = model_cv.score(X_te, y_te)
+                cv_scores.append(score)
+            cv_scores = np.array(cv_scores)
+        else:
+            cv_scores = cross_val_score(
+                self.model, X_scaled, y,
+                cv=5, scoring='r2'
+            )
         training_time = time.time() - start_time
-        
         self.metrics = ModelMetrics(
             model_name=self.model_name,
             model_version=self.MODEL_VERSION,
@@ -520,10 +540,8 @@ class DimerPotentialModel(BaseModel):
             training_time_seconds=training_time,
             feature_importances=self._get_feature_importances()
         )
-        
         self.is_trained = True
         logger.info(f"Dimer model trained: R²={test_score:.4f}")
-        
         return self.metrics
     
     def predict_with_uncertainty(self, X: pd.DataFrame) -> PredictionResult:

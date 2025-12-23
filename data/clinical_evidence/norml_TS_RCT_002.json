@@ -1,0 +1,12 @@
+{
+  "compound": "THC (delta-9-THC)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Large (d = 0.96)",
+  "study_type": "RCT",
+  "source": "NORML:TS_RCT_002",
+  "participants": "24 adults with Tourette syndrome",
+  "year": 2003,
+  "notes": "THC for Tourette Syndrome: 6-Week Treatment Trial",
+  "confidence": "medium",
+  "abstract": "THC: YGTSS reduced by 35% vs Placebo: 8% (p<0.01); Significant sustained tic reduction over 6 weeks"
+}

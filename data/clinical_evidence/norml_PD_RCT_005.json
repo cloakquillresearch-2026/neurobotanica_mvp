@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis extract (oral)",
+  "condition": "PARKINSONS",
+  "effect_size": "Small (d = 0.24)",
+  "study_type": "RCT",
+  "source": "NORML:PD_RCT_005",
+  "participants": "19 PD patients with motor fluctuations",
+  "year": 2004,
+  "notes": "Nabiximols for Parkinson's Disease Motor Fluctuations: Pilot RCT",
+  "confidence": "medium",
+  "abstract": "No significant difference in dyskinesia score; Trend toward improvement in OFF time (18% reduction)"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Various (nabiximols, dronabinol, cannabis extract)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Medium (pooled OR = 1.84)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:MS_SYSTEMATIC_REVIEW_001",
+  "participants": "14 trials (N=2,280 MS patients)",
+  "year": 2015,
+  "notes": "Systematic Review: Efficacy and Safety of Cannabinoids in Multiple Sclerosis",
+  "confidence": "medium",
+  "abstract": "Average number of patients with \u226530% spasticity improvement (OR = 1.84, 95% CI: 1.40-2.42); Moderate-quality evidence"
+}

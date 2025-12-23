@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 1.21)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_008",
+  "participants": "36 women with postpartum depression (EPDS \u226513)",
+  "year": 2021,
+  "notes": "Cannabidiol for Postpartum Depression: Pilot Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 52% reduction in EPDS scores (17.4 \u2192 8.3); Placebo: 18% reduction (17.1 \u2192 14.0)"
+}

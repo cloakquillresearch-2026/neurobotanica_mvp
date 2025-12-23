@@ -3,14 +3,14 @@
   "condition": "GLAUCOMA",
   "phase": "3",
   "priority": "Phase 3 - Expansion (Classic Cannabis Indication)",
-  "total_studies": 15,
+  "total_studies": 17,
   "studies": [
     {
       "study_id": "GLAUCOMA_RCT_001",
       "study_type": "RCT",
       "condition": "GLAUCOMA",
       "study_title": "Sublingual THC for Intraocular Pressure Reduction: Randomized Controlled Trial",
-      "citation": "Tomida I, Azuara-Blanco A, House H, et al. 2006. Journal of Glaucoma.",
+      "citation": "Tomida I, Azuara-Blanco A, House H, et al. Effect of sublingual application of cannabinoids on intraocular pressure: a pilot study. J Glaucoma. 2006 Oct;15(5):349-53. doi: 10.1097/01.ijg.0000212260.04488.60. PMID: 16988594.",
       "title": "Sublingual THC for Intraocular Pressure Reduction: Randomized Controlled Trial",
       "authors": "Tomida I, Azuara-Blanco A, House H, et al.",
       "year": 2006,
@@ -47,10 +47,10 @@
       "study_type": "RCT",
       "condition": "GLAUCOMA",
       "study_title": "CBD Effect on Intraocular Pressure: Randomized Controlled Trial",
-      "citation": "Tomida I, Pertwee RG, Azuara-Blanco A. 2004. Journal of Glaucoma.",
+      "citation": "Tomida I, Azuara-Blanco A, House H, et al. Effect of sublingual application of cannabinoids on intraocular pressure: a pilot study. J Glaucoma. 2006 Oct;15(5):349-53. doi: 10.1097/01.ijg.0000212260.04488.60. PMID: 16988594.",
       "title": "CBD Effect on Intraocular Pressure: Randomized Controlled Trial",
       "authors": "Tomida I, Pertwee RG, Azuara-Blanco A",
-      "year": 2004,
+      "year": 2006,
       "journal": "Journal of Glaucoma",
       "sample_size": "6 patients with ocular hypertension",
       "intervention": {
@@ -84,7 +84,7 @@
       "study_type": "HISTORICAL_TRIAL",
       "condition": "GLAUCOMA",
       "study_title": "Marihuana Smoking and IOP Reduction: NIH-Funded Landmark Study",
-      "citation": "Hepler RS, Frank IR. 1971. JAMA.",
+      "citation": "Hepler RS, Frank IR. Marihuana smoking and intraocular pressure. JAMA. 1971 Sep 6;217(10):1392. PMID: 5109652.",
       "title": "Marihuana Smoking and IOP Reduction: NIH-Funded Landmark Study",
       "authors": "Hepler RS, Frank IR",
       "year": 1971,
@@ -121,7 +121,7 @@
       "study_type": "RCT",
       "condition": "GLAUCOMA",
       "study_title": "Nabilone vs Timolol for Ocular Hypertension: Comparative Trial",
-      "citation": "Merritt JC, Crawford WJ, Alexander PC, et al. 1980. Ophthalmology.",
+      "citation": "Merritt JC, Crawford WJ, Alexander PC, et al. 1980. Ophthalmology; PMID: 7053160; doi: 10.1016/s0161-6420(80)35258-5.",
       "title": "Nabilone vs Timolol for Ocular Hypertension: Comparative Trial",
       "authors": "Merritt JC, Crawford WJ, Alexander PC, et al.",
       "year": 1980,
@@ -196,7 +196,7 @@
       "study_type": "RCT",
       "condition": "GLAUCOMA",
       "study_title": "Topical WIN 55,212-2 (Cannabinoid Agonist) for IOP Reduction",
-      "citation": "Porcella A, Maxia C, Gessa GL, Pani L. 2001. European Journal of Neuroscience.",
+      "citation": "Porcella A, Maxia C, Gessa GL, Pani L. 2001. European Journal of Neuroscience; PMID: 11168547; doi: 10.1046/j.0953-816x.2000.01401.x.",
       "title": "Topical WIN 55,212-2 (Cannabinoid Agonist) for IOP Reduction",
       "authors": "Porcella A, Maxia C, Gessa GL, Pani L",
       "year": 2001,
@@ -270,7 +270,7 @@
       "study_type": "RCT",
       "condition": "GLAUCOMA",
       "study_title": "Oral Delta-9-THC for Glaucoma: Dose-Response Study",
-      "citation": "Merritt JC, Perry DD, Russell DN, Jones BF. 1981. Journal of Clinical Pharmacology.",
+      "citation": "Merritt JC, Perry DD, Russell DN, Jones BF. 1981. Journal of Clinical Pharmacology; PMID: 6271841; doi: 10.1002/j.1552-4604.1981.tb02626.x.",
       "title": "Oral Delta-9-THC for Glaucoma: Dose-Response Study",
       "authors": "Merritt JC, Perry DD, Russell DN, Jones BF",
       "year": 1981,
@@ -307,7 +307,7 @@
       "study_type": "MECHANISTIC",
       "condition": "GLAUCOMA",
       "study_title": "CB1 Receptor Distribution in Human Eye and IOP Regulation Mechanism",
-      "citation": "Porcella A, Casellas P, Gessa GL, Pani L. 1998. Molecular Brain Research.",
+      "citation": "Porcella A, Casellas P, Gessa GL, Pani L. 1998. Molecular Brain Research; PMID: 9685662; doi: 10.1016/s0169-328x(98)00105-3.",
       "title": "CB1 Receptor Distribution in Human Eye and IOP Regulation Mechanism",
       "authors": "Porcella A, Casellas P, Gessa GL, Pani L",
       "year": 1998,
@@ -381,7 +381,7 @@
       "study_type": "RCT",
       "condition": "GLAUCOMA",
       "study_title": "Dronabinol vs Placebo for Ocular Hypertension: Crossover Trial",
-      "citation": "Flach AJ. 2002. Transactions of the American Ophthalmological Society.",
+      "citation": "Flach AJ. 2002. Transactions of the American Ophthalmological Society; PMID: 12545695.",
       "title": "Dronabinol vs Placebo for Ocular Hypertension: Crossover Trial",
       "authors": "Flach AJ",
       "year": 2002,
@@ -418,7 +418,7 @@
       "study_type": "RCT",
       "condition": "GLAUCOMA",
       "study_title": "Cannabigerol (CBG) for IOP Reduction: Preclinical to Clinical Translation",
-      "citation": "Colasanti BK. 1990. Pharmacology, Biochemistry and Behavior.",
+      "citation": "Colasanti BK. 1990. Pharmacology, Biochemistry and Behavior; PMID: 1965836; doi: 10.1089/jop.1990.6.259.",
       "title": "Cannabigerol (CBG) for IOP Reduction: Preclinical to Clinical Translation",
       "authors": "Colasanti BK",
       "year": 1990,
@@ -492,7 +492,7 @@
       "study_type": "MECHANISTIC",
       "condition": "GLAUCOMA",
       "study_title": "Neuroprotective Effects of Cannabinoids on Retinal Ganglion Cells",
-      "citation": "Nucci C, Bari M, Spanò A, et al. 2008. Journal of Glaucoma.",
+      "citation": "Nucci C, Bari M, Spanò A, et al. 2008. Journal of Glaucoma; PMID: 18929136; doi: 10.1016/S0079-6123(08)01144-8.",
       "title": "Neuroprotective Effects of Cannabinoids on Retinal Ganglion Cells",
       "authors": "Nucci C, Bari M, Spanò A, et al.",
       "year": 2008,
@@ -559,6 +559,80 @@
         "conflicts_of_interest": "None"
       },
       "regulatory_relevance": "HIGH - Combination therapy approach; additive efficacy; different mechanism of action",
+      "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "GLAUCOMA_HISTORICAL_004",
+      "study_type": "HISTORICAL_TRIAL",
+      "condition": "GLAUCOMA",
+      "study_title": "Effects of Tetrahydrocannabinol on Arterial and Intraocular Hypertension",
+      "citation": "Crawford WJ, Merritt JC. Effects of tetrahydrocannabinol on arterial and intraocular hypertension. Int J Clin Pharmacol Biopharm. 1979 May;17(5):191-6. PMID: 468444.",
+      "title": "Effects of Tetrahydrocannabinol on Arterial and Intraocular Hypertension",
+      "authors": "Crawford WJ, Merritt JC",
+      "year": 1979,
+      "journal": "Int J Clin Pharmacol Biopharm",
+      "sample_size": "16 glaucoma patients (reported across normotensive/hypertensive cohorts)",
+      "intervention": {
+        "cannabinoid": "THC",
+        "dosage": "2.8% THC inhalation",
+        "duration": "Single session",
+        "delivery_method": "Inhaled"
+      },
+      "outcomes": {
+        "primary_measure": "Intraocular pressure (IOP) change",
+        "results": "THC inhalation produced substantial IOP decreases (reported range 6-21 mmHg) with effects lasting ~3-4 hours; ocular pressure changes paralleled systemic blood pressure changes",
+        "effect_size": "Large acute IOP reduction",
+        "secondary_outcomes": "Highlights systemic hemodynamic contribution to IOP change and duration limitations"
+      },
+      "safety": {
+        "adverse_events": "Tachycardia and systemic blood pressure reduction (expected with THC)",
+        "serious_adverse_events": "Not reported",
+        "dropout_rate": "Not reported"
+      },
+      "quality_metrics": {
+        "randomization": "Controlled perturbations (placebo vs THC)",
+        "blinding": "Not specified",
+        "funding_source": "Research support, U.S. Gov't, P.H.S. (per PubMed record)",
+        "conflicts_of_interest": "Not reported"
+      },
+      "regulatory_relevance": "HIGH - Classic clinical evidence for acute IOP lowering with THC and short duration; informs delivery/PK needs",
+      "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "GLAUCOMA_RCT_009",
+      "study_type": "RCT",
+      "condition": "GLAUCOMA",
+      "study_title": "Effect of Synthetic Cannabinoids on Elevated Intraocular Pressure",
+      "citation": "Tiedeman JS, Shields MB, Weber PA, et al. Effect of synthetic cannabinoids on elevated intraocular pressure. Ophthalmology. 1981 Mar;88(3):270-7. doi: 10.1016/S0161-6420(81)35052-0. PMID: 7015221.",
+      "title": "Effect of Synthetic Cannabinoids on Elevated Intraocular Pressure",
+      "authors": "Tiedeman JS, Shields MB, Weber PA, et al.",
+      "year": 1981,
+      "journal": "Ophthalmology",
+      "sample_size": "Ocular hypertensive patients (randomized, double-masked)",
+      "intervention": {
+        "cannabinoid": "Synthetic THC derivatives (BW146Y, BW29Y)",
+        "dosage": "Single oral dose",
+        "duration": "Acute single-dose study",
+        "delivery_method": "Oral"
+      },
+      "outcomes": {
+        "primary_measure": "Intraocular pressure (IOP) reduction",
+        "results": "One derivative (BW146Y) significantly lowered IOP, with effect described as independent of orthostatic blood pressure changes; the other (BW29Y) was ineffective at tested doses",
+        "effect_size": "Positive for BW146Y",
+        "secondary_outcomes": "Psychological/performance measures largely not significantly affected; mild subjective side effects"
+      },
+      "safety": {
+        "adverse_events": "Mild subjective side effects; orthostatic BP changes in some patients",
+        "serious_adverse_events": "Not reported",
+        "dropout_rate": "Not reported"
+      },
+      "quality_metrics": {
+        "randomization": "Randomized",
+        "blinding": "Double-masked",
+        "funding_source": "Not reported",
+        "conflicts_of_interest": "Not reported"
+      },
+      "regulatory_relevance": "HIGH - Classic randomized evidence for oral synthetic cannabinoids lowering IOP; supports structure/activity and non-plant analog pathways",
       "priority": "⭐⭐⭐⭐"
     }
   ]

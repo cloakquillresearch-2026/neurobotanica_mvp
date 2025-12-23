@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "clinical guideline",
+  "source": "NORML:CHRONIC_PAIN_GUIDELINE_003",
+  "participants": null,
+  "year": null,
+  "notes": "Consensus-based recommendations for titrating cannabinoids and tapering opioids for chronic pain control",
+  "confidence": "medium",
+  "abstract": ""
+}

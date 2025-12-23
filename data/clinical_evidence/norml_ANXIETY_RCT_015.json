@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "randomized_controlled_trial",
+  "source": "NORML:ANXIETY_RCT_015",
+  "participants": null,
+  "year": null,
+  "notes": "Safety and Efficacy of CBD for Anxiety in Elderly Patients: RCT",
+  "confidence": "medium",
+  "abstract": ""
+}

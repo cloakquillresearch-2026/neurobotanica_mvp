@@ -1,0 +1,12 @@
+{
+  "compound": "CBD-rich cannabis oil (CBD:THC 24:1)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Large (75% response)",
+  "study_type": "CASE_SERIES",
+  "source": "NORML:TS_CASE_SERIES_001",
+  "participants": "4 adolescents with severe TS",
+  "year": 2019,
+  "notes": "CBD-Rich Cannabis Oil for Pediatric Tourette Syndrome",
+  "confidence": "medium",
+  "abstract": "3/4 (75%) showed marked tic improvement; 1 achieved remission; School function improved; No psychoactive effects"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 0.96)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_011",
+  "participants": "628 adults aged \u226565 years with late-life depression using CBD",
+  "year": 2020,
+  "notes": "Cannabidiol for Geriatric Depression: Multi-Center Registry Study",
+  "confidence": "medium",
+  "abstract": "58% achieved remission (GDS <5); mean GDS 11.8 \u2192 5.2; sustained improvement at 6 months"
+}

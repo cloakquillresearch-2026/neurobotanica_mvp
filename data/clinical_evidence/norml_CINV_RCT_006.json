@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (delta-9-THC)",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Large (OR = 3.31)",
+  "study_type": "RCT",
+  "source": "NORML:CINV_RCT_006",
+  "participants": "18 children with cancer (ages 5-18)",
+  "year": 1979,
+  "notes": "Dronabinol in Pediatric Chemotherapy-Induced Nausea",
+  "confidence": "medium",
+  "abstract": "THC: Complete/partial response 72% vs Metoclopramide: 44% vs Prochlorperazine: 28%; THC superior"
+}

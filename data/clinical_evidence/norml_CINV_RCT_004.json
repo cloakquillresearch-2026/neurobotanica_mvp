@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (Sativex)",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Very large (OR = 8.97)",
+  "study_type": "RCT",
+  "source": "NORML:CINV_RCT_004",
+  "participants": "16 patients with breakthrough CINV despite standard antiemetics",
+  "year": 2010,
+  "notes": "Nabiximols as Add-On for Breakthrough CINV: Phase II Trial",
+  "confidence": "medium",
+  "abstract": "Nabiximols: 71% complete response vs Placebo: 22% (p<0.01); 5x higher response rate"
+}

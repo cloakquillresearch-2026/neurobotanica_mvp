@@ -1,0 +1,12 @@
+{
+  "compound": "CBD documented in EHR",
+  "condition": "DEPRESSION",
+  "effect_size": "Large sustained effect (Cohen's d = 0.88 at 12 months)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_012",
+  "participants": "2,156 primary care patients with depression diagnosis",
+  "year": 2020,
+  "notes": "Cannabidiol Use Patterns and Outcomes in Primary Care Depression: Electronic Health Record Study",
+  "confidence": "medium",
+  "abstract": "CBD users showed sustained PHQ-9 improvement (baseline 14.8 \u2192 12 months: 7.2); 71% maintained response throughout follow-up"
+}

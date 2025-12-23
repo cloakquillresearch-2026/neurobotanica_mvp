@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "observational_cross_sectional",
+  "source": "NORML:ANXIETY_OBSERVATIONAL_003",
+  "participants": null,
+  "year": null,
+  "notes": "Self-Reported Medical Cannabis Use and Anxiety: A Cross-Sectional Study",
+  "confidence": "medium",
+  "abstract": ""
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Medium (d = 0.58)",
+  "study_type": "RCT",
+  "source": "NORML:CACHEXIA_RCT_004",
+  "participants": "46 patients with advanced cancer cachexia",
+  "year": 2011,
+  "notes": "Nabilone for Appetite and Quality of Life in Advanced Cancer",
+  "confidence": "medium",
+  "abstract": "Nabilone: Caloric intake +228 kcal/day; Protein +9g/day (p<0.05); Carbohydrate intake increased significantly"
+}

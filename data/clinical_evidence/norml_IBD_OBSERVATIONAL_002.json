@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis (self-reported use)",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Medium (OR = 0.49 for obstruction)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:IBD_OBSERVATIONAL_002",
+  "participants": "615,817 Crohn's hospitalizations (12,274 cannabis users)",
+  "year": 2019,
+  "notes": "Cannabis Use and Hospitalization in Crohn's Disease: National Database Study",
+  "confidence": "medium",
+  "abstract": "Cannabis users: Lower bowel obstruction (3.9% vs 7.9%), fewer fistulas (2.1% vs 4.5%), shorter LOS (4.4 vs 5.7 days)"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AMYOTROPHIC_LATERAL_SCLEROSIS_OBSERVATIONAL_001",
+  "participants": null,
+  "year": null,
+  "notes": "Survey of cannabis use in patients with amyotrophic lateral sclerosis",
+  "confidence": "medium",
+  "abstract": ""
+}

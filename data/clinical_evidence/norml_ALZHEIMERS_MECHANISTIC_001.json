@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabinoids (THC, CBD, synthetic)",
+  "condition": "ALZHEIMERS",
+  "effect_size": "N/A (mechanistic)",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:ALZHEIMERS_MECHANISTIC_001",
+  "participants": "Mechanistic review with preclinical data",
+  "year": 2016,
+  "notes": "Cannabinoids and Neuroinflammation in Alzheimer's Disease",
+  "confidence": "medium",
+  "abstract": "THC reduces A\u03b2 aggregation; CBD reduces neuroinflammation; CB2 activation clears plaques; ECS dysregulated in AD brains"
+}

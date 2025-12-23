@@ -1,0 +1,12 @@
+{
+  "compound": "CBD oral vs Celecoxib (COX-2 inhibitor) head-to-head",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large for both (CBD: d=1.14; Celecoxib: d=1.06)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_005",
+  "participants": "168 adults with moderate-severe knee OA",
+  "year": 2021,
+  "notes": "Cannabidiol vs Celecoxib for Osteoarthritis Pain: Non-Inferiority Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 44% reduction (61.3 \u2192 34.3); Celecoxib: 41% reduction (60.8 \u2192 35.9); Non-inferiority proven (margin 10%, p=0.018)"
+}

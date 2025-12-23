@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis oil (THC:CBD variable)",
+  "condition": "ALZHEIMERS",
+  "effect_size": "Moderate-large (67% response)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ALZHEIMERS_OBSERVATIONAL_002",
+  "participants": "24 elderly patients with dementia",
+  "year": 2019,
+  "notes": "Cannabis Oil for Dementia Symptoms: Canadian Experience",
+  "confidence": "medium",
+  "abstract": "67% showed behavioral improvement; 58% reduced antipsychotic use; Caregiver burden significantly reduced"
+}

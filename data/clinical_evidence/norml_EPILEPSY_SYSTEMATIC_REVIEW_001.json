@@ -1,0 +1,12 @@
+{
+  "compound": "CBD (primarily)",
+  "condition": "EPILEPSY",
+  "effect_size": "Moderate-large (RR = 1.74)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:EPILEPSY_SYSTEMATIC_REVIEW_001",
+  "participants": "6 RCTs (N=555 patients)",
+  "year": 2018,
+  "notes": "Cochrane Review: Cannabinoids for Epilepsy",
+  "confidence": "medium",
+  "abstract": "CBD significantly reduces seizure frequency; RR for \u226550% reduction: 1.74 (95% CI 1.24-2.43, p=0.001); High-quality evidence"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "observational_pregnancy_safety",
+  "source": "NORML:ANXIETY_OBSERVATIONAL_013",
+  "participants": null,
+  "year": null,
+  "notes": "CBD Use for Perinatal Anxiety: Safety Monitoring Study",
+  "confidence": "medium",
+  "abstract": ""
+}

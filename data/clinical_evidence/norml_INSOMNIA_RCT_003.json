@@ -1,0 +1,12 @@
+{
+  "compound": "THC alone, CBD alone, THC+CBD combination",
+  "condition": "INSOMNIA",
+  "effect_size": "Moderate sleep architecture effects",
+  "study_type": "RCT",
+  "source": "NORML:INSOMNIA_RCT_003",
+  "participants": "8 healthy volunteers",
+  "year": 2004,
+  "notes": "THC/CBD Extract for Sleep Disturbance: Crossover Trial",
+  "confidence": "medium",
+  "abstract": "THC+CBD: Reduced wake time; THC alone: Increased sleepiness but decreased Stage 3; CBD 15mg: No sedation; CBD may offset THC morning impairment"
+}

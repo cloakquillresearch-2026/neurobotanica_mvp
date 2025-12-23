@@ -1,22 +1,19 @@
 {
-  "generation_date": "2025-12-21T19:23:28.319693",
+  "generation_date": "2025-12-23T01:55:00.595940",
   "overall_statistics": {
-    "total_correlations": 525,
-    "tk_to_genomic": 444,
+    "total_correlations": 285,
+    "tk_to_genomic": 204,
     "genomic_to_tk": 81,
     "quality_distribution": {
-      "moderate": 277,
-      "poor": 230,
-      "good": 18,
-      "EXCELLENT": 0,
-      "GOOD": 0,
-      "MODERATE": 0,
-      "POOR": 0
+      "MODERATE": 238,
+      "GOOD": 39,
+      "POOR": 8,
+      "EXCELLENT": 0
     },
-    "average_confidence": 0.5983073004395374,
-    "bidirectional_consistent": 0,
-    "min_confidence": 0.33063435928946383,
-    "max_confidence": 0.8027663153930586
+    "average_confidence": 0.6896276547212391,
+    "bidirectional_consistent": 4,
+    "min_confidence": 0.5098036697165552,
+    "max_confidence": 0.8710197652035289
   },
   "quality_breakdown": {
     "EXCELLENT": {
@@ -24,26 +21,26 @@
       "percentage": 0.0
     },
     "GOOD": {
-      "count": 0,
-      "percentage": 0.0
+      "count": 39,
+      "percentage": 13.68
     },
     "MODERATE": {
-      "count": 0,
-      "percentage": 0.0
+      "count": 238,
+      "percentage": 83.51
     },
     "POOR": {
-      "count": 0,
-      "percentage": 0.0
+      "count": 8,
+      "percentage": 2.81
     }
   },
   "direction_breakdown": {
     "tk_to_genomic": {
-      "count": 444,
-      "percentage": 84.57
+      "count": 204,
+      "percentage": 71.58
     },
     "genomic_to_tk": {
       "count": 81,
-      "percentage": 15.43
+      "percentage": 28.42
     }
   }
 }

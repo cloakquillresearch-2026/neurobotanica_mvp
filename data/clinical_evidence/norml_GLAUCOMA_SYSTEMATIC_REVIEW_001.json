@@ -1,0 +1,12 @@
+{
+  "compound": "Various (THC, nabilone, smoked cannabis)",
+  "condition": "GLAUCOMA",
+  "effect_size": "Consistent large effect (25-30%)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:GLAUCOMA_SYSTEMATIC_REVIEW_001",
+  "participants": "6 trials reviewed",
+  "year": 2015,
+  "notes": "Cannabinoids for Glaucoma: Cochrane Systematic Review",
+  "confidence": "medium",
+  "abstract": "Consistent 25-30% IOP reduction with THC-containing preparations; Short duration (3-4 hours) main limitation; Quality: Moderate"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone",
+  "condition": "PARKINSONS",
+  "effect_size": "Medium (d = 0.58)",
+  "study_type": "RCT",
+  "source": "NORML:PD_RCT_002",
+  "participants": "7 PD patients with severe dyskinesia",
+  "year": 2001,
+  "notes": "Nabilone for Parkinson's Disease Levodopa-Induced Dyskinesia",
+  "confidence": "medium",
+  "abstract": "Nabilone: 22% reduction in total dyskinesia score (p=0.02); Duration of beneficial effect: 4+ hours"
+}

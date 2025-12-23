@@ -1,0 +1,12 @@
+{
+  "compound": "THC+CBD (1:1 oral oil)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Moderate (crossover effect)",
+  "study_type": "RCT",
+  "source": "NORML:TS_RCT_007",
+  "participants": "22 adults with severe Tourette syndrome",
+  "year": 2023,
+  "notes": "Tetrahydrocannabinol and Cannabidiol in Tourette Syndrome",
+  "confidence": "medium",
+  "abstract": "At week 6 vs baseline: YGTSS total tic score change -8.9 (\u00b17.6) under active vs -2.5 (\u00b18.5) under placebo; mixed-effects model showed greater tic improvement under active treatment (P=0.008)"
+}

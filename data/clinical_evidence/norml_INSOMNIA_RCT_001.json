@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (THC:CBD 1:1)",
+  "condition": "INSOMNIA",
+  "effect_size": "Medium-large (d = 0.68)",
+  "study_type": "RCT",
+  "source": "NORML:INSOMNIA_RCT_001",
+  "participants": "24 adults with chronic insomnia disorder",
+  "year": 2020,
+  "notes": "Nabiximols for Chronic Insomnia: Phase 2 Trial",
+  "confidence": "medium",
+  "abstract": "Nabiximols: ISI reduced 4.6 points vs Placebo: 2.3 (p=0.03); Sleep onset latency reduced 25 min; Wake after sleep onset reduced 17 min"
+}

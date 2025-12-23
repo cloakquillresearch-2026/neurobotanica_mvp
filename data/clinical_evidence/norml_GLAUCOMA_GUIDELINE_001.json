@@ -1,0 +1,12 @@
+{
+  "compound": "Marijuana/cannabinoids",
+  "condition": "GLAUCOMA",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:GLAUCOMA_GUIDELINE_001",
+  "participants": "Evidence-based position statement",
+  "year": 2014,
+  "notes": "American Academy of Ophthalmology Position on Marijuana for Glaucoma",
+  "confidence": "medium",
+  "abstract": "Acknowledges IOP-lowering effect; Not recommended as first-line due to: short duration (3-4h), systemic side effects, need for frequent dosing; Conventional therapies preferred"
+}

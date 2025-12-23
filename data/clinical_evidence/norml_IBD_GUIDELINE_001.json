@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis and cannabinoids",
+  "condition": "IBD_CROHNS",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:IBD_GUIDELINE_001",
+  "participants": "Expert consensus and evidence review",
+  "year": 2020,
+  "notes": "European Crohn's and Colitis Organisation Position Statement on Cannabis",
+  "confidence": "medium",
+  "abstract": "Evidence level: Moderate for symptom improvement; Insufficient for remission induction; Safe as adjunct therapy; Need for standardized formulations"
+}

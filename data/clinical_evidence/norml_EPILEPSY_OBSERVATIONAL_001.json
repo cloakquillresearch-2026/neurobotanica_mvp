@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabidiol (Epidiolex)",
+  "condition": "EPILEPSY",
+  "effect_size": "Sustained large effect",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:EPILEPSY_OBSERVATIONAL_001",
+  "participants": "607 patients (Dravet + LGS combined)",
+  "year": 2019,
+  "notes": "Long-Term Safety of Epidiolex: Open-Label Extension Study",
+  "confidence": "medium",
+  "abstract": "Sustained efficacy over 3 years; No tolerance development; 50% maintained \u226550% reduction at 2 years"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Small (d = 0.32)",
+  "study_type": "RCT",
+  "source": "NORML:IBD_RCT_002",
+  "participants": "20 patients with moderate Crohn's disease",
+  "year": 2017,
+  "notes": "CBD for Crohn's Disease: Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD alone: 40% response vs Placebo: 30%; Not statistically significant (p=0.5); CBD-only insufficient at this dose"
+}

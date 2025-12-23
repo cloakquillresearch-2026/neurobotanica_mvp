@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis (various strains)",
+  "condition": "PTSD",
+  "effect_size": "Large acute effects (51-67% reduction)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:PTSD_OBSERVATIONAL_002",
+  "participants": "150 veterans with PTSD using cannabis",
+  "year": 2020,
+  "notes": "Cannabis Use and PTSD Symptom Reduction: Veteran Population Study",
+  "confidence": "medium",
+  "abstract": "62% reduction in intrusions; 57% reduction in flashbacks; 51% reduction in anxiety; 67% reduction in irritability"
+}

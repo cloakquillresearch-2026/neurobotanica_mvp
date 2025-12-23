@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol, nabilone",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:CACHEXIA_GUIDELINE_001",
+  "participants": "Evidence-based guideline",
+  "year": 2017,
+  "notes": "ESPEN Guidelines on Nutrition in Cancer: Cannabinoid Section",
+  "confidence": "medium",
+  "abstract": "ESPEN position: Cannabinoids may be considered for refractory anorexia when first-line therapies fail; Grade B recommendation"
+}

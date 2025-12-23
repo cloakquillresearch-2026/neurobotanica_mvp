@@ -22,6 +22,14 @@ from typing import Dict, List, Tuple
 from datetime import datetime
 from collections import defaultdict
 
+HIGH_EVIDENCE_LEVELS = {
+    "published_knowledge",
+    "peer_reviewed",
+    "clinical_research",
+    "clinical_trials",
+    "modern_research",
+}
+
 # Add backend to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -48,6 +56,7 @@ class CorrelationGenerator:
         self.genomic_targets_path = Path(genomic_targets_path)
         
         self.tk_practices = []
+        self.practice_by_id: Dict[str, Dict] = {}
         self.genomic_targets = {}
         self.correlations = []
         
@@ -75,6 +84,11 @@ class CorrelationGenerator:
         with open(self.tk_practices_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
             self.tk_practices = data.get("practices", [])
+            self.practice_by_id = {
+                practice.get("practice_id"): practice
+                for practice in self.tk_practices
+                if practice.get("practice_id")
+            }
         
         print(f"📚 Loaded {len(self.tk_practices)} TK practices")
     
@@ -104,6 +118,14 @@ class CorrelationGenerator:
             if practice.get("ceremonial_significance"):
                 print(f"   ⚠️  Skipping sacred practice: {practice['practice_name']}")
                 continue
+
+            # Skip practices flagged for additional metadata or consent
+            if practice.get("suppress_from_training"):
+                print(f"   ⏭️  Skipping flagged practice: {practice['practice_name']}")
+                continue
+
+            evidence_level = (practice.get("evidence_level") or "").lower()
+            high_dose_threshold = 0.48 if evidence_level in HIGH_EVIDENCE_LEVELS else 0.60
             
             try:
                 # Encode TK practice
@@ -156,6 +178,13 @@ class CorrelationGenerator:
                 
                 for profile in dosage_profiles:
                     for hypothesis in sorted_hypotheses[:profile['target_limit']]:
+                        # Gate medium/high dose variants when base confidence is weak
+                        if (
+                            hypothesis.overall_confidence < high_dose_threshold and
+                            profile['dosage'] in {"medium", "high"}
+                        ):
+                            continue
+
                         # Adjust confidence based on dosage profile
                         adjusted_confidence = min(
                             hypothesis.overall_confidence + profile['confidence_modifier'],
@@ -185,7 +214,8 @@ class CorrelationGenerator:
                         
                         self.correlations.append(correlation)
                         self.stats["tk_to_genomic"] += 1
-                        self.stats["quality_distribution"][hypothesis.correlation_quality.value] += 1
+                        quality_key = hypothesis.correlation_quality.value.upper()
+                        self.stats["quality_distribution"][quality_key] += 1
                 
                 print(f"   ✅ {practice['practice_name']}: {len(correlation_result.genomic_hypotheses)} genomic hypotheses")
                 
@@ -238,22 +268,44 @@ class CorrelationGenerator:
                 
                 # Store correlations
                 for tk_corr in correlation_result.traditional_correlations:
+                    practice_id = tk_corr.correlated_practice_id
+                    practice_meta = self.practice_by_id.get(practice_id)
+                    practice_name = (
+                        practice_meta.get("practice_name")
+                        if practice_meta else tk_corr.correlated_practice_name
+                    )
+                    practice_community = (
+                        practice_meta.get("source_community_id")
+                        if practice_meta else tk_corr.correlated_community_id
+                    )
+                    indications = (
+                        practice_meta.get("indications", [])
+                        if practice_meta else tk_corr.traditional_indications
+                    )
+                    preparation_notes = (
+                        practice_meta.get("preparation_method")
+                        if practice_meta else None
+                    )
                     correlation = {
                         "correlation_id": f"G2TK_{len(self.correlations):05d}",
                         "direction": "genomic_to_tk",
                         "genomic_target": gene_id,
-                        "tk_practice_predicted": tk_corr.correlated_practice_name,
-                        "predicted_community": tk_corr.correlated_community_id,
+                        "tk_practice_id": practice_id,
+                        "tk_practice_predicted": practice_name,
+                        "predicted_community": practice_community,
                         "confidence": tk_corr.overall_confidence,
                         "quality": tk_corr.correlation_quality.value,
                         "requires_validation": tk_corr.community_validation_required,
+                        "traditional_indications": indications,
+                        "recommended_preparation": preparation_notes,
                         "evidence_sources": gene_data.get("evidence_sources", []),
                         "generated_date": datetime.now().isoformat()
                     }
                     
                     self.correlations.append(correlation)
                     self.stats["genomic_to_tk"] += 1
-                    self.stats["quality_distribution"][tk_corr.correlation_quality.value] += 1
+                    quality_key = tk_corr.correlation_quality.value.upper()
+                    self.stats["quality_distribution"][quality_key] += 1
                 
                 print(f"   ✅ {gene_id}: {len(correlation_result.traditional_correlations)} TK practice predictions")
                 

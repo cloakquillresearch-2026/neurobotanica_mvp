@@ -1,0 +1,100 @@
+{
+  "condition": "POST_ACUTE_SEQUELAE_OF_SARS_COV_2",
+  "condition_display": "Post-acute sequelae of SARS-CoV-2 (PASC) / Long COVID",
+  "source": "PubMed (PASC/Long COVID queries; cannabis/cannabinoid focused)",
+  "extraction_date": "2025-12-22",
+  "phase": "PHASE_3",
+  "notes": "Clinically-aligned label selected (PASC). Studies were identified via PubMed and extracted from abstracts only unless otherwise noted.",
+  "studies": [
+    {
+      "study_id": "PASC_PUBMED_38105651_OPEN_LABEL_FEASIBILITY",
+      "study_type": "Interventional (single-arm open-label feasibility trial)",
+      "condition": "POST_ACUTE_SEQUELAE_OF_SARS_COV_2",
+      "study_title": "Feasibility of a cannabidiol-dominant cannabis-based medicinal product for the treatment of long COVID symptoms: A single-arm open-label feasibility trial",
+      "citation": "Thurgur H, Lynskey M, Schlag AK, et al. Br J Clin Pharmacol. 2024 Apr;90(4):1081-1093. doi: 10.1111/bcp.15988. PMID: 38105651.",
+      "year": 2024,
+      "country": "United Kingdom (Drug Science-associated; journal publication)",
+      "population": "Adults diagnosed with long COVID (n=12; 11 female, 1 male)",
+      "intervention": "Full-spectrum CBD-dominant cannabis-based medicinal product; up to 3 mL/day MediCabilis 5% CBD Oil (50 mg CBD/mL, <2 mg delta-9-THC/mL) orally",
+      "comparator": "None (single-arm)",
+      "duration": "21-week treatment phase + ~3-week follow-up without study drug",
+      "outcomes": [
+        "Feasibility metrics: adherence to protocol; completion of patient-reported outcome measures and daily self-report",
+        "Safety and tolerability",
+        "Monthly symptom patient-reported outcomes; daily symptom self-report via smartphone app",
+        "Wearable measures: heart rate, activity, sleep, oxygen saturation"
+      ],
+      "results": "Participants adhered to the protocol for the study duration; no serious adverse events were reported; response rates for assessments were high (>90% completion of patient-reported outcomes and daily self-report).",
+      "adverse_events": "No serious adverse events reported in the abstract; product described as safe and well-tolerated.",
+      "trial_registration": "ClinicalTrials.gov 04997395",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/38105651/",
+      "tags": [
+        "CBD",
+        "cannabis-based medicinal product",
+        "PASC",
+        "feasibility"
+      ],
+      "evidence_level": "Early feasibility; uncontrolled; not efficacy-confirmatory"
+    },
+    {
+      "study_id": "PASC_PUBMED_39488240_RCT_COMBINED_PLANT_EXTRACT",
+      "study_type": "Interventional (randomized double-blind placebo-controlled trial)",
+      "condition": "POST_ACUTE_SEQUELAE_OF_SARS_COV_2",
+      "study_title": "Impact of combined plant extracts on long COVID: An exploratory randomized controlled trial",
+      "citation": "Lukkunaprasit T, Satapornpong P, Kulchanawichien P, et al. Complement Ther Med. 2024 Dec;87:103107. doi: 10.1016/j.ctim.2024.103107. PMID: 39488240.",
+      "year": 2024,
+      "country": "Thailand",
+      "population": "Adults with long COVID (n=66; 33 per arm)",
+      "intervention": "Combined plant extract (CPE) formulation containing Citrus aurantifolia, Tiliacora triandra, Cannabis sativa, Alpinia galanga, and Piper nigrum; 4500 mg/day for 7 days",
+      "comparator": "Placebo",
+      "duration": "7 days treatment (per abstract)",
+      "outcomes": [
+        "Primary: change in C-reactive protein (CRP)",
+        "Primary: total symptom score (0 to 57)",
+        "Secondary: recovery/improvement of symptoms",
+        "Secondary: health-related quality of life (HRQOL)",
+        "Secondary: adverse events"
+      ],
+      "results": "CPE did not significantly reduce CRP versus placebo. The CPE group showed a reduction in total symptom score and reduced risk of overall moderate-to-severe symptoms, including moderate-to-severe fatigue and post-exertional malaise (PEM), versus placebo. HRQOL changes did not differ significantly between groups.",
+      "adverse_events": "Adverse events were mostly mild and resolved by end of follow-up period (per abstract).",
+      "trial_registration": "TCTR20230131004 (Thai Clinical Trials Registry)",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/39488240/",
+      "tags": [
+        "Cannabis sativa",
+        "herbal formulation",
+        "PASC",
+        "fatigue",
+        "PEM",
+        "RCT"
+      ],
+      "evidence_level": "Exploratory RCT; multi-ingredient formulation; cannabis component not isolated"
+    },
+    {
+      "study_id": "PASC_PUBMED_36942996_CROSS_SECTIONAL_SELF_MANAGEMENT",
+      "study_type": "Observational (cross-sectional survey)",
+      "condition": "POST_ACUTE_SEQUELAE_OF_SARS_COV_2",
+      "study_title": "Substance Use and the Self-Management of Persistent Symptoms of COVID-19",
+      "citation": "Veliz PT, Zhou W, Smith S, Larson JL. Subst Use Misuse. 2023;58(6):835-840. doi: 10.1080/10826084.2023.2184208. PMID: 36942996.",
+      "year": 2023,
+      "country": "United States",
+      "population": "U.S. adults reporting persistent/Long COVID symptoms (cross-sectional survey)",
+      "intervention": "Not applicable (self-management behaviors; includes marijuana use, alcohol, and prescription tranquilizers)",
+      "comparator": "Symptom duration strata (e.g., 13+ weeks vs 4 weeks or less)",
+      "duration": "Cross-sectional",
+      "outcomes": [
+        "Association between symptom duration and reported use of substances for symptom management",
+        "Logistic regression adjusted odds of marijuana use for symptom management"
+      ],
+      "results": "Participants with symptoms persisting 13 weeks or longer reported higher rates of using marijuana to manage symptoms (30.9%) compared to those with symptoms 4 weeks or less; adjusted odds of reporting marijuana use for symptom management were higher in the 13+ weeks group (AOR 4.21; 95% CI 1.68-10.5) per abstract.",
+      "adverse_events": "Not reported in abstract (descriptive/behavioral study).",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/36942996/",
+      "tags": [
+        "cannabis use",
+        "self-management",
+        "observational",
+        "PASC"
+      ],
+      "evidence_level": "Observational; self-report; does not establish efficacy"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Smoked cannabis",
+  "condition": "GLAUCOMA",
+  "effect_size": "Large (25-30% reduction)",
+  "study_type": "HISTORICAL_TRIAL",
+  "source": "NORML:GLAUCOMA_HISTORICAL_001",
+  "participants": "11 healthy volunteers + glaucoma patients",
+  "year": 1971,
+  "notes": "Marihuana Smoking and IOP Reduction: NIH-Funded Landmark Study",
+  "confidence": "medium",
+  "abstract": "IOP reduction: 25-30% within 30-60 minutes; Effect duration: 3-4 hours; Consistent across healthy and glaucoma subjects"
+}

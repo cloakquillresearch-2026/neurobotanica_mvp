@@ -1,0 +1,12 @@
+{
+  "compound": "CBD-rich cannabis oil (CBD:THC 20:1)",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Large (OR = 4.84)",
+  "study_type": "RCT",
+  "source": "NORML:IBD_RCT_007",
+  "participants": "32 patients with perianal Crohn's fistulas",
+  "year": 2022,
+  "notes": "CBD-Rich Cannabis for Perianal Crohn's Disease",
+  "confidence": "medium",
+  "abstract": "Cannabis: 53% fistula improvement vs Placebo: 19% (p=0.02); 25% complete fistula closure"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD and THC:CBD topical formulations",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large overall (SMD = 0.81)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:ARTHRITIS_SYSTEMATIC_REVIEW_002",
+  "participants": "14 studies reviewed (N=892 participants with arthritis)",
+  "year": 2018,
+  "notes": "Topical Cannabinoids for Arthritis: A Systematic Review and Meta-Analysis",
+  "confidence": "medium",
+  "abstract": "Pooled analysis: Large pain reduction (SMD = -0.81, 95% CI: -1.12 to -0.50); CBD-only formulations superior to THC:CBD"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "THC+CBD oil (THC 10 mg/mL + CBD 15 mg/mL)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Pilot feasibility",
+  "study_type": "RCT",
+  "source": "NORML:TS_RCT_009",
+  "participants": "10 adolescents randomized; 7 completed",
+  "year": 2025,
+  "notes": "A Pilot Randomized Placebo-Controlled Crossover Trial of Medicinal Cannabis in Adolescents with Tourette Syndrome",
+  "confidence": "medium",
+  "abstract": "Feasible protocol with high visit/blood-test completion; CGI-I: 3 rated much improved on active vs 1 on placebo at 10 weeks; efficacy not powered"
+}

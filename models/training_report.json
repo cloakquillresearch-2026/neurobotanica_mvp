@@ -1,0 +1,76 @@
+{
+  "training_date": "2025-12-23T13:30:29.628841",
+  "dataset": {
+    "total_compounds": 1056,
+    "clinical_studies": 0,
+    "patient_profiles": 100,
+    "terpene_synergies": 0
+  },
+  "models": {
+    "therapeutic": {
+      "model_name": "TherapeuticPrediction_RandomForest",
+      "model_version": "1.0.0",
+      "train_score": 0.1126,
+      "test_score": -0.0239,
+      "cv_mean": -0.0167,
+      "cv_std": 0.0249,
+      "num_features": 16,
+      "num_samples": 2145,
+      "training_time_seconds": 0.46,
+      "top_features": {
+        "target_encoded": 0.154481601166475,
+        "tpsa": 0.1373605670720118,
+        "complexity": 0.12723791599786585,
+        "sp3_fraction": 0.12278573992812314,
+        "qed": 0.1139655814200388,
+        "molecular_weight": 0.11276377260040281,
+        "logP": 0.0936473644740216,
+        "rotatable_bonds": 0.044303992311738136,
+        "h_bond_acceptors": 0.022962414276054884,
+        "h_bond_donors": 0.02279124265959003
+      },
+      "created_at": "2025-12-23T13:30:28.254214"
+    },
+    "dimer": {
+      "model_name": "DimerPotential",
+      "model_version": "1.0.0",
+      "train_score": 1.0,
+      "test_score": 0.9998,
+      "cv_mean": 0.9997,
+      "cv_std": 0.0001,
+      "num_features": 6,
+      "num_samples": 200,
+      "training_time_seconds": 0.41,
+      "top_features": {
+        "therapeutic_potential_score": 0.9995626440980391,
+        "increased_receptor_affinity": 0.00012287569486693013,
+        "prolonged_duration": 0.00010198161687071111,
+        "reduced_metabolism": 7.775098390498161e-05,
+        "confidence_score": 7.133687643345636e-05,
+        "enhanced_lipophilicity": 6.341072988484312e-05
+      },
+      "created_at": "2025-12-23T13:30:29.294371"
+    },
+    "patient": {
+      "model_name": "PatientResponse",
+      "model_version": "1.0.0",
+      "train_score": 1.0,
+      "test_score": 0.7,
+      "cv_mean": 0.7,
+      "cv_std": 0.0949,
+      "num_features": 7,
+      "num_samples": 100,
+      "training_time_seconds": 0.32,
+      "top_features": {
+        "treatment_duration_days": 0.3954085456895932,
+        "age_range_encoded": 0.1337548336322281,
+        "num_adverse_effects": 0.11955834397761457,
+        "thc_tolerance": 0.11334379124089189,
+        "experience_level": 0.10955500591543449,
+        "study_quality_encoded": 0.07602080200177055,
+        "adherence_score": 0.052358677542467084
+      },
+      "created_at": "2025-12-23T13:30:29.624174"
+    }
+  }
+}

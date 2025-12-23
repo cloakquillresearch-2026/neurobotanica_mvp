@@ -1,0 +1,12 @@
+{
+  "compound": "Inhaled cannabis",
+  "condition": "IBD_CROHNS",
+  "effect_size": "Large (d = 1.32)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:IBD_OBSERVATIONAL_001",
+  "participants": "30 Crohn's patients using cannabis long-term",
+  "year": 2012,
+  "notes": "Long-Term Cannabis Treatment in IBD: 12-Month Prospective Study",
+  "confidence": "medium",
+  "abstract": "Harvey-Bradshaw Index reduced: 14.5\u21927.0 (p<0.001); 21 patients (70%) achieved clinical benefit"
+}

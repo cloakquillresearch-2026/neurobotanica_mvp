@@ -1,0 +1,43 @@
+{
+  "checked_files": 368,
+  "valid": 359,
+  "invalid": 9,
+  "errors": [
+    {
+      "file": "norml_COVID19_PUBMED_34619044_RCT_CANDIDATE.json",
+      "error": "processing_error: 'list' object has no attribute 'get'"
+    },
+    {
+      "file": "norml_COVID19_PUBMED_40170643_RCT_SUBLINGUAL_CBD.json",
+      "error": "processing_error: 'list' object has no attribute 'get'"
+    },
+    {
+      "file": "norml_COVID19_PUBMED_38904961_RETROSPECTIVE_EHR_CANNABIS_TOBACCO.json",
+      "error": "processing_error: 'list' object has no attribute 'get'"
+    },
+    {
+      "file": "norml_COVID19_PUBMED_35932069_RETROSPECTIVE_COHORT_HOSPITALIZED_CANNABIS.json",
+      "error": "processing_error: 'list' object has no attribute 'get'"
+    },
+    {
+      "file": "norml_COVID19_PUBMED_36044600_RETROSPECTIVE_COHORT_SUD_PSYCH.json",
+      "error": "processing_error: 'list' object has no attribute 'get'"
+    },
+    {
+      "file": "norml_COVID19_PUBMED_37337275_RETROSPECTIVE_EMR_UDT_CONFIRMED_CURRENT_USE.json",
+      "error": "processing_error: 'list' object has no attribute 'get'"
+    },
+    {
+      "file": "norml_PASC_PUBMED_38105651_OPEN_LABEL_FEASIBILITY.json",
+      "error": "processing_error: 'list' object has no attribute 'get'"
+    },
+    {
+      "file": "norml_PASC_PUBMED_39488240_RCT_COMBINED_PLANT_EXTRACT.json",
+      "error": "processing_error: 'list' object has no attribute 'get'"
+    },
+    {
+      "file": "norml_PASC_PUBMED_36942996_CROSS_SECTIONAL_SELF_MANAGEMENT.json",
+      "error": "processing_error: 'list' object has no attribute 'get'"
+    }
+  ]
+}

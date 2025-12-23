@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis (survey of use patterns)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Large patient-reported (82% tic benefit)",
+  "study_type": "EPIDEMIOLOGICAL",
+  "source": "NORML:TS_EPIDEMIOLOGICAL_001",
+  "participants": "352 TS patients internationally",
+  "year": 2012,
+  "notes": "Cannabis Use Patterns Among Tourette Syndrome Patients: International Survey",
+  "confidence": "medium",
+  "abstract": "17% ever tried cannabis; 82% of users reported tic improvement; Tics most responsive, followed by OCD (56%), anxiety (52%)"
+}

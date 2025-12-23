@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "randomized_controlled_trial",
+  "source": "NORML:ANXIETY_RCT_017",
+  "participants": null,
+  "year": null,
+  "notes": "CBD Effects on Anxiety Biomarkers: Cortisol, Heart Rate Variability, and Inflammation",
+  "confidence": "medium",
+  "abstract": ""
+}

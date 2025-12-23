@@ -1,0 +1,12 @@
+{
+  "compound": "THC",
+  "condition": "GLAUCOMA",
+  "effect_size": "Large acute IOP reduction",
+  "study_type": "HISTORICAL_TRIAL",
+  "source": "NORML:GLAUCOMA_HISTORICAL_004",
+  "participants": "16 glaucoma patients (reported across normotensive/hypertensive cohorts)",
+  "year": 1979,
+  "notes": "Effects of Tetrahydrocannabinol on Arterial and Intraocular Hypertension",
+  "confidence": "medium",
+  "abstract": "THC inhalation produced substantial IOP decreases (reported range 6-21 mmHg) with effects lasting ~3-4 hours; ocular pressure changes paralleled systemic blood pressure changes"
+}

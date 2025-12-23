@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Large (d = 1.2 for weight)",
+  "study_type": "RCT",
+  "source": "NORML:CACHEXIA_RCT_005",
+  "participants": "15 Alzheimer's patients with anorexia",
+  "year": 1997,
+  "notes": "Dronabinol vs Placebo for Alzheimer's Anorexia",
+  "confidence": "medium",
+  "abstract": "Dronabinol: Weight increased 8.5 lbs vs Placebo: Weight decreased; Agitation reduced; Eating behavior improved"
+}

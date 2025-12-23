@@ -1,0 +1,12 @@
+{
+  "compound": "Various (CBD, nabilone, cannabis)",
+  "condition": "PARKINSONS",
+  "effect_size": "Small-medium for motor (SMD = 0.38)",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:PD_SYSTEMATIC_REVIEW_001",
+  "participants": "7 studies (N=186 patients)",
+  "year": 2019,
+  "notes": "Cannabinoids for Parkinson's Disease: Systematic Review and Meta-Analysis",
+  "confidence": "medium",
+  "abstract": "Pooled analysis: Motor symptoms SMD = -0.38 (95% CI: -0.72 to -0.04, p<0.05); Non-motor: Sleep and QoL consistently improved"
+}

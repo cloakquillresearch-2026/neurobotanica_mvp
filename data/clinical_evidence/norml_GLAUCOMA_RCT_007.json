@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabigerol (CBG)",
+  "condition": "GLAUCOMA",
+  "effect_size": "Large (comparable to THC)",
+  "study_type": "RCT",
+  "source": "NORML:GLAUCOMA_RCT_007",
+  "participants": "Animal model + 4 human subjects",
+  "year": 1990,
+  "notes": "Cannabigerol (CBG) for IOP Reduction: Preclinical to Clinical Translation",
+  "confidence": "medium",
+  "abstract": "CBG: 20-25% IOP reduction; Non-psychoactive; Comparable to THC efficacy without CNS effects"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis (various)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Very large (93% benefit)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:TS_OBSERVATIONAL_001",
+  "participants": "98 adults with TS using cannabis",
+  "year": 2017,
+  "notes": "Long-Term Cannabis Use in Tourette Syndrome: Registry Study",
+  "confidence": "medium",
+  "abstract": "93% reported tic improvement; 84% reduced premonitory urges; No tolerance development over years; Quality of life improved 76%"
+}

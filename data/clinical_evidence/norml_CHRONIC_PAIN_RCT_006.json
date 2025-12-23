@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_006",
+  "participants": null,
+  "year": null,
+  "notes": "An exploratory human laboratory experiment evaluating vaporized cannabis in the treatment of neuropathic pain from spinal cord injury and disease",
+  "confidence": "medium",
+  "abstract": ""
+}

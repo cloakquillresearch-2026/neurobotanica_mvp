@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis (various forms)",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Patient-reported (74% pain benefit)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:CANCER_OBSERVATIONAL_002",
+  "participants": "926 cancer patients surveyed",
+  "year": 2017,
+  "notes": "Cannabis Use in Palliative Care: Hospice Survey",
+  "confidence": "medium",
+  "abstract": "24% active cannabis users; 74% wanted provider discussion; Benefits reported: Pain (74%), appetite (54%), nausea (46%), sleep (54%)"
+}

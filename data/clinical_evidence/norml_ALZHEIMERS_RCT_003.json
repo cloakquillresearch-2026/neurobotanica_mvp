@@ -1,0 +1,12 @@
+{
+  "compound": "THC (Namisol oral tablet)",
+  "condition": "ALZHEIMERS",
+  "effect_size": "Non-significant (dose-finding needed)",
+  "study_type": "RCT",
+  "source": "NORML:ALZHEIMERS_RCT_003",
+  "participants": "50 patients with dementia",
+  "year": 2015,
+  "notes": "THC for Dementia-Related Neuropsychiatric Symptoms: Phase 2 Trial",
+  "confidence": "medium",
+  "abstract": "No significant difference from placebo on primary endpoint; Trends for agitation improvement; Dose may have been too low"
+}

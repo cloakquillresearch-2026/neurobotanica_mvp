@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:CHRONIC_PAIN_OBSERVATIONAL_007",
+  "participants": null,
+  "year": null,
+  "notes": "Multiple Sclerosis and use of medical cannabis: A retrospective review evaluating symptom outcomes",
+  "confidence": "medium",
+  "abstract": ""
+}

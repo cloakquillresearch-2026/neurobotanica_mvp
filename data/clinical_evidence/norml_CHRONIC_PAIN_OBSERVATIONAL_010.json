@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:CHRONIC_PAIN_OBSERVATIONAL_010",
+  "participants": null,
+  "year": null,
+  "notes": "Do medical marijuana laws reduce addictions and deaths related to pain killers?",
+  "confidence": "medium",
+  "abstract": ""
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis (various strains)",
+  "condition": "PARKINSONS",
+  "effect_size": "Large sustained (82% benefit)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:PD_OBSERVATIONAL_003",
+  "participants": "47 PD patients using medical cannabis",
+  "year": 2017,
+  "notes": "Long-Term Cannabis Treatment in Parkinson's: 3-Year Follow-Up",
+  "confidence": "medium",
+  "abstract": "82% reported sustained improvement at 3 years; Motor: 55% improved; Falls reduced 48%; Pain: 61% improved"
+}

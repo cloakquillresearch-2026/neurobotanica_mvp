@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "observational_prospective_cohort",
+  "source": "NORML:ANXIETY_OBSERVATIONAL_004",
+  "participants": null,
+  "year": null,
+  "notes": "Effects of Cannabidiol on Sleep and Anxiety: A Large Retrospective Series",
+  "confidence": "medium",
+  "abstract": ""
+}

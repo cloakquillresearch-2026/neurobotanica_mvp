@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol 2.5mg BID vs Megestrol 800mg/day vs Combination",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Medium for dronabinol; large for megestrol",
+  "study_type": "RCT",
+  "source": "NORML:CACHEXIA_RCT_003",
+  "participants": "469 cancer patients with cachexia",
+  "year": 2002,
+  "notes": "Megestrol vs Dronabinol vs Combination for Cancer Cachexia",
+  "confidence": "medium",
+  "abstract": "Appetite \u226510%: Dronabinol 49%, Megestrol 75%, Combo 66%; Weight gain \u226510%: Dronabinol 3%, Megestrol 11%"
+}

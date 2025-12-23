@@ -66,6 +66,7 @@ class GenomePathDataset(Dataset):
                 self.correlations = corr_data.get('correlations', [])
             else:
                 self.correlations = corr_data
+        self.correlation_confidences = [c.get('confidence', 0.5) for c in self.correlations]
         
         print(f"Loading TK practices from {tk_practices_path}...")
         with open(tk_practices_path, 'r', encoding='utf-8') as f:
@@ -104,6 +105,10 @@ class GenomePathDataset(Dataset):
         
     def __len__(self) -> int:
         return len(self.correlations)
+
+    def get_confidence(self, correlation_idx: int) -> float:
+        """Return stored confidence for a raw correlation index."""
+        return self.correlation_confidences[correlation_idx]
     
     def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
         """
@@ -162,7 +167,7 @@ class GenomePathDataset(Dataset):
             genomic_to_tk_target[self.practice_id_to_idx[tk_practice_id]] = 1.0
         
         return {
-            'tk_embeddings': tk_encoded['embeddings'],  # [seq_len, 384]
+            'tk_embeddings': tk_encoded['text_embeddings'],  # [seq_len, embed_dim]
             'tk_mask': tk_encoded['attention_mask'],    # [seq_len]
             'genomic_embeddings': genomic_encoded['embeddings'],  # [1, 1536]
             'genomic_mask': genomic_encoded['attention_mask'],    # [1]
@@ -237,11 +242,17 @@ def collate_fn(batch: List[Dict]) -> Dict[str, torch.Tensor]:
     max_tk_len = max(sample['tk_embeddings'].size(0) for sample in batch)
     batch_size = len(batch)
     
+    # Determine embedding dimensions dynamically (BioBERT = 768 by default)
+    embedding_dim = batch[0]['tk_embeddings'].size(1)
+
     # Initialize batched tensors
-    tk_embeddings_batch = torch.zeros(batch_size, max_tk_len, 384)
+    tk_embeddings_batch = torch.zeros(batch_size, max_tk_len, embedding_dim)
     tk_mask_batch = torch.zeros(batch_size, max_tk_len, dtype=torch.long)
-    genomic_embeddings_batch = torch.zeros(batch_size, 1, 1536)
-    genomic_mask_batch = torch.ones(batch_size, 1, dtype=torch.long)
+
+    genomic_seq_len = batch[0]['genomic_embeddings'].size(0)
+    genomic_dim = batch[0]['genomic_embeddings'].size(1)
+    genomic_embeddings_batch = torch.zeros(batch_size, genomic_seq_len, genomic_dim)
+    genomic_mask_batch = torch.zeros(batch_size, genomic_seq_len, dtype=torch.long)
     
     tk_to_genomic_targets = []
     genomic_to_tk_targets = []
@@ -258,7 +269,8 @@ def collate_fn(batch: List[Dict]) -> Dict[str, torch.Tensor]:
         tk_mask_batch[i, :tk_len] = sample['tk_mask']
         
         # Genomic embeddings (all same size)
-        genomic_embeddings_batch[i] = sample['genomic_embeddings']
+        genomic_embeddings_batch[i, :genomic_seq_len, :] = sample['genomic_embeddings']
+        genomic_mask_batch[i, :sample['genomic_mask'].size(0)] = sample['genomic_mask']
         
         # Targets
         tk_to_genomic_targets.append(sample['tk_to_genomic_target'])

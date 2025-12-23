@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ANXIETY",
+  "effect_size": "Large sustained (Cohen's d = 0.88 at 24 months)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ANXIETY_OBSERVATIONAL_012",
+  "participants": "387 adults with various anxiety disorders on CBD long-term",
+  "year": 2021,
+  "notes": "Long-Term Cannabidiol Use for Anxiety Disorders: 24-Month Effectiveness Study",
+  "confidence": "medium",
+  "abstract": "72% maintained anxiety reduction at 24 months; mean HAM-A 21.3 \u2192 10.8 sustained; minimal tolerance development (dose increase <10%)"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "observational_prospective_cohort",
+  "source": "NORML:ANXIETY_OBSERVATIONAL_009",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabidiol for Anxiety in Pediatric Patients: A Prospective Case Series",
+  "confidence": "medium",
+  "abstract": ""
+}

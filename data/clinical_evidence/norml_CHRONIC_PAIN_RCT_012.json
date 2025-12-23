@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_012",
+  "participants": null,
+  "year": null,
+  "notes": "Multicenter, double-blind, randomized, placebo-controlled, parallel-group study of the efficacy, safety and tolerability of THC:CBD extract in patients with intractable cancer-related pain",
+  "confidence": "medium",
+  "abstract": ""
+}

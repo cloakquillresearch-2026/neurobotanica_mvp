@@ -1,0 +1,12 @@
+{
+  "compound": "Endocannabinoid system",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "N/A (mechanistic)",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:TS_MECHANISTIC_001",
+  "participants": "Mechanistic review",
+  "year": 2003,
+  "notes": "Endocannabinoid System and Tourette Syndrome: Pathophysiological Rationale",
+  "confidence": "medium",
+  "abstract": "CB1 receptors dense in basal ganglia (tic generation); Cannabinoids modulate dopamine transmission; ECS regulates motor control and habit formation"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "Very large (Cohen's d = 1.42)",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_021",
+  "participants": "86 adults with CRPS type I",
+  "year": 2020,
+  "notes": "Cannabidiol for Complex Regional Pain Syndrome: A Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 52% pain reduction (VAS 7.8 \u2192 3.7); Placebo: 18% reduction (7.9 \u2192 6.5); p<0.001"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:CHRONIC_PAIN_OBSERVATIONAL_008",
+  "participants": null,
+  "year": null,
+  "notes": "Patient-reported outcomes in those consuming medical cannabis: A prospective longitudinal observational study in chronic pain patients",
+  "confidence": "medium",
+  "abstract": ""
+}

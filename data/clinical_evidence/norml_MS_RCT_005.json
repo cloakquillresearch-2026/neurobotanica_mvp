@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols (THC:CBD 1:1)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Medium-large (Cohen's d = 0.71)",
+  "study_type": "RCT",
+  "source": "NORML:MS_RCT_005",
+  "participants": "135 MS patients with overactive bladder",
+  "year": 2010,
+  "notes": "Cannabinoids for Bladder Dysfunction in Multiple Sclerosis",
+  "confidence": "medium",
+  "abstract": "Nabiximols: 38% reduction in episodes vs Placebo: 18% reduction (p=0.001)"
+}

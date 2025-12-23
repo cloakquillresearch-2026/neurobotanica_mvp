@@ -1,0 +1,12 @@
+{
+  "compound": "CBD during luteal phase",
+  "condition": "DEPRESSION",
+  "effect_size": "Very large (Cohen's d = 1.38)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_019",
+  "participants": "44 women with PMDD (DSM-5 criteria)",
+  "year": 2020,
+  "notes": "Cannabidiol for Premenstrual Dysphoric Disorder (PMDD): Crossover RCT",
+  "confidence": "medium",
+  "abstract": "CBD: 62% reduction in DRSP scores during luteal phase; Placebo: 18% reduction; p<0.001; effect sustained across both treatment cycles"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "N/A (safety study)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:CHRONIC_PAIN_OBSERVATIONAL_014",
+  "participants": "412 chronic pain patients on concurrent CBD + benzodiazepines",
+  "year": 2021,
+  "notes": "Cannabinoid-Benzodiazepine Interaction in Chronic Pain: Safety Study",
+  "confidence": "medium",
+  "abstract": "No increased sedation vs benzodiazepine monotherapy; 42% reduced benzodiazepine dose; no respiratory depression; cognitive function stable"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 0.92)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_005",
+  "participants": "94 Parkinson's patients with comorbid depression (GDS \u226511)",
+  "year": 2021,
+  "notes": "CBD Oil for Depression in Parkinson's Disease: Real-World Cohort Study",
+  "confidence": "medium",
+  "abstract": "61% achieved clinically meaningful improvement (\u22655 point reduction); mean GDS 16.2 \u2192 9.8"
+}

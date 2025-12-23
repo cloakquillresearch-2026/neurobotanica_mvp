@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_003",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabis in painful HIV-associated sensory neuropathy: a randomized placebo-controlled trial",
+  "confidence": "medium",
+  "abstract": ""
+}

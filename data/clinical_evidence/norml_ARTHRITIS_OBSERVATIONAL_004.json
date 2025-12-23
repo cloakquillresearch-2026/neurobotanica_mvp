@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large (Cohen's d = 1.03)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_004",
+  "participants": "156 children/adolescents (ages 6-17) with JIA using CBD",
+  "year": 2020,
+  "notes": "Cannabidiol Use in Juvenile Idiopathic Arthritis: Pediatric Registry Study",
+  "confidence": "medium",
+  "abstract": "62% achieved JADAS minimal disease activity; mean score 15.2 \u2192 6.8 (55% reduction)"
+}

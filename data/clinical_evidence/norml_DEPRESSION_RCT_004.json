@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (comparable to ketamine)",
+  "study_type": "PRECLINICAL_RCT",
+  "source": "NORML:DEPRESSION_RCT_004",
+  "participants": "Adult rodent models (N=120 across multiple depression paradigms)",
+  "year": 2016,
+  "notes": "Rapid Antidepressant Effects of Cannabidiol: Comparison with Ketamine in Rodent Models",
+  "confidence": "medium",
+  "abstract": "CBD produced rapid antidepressant effects (30-60 minutes) comparable to ketamine; effects sustained for 7 days after single dose"
+}

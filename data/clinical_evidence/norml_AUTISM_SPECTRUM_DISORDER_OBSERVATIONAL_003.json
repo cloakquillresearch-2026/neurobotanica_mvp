@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AUTISM_SPECTRUM_DISORDER",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_003",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabis and cannabinoid use in autism spectrum disorder: A systematic review",
+  "confidence": "medium",
+  "abstract": ""
+}

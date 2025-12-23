@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_004",
+  "participants": null,
+  "year": null,
+  "notes": "Smoked medicinal cannabis for neuropathic pain in HIV: a randomized, crossover clinical trial",
+  "confidence": "medium",
+  "abstract": ""
+}

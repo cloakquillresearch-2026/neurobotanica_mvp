@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "randomized_controlled_trial",
+  "source": "NORML:ANXIETY_RCT_013",
+  "participants": null,
+  "year": null,
+  "notes": "CBD as Adjunct for Benzodiazepine Discontinuation in Chronic Anxiety: Pilot RCT",
+  "confidence": "medium",
+  "abstract": ""
+}

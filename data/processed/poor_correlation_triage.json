@@ -1,0 +1,76 @@
+{
+  "total_poor": 7,
+  "by_direction": {
+    "tk_to_genomic": 7
+  },
+  "by_practice": {
+    "Cannabis resin for migraine": 1,
+    "Cannabis smoke for asthma": 2,
+    "Cannabis for depression": 1,
+    "Cannabis honey for cough and bronchitis": 2,
+    "Cannabis compress for sciatica": 1
+  },
+  "by_target": {
+    "TRPV1": 1,
+    "muscarinic": 1,
+    "beta-adrenergic": 1,
+    "5-HT1A": 1,
+    "inflammatory pathways": 1,
+    "mu-opioid": 1,
+    "sodium channels": 1
+  },
+  "by_dosage": {
+    "low": 7
+  },
+  "low_confidence_examples": [
+    {
+      "correlation_id": "TK2G_00176",
+      "confidence": 0.5687,
+      "tk_practice": "Cannabis compress for sciatica",
+      "genomic_target": "sodium channels",
+      "dosage": "low"
+    },
+    {
+      "correlation_id": "TK2G_00112",
+      "confidence": 0.5708,
+      "tk_practice": "Cannabis smoke for asthma",
+      "genomic_target": "beta-adrenergic",
+      "dosage": "low"
+    },
+    {
+      "correlation_id": "TK2G_00111",
+      "confidence": 0.5831,
+      "tk_practice": "Cannabis smoke for asthma",
+      "genomic_target": "muscarinic",
+      "dosage": "low"
+    },
+    {
+      "correlation_id": "TK2G_00151",
+      "confidence": 0.5882,
+      "tk_practice": "Cannabis honey for cough and bronchitis",
+      "genomic_target": "mu-opioid",
+      "dosage": "low"
+    },
+    {
+      "correlation_id": "TK2G_00150",
+      "confidence": 0.5978,
+      "tk_practice": "Cannabis honey for cough and bronchitis",
+      "genomic_target": "inflammatory pathways",
+      "dosage": "low"
+    },
+    {
+      "correlation_id": "TK2G_00064",
+      "confidence": 0.635,
+      "tk_practice": "Cannabis resin for migraine",
+      "genomic_target": "TRPV1",
+      "dosage": "low"
+    },
+    {
+      "correlation_id": "TK2G_00119",
+      "confidence": 0.647,
+      "tk_practice": "Cannabis for depression",
+      "genomic_target": "5-HT1A",
+      "dosage": "low"
+    }
+  ]
+}

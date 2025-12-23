@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "observational_preclinical",
+  "source": "NORML:ANXIETY_PRECLINICAL_002",
+  "participants": null,
+  "year": null,
+  "notes": "The Anxiolytic Effects of Cannabidiol: Involvement of the 5-HT1A Receptor and Neurogenesis",
+  "confidence": "medium",
+  "abstract": ""
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 0.89 for depression)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_013",
+  "participants": "187 CKD patients (stages 3-5) with depression",
+  "year": 2020,
+  "notes": "Cannabidiol for Depression in Chronic Kidney Disease: Nephrology Cohort Study",
+  "confidence": "medium",
+  "abstract": "BDI-II reduced 41% (22.7 \u2192 13.4); KDQOL improved 38%; no worsening of kidney function (eGFR stable)"
+}

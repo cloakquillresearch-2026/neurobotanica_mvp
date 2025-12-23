@@ -471,6 +471,18 @@ class SemanticBridgeTransformer:
             " ".join(indications or []).lower()
         )
         targets = []
+
+        # Practice-specific canonical targets so PTSD always carries CRH/5-HT guardrails
+        normalized_name = tk_vector.practice_name.lower().strip()
+        practice_specific_targets = {
+            "cannabis for ptsd and trauma": [
+                "CRHR1",
+                "CRHR2",
+                "5-HT2A",
+                "5-HT2C",
+            ],
+        }
+        targets.extend(practice_specific_targets.get(normalized_name, []))
         
         # Pain & inflammation
         if "pain" in searchable_text or "analgesic" in searchable_text or "migraine" in searchable_text or "headache" in searchable_text:
@@ -485,8 +497,11 @@ class SemanticBridgeTransformer:
             targets.extend(["GABA-A", "NMDA", "voltage-gated sodium channels"])
         if "depression" in searchable_text or "mood" in searchable_text:
             targets.extend(["5-HT1A", "5-HT2A", "BDNF", "CB1"])
-        if "ptsd" in searchable_text or "trauma" in searchable_text:
-            targets.extend(["GABA-A", "5-HT1A", "CB1", "NMDA"])
+        has_ptsd = "ptsd" in searchable_text or "trauma" in searchable_text
+        if has_ptsd:
+            targets.extend(["GABA-A", "5-HT1A", "CB1"])
+        if ("nightmare" in searchable_text or "nightmares" in searchable_text) and "excitotoxic" in searchable_text:
+            targets.append("NMDA")
         if "multiple_sclerosis" in searchable_text or "spasticity" in searchable_text or "tremor" in searchable_text:
             targets.extend(["GABA-A", "CB1", "CB2"])
         

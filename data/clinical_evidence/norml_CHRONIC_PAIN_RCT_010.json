@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_010",
+  "participants": null,
+  "year": null,
+  "notes": "Low-dose vaporized cannabis significantly improves neuropathic pain",
+  "confidence": "medium",
+  "abstract": ""
+}

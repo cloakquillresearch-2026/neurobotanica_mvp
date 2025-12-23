@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Large (OR = 4.04)",
+  "study_type": "RCT",
+  "source": "NORML:CINV_RCT_008",
+  "participants": "54 patients receiving cranial radiation",
+  "year": 2001,
+  "notes": "Dronabinol for Radiation-Induced Nausea in Brain Tumor Patients",
+  "confidence": "medium",
+  "abstract": "Dronabinol: 76% complete response vs Placebo: 44% (p=0.01)"
+}

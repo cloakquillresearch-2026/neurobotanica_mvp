@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabidiol (Epidiolex)",
+  "condition": "EPILEPSY",
+  "effect_size": "Large (20-25% vs placebo difference)",
+  "study_type": "RCT",
+  "source": "NORML:EPILEPSY_RCT_002",
+  "participants": "225 patients with LGS",
+  "year": 2018,
+  "notes": "Epidiolex for Lennox-Gastaut Syndrome: Phase 3 Trial (GWPCARE3)",
+  "confidence": "medium",
+  "abstract": "20mg CBD: 41.9% reduction; 10mg CBD: 37.2% reduction; Placebo: 17.2% (p<0.001); Dose-response confirmed"
+}

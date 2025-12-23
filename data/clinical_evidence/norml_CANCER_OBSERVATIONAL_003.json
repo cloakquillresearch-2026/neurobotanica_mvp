@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Large opioid reduction (36%)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:CANCER_OBSERVATIONAL_003",
+  "participants": "274 cancer patients on opioids and cannabis",
+  "year": 2017,
+  "notes": "Opioid Reduction with Medical Cannabis in Cancer: Retrospective Analysis",
+  "confidence": "medium",
+  "abstract": "36% reduced opioids by \u226530%; Mean morphine equivalent reduction: 44mg/day; 5% eliminated opioids entirely"
+}

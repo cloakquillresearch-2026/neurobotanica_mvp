@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols + temozolomide",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Large survival difference (30% absolute)",
+  "study_type": "RCT",
+  "source": "NORML:CANCER_RCT_005",
+  "participants": "21 recurrent glioblastoma patients",
+  "year": 2017,
+  "notes": "CBD for Quality of Life in Glioblastoma: Phase II Trial",
+  "confidence": "medium",
+  "abstract": "Nabiximols + TMZ: 83% 1-year survival vs TMZ alone: 53% (historical); Median survival: 550 vs 369 days"
+}

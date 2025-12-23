@@ -1,0 +1,230 @@
+{
+  "validation_date": "2025-12-23T01:55:06.224044",
+  "overall_status": "PASS",
+  "errors": [],
+  "warnings": [],
+  "sacred_knowledge_checks": {
+    "total_sacred_practices": 0,
+    "violations": [],
+    "status": "PASS"
+  },
+  "attribution_checks": {
+    "total_practices": 30,
+    "missing_attribution": [],
+    "status": "PASS"
+  },
+  "quality_metrics": {
+    "total_correlations": 285,
+    "average_confidence": 0.6896,
+    "quality_distribution": {
+      "moderate": 238,
+      "good": 39,
+      "poor": 8
+    },
+    "low_quality_count": 12,
+    "low_quality_correlations": [
+      {
+        "correlation_id": "TK2G_00048",
+        "quality": "moderate",
+        "confidence": 0.575,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00110",
+        "quality": "moderate",
+        "confidence": 0.5866595804853861,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00140",
+        "quality": "moderate",
+        "confidence": 0.5818365637708078,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00165",
+        "quality": "moderate",
+        "confidence": 0.5959480091133351,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00166",
+        "quality": "moderate",
+        "confidence": 0.5959480091133351,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00167",
+        "quality": "moderate",
+        "confidence": 0.5921944631189145,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00172",
+        "quality": "poor",
+        "confidence": 0.5898036697165553,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00176",
+        "quality": "poor",
+        "confidence": 0.5526788234306731,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00177",
+        "quality": "poor",
+        "confidence": 0.5398036697165552,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00181",
+        "quality": "poor",
+        "confidence": 0.5226788234306731,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00182",
+        "quality": "poor",
+        "confidence": 0.5098036697165552,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00201",
+        "quality": "poor",
+        "confidence": 0.5630186873360791,
+        "direction": "tk_to_genomic"
+      }
+    ],
+    "status": "PASS"
+  },
+  "completeness_checks": {
+    "tk_practices": {
+      "total": 30,
+      "conditions_covered": 87,
+      "conditions": [
+        "alzheimers",
+        "anhedonia",
+        "anxiety",
+        "appetite_loss",
+        "appetite_stimulation",
+        "arthritis",
+        "asthma",
+        "athletic_performance",
+        "blood_sugar_regulation",
+        "bone_healing",
+        "bone_pain",
+        "bradykinesia",
+        "bronchitis",
+        "bronchospasm",
+        "bruises",
+        "burns",
+        "cachexia",
+        "cancer_pain",
+        "chemotherapy_nausea",
+        "chronic_pain",
+        "chronic_widespread_pain",
+        "cognitive_decline",
+        "constipation",
+        "cough",
+        "dementia",
+        "depression",
+        "dermatitis",
+        "diabetes",
+        "digestive_health",
+        "dry_skin",
+        "dysmenorrhea",
+        "eczema",
+        "epilepsy",
+        "fatigue",
+        "fever",
+        "fibromyalgia",
+        "fractures",
+        "glaucoma",
+        "headache",
+        "high_blood_pressure",
+        "hypertension",
+        "hypervigilance",
+        "infection",
+        "inflammation",
+        "insomnia",
+        "intraocular_pressure",
+        "joint_pain",
+        "lactation_support",
+        "lower_back_pain",
+        "menstrual_cramps",
+        "metabolic_syndrome",
+        "migraine",
+        "milk_production",
+        "mood_disorders",
+        "multiple_sclerosis",
+        "muscle_recovery",
+        "muscle_spasms",
+        "muscle_spasticity",
+        "nausea",
+        "nerve_pain",
+        "nervousness",
+        "neuralgia",
+        "neurological_disorders",
+        "neuropathic_pain",
+        "neuroprotection",
+        "nightmares",
+        "parkinsons",
+        "pelvic_pain",
+        "postpartum_recovery",
+        "psoriasis",
+        "ptsd",
+        "radiculopathy",
+        "respiratory_distress",
+        "respiratory_inflammation",
+        "rigidity",
+        "sciatica",
+        "seizures",
+        "skin_damage",
+        "sleep_disturbance",
+        "swelling",
+        "trauma",
+        "tremor",
+        "tremors",
+        "vomiting",
+        "wasting_syndrome",
+        "weakness",
+        "wound_healing"
+      ]
+    },
+    "genomic_targets": {
+      "total": 46,
+      "conditions_covered": 16,
+      "conditions": [
+        "PTSD",
+        "alzheimers",
+        "anxiety",
+        "appetite_cachexia",
+        "arthritis",
+        "cancer_palliative",
+        "chronic_pain",
+        "depression",
+        "epilepsy",
+        "glaucoma",
+        "ibd_crohns",
+        "insomnia",
+        "multiple_sclerosis",
+        "nausea",
+        "parkinsons",
+        "tourette_syndrome"
+      ]
+    },
+    "correlations": {
+      "total": 285,
+      "tk_practices_covered": 25,
+      "genomic_targets_covered": 57,
+      "missing_tk_practices": []
+    },
+    "status": "PASS"
+  },
+  "excitotoxic_checks": {
+    "ptsd_practice_count": 1,
+    "violations": [],
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD and THC:CBD combinations",
+  "condition": "DEPRESSION",
+  "effect_size": "Moderate-large (SMD = 0.68)",
+  "study_type": "META_ANALYSIS",
+  "source": "NORML:DEPRESSION_META_ANALYSIS_001",
+  "participants": "24 studies (N=1,893 total participants)",
+  "year": 2020,
+  "notes": "Cannabinoids for Depression: A Systematic Review and Meta-Analysis",
+  "confidence": "medium",
+  "abstract": "Pooled effect size: SMD = -0.68 (95% CI: -0.91 to -0.45); significant antidepressant effect (p<0.001)"
+}

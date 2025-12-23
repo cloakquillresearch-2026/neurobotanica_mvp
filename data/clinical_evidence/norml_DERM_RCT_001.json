@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "DERMATOLOGY",
+  "effect_size": "none",
+  "study_type": "open_label_pilot",
+  "source": "NORML:DERM_RCT_001",
+  "participants": null,
+  "year": null,
+  "notes": "CBD-Enriched Ointment for Inflammatory Skin Diseases",
+  "confidence": "medium",
+  "abstract": ""
+}

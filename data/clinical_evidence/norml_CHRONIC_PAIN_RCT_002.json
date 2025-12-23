@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_002",
+  "participants": null,
+  "year": null,
+  "notes": "Comparison of the analgesic effects of dronabinol and smoked marijuana in daily marijuana smokers",
+  "confidence": "medium",
+  "abstract": ""
+}

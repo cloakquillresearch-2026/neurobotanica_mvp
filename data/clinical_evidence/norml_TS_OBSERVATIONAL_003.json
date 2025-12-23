@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis (recreational and medical)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Very large (96% tic improvement)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:TS_OBSERVATIONAL_003",
+  "participants": "75 TS patients using cannabis",
+  "year": 2017,
+  "notes": "Cannabis for Tourette Syndrome: Online Survey of Patient Experiences",
+  "confidence": "medium",
+  "abstract": "Tic improvement: 96%; OCD improvement: 76%; Anxiety: 72%; Self-injurious behavior: 68% reduced; Sleep: 84% improved"
+}

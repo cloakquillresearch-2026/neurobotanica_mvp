@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "DERMATOLOGY",
+  "effect_size": "none",
+  "study_type": "case_series",
+  "source": "NORML:DERM_CASE_001",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabinoid-Based Therapy for Refractory Pruritus in Epidermolysis Bullosa",
+  "confidence": "medium",
+  "abstract": ""
+}

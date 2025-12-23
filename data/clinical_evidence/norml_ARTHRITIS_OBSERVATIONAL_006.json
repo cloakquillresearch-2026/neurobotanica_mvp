@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Moderate-large (Cohen's d = 0.78)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_006",
+  "participants": "536 elderly patients (\u226565 years) with OA or RA using CBD",
+  "year": 2020,
+  "notes": "Cannabidiol for Arthritis in Elderly: Geriatric Population Study",
+  "confidence": "medium",
+  "abstract": "67% reported moderate-to-significant pain reduction; functional improvement in 58%; reduced falls risk (FRAT score improved)"
+}

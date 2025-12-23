@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 0.89)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_002",
+  "participants": "32 adults with major depressive disorder (MDD)",
+  "year": 2018,
+  "notes": "Antidepressant-like effect of Cannabidiol in the Unpredictable Chronic Mild Stress model",
+  "confidence": "medium",
+  "abstract": "CBD group: 45% reduction in PHQ-9 scores (from 18.2\u00b13.1 to 10.1\u00b14.2); Placebo: 12% reduction"
+}

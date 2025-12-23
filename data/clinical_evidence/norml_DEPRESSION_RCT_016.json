@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Very large (Cohen's d = 1.24)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_016",
+  "participants": "72 HIV+ patients with major depression (BDI-II \u226520)",
+  "year": 2020,
+  "notes": "Cannabidiol for Depression in HIV/AIDS Patients: Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 49% reduction (26.8 \u2192 13.7); Placebo: 19% reduction (27.1 \u2192 21.9); p<0.001"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone",
+  "condition": "ALZHEIMERS",
+  "effect_size": "Medium-large (d = 0.69)",
+  "study_type": "RCT",
+  "source": "NORML:ALZHEIMERS_RCT_002",
+  "participants": "39 patients with AD-related agitation",
+  "year": 2019,
+  "notes": "Nabilone for Agitation in Alzheimer's Disease: Crossover RCT",
+  "confidence": "medium",
+  "abstract": "Nabilone: CMAI reduced 4.3 points more than placebo (p=0.02); NPI total improved; 60% achieved clinical response"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabidiol (Epidiolex)",
+  "condition": "EPILEPSY",
+  "effect_size": "Large (25.6% difference)",
+  "study_type": "RCT",
+  "source": "NORML:EPILEPSY_RCT_001",
+  "participants": "120 children and young adults with Dravet syndrome",
+  "year": 2017,
+  "notes": "Epidiolex (CBD) for Dravet Syndrome: Pivotal Phase 3 Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 38.9% reduction vs Placebo: 13.3% (p=0.01); 5% seizure-free; 43% achieved \u226550% reduction"
+}

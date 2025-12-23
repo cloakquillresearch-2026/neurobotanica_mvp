@@ -1,0 +1,12 @@
+{
+  "compound": "CBD (cannabidiol)",
+  "condition": "INSOMNIA",
+  "effect_size": "Medium (66.7% response)",
+  "study_type": "RCT",
+  "source": "NORML:INSOMNIA_RCT_002",
+  "participants": "72 adults with anxiety and sleep complaints",
+  "year": 2019,
+  "notes": "CBD for Anxiety-Related Insomnia: Clinical Trial",
+  "confidence": "medium",
+  "abstract": "Sleep improved in 66.7% at Month 1; Sustained at 56.1% at Month 3; PSQI improved mean 2.8 points"
+}

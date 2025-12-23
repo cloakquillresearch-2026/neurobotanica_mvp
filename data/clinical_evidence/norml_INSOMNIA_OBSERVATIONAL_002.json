@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis (various)",
+  "condition": "INSOMNIA",
+  "effect_size": "Large substitution effect (30%)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:INSOMNIA_OBSERVATIONAL_002",
+  "participants": "2,774 medical cannabis patients",
+  "year": 2017,
+  "notes": "Cannabis Substitution for Sleep Medications: Survey Study",
+  "confidence": "medium",
+  "abstract": "30.3% substituted cannabis for sleep aids; 65% reduced benzodiazepine use; 68% reduced Z-drug use; Better sleep quality reported"
+}

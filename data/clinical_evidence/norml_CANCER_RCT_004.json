@@ -1,0 +1,12 @@
+{
+  "compound": "Nabilone",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Medium-large (d = 0.64)",
+  "study_type": "RCT",
+  "source": "NORML:CANCER_RCT_004",
+  "participants": "46 patients with advanced cancer",
+  "year": 2011,
+  "notes": "Nabilone for Cancer-Related Anxiety and Pain",
+  "confidence": "medium",
+  "abstract": "Nabilone: Caloric intake increased 14%; Protein intake increased 20%; Pain decreased 21% (p<0.05); Anxiety reduced 38%"
+}

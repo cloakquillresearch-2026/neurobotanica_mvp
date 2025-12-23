@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabidiol (Epidiolex)",
+  "condition": "EPILEPSY",
+  "effect_size": "Large (21-22% vs placebo)",
+  "study_type": "RCT",
+  "source": "NORML:EPILEPSY_RCT_003",
+  "participants": "224 patients with TSC-associated seizures",
+  "year": 2021,
+  "notes": "Epidiolex for Tuberous Sclerosis Complex: Phase 3 (GWPCARE6)",
+  "confidence": "medium",
+  "abstract": "25mg CBD: 48.6% reduction; 50mg CBD: 47.5% reduction; Placebo: 26.5% (p<0.001); Third FDA indication"
+}

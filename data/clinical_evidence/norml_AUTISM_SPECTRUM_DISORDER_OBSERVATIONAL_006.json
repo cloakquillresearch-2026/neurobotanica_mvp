@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AUTISM_SPECTRUM_DISORDER",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_006",
+  "participants": null,
+  "year": null,
+  "notes": "Real life experiences of medical cannabis treatment in autism: Analysis of safety and efficacy",
+  "confidence": "medium",
+  "abstract": ""
+}

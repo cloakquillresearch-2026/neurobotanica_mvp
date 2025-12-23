@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:AMYOTROPHIC_LATERAL_SCLEROSIS_RCT_001",
+  "participants": null,
+  "year": null,
+  "notes": "Tetrahydrocannabinol (THC) for cramps in amyotrophic lateral sclerosis: A randomized, double-blind crossover trial",
+  "confidence": "medium",
+  "abstract": ""
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "CBD (20mg and 40mg sublingual)",
+  "condition": "GLAUCOMA",
+  "effect_size": "Negative (IOP increase at high dose)",
+  "study_type": "RCT",
+  "source": "NORML:GLAUCOMA_RCT_002",
+  "participants": "6 patients with ocular hypertension",
+  "year": 2006,
+  "notes": "CBD Effect on Intraocular Pressure: Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD 20mg: No significant IOP change; CBD 40mg: Transient IOP INCREASE (+6 mmHg at 4 hours); CBD alone NOT recommended for glaucoma"
+}

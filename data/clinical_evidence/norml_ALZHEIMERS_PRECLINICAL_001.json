@@ -1,0 +1,12 @@
+{
+  "compound": "THC",
+  "condition": "ALZHEIMERS",
+  "effect_size": "Significant in vitro",
+  "study_type": "PRECLINICAL",
+  "source": "NORML:ALZHEIMERS_PRECLINICAL_001",
+  "participants": "In vitro neuronal cultures",
+  "year": 2016,
+  "notes": "THC Removes Amyloid Beta: Salk Institute Study",
+  "confidence": "medium",
+  "abstract": "THC promoted cellular amyloid beta removal; Reduced inflammatory response to A\u03b2; Blocked A\u03b2-induced nerve cell death"
+}

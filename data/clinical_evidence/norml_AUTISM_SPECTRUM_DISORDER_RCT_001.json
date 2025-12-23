@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AUTISM_SPECTRUM_DISORDER",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:AUTISM_SPECTRUM_DISORDER_RCT_001",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabinoid treatment for autism: A proof-of-concept randomized trials",
+  "confidence": "medium",
+  "abstract": ""
+}

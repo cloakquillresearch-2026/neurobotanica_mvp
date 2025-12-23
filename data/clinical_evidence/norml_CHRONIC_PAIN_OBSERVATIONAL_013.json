@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:CHRONIC_PAIN_OBSERVATIONAL_013",
+  "participants": null,
+  "year": null,
+  "notes": "Qualifying conditions of medical cannabis license holders in the United States",
+  "confidence": "medium",
+  "abstract": ""
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "ANXIETY",
+  "effect_size": "none",
+  "study_type": "observational_preclinical",
+  "source": "NORML:ANXIETY_PRECLINICAL_003",
+  "participants": null,
+  "year": null,
+  "notes": "Cannabidiol Regulation of the HPA Axis and Anxiolytic Effects",
+  "confidence": "medium",
+  "abstract": ""
+}

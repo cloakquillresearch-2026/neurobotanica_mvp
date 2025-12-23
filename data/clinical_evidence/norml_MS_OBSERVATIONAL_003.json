@@ -1,0 +1,12 @@
+{
+  "compound": "Nabiximols",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Large for physical (d = 0.82), medium for mental (d = 0.58)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:MS_OBSERVATIONAL_003",
+  "participants": "892 MS patients across 5 European countries",
+  "year": 2016,
+  "notes": "Quality of Life Impact of Nabiximols in MS: Multinational Survey",
+  "confidence": "medium",
+  "abstract": "Nabiximols users: MSQoL-54 physical composite 12.4 points higher; mental composite 8.7 points higher; 74% reported improved QoL"
+}

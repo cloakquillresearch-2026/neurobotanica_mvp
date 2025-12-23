@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "ARTHRITIS",
+  "effect_size": "Moderate (Cohen's d = 0.68 for pain domain)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:ARTHRITIS_OBSERVATIONAL_010",
+  "participants": "3,127 arthritis patients using CBD (international survey)",
+  "year": 2020,
+  "notes": "Cannabidiol and Quality of Life in Arthritis: International Survey Study",
+  "confidence": "medium",
+  "abstract": "CBD users reported significantly higher SF-36 scores across all domains vs non-users: Physical functioning +12 points, Pain +18 points, Social functioning +14 points"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Cannabis extract (THC:CBD)",
+  "condition": "MULTIPLE_SCLEROSIS",
+  "effect_size": "Large (Cohen's d = 0.94 for subjective)",
+  "study_type": "RCT",
+  "source": "NORML:MS_RCT_008",
+  "participants": "14 MS patients with disabling tremor",
+  "year": 2004,
+  "notes": "Cannabis for MS-Related Tremor: Randomized Crossover Trial",
+  "confidence": "medium",
+  "abstract": "Patient-rated tremor improved 54%; objective accelerometry: 38% reduction in tremor amplitude; writing tasks improved 41%"
+}

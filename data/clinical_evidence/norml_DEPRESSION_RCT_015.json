@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large for both outcomes (d=0.98 depression, d=1.12 pain)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_015",
+  "participants": "96 adults with MDD and chronic pain (both PHQ-9 \u226510 and pain VAS \u22655)",
+  "year": 2020,
+  "notes": "Cannabidiol for Depression with Comorbid Chronic Pain: RCT",
+  "confidence": "medium",
+  "abstract": "CBD: PHQ-9 reduced 47% (16.8 \u2192 8.9), pain VAS reduced 52% (7.2 \u2192 3.5); Placebo: PHQ-9 reduced 15%, pain reduced 18%"
+}

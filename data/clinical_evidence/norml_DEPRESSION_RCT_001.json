@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Moderate to large effects in animal models; small to moderate in human studies",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:DEPRESSION_RCT_001",
+  "participants": "Multiple studies reviewed (meta-analysis of CBD for depression symptoms)",
+  "year": 2014,
+  "notes": "Cannabidiol as a Potential Treatment for Anxiety and Depression: A Systematic Review and Meta-analysis",
+  "confidence": "medium",
+  "abstract": "CBD showed significant antidepressant effects across multiple preclinical models; human evidence preliminary but promising"
+}

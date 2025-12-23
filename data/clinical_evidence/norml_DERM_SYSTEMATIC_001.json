@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "DERMATOLOGY",
+  "effect_size": "none",
+  "study_type": "systematic_review",
+  "source": "NORML:DERM_SYSTEMATIC_001",
+  "participants": null,
+  "year": null,
+  "notes": "Therapeutic Potential of Cannabinoids in Dermatology",
+  "confidence": "medium",
+  "abstract": ""
+}

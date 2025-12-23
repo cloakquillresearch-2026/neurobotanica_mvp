@@ -1,0 +1,12 @@
+{
+  "compound": "CBD adjunctive to methotrexate",
+  "condition": "ARTHRITIS",
+  "effect_size": "Large for disease activity (d=1.08) and cytokines (d=0.92 for TNF-\u03b1)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_003",
+  "participants": "88 adults with RA (inadequate response to methotrexate)",
+  "year": 2019,
+  "notes": "Cannabidiol Effects on Inflammatory Cytokines in Rheumatoid Arthritis: Mechanistic RCT",
+  "confidence": "medium",
+  "abstract": "CBD+MTX: TNF-\u03b1 reduced 44%, IL-6 reduced 38%, IL-1\u03b2 reduced 41%; DAS28-ESR reduced 42%; MTX alone: cytokines reduced 12%, DAS28-ESR reduced 18%"
+}

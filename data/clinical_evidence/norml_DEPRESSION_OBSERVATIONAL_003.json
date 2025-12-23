@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large sustained effect (Cohen's d = 0.89 at 12 months)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_003",
+  "participants": "521 patients with depression followed for 12 months",
+  "year": 2021,
+  "notes": "Long-term Safety and Efficacy of Cannabidiol for Depression: 12-Month Naturalistic Study",
+  "confidence": "medium",
+  "abstract": "Sustained improvement: baseline PHQ-9 16.2 \u2192 Month 12: 8.7 (46% reduction maintained); 72% remained improved at 12 months"
+}

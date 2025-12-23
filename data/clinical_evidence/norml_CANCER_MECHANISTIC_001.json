@@ -1,0 +1,12 @@
+{
+  "compound": "THC, CBD, synthetic cannabinoids",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "N/A (preclinical)",
+  "study_type": "MECHANISTIC",
+  "source": "NORML:CANCER_MECHANISTIC_001",
+  "participants": "Comprehensive preclinical review",
+  "year": 2012,
+  "notes": "Antitumor Effects of Cannabinoids: Preclinical Evidence Review",
+  "confidence": "medium",
+  "abstract": "Mechanisms identified: Apoptosis induction, autophagy activation, angiogenesis inhibition, invasion/metastasis reduction; Active in glioma, breast, prostate, lung cancer models"
+}

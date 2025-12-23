@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "DEPRESSION",
+  "effect_size": "Large (Cohen's d = 0.94)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_008",
+  "participants": "213 adolescents (ages 13-17) with MDD",
+  "year": 2021,
+  "notes": "Cannabidiol in Adolescent Depression: Naturalistic Cohort Study",
+  "confidence": "medium",
+  "abstract": "58% showed clinical response (\u226540% CDRS-R reduction); mean score 67.3 \u2192 38.1 (43% reduction)"
+}

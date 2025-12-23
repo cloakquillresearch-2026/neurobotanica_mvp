@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AUTISM_SPECTRUM_DISORDER",
+  "effect_size": "none",
+  "study_type": "observational",
+  "source": "NORML:AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_007",
+  "participants": null,
+  "year": null,
+  "notes": "Oral cannabidiol use in children in with autism spectrum disorder to treat related symptoms and co-morbidities",
+  "confidence": "medium",
+  "abstract": ""
+}

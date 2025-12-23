@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "AUTISM_SPECTRUM_DISORDER",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:AUTISM_SPECTRUM_DISORDER_RCT_002",
+  "participants": null,
+  "year": null,
+  "notes": "Evaluation of the efficacy and safety of cannabidiol-rich cannabis extract in children with autism spectrum disorder: Randomized, double-blind and controlled placebo clinical trial",
+  "confidence": "medium",
+  "abstract": ""
+}

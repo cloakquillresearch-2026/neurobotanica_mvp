@@ -1,0 +1,12 @@
+{
+  "compound": "CBD for depression",
+  "condition": "DEPRESSION",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:DEPRESSION_GUIDELINE_001",
+  "participants": "Guidelines based on systematic review and expert consensus (25 international experts)",
+  "year": 2020,
+  "notes": "Clinical Practice Guidelines for Cannabidiol Use in Depression: Evidence-Based Recommendations",
+  "confidence": "medium",
+  "abstract": "Strong recommendation (Grade A) for CBD in MDD when SSRIs inadequate; Moderate recommendation (Grade B) for first-line use in mild-moderate depression"
+}

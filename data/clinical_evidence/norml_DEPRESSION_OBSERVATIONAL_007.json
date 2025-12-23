@@ -1,0 +1,12 @@
+{
+  "compound": "CBD adjunctive to standard care",
+  "condition": "DEPRESSION",
+  "effect_size": "Moderate-large (OR = 2.31, 95% CI: 1.89-2.82)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:DEPRESSION_OBSERVATIONAL_007",
+  "participants": "1,204 patients with MDD across 6 psychiatric clinics",
+  "year": 2021,
+  "notes": "CBD Use and Depression Remission Rates: Multi-Site Registry Analysis",
+  "confidence": "medium",
+  "abstract": "CBD+standard care: 47% remission vs 28% standard care alone (historical controls); faster time to remission (5.2 vs 8.7 weeks)"
+}

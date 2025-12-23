@@ -1,0 +1,12 @@
+{
+  "compound": "CBD vs Bupropion head-to-head",
+  "condition": "DEPRESSION",
+  "effect_size": "Large for both (CBD: d=1.05 depression, d=1.18 fatigue)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_018",
+  "participants": "102 adults with MDD and prominent fatigue/anhedonia",
+  "year": 2021,
+  "notes": "Cannabidiol vs Bupropion for Depression with Low Energy: Head-to-Head RCT",
+  "confidence": "medium",
+  "abstract": "CBD: MADRS reduced 43%, FSS reduced 48%; Bupropion: MADRS reduced 39%, FSS reduced 41%; CBD non-inferior for both outcomes"
+}

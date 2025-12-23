@@ -1,0 +1,12 @@
+{
+  "compound": "UNKNOWN",
+  "condition": "CHRONIC_PAIN",
+  "effect_size": "none",
+  "study_type": "RCT",
+  "source": "NORML:CHRONIC_PAIN_RCT_008",
+  "participants": null,
+  "year": null,
+  "notes": "Smoked cannabis for chronic neuropathic pain: a randomized controlled trial",
+  "confidence": "medium",
+  "abstract": ""
+}

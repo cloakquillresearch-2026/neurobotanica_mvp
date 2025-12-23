@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (Marinol)",
+  "condition": "TOURETTE_SYNDROME",
+  "effect_size": "Large (40% reduction)",
+  "study_type": "RCT",
+  "source": "NORML:TS_RCT_004",
+  "participants": "8 adults with treatment-resistant TS",
+  "year": 2016,
+  "notes": "Dronabinol for Tourette Syndrome: US Pilot Trial",
+  "confidence": "medium",
+  "abstract": "Dronabinol: YGTSS reduced 40% from baseline; 6/8 (75%) achieved clinically significant improvement"
+}

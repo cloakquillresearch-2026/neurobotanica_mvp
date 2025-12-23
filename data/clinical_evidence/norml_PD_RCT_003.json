@@ -1,0 +1,12 @@
+{
+  "compound": "CBD",
+  "condition": "PARKINSONS",
+  "effect_size": "Very large (complete response in 100%)",
+  "study_type": "RCT",
+  "source": "NORML:PD_RCT_003",
+  "participants": "4 PD patients with RBD",
+  "year": 2014,
+  "notes": "CBD for REM Sleep Behavior Disorder in Parkinson's Disease",
+  "confidence": "medium",
+  "abstract": "All 4 patients: Complete resolution of RBD-related behaviors; Sleep architecture improved"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol",
+  "condition": "APPETITE_CACHEXIA",
+  "effect_size": "Large (significant weight gain)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:CACHEXIA_OBSERVATIONAL_003",
+  "participants": "12 COPD patients with weight loss",
+  "year": 2000,
+  "notes": "Dronabinol in COPD Cachexia: Pilot Study",
+  "confidence": "medium",
+  "abstract": "Mean weight gain: +3.2 kg; Respiratory function stable; Exercise tolerance maintained"
+}

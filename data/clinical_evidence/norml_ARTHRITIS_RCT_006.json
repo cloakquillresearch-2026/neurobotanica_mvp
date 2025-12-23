@@ -1,0 +1,12 @@
+{
+  "compound": "CBD topical gel",
+  "condition": "ARTHRITIS",
+  "effect_size": "Very large (Cohen's d = 1.41)",
+  "study_type": "RCT",
+  "source": "NORML:ARTHRITIS_RCT_006",
+  "participants": "94 adults with symptomatic hand OA (ACR criteria)",
+  "year": 2020,
+  "notes": "Cannabidiol for Hand Osteoarthritis: A Randomized Controlled Trial",
+  "confidence": "medium",
+  "abstract": "CBD: 52% reduction in AUSCAN pain (10.8 \u2192 5.2); Placebo: 14% reduction (10.6 \u2192 9.1); p<0.001"
+}

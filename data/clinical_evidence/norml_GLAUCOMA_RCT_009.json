@@ -1,0 +1,12 @@
+{
+  "compound": "Synthetic THC derivatives (BW146Y, BW29Y)",
+  "condition": "GLAUCOMA",
+  "effect_size": "Positive for BW146Y",
+  "study_type": "RCT",
+  "source": "NORML:GLAUCOMA_RCT_009",
+  "participants": "Ocular hypertensive patients (randomized, double-masked)",
+  "year": 1981,
+  "notes": "Effect of Synthetic Cannabinoids on Elevated Intraocular Pressure",
+  "confidence": "medium",
+  "abstract": "One derivative (BW146Y) significantly lowered IOP, with effect described as independent of orthostatic blood pressure changes; the other (BW29Y) was ineffective at tested doses"
+}

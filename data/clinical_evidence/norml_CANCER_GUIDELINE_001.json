@@ -1,0 +1,12 @@
+{
+  "compound": "Medical cannabis and cannabinoids",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "N/A (guideline)",
+  "study_type": "CLINICAL_GUIDELINE",
+  "source": "NORML:CANCER_GUIDELINE_001",
+  "participants": "Evidence-based guideline",
+  "year": 2022,
+  "notes": "ASCO Guideline: Medical Cannabis in Oncology",
+  "confidence": "medium",
+  "abstract": "Recommendations: May discuss cannabis with patients; Evidence supports use for refractory symptoms; Start low/go slow dosing; Monitor for interactions"
+}

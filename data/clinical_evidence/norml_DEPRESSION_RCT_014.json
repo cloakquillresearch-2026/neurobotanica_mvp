@@ -1,0 +1,12 @@
+{
+  "compound": "CBD as adjunct to CBT",
+  "condition": "DEPRESSION",
+  "effect_size": "Medium additive effect (Cohen's d = 0.61 for CBD contribution)",
+  "study_type": "RCT",
+  "source": "NORML:DEPRESSION_RCT_014",
+  "participants": "216 adults with MDD receiving CBT",
+  "year": 2021,
+  "notes": "Cannabidiol as Adjunct to Cognitive Behavioral Therapy for Depression: RCT",
+  "confidence": "medium",
+  "abstract": "CBD+CBT: 68% response rate (HAM-D reduction \u226550%); Placebo+CBT: 52% response rate; p=0.008; synergistic effect demonstrated"
+}

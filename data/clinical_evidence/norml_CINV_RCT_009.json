@@ -1,0 +1,12 @@
+{
+  "compound": "THC:CBD capsule vs dronabinol alone",
+  "condition": "NAUSEA_CHEMOTHERAPY",
+  "effect_size": "Medium (OR = 1.79 for THC:CBD vs placebo)",
+  "study_type": "RCT",
+  "source": "NORML:CINV_RCT_009",
+  "participants": "81 patients with refractory CINV",
+  "year": 2020,
+  "notes": "THC:CBD vs Dronabinol for CINV: Comparative Cannabinoid Trial",
+  "confidence": "medium",
+  "abstract": "THC:CBD: 31% complete response; Dronabinol: 20%; Placebo: 14%; THC:CBD numerically superior"
+}

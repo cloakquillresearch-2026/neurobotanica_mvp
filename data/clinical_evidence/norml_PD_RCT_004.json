@@ -1,0 +1,12 @@
+{
+  "compound": "CBD (dose-escalation)",
+  "condition": "PARKINSONS",
+  "effect_size": "Safety profile established",
+  "study_type": "RCT",
+  "source": "NORML:PD_RCT_004",
+  "participants": "6 PD patients with treatment-resistant symptoms",
+  "year": 2009,
+  "notes": "THC:CBD Oromucosal Spray for PD Pain and Non-Motor Symptoms",
+  "confidence": "medium",
+  "abstract": "No worsening of motor symptoms at any dose; Psychotic symptoms (hallucinations) did not worsen; Anxiety reduced"
+}

@@ -1,0 +1,12 @@
+{
+  "compound": "Various (dronabinol, nabilone, nabiximols)",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "Variable by symptom",
+  "study_type": "SYSTEMATIC_REVIEW",
+  "source": "NORML:CANCER_SYSTEMATIC_REVIEW_001",
+  "participants": "28 studies (N>3,000 patients)",
+  "year": 2016,
+  "notes": "Cannabinoids for Cancer Symptoms: ASCO Systematic Review",
+  "confidence": "medium",
+  "abstract": "Pain: Moderate evidence for benefit; Nausea: Strong evidence; Appetite: Moderate evidence; Sleep: Moderate evidence; Evidence grade B for most indications"
+}

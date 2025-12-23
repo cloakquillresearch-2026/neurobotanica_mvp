@@ -1,0 +1,12 @@
+{
+  "compound": "Dronabinol (compassionate use)",
+  "condition": "CANCER_PALLIATIVE",
+  "effect_size": "High tolerability (95%)",
+  "study_type": "OBSERVATIONAL",
+  "source": "NORML:CANCER_OBSERVATIONAL_004",
+  "participants": "37 pediatric cancer patients",
+  "year": 2017,
+  "notes": "Medical Cannabis in Pediatric Oncology: Safety Study",
+  "confidence": "medium",
+  "abstract": "Well-tolerated in 95% of children; Symptom improvement: Nausea 78%, appetite 68%, pain 62%; Parent/child satisfaction: 92%"
+}
