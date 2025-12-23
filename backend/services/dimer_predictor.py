@@ -123,57 +123,57 @@ class DimerPrediction:
         }
 
 
+
+# --- NextGen Model Integration ---
+import os
+import joblib
+from src.ml_models.nextgen_dimer_input import encode_dimer_features
+from src.ml_models.nextgen_dimer_heads import NextGenDimerModel
+
 class DimericPredictor:
-    """Predict dimeric cannabinoid structures and properties.
+    """Predict dimeric cannabinoid structures and properties (legacy + next-gen ML)."""
     
-    Implements:
-    - Reactive site identification
-    - Homodimer generation (A-A)
-    - Heterodimer generation (A-B)
-    - Formation probability scoring
-    - Synergy prediction
-    - Novelty assessment
-    """
-    
-    # Known reactive positions in cannabinoids (phenolic hydroxyl groups)
-    PHENOL_PATTERNS = [
-        "[OH]c1ccc(C)cc1",  # Resorcinol OH
-        "c1cc(O)c(O)cc1",  # Catechol pattern
-    ]
-    
-    # Known dimer linkage points
-    LINKAGE_SITES = {
-        "THC": ["C-3", "C-6a"],
-        "CBD": ["C-2'", "C-6'"],
-        "CBG": ["C-3", "C-5"],
-        "CBN": ["C-3", "C-6a"],
-        "CBC": ["C-3", "C-5'"],
-    }
-    
-    # Therapeutic synergy coefficients by condition
+    # Synergy coefficients for therapeutic potential by condition
     SYNERGY_COEFFICIENTS = {
-        "pain": {"THC": 0.4, "CBD": 0.3, "CBG": 0.2, "CBN": 0.1},
-        "inflammation": {"CBD": 0.4, "CBG": 0.3, "THC": 0.2, "CBC": 0.1},
-        "anxiety": {"CBD": 0.5, "CBG": 0.2, "THC": 0.1, "THCV": 0.2},
-        "seizures": {"CBD": 0.6, "CBDV": 0.2, "THC": 0.1, "CBG": 0.1},
-        "neuroprotection": {"CBD": 0.3, "CBG": 0.3, "THC": 0.2, "CBC": 0.2},
+        "chronic_pain": {"THC": 0.8, "CBD": 0.7, "CBG": 0.5, "CBN": 0.4, "CBC": 0.3},
+        "anxiety": {"CBD": 0.85, "CBG": 0.6, "THC": 0.3, "CBC": 0.4, "CBN": 0.3},
+        "inflammation": {"CBD": 0.8, "CBG": 0.7, "CBC": 0.6, "THC": 0.5, "CBN": 0.3},
+        "epilepsy": {"CBD": 0.9, "CBDV": 0.7, "THC": 0.2, "CBG": 0.3, "CBC": 0.2},
+        "nausea": {"THC": 0.85, "CBD": 0.5, "CBG": 0.4, "CBN": 0.3, "CBC": 0.2},
+        "sleep": {"CBN": 0.85, "THC": 0.7, "CBD": 0.5, "CBG": 0.3, "CBC": 0.2},
+        "neuroprotection": {"CBD": 0.8, "CBG": 0.7, "THC": 0.5, "CBC": 0.4, "CBN": 0.3},
     }
-    
-    def __init__(self, known_dimers: Optional[List[str]] = None):
-        """Initialize predictor.
-        
-        Args:
-            known_dimers: List of SMILES for known dimeric cannabinoids
-        """
+
+    def __init__(self, known_dimers: Optional[List[str]] = None, nextgen_model_path: Optional[str] = None):
         self.known_dimers = known_dimers or []
         self._known_dimer_fps = []
-        
         if RDKIT_AVAILABLE and self.known_dimers:
             for smiles in self.known_dimers:
                 mol = Chem.MolFromSmiles(smiles)
                 if mol:
                     fp = FingerprintMols.FingerprintMol(mol)
                     self._known_dimer_fps.append(fp)
+        # Load next-gen model if available
+        self.nextgen_model = None
+        if nextgen_model_path is None:
+            # Default path
+            nextgen_model_path = os.path.join(os.path.dirname(__file__), '../../models/dimer_potential_v1.joblib')
+        if os.path.exists(nextgen_model_path):
+            try:
+                self.nextgen_model = joblib.load(nextgen_model_path)
+            except Exception as e:
+                logger.warning(f"Could not load next-gen dimer model: {e}")
+
+    def predict_nextgen_dimer(self, dimer_entry: dict) -> dict:
+        """Predict synergy/effect using next-gen ML model pipeline."""
+        if self.nextgen_model is None:
+            raise RuntimeError("NextGenDimerModel not loaded.")
+        features = encode_dimer_features(dimer_entry).reshape(1, -1)
+        synergy_pred, effect_pred = self.nextgen_model.predict(features)
+        return {
+            "synergy_score": float(synergy_pred[0]),
+            "effect_size": float(effect_pred[0])
+        }
     
     def identify_reactive_sites(self, smiles: str) -> List[ReactiveSite]:
         """Identify reactive sites on a cannabinoid monomer.
@@ -273,8 +273,8 @@ class DimericPredictor:
         # Identify reactive sites
         sites = self.identify_reactive_sites(monomer_smiles)
         
-        if len(sites) < 2:
-            # Need at least 2 sites for homodimer
+        if len(sites) < 1:
+            # Need at least 1 site for homodimer (we can use same type twice)
             return self._create_failed_prediction(
                 monomer_name, monomer_name, monomer_smiles, monomer_smiles,
                 "Insufficient reactive sites"
@@ -282,6 +282,7 @@ class DimericPredictor:
         
         # Select best sites for dimerization
         site1 = max(sites, key=lambda s: s.reactivity_score)
+        # For homodimer, site2 is on the second monomer copy (same position is fine)
         site2 = sorted(sites, key=lambda s: s.reactivity_score)[-2] if len(sites) > 1 else site1
         
         # Generate dimer SMILES

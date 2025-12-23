@@ -1,4 +1,6 @@
 # GenomePath Training Dataset - Completion Report
+
+> **Superseded:** This report is now consolidated into [PHASE_4_MASTER_BENCHMARK_REPORT.md](PHASE_4_MASTER_BENCHMARK_REPORT.md). This file may be archived or deleted.
 **Date**: 2025-06-15  
 **Status**: ✅ **TARGET EXCEEDED (103%)**  
 **Agent**: NeuroBotanica Development Team

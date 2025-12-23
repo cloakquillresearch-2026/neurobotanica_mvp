@@ -1,4 +1,6 @@
 # GenomePath Data Pipeline - Completion Summary
+
+> **Superseded:** This report is now consolidated into [PHASE_4_MASTER_BENCHMARK_REPORT.md](PHASE_4_MASTER_BENCHMARK_REPORT.md). This file may be archived or deleted.
 **Date**: December 21, 2025  
 **Status**: ✅ Phase 1 Complete - Ready for Training
 

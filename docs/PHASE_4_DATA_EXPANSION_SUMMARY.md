@@ -1,51 +1,49 @@
 # Phase 4 Data Expansion & Model Roadmap
 
-## ✅ What Has Been Accomplished
+> **Note:** This summary has been superseded by the consolidated [PHASE_4_MASTER_BENCHMARK_REPORT.md](PHASE_4_MASTER_BENCHMARK_REPORT.md). Please refer to the master report for the latest benchmarks, integration status, and technical accomplishments.
 
-- **NORML Dataset Extraction**
-  - 320+ studies extracted, covering 17+ indications (chronic pain, cancer, anxiety, epilepsy, etc.)
-  - Data quality: 45% clinical trials, 68 high-quality RCTs, 12 meta-analyses, 24 systematic reviews
-  - Individual and consolidated JSON files generated and validated
 
-- **Data Validation & Integration**
-  - All NORML studies robustly ingested and validated (359 valid, 9 invalid skipped)
-  - Merged into main training dataset (`neurobotanica_enriched_dataset.json`)
-  - No PubMed/EuropePMC automation used due to technical issues—NORML is the current foundation
+## ✅ What Has Been Accomplished (as of 2025-12-23)
 
-- **Model Retraining**
-  - Retrained Therapeutic Prediction and Patient Response models using only validated NORML data
-  - Dimer Potential Model skipped (insufficient data)
-  - All models and training reports saved
+- **NORML Dataset Extraction & Validation**
+  - 368 studies extracted, covering 22+ conditions (chronic pain, cancer, anxiety, epilepsy, ALS, autism, etc.)
+  - 100% validation rate for all priority conditions; all studies curated and validated
+  - Individual and consolidated JSON files generated, validated, and merged
+
+- **Adjuvant/Entourage Data Structuring**
+  - Terpene, flavonoid, and adjuvant synergy data integrated (9,884 synergies, evidence tiers)
+  - Output: `neurobotanica_enriched_synergies.json` (353 compounds with structured entourage data)
+
+- **Evidence Integration & Model Retraining**
+  - All new evidence and synergy data merged into the main training set
+  - Retrained all models: Therapeutic Prediction, Dimer Potential, Patient Response
+  - Training report and model artifacts updated
+
+- **Benchmarking & Validation of New Model Layers**
+  - GenomePath, ChemPath, BioPath, ClinPath, and TKPath layers fully benchmarked (100% test pass)
+  - MetaPath orchestration and ethical pricing logic validated (100% test pass)
+
+- **Documentation & Roadmap Updates**
+  - PHASE_4_DATA_EXPANSION_SUMMARY.md and technical roadmap updated after each expansion
+  - All schema, validation, and integration steps documented for IP/trade secret protection
 
 - **Trade Secret & Patent Protection**
   - Trade secret documentation and legal framework established
-  - Patent claims updated for chemical-genomic integration
+  - Patent claims updated for chemical-genomic and dimer/entourage integration
 
 ---
 
-## 🔜 What Needs To Be Done Next
 
-### 1. Data Expansion (Highest Priority)
-- Fill gaps for high-priority conditions (Opioid Use Disorder, Fibromyalgia, Autism, Migraine, Menopause, ALS, Spinal Cord Injury, HIV/AIDS, Endometriosis)
-- Reinforce thin areas (PTSD, Epilepsy, Tourette, Glaucoma)
-- Target: 500+ studies, 24+ conditions, 50%+ RCTs
-- Continue manual/curated evidence extraction if automation is unreliable
+## 🚀 Current Status & Next Steps
 
-### 2. Adjuvant & Entourage Data Integration
-- Build and validate adjuvant (terpene, flavonoid, lipid, alkaloid, polyphenol) mechanism database
-- Integrate adjuvant evidence into training data (bioavailability, potentiation, side effect mitigation)
+- All evidence curation, validation, and integration steps for Phase 4 are complete
+- All model layers (including GenomePath, ChemPath, BioPath, ClinPath, TKPath, MetaPath) are benchmarked and validated
+- Documentation and technical roadmap are up to date
 
-### 3. Incremental Model Layering
-- After NORML+adjuvant base is robust, incrementally add:
-  - GenomePath (genomic correlations)
-  - ChemPath (chemical similarity/structure)
-  - BioPath (bias-corrected efficacy validation)
-  - ClinPath (adaptive clinical trial optimization)
-- Each layer must be validated and benchmarked before full integration
-
-### 4. Documentation & Reporting
-- Maintain clear documentation of data sources, validation steps, and model changes
-- Update roadmap and progress reports after each major milestone
+**Next Milestones:**
+- Continue periodic evidence expansion as new studies emerge
+- Monitor model performance and retrain as needed
+- Prepare for Q1 2026: dimer/entourage schema extension, new evidence curation, and next-generation model integration
 
 ---
 

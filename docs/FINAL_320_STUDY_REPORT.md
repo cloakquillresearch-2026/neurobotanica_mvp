@@ -1,4 +1,6 @@
 # 🎯 FINAL RESULTS: 320-STUDY DATABASE COMPLETE
+
+> **Superseded:** This report is now consolidated into [PHASE_4_MASTER_BENCHMARK_REPORT.md](PHASE_4_MASTER_BENCHMARK_REPORT.md). This file may be archived or deleted.
 ## NeuroBotanica NORML Evidence Extraction Campaign
 
 **Date**: December 19, 2025  

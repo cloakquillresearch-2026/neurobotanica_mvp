@@ -24,6 +24,7 @@ from backend.models.database import get_db, init_db, engine, Base
 from backend.api import studies, compounds, fda_compliance, conformers
 from backend.api import omnipath
 from backend.api import evidence, receptor_affinity
+from backend.api import dimers
 from backend.routers import patentpath, terpenes, chempath, toxpath, regpath, security
 from backend.middleware.token_validation import TokenValidationMiddleware
 
@@ -86,6 +87,7 @@ app.include_router(conformers.router, prefix="/api/v1", tags=["3D Conformers"])
 app.include_router(omnipath.router, prefix="/api/v1", tags=["OmniPath Integration"])
 app.include_router(evidence.router, prefix="/api/v1", tags=["Clinical Evidence"])
 app.include_router(receptor_affinity.router, prefix="/api/v1", tags=["Receptor Affinity"])
+app.include_router(dimers.router, tags=["Dimers"])
 app.include_router(patentpath.router, prefix="/api/v1", tags=["PatentPath Lite"])
 app.include_router(terpenes.router, prefix="/api/v1", tags=["Terpene Analysis"])
 app.include_router(chempath.router, tags=["ChemPath"])

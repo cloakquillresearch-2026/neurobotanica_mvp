@@ -136,7 +136,15 @@ def main():
     print(f"Loading enriched dataset: {input_file}")
     with open(input_file, 'r', encoding='utf-8') as f:
         dataset = json.load(f)
-    print(f"✅ Loaded {len(dataset['compounds'])} compounds")
+    # Support both dict with 'compounds' key and flat list
+    if isinstance(dataset, dict) and 'compounds' in dataset:
+        compounds = dataset['compounds']
+    elif isinstance(dataset, list):
+        compounds = dataset
+        dataset = {'compounds': compounds}  # Wrap for enrichment
+    else:
+        raise ValueError("Unrecognized dataset format: expected dict with 'compounds' or list of compounds.")
+    print(f"✅ Loaded {len(compounds)} compounds")
     print()
     
     # Extract synergy data
@@ -150,7 +158,6 @@ def main():
     # Enrich dataset
     print("Adding synergy data to compounds...")
     enriched = enrich_dataset_with_synergies(dataset, synergy_data)
-    
     stats = enriched['enrichment_metadata']['synergy_integration']['statistics']
     print(f"   Compounds enhanced: {stats['compounds_enhanced']}")
     print(f"   Total synergies added: {stats['total_synergies_added']}")
@@ -158,12 +165,15 @@ def main():
     print(f"   Good evidence (Tier 4): {stats['tier_4_synergies']}")
     print(f"   Moderate evidence (Tier 3): {stats['tier_3_synergies']}")
     print()
-    
-    # Save
+    # If original was a list, save as list; if dict, save as dict
     print(f"Saving: {output_file}")
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(enriched, f, indent=2)
-    
+    if isinstance(compounds, list) and len(dataset) == 1 and 'compounds' in dataset:
+        # Save as list if input was list
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(enriched['compounds'], f, indent=2)
+    else:
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(enriched, f, indent=2)
     print("=" * 70)
     print("✅ Synergy Integration Complete!")
     print(f"✅ Output: {output_file}")

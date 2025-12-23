@@ -63,24 +63,21 @@ class EvidenceExpander:
             data = json.load(f)
         
         evidence_list = []
-        for compound_data in data['compounds']:
-            compound = compound_data['compound_name']
-            studies = compound_data.get('clinical_studies', [])
-            
-            for study in studies:
-                evidence = ClinicalEvidence(
-                    compound=compound,
-                    condition=study.get('condition', 'unknown'),
-                    effect_size=study.get('effect_size') or 'none',
-                    study_type=study.get('study_type', 'observational'),
-                    source=f"NORML_{study.get('year', 'unknown')}",
-                    participants=study.get('participants'),
-                    year=study.get('year'),
-                    notes=study.get('conclusion', ''),
-                    confidence='medium'
-                )
-                evidence_list.append(evidence)
-        
+        # The actual schema is a flat list of dicts, not grouped by compound
+        # Each entry has 'compound', 'condition', etc.
+        for entry in data["compounds"]:
+            evidence = ClinicalEvidence(
+                compound=entry.get("compound", "unknown"),
+                condition=entry.get("condition", "unknown"),
+                effect_size=entry.get("effect_size", "none"),
+                study_type=entry.get("study_type", "observational"),
+                source=entry.get("source", "unknown"),
+                participants=entry.get("participants"),
+                year=entry.get("year"),
+                notes=entry.get("notes", ""),
+                confidence=entry.get("confidence", "medium")
+            )
+            evidence_list.append(evidence)
         return evidence_list
     
     def generate_search_queries(self) -> Dict[str, List[str]]:

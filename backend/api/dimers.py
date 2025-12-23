@@ -18,18 +18,18 @@ from fastapi import APIRouter, HTTPException, Depends, Query
 from pydantic import BaseModel, Field
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from ..database import get_db
-from ..services.dimer_predictor import (
+from backend.models.database import get_db
+from backend.services.dimer_predictor import (
     DimericPredictor,
     DimerPrediction,
     LinkageType,
     DimerType
 )
-from ..services.dimer_conformer_generator import (
+from backend.services.dimer_conformer_generator import (
     DimericConformerGenerator,
     DimericConformerResult
 )
-from ..services.triangulation_scorer import (
+from backend.services.triangulation_scorer import (
     TriangulationScorer,
     TriangulationResult,
     ExperimentalStatus
@@ -213,41 +213,60 @@ async def predict_homodimer(
     """
     try:
         predictor = DimericPredictor()
-        
-        linkage = None
+        linkage = LinkageType.METHYLENE  # Default
         if request.linkage_type:
             try:
-                linkage = LinkageType(request.linkage_type.upper())
+                linkage = LinkageType(request.linkage_type.lower())
             except ValueError:
                 pass  # Use default
-        
+        # Prepare dimer entry for next-gen model
+        dimer_entry = {
+            'compound_1': request.monomer.name,
+            'compound_2': request.monomer.name,
+            'dimer_type': 'homodimer',
+            'effect_size': None,
+            'confidence': None,
+            'regulatory_status': None,
+            'benefit_risk_ratio': 1.0,
+            'population_group': None,
+            'omics_signature': None,
+            'pathway': None,
+            'patient_stratification': None
+        }
+        # Call next-gen model
+        try:
+            nextgen_result = predictor.predict_nextgen_dimer(dimer_entry)
+        except Exception as e:
+            logger.warning(f"NextGen model prediction failed: {e}")
+            nextgen_result = {}
+        # Legacy prediction for structure, etc.
         prediction = predictor.predict_homodimer(
             monomer_smiles=request.monomer.smiles,
             monomer_name=request.monomer.name,
             linkage_type=linkage
         )
-        
         if prediction is None:
             raise HTTPException(
                 status_code=400,
                 detail=f"Could not generate homodimer for {request.monomer.name}"
             )
-        
+        # Merge next-gen results into predicted_properties
+        predicted_properties = prediction.to_dict().get('predicted_properties', {})
+        predicted_properties.update(nextgen_result)
         return DimerPredictionResponse(
             dimer_name=prediction.dimer_name,
-            dimer_smiles=prediction.dimer_smiles,
+            dimer_smiles=prediction.predicted_smiles,
             dimer_type=prediction.dimer_type.value,
             linkage_type=prediction.linkage_type.value,
-            monomer_a_name=prediction.monomer_a_name,
-            monomer_b_name=prediction.monomer_b_name,
+            monomer_a_name=prediction.parent_1_name,
+            monomer_b_name=prediction.parent_2_name,
             formation_probability=prediction.formation_probability,
-            synergy_score=prediction.synergy_score,
+            synergy_score=nextgen_result.get('synergy_score', prediction.synergy_prediction),
             novelty_score=prediction.novelty_score,
             structural_validity=prediction.structural_validity,
-            predicted_properties=prediction.predicted_properties,
+            predicted_properties=predicted_properties,
             therapeutic_potential=prediction.therapeutic_potential
         )
-        
     except HTTPException:
         raise
     except Exception as e:
@@ -270,43 +289,58 @@ async def predict_heterodimer(
     """
     try:
         predictor = DimericPredictor()
-        
         linkage = None
         if request.linkage_type:
             try:
                 linkage = LinkageType(request.linkage_type.upper())
             except ValueError:
                 pass  # Use default
-        
+        dimer_entry = {
+            'compound_1': request.monomer_a.name,
+            'compound_2': request.monomer_b.name,
+            'dimer_type': 'heterodimer',
+            'effect_size': None,
+            'confidence': None,
+            'regulatory_status': None,
+            'benefit_risk_ratio': 1.0,
+            'population_group': None,
+            'omics_signature': None,
+            'pathway': None,
+            'patient_stratification': None
+        }
+        try:
+            nextgen_result = predictor.predict_nextgen_dimer(dimer_entry)
+        except Exception as e:
+            logger.warning(f"NextGen model prediction failed: {e}")
+            nextgen_result = {}
         prediction = predictor.predict_heterodimer(
-            monomer_a_smiles=request.monomer_a.smiles,
-            monomer_a_name=request.monomer_a.name,
-            monomer_b_smiles=request.monomer_b.smiles,
-            monomer_b_name=request.monomer_b.name,
+            monomer1_name=request.monomer_a.name,
+            monomer1_smiles=request.monomer_a.smiles,
+            monomer2_name=request.monomer_b.name,
+            monomer2_smiles=request.monomer_b.smiles,
             linkage_type=linkage
         )
-        
         if prediction is None:
             raise HTTPException(
                 status_code=400,
                 detail=f"Could not generate heterodimer for {request.monomer_a.name}-{request.monomer_b.name}"
             )
-        
+        predicted_properties = prediction.to_dict().get('predicted_properties', {})
+        predicted_properties.update(nextgen_result)
         return DimerPredictionResponse(
             dimer_name=prediction.dimer_name,
-            dimer_smiles=prediction.dimer_smiles,
+            dimer_smiles=prediction.predicted_smiles,
             dimer_type=prediction.dimer_type.value,
             linkage_type=prediction.linkage_type.value,
-            monomer_a_name=prediction.monomer_a_name,
-            monomer_b_name=prediction.monomer_b_name,
+            monomer_a_name=prediction.parent_1_name,
+            monomer_b_name=prediction.parent_2_name,
             formation_probability=prediction.formation_probability,
-            synergy_score=prediction.synergy_score,
+            synergy_score=nextgen_result.get('synergy_score', prediction.synergy_prediction),
             novelty_score=prediction.novelty_score,
             structural_validity=prediction.structural_validity,
-            predicted_properties=prediction.predicted_properties,
+            predicted_properties=predicted_properties,
             therapeutic_potential=prediction.therapeutic_potential
         )
-        
     except HTTPException:
         raise
     except Exception as e:

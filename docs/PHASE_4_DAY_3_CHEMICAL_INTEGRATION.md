@@ -1,5 +1,7 @@
 # Chemical Fingerprint Integration - Phase 4 Day 3
 
+> **Superseded:** This report is now consolidated into [PHASE_4_MASTER_BENCHMARK_REPORT.md](PHASE_4_MASTER_BENCHMARK_REPORT.md). This file may be archived or deleted.
+
 ## Summary
 
 Implemented chemical fingerprint integration to solve the text embedding failure problem discovered in Phase 4 Day 2.
