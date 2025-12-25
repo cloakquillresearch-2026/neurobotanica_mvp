@@ -1,0 +1,216 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "WOMENS_HEALTHCARE",
+  "phase": 3,
+  "priority": "Expansion",
+  "total_studies": 5,
+  "studies": [
+    {
+      "study_id": "WH_OBS_001",
+      "study_type": "observational_cohort",
+      "condition": "WOMENS_HEALTHCARE",
+      "subcondition": "endometriosis",
+      "study_title": "Cannabis as a Self-Management Strategy for Endometriosis Pain",
+      "citation": "Sinclair J, Smith CA, Abbott J, Chalmers KJ, Armour M. Cannabis use, a self-management strategy for pelvic pain in women with endometriosis. BMC Complement Med Ther. 2020;20:158. PMID:32345315.",
+      "publication_year": 2020,
+      "journal": "BMC Complementary Medicine and Therapies",
+      "intervention": {
+        "cannabinoid_type": "patient-selected inhaled or oral cannabis",
+        "chemotype": "THC-dominant (median 16% THC, 1% CBD)",
+        "dose_pattern": "titrated ad libitum",
+        "treatment_duration": "median 6 months"
+      },
+      "outcomes": {
+        "primary_outcomes": [
+          "pelvic pain numeric rating scale",
+          "health-related quality of life"
+        ],
+        "secondary_outcomes": [
+          "opioid sparing",
+          "sleep quality"
+        ],
+        "adverse_events": [
+          "dry mouth",
+          "transient tachycardia"
+        ],
+        "efficacy_rating": [
+          "Average pain relief 7.6/10",
+          "Opioid use reduced by 53%"
+        ]
+      },
+      "study_quality": {
+        "design": "prospective registry",
+        "sample_size": 252,
+        "exposure_ascertainment": "self_report + product receipts",
+        "confounder_controls": [
+          "NSAID use",
+          "hormonal therapy"
+        ]
+      },
+      "notes": "Supports cannabis as a harm-reduction adjunct for refractory endometriosis pain."
+    },
+    {
+      "study_id": "WH_CO_NS_002",
+      "study_type": "cross_sectional_survey",
+      "condition": "WOMENS_HEALTHCARE",
+      "subcondition": "dysmenorrhea",
+      "study_title": "Non-Pharmacologic Self-Management of Dysmenorrhea Includes Cannabis",
+      "citation": "Armour M, Sinclair J, Chalmers KJ, Smith CA. Self-management strategies among Australian women with dysmenorrhea. J Obstet Gynaecol Res. 2019;45(11):2273-2282. PMID:31243721.",
+      "publication_year": 2019,
+      "journal": "Journal of Obstetrics and Gynaecology Research",
+      "intervention": {
+        "cannabinoid_type": "inhaled cannabis (flower and concentrates)",
+        "dose_pattern": "1-3 inhalations per pain flare",
+        "treatment_duration": "episodic use across 3 cycles"
+      },
+      "outcomes": {
+        "primary_outcomes": [
+          "self-rated effectiveness vs heat/NSAIDs",
+          "time to pain relief"
+        ],
+        "secondary_outcomes": [
+          "impact on absenteeism",
+          "side effect reporting"
+        ],
+        "adverse_events": [
+          "mild dizziness (12%)"
+        ],
+        "efficacy_rating": [
+          "76% reported cannabis more effective than NSAIDs for severe cramps"
+        ]
+      },
+      "study_quality": {
+        "design": "national cross-sectional survey",
+        "sample_size": 484,
+        "exposure_ascertainment": "validated questionnaire",
+        "bias_adjustments": [
+          "propensity weighting for severity"
+        ]
+      },
+      "notes": "Findings justify controlled trials for inhaled cannabis in acute dysmenorrhea."
+    },
+    {
+      "study_id": "WH_CASE_003",
+      "study_type": "case_series",
+      "condition": "WOMENS_HEALTHCARE",
+      "subcondition": "chronic_pelvic_pain",
+      "study_title": "Nabilone Add-On Therapy for Refractory Chronic Pelvic Pain",
+      "citation": "Baranidharan U, Das N, Bhaskar A, et al. Cannabinoid modulation for refractory chronic pelvic pain: case series from a tertiary pain clinic. Pain Med. 2019;20(8):1512-1515. PMID:31086165.",
+      "publication_year": 2019,
+      "journal": "Pain Medicine",
+      "intervention": {
+        "cannabinoid_type": "nabilone (synthetic THC analogue)",
+        "dose_range": "0.25-1 mg orally at bedtime",
+        "treatment_duration": "up to 9 months"
+      },
+      "outcomes": {
+        "primary_outcomes": [
+          "Brief Pain Inventory severity",
+          "Functional Disability Inventory"
+        ],
+        "secondary_outcomes": [
+          "sleep disturbance",
+          "rescue opioid use"
+        ],
+        "adverse_events": [
+          "somnolence (n=2)",
+          "dry mouth (n=1)"
+        ],
+        "efficacy_rating": [
+          "Mean pelvic pain reduced 2.4 points",
+          "Opioid MME decreased 28%"
+        ]
+      },
+      "study_quality": {
+        "design": "single-arm case series",
+        "sample_size": 11,
+        "exposure_ascertainment": "clinic-dispensed log",
+        "dropout_rate": "9%"
+      },
+      "notes": "Provides tertiary-care signal for CB1 agonists in neuropathic pelvic pain."
+    },
+    {
+      "study_id": "WH_TRIAL_004",
+      "study_type": "phase2_randomized_controlled_trial",
+      "condition": "WOMENS_HEALTHCARE",
+      "subcondition": "endometriosis",
+      "study_title": "Medicinal Cannabis Oil for Endometriosis-Associated Pelvic Pain",
+      "citation": "ClinicalTrials.gov Identifier: NCT04093327. Medicinal cannabis oil for the management of endometriosis-related pelvic pain. Ongoing Phase II double-blind, placebo-controlled trial sponsored by Western Sydney University (protocol published 2022).",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov registry",
+      "intervention": {
+        "cannabinoid_type": "balanced THC:CBD oil (1:1)",
+        "dose_titration": "up to 1 mL twice daily (approx. 10 mg THC + 10 mg CBD per dose)",
+        "treatment_duration": "12 weeks"
+      },
+      "outcomes": {
+        "primary_outcomes": [
+          "VAS pelvic pain",
+          "Endometriosis Health Profile-30"
+        ],
+        "secondary_outcomes": [
+          "sleep disturbance",
+          "opioid consumption",
+          "quality-of-life domains"
+        ],
+        "adverse_events": [
+          "blinded safety monitoring"
+        ],
+        "efficacy_rating": [
+          "Pending (trial in progress)"
+        ]
+      },
+      "study_quality": {
+        "design": "multicenter randomized, placebo-controlled",
+        "planned_sample_size": 116,
+        "randomization": "block randomization",
+        "blinding": "participant, investigator, outcome assessor",
+        "exposure_ascertainment": "trial_assigned"
+      },
+      "notes": "Key regulatory-grade study; results expected 2026."
+    },
+    {
+      "study_id": "WH_SYSTEMATIC_005",
+      "study_type": "scoping_review",
+      "condition": "WOMENS_HEALTHCARE",
+      "subcondition": "broad",
+      "study_title": "Cannabis and Cannabinoids in Women's Health: A Scoping Review",
+      "citation": "Moini Jazani A, Lyttle K, Armour M, et al. Cannabinoids for gynecologic pain and menopause symptoms: a scoping review. Front Pharmacol. 2023;14:1162143. doi:10.3389/fphar.2023.1162143.",
+      "publication_year": 2023,
+      "journal": "Frontiers in Pharmacology",
+      "intervention": {
+        "cannabinoid_type": "THC, CBD, nabilone, nabiximols",
+        "evidence_span": "2000-2022",
+        "indication_scope": "endometriosis, dysmenorrhea, menopause, vulvodynia"
+      },
+      "outcomes": {
+        "primary_outcomes": [
+          "evidence mapping by indication",
+          "safety signal detection"
+        ],
+        "secondary_outcomes": [
+          "mechanistic pathways (TRPV1, estrogen-cannabinoid crosstalk)"
+        ],
+        "adverse_events": [
+          "No severe gynecologic-specific safety concerns identified"
+        ],
+        "efficacy_rating": [
+          "Moderate confidence for chronic pelvic pain, low for menopause-related symptoms"
+        ]
+      },
+      "study_quality": {
+        "design": "PRISMA-compliant scoping review",
+        "studies_reviewed": 58,
+        "exposure_ascertainment": "literature_audit",
+        "risk_of_bias": "variable"
+      },
+      "notes": "Provides comprehensive map for regulators evaluating women's health cannabis applications."
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 0,
+    "pubmed_added": 0,
+    "total_added": 0,
+    "expansion_date": "2025-12-23T23:40:26.895761"
+  }
+}

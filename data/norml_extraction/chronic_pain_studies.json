@@ -3,7 +3,7 @@
   "condition": "CHRONIC_PAIN",
   "phase": "2",
   "priority": "Week 1 - Highest Priority",
-  "total_studies": 37,
+  "total_studies": 70,
   "studies": [
     {
       "study_id": "CHRONIC_PAIN_RCT_001",
@@ -1665,6 +1665,1070 @@
       "regulatory_relevance": "HIGH - Rare disease indication; pediatric potential (SCD affects children); reduced opioid use; inflammatory mechanism",
       "priority": "⭐⭐⭐⭐",
       "exposure_ascertainment": "trial_assigned"
+    },
+    {
+      "study_id": "CT_NCT06607835",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Cannabis Suppositories and Mindful Compassion Online Groups for Sexual Functioning",
+      "citation": "ClinicalTrials.gov NCTNCT06607835",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Mindful-compassion and cannabis suppositories",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The Short Warwick -Edinburgh Mental Well-being Scale",
+          "State Self-compassion Short Form",
+          "The Female Sexual Function Index",
+          "Sexual Self-Efficacy Scale for Female Sexual Functioning",
+          "Brief Quality of Life Scale"
+        ],
+        "outcome_measures": [
+          "The Short Warwick -Edinburgh Mental Well-being Scale",
+          "State Self-compassion Short Form",
+          "The Female Sexual Function Index",
+          "Sexual Self-Efficacy Scale for Female Sexual Functioning",
+          "Brief Quality of Life Scale"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT06607835",
+        "enrollment": 83,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT06607835"
+      }
+    },
+    {
+      "study_id": "CT_NCT06320327",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Topical CBD's Effects on Soreness and Performance",
+      "citation": "ClinicalTrials.gov NCTNCT06320327",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol cream",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Vertical Jump Test"
+        ],
+        "outcome_measures": [
+          "Vertical Jump Test"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT06320327",
+        "enrollment": 30,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT06320327"
+      }
+    },
+    {
+      "study_id": "CT_NCT01361607",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Sativex® for Relieving Persistent Pain in Patients With Advanced Cancer",
+      "citation": "ClinicalTrials.gov NCTNCT01361607",
+      "publication_year": 2014,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Nabiximols",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Percent Improvement From Baseline In Mean NRS Average Pain At End Of Treatment"
+        ],
+        "outcome_measures": [
+          "Percent Improvement From Baseline In Mean NRS Average Pain At End Of Treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01361607",
+        "enrollment": 399,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01361607"
+      }
+    },
+    {
+      "study_id": "CT_NCT04576507",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Repeated Cannabis Administration on Experimental Pain and Abuse Liability",
+      "citation": "ClinicalTrials.gov NCTNCT04576507",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Active Cannabis, Placebo Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Cold Pressor Test (CPT) Latency"
+        ],
+        "outcome_measures": [
+          "Change in Cold Pressor Test (CPT) Latency"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04576507",
+        "enrollment": 10,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04576507"
+      }
+    },
+    {
+      "study_id": "CT_NCT00675948",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Study to Compare the Safety and Tolerability of Sativex® in Patients With Cancer Related Pain",
+      "citation": "ClinicalTrials.gov NCTNCT00675948",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The Incidence of Adverse Events as a Measure of Subject Safety"
+        ],
+        "outcome_measures": [
+          "The Incidence of Adverse Events as a Measure of Subject Safety"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00675948",
+        "enrollment": 43,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00675948"
+      }
+    },
+    {
+      "study_id": "CT_NCT05477875",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Cannabinoid vs Opioid for Photorefractive Keratectomy Pain Control",
+      "citation": "ClinicalTrials.gov NCTNCT05477875",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "oral cannabinoid",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain as Recorded by the FACES Scale (Maximum) After First Surgery",
+          "Pain as Recorded by the FACES Scale (Maximum) After Second Surgery"
+        ],
+        "outcome_measures": [
+          "Pain as Recorded by the FACES Scale (Maximum) After First Surgery",
+          "Pain as Recorded by the FACES Scale (Maximum) After Second Surgery"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05477875",
+        "enrollment": 35,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05477875"
+      }
+    },
+    {
+      "study_id": "CT_NCT07194928",
+      "study_type": "Clinical Trial",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Medical Cannabis as an Opiate Alternative",
+      "citation": "ClinicalTrials.gov NCTNCT07194928",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "We will monitor patient's response to medical marijuana as alternative to opioid for chronic pain.",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Visual Analog Scale (VAS)",
+          "Morphine equivalents",
+          "McGill Pain evaluation",
+          "Short form-36 questionnaire."
+        ],
+        "outcome_measures": [
+          "Visual Analog Scale (VAS)",
+          "Morphine equivalents",
+          "McGill Pain evaluation",
+          "Short form-36 questionnaire."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT07194928",
+        "enrollment": 29,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT07194928"
+      }
+    },
+    {
+      "study_id": "CT_NCT00255580",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Medicinal Cannabis for Painful HIV Neuropathy",
+      "citation": "ClinicalTrials.gov NCTNCT00255580",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Smoked cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Descriptor Differential Scale (DDS)"
+        ],
+        "outcome_measures": [
+          "Descriptor Differential Scale (DDS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00255580",
+        "enrollment": 28,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00255580"
+      }
+    },
+    {
+      "study_id": "CT_NCT04402554",
+      "study_type": "Clinical Trial",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Survey of Cannabis Use in Patients With Chronic Inflammatory Arthritis",
+      "citation": "ClinicalTrials.gov NCTNCT04402554",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis questionnaire",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "prevalence of cannabis use in patients with chronic inflammatory rheumatic conditions"
+        ],
+        "outcome_measures": [
+          "prevalence of cannabis use in patients with chronic inflammatory rheumatic conditions"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04402554",
+        "enrollment": 501,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04402554"
+      }
+    },
+    {
+      "study_id": "CT_NCT04827992",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Evaluation of Medical Cannabis and Prescription Opioid Taper Support for Reduction of Pain and Opioid Dose in Patients With Chronic Non-Cancer Pain",
+      "citation": "ClinicalTrials.gov NCTNCT04827992",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Marijuana",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean Difference in Prescription Monitoring Program verified opioid dose at baseline and week 24",
+          "Mean Difference in Pain, Enjoyment, General Activity (PEG) Scale Summed Score over post-baseline to week 24 interval"
+        ],
+        "outcome_measures": [
+          "Mean Difference in Prescription Monitoring Program verified opioid dose at baseline and week 24",
+          "Mean Difference in Pain, Enjoyment, General Activity (PEG) Scale Summed Score over post-baseline to week 24 interval"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04827992",
+        "enrollment": 87,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04827992"
+      }
+    },
+    {
+      "study_id": "CT_NCT00781001",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Efficacy of Inhaled Cannabis in Diabetic Painful Peripheral Neuropathy",
+      "citation": "ClinicalTrials.gov NCTNCT00781001",
+      "publication_year": 2011,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Spontaneous Pain Score"
+        ],
+        "outcome_measures": [
+          "Spontaneous Pain Score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00781001",
+        "enrollment": 17,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00781001"
+      }
+    },
+    {
+      "study_id": "CT_NCT01337089",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Long Term Safety of Sativex Oromucosal Spray (Sativex®; Nabiximols) as Adjunctive Therapy in Patients With Uncontrolled Persistent Chronic Cancer Related Pain",
+      "citation": "ClinicalTrials.gov NCTNCT01337089",
+      "publication_year": 2016,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Nabiximols",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Percent Of Participants With Treatment-emergent Adverse Events"
+        ],
+        "outcome_measures": [
+          "Percent Of Participants With Treatment-emergent Adverse Events"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01337089",
+        "enrollment": 660,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01337089"
+      }
+    },
+    {
+      "study_id": "CT_NCT00713817",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Study to Determine the Maintenance of Effect After Long-term Treatment of Sativex® in Subjects With Neuropathic Pain",
+      "citation": "ClinicalTrials.gov NCTNCT00713817",
+      "publication_year": 2007,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex®",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in Mean Daily Pain Severity on a 0-10 Numerical Rating Scale Score at the End of Treatment (Average of Last 7 Days Treatment)"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in Mean Daily Pain Severity on a 0-10 Numerical Rating Scale Score at the End of Treatment (Average of Last 7 Days Treatment)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00713817",
+        "enrollment": 19,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00713817"
+      }
+    },
+    {
+      "study_id": "CT_NCT04271917",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Analgesic Effects of Cannabidiol for Simple Tooth Extractions in Dental Patients",
+      "citation": "ClinicalTrials.gov NCTNCT04271917",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Worst pain following surgery using Wong Baker Faces pain scale",
+          "Amount of medication used",
+          "Pain levels following surgery using Wong Baker Faces pain scale"
+        ],
+        "outcome_measures": [
+          "Worst pain following surgery using Wong Baker Faces pain scale",
+          "Amount of medication used",
+          "Pain levels following surgery using Wong Baker Faces pain scale"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04271917",
+        "enrollment": 68,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04271917"
+      }
+    },
+    {
+      "study_id": "CT_NCT02073474",
+      "study_type": "Clinical Trial",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "An Observational Post-Marketing Safety Registry of Sativex®",
+      "citation": "ClinicalTrials.gov NCTNCT02073474",
+      "publication_year": 2015,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex®",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Incidence rates of adverse events."
+        ],
+        "outcome_measures": [
+          "Incidence rates of adverse events."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02073474",
+        "enrollment": 978,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02073474"
+      }
+    },
+    {
+      "study_id": "CT_NCT04193631",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Low Dose of Cannabidiol (CBD) to Treat Mild to Moderate Musculoskeletal Pain",
+      "citation": "ClinicalTrials.gov NCTNCT04193631",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol (CBD)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Impact of Pure Cannabidiol (CBD) tablets on safety in patient's with musculoskeletal pain using a self-reported pain scale score."
+        ],
+        "outcome_measures": [
+          "Impact of Pure Cannabidiol (CBD) tablets on safety in patient's with musculoskeletal pain using a self-reported pain scale score."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04193631",
+        "enrollment": 16,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04193631"
+      }
+    },
+    {
+      "study_id": "CT_NCT00710554",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Study of Sativex® for Pain Relief of Peripheral Neuropathic Pain, Associated With Allodynia",
+      "citation": "ClinicalTrials.gov NCTNCT00710554",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in Mean Peripheral Neuropathic Pain on a 0-10 Numerical Rating Scale (NRS) Score at the End of Treatment (15 Weeks)"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in Mean Peripheral Neuropathic Pain on a 0-10 Numerical Rating Scale (NRS) Score at the End of Treatment (15 Weeks)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00710554",
+        "enrollment": 246,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00710554"
+      }
+    },
+    {
+      "study_id": "CT_NCT04387617",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Study to Assess the Effect of Cannabidiol Oil on Pain After Ureteroscopy for Kidney Stones",
+      "citation": "ClinicalTrials.gov NCTNCT04387617",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Maximum Pain Intensity Score"
+        ],
+        "outcome_measures": [
+          "Maximum Pain Intensity Score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04387617",
+        "enrollment": 90,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04387617"
+      }
+    },
+    {
+      "study_id": "CT_NCT04299490",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Effects of Experimental Sleep Disturbances on Receptor Function of Study Drug",
+      "citation": "ClinicalTrials.gov NCTNCT04299490",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Within-Subject test of blinded study medication (stimulant, benzodiazepine, opioid, cannabinoid, over-the-counter pain medication, or placebo)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Percent change in receptor binding potential from PET scan",
+          "Withdrawal Latency measured in seconds during Cold Pressor Pain Tolerance test",
+          "Drug Effects as assessed by the Visual Analog Scale",
+          "The monetary valuation in dollars of the study medication as assessed by the Drug or Money Multiple Choice Questionnaire"
+        ],
+        "outcome_measures": [
+          "Percent change in receptor binding potential from PET scan",
+          "Withdrawal Latency measured in seconds during Cold Pressor Pain Tolerance test",
+          "Drug Effects as assessed by the Visual Analog Scale",
+          "The monetary valuation in dollars of the study medication as assessed by the Drug or Money Multiple Choice Questionnaire"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04299490",
+        "enrollment": 148,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04299490"
+      }
+    },
+    {
+      "study_id": "CT_NCT00674609",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Study of Sativex® for Pain Relief in Patients With Advanced Malignancy",
+      "citation": "ClinicalTrials.gov NCTNCT00674609",
+      "publication_year": 2004,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex®",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The Change in Mean Pain Numerical Rating Scale (NRS) Score From Baseline to the End of the Treatment.",
+          "The Consumption of Escape Analgesic Medication."
+        ],
+        "outcome_measures": [
+          "The Change in Mean Pain Numerical Rating Scale (NRS) Score From Baseline to the End of the Treatment.",
+          "The Consumption of Escape Analgesic Medication."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00674609",
+        "enrollment": 177,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00674609"
+      }
+    },
+    {
+      "study_id": "CT_NCT01424566",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Two-Part Study of Sativex® Oromucosal Spray for Relieving Uncontrolled Persistent Pain in Patients With Advanced Cancer",
+      "citation": "ClinicalTrials.gov NCTNCT01424566",
+      "publication_year": 2015,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Nabiximols",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Randomization Baseline In Mean NRS Average Pain At End Of Treatment"
+        ],
+        "outcome_measures": [
+          "Change From Randomization Baseline In Mean NRS Average Pain At End Of Treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01424566",
+        "enrollment": 406,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01424566"
+      }
+    },
+    {
+      "study_id": "CT_NCT04607603",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Efficacy of Cannabidiol in Knee Osteoarthritis",
+      "citation": "ClinicalTrials.gov NCTNCT04607603",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol Oral Product",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "WOMAC Pain Score (WOMAC) Pain score"
+        ],
+        "outcome_measures": [
+          "WOMAC Pain Score (WOMAC) Pain score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04607603",
+        "enrollment": 86,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04607603"
+      }
+    },
+    {
+      "study_id": "CT_NCT03948074",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Cannabis For Cancer-Related Symptoms",
+      "citation": "ClinicalTrials.gov NCTNCT03948074",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "outcome_measures": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03948074",
+        "enrollment": 91,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03948074"
+      }
+    },
+    {
+      "study_id": "CT_NCT00153192",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Study to Evaluate the Efficacy of Dronabinol (Marinol) as Add-On Therapy for Patients on Opioids for Chronic Pain",
+      "citation": "ClinicalTrials.gov NCTNCT00153192",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Marinol (dronabinol)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Single-Dose Phase",
+          "- Total pain relief (TOTPAR) at 8 hours",
+          "Multi-Dose Phase",
+          "- Change in pain score from baseline"
+        ],
+        "outcome_measures": [
+          "Single-Dose Phase",
+          "- Total pain relief (TOTPAR) at 8 hours",
+          "Multi-Dose Phase",
+          "- Change in pain score from baseline"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00153192",
+        "enrollment": 30,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00153192"
+      }
+    },
+    {
+      "study_id": "CT_NCT00713323",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Study to Compare the Safety and Tolerability of Sativex® in Patients With Neuropathic Pain.",
+      "citation": "ClinicalTrials.gov NCTNCT00713323",
+      "publication_year": 2007,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex®",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Parent Study Baseline in Mean Pain 0-10 Numerical Rating Scale (NRS) Score During the Last 4 Weeks of Open-label Treatment"
+        ],
+        "outcome_measures": [
+          "Change From Parent Study Baseline in Mean Pain 0-10 Numerical Rating Scale (NRS) Score During the Last 4 Weeks of Open-label Treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00713323",
+        "enrollment": 380,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00713323"
+      }
+    },
+    {
+      "study_id": "CT_NCT02460692",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Trial of Dronabinol and Vaporized Cannabis in Chronic Low Back Pain",
+      "citation": "ClinicalTrials.gov NCTNCT02460692",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "dronabinol, Vaporized Cannabis 3.7% THC/5.6% CBD",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Numerical Pain Intensity"
+        ],
+        "outcome_measures": [
+          "Numerical Pain Intensity"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02460692",
+        "enrollment": 131,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02460692"
+      }
+    },
+    {
+      "study_id": "CT_NCT05663346",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Cannabis and Cancer, an Online Training for Oncology Nurses",
+      "citation": "ClinicalTrials.gov NCTNCT05663346",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis & Cancer digital educational intervention, Standard information regarding cannabis use in oncology",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in self-efficacy"
+        ],
+        "outcome_measures": [
+          "Change in self-efficacy"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05663346",
+        "enrollment": 70,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05663346"
+      }
+    },
+    {
+      "study_id": "CT_NCT00238550",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Study of CBME in the Relief of Painful Diabetic Neuropathy",
+      "citation": "ClinicalTrials.gov NCTNCT00238550",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis based medicine extract (CBME)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Improvement in pain symptoms, including pain perception and sleep quality, utilising daily diaries and validated pain questionnaires during 12 week treatment period and after 3 month cessation of treatment"
+        ],
+        "outcome_measures": [
+          "Improvement in pain symptoms, including pain perception and sleep quality, utilising daily diaries and validated pain questionnaires during 12 week treatment period and after 3 month cessation of treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00238550",
+        "enrollment": 36,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00238550"
+      }
+    },
+    {
+      "study_id": "CT_NCT05103475",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Rage Against the Pain to Address Chronic Low Back Pain Among Veterans",
+      "citation": "ClinicalTrials.gov NCTNCT05103475",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Program Initiation (e.g., Reach)",
+          "Program Participation (e.g., Sustained Engagement) - Average Number of Classes Attended",
+          "Program Participation (e.g., Sustained Engagement) - Number of Veterans Who Attend Majority of Classes"
+        ],
+        "outcome_measures": [
+          "Program Initiation (e.g., Reach)",
+          "Program Participation (e.g., Sustained Engagement) - Average Number of Classes Attended",
+          "Program Participation (e.g., Sustained Engagement) - Number of Veterans Who Attend Majority of Classes"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05103475",
+        "enrollment": 36,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05103475"
+      }
+    },
+    {
+      "study_id": "CT_NCT05684939",
+      "study_type": "Clinical Trial",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Relation Between Substance Use and Pain, in Patients Suffering or Surviving From Cancer and Followed in France",
+      "citation": "ClinicalTrials.gov NCTNCT05684939",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "substance use"
+        ],
+        "outcome_measures": [
+          "substance use"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05684939",
+        "enrollment": 2010,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05684939"
+      }
     }
-  ]
+  ],
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 2
+  }
 }

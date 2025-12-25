@@ -3,7 +3,7 @@
   "condition": "CANCER_PALLIATIVE",
   "phase": "3",
   "priority": "Phase 3 - Expansion (Symptom Management & Quality of Life)",
-  "total_studies": 15,
+  "total_studies": 24,
   "studies": [
     {
       "study_id": "CANCER_RCT_001",
@@ -559,6 +559,318 @@
       },
       "regulatory_relevance": "HIGH - Breakthrough pain indication; rapid onset data; oromucosal delivery advantages",
       "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CT_NCT03307200",
+      "study_type": "Clinical Trial",
+      "condition": "CANCER",
+      "study_title": "Unmet Supportive Care Needs in Bladder Cancer Patients Undergoing Radical Cystectomy",
+      "citation": "ClinicalTrials.gov NCTNCT03307200",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Unmet supportive care needs"
+        ],
+        "outcome_measures": [
+          "Change in Unmet supportive care needs"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03307200",
+        "enrollment": 90,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03307200"
+      }
+    },
+    {
+      "study_id": "CT_NCT05684939",
+      "study_type": "Clinical Trial",
+      "condition": "CANCER",
+      "study_title": "Relation Between Substance Use and Pain, in Patients Suffering or Surviving From Cancer and Followed in France",
+      "citation": "ClinicalTrials.gov NCTNCT05684939",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "substance use"
+        ],
+        "outcome_measures": [
+          "substance use"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05684939",
+        "enrollment": 2010,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05684939"
+      }
+    },
+    {
+      "study_id": "CT_NCT01812616",
+      "study_type": "RCT",
+      "condition": "CANCER",
+      "study_title": "A Safety Study of Sativex Compared With Placebo (Both With Dose-intense Temozolomide) in Recurrent Glioblastoma Patients",
+      "citation": "ClinicalTrials.gov NCTNCT01812616",
+      "publication_year": 2016,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Incidence of Adverse Events as a Measure of Patient Safety."
+        ],
+        "outcome_measures": [
+          "Incidence of Adverse Events as a Measure of Patient Safety."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01812616",
+        "enrollment": 21,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01812616"
+      }
+    },
+    {
+      "study_id": "CT_NCT04447846",
+      "study_type": "RCT",
+      "condition": "CANCER",
+      "study_title": "Novel Cognitive Treatment Targets for Epidiolex in Sturge- Weber Syndrome",
+      "citation": "ClinicalTrials.gov NCTNCT04447846",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "List Sorting Working Memory Test"
+        ],
+        "outcome_measures": [
+          "List Sorting Working Memory Test"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04447846",
+        "enrollment": 11,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04447846"
+      }
+    },
+    {
+      "study_id": "CT_NCT00553059",
+      "study_type": "RCT",
+      "condition": "CANCER",
+      "study_title": "Palonosetron and Dexamethasone With or Without Dronabinol in Preventing Nausea and Vomiting in Patients Receiving Chemotherapy For Cancer",
+      "citation": "ClinicalTrials.gov NCTNCT00553059",
+      "publication_year": 2014,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Participants With Total Protection in the Acute, Delayed and Overall Periods"
+        ],
+        "outcome_measures": [
+          "Number of Participants With Total Protection in the Acute, Delayed and Overall Periods"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00553059",
+        "enrollment": 62,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00553059"
+      }
+    },
+    {
+      "study_id": "CT_NCT05388058",
+      "study_type": "RCT",
+      "condition": "CANCER",
+      "study_title": "Topical Cannabidiol for the Treatment of Chemotherapy-Induced Peripheral Neuropathy",
+      "citation": "ClinicalTrials.gov NCTNCT05388058",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in chemotherapy-induced peripheral neuropathy (CIPN)"
+        ],
+        "outcome_measures": [
+          "Change in chemotherapy-induced peripheral neuropathy (CIPN)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05388058",
+        "enrollment": 30,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05388058"
+      }
+    },
+    {
+      "study_id": "CT_NCT00314808",
+      "study_type": "RCT",
+      "condition": "CANCER",
+      "study_title": "A Pilot Study of Dronabinol for Adult Patients With Primary Gliomas",
+      "citation": "ClinicalTrials.gov NCTNCT00314808",
+      "publication_year": 2012,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Tolerability Rate",
+          "Unacceptable Toxicity Rate"
+        ],
+        "outcome_measures": [
+          "Tolerability Rate",
+          "Unacceptable Toxicity Rate"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00314808",
+        "enrollment": 33,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00314808"
+      }
+    },
+    {
+      "study_id": "CT_NCT01812603",
+      "study_type": "RCT",
+      "condition": "CANCER",
+      "study_title": "A Safety Study of Sativex in Combination With Dose-intense Temozolomide in Patients With Recurrent Glioblastoma",
+      "citation": "ClinicalTrials.gov NCTNCT01812603",
+      "publication_year": 2016,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The incidence of adverse events in patients receiving Sativex in combination with dose-intense Temozolomide in the open-label phase of the study"
+        ],
+        "outcome_measures": [
+          "The incidence of adverse events in patients receiving Sativex in combination with dose-intense Temozolomide in the open-label phase of the study"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01812603",
+        "enrollment": 6,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01812603"
+      }
+    },
+    {
+      "study_id": "CT_NCT03984214",
+      "study_type": "RCT",
+      "condition": "CANCER",
+      "study_title": "Efficacy and Safety of Dronabinol in the Improvement of Chemotherapy-induced and Tumor-related Symptoms in Advanced Pancreatic Cancer",
+      "citation": "ClinicalTrials.gov NCTNCT03984214",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol in Oral Dosage Form",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Standardized area under the curve of the European Organisation for Research and Treatment of Cancer (EORTC) quality of life questionnaire (QLQ)-C30 symptom summary score over the on-treatment period."
+        ],
+        "outcome_measures": [
+          "Standardized area under the curve of the European Organisation for Research and Treatment of Cancer (EORTC) quality of life questionnaire (QLQ)-C30 symptom summary score over the on-treatment period."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03984214",
+        "enrollment": 109,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03984214"
+      }
     }
-  ]
+  ],
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 9
+  }
 }

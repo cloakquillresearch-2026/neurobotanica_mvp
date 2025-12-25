@@ -169,9 +169,41 @@ Studies 21-30: ✓ Complete (ACR/EULAR guidelines, Cochrane meta-analysis, long-
 
 *Note: Phase 1 studies were 41 total across 4 conditions
 
-**Target**: 200+ studies  
-**Progress**: 200/200 (100%) ✅ **CAMPAIGN COMPLETE**  
-**Completion Date**: December 18, 2025 (26+ days ahead of January 15, 2026 deadline)
+#### THCV Metabolic Studies (December 24, 2025)
+- **Extracted**: 7/7 studies (100%) ✅ **COMPLETE**
+- **Status**: ✓ COMPLETE - Metabolic disorders, diabetes, obesity research
+- **File**: `data/norml_extraction/thcv_metabolic_studies.json`
+- **Quality**: 100% validated ✓
+- **Source**: PubMed, ScienceDirect (2020-2025 publications)
+- **Completion Date**: December 24, 2025
+
+**Key Evidence Captured (All 7 Studies)**:
+- ✅ **Mendoza 2025** - THCV improves insulin sensitivity, glucose uptake ⭐⭐⭐⭐⭐
+- ✅ **Smith 2025** - THCV weight loss + metabolic benefits ⭐⭐⭐⭐⭐
+- ✅ **Abioye 2021** - THCV for obesity/diabetes management ⭐⭐⭐⭐⭐
+- ✅ **Sempio 2024** - THCV plasma quantification method ⭐⭐⭐⭐
+- ✅ **Kowalczuk 2023** - THCV protects against ER stress in adipose tissue ⭐⭐⭐⭐
+- ✅ **Rao 2023** - THCV metabolism characterization ⭐⭐⭐
+- ✅ **Tinto 2020** - THCV metabolite synthesis ⭐⭐
+
+**Metabolic Conditions Covered**:
+- Type 2 diabetes (insulin sensitivity, glucose metabolism)
+- Obesity (appetite suppression, weight management)
+- Metabolic syndrome (hepatosteatosis prevention)
+- ER stress in adipose tissue
+- Pharmacokinetics and metabolism
+
+**Commercial Value**:
+- THCV = promising for metabolic disorders (diabetes + obesity market)
+- CB1 neutral antagonist = therapeutic advantage over THC
+- Weight management = major unmet medical need
+- Diabetes management = $327B global market opportunity
+
+**Target**: 200+ studies + 7 THCV metabolic  
+**Progress**: 207/207 (100%) ✅ **ENHANCED CAMPAIGN COMPLETE**  
+**Completion Date**: December 24, 2025
+
+---
 
 ---
 

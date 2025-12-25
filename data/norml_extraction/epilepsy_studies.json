@@ -3,7 +3,7 @@
   "condition": "EPILEPSY",
   "phase": "1",
   "priority": "Phase 1 - Foundation (FDA-Approved Epidiolex)",
-  "total_studies": 10,
+  "total_studies": 22,
   "studies": [
     {
       "study_id": "EPILEPSY_RCT_001",
@@ -374,6 +374,518 @@
       },
       "regulatory_relevance": "HIGH - Population health impact; supports state cannabis programs; healthcare utilization data",
       "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CT_NCT04899050",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Epidiolex in Typical Absence Seizures",
+      "citation": "ClinicalTrials.gov NCTNCT04899050",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol (Epidiolex)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Amount of epileptiform activity."
+        ],
+        "outcome_measures": [
+          "Amount of epileptiform activity."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04899050",
+        "enrollment": 14,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04899050"
+      }
+    },
+    {
+      "study_id": "CT_NCT03467113",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "A Study to Assess the Safety and Tolerability of ZX008 in Children and Young Adults With Dravet Syndrome or Lennox Gastaut Syndrome Currently Taking Cannabidiol",
+      "citation": "ClinicalTrials.gov NCTNCT03467113",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Adverse Events",
+          "Change in Heart Rate",
+          "Change in blood pressure",
+          "Change in temperature",
+          "Change in respiratory rate",
+          "Changes in heart rhythm",
+          "Changes in heart valve function",
+          "Changes in treatment-emergent body weight and height"
+        ],
+        "outcome_measures": [
+          "Adverse Events",
+          "Change in Heart Rate",
+          "Change in blood pressure",
+          "Change in temperature",
+          "Change in respiratory rate",
+          "Changes in heart rhythm",
+          "Changes in heart valve function",
+          "Changes in treatment-emergent body weight and height"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03467113",
+        "enrollment": 9,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03467113"
+      }
+    },
+    {
+      "study_id": "CT_NCT02318602",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Cannabidiol Oral Solution as an Adjunctive Treatment for Treatment-resistant Seizure Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT02318602",
+      "publication_year": 2017,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol Oral Solution",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Percentage of Participants With Adverse Events",
+          "Percentage of Participants With Serious Adverse Events",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Laboratory Values",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Electrocardiogram (ECG) Findings",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Vital Signs",
+          "Change From Baseline in Trough Plasma Levels of Cannabidiol and Its 7-OH Metabolite"
+        ],
+        "outcome_measures": [
+          "Percentage of Participants With Adverse Events",
+          "Percentage of Participants With Serious Adverse Events",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Laboratory Values",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Electrocardiogram (ECG) Findings",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Vital Signs",
+          "Change From Baseline in Trough Plasma Levels of Cannabidiol and Its 7-OH Metabolite"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02318602",
+        "enrollment": 52,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02318602"
+      }
+    },
+    {
+      "study_id": "CT_NCT02286986",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Cannabidiol (CBD) to 27 Patients (Aged 2 Years - 19 Years) With Drug Resistant Epilepsy",
+      "citation": "ClinicalTrials.gov NCTNCT02286986",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Seizure Frequency"
+        ],
+        "outcome_measures": [
+          "Seizure Frequency"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02286986",
+        "enrollment": 26,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02286986"
+      }
+    },
+    {
+      "study_id": "CT_NCT02700412",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "University of Alabama at Birmingham (UAB) Adult CBD Program",
+      "citation": "ClinicalTrials.gov NCTNCT02700412",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Epidiolex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Participants With Severe Adverse Events (SAEs) (Increase in Seizure Frequency by More Than 100% Leading to Emergency Room Visit or Hospitalization).",
+          "Number of Participants With Change in Resting Blood Pressure or Heart Rate by 25% if Considered Significant by Managing Neurologist.",
+          "Number of Participants With Change in Laboratory Tests Considered by Managing Neurologists as Clinically Significant."
+        ],
+        "outcome_measures": [
+          "Number of Participants With Severe Adverse Events (SAEs) (Increase in Seizure Frequency by More Than 100% Leading to Emergency Room Visit or Hospitalization).",
+          "Number of Participants With Change in Resting Blood Pressure or Heart Rate by 25% if Considered Significant by Managing Neurologist.",
+          "Number of Participants With Change in Laboratory Tests Considered by Managing Neurologists as Clinically Significant."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02700412",
+        "enrollment": 80,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02700412"
+      }
+    },
+    {
+      "study_id": "CT_NCT02332655",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Cannabidiol Expanded Access Study in Medically Refractory Sturge-Weber Syndrome",
+      "citation": "ClinicalTrials.gov NCTNCT02332655",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Seizures Per Month"
+        ],
+        "outcome_measures": [
+          "Number of Seizures Per Month"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02332655",
+        "enrollment": 5,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02332655"
+      }
+    },
+    {
+      "study_id": "CT_NCT05324449",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Epidiolex® for Anxiety in Pediatric Epilepsy",
+      "citation": "ClinicalTrials.gov NCTNCT05324449",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol 100 MG/ML",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "CGI-I"
+        ],
+        "outcome_measures": [
+          "CGI-I"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05324449",
+        "enrollment": 20,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05324449"
+      }
+    },
+    {
+      "study_id": "CT_NCT02695537",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "University of Alabama at Birmingham (UAB) Pediatric CBD Program",
+      "citation": "ClinicalTrials.gov NCTNCT02695537",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Epidiolex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Participants With Severe Adverse Events (Increase in Seizure Frequency by More Than 100% Leading to Emergency Room Visit or Hospitalization).",
+          "Number of Participants With Change in Resting Blood Pressure or Heart Rate by 25% if Considered Significant by Managing Neurologist.",
+          "Number of Participants With Change in Laboratory Tests Considered by Managing Neurologists as Clinically Significant."
+        ],
+        "outcome_measures": [
+          "Number of Participants With Severe Adverse Events (Increase in Seizure Frequency by More Than 100% Leading to Emergency Room Visit or Hospitalization).",
+          "Number of Participants With Change in Resting Blood Pressure or Heart Rate by 25% if Considered Significant by Managing Neurologist.",
+          "Number of Participants With Change in Laboratory Tests Considered by Managing Neurologists as Clinically Significant."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02695537",
+        "enrollment": 89,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02695537"
+      }
+    },
+    {
+      "study_id": "CT_NCT04280289",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "CBD Cannabis Extract: Pharmacokinetic Studies",
+      "citation": "ClinicalTrials.gov NCTNCT04280289",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabidiol extract",
+        "delivery_method": "various",
+        "dosing_information": "Phase EARLY_PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Plasma concentration of minor phytocannabinoids, and metabolites following single dose administration of Cannabis extract (CBDE) (at 2.5 mg/kg cannabidiol (CBD).",
+          "Urine concentration of minor phytocannabinoids, and metabolites following single dose administration of Cannabis extract (CBDE) (at 2.5 mg/kg cannabidiol (CBD)."
+        ],
+        "outcome_measures": [
+          "Plasma concentration of minor phytocannabinoids, and metabolites following single dose administration of Cannabis extract (CBDE) (at 2.5 mg/kg cannabidiol (CBD).",
+          "Urine concentration of minor phytocannabinoids, and metabolites following single dose administration of Cannabis extract (CBDE) (at 2.5 mg/kg cannabidiol (CBD)."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04280289",
+        "enrollment": 10,
+        "phase": "EARLY_PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04280289"
+      }
+    },
+    {
+      "study_id": "CT_NCT02324673",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Cannabidiol Oral Solution in Pediatric Participants With Treatment-resistant Seizure Disorders",
+      "citation": "ClinicalTrials.gov NCTNCT02324673",
+      "publication_year": 2016,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol Oral Solution",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Maximum Plasma Concentration (Cmax) for Cannabidiol and Metabolite 7-hydroxy (7-OH) Cannabidiol",
+          "Cmax for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Dose Normalized Cmax (Cmax/D) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Cmax/D for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time to Cmax (Tmax) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time to Cmax (Tmax) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Half Life (t1/2) for Cannabidiol and Metabolite 7-OH Cannabidiol for Participants ≥2 Years of Age",
+          "Elimination Rate (Lambda-z [λz]) for Cannabidiol and Metabolite 7-OH Cannabidiol for Participants ≥2 Years of Age",
+          "Oral Clearance (CL/F) for Cannabidiol for Participants ≥2 Years of Age",
+          "Volume of Distribution (Vz/F) of Cannabidiol for Participants ≥2 Years of Age",
+          "Area Under the Plasma-Concentration Time Curve From 0 to 12 Hours Post-dose [AUC(0-12)] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1",
+          "Dose Normalized AUC(0-12) [AUC (0-12)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1",
+          "AUC From Time 0 to the Last Quantifiable Concentration [AUC(0-last)] on Day 1 for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants ≥2 Years of Age",
+          "AUC From Time 0 to Infinity [AUC(0-inf)] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants ≥2 Years of Age",
+          "Dose Normalized AUC(0-inf) [AUC(0-inf)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants ≥2 Years of Age",
+          "Metabolite (7-OH Cannabidiol) to Parent (Cannabidiol) Ratio for Cmax [MRCmax] on Day 1",
+          "MRCmax on Day 10",
+          "Metabolite to Parent Ratio for AUC(0-inf) [MRAUC(0-inf)] on Day 1 for Participants ≥2 Years of Age",
+          "Metabolite to Parent Ratio for AUC(0-12) [MRAUC(0-12)] on Day 1",
+          "Metabolite to Parent Ratio for AUC(0-12) [MRAUC(0-12)] on Day 10",
+          "AUC(0-12) for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 10",
+          "Dose Normalized AUC(0-12) [AUC (0-12)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 10",
+          "Minimum Plasma Concentration (Cmin) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Average Plasma Concentration (Cavg) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Accumulation Ratio for Cmax (RCmax) on Day 10 for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Accumulation Ratio for AUC(0-12) [RAUC(0-12)] on Day 10 for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time Linearity Index for Cannabidiol and Metabolite 7-OH Cannabidiol in Participants ≥2 Years of Age",
+          "Number of Participants With Treatment-Emergent Adverse Events (TEAEs) and Serious Adverse Events (SAEs)",
+          "Clinical Global Impression of Improvement (CGI-I) Assessment",
+          "Change From Baseline in Clinical Global Impression of Severity (CGI-S) Assessment",
+          "Change From Baseline in Daily Seizure Activity",
+          "Number of Participants With Suicide Related Thoughts and Behaviors Assessed by the Columbia-Suicide Severity Rating Scale (C-SSRS)"
+        ],
+        "outcome_measures": [
+          "Maximum Plasma Concentration (Cmax) for Cannabidiol and Metabolite 7-hydroxy (7-OH) Cannabidiol",
+          "Cmax for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Dose Normalized Cmax (Cmax/D) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Cmax/D for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time to Cmax (Tmax) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time to Cmax (Tmax) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Half Life (t1/2) for Cannabidiol and Metabolite 7-OH Cannabidiol for Participants ≥2 Years of Age",
+          "Elimination Rate (Lambda-z [λz]) for Cannabidiol and Metabolite 7-OH Cannabidiol for Participants ≥2 Years of Age",
+          "Oral Clearance (CL/F) for Cannabidiol for Participants ≥2 Years of Age",
+          "Volume of Distribution (Vz/F) of Cannabidiol for Participants ≥2 Years of Age",
+          "Area Under the Plasma-Concentration Time Curve From 0 to 12 Hours Post-dose [AUC(0-12)] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1",
+          "Dose Normalized AUC(0-12) [AUC (0-12)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1",
+          "AUC From Time 0 to the Last Quantifiable Concentration [AUC(0-last)] on Day 1 for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants ≥2 Years of Age",
+          "AUC From Time 0 to Infinity [AUC(0-inf)] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants ≥2 Years of Age",
+          "Dose Normalized AUC(0-inf) [AUC(0-inf)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants ≥2 Years of Age",
+          "Metabolite (7-OH Cannabidiol) to Parent (Cannabidiol) Ratio for Cmax [MRCmax] on Day 1",
+          "MRCmax on Day 10",
+          "Metabolite to Parent Ratio for AUC(0-inf) [MRAUC(0-inf)] on Day 1 for Participants ≥2 Years of Age",
+          "Metabolite to Parent Ratio for AUC(0-12) [MRAUC(0-12)] on Day 1",
+          "Metabolite to Parent Ratio for AUC(0-12) [MRAUC(0-12)] on Day 10",
+          "AUC(0-12) for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 10",
+          "Dose Normalized AUC(0-12) [AUC (0-12)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 10",
+          "Minimum Plasma Concentration (Cmin) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Average Plasma Concentration (Cavg) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Accumulation Ratio for Cmax (RCmax) on Day 10 for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Accumulation Ratio for AUC(0-12) [RAUC(0-12)] on Day 10 for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time Linearity Index for Cannabidiol and Metabolite 7-OH Cannabidiol in Participants ≥2 Years of Age",
+          "Number of Participants With Treatment-Emergent Adverse Events (TEAEs) and Serious Adverse Events (SAEs)",
+          "Clinical Global Impression of Improvement (CGI-I) Assessment",
+          "Change From Baseline in Clinical Global Impression of Severity (CGI-S) Assessment",
+          "Change From Baseline in Daily Seizure Activity",
+          "Number of Participants With Suicide Related Thoughts and Behaviors Assessed by the Columbia-Suicide Severity Rating Scale (C-SSRS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02324673",
+        "enrollment": 61,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02324673"
+      }
+    },
+    {
+      "study_id": "CT_NCT03196466",
+      "study_type": "Clinical Trial",
+      "condition": "EPILEPSY",
+      "study_title": "Population Pharmacokinetics of Antiepileptic in Pediatrics",
+      "citation": "ClinicalTrials.gov NCTNCT03196466",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Volume of distribution",
+          "Absorption constant",
+          "Clearance"
+        ],
+        "outcome_measures": [
+          "Volume of distribution",
+          "Absorption constant",
+          "Clearance"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03196466",
+        "enrollment": 753,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03196466"
+      }
+    },
+    {
+      "study_id": "CT_NCT03886753",
+      "study_type": "Clinical Trial",
+      "condition": "EPILEPSY",
+      "study_title": "Pharmacokinetic (PK) and Pharmacodynamics (PD) Study of Ilera Specific Products",
+      "citation": "ClinicalTrials.gov NCTNCT03886753",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in symptoms"
+        ],
+        "outcome_measures": [
+          "Change in symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03886753",
+        "enrollment": 10,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03886753"
+      }
     }
-  ]
+  ],
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 1
+  }
 }

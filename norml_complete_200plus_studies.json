@@ -6,7 +6,7 @@
     "Phase 3"
   ],
   "total_conditions": 22,
-  "total_studies": 368,
+  "total_studies": 478,
   "conditions": [
     "ALZHEIMERS",
     "AMYOTROPHIC_LATERAL_SCLEROSIS",
@@ -711,6 +711,74 @@
         "placebo_controlled": false
       },
       "notes": "Extracted from NORML ALS research library (references section)."
+    },
+    {
+      "study_id": "CT_NCT01776970",
+      "study_type": "RCT",
+      "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+      "study_title": "Safety and Efficacy on Spasticity Symptoms of a Cannabis Sativa Extract in Motor Neuron Disease",
+      "citation": "ClinicalTrials.gov NCTNCT01776970",
+      "publication_year": 2015,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis Sativa extract Oromucosal spray",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "modified 5 - points modified Ashworth scale (AS)."
+        ],
+        "outcome_measures": [
+          "modified 5 - points modified Ashworth scale (AS)."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01776970",
+        "enrollment": 60,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01776970"
+      }
+    },
+    {
+      "study_id": "CT_NCT00812851",
+      "study_type": "RCT",
+      "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+      "study_title": "Randomized Placebo-Controlled Crossover Trial With THC (Delta 9-Tetrahydrocannabinol) for the Treatment of Cramps in Amyotrophic Lateral Sclerosis (ALS)",
+      "citation": "ClinicalTrials.gov NCTNCT00812851",
+      "publication_year": 2008,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "severity of cramps"
+        ],
+        "outcome_measures": [
+          "severity of cramps"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00812851",
+        "enrollment": 24,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00812851"
+      }
     },
     {
       "study_id": "ANXIETY_RCT_001",
@@ -2639,6 +2707,646 @@
       "priority": "\u2b50\u2b50\u2b50\u2b50\u2b50"
     },
     {
+      "study_id": "CT_NCT03530800",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Dronabinol in Trichotillomania and Other Body Focused Repetitive Behaviors",
+      "citation": "ClinicalTrials.gov NCTNCT03530800",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "NIMH Trichotillomania Symptom Severity Scale (NIMH-TSS)",
+          "Skin Picking Symptom Assessment Scale (SP-SAS)"
+        ],
+        "outcome_measures": [
+          "NIMH Trichotillomania Symptom Severity Scale (NIMH-TSS)",
+          "Skin Picking Symptom Assessment Scale (SP-SAS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03530800",
+        "enrollment": 50,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03530800"
+      }
+    },
+    {
+      "study_id": "CT_NCT05253417",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "The CANabidiol Use for RElief of Short Term Insomnia",
+      "citation": "ClinicalTrials.gov NCTNCT05253417",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "50 mg Cannabidiol (CBD), 100 mg Cannabidiol (CBD)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "To investigate the effect of the administration of a 50mg and 100mg per day oral CBD product versus placebo over 8 weeks on insomnia severity index scores"
+        ],
+        "outcome_measures": [
+          "To investigate the effect of the administration of a 50mg and 100mg per day oral CBD product versus placebo over 8 weeks on insomnia severity index scores"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05253417",
+        "enrollment": 208,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05253417"
+      }
+    },
+    {
+      "study_id": "CT_NCT05023759",
+      "study_type": "Clinical Trial",
+      "condition": "ANXIETY",
+      "study_title": "Anxiety Symptoms in Relation to Use of Hemp-derived, Full Spectrum Cannabidiol (CBD)",
+      "citation": "ClinicalTrials.gov NCTNCT05023759",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Formula30A Full Spectrum Hemp Cannabidiol 25mg Capsules",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from Baseline Generalized Anxiety Disorder 7-Item Scale (GAD7) Score at 8 weeks"
+        ],
+        "outcome_measures": [
+          "Change from Baseline Generalized Anxiety Disorder 7-Item Scale (GAD7) Score at 8 weeks"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05023759",
+        "enrollment": 30,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05023759"
+      }
+    },
+    {
+      "study_id": "CT_NCT05823753",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Cannabidiol to Reduce Anxiety Reactivity",
+      "citation": "ClinicalTrials.gov NCTNCT05823753",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Anandamide",
+          "Change in state anxiety (SUDs) during stress task anticipation phase",
+          "Change in state anxiety (SUDs) during stress task performance phase"
+        ],
+        "outcome_measures": [
+          "Anandamide",
+          "Change in state anxiety (SUDs) during stress task anticipation phase",
+          "Change in state anxiety (SUDs) during stress task performance phase"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05823753",
+        "enrollment": 63,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05823753"
+      }
+    },
+    {
+      "study_id": "CT_NCT05324449",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Epidiolex\u00ae for Anxiety in Pediatric Epilepsy",
+      "citation": "ClinicalTrials.gov NCTNCT05324449",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol 100 MG/ML",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "CGI-I"
+        ],
+        "outcome_measures": [
+          "CGI-I"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05324449",
+        "enrollment": 20,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05324449"
+      }
+    },
+    {
+      "study_id": "CT_NCT03582137",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "A Study of Tolerability and Efficacy of Cannabidiol on Motor Symptoms in Parkinson's Disease",
+      "citation": "ClinicalTrials.gov NCTNCT03582137",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Movement Disorders Society-Unified Parkinson's Disease Rating Scale (MDS-UPDRS) Part III (Motor Examination) Scores"
+        ],
+        "outcome_measures": [
+          "Change in Movement Disorders Society-Unified Parkinson's Disease Rating Scale (MDS-UPDRS) Part III (Motor Examination) Scores"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03582137",
+        "enrollment": 74,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03582137"
+      }
+    },
+    {
+      "study_id": "CT_NCT03491384",
+      "study_type": "Clinical Trial",
+      "condition": "ANXIETY",
+      "study_title": "Anxiety, Inflammation, Stress, and Cannabinoids",
+      "citation": "ClinicalTrials.gov NCTNCT03491384",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis (smoked flower, ingested edible)",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Anxiety: Depression Anxiety Stress Scale (DASS21).",
+          "Change in Inflammation: Circulating Levels of Cytokines (Panel of Inflammatory Markers).",
+          "Patient Global Impression of Change: Global Impression of Change Scale (PGIC)."
+        ],
+        "outcome_measures": [
+          "Change in Anxiety: Depression Anxiety Stress Scale (DASS21).",
+          "Change in Inflammation: Circulating Levels of Cytokines (Panel of Inflammatory Markers).",
+          "Patient Global Impression of Change: Global Impression of Change Scale (PGIC)."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03491384",
+        "enrollment": 361,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03491384"
+      }
+    },
+    {
+      "study_id": "CT_NCT05600114",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Cannabidiol (CBD) for the Treatment of Social Anxiety Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT05600114",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol oral solution, Cannabidiol oral solution",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean change from baseline to endpoint in the Liebowitz Social Anxiety Scale (LSAS)"
+        ],
+        "outcome_measures": [
+          "Mean change from baseline to endpoint in the Liebowitz Social Anxiety Scale (LSAS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05600114",
+        "enrollment": 239,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05600114"
+      }
+    },
+    {
+      "study_id": "CT_NCT03948074",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Cannabis For Cancer-Related Symptoms",
+      "citation": "ClinicalTrials.gov NCTNCT03948074",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "outcome_measures": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03948074",
+        "enrollment": 91,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03948074"
+      }
+    },
+    {
+      "study_id": "CT_NCT02548559",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Sublingual Cannabidiol for Anxiety",
+      "citation": "ClinicalTrials.gov NCTNCT02548559",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Full-Spectrum Cannabidiol, Single-Compound Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from Baseline in Self-Reported Anxiety as Assessed by the Beck Anxiety Inventory (BAI)",
+          "Change from Baseline in Anxiety Assessed by the Overall Anxiety Severity and Impairment Scale (OASIS)",
+          "Change from Baseline in Self-Reported Anxiety Assessed by the State-Trait Anxiety Inventory (STAI)",
+          "Change from Baseline in Anxiety Measured by the Hamilton Anxiety Scale (HAM-A)"
+        ],
+        "outcome_measures": [
+          "Change from Baseline in Self-Reported Anxiety as Assessed by the Beck Anxiety Inventory (BAI)",
+          "Change from Baseline in Anxiety Assessed by the Overall Anxiety Severity and Impairment Scale (OASIS)",
+          "Change from Baseline in Self-Reported Anxiety Assessed by the State-Trait Anxiety Inventory (STAI)",
+          "Change from Baseline in Anxiety Measured by the Hamilton Anxiety Scale (HAM-A)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02548559",
+        "enrollment": 31,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02548559"
+      }
+    },
+    {
+      "study_id": "CT_NCT05108220",
+      "study_type": "Clinical Trial",
+      "condition": "ANXIETY",
+      "study_title": "Evaluation of Effects of CBD Products on Anxiety Among U.S. Women",
+      "citation": "ClinicalTrials.gov NCTNCT05108220",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol (CBD)- containing consumer products",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Anxiety"
+        ],
+        "outcome_measures": [
+          "Anxiety"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05108220",
+        "enrollment": 1350,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05108220"
+      }
+    },
+    {
+      "study_id": "CT_NCT04965740",
+      "study_type": "Clinical Trial",
+      "condition": "ANXIETY",
+      "study_title": "Exploring Medically Perceived Benefits, Use and Interest in Psychedelics and Cannabinoids",
+      "citation": "ClinicalTrials.gov NCTNCT04965740",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Collect Insights from First Responders"
+        ],
+        "outcome_measures": [
+          "Collect Insights from First Responders"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04965740",
+        "enrollment": 102,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04965740"
+      }
+    },
+    {
+      "study_id": "CT_NCT02818777",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "A Study of Tolerability and Efficacy of Cannabidiol on Tremor in Parkinson's Disease",
+      "citation": "ClinicalTrials.gov NCTNCT02818777",
+      "publication_year": 2017,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Severity of Participants Reporting Study-related Adverse Events at Each Dose Level",
+          "Number of Participants Had Changes in Orthostatic Blood Pressure",
+          "Number of Participants Had Changes in Physical Exam",
+          "Number of Participants Had Changes in EKG",
+          "Number of Participants Had Changes in Laboratory Values",
+          "Proportion of Subjects That Drop Out of the Study Due to Study Drug Intolerance",
+          "Change in Movement Disorder Society-Unified Parkinsons Disease Rating Scale Total Score",
+          "Change in Montreal Cognitive Assessment (MoCA)",
+          "Change in Anxiety Short Form",
+          "Change in Neuropsychiatric Inventory (NPI)",
+          "Change in Depression Short Form",
+          "Change in Scales for Outcomes in Parkinson's Disease (SCOPA)-Sleep-night Time Sleep",
+          "Change From Baseline of REM Sleep Behavior Disorder Screening Questionnaire (RBDSQ)",
+          "Change in Emotional and Behavioral Dyscontrol Short Form",
+          "Change in Pain Severity Form",
+          "Change in Questionnaire for Impulsive-Compulsive Disorders in Parkinson's Disease-Rating Scale (QUIP-RS)",
+          "Change in Fatigue Severity Scale",
+          "Change in International Restless Legs Syndrome Study Group Rating Scale for Restless",
+          "Change in Unified Dyskinesia Rating Scale (UDysRS)"
+        ],
+        "outcome_measures": [
+          "Severity of Participants Reporting Study-related Adverse Events at Each Dose Level",
+          "Number of Participants Had Changes in Orthostatic Blood Pressure",
+          "Number of Participants Had Changes in Physical Exam",
+          "Number of Participants Had Changes in EKG",
+          "Number of Participants Had Changes in Laboratory Values",
+          "Proportion of Subjects That Drop Out of the Study Due to Study Drug Intolerance",
+          "Change in Movement Disorder Society-Unified Parkinsons Disease Rating Scale Total Score",
+          "Change in Montreal Cognitive Assessment (MoCA)",
+          "Change in Anxiety Short Form",
+          "Change in Neuropsychiatric Inventory (NPI)",
+          "Change in Depression Short Form",
+          "Change in Scales for Outcomes in Parkinson's Disease (SCOPA)-Sleep-night Time Sleep",
+          "Change From Baseline of REM Sleep Behavior Disorder Screening Questionnaire (RBDSQ)",
+          "Change in Emotional and Behavioral Dyscontrol Short Form",
+          "Change in Pain Severity Form",
+          "Change in Questionnaire for Impulsive-Compulsive Disorders in Parkinson's Disease-Rating Scale (QUIP-RS)",
+          "Change in Fatigue Severity Scale",
+          "Change in International Restless Legs Syndrome Study Group Rating Scale for Restless",
+          "Change in Unified Dyskinesia Rating Scale (UDysRS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02818777",
+        "enrollment": 13,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02818777"
+      }
+    },
+    {
+      "study_id": "CT_NCT03224468",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Effect of Medical Marijuana on Neurocognition and Escalation of Use",
+      "citation": "ClinicalTrials.gov NCTNCT03224468",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Marijuana",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "outcome_measures": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03224468",
+        "enrollment": 269,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03224468"
+      }
+    },
+    {
+      "study_id": "CT_NCT01093976",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Marinol in Trichotillomania or Obsessive Compulsive Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT01093976",
+      "publication_year": 2011,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Massachusetts General Hospital Hairpulling Scale (MGH-HPS) Total Score"
+        ],
+        "outcome_measures": [
+          "Massachusetts General Hospital Hairpulling Scale (MGH-HPS) Total Score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01093976",
+        "enrollment": 14,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01093976"
+      }
+    },
+    {
+      "study_id": "CT_NCT03274440",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Effects of Marijuana on Symptoms of OCD",
+      "citation": "ClinicalTrials.gov NCTNCT03274440",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Yale-Brown Obsessive-Compulsive Challenge Scale (YBOC-CS)"
+        ],
+        "outcome_measures": [
+          "Yale-Brown Obsessive-Compulsive Challenge Scale (YBOC-CS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03274440",
+        "enrollment": 14,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03274440"
+      }
+    },
+    {
+      "study_id": "CT_NCT01875796",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Integrated CBT for Cannabis Dependence With Co-occurring Anxiety Disorders",
+      "citation": "ClinicalTrials.gov NCTNCT01875796",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Integrated Cannabis and Anxiety Reduction Treatment",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "cannabis use",
+          "cannabis-related problems"
+        ],
+        "outcome_measures": [
+          "cannabis use",
+          "cannabis-related problems"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01875796",
+        "enrollment": 68,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01875796"
+      }
+    },
+    {
       "study_id": "CACHEXIA_RCT_001",
       "study_type": "RCT",
       "condition": "APPETITE_CACHEXIA",
@@ -4416,6 +5124,212 @@
       "priority": "\u2b50\u2b50\u2b50\u2b50"
     },
     {
+      "study_id": "CT_NCT04402554",
+      "study_type": "Clinical Trial",
+      "condition": "ARTHRITIS",
+      "study_title": "Survey of Cannabis Use in Patients With Chronic Inflammatory Arthritis",
+      "citation": "ClinicalTrials.gov NCTNCT04402554",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis questionnaire",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "prevalence of cannabis use in patients with chronic inflammatory rheumatic conditions"
+        ],
+        "outcome_measures": [
+          "prevalence of cannabis use in patients with chronic inflammatory rheumatic conditions"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04402554",
+        "enrollment": 501,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04402554"
+      }
+    },
+    {
+      "study_id": "CT_NCT03693833",
+      "study_type": "RCT",
+      "condition": "ARTHRITIS",
+      "study_title": "CBD Treatment in Hand Osteoarthritis and Psoriatic Arthritis.",
+      "citation": "ClinicalTrials.gov NCTNCT03693833",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "VAS pain during the last 24 hours"
+        ],
+        "outcome_measures": [
+          "VAS pain during the last 24 hours"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03693833",
+        "enrollment": 136,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03693833"
+      }
+    },
+    {
+      "study_id": "CT_NCT04607603",
+      "study_type": "RCT",
+      "condition": "ARTHRITIS",
+      "study_title": "Efficacy of Cannabidiol in Knee Osteoarthritis",
+      "citation": "ClinicalTrials.gov NCTNCT04607603",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol Oral Product",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "WOMAC Pain Score (WOMAC) Pain score"
+        ],
+        "outcome_measures": [
+          "WOMAC Pain Score (WOMAC) Pain score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04607603",
+        "enrollment": 86,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04607603"
+      }
+    },
+    {
+      "study_id": "CT_NCT04749628",
+      "study_type": "RCT",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Bilateral Total Knee Arthroplasty",
+      "citation": "ClinicalTrials.gov NCTNCT04749628",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Cumulative Opioid Usage in First 72 hours Postoperatively"
+        ],
+        "outcome_measures": [
+          "Cumulative Opioid Usage in First 72 hours Postoperatively"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04749628",
+        "enrollment": 37,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04749628"
+      }
+    },
+    {
+      "study_id": "CT_NCT04911127",
+      "study_type": "RCT",
+      "condition": "ARTHRITIS",
+      "study_title": "Therapeutic Response of Cannabidiol in Rheumatoid Arthritis",
+      "citation": "ClinicalTrials.gov NCTNCT04911127",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "200mg Cannabidiol by capsules twice daily, 400mg Cannabidiol by capsules twice daily",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from Baseline in Disease Activity Score (DAS28/ESR)",
+          "Tolerability as assessed by participant attrition"
+        ],
+        "outcome_measures": [
+          "Change from Baseline in Disease Activity Score (DAS28/ESR)",
+          "Tolerability as assessed by participant attrition"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04911127",
+        "enrollment": 67,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04911127"
+      }
+    },
+    {
+      "study_id": "CT_NCT06588972",
+      "study_type": "RCT",
+      "condition": "ARTHRITIS",
+      "study_title": "Analgesic Effects of a Treatment With Cannabis Sativa Extract in Patients With Knee Osteoarthritis - CANOA (Cannabis for Osteoarthritis)",
+      "citation": "ClinicalTrials.gov NCTNCT06588972",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis Sativa",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain levels"
+        ],
+        "outcome_measures": [
+          "Pain levels"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT06588972",
+        "enrollment": 45,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT06588972"
+      }
+    },
+    {
       "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_001",
       "study_type": "observational",
       "condition": "AUTISM_SPECTRUM_DISORDER",
@@ -4786,6 +5700,86 @@
         "placebo_controlled": true
       },
       "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "CT_NCT02956226",
+      "study_type": "RCT",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Cannabinoids for Behavioral Problems in Children With ASD",
+      "citation": "ClinicalTrials.gov NCTNCT02956226",
+      "publication_year": 2018,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabinoids - 99% pure cannabinoids mix, Cannabinoids - whole plant extract",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from baseline Home Situations Questionnaire-Autism Spectrum Disorder (HSQ-ASD) score, at three months. Within subject difference between the placebo condition and the whole plant extract condition.",
+          "Clinical Global Impression-Improvement scores (CGI-I ) at three months. Within subject difference between the placebo condition and the whole plant extract condition."
+        ],
+        "outcome_measures": [
+          "Change from baseline Home Situations Questionnaire-Autism Spectrum Disorder (HSQ-ASD) score, at three months. Within subject difference between the placebo condition and the whole plant extract condition.",
+          "Clinical Global Impression-Improvement scores (CGI-I ) at three months. Within subject difference between the placebo condition and the whole plant extract condition."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02956226",
+        "enrollment": 150,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02956226"
+      }
+    },
+    {
+      "study_id": "CT_NCT05212493",
+      "study_type": "RCT",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "The Effects of Medical Cannabis in Children With Autistic Spectrum Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT05212493",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis oil",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Cannabinoids levels change",
+          "Changes in attention span",
+          "Changes in cognitive level",
+          "Comparison of efficacy between two different cannabis oil products",
+          "Changes in adaptive behavior",
+          "Changes in violent behavior"
+        ],
+        "outcome_measures": [
+          "Cannabinoids levels change",
+          "Changes in attention span",
+          "Changes in cognitive level",
+          "Comparison of efficacy between two different cannabis oil products",
+          "Changes in adaptive behavior",
+          "Changes in violent behavior"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05212493",
+        "enrollment": 128,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05212493"
+      }
     },
     {
       "study_id": "CANCER_RCT_001",
@@ -7004,6 +7998,994 @@
       "exposure_ascertainment": "trial_assigned"
     },
     {
+      "study_id": "CT_NCT06607835",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Cannabis Suppositories and Mindful Compassion Online Groups for Sexual Functioning",
+      "citation": "ClinicalTrials.gov NCTNCT06607835",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Mindful-compassion and cannabis suppositories",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The Short Warwick -Edinburgh Mental Well-being Scale",
+          "State Self-compassion Short Form",
+          "The Female Sexual Function Index",
+          "Sexual Self-Efficacy Scale for Female Sexual Functioning",
+          "Brief Quality of Life Scale"
+        ],
+        "outcome_measures": [
+          "The Short Warwick -Edinburgh Mental Well-being Scale",
+          "State Self-compassion Short Form",
+          "The Female Sexual Function Index",
+          "Sexual Self-Efficacy Scale for Female Sexual Functioning",
+          "Brief Quality of Life Scale"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT06607835",
+        "enrollment": 83,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT06607835"
+      }
+    },
+    {
+      "study_id": "CT_NCT06320327",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Topical CBD's Effects on Soreness and Performance",
+      "citation": "ClinicalTrials.gov NCTNCT06320327",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol cream",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Vertical Jump Test"
+        ],
+        "outcome_measures": [
+          "Vertical Jump Test"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT06320327",
+        "enrollment": 30,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT06320327"
+      }
+    },
+    {
+      "study_id": "CT_NCT01361607",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Sativex\u00ae for Relieving Persistent Pain in Patients With Advanced Cancer",
+      "citation": "ClinicalTrials.gov NCTNCT01361607",
+      "publication_year": 2014,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Nabiximols",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Percent Improvement From Baseline In Mean NRS Average Pain At End Of Treatment"
+        ],
+        "outcome_measures": [
+          "Percent Improvement From Baseline In Mean NRS Average Pain At End Of Treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01361607",
+        "enrollment": 399,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01361607"
+      }
+    },
+    {
+      "study_id": "CT_NCT04576507",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Repeated Cannabis Administration on Experimental Pain and Abuse Liability",
+      "citation": "ClinicalTrials.gov NCTNCT04576507",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Active Cannabis, Placebo Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Cold Pressor Test (CPT) Latency"
+        ],
+        "outcome_measures": [
+          "Change in Cold Pressor Test (CPT) Latency"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04576507",
+        "enrollment": 10,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04576507"
+      }
+    },
+    {
+      "study_id": "CT_NCT00675948",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Study to Compare the Safety and Tolerability of Sativex\u00ae in Patients With Cancer Related Pain",
+      "citation": "ClinicalTrials.gov NCTNCT00675948",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The Incidence of Adverse Events as a Measure of Subject Safety"
+        ],
+        "outcome_measures": [
+          "The Incidence of Adverse Events as a Measure of Subject Safety"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00675948",
+        "enrollment": 43,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00675948"
+      }
+    },
+    {
+      "study_id": "CT_NCT05477875",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Cannabinoid vs Opioid for Photorefractive Keratectomy Pain Control",
+      "citation": "ClinicalTrials.gov NCTNCT05477875",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "oral cannabinoid",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain as Recorded by the FACES Scale (Maximum) After First Surgery",
+          "Pain as Recorded by the FACES Scale (Maximum) After Second Surgery"
+        ],
+        "outcome_measures": [
+          "Pain as Recorded by the FACES Scale (Maximum) After First Surgery",
+          "Pain as Recorded by the FACES Scale (Maximum) After Second Surgery"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05477875",
+        "enrollment": 35,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05477875"
+      }
+    },
+    {
+      "study_id": "CT_NCT07194928",
+      "study_type": "Clinical Trial",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Medical Cannabis as an Opiate Alternative",
+      "citation": "ClinicalTrials.gov NCTNCT07194928",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "We will monitor patient's response to medical marijuana as alternative to opioid for chronic pain.",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Visual Analog Scale (VAS)",
+          "Morphine equivalents",
+          "McGill Pain evaluation",
+          "Short form-36 questionnaire."
+        ],
+        "outcome_measures": [
+          "Visual Analog Scale (VAS)",
+          "Morphine equivalents",
+          "McGill Pain evaluation",
+          "Short form-36 questionnaire."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT07194928",
+        "enrollment": 29,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT07194928"
+      }
+    },
+    {
+      "study_id": "CT_NCT00255580",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Medicinal Cannabis for Painful HIV Neuropathy",
+      "citation": "ClinicalTrials.gov NCTNCT00255580",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Smoked cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Descriptor Differential Scale (DDS)"
+        ],
+        "outcome_measures": [
+          "Descriptor Differential Scale (DDS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00255580",
+        "enrollment": 28,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00255580"
+      }
+    },
+    {
+      "study_id": "CT_NCT04402554",
+      "study_type": "Clinical Trial",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Survey of Cannabis Use in Patients With Chronic Inflammatory Arthritis",
+      "citation": "ClinicalTrials.gov NCTNCT04402554",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis questionnaire",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "prevalence of cannabis use in patients with chronic inflammatory rheumatic conditions"
+        ],
+        "outcome_measures": [
+          "prevalence of cannabis use in patients with chronic inflammatory rheumatic conditions"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04402554",
+        "enrollment": 501,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04402554"
+      }
+    },
+    {
+      "study_id": "CT_NCT04827992",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Evaluation of Medical Cannabis and Prescription Opioid Taper Support for Reduction of Pain and Opioid Dose in Patients With Chronic Non-Cancer Pain",
+      "citation": "ClinicalTrials.gov NCTNCT04827992",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Marijuana",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean Difference in Prescription Monitoring Program verified opioid dose at baseline and week 24",
+          "Mean Difference in Pain, Enjoyment, General Activity (PEG) Scale Summed Score over post-baseline to week 24 interval"
+        ],
+        "outcome_measures": [
+          "Mean Difference in Prescription Monitoring Program verified opioid dose at baseline and week 24",
+          "Mean Difference in Pain, Enjoyment, General Activity (PEG) Scale Summed Score over post-baseline to week 24 interval"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04827992",
+        "enrollment": 87,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04827992"
+      }
+    },
+    {
+      "study_id": "CT_NCT00781001",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Efficacy of Inhaled Cannabis in Diabetic Painful Peripheral Neuropathy",
+      "citation": "ClinicalTrials.gov NCTNCT00781001",
+      "publication_year": 2011,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Spontaneous Pain Score"
+        ],
+        "outcome_measures": [
+          "Spontaneous Pain Score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00781001",
+        "enrollment": 17,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00781001"
+      }
+    },
+    {
+      "study_id": "CT_NCT01337089",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Long Term Safety of Sativex Oromucosal Spray (Sativex\u00ae; Nabiximols) as Adjunctive Therapy in Patients With Uncontrolled Persistent Chronic Cancer Related Pain",
+      "citation": "ClinicalTrials.gov NCTNCT01337089",
+      "publication_year": 2016,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Nabiximols",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Percent Of Participants With Treatment-emergent Adverse Events"
+        ],
+        "outcome_measures": [
+          "Percent Of Participants With Treatment-emergent Adverse Events"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01337089",
+        "enrollment": 660,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01337089"
+      }
+    },
+    {
+      "study_id": "CT_NCT00713817",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Study to Determine the Maintenance of Effect After Long-term Treatment of Sativex\u00ae in Subjects With Neuropathic Pain",
+      "citation": "ClinicalTrials.gov NCTNCT00713817",
+      "publication_year": 2007,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex\u00ae",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in Mean Daily Pain Severity on a 0-10 Numerical Rating Scale Score at the End of Treatment (Average of Last 7 Days Treatment)"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in Mean Daily Pain Severity on a 0-10 Numerical Rating Scale Score at the End of Treatment (Average of Last 7 Days Treatment)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00713817",
+        "enrollment": 19,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00713817"
+      }
+    },
+    {
+      "study_id": "CT_NCT04271917",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Analgesic Effects of Cannabidiol for Simple Tooth Extractions in Dental Patients",
+      "citation": "ClinicalTrials.gov NCTNCT04271917",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Worst pain following surgery using Wong Baker Faces pain scale",
+          "Amount of medication used",
+          "Pain levels following surgery using Wong Baker Faces pain scale"
+        ],
+        "outcome_measures": [
+          "Worst pain following surgery using Wong Baker Faces pain scale",
+          "Amount of medication used",
+          "Pain levels following surgery using Wong Baker Faces pain scale"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04271917",
+        "enrollment": 68,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04271917"
+      }
+    },
+    {
+      "study_id": "CT_NCT02073474",
+      "study_type": "Clinical Trial",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "An Observational Post-Marketing Safety Registry of Sativex\u00ae",
+      "citation": "ClinicalTrials.gov NCTNCT02073474",
+      "publication_year": 2015,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex\u00ae",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Incidence rates of adverse events."
+        ],
+        "outcome_measures": [
+          "Incidence rates of adverse events."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02073474",
+        "enrollment": 978,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02073474"
+      }
+    },
+    {
+      "study_id": "CT_NCT04193631",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Low Dose of Cannabidiol (CBD) to Treat Mild to Moderate Musculoskeletal Pain",
+      "citation": "ClinicalTrials.gov NCTNCT04193631",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol (CBD)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Impact of Pure Cannabidiol (CBD) tablets on safety in patient's with musculoskeletal pain using a self-reported pain scale score."
+        ],
+        "outcome_measures": [
+          "Impact of Pure Cannabidiol (CBD) tablets on safety in patient's with musculoskeletal pain using a self-reported pain scale score."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04193631",
+        "enrollment": 16,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04193631"
+      }
+    },
+    {
+      "study_id": "CT_NCT00710554",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Study of Sativex\u00ae for Pain Relief of Peripheral Neuropathic Pain, Associated With Allodynia",
+      "citation": "ClinicalTrials.gov NCTNCT00710554",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in Mean Peripheral Neuropathic Pain on a 0-10 Numerical Rating Scale (NRS) Score at the End of Treatment (15 Weeks)"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in Mean Peripheral Neuropathic Pain on a 0-10 Numerical Rating Scale (NRS) Score at the End of Treatment (15 Weeks)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00710554",
+        "enrollment": 246,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00710554"
+      }
+    },
+    {
+      "study_id": "CT_NCT04387617",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Study to Assess the Effect of Cannabidiol Oil on Pain After Ureteroscopy for Kidney Stones",
+      "citation": "ClinicalTrials.gov NCTNCT04387617",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Maximum Pain Intensity Score"
+        ],
+        "outcome_measures": [
+          "Maximum Pain Intensity Score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04387617",
+        "enrollment": 90,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04387617"
+      }
+    },
+    {
+      "study_id": "CT_NCT04299490",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Effects of Experimental Sleep Disturbances on Receptor Function of Study Drug",
+      "citation": "ClinicalTrials.gov NCTNCT04299490",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Within-Subject test of blinded study medication (stimulant, benzodiazepine, opioid, cannabinoid, over-the-counter pain medication, or placebo)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Percent change in receptor binding potential from PET scan",
+          "Withdrawal Latency measured in seconds during Cold Pressor Pain Tolerance test",
+          "Drug Effects as assessed by the Visual Analog Scale",
+          "The monetary valuation in dollars of the study medication as assessed by the Drug or Money Multiple Choice Questionnaire"
+        ],
+        "outcome_measures": [
+          "Percent change in receptor binding potential from PET scan",
+          "Withdrawal Latency measured in seconds during Cold Pressor Pain Tolerance test",
+          "Drug Effects as assessed by the Visual Analog Scale",
+          "The monetary valuation in dollars of the study medication as assessed by the Drug or Money Multiple Choice Questionnaire"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04299490",
+        "enrollment": 148,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04299490"
+      }
+    },
+    {
+      "study_id": "CT_NCT00674609",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Study of Sativex\u00ae for Pain Relief in Patients With Advanced Malignancy",
+      "citation": "ClinicalTrials.gov NCTNCT00674609",
+      "publication_year": 2004,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex\u00ae",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The Change in Mean Pain Numerical Rating Scale (NRS) Score From Baseline to the End of the Treatment.",
+          "The Consumption of Escape Analgesic Medication."
+        ],
+        "outcome_measures": [
+          "The Change in Mean Pain Numerical Rating Scale (NRS) Score From Baseline to the End of the Treatment.",
+          "The Consumption of Escape Analgesic Medication."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00674609",
+        "enrollment": 177,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00674609"
+      }
+    },
+    {
+      "study_id": "CT_NCT01424566",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Two-Part Study of Sativex\u00ae Oromucosal Spray for Relieving Uncontrolled Persistent Pain in Patients With Advanced Cancer",
+      "citation": "ClinicalTrials.gov NCTNCT01424566",
+      "publication_year": 2015,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Nabiximols",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Randomization Baseline In Mean NRS Average Pain At End Of Treatment"
+        ],
+        "outcome_measures": [
+          "Change From Randomization Baseline In Mean NRS Average Pain At End Of Treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01424566",
+        "enrollment": 406,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01424566"
+      }
+    },
+    {
+      "study_id": "CT_NCT04607603",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Efficacy of Cannabidiol in Knee Osteoarthritis",
+      "citation": "ClinicalTrials.gov NCTNCT04607603",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol Oral Product",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "WOMAC Pain Score (WOMAC) Pain score"
+        ],
+        "outcome_measures": [
+          "WOMAC Pain Score (WOMAC) Pain score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04607603",
+        "enrollment": 86,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04607603"
+      }
+    },
+    {
+      "study_id": "CT_NCT03948074",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Cannabis For Cancer-Related Symptoms",
+      "citation": "ClinicalTrials.gov NCTNCT03948074",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "outcome_measures": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03948074",
+        "enrollment": 91,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03948074"
+      }
+    },
+    {
+      "study_id": "CT_NCT00153192",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Study to Evaluate the Efficacy of Dronabinol (Marinol) as Add-On Therapy for Patients on Opioids for Chronic Pain",
+      "citation": "ClinicalTrials.gov NCTNCT00153192",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Marinol (dronabinol)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Single-Dose Phase",
+          "- Total pain relief (TOTPAR) at 8 hours",
+          "Multi-Dose Phase",
+          "- Change in pain score from baseline"
+        ],
+        "outcome_measures": [
+          "Single-Dose Phase",
+          "- Total pain relief (TOTPAR) at 8 hours",
+          "Multi-Dose Phase",
+          "- Change in pain score from baseline"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00153192",
+        "enrollment": 30,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00153192"
+      }
+    },
+    {
+      "study_id": "CT_NCT00713323",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "A Study to Compare the Safety and Tolerability of Sativex\u00ae in Patients With Neuropathic Pain.",
+      "citation": "ClinicalTrials.gov NCTNCT00713323",
+      "publication_year": 2007,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex\u00ae",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Parent Study Baseline in Mean Pain 0-10 Numerical Rating Scale (NRS) Score During the Last 4 Weeks of Open-label Treatment"
+        ],
+        "outcome_measures": [
+          "Change From Parent Study Baseline in Mean Pain 0-10 Numerical Rating Scale (NRS) Score During the Last 4 Weeks of Open-label Treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00713323",
+        "enrollment": 380,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00713323"
+      }
+    },
+    {
+      "study_id": "CT_NCT02460692",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Trial of Dronabinol and Vaporized Cannabis in Chronic Low Back Pain",
+      "citation": "ClinicalTrials.gov NCTNCT02460692",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "dronabinol, Vaporized Cannabis 3.7% THC/5.6% CBD",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Numerical Pain Intensity"
+        ],
+        "outcome_measures": [
+          "Numerical Pain Intensity"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02460692",
+        "enrollment": 131,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02460692"
+      }
+    },
+    {
+      "study_id": "CT_NCT05663346",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Cannabis and Cancer, an Online Training for Oncology Nurses",
+      "citation": "ClinicalTrials.gov NCTNCT05663346",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis & Cancer digital educational intervention, Standard information regarding cannabis use in oncology",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in self-efficacy"
+        ],
+        "outcome_measures": [
+          "Change in self-efficacy"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05663346",
+        "enrollment": 70,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05663346"
+      }
+    },
+    {
+      "study_id": "CT_NCT00238550",
+      "study_type": "RCT",
+      "condition": "CHRONIC_PAIN",
+      "study_title": "Study of CBME in the Relief of Painful Diabetic Neuropathy",
+      "citation": "ClinicalTrials.gov NCTNCT00238550",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis based medicine extract (CBME)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Improvement in pain symptoms, including pain perception and sleep quality, utilising daily diaries and validated pain questionnaires during 12 week treatment period and after 3 month cessation of treatment"
+        ],
+        "outcome_measures": [
+          "Improvement in pain symptoms, including pain perception and sleep quality, utilising daily diaries and validated pain questionnaires during 12 week treatment period and after 3 month cessation of treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00238550",
+        "enrollment": 36,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00238550"
+      }
+    },
+    {
       "study_id": "COVID19_PUBMED_34619044_RCT_CANDIDATE",
       "study_type": "RCT",
       "condition": "COVID_19",
@@ -7179,6 +9161,78 @@
         "retrospective cohort"
       ],
       "evidence_level": "Retrospective cohort with biochemical exposure confirmation; limited by small sample size and no COVID-negative control"
+    },
+    {
+      "study_id": "CT_NCT04997395",
+      "study_type": "RCT",
+      "condition": "COVID_19",
+      "study_title": "Feasibility of Cannabidiol for the Treatment of Long COVID",
+      "citation": "ClinicalTrials.gov NCTNCT04997395",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "MediCabilis Cannabis sativa 50",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Recruitment rate",
+          "Tolerability for the treatment of long COVID",
+          "Number of side effects"
+        ],
+        "outcome_measures": [
+          "Recruitment rate",
+          "Tolerability for the treatment of long COVID",
+          "Number of side effects"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04997395",
+        "enrollment": 12,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04997395"
+      }
+    },
+    {
+      "study_id": "CT_NCT04504877",
+      "study_type": "RCT",
+      "condition": "COVID_19",
+      "study_title": "Burnout and Distress preventiOn With caNnabidiol in Front-line Health Care workerS deAling wIth COVID-19",
+      "citation": "ClinicalTrials.gov NCTNCT04504877",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "aMBI-HSS: Abbreviated Maslach Burnout Inventory - Human Services Survey"
+        ],
+        "outcome_measures": [
+          "aMBI-HSS: Abbreviated Maslach Burnout Inventory - Human Services Survey"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04504877",
+        "enrollment": 120,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04504877"
+      }
     },
     {
       "study_id": "DEPRESSION_RCT_001",
@@ -8772,6 +10826,82 @@
       "priority": "\u2b50\u2b50\u2b50\u2b50\u2b50"
     },
     {
+      "study_id": "CT_NCT04965740",
+      "study_type": "Clinical Trial",
+      "condition": "DEPRESSION",
+      "study_title": "Exploring Medically Perceived Benefits, Use and Interest in Psychedelics and Cannabinoids",
+      "citation": "ClinicalTrials.gov NCTNCT04965740",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Collect Insights from First Responders"
+        ],
+        "outcome_measures": [
+          "Collect Insights from First Responders"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04965740",
+        "enrollment": 102,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04965740"
+      }
+    },
+    {
+      "study_id": "CT_NCT03224468",
+      "study_type": "RCT",
+      "condition": "DEPRESSION",
+      "study_title": "Effect of Medical Marijuana on Neurocognition and Escalation of Use",
+      "citation": "ClinicalTrials.gov NCTNCT03224468",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Marijuana",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "outcome_measures": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03224468",
+        "enrollment": 269,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03224468"
+      }
+    },
+    {
       "study_id": "DERM_RCT_001",
       "study_type": "open_label_pilot",
       "condition": "DERMATOLOGY",
@@ -9337,6 +11467,480 @@
       },
       "regulatory_relevance": "HIGH - Population health impact; supports state cannabis programs; healthcare utilization data",
       "priority": "\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "CT_NCT04899050",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Epidiolex in Typical Absence Seizures",
+      "citation": "ClinicalTrials.gov NCTNCT04899050",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol (Epidiolex)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Amount of epileptiform activity."
+        ],
+        "outcome_measures": [
+          "Amount of epileptiform activity."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04899050",
+        "enrollment": 14,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04899050"
+      }
+    },
+    {
+      "study_id": "CT_NCT03467113",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "A Study to Assess the Safety and Tolerability of ZX008 in Children and Young Adults With Dravet Syndrome or Lennox Gastaut Syndrome Currently Taking Cannabidiol",
+      "citation": "ClinicalTrials.gov NCTNCT03467113",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Adverse Events",
+          "Change in Heart Rate",
+          "Change in blood pressure",
+          "Change in temperature",
+          "Change in respiratory rate",
+          "Changes in heart rhythm",
+          "Changes in heart valve function",
+          "Changes in treatment-emergent body weight and height"
+        ],
+        "outcome_measures": [
+          "Adverse Events",
+          "Change in Heart Rate",
+          "Change in blood pressure",
+          "Change in temperature",
+          "Change in respiratory rate",
+          "Changes in heart rhythm",
+          "Changes in heart valve function",
+          "Changes in treatment-emergent body weight and height"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03467113",
+        "enrollment": 9,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03467113"
+      }
+    },
+    {
+      "study_id": "CT_NCT02318602",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Cannabidiol Oral Solution as an Adjunctive Treatment for Treatment-resistant Seizure Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT02318602",
+      "publication_year": 2017,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol Oral Solution",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Percentage of Participants With Adverse Events",
+          "Percentage of Participants With Serious Adverse Events",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Laboratory Values",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Electrocardiogram (ECG) Findings",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Vital Signs",
+          "Change From Baseline in Trough Plasma Levels of Cannabidiol and Its 7-OH Metabolite"
+        ],
+        "outcome_measures": [
+          "Percentage of Participants With Adverse Events",
+          "Percentage of Participants With Serious Adverse Events",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Laboratory Values",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Electrocardiogram (ECG) Findings",
+          "Percentage of Participants With Clinically Significant Change From Baseline in Vital Signs",
+          "Change From Baseline in Trough Plasma Levels of Cannabidiol and Its 7-OH Metabolite"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02318602",
+        "enrollment": 52,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02318602"
+      }
+    },
+    {
+      "study_id": "CT_NCT02286986",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Cannabidiol (CBD) to 27 Patients (Aged 2 Years - 19 Years) With Drug Resistant Epilepsy",
+      "citation": "ClinicalTrials.gov NCTNCT02286986",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Seizure Frequency"
+        ],
+        "outcome_measures": [
+          "Seizure Frequency"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02286986",
+        "enrollment": 26,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02286986"
+      }
+    },
+    {
+      "study_id": "CT_NCT02700412",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "University of Alabama at Birmingham (UAB) Adult CBD Program",
+      "citation": "ClinicalTrials.gov NCTNCT02700412",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Epidiolex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Participants With Severe Adverse Events (SAEs) (Increase in Seizure Frequency by More Than 100% Leading to Emergency Room Visit or Hospitalization).",
+          "Number of Participants With Change in Resting Blood Pressure or Heart Rate by 25% if Considered Significant by Managing Neurologist.",
+          "Number of Participants With Change in Laboratory Tests Considered by Managing Neurologists as Clinically Significant."
+        ],
+        "outcome_measures": [
+          "Number of Participants With Severe Adverse Events (SAEs) (Increase in Seizure Frequency by More Than 100% Leading to Emergency Room Visit or Hospitalization).",
+          "Number of Participants With Change in Resting Blood Pressure or Heart Rate by 25% if Considered Significant by Managing Neurologist.",
+          "Number of Participants With Change in Laboratory Tests Considered by Managing Neurologists as Clinically Significant."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02700412",
+        "enrollment": 80,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02700412"
+      }
+    },
+    {
+      "study_id": "CT_NCT02332655",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Cannabidiol Expanded Access Study in Medically Refractory Sturge-Weber Syndrome",
+      "citation": "ClinicalTrials.gov NCTNCT02332655",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Seizures Per Month"
+        ],
+        "outcome_measures": [
+          "Number of Seizures Per Month"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02332655",
+        "enrollment": 5,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02332655"
+      }
+    },
+    {
+      "study_id": "CT_NCT05324449",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Epidiolex\u00ae for Anxiety in Pediatric Epilepsy",
+      "citation": "ClinicalTrials.gov NCTNCT05324449",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol 100 MG/ML",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "CGI-I"
+        ],
+        "outcome_measures": [
+          "CGI-I"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05324449",
+        "enrollment": 20,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05324449"
+      }
+    },
+    {
+      "study_id": "CT_NCT02695537",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "University of Alabama at Birmingham (UAB) Pediatric CBD Program",
+      "citation": "ClinicalTrials.gov NCTNCT02695537",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Epidiolex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Participants With Severe Adverse Events (Increase in Seizure Frequency by More Than 100% Leading to Emergency Room Visit or Hospitalization).",
+          "Number of Participants With Change in Resting Blood Pressure or Heart Rate by 25% if Considered Significant by Managing Neurologist.",
+          "Number of Participants With Change in Laboratory Tests Considered by Managing Neurologists as Clinically Significant."
+        ],
+        "outcome_measures": [
+          "Number of Participants With Severe Adverse Events (Increase in Seizure Frequency by More Than 100% Leading to Emergency Room Visit or Hospitalization).",
+          "Number of Participants With Change in Resting Blood Pressure or Heart Rate by 25% if Considered Significant by Managing Neurologist.",
+          "Number of Participants With Change in Laboratory Tests Considered by Managing Neurologists as Clinically Significant."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02695537",
+        "enrollment": 89,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02695537"
+      }
+    },
+    {
+      "study_id": "CT_NCT04280289",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "CBD Cannabis Extract: Pharmacokinetic Studies",
+      "citation": "ClinicalTrials.gov NCTNCT04280289",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabidiol extract",
+        "delivery_method": "various",
+        "dosing_information": "Phase EARLY_PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Plasma concentration of minor phytocannabinoids, and metabolites following single dose administration of Cannabis extract (CBDE) (at 2.5 mg/kg cannabidiol (CBD).",
+          "Urine concentration of minor phytocannabinoids, and metabolites following single dose administration of Cannabis extract (CBDE) (at 2.5 mg/kg cannabidiol (CBD)."
+        ],
+        "outcome_measures": [
+          "Plasma concentration of minor phytocannabinoids, and metabolites following single dose administration of Cannabis extract (CBDE) (at 2.5 mg/kg cannabidiol (CBD).",
+          "Urine concentration of minor phytocannabinoids, and metabolites following single dose administration of Cannabis extract (CBDE) (at 2.5 mg/kg cannabidiol (CBD)."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04280289",
+        "enrollment": 10,
+        "phase": "EARLY_PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04280289"
+      }
+    },
+    {
+      "study_id": "CT_NCT02324673",
+      "study_type": "RCT",
+      "condition": "EPILEPSY",
+      "study_title": "Cannabidiol Oral Solution in Pediatric Participants With Treatment-resistant Seizure Disorders",
+      "citation": "ClinicalTrials.gov NCTNCT02324673",
+      "publication_year": 2016,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol Oral Solution",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Maximum Plasma Concentration (Cmax) for Cannabidiol and Metabolite 7-hydroxy (7-OH) Cannabidiol",
+          "Cmax for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Dose Normalized Cmax (Cmax/D) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Cmax/D for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time to Cmax (Tmax) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time to Cmax (Tmax) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Half Life (t1/2) for Cannabidiol and Metabolite 7-OH Cannabidiol for Participants \u22652 Years of Age",
+          "Elimination Rate (Lambda-z [\u03bbz]) for Cannabidiol and Metabolite 7-OH Cannabidiol for Participants \u22652 Years of Age",
+          "Oral Clearance (CL/F) for Cannabidiol for Participants \u22652 Years of Age",
+          "Volume of Distribution (Vz/F) of Cannabidiol for Participants \u22652 Years of Age",
+          "Area Under the Plasma-Concentration Time Curve From 0 to 12 Hours Post-dose [AUC(0-12)] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1",
+          "Dose Normalized AUC(0-12) [AUC (0-12)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1",
+          "AUC From Time 0 to the Last Quantifiable Concentration [AUC(0-last)] on Day 1 for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants \u22652 Years of Age",
+          "AUC From Time 0 to Infinity [AUC(0-inf)] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants \u22652 Years of Age",
+          "Dose Normalized AUC(0-inf) [AUC(0-inf)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants \u22652 Years of Age",
+          "Metabolite (7-OH Cannabidiol) to Parent (Cannabidiol) Ratio for Cmax [MRCmax] on Day 1",
+          "MRCmax on Day 10",
+          "Metabolite to Parent Ratio for AUC(0-inf) [MRAUC(0-inf)] on Day 1 for Participants \u22652 Years of Age",
+          "Metabolite to Parent Ratio for AUC(0-12) [MRAUC(0-12)] on Day 1",
+          "Metabolite to Parent Ratio for AUC(0-12) [MRAUC(0-12)] on Day 10",
+          "AUC(0-12) for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 10",
+          "Dose Normalized AUC(0-12) [AUC (0-12)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 10",
+          "Minimum Plasma Concentration (Cmin) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Average Plasma Concentration (Cavg) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Accumulation Ratio for Cmax (RCmax) on Day 10 for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Accumulation Ratio for AUC(0-12) [RAUC(0-12)] on Day 10 for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time Linearity Index for Cannabidiol and Metabolite 7-OH Cannabidiol in Participants \u22652 Years of Age",
+          "Number of Participants With Treatment-Emergent Adverse Events (TEAEs) and Serious Adverse Events (SAEs)",
+          "Clinical Global Impression of Improvement (CGI-I) Assessment",
+          "Change From Baseline in Clinical Global Impression of Severity (CGI-S) Assessment",
+          "Change From Baseline in Daily Seizure Activity",
+          "Number of Participants With Suicide Related Thoughts and Behaviors Assessed by the Columbia-Suicide Severity Rating Scale (C-SSRS)"
+        ],
+        "outcome_measures": [
+          "Maximum Plasma Concentration (Cmax) for Cannabidiol and Metabolite 7-hydroxy (7-OH) Cannabidiol",
+          "Cmax for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Dose Normalized Cmax (Cmax/D) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Cmax/D for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time to Cmax (Tmax) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time to Cmax (Tmax) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Half Life (t1/2) for Cannabidiol and Metabolite 7-OH Cannabidiol for Participants \u22652 Years of Age",
+          "Elimination Rate (Lambda-z [\u03bbz]) for Cannabidiol and Metabolite 7-OH Cannabidiol for Participants \u22652 Years of Age",
+          "Oral Clearance (CL/F) for Cannabidiol for Participants \u22652 Years of Age",
+          "Volume of Distribution (Vz/F) of Cannabidiol for Participants \u22652 Years of Age",
+          "Area Under the Plasma-Concentration Time Curve From 0 to 12 Hours Post-dose [AUC(0-12)] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1",
+          "Dose Normalized AUC(0-12) [AUC (0-12)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1",
+          "AUC From Time 0 to the Last Quantifiable Concentration [AUC(0-last)] on Day 1 for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants \u22652 Years of Age",
+          "AUC From Time 0 to Infinity [AUC(0-inf)] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants \u22652 Years of Age",
+          "Dose Normalized AUC(0-inf) [AUC(0-inf)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 1 for Participants \u22652 Years of Age",
+          "Metabolite (7-OH Cannabidiol) to Parent (Cannabidiol) Ratio for Cmax [MRCmax] on Day 1",
+          "MRCmax on Day 10",
+          "Metabolite to Parent Ratio for AUC(0-inf) [MRAUC(0-inf)] on Day 1 for Participants \u22652 Years of Age",
+          "Metabolite to Parent Ratio for AUC(0-12) [MRAUC(0-12)] on Day 1",
+          "Metabolite to Parent Ratio for AUC(0-12) [MRAUC(0-12)] on Day 10",
+          "AUC(0-12) for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 10",
+          "Dose Normalized AUC(0-12) [AUC (0-12)/D] for Cannabidiol and Metabolite 7-OH Cannabidiol on Day 10",
+          "Minimum Plasma Concentration (Cmin) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Average Plasma Concentration (Cavg) for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Accumulation Ratio for Cmax (RCmax) on Day 10 for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Accumulation Ratio for AUC(0-12) [RAUC(0-12)] on Day 10 for Cannabidiol and Metabolite 7-OH Cannabidiol",
+          "Time Linearity Index for Cannabidiol and Metabolite 7-OH Cannabidiol in Participants \u22652 Years of Age",
+          "Number of Participants With Treatment-Emergent Adverse Events (TEAEs) and Serious Adverse Events (SAEs)",
+          "Clinical Global Impression of Improvement (CGI-I) Assessment",
+          "Change From Baseline in Clinical Global Impression of Severity (CGI-S) Assessment",
+          "Change From Baseline in Daily Seizure Activity",
+          "Number of Participants With Suicide Related Thoughts and Behaviors Assessed by the Columbia-Suicide Severity Rating Scale (C-SSRS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02324673",
+        "enrollment": 61,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02324673"
+      }
+    },
+    {
+      "study_id": "CT_NCT03196466",
+      "study_type": "Clinical Trial",
+      "condition": "EPILEPSY",
+      "study_title": "Population Pharmacokinetics of Antiepileptic in Pediatrics",
+      "citation": "ClinicalTrials.gov NCTNCT03196466",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Volume of distribution",
+          "Absorption constant",
+          "Clearance"
+        ],
+        "outcome_measures": [
+          "Volume of distribution",
+          "Absorption constant",
+          "Clearance"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03196466",
+        "enrollment": 753,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03196466"
+      }
     },
     {
       "study_id": "GLAUCOMA_RCT_001",
@@ -9967,6 +12571,40 @@
       },
       "regulatory_relevance": "HIGH - Classic randomized evidence for oral synthetic cannabinoids lowering IOP; supports structure/activity and non-plant analog pathways",
       "priority": "\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "CT_NCT04596826",
+      "study_type": "RCT",
+      "condition": "GLAUCOMA",
+      "study_title": "The Effect of Dronabinol on Ocular Hemodynamics in Patients With Primary Open Angle Glaucoma",
+      "citation": "ClinicalTrials.gov NCTNCT04596826",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol 5 MG, Dronabinol 10 MG",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Optic nerve head blood flow"
+        ],
+        "outcome_measures": [
+          "Optic nerve head blood flow"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04596826",
+        "enrollment": 51,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04596826"
+      }
     },
     {
       "study_id": "IBD_RCT_001",
@@ -10894,6 +13532,318 @@
       "priority": "\u2b50\u2b50\u2b50\u2b50"
     },
     {
+      "study_id": "CT_NCT05253417",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "The CANabidiol Use for RElief of Short Term Insomnia",
+      "citation": "ClinicalTrials.gov NCTNCT05253417",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "50 mg Cannabidiol (CBD), 100 mg Cannabidiol (CBD)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "To investigate the effect of the administration of a 50mg and 100mg per day oral CBD product versus placebo over 8 weeks on insomnia severity index scores"
+        ],
+        "outcome_measures": [
+          "To investigate the effect of the administration of a 50mg and 100mg per day oral CBD product versus placebo over 8 weeks on insomnia severity index scores"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05253417",
+        "enrollment": 208,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05253417"
+      }
+    },
+    {
+      "study_id": "CT_NCT04299490",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Effects of Experimental Sleep Disturbances on Receptor Function of Study Drug",
+      "citation": "ClinicalTrials.gov NCTNCT04299490",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Within-Subject test of blinded study medication (stimulant, benzodiazepine, opioid, cannabinoid, over-the-counter pain medication, or placebo)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Percent change in receptor binding potential from PET scan",
+          "Withdrawal Latency measured in seconds during Cold Pressor Pain Tolerance test",
+          "Drug Effects as assessed by the Visual Analog Scale",
+          "The monetary valuation in dollars of the study medication as assessed by the Drug or Money Multiple Choice Questionnaire"
+        ],
+        "outcome_measures": [
+          "Percent change in receptor binding potential from PET scan",
+          "Withdrawal Latency measured in seconds during Cold Pressor Pain Tolerance test",
+          "Drug Effects as assessed by the Visual Analog Scale",
+          "The monetary valuation in dollars of the study medication as assessed by the Drug or Money Multiple Choice Questionnaire"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04299490",
+        "enrollment": 148,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04299490"
+      }
+    },
+    {
+      "study_id": "CT_NCT03948074",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Cannabis For Cancer-Related Symptoms",
+      "citation": "ClinicalTrials.gov NCTNCT03948074",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "outcome_measures": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03948074",
+        "enrollment": 91,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03948074"
+      }
+    },
+    {
+      "study_id": "CT_NCT03964974",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Reducing Cannabis Use for Sleep Among Adults Using Medical Cannabis",
+      "citation": "ClinicalTrials.gov NCTNCT03964974",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cognitive Behavioral Therapy for Insomnia in Cannabis Users (CBTi-CB)",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline Insomnia Severity Index Score at Study Completion"
+        ],
+        "outcome_measures": [
+          "Change From Baseline Insomnia Severity Index Score at Study Completion"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03964974",
+        "enrollment": 57,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03964974"
+      }
+    },
+    {
+      "study_id": "CT_NCT01755091",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Safety and Efficacy Study of Dronabinol to Treat Obstructive Sleep Apnea",
+      "citation": "ClinicalTrials.gov NCTNCT01755091",
+      "publication_year": 2016,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol, Placebo (for Dronabinol)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Apnea/Hypopnea Index (AHI)",
+          "Change in Epworth Sleepiness Scale (ESS)",
+          "Change in Sleep Latency: Maintenance of Wakefulness Test (MWT)"
+        ],
+        "outcome_measures": [
+          "Change in Apnea/Hypopnea Index (AHI)",
+          "Change in Epworth Sleepiness Scale (ESS)",
+          "Change in Sleep Latency: Maintenance of Wakefulness Test (MWT)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01755091",
+        "enrollment": 75,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01755091"
+      }
+    },
+    {
+      "study_id": "CT_NCT03224468",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Effect of Medical Marijuana on Neurocognition and Escalation of Use",
+      "citation": "ClinicalTrials.gov NCTNCT03224468",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Marijuana",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "outcome_measures": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03224468",
+        "enrollment": 269,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03224468"
+      }
+    },
+    {
+      "study_id": "CT_NCT05857384",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Bioavailability, Bioequivalence and Tolerability of IHL-42X Compared to the Reference Drugs",
+      "citation": "ClinicalTrials.gov NCTNCT05857384",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol 2.5 MG",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Bioavailability of IHL-42X",
+          "Bioequivalence of IHL-42X",
+          "Effect of food on IHL-42X - maximum observed drug concentration",
+          "Effect of food on IHL-42X - time of the maximum drug concentration",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to time of last measurable concentration",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to infinity",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to 12 hours",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to 24 hours",
+          "Effect of food on IHL-42X - the elimination half-life",
+          "Effect of food on IHL-42X - terminal elimination rate constant",
+          "Effect of food on IHL-42X - apparent total body clearance",
+          "Effect of food on IHL-42X - apparent volume of distribution"
+        ],
+        "outcome_measures": [
+          "Bioavailability of IHL-42X",
+          "Bioequivalence of IHL-42X",
+          "Effect of food on IHL-42X - maximum observed drug concentration",
+          "Effect of food on IHL-42X - time of the maximum drug concentration",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to time of last measurable concentration",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to infinity",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to 12 hours",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to 24 hours",
+          "Effect of food on IHL-42X - the elimination half-life",
+          "Effect of food on IHL-42X - terminal elimination rate constant",
+          "Effect of food on IHL-42X - apparent total body clearance",
+          "Effect of food on IHL-42X - apparent volume of distribution"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05857384",
+        "enrollment": 125,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05857384"
+      }
+    },
+    {
+      "study_id": "CT_NCT04729179",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Cannabidiol for Fibromyalgia (The CANNFIB Trial)",
+      "citation": "ClinicalTrials.gov NCTNCT04729179",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain intensity"
+        ],
+        "outcome_measures": [
+          "Pain intensity"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04729179",
+        "enrollment": 200,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04729179"
+      }
+    },
+    {
       "study_id": "MS_RCT_001",
       "study_type": "RCT",
       "condition": "MULTIPLE_SCLEROSIS",
@@ -11447,6 +14397,558 @@
       },
       "regulatory_relevance": "CRITICAL - Progressive MS indication; 36-month neuroprotection data; Lancet Neurology; subgroup neuroprotection signal",
       "priority": "\u2b50\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "CT_NCT01964547",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Randomized Study of Sativex on Cognitive Function and Mood: Multiple Sclerosis Patients",
+      "citation": "ClinicalTrials.gov NCTNCT01964547",
+      "publication_year": 2013,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline to the End of Treatment in Paced Auditory Serial Addition Test (PASAT) Total Score."
+        ],
+        "outcome_measures": [
+          "Change From Baseline to the End of Treatment in Paced Auditory Serial Addition Test (PASAT) Total Score."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01964547",
+        "enrollment": 121,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01964547"
+      }
+    },
+    {
+      "study_id": "CT_NCT00711646",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Study of Sativex\u00ae for Relief of Spasticity in Subjects With Multiple Sclerosis.",
+      "citation": "ClinicalTrials.gov NCTNCT00711646",
+      "publication_year": 2004,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex\u00ae",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Assessment of Change From Baseline in the Mean Spasticity 0-10 Numerical Rating Scale Score."
+        ],
+        "outcome_measures": [
+          "Assessment of Change From Baseline in the Mean Spasticity 0-10 Numerical Rating Scale Score."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00711646",
+        "enrollment": 189,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00711646"
+      }
+    },
+    {
+      "study_id": "CT_NCT02073474",
+      "study_type": "Clinical Trial",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "An Observational Post-Marketing Safety Registry of Sativex\u00ae",
+      "citation": "ClinicalTrials.gov NCTNCT02073474",
+      "publication_year": 2015,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex\u00ae",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Incidence rates of adverse events."
+        ],
+        "outcome_measures": [
+          "Incidence rates of adverse events."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02073474",
+        "enrollment": 978,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02073474"
+      }
+    },
+    {
+      "study_id": "CT_NCT02898974",
+      "study_type": "Clinical Trial",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Medical Marijuana and Its Effects on Motor Function in People With Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT02898974",
+      "publication_year": 2017,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Marijuana",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Fatigue",
+          "Muscle Strength",
+          "Postural Stability"
+        ],
+        "outcome_measures": [
+          "Fatigue",
+          "Muscle Strength",
+          "Postural Stability"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02898974",
+        "enrollment": 22,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02898974"
+      }
+    },
+    {
+      "study_id": "CT_NCT00678795",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Parallel Group Study to Compare Sativex\u00ae With Placebo in the Treatment of Detrusor Overactivity in Patients With Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT00678795",
+      "publication_year": 2005,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex\u00ae",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in the Mean Daily Number of Incontinence Episodes at the End of Treatment"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in the Mean Daily Number of Incontinence Episodes at the End of Treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00678795",
+        "enrollment": 135,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00678795"
+      }
+    },
+    {
+      "study_id": "CT_NCT03186664",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "The Role of SAtivex\u00ae in Robotic-Rehabilitation",
+      "citation": "ClinicalTrials.gov NCTNCT03186664",
+      "publication_year": 2018,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Functional Independence Measure",
+          "10m walking test"
+        ],
+        "outcome_measures": [
+          "Functional Independence Measure",
+          "10m walking test"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03186664",
+        "enrollment": 40,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03186664"
+      }
+    },
+    {
+      "study_id": "CT_NCT01599234",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Study to Evaluate the Efficacy of Sativex in Relieving Symptoms of Spasticity Due to Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT01599234",
+      "publication_year": 2005,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in Mean Spasticity 0-10 Numerical Rating Scale (NRS) Score During the Last 14 Day of Treatment (End of Treatment)"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in Mean Spasticity 0-10 Numerical Rating Scale (NRS) Score During the Last 14 Day of Treatment (End of Treatment)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01599234",
+        "enrollment": 337,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01599234"
+      }
+    },
+    {
+      "study_id": "CT_NCT01538225",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Neurophysiological Study of Sativex in Multiple Sclerosis (MS) Spasticity",
+      "citation": "ClinicalTrials.gov NCTNCT01538225",
+      "publication_year": 2013,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex\u00ae",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "H/M reflex ratio"
+        ],
+        "outcome_measures": [
+          "H/M reflex ratio"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01538225",
+        "enrollment": 45,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01538225"
+      }
+    },
+    {
+      "study_id": "CT_NCT00391079",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Sativex Versus Placebo When Added to Existing Treatment for Central Neuropathic Pain in MS",
+      "citation": "ClinicalTrials.gov NCTNCT00391079",
+      "publication_year": 2008,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Mean Pain Due to MS NRS Score",
+          "Number of Patients With at Least 30% Improvement in Numerical Rating Scale (NRS) Pain Score From Baseline"
+        ],
+        "outcome_measures": [
+          "Change in Mean Pain Due to MS NRS Score",
+          "Number of Patients With at Least 30% Improvement in Numerical Rating Scale (NRS) Pain Score From Baseline"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00391079",
+        "enrollment": 339,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00391079"
+      }
+    },
+    {
+      "study_id": "CT_NCT00248378",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Short-Term Effects of Medicinal Cannabis Therapy on Spasticity in Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT00248378",
+      "publication_year": 2005,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Smoked Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Reduction in spasticity as indicated by the: Ashworth Spasticity Scale, Timed 25-ft Walk, and Grooved Pegboard Test"
+        ],
+        "outcome_measures": [
+          "Reduction in spasticity as indicated by the: Ashworth Spasticity Scale, Timed 25-ft Walk, and Grooved Pegboard Test"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00248378",
+        "enrollment": 30,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00248378"
+      }
+    },
+    {
+      "study_id": "CT_NCT01037088",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Effects of Vaporized Marijuana on Neuropathic Pain",
+      "citation": "ClinicalTrials.gov NCTNCT01037088",
+      "publication_year": 2012,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Mild dose cannabis, Low dose cannabis, Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Participants With 30% or Greater Reduction in Pain Intensity"
+        ],
+        "outcome_measures": [
+          "Participants With 30% or Greater Reduction in Pain Intensity"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01037088",
+        "enrollment": 44,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01037088"
+      }
+    },
+    {
+      "study_id": "CT_NCT00702468",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Evaluate the Maintenance of Effect After Long-term Treatment With Sativex\u00ae in Subjects With Symptoms of Spasticity Due to Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT00702468",
+      "publication_year": 2009,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Subjects Who Experience Treatment Failure."
+        ],
+        "outcome_measures": [
+          "Number of Subjects Who Experience Treatment Failure."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00702468",
+        "enrollment": 36,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00702468"
+      }
+    },
+    {
+      "study_id": "CT_NCT04657666",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Trial to Evaluate the Effect of Nabiximols Oromucosal Spray on Clinical Measures of Spasticity in Participants With Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT04657666",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Nabiximols",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in Lower Limb Muscle Tone-6 (LLMT-6)"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in Lower Limb Muscle Tone-6 (LLMT-6)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04657666",
+        "enrollment": 68,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04657666"
+      }
+    },
+    {
+      "study_id": "CT_NCT01604265",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Study of Sativex in the Treatment of Central Neuropathic Pain Due to Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT01604265",
+      "publication_year": 2002,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in the Mean Pain 0-10 Numerical Rating Scale Score at the End of Treatment (4 Weeks)"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in the Mean Pain 0-10 Numerical Rating Scale Score at the End of Treatment (4 Weeks)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01604265",
+        "enrollment": 66,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01604265"
+      }
+    },
+    {
+      "study_id": "CT_NCT00959218",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Efficacy and Safety of the Pain Relieving Effect of Dronabinol in Central Neuropathic Pain Related to Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT00959218",
+      "publication_year": 2010,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean change of baseline pain severity score on the 11-point Likert Numerical Rating Scale recorded in patient diary"
+        ],
+        "outcome_measures": [
+          "Mean change of baseline pain severity score on the 11-point Likert Numerical Rating Scale recorded in patient diary"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00959218",
+        "enrollment": 240,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00959218"
+      }
+    },
+    {
+      "study_id": "CT_NCT00681538",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Study of the Safety and Effectiveness of Sativex\u00ae, for the Relief of Symptoms of Spasticity in Subjects, From Phase B, With Multiple Sclerosis (MS)",
+      "citation": "ClinicalTrials.gov NCTNCT00681538",
+      "publication_year": 2009,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex\u00ae",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The Change in Mean Spasticity Numerical Rating Scale (NRS) Score From Baseline to End of Treatment (Phase B)."
+        ],
+        "outcome_measures": [
+          "The Change in Mean Spasticity Numerical Rating Scale (NRS) Score From Baseline to End of Treatment (Phase B)."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00681538",
+        "enrollment": 572,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00681538"
+      }
     },
     {
       "study_id": "CINV_RCT_001",
@@ -13097,6 +16599,410 @@
       "priority": "\u2b50\u2b50\u2b50\u2b50"
     },
     {
+      "study_id": "CT_NCT05132699",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Enhancing Prolonged Exposure With Cannabidiol to Treat Posttraumatic Stress Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT05132699",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol (CBD) oral solution",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Clinician Administered PTSD Scale (CAPS-5)",
+          "Posttraumatic Stress Disorder Checklist (PCL-5)"
+        ],
+        "outcome_measures": [
+          "Clinician Administered PTSD Scale (CAPS-5)",
+          "Posttraumatic Stress Disorder Checklist (PCL-5)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05132699",
+        "enrollment": 21,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05132699"
+      }
+    },
+    {
+      "study_id": "CT_NCT04080427",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Effects of Delta9-tetrahydrocannabinol (THC) on Retention of Memory for Fear Extinction Learning in PTSD: R33 Study",
+      "citation": "ClinicalTrials.gov NCTNCT04080427",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol 7.5 milligram oral capsule",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Brain Measures",
+          "Psychophysiology",
+          "Expectancy Ratings",
+          "PTSD Checklist (PCL-5)",
+          "Clinician Administered PTSD Scale for Diagnostic and Statistical Manual (DSM)-5 (CAPS-5)",
+          "Subjective Units of Distress Scale (SUDS)"
+        ],
+        "outcome_measures": [
+          "Brain Measures",
+          "Psychophysiology",
+          "Expectancy Ratings",
+          "PTSD Checklist (PCL-5)",
+          "Clinician Administered PTSD Scale for Diagnostic and Statistical Manual (DSM)-5 (CAPS-5)",
+          "Subjective Units of Distress Scale (SUDS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04080427",
+        "enrollment": 102,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04080427"
+      }
+    },
+    {
+      "study_id": "CT_NCT02517424",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Evaluating Safety and Efficacy of Cannabis in Participants With Chronic Posttraumatic Stress Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT02517424",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "High THC/Low CBD Cannabis, High THC/High CBD Cannabis, Low THC/Low CBD Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from baseline to end of Stage 1 in posttraumatic stress disorder symptoms via Clinician Administered PTSD Scale (CAPS) for Diagnostic and Statistical Manual of Mental Disorders (DSM)"
+        ],
+        "outcome_measures": [
+          "Change from baseline to end of Stage 1 in posttraumatic stress disorder symptoms via Clinician Administered PTSD Scale (CAPS) for Diagnostic and Statistical Manual of Mental Disorders (DSM)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02517424",
+        "enrollment": 6,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02517424"
+      }
+    },
+    {
+      "study_id": "CT_NCT02759185",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Pilot Study of the Safety and Efficacy of Four Different Potencies of Smoked Marijuana in 76 Veterans With PTSD",
+      "citation": "ClinicalTrials.gov NCTNCT02759185",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "High THC cannabis, High CBD cannabis, THC/CBD cannabis, Placebo cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Baseline CAPS-5 Total Severity Score",
+          "Stage 1 Primary Endpoint CAPS-5 Total Severity Scores (Visit 5)",
+          "Change in CAPS-5 Total Severity Scores From Baseline to Stage 1 Primary Endpoint (Visit 5)"
+        ],
+        "outcome_measures": [
+          "Baseline CAPS-5 Total Severity Score",
+          "Stage 1 Primary Endpoint CAPS-5 Total Severity Scores (Visit 5)",
+          "Change in CAPS-5 Total Severity Scores From Baseline to Stage 1 Primary Endpoint (Visit 5)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02759185",
+        "enrollment": 80,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02759185"
+      }
+    },
+    {
+      "study_id": "CT_NCT03008005",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Effects of Delta-9 Tetrahydrocannabinol (THC) on Retention of Memory for Fear Extinction Learning in PTSD: R61 Study",
+      "citation": "ClinicalTrials.gov NCTNCT03008005",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol Cap 5 milligrams (MG), Dronabinol Cap 10 milligrams (MG)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Brain Measures",
+          "Expectancy Ratings"
+        ],
+        "outcome_measures": [
+          "Brain Measures",
+          "Expectancy Ratings"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03008005",
+        "enrollment": 46,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03008005"
+      }
+    },
+    {
+      "study_id": "CT_NCT04965740",
+      "study_type": "Clinical Trial",
+      "condition": "PTSD",
+      "study_title": "Exploring Medically Perceived Benefits, Use and Interest in Psychedelics and Cannabinoids",
+      "citation": "ClinicalTrials.gov NCTNCT04965740",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Collect Insights from First Responders"
+        ],
+        "outcome_measures": [
+          "Collect Insights from First Responders"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04965740",
+        "enrollment": 102,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04965740"
+      }
+    },
+    {
+      "study_id": "CT_NCT03248167",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Cannabidiol as a Treatment for AUD Comorbid With PTSD",
+      "citation": "ClinicalTrials.gov NCTNCT03248167",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Drinks Per Day",
+          "Number of Drinks Per Day",
+          "Number of Drinks Per Day",
+          "PCL-5 Total Score",
+          "PCL-5 Total Score",
+          "PCL-5 Total Score"
+        ],
+        "outcome_measures": [
+          "Number of Drinks Per Day",
+          "Number of Drinks Per Day",
+          "Number of Drinks Per Day",
+          "PCL-5 Total Score",
+          "PCL-5 Total Score",
+          "PCL-5 Total Score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03248167",
+        "enrollment": 95,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03248167"
+      }
+    },
+    {
+      "study_id": "CT_NCT04504877",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Burnout and Distress preventiOn With caNnabidiol in Front-line Health Care workerS deAling wIth COVID-19",
+      "citation": "ClinicalTrials.gov NCTNCT04504877",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "aMBI-HSS: Abbreviated Maslach Burnout Inventory - Human Services Survey"
+        ],
+        "outcome_measures": [
+          "aMBI-HSS: Abbreviated Maslach Burnout Inventory - Human Services Survey"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04504877",
+        "enrollment": 120,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04504877"
+      }
+    },
+    {
+      "study_id": "CT_NCT02069366",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Cannabinoid Control of Fear Extinction Neural Circuits in Post-traumatic Stress Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT02069366",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Brain Measures",
+          "Expectancy Ratings"
+        ],
+        "outcome_measures": [
+          "Brain Measures",
+          "Expectancy Ratings"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02069366",
+        "enrollment": 86,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02069366"
+      }
+    },
+    {
+      "study_id": "CT_NCT03518801",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Cannabidiol and Prolonged Exposure",
+      "citation": "ClinicalTrials.gov NCTNCT03518801",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Clinician-Administered PTSD Scale DSM 5 (CAPS-5)"
+        ],
+        "outcome_measures": [
+          "Clinician-Administered PTSD Scale DSM 5 (CAPS-5)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03518801",
+        "enrollment": 136,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03518801"
+      }
+    },
+    {
+      "study_id": "CT_NCT05226351",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Activation of the Endocannabinoid System and Cognition",
+      "citation": "ClinicalTrials.gov NCTNCT05226351",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol 2.5 mg",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "extinction learning"
+        ],
+        "outcome_measures": [
+          "extinction learning"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05226351",
+        "enrollment": 192,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05226351"
+      }
+    },
+    {
       "study_id": "TS_RCT_001",
       "study_type": "RCT",
       "condition": "TOURETTE_SYNDROME",
@@ -13764,6 +17670,162 @@
       },
       "regulatory_relevance": "HIGH - Pediatric/adolescent feasibility and tolerability; informs dosing/titration and safety monitoring",
       "priority": "\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "CT_NCT05184478",
+      "study_type": "RCT",
+      "condition": "TOURETTE_SYNDROME",
+      "study_title": "Is Medicinal Cannabis an Effective Treatment for Tourette Syndrome in Adolescents? a Pilot Study",
+      "citation": "ClinicalTrials.gov NCTNCT05184478",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medicinal cannabis (MC): THC 10mg/mL : CBD 15mg/mL, manufactured by Cann Group Ltd.",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Rate of study participant recruitment, calculated as the time required to reach a sample size of 10.",
+          "Participant withdrawal rate, calculated as the number of participants who withdraw from the trial as a proportion of the total number of participants randomized.",
+          "Study medication tolerability, as indicated by the proportion of participants who tolerate the protocol dosing schedule.",
+          "Participant adherence to the study medication dosing schedule, calculated as the proportion of participants who demonstrate acceptable medication compliance.",
+          "Study visit attendance, calculated as the proportion of visits completed across the study sample.",
+          "Blood test completion, calculated as the proportion of blood tests completed across the study sample.",
+          "Parent questionnaire completion, calculated as the proportion of parent-report questionnaires completed across the study sample.",
+          "Self-report questionnaire completion, calculated as the proportion of adolescent self-report questionnaires completed across the study sample.",
+          "Study design acceptability will be evaluated through a parent-completed study specific evaluation questionnaire completed at the end of the study."
+        ],
+        "outcome_measures": [
+          "Rate of study participant recruitment, calculated as the time required to reach a sample size of 10.",
+          "Participant withdrawal rate, calculated as the number of participants who withdraw from the trial as a proportion of the total number of participants randomized.",
+          "Study medication tolerability, as indicated by the proportion of participants who tolerate the protocol dosing schedule.",
+          "Participant adherence to the study medication dosing schedule, calculated as the proportion of participants who demonstrate acceptable medication compliance.",
+          "Study visit attendance, calculated as the proportion of visits completed across the study sample.",
+          "Blood test completion, calculated as the proportion of blood tests completed across the study sample.",
+          "Parent questionnaire completion, calculated as the proportion of parent-report questionnaires completed across the study sample.",
+          "Self-report questionnaire completion, calculated as the proportion of adolescent self-report questionnaires completed across the study sample.",
+          "Study design acceptability will be evaluated through a parent-completed study specific evaluation questionnaire completed at the end of the study."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05184478",
+        "enrollment": 10,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05184478"
+      }
+    },
+    {
+      "study_id": "CT_NCT05115318",
+      "study_type": "Clinical Trial",
+      "condition": "TOURETTE_SYNDROME",
+      "study_title": "The Effect of Medical Cannabis on Tics, Premonitory Urge and Psychiatric Comorbidity in Adults With Tourette Syndrome",
+      "citation": "ClinicalTrials.gov NCTNCT05115318",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in vocal and motor tics and disease burden",
+          "Change in premonitory urge",
+          "Subjective improvement of tics and Quality of life"
+        ],
+        "outcome_measures": [
+          "Change in vocal and motor tics and disease burden",
+          "Change in premonitory urge",
+          "Subjective improvement of tics and Quality of life"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05115318",
+        "enrollment": 18,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05115318"
+      }
+    },
+    {
+      "study_id": "CT_NCT03066193",
+      "study_type": "RCT",
+      "condition": "TOURETTE_SYNDROME",
+      "study_title": "Efficacy of a Therapeutic Combination of Dronabinol and PEA for Tourette Syndrome",
+      "citation": "ClinicalTrials.gov NCTNCT03066193",
+      "publication_year": 2018,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol and Palmitoylethanolamide",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Changes in Tic Severity"
+        ],
+        "outcome_measures": [
+          "Changes in Tic Severity"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03066193",
+        "enrollment": 17,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03066193"
+      }
+    },
+    {
+      "study_id": "CT_NCT03087201",
+      "study_type": "RCT",
+      "condition": "TOURETTE_SYNDROME",
+      "study_title": "CANNAbinoids in the Treatment of TICS (CANNA-TICS)",
+      "citation": "ClinicalTrials.gov NCTNCT03087201",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "nabiximols",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Response-rate to treatment according to YGTSS-TTS (Total Tic-Score of the Yale Global Tic Severity Scale [YGTSS])"
+        ],
+        "outcome_measures": [
+          "Response-rate to treatment according to YGTSS-TTS (Total Tic-Score of the Yale Global Tic Severity Scale [YGTSS])"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03087201",
+        "enrollment": 98,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03087201"
+      }
     },
     {
       "study_id": "WH_OBS_001",

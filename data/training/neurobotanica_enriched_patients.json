@@ -6,20 +6,19 @@
     "profiles": [
       {
         "demographics": {
-          "age_range": "46-55",
+          "age_range": "18-25",
           "experience_level": "occasional",
-          "thc_tolerance": "low"
+          "thc_tolerance": "medium"
         },
         "treatment": {
-          "duration_days": 178
+          "duration_days": 86
         },
         "response": {
-          "adherence_score": 6,
+          "adherence_score": 7,
           "adverse_effects": [
-            "anxiety",
-            "none"
+            "drowsiness"
           ],
-          "overall_efficacy_score": 5
+          "overall_efficacy_score": 7
         },
         "data_quality": {
           "source_study_quality": "moderate"
@@ -27,99 +26,58 @@
       },
       {
         "demographics": {
-          "age_range": "46-55",
-          "experience_level": "occasional",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 116
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [],
-          "overall_efficacy_score": 10
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "occasional",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 93
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [],
-          "overall_efficacy_score": 4
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
+          "age_range": "66+",
           "experience_level": "daily",
           "thc_tolerance": "medium"
         },
         "treatment": {
-          "duration_days": 34
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [
-            "dry mouth"
-          ],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "occasional",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 180
+          "duration_days": 154
         },
         "response": {
           "adherence_score": 10,
-          "adverse_effects": [
-            "euphoria"
-          ],
-          "overall_efficacy_score": 4
+          "adverse_effects": [],
+          "overall_efficacy_score": 5
         },
         "data_quality": {
-          "source_study_quality": "high"
+          "source_study_quality": "low"
         }
       },
       {
         "demographics": {
-          "age_range": "66+",
-          "experience_level": "daily",
+          "age_range": "46-55",
+          "experience_level": "naive",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 31
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 10
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "naive",
           "thc_tolerance": "medium"
         },
         "treatment": {
-          "duration_days": 80
+          "duration_days": 45
         },
         "response": {
           "adherence_score": 8,
-          "adverse_effects": [
-            "anxiety",
-            "euphoria"
-          ],
-          "overall_efficacy_score": 4
+          "adverse_effects": [],
+          "overall_efficacy_score": 9
         },
         "data_quality": {
-          "source_study_quality": "low"
+          "source_study_quality": "moderate"
         }
       },
       {
@@ -129,109 +87,12 @@
           "thc_tolerance": "medium"
         },
         "treatment": {
-          "duration_days": 171
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [
-            "drowsiness",
-            "dry mouth"
-          ],
-          "overall_efficacy_score": 8
-        },
-        "data_quality": {
-          "source_study_quality": "moderate"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "naive",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 52
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [
-            "euphoria"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "daily",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 66
+          "duration_days": 159
         },
         "response": {
           "adherence_score": 10,
           "adverse_effects": [],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "daily",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 146
-        },
-        "response": {
-          "adherence_score": 6,
-          "adverse_effects": [],
-          "overall_efficacy_score": 4
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
-          "experience_level": "daily",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 72
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "daily",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 66
-        },
-        "response": {
-          "adherence_score": 8,
-          "adverse_effects": [
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 4
+          "overall_efficacy_score": 6
         },
         "data_quality": {
           "source_study_quality": "high"
@@ -241,96 +102,130 @@
         "demographics": {
           "age_range": "18-25",
           "experience_level": "occasional",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 88
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
+            "anxiety",
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 9
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "regular",
           "thc_tolerance": "high"
         },
         "treatment": {
-          "duration_days": 116
+          "duration_days": 91
         },
         "response": {
-          "adherence_score": 7,
-          "adverse_effects": [
-            "none",
-            "drowsiness"
-          ],
+          "adherence_score": 10,
+          "adverse_effects": [],
+          "overall_efficacy_score": 5
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "regular",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 109
+        },
+        "response": {
+          "adherence_score": 10,
+          "adverse_effects": [],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "daily",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 135
+        },
+        "response": {
+          "adherence_score": 10,
+          "adverse_effects": [],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "naive",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 157
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [],
           "overall_efficacy_score": 4
         },
         "data_quality": {
           "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "regular",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 102
+        },
+        "response": {
+          "adherence_score": 5,
+          "adverse_effects": [
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 7
+        },
+        "data_quality": {
+          "source_study_quality": "good"
         }
       },
       {
         "demographics": {
           "age_range": "26-35",
           "experience_level": "regular",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 39
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [
-            "dry mouth"
-          ],
-          "overall_efficacy_score": 10
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "naive",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 83
-        },
-        "response": {
-          "adherence_score": 8,
-          "adverse_effects": [
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "moderate"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "36-45",
-          "experience_level": "daily",
           "thc_tolerance": "medium"
         },
         "treatment": {
-          "duration_days": 31
+          "duration_days": 133
         },
         "response": {
-          "adherence_score": 8,
-          "adverse_effects": [],
-          "overall_efficacy_score": 8
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "18-25",
-          "experience_level": "naive",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 42
-        },
-        "response": {
-          "adherence_score": 8,
+          "adherence_score": 9,
           "adverse_effects": [
-            "euphoria"
+            "dry mouth"
           ],
-          "overall_efficacy_score": 7
+          "overall_efficacy_score": 8
         },
         "data_quality": {
           "source_study_quality": "low"
@@ -338,20 +233,78 @@
       },
       {
         "demographics": {
-          "age_range": "56-65",
-          "experience_level": "occasional",
+          "age_range": "18-25",
+          "experience_level": "regular",
           "thc_tolerance": "low"
         },
         "treatment": {
-          "duration_days": 107
+          "duration_days": 148
         },
         "response": {
-          "adherence_score": 8,
+          "adherence_score": 9,
+          "adverse_effects": [],
+          "overall_efficacy_score": 9
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "daily",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 76
+        },
+        "response": {
+          "adherence_score": 5,
           "adverse_effects": [
-            "euphoria",
-            "anxiety"
+            "euphoria"
           ],
-          "overall_efficacy_score": 7
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 102
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
+            "euphoria"
+          ],
+          "overall_efficacy_score": 4
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "regular",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 164
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
+            "dry mouth",
+            "none"
+          ],
+          "overall_efficacy_score": 4
         },
         "data_quality": {
           "source_study_quality": "good"
@@ -364,12 +317,71 @@
           "thc_tolerance": "low"
         },
         "treatment": {
-          "duration_days": 65
+          "duration_days": 153
         },
         "response": {
           "adherence_score": 10,
+          "adverse_effects": [],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "naive",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 105
+        },
+        "response": {
+          "adherence_score": 8,
           "adverse_effects": [
-            "euphoria"
+            "anxiety"
+          ],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "26-35",
+          "experience_level": "daily",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 49
+        },
+        "response": {
+          "adherence_score": 9,
+          "adverse_effects": [
+            "anxiety",
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 9
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "56-65",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 142
+        },
+        "response": {
+          "adherence_score": 9,
+          "adverse_effects": [
+            "anxiety"
           ],
           "overall_efficacy_score": 5
         },
@@ -380,45 +392,24 @@
       {
         "demographics": {
           "age_range": "26-35",
-          "experience_level": "daily",
-          "thc_tolerance": "low"
+          "experience_level": "regular",
+          "thc_tolerance": "high"
         },
         "treatment": {
-          "duration_days": 91
+          "duration_days": 65
         },
         "response": {
-          "adherence_score": 6,
+          "adherence_score": 10,
           "adverse_effects": [],
-          "overall_efficacy_score": 8
+          "overall_efficacy_score": 9
         },
         "data_quality": {
-          "source_study_quality": "high"
+          "source_study_quality": "moderate"
         }
       },
       {
         "demographics": {
-          "age_range": "66+",
-          "experience_level": "occasional",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 37
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [
-            "anxiety",
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 7
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "36-45",
+          "age_range": "46-55",
           "experience_level": "naive",
           "thc_tolerance": "low"
         },
@@ -426,11 +417,12 @@
           "duration_days": 20
         },
         "response": {
-          "adherence_score": 5,
+          "adherence_score": 8,
           "adverse_effects": [
-            "drowsiness"
+            "drowsiness",
+            "euphoria"
           ],
-          "overall_efficacy_score": 5
+          "overall_efficacy_score": 6
         },
         "data_quality": {
           "source_study_quality": "high"
@@ -438,18 +430,154 @@
       },
       {
         "demographics": {
-          "age_range": "46-55",
-          "experience_level": "occasional",
+          "age_range": "26-35",
+          "experience_level": "daily",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 147
+        },
+        "response": {
+          "adherence_score": 5,
+          "adverse_effects": [],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "naive",
           "thc_tolerance": "medium"
         },
         "treatment": {
-          "duration_days": 73
+          "duration_days": 48
         },
         "response": {
-          "adherence_score": 8,
+          "adherence_score": 10,
+          "adverse_effects": [],
+          "overall_efficacy_score": 7
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "26-35",
+          "experience_level": "naive",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 48
+        },
+        "response": {
+          "adherence_score": 9,
           "adverse_effects": [
-            "drowsiness",
+            "none",
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "naive",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 158
+        },
+        "response": {
+          "adherence_score": 10,
+          "adverse_effects": [],
+          "overall_efficacy_score": 7
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "regular",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 113
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [
+            "euphoria"
+          ],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "regular",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 23
+        },
+        "response": {
+          "adherence_score": 9,
+          "adverse_effects": [
+            "none"
+          ],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "26-35",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 157
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
+            "euphoria",
             "anxiety"
+          ],
+          "overall_efficacy_score": 9
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "regular",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 7
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
+            "none",
+            "euphoria"
           ],
           "overall_efficacy_score": 7
         },
@@ -460,55 +588,19 @@
       {
         "demographics": {
           "age_range": "26-35",
-          "experience_level": "occasional",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 39
-        },
-        "response": {
-          "adherence_score": 6,
-          "adverse_effects": [],
-          "overall_efficacy_score": 8
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "18-25",
-          "experience_level": "naive",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 76
-        },
-        "response": {
-          "adherence_score": 6,
-          "adverse_effects": [
-            "none",
-            "anxiety"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "26-35",
           "experience_level": "regular",
           "thc_tolerance": "high"
         },
         "treatment": {
-          "duration_days": 155
+          "duration_days": 91
         },
         "response": {
-          "adherence_score": 5,
-          "adverse_effects": [],
-          "overall_efficacy_score": 6
+          "adherence_score": 9,
+          "adverse_effects": [
+            "euphoria",
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 5
         },
         "data_quality": {
           "source_study_quality": "low"
@@ -516,79 +608,136 @@
       },
       {
         "demographics": {
+          "age_range": "26-35",
+          "experience_level": "occasional",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 84
+        },
+        "response": {
+          "adherence_score": 9,
+          "adverse_effects": [
+            "anxiety"
+          ],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
           "age_range": "18-25",
-          "experience_level": "regular",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 53
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [],
+          "overall_efficacy_score": 9
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 109
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 4
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "occasional",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 114
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 10
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "daily",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 45
+        },
+        "response": {
+          "adherence_score": 5,
+          "adverse_effects": [
+            "dry mouth",
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 7
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "26-35",
+          "experience_level": "naive",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 85
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [
+            "dry mouth",
+            "none"
+          ],
+          "overall_efficacy_score": 5
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "26-35",
+          "experience_level": "daily",
           "thc_tolerance": "high"
         },
         "treatment": {
           "duration_days": 23
         },
         "response": {
-          "adherence_score": 10,
+          "adherence_score": 8,
           "adverse_effects": [],
-          "overall_efficacy_score": 10
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "occasional",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 54
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [
-            "drowsiness",
-            "none"
-          ],
-          "overall_efficacy_score": 7
-        },
-        "data_quality": {
-          "source_study_quality": "moderate"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "regular",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 16
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [
-            "drowsiness",
-            "euphoria"
-          ],
-          "overall_efficacy_score": 7
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "naive",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 45
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [
-            "dry mouth",
-            "anxiety"
-          ],
           "overall_efficacy_score": 4
         },
         "data_quality": {
@@ -597,561 +746,15 @@
       },
       {
         "demographics": {
-          "age_range": "66+",
-          "experience_level": "naive",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 177
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [
-            "euphoria"
-          ],
-          "overall_efficacy_score": 4
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
-          "experience_level": "daily",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 37
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [
-            "euphoria",
-            "anxiety"
-          ],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "26-35",
-          "experience_level": "daily",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 174
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [
-            "dry mouth",
-            "none"
-          ],
-          "overall_efficacy_score": 10
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "36-45",
-          "experience_level": "occasional",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 32
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [
-            "anxiety"
-          ],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "occasional",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 137
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [
-            "none",
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
           "age_range": "56-65",
           "experience_level": "naive",
           "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 52
-        },
-        "response": {
-          "adherence_score": 6,
-          "adverse_effects": [],
-          "overall_efficacy_score": 10
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
-          "experience_level": "naive",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 127
-        },
-        "response": {
-          "adherence_score": 8,
-          "adverse_effects": [
-            "anxiety"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
-          "experience_level": "naive",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 145
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [
-            "anxiety",
-            "none"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "26-35",
-          "experience_level": "regular",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 129
-        },
-        "response": {
-          "adherence_score": 8,
-          "adverse_effects": [],
-          "overall_efficacy_score": 8
-        },
-        "data_quality": {
-          "source_study_quality": "moderate"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "26-35",
-          "experience_level": "occasional",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 77
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [],
-          "overall_efficacy_score": 8
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "26-35",
-          "experience_level": "daily",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 36
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [],
-          "overall_efficacy_score": 6
-        },
-        "data_quality": {
-          "source_study_quality": "moderate"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "occasional",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 122
-        },
-        "response": {
-          "adherence_score": 6,
-          "adverse_effects": [
-            "none",
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 4
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "daily",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 48
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [
-            "none"
-          ],
-          "overall_efficacy_score": 7
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "occasional",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 70
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [],
-          "overall_efficacy_score": 8
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "26-35",
-          "experience_level": "occasional",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 108
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [
-            "euphoria"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
-          "experience_level": "naive",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 161
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [],
-          "overall_efficacy_score": 6
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "18-25",
-          "experience_level": "daily",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 136
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [
-            "euphoria",
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 10
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "regular",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 44
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [
-            "euphoria",
-            "none"
-          ],
-          "overall_efficacy_score": 6
-        },
-        "data_quality": {
-          "source_study_quality": "moderate"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "36-45",
-          "experience_level": "occasional",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 133
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "daily",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 35
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [],
-          "overall_efficacy_score": 4
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "18-25",
-          "experience_level": "occasional",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 165
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [
-            "anxiety"
-          ],
-          "overall_efficacy_score": 8
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "daily",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 179
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [
-            "anxiety"
-          ],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "moderate"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "36-45",
-          "experience_level": "regular",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 166
-        },
-        "response": {
-          "adherence_score": 6,
-          "adverse_effects": [
-            "none",
-            "dry mouth"
-          ],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "naive",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 86
-        },
-        "response": {
-          "adherence_score": 8,
-          "adverse_effects": [
-            "anxiety"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "naive",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 130
-        },
-        "response": {
-          "adherence_score": 8,
-          "adverse_effects": [],
-          "overall_efficacy_score": 8
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "regular",
-          "thc_tolerance": "high"
         },
         "treatment": {
           "duration_days": 178
         },
         "response": {
-          "adherence_score": 6,
-          "adverse_effects": [
-            "none"
-          ],
-          "overall_efficacy_score": 6
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "26-35",
-          "experience_level": "daily",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 120
-        },
-        "response": {
-          "adherence_score": 6,
-          "adverse_effects": [],
-          "overall_efficacy_score": 6
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
-          "experience_level": "daily",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 105
-        },
-        "response": {
           "adherence_score": 8,
-          "adverse_effects": [],
-          "overall_efficacy_score": 10
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "18-25",
-          "experience_level": "daily",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 71
-        },
-        "response": {
-          "adherence_score": 5,
           "adverse_effects": [
             "euphoria",
             "dry mouth"
@@ -1159,44 +762,57 @@
           "overall_efficacy_score": 5
         },
         "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "36-45",
-          "experience_level": "daily",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 32
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [
-            "none"
-          ],
-          "overall_efficacy_score": 8
-        },
-        "data_quality": {
           "source_study_quality": "good"
         }
       },
       {
         "demographics": {
-          "age_range": "26-35",
-          "experience_level": "occasional",
-          "thc_tolerance": "medium"
+          "age_range": "66+",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
         },
         "treatment": {
-          "duration_days": 135
+          "duration_days": 39
         },
         "response": {
           "adherence_score": 7,
-          "adverse_effects": [
-            "euphoria",
-            "none"
-          ],
+          "adverse_effects": [],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 91
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [],
+          "overall_efficacy_score": 5
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "56-65",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 69
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [],
           "overall_efficacy_score": 8
         },
         "data_quality": {
@@ -1205,19 +821,40 @@
       },
       {
         "demographics": {
-          "age_range": "46-55",
-          "experience_level": "naive",
-          "thc_tolerance": "low"
+          "age_range": "36-45",
+          "experience_level": "regular",
+          "thc_tolerance": "high"
         },
         "treatment": {
-          "duration_days": 93
+          "duration_days": 19
         },
         "response": {
-          "adherence_score": 7,
+          "adherence_score": 8,
           "adverse_effects": [
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 10
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "daily",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 141
+        },
+        "response": {
+          "adherence_score": 9,
+          "adverse_effects": [
+            "anxiety",
             "euphoria"
           ],
-          "overall_efficacy_score": 5
+          "overall_efficacy_score": 9
         },
         "data_quality": {
           "source_study_quality": "high"
@@ -1225,18 +862,18 @@
       },
       {
         "demographics": {
-          "age_range": "26-35",
-          "experience_level": "occasional",
-          "thc_tolerance": "low"
+          "age_range": "56-65",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
         },
         "treatment": {
-          "duration_days": 108
+          "duration_days": 31
         },
         "response": {
-          "adherence_score": 7,
+          "adherence_score": 8,
           "adverse_effects": [
-            "euphoria",
-            "drowsiness"
+            "none",
+            "anxiety"
           ],
           "overall_efficacy_score": 6
         },
@@ -1246,122 +883,16 @@
       },
       {
         "demographics": {
-          "age_range": "36-45",
+          "age_range": "46-55",
           "experience_level": "regular",
-          "thc_tolerance": "medium"
+          "thc_tolerance": "low"
         },
         "treatment": {
-          "duration_days": 151
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [
-            "euphoria",
-            "dry mouth"
-          ],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "regular",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 48
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [
-            "anxiety"
-          ],
-          "overall_efficacy_score": 10
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "18-25",
-          "experience_level": "regular",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 11
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [
-            "euphoria"
-          ],
-          "overall_efficacy_score": 4
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
-          "experience_level": "occasional",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 37
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [
-            "anxiety",
-            "none"
-          ],
-          "overall_efficacy_score": 7
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "18-25",
-          "experience_level": "regular",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 64
-        },
-        "response": {
-          "adherence_score": 6,
-          "adverse_effects": [
-            "anxiety",
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "26-35",
-          "experience_level": "regular",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 55
+          "duration_days": 52
         },
         "response": {
           "adherence_score": 9,
-          "adverse_effects": [
-            "drowsiness",
-            "none"
-          ],
+          "adverse_effects": [],
           "overall_efficacy_score": 8
         },
         "data_quality": {
@@ -1371,130 +902,32 @@
       {
         "demographics": {
           "age_range": "66+",
-          "experience_level": "naive",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 130
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [],
-          "overall_efficacy_score": 6
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
           "experience_level": "occasional",
           "thc_tolerance": "high"
         },
         "treatment": {
-          "duration_days": 160
+          "duration_days": 68
         },
         "response": {
-          "adherence_score": 7,
+          "adherence_score": 9,
           "adverse_effects": [
             "dry mouth",
             "none"
           ],
-          "overall_efficacy_score": 7
+          "overall_efficacy_score": 5
         },
         "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "26-35",
-          "experience_level": "naive",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 169
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [
-            "anxiety",
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "moderate"
+          "source_study_quality": "good"
         }
       },
       {
         "demographics": {
           "age_range": "36-45",
-          "experience_level": "occasional",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 101
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [
-            "anxiety",
-            "none"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
           "experience_level": "naive",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 152
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 4
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "occasional",
           "thc_tolerance": "low"
         },
         "treatment": {
-          "duration_days": 17
-        },
-        "response": {
-          "adherence_score": 8,
-          "adverse_effects": [],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
-          "experience_level": "daily",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 72
+          "duration_days": 139
         },
         "response": {
           "adherence_score": 5,
@@ -1502,177 +935,23 @@
           "overall_efficacy_score": 8
         },
         "data_quality": {
-          "source_study_quality": "moderate"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "36-45",
-          "experience_level": "regular",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 172
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [],
-          "overall_efficacy_score": 7
-        },
-        "data_quality": {
           "source_study_quality": "high"
         }
       },
       {
         "demographics": {
-          "age_range": "18-25",
-          "experience_level": "naive",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 103
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [
-            "drowsiness",
-            "anxiety"
-          ],
-          "overall_efficacy_score": 10
-        },
-        "data_quality": {
-          "source_study_quality": "moderate"
-        }
-      },
-      {
-        "demographics": {
           "age_range": "56-65",
-          "experience_level": "daily",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 50
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [
-            "anxiety"
-          ],
-          "overall_efficacy_score": 6
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "regular",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 9
-        },
-        "response": {
-          "adherence_score": 6,
-          "adverse_effects": [
-            "dry mouth"
-          ],
-          "overall_efficacy_score": 10
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
-          "experience_level": "naive",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 149
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [],
-          "overall_efficacy_score": 7
-        },
-        "data_quality": {
-          "source_study_quality": "moderate"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "18-25",
-          "experience_level": "occasional",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 21
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 7
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "56-65",
-          "experience_level": "daily",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 35
-        },
-        "response": {
-          "adherence_score": 6,
-          "adverse_effects": [],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
           "experience_level": "occasional",
           "thc_tolerance": "medium"
         },
         "treatment": {
-          "duration_days": 94
+          "duration_days": 25
         },
         "response": {
-          "adherence_score": 7,
+          "adherence_score": 6,
           "adverse_effects": [
+            "dry mouth",
             "anxiety"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "daily",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 43
-        },
-        "response": {
-          "adherence_score": 5,
-          "adverse_effects": [
-            "none"
           ],
           "overall_efficacy_score": 10
         },
@@ -1683,65 +962,6 @@
       {
         "demographics": {
           "age_range": "26-35",
-          "experience_level": "naive",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 58
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [],
-          "overall_efficacy_score": 7
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "18-25",
-          "experience_level": "naive",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 124
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [
-            "euphoria",
-            "drowsiness"
-          ],
-          "overall_efficacy_score": 5
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "18-25",
-          "experience_level": "regular",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 78
-        },
-        "response": {
-          "adherence_score": 10,
-          "adverse_effects": [
-            "euphoria"
-          ],
-          "overall_efficacy_score": 6
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
           "experience_level": "naive",
           "thc_tolerance": "medium"
         },
@@ -1750,50 +970,8 @@
         },
         "response": {
           "adherence_score": 10,
-          "adverse_effects": [
-            "dry mouth",
-            "euphoria"
-          ],
-          "overall_efficacy_score": 6
-        },
-        "data_quality": {
-          "source_study_quality": "high"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "66+",
-          "experience_level": "daily",
-          "thc_tolerance": "low"
-        },
-        "treatment": {
-          "duration_days": 26
-        },
-        "response": {
-          "adherence_score": 7,
-          "adverse_effects": [
-            "euphoria",
-            "none"
-          ],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "low"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "46-55",
-          "experience_level": "regular",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 58
-        },
-        "response": {
-          "adherence_score": 5,
           "adverse_effects": [],
-          "overall_efficacy_score": 10
+          "overall_efficacy_score": 9
         },
         "data_quality": {
           "source_study_quality": "good"
@@ -1802,16 +980,18 @@
       {
         "demographics": {
           "age_range": "56-65",
-          "experience_level": "regular",
-          "thc_tolerance": "high"
+          "experience_level": "daily",
+          "thc_tolerance": "low"
         },
         "treatment": {
-          "duration_days": 105
+          "duration_days": 167
         },
         "response": {
           "adherence_score": 7,
-          "adverse_effects": [],
-          "overall_efficacy_score": 9
+          "adverse_effects": [
+            "euphoria"
+          ],
+          "overall_efficacy_score": 4
         },
         "data_quality": {
           "source_study_quality": "moderate"
@@ -1819,17 +999,38 @@
       },
       {
         "demographics": {
-          "age_range": "56-65",
-          "experience_level": "daily",
+          "age_range": "66+",
+          "experience_level": "occasional",
           "thc_tolerance": "high"
         },
         "treatment": {
-          "duration_days": 37
+          "duration_days": 136
         },
         "response": {
           "adherence_score": 10,
           "adverse_effects": [],
-          "overall_efficacy_score": 10
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "naive",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 177
+        },
+        "response": {
+          "adherence_score": 5,
+          "adverse_effects": [
+            "dry mouth",
+            "none"
+          ],
+          "overall_efficacy_score": 8
         },
         "data_quality": {
           "source_study_quality": "high"
@@ -1842,7 +1043,242 @@
           "thc_tolerance": "low"
         },
         "treatment": {
-          "duration_days": 147
+          "duration_days": 87
+        },
+        "response": {
+          "adherence_score": 9,
+          "adverse_effects": [],
+          "overall_efficacy_score": 9
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "56-65",
+          "experience_level": "regular",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 76
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "regular",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 163
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "26-35",
+          "experience_level": "daily",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 20
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 5
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "naive",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 11
+        },
+        "response": {
+          "adherence_score": 10,
+          "adverse_effects": [
+            "anxiety"
+          ],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "naive",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 15
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [
+            "anxiety"
+          ],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "56-65",
+          "experience_level": "occasional",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 95
+        },
+        "response": {
+          "adherence_score": 9,
+          "adverse_effects": [
+            "anxiety",
+            "none"
+          ],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "occasional",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 135
+        },
+        "response": {
+          "adherence_score": 9,
+          "adverse_effects": [],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "regular",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 16
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [
+            "dry mouth",
+            "anxiety"
+          ],
+          "overall_efficacy_score": 10
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "regular",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 26
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [
+            "drowsiness",
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 9
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "26-35",
+          "experience_level": "regular",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 68
+        },
+        "response": {
+          "adherence_score": 10,
+          "adverse_effects": [
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 7
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "naive",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 52
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
+            "none"
+          ],
+          "overall_efficacy_score": 4
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "occasional",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 59
         },
         "response": {
           "adherence_score": 10,
@@ -1855,17 +1291,17 @@
       },
       {
         "demographics": {
-          "age_range": "66+",
-          "experience_level": "daily",
+          "age_range": "26-35",
+          "experience_level": "naive",
           "thc_tolerance": "medium"
         },
         "treatment": {
-          "duration_days": 111
+          "duration_days": 29
         },
         "response": {
-          "adherence_score": 10,
+          "adherence_score": 7,
           "adverse_effects": [],
-          "overall_efficacy_score": 10
+          "overall_efficacy_score": 7
         },
         "data_quality": {
           "source_study_quality": "good"
@@ -1873,54 +1309,18 @@
       },
       {
         "demographics": {
-          "age_range": "56-65",
-          "experience_level": "regular",
-          "thc_tolerance": "medium"
-        },
-        "treatment": {
-          "duration_days": 103
-        },
-        "response": {
-          "adherence_score": 9,
-          "adverse_effects": [],
-          "overall_efficacy_score": 9
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "36-45",
+          "age_range": "18-25",
           "experience_level": "occasional",
           "thc_tolerance": "medium"
         },
         "treatment": {
-          "duration_days": 91
+          "duration_days": 15
         },
         "response": {
-          "adherence_score": 8,
-          "adverse_effects": [],
-          "overall_efficacy_score": 8
-        },
-        "data_quality": {
-          "source_study_quality": "good"
-        }
-      },
-      {
-        "demographics": {
-          "age_range": "26-35",
-          "experience_level": "naive",
-          "thc_tolerance": "high"
-        },
-        "treatment": {
-          "duration_days": 82
-        },
-        "response": {
-          "adherence_score": 6,
+          "adherence_score": 10,
           "adverse_effects": [
-            "dry mouth",
-            "none"
+            "anxiety",
+            "dry mouth"
           ],
           "overall_efficacy_score": 9
         },
@@ -1930,17 +1330,20 @@
       },
       {
         "demographics": {
-          "age_range": "18-25",
+          "age_range": "56-65",
           "experience_level": "daily",
-          "thc_tolerance": "medium"
+          "thc_tolerance": "low"
         },
         "treatment": {
-          "duration_days": 74
+          "duration_days": 141
         },
         "response": {
-          "adherence_score": 10,
-          "adverse_effects": [],
-          "overall_efficacy_score": 7
+          "adherence_score": 8,
+          "adverse_effects": [
+            "euphoria",
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 6
         },
         "data_quality": {
           "source_study_quality": "moderate"
@@ -1953,18 +1356,606 @@
           "thc_tolerance": "high"
         },
         "treatment": {
-          "duration_days": 110
+          "duration_days": 89
         },
         "response": {
-          "adherence_score": 5,
+          "adherence_score": 7,
+          "adverse_effects": [],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "56-65",
+          "experience_level": "daily",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 118
+        },
+        "response": {
+          "adherence_score": 10,
+          "adverse_effects": [],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 14
+        },
+        "response": {
+          "adherence_score": 9,
           "adverse_effects": [
-            "euphoria",
+            "anxiety"
+          ],
+          "overall_efficacy_score": 7
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "naive",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 49
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [
+            "none"
+          ],
+          "overall_efficacy_score": 10
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "regular",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 8
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
             "drowsiness"
+          ],
+          "overall_efficacy_score": 4
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "regular",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 42
+        },
+        "response": {
+          "adherence_score": 9,
+          "adverse_effects": [
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 4
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "56-65",
+          "experience_level": "daily",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 37
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [
+            "dry mouth",
+            "anxiety"
           ],
           "overall_efficacy_score": 8
         },
         "data_quality": {
           "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "daily",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 177
+        },
+        "response": {
+          "adherence_score": 9,
+          "adverse_effects": [],
+          "overall_efficacy_score": 5
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "regular",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 154
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [],
+          "overall_efficacy_score": 7
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "regular",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 107
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
+            "euphoria",
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "26-35",
+          "experience_level": "occasional",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 148
+        },
+        "response": {
+          "adherence_score": 5,
+          "adverse_effects": [
+            "anxiety"
+          ],
+          "overall_efficacy_score": 9
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "56-65",
+          "experience_level": "daily",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 177
+        },
+        "response": {
+          "adherence_score": 5,
+          "adverse_effects": [
+            "euphoria",
+            "anxiety"
+          ],
+          "overall_efficacy_score": 8
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "occasional",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 70
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [],
+          "overall_efficacy_score": 7
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "occasional",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 59
+        },
+        "response": {
+          "adherence_score": 10,
+          "adverse_effects": [
+            "none"
+          ],
+          "overall_efficacy_score": 10
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "daily",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 157
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [
+            "drowsiness",
+            "none"
+          ],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "occasional",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 24
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [
+            "drowsiness",
+            "anxiety"
+          ],
+          "overall_efficacy_score": 10
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "naive",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 61
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [],
+          "overall_efficacy_score": 4
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "naive",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 118
+        },
+        "response": {
+          "adherence_score": 10,
+          "adverse_effects": [
+            "anxiety"
+          ],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "daily",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 71
+        },
+        "response": {
+          "adherence_score": 10,
+          "adverse_effects": [],
+          "overall_efficacy_score": 4
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "46-55",
+          "experience_level": "regular",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 110
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [
+            "euphoria",
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 5
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "56-65",
+          "experience_level": "naive",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 51
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 10
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "26-35",
+          "experience_level": "regular",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 15
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [],
+          "overall_efficacy_score": 4
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "naive",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 68
+        },
+        "response": {
+          "adherence_score": 5,
+          "adverse_effects": [
+            "drowsiness"
+          ],
+          "overall_efficacy_score": 4
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "daily",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 142
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [
+            "anxiety"
+          ],
+          "overall_efficacy_score": 10
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "daily",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 22
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [
+            "dry mouth",
+            "anxiety"
+          ],
+          "overall_efficacy_score": 7
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "occasional",
+          "thc_tolerance": "low"
+        },
+        "treatment": {
+          "duration_days": 166
+        },
+        "response": {
+          "adherence_score": 5,
+          "adverse_effects": [
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 5
+        },
+        "data_quality": {
+          "source_study_quality": "high"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "regular",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 28
+        },
+        "response": {
+          "adherence_score": 7,
+          "adverse_effects": [],
+          "overall_efficacy_score": 5
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "18-25",
+          "experience_level": "daily",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 61
+        },
+        "response": {
+          "adherence_score": 5,
+          "adverse_effects": [
+            "dry mouth",
+            "euphoria"
+          ],
+          "overall_efficacy_score": 9
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "26-35",
+          "experience_level": "naive",
+          "thc_tolerance": "medium"
+        },
+        "treatment": {
+          "duration_days": 163
+        },
+        "response": {
+          "adherence_score": 8,
+          "adverse_effects": [],
+          "overall_efficacy_score": 7
+        },
+        "data_quality": {
+          "source_study_quality": "good"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "36-45",
+          "experience_level": "regular",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 136
+        },
+        "response": {
+          "adherence_score": 6,
+          "adverse_effects": [
+            "none",
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 9
+        },
+        "data_quality": {
+          "source_study_quality": "low"
+        }
+      },
+      {
+        "demographics": {
+          "age_range": "66+",
+          "experience_level": "regular",
+          "thc_tolerance": "high"
+        },
+        "treatment": {
+          "duration_days": 132
+        },
+        "response": {
+          "adherence_score": 10,
+          "adverse_effects": [
+            "dry mouth"
+          ],
+          "overall_efficacy_score": 6
+        },
+        "data_quality": {
+          "source_study_quality": "moderate"
         }
       }
     ]

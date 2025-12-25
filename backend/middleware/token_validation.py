@@ -440,6 +440,55 @@ class RateLimiter:
 default_rate_limiter = RateLimiter(requests_per_minute=120)
 
 
+# Premium tier dependencies for trade secret endpoints
+async def get_premium_user(
+    request: Request,
+    credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)
+) -> OmniPathToken:
+    """Get current user, requiring premium tier access.
+    
+    Required for trade secret endpoints:
+    - BioPath ($2.0B)
+    - ClinPath ($3.2B)
+    - GenomePath ($6.2B)
+    
+    Usage:
+        @app.get("/api/biopath/validate")
+        async def validate(user: OmniPathToken = Depends(get_premium_user)):
+            # Only premium users can access this
+            ...
+    """
+    dep = TokenDependency(required_permissions=["access:premium", "access:trade_secrets"])
+    return await dep(request, credentials)
+
+
+async def get_biopath_user(
+    request: Request,
+    credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)
+) -> OmniPathToken:
+    """Get current user with BioPath access ($2.0B trade secret)."""
+    dep = TokenDependency(required_permissions=["access:premium", "access:biopath"])
+    return await dep(request, credentials)
+
+
+async def get_clinpath_user(
+    request: Request,
+    credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)
+) -> OmniPathToken:
+    """Get current user with ClinPath access ($3.2B trade secret)."""
+    dep = TokenDependency(required_permissions=["access:premium", "access:clinpath"])
+    return await dep(request, credentials)
+
+
+async def get_genomepath_user(
+    request: Request,
+    credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)
+) -> OmniPathToken:
+    """Get current user with GenomePath access ($6.2B trade secret)."""
+    dep = TokenDependency(required_permissions=["access:premium", "access:genomepath"])
+    return await dep(request, credentials)
+
+
 def rate_limit(requests_per_minute: int = 60):
     """Decorator for rate limiting routes.
     

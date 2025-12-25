@@ -1,0 +1,264 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "COVID_19",
+  "phase": "PHASE_3",
+  "priority": "Expansion",
+  "total_studies": 8,
+  "studies": [
+    {
+      "study_id": "COVID19_PUBMED_34619044_RCT_CANDIDATE",
+      "study_type": "RCT",
+      "condition": "COVID_19",
+      "study_title": "Cannabidiol for COVID-19 Patients with Mild to Moderate Symptoms (CANDIDATE Study): A Randomized, Double-Blind, Placebo-Controlled Clinical Trial",
+      "citation": "Crippa JAS, Pacheco JC, Zuardi AW, et al. Cannabis Cannabinoid Res. 2022 Oct;7(5):658-669. doi: 10.1089/can.2021.0093. Epub 2021 Oct 7. PMID: 34619044.",
+      "year": 2022,
+      "country": "Brazil",
+      "population": "Adults with mild to moderate COVID-19 seeking care (randomized; 91 included in efficacy analysis per abstract)",
+      "intervention": "Cannabidiol (CBD) 300 mg daily for 14 days + standard symptomatic care",
+      "comparator": "Placebo + standard symptomatic care",
+      "exposure_ascertainment": "trial_assigned",
+      "duration": "14 days treatment; outcomes assessed days 14, 21, and 28",
+      "outcomes": [
+        "Primary: deterioration from mild/moderate to severe/critical (COVID-19 Scale) and/or symptom resolution course",
+        "Secondary measures (not specified in abstract excerpt)"
+      ],
+      "results": "Daily administration of 300 mg CBD for 14 days failed to alter the clinical evolution of COVID-19; no significant between-group differences reported on primary/secondary measures in the abstract.",
+      "adverse_events": "CBD was well tolerated; mostly mild and transient side effects reported (e.g., somnolence, fatigue, appetite changes, lethargy, nausea, diarrhea, fever) with no significant differences vs placebo.",
+      "trial_registration": "ClinicalTrials.gov NCT04467918",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/34619044/",
+      "tags": [
+        "CBD",
+        "acute COVID-19",
+        "double-blind",
+        "placebo-controlled"
+      ],
+      "evidence_level": "Randomized placebo-controlled; negative efficacy signal at tested dose in mild/moderate disease"
+    },
+    {
+      "study_id": "COVID19_PUBMED_40170643_RCT_SUBLINGUAL_CBD",
+      "study_type": "RCT",
+      "condition": "COVID_19",
+      "study_title": "Cannabidiol and Its Effects on Patients with COVID-19 Infection",
+      "citation": "Kuntzman Y, Halpert G, Amital H. Isr Med Assoc J. 2025 Feb;27(2):78-81. PMID: 40170643.",
+      "year": 2025,
+      "country": "Israel",
+      "population": "Patients with SARS-CoV-2 infection (randomized: 7 CBD vs 3 placebo per abstract)",
+      "intervention": "Sublingual cannabidiol (CBD) extraction (dose not specified in abstract)",
+      "comparator": "Placebo",
+      "exposure_ascertainment": "trial_assigned",
+      "duration": "Not specified in abstract",
+      "outcomes": [
+        "Clinical outcomes (not fully specified in abstract)",
+        "Selected serum cytokine levels"
+      ],
+      "results": "Clinical outcomes were better in the CBD group vs placebo in this small study; serum cytokine differences were reported with mixed trends; authors note further study is needed.",
+      "adverse_events": "Not specified in abstract.",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/40170643/",
+      "tags": [
+        "CBD",
+        "acute COVID-19",
+        "sublingual",
+        "cytokines"
+      ],
+      "evidence_level": "Very small RCT; preliminary; requires replication"
+    },
+    {
+      "study_id": "COVID19_PUBMED_38904961_RETROSPECTIVE_EHR_CANNABIS_TOBACCO",
+      "study_type": "Observational (retrospective cohort; EHR)",
+      "condition": "COVID_19",
+      "study_title": "Cannabis, Tobacco Use, and COVID-19 Outcomes",
+      "citation": "Griffith NB, Baker TB, Heiden BT, et al. JAMA Netw Open. 2024 Jun 3;7(6):e2417977. doi: 10.1001/jamanetworkopen.2024.17977. PMID: 38904961.",
+      "year": 2024,
+      "country": "United States (Midwest; large academic medical center)",
+      "population": "Patients with COVID-19 identified during at least 1 medical visit; retrospective EHR cohort (n=72,501)",
+      "exposure": "Current cannabis use and tobacco smoking as documented in the medical encounter",
+      "exposure_ascertainment": "EHR_documented_use_unclear_structuring",
+      "comparator": "No current cannabis use / no current tobacco smoking (modeled with multivariable adjustment)",
+      "timeframe": "Feb 1, 2020 to Jan 31, 2022",
+      "outcomes": [
+        "Hospitalization",
+        "ICU admission",
+        "All-cause mortality"
+      ],
+      "results": "After adjustment for tobacco smoking, vaccination, comorbidity, diagnosis date, and demographics, current cannabis use was associated with increased odds of hospitalization (OR 1.80; 95% CI 1.68-1.93) and ICU admission (OR 1.27; 95% CI 1.14-1.41), but not all-cause mortality (OR 0.97; 95% CI 0.82-1.14).",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/38904961/",
+      "tags": [
+        "cannabis use",
+        "tobacco",
+        "EHR",
+        "hospitalization",
+        "ICU"
+      ],
+      "evidence_level": "Large retrospective EHR cohort; association-based; residual confounding possible"
+    },
+    {
+      "study_id": "COVID19_PUBMED_35932069_RETROSPECTIVE_COHORT_HOSPITALIZED_CANNABIS",
+      "study_type": "Observational (retrospective cohort; hospitalized)",
+      "condition": "COVID_19",
+      "study_title": "Cannabis consumption is associated with lower COVID-19 severity among hospitalized patients: a retrospective cohort analysis",
+      "citation": "Shover CM, Yan P, Jackson NJ, et al. J Cannabis Res. 2022 Aug 5;4(1):46. doi: 10.1186/s42238-022-00152-x. PMID: 35932069.",
+      "year": 2022,
+      "country": "United States (Southern California)",
+      "population": "Hospitalized patients with COVID-19 at two medical centers (n=1,831); active cannabis use reported by 69 patients (4%)",
+      "exposure": "Active cannabis use (self-reported in social history)",
+      "exposure_ascertainment": "self_report_social_history",
+      "comparator": "Non-users; propensity matching used for key baseline covariates",
+      "outcomes": [
+        "NIH COVID-19 Severity Score",
+        "Need for supplemental oxygen",
+        "ICU admission",
+        "Mechanical ventilation",
+        "Length of hospitalization",
+        "In-hospital death"
+      ],
+      "results": "In univariate analyses, active cannabis users had lower NIH severity scores, shorter length of stay, lower ICU admission rates, and less need for mechanical ventilation. In propensity-matched analyses, overall survival differences were not statistically significant, but ICU admission and intubation rates were lower among cannabis users (per abstract).",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/35932069/",
+      "tags": [
+        "cannabis use",
+        "hospitalized",
+        "retrospective cohort",
+        "propensity matching"
+      ],
+      "evidence_level": "Retrospective hospitalized cohort; small exposed group; interpret cautiously"
+    },
+    {
+      "study_id": "COVID19_PUBMED_36044600_RETROSPECTIVE_COHORT_SUD_PSYCH",
+      "study_type": "Observational (retrospective cohort; EHR/toxicology)",
+      "condition": "COVID_19",
+      "study_title": "Impact of Cannabis Use, Substance Use Disorders, and Psychiatric Diagnoses on COVID-19 Outcomes: A Retrospective Cohort Study",
+      "citation": "Ramakrishnan D, Sureshanand S, Pittman B, Radhakrishnan R. J Clin Psychiatry. 2022 Aug 29;83(5):21m14332. doi: 10.4088/JCP.21m14332. PMID: 36044600.",
+      "year": 2022,
+      "country": "United States",
+      "population": "COVID-19-positive patients admitted to a large health care system (Jan-Dec 2020; N=6,291)",
+      "exposure": "Substance use disorders (including cannabis use disorder) and psychiatric diagnoses; SUD identified via urine toxicology; psychiatric diagnoses via ICD-10 in the EMR (per abstract)",
+      "exposure_ascertainment": "EHR_structured_SUD_plus_urine_toxicology",
+      "comparator": "No SUD / no psychiatric diagnosis (modeled with multivariable adjustment)",
+      "outcomes": [
+        "Mortality",
+        "ICU admission",
+        "Ventilatory support",
+        "Length of hospitalization",
+        "Number of hospitalizations"
+      ],
+      "results": "Patients with SUD were more likely to require ICU admission (AOR 1.46) and ventilatory support (AOR 1.49). SUD and psychiatric diagnoses were associated with longer hospital stay and greater number of admissions; these associations were reported as significant for cannabis use disorder among other SUD categories (per abstract).",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/36044600/",
+      "tags": [
+        "cannabis use disorder",
+        "SUD",
+        "ICU",
+        "ventilation",
+        "EHR"
+      ],
+      "evidence_level": "Retrospective cohort; cannabis effect reported within broader SUD analysis"
+    },
+    {
+      "study_id": "COVID19_PUBMED_37337275_RETROSPECTIVE_EMR_UDT_CONFIRMED_CURRENT_USE",
+      "study_type": "Observational (retrospective cohort; EMR; urine drug testing confirmed exposure)",
+      "condition": "COVID_19",
+      "study_title": "No difference in COVID-19 treatment outcomes among current methamphetamine, cannabis and alcohol users",
+      "citation": "Rydberg A, Dodoo CA, Schneekloth TD, Abulseoud OA. J Cannabis Res. 2023 Jun 19;5(1):23. doi: 10.1186/s42238-023-00193-w. PMCID: PMC10280862. PMID: 37337275.",
+      "year": 2023,
+      "country": "United States",
+      "population": "Hospitalized COVID-19 patients identified via EMR; SARS-CoV-2 infection confirmed by positive PCR; total N=122 (cannabis n=46; methamphetamine n=32; heavy alcohol n=44)",
+      "exposure": "Current cannabis use confirmed by positive urine drug testing (UDT)",
+      "exposure_ascertainment": "urine_toxicology_confirmed_current_use",
+      "comparator": "Other substance exposure groups (current methamphetamine use by UDT; heavy alcohol use by BAC > 11 mg/dl) within the cohort",
+      "timeframe": "Not specified in abstract",
+      "outcomes": [
+        "ICU admission",
+        "Length of stay",
+        "Time from positive PCR to discharge",
+        "Delirium",
+        "Intubation",
+        "Mortality"
+      ],
+      "results": "No significant differences between the cannabis, methamphetamine, and heavy alcohol groups for key COVID-19 outcomes (ICU admission, length of stay, delirium, intubation, mortality) after adjusting for covariates (per abstract).",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/37337275/",
+      "tags": [
+        "urine drug testing",
+        "confirmed exposure",
+        "hospitalized",
+        "retrospective cohort"
+      ],
+      "evidence_level": "Retrospective cohort with biochemical exposure confirmation; limited by small sample size and no COVID-negative control"
+    },
+    {
+      "study_id": "CT_NCT04997395",
+      "study_type": "RCT",
+      "condition": "COVID_19",
+      "study_title": "Feasibility of Cannabidiol for the Treatment of Long COVID",
+      "citation": "ClinicalTrials.gov NCTNCT04997395",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "MediCabilis Cannabis sativa 50",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Recruitment rate",
+          "Tolerability for the treatment of long COVID",
+          "Number of side effects"
+        ],
+        "outcome_measures": [
+          "Recruitment rate",
+          "Tolerability for the treatment of long COVID",
+          "Number of side effects"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04997395",
+        "enrollment": 12,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04997395"
+      }
+    },
+    {
+      "study_id": "CT_NCT04504877",
+      "study_type": "RCT",
+      "condition": "COVID_19",
+      "study_title": "Burnout and Distress preventiOn With caNnabidiol in Front-line Health Care workerS deAling wIth COVID-19",
+      "citation": "ClinicalTrials.gov NCTNCT04504877",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "aMBI-HSS: Abbreviated Maslach Burnout Inventory - Human Services Survey"
+        ],
+        "outcome_measures": [
+          "aMBI-HSS: Abbreviated Maslach Burnout Inventory - Human Services Survey"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04504877",
+        "enrollment": 120,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04504877"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 2,
+    "pubmed_added": 0,
+    "total_added": 2,
+    "expansion_date": "2025-12-23T23:12:21.364966"
+  }
+}

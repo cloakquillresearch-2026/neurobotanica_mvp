@@ -1,0 +1,97 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "FIBROMYALGIA",
+  "phase": "3",
+  "priority": "Expansion",
+  "total_studies": 2,
+  "studies": [
+    {
+      "study_id": "CT_NCT06138171",
+      "study_type": "Clinical Trial",
+      "condition": "FIBROMYALGIA",
+      "study_title": "Personality, Defences, Central Sensitization, and Trauma in Women With Chronic Migraine, Fibromyalgia, and Vulvodynia",
+      "citation": "ClinicalTrials.gov NCTNCT06138171",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Central sensitivity index",
+          "Traumatic experiences index",
+          "Personality traits",
+          "Defense mechanisms",
+          "Mental pain",
+          "Environmental sensitivity"
+        ],
+        "outcome_measures": [
+          "Central sensitivity index",
+          "Traumatic experiences index",
+          "Personality traits",
+          "Defense mechanisms",
+          "Mental pain",
+          "Environmental sensitivity"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT06138171",
+        "enrollment": 1006,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT06138171"
+      }
+    },
+    {
+      "study_id": "CT_NCT05939466",
+      "study_type": "RCT",
+      "condition": "FIBROMYALGIA",
+      "study_title": "Medical Cannabis for Treating Pain Related to Fibromyalgia",
+      "citation": "ClinicalTrials.gov NCTNCT05939466",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Bedrocan\u00ae-type cannabis (22% THC, <1% CBD)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain intensity",
+          "Physical state",
+          "Mental state"
+        ],
+        "outcome_measures": [
+          "Pain intensity",
+          "Physical state",
+          "Mental state"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05939466",
+        "enrollment": 30,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05939466"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 2,
+    "pubmed_added": 0,
+    "total_added": 2,
+    "expansion_date": "2025-12-23T23:42:11.460085"
+  }
+}

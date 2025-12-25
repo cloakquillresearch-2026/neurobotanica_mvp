@@ -3,7 +3,7 @@
   "condition": "INSOMNIA",
   "phase": "1",
   "priority": "Phase 1 - Foundation (High Prevalence Sleep Indication)",
-  "total_studies": 10,
+  "total_studies": 18,
   "studies": [
     {
       "study_id": "INSOMNIA_RCT_001",
@@ -374,6 +374,322 @@
       },
       "regulatory_relevance": "HIGH - NIH-funded; long-term use patterns; informs dosing recommendations",
       "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CT_NCT05253417",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "The CANabidiol Use for RElief of Short Term Insomnia",
+      "citation": "ClinicalTrials.gov NCTNCT05253417",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "50 mg Cannabidiol (CBD), 100 mg Cannabidiol (CBD)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "To investigate the effect of the administration of a 50mg and 100mg per day oral CBD product versus placebo over 8 weeks on insomnia severity index scores"
+        ],
+        "outcome_measures": [
+          "To investigate the effect of the administration of a 50mg and 100mg per day oral CBD product versus placebo over 8 weeks on insomnia severity index scores"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05253417",
+        "enrollment": 208,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05253417"
+      }
+    },
+    {
+      "study_id": "CT_NCT04299490",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Effects of Experimental Sleep Disturbances on Receptor Function of Study Drug",
+      "citation": "ClinicalTrials.gov NCTNCT04299490",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Within-Subject test of blinded study medication (stimulant, benzodiazepine, opioid, cannabinoid, over-the-counter pain medication, or placebo)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Percent change in receptor binding potential from PET scan",
+          "Withdrawal Latency measured in seconds during Cold Pressor Pain Tolerance test",
+          "Drug Effects as assessed by the Visual Analog Scale",
+          "The monetary valuation in dollars of the study medication as assessed by the Drug or Money Multiple Choice Questionnaire"
+        ],
+        "outcome_measures": [
+          "Percent change in receptor binding potential from PET scan",
+          "Withdrawal Latency measured in seconds during Cold Pressor Pain Tolerance test",
+          "Drug Effects as assessed by the Visual Analog Scale",
+          "The monetary valuation in dollars of the study medication as assessed by the Drug or Money Multiple Choice Questionnaire"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04299490",
+        "enrollment": 148,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04299490"
+      }
+    },
+    {
+      "study_id": "CT_NCT03948074",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Cannabis For Cancer-Related Symptoms",
+      "citation": "ClinicalTrials.gov NCTNCT03948074",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "outcome_measures": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03948074",
+        "enrollment": 91,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03948074"
+      }
+    },
+    {
+      "study_id": "CT_NCT03964974",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Reducing Cannabis Use for Sleep Among Adults Using Medical Cannabis",
+      "citation": "ClinicalTrials.gov NCTNCT03964974",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cognitive Behavioral Therapy for Insomnia in Cannabis Users (CBTi-CB)",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline Insomnia Severity Index Score at Study Completion"
+        ],
+        "outcome_measures": [
+          "Change From Baseline Insomnia Severity Index Score at Study Completion"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03964974",
+        "enrollment": 57,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03964974"
+      }
+    },
+    {
+      "study_id": "CT_NCT01755091",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Safety and Efficacy Study of Dronabinol to Treat Obstructive Sleep Apnea",
+      "citation": "ClinicalTrials.gov NCTNCT01755091",
+      "publication_year": 2016,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol, Placebo (for Dronabinol)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Apnea/Hypopnea Index (AHI)",
+          "Change in Epworth Sleepiness Scale (ESS)",
+          "Change in Sleep Latency: Maintenance of Wakefulness Test (MWT)"
+        ],
+        "outcome_measures": [
+          "Change in Apnea/Hypopnea Index (AHI)",
+          "Change in Epworth Sleepiness Scale (ESS)",
+          "Change in Sleep Latency: Maintenance of Wakefulness Test (MWT)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01755091",
+        "enrollment": 75,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01755091"
+      }
+    },
+    {
+      "study_id": "CT_NCT03224468",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Effect of Medical Marijuana on Neurocognition and Escalation of Use",
+      "citation": "ClinicalTrials.gov NCTNCT03224468",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Marijuana",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "outcome_measures": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03224468",
+        "enrollment": 269,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03224468"
+      }
+    },
+    {
+      "study_id": "CT_NCT05857384",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Bioavailability, Bioequivalence and Tolerability of IHL-42X Compared to the Reference Drugs",
+      "citation": "ClinicalTrials.gov NCTNCT05857384",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol 2.5 MG",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Bioavailability of IHL-42X",
+          "Bioequivalence of IHL-42X",
+          "Effect of food on IHL-42X - maximum observed drug concentration",
+          "Effect of food on IHL-42X - time of the maximum drug concentration",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to time of last measurable concentration",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to infinity",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to 12 hours",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to 24 hours",
+          "Effect of food on IHL-42X - the elimination half-life",
+          "Effect of food on IHL-42X - terminal elimination rate constant",
+          "Effect of food on IHL-42X - apparent total body clearance",
+          "Effect of food on IHL-42X - apparent volume of distribution"
+        ],
+        "outcome_measures": [
+          "Bioavailability of IHL-42X",
+          "Bioequivalence of IHL-42X",
+          "Effect of food on IHL-42X - maximum observed drug concentration",
+          "Effect of food on IHL-42X - time of the maximum drug concentration",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to time of last measurable concentration",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to infinity",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to 12 hours",
+          "Effect of food on IHL-42X - area under the drug concentration time curve from time zero to 24 hours",
+          "Effect of food on IHL-42X - the elimination half-life",
+          "Effect of food on IHL-42X - terminal elimination rate constant",
+          "Effect of food on IHL-42X - apparent total body clearance",
+          "Effect of food on IHL-42X - apparent volume of distribution"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05857384",
+        "enrollment": 125,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05857384"
+      }
+    },
+    {
+      "study_id": "CT_NCT04729179",
+      "study_type": "RCT",
+      "condition": "INSOMNIA",
+      "study_title": "Cannabidiol for Fibromyalgia (The CANNFIB Trial)",
+      "citation": "ClinicalTrials.gov NCTNCT04729179",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain intensity"
+        ],
+        "outcome_measures": [
+          "Pain intensity"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04729179",
+        "enrollment": 200,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04729179"
+      }
     }
-  ]
+  ],
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 8
+  }
 }

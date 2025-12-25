@@ -1,0 +1,121 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "AUTISM",
+  "phase": "3",
+  "priority": "Expansion",
+  "total_studies": 3,
+  "studies": [
+    {
+      "study_id": "CT_NCT03886753",
+      "study_type": "Clinical Trial",
+      "condition": "AUTISM",
+      "study_title": "Pharmacokinetic (PK) and Pharmacodynamics (PD) Study of Ilera Specific Products",
+      "citation": "ClinicalTrials.gov NCTNCT03886753",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in symptoms"
+        ],
+        "outcome_measures": [
+          "Change in symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03886753",
+        "enrollment": 10,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03886753"
+      }
+    },
+    {
+      "study_id": "CT_NCT03677089",
+      "study_type": "RCT",
+      "condition": "AUTISM",
+      "study_title": "Extension for Community Healthcare Outcomes Autism Replication Evaluation",
+      "citation": "ClinicalTrials.gov NCTNCT03677089",
+      "publication_year": 2018,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Longitudinal Pattern of ASD Screening in PCP Charts",
+          "Longitudinal Pattern of Reported Co-occurring Medical Conditions Correctly Treated in PCP Charts"
+        ],
+        "outcome_measures": [
+          "Longitudinal Pattern of ASD Screening in PCP Charts",
+          "Longitudinal Pattern of Reported Co-occurring Medical Conditions Correctly Treated in PCP Charts"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03677089",
+        "enrollment": 148,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03677089"
+      }
+    },
+    {
+      "study_id": "CT_NCT05302167",
+      "study_type": "RCT",
+      "condition": "AUTISM",
+      "study_title": "Molehill Mountain Feasibility Study.",
+      "citation": "ClinicalTrials.gov NCTNCT05302167",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in 7-item Generalised Anxiety Disorder Scale (GAD-7)",
+          "App acceptability/ feasibility survey"
+        ],
+        "outcome_measures": [
+          "Change in 7-item Generalised Anxiety Disorder Scale (GAD-7)",
+          "App acceptability/ feasibility survey"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05302167",
+        "enrollment": 100,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05302167"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 3,
+    "pubmed_added": 0,
+    "total_added": 3,
+    "expansion_date": "2025-12-23T23:42:20.378710"
+  }
+}

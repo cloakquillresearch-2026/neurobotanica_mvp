@@ -3,7 +3,7 @@
   "condition": "MULTIPLE_SCLEROSIS",
   "phase": "3",
   "priority": "Phase 3 - Expansion (Sativex Precedent)",
-  "total_studies": 15,
+  "total_studies": 32,
   "studies": [
     {
       "study_id": "MS_RCT_001",
@@ -559,6 +559,596 @@
       },
       "regulatory_relevance": "CRITICAL - Progressive MS indication; 36-month neuroprotection data; Lancet Neurology; subgroup neuroprotection signal",
       "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CT_NCT01964547",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Randomized Study of Sativex on Cognitive Function and Mood: Multiple Sclerosis Patients",
+      "citation": "ClinicalTrials.gov NCTNCT01964547",
+      "publication_year": 2013,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline to the End of Treatment in Paced Auditory Serial Addition Test (PASAT) Total Score."
+        ],
+        "outcome_measures": [
+          "Change From Baseline to the End of Treatment in Paced Auditory Serial Addition Test (PASAT) Total Score."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01964547",
+        "enrollment": 121,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01964547"
+      }
+    },
+    {
+      "study_id": "CT_NCT00711646",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Study of Sativex® for Relief of Spasticity in Subjects With Multiple Sclerosis.",
+      "citation": "ClinicalTrials.gov NCTNCT00711646",
+      "publication_year": 2004,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex®",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Assessment of Change From Baseline in the Mean Spasticity 0-10 Numerical Rating Scale Score."
+        ],
+        "outcome_measures": [
+          "Assessment of Change From Baseline in the Mean Spasticity 0-10 Numerical Rating Scale Score."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00711646",
+        "enrollment": 189,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00711646"
+      }
+    },
+    {
+      "study_id": "CT_NCT02073474",
+      "study_type": "Clinical Trial",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "An Observational Post-Marketing Safety Registry of Sativex®",
+      "citation": "ClinicalTrials.gov NCTNCT02073474",
+      "publication_year": 2015,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex®",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Incidence rates of adverse events."
+        ],
+        "outcome_measures": [
+          "Incidence rates of adverse events."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02073474",
+        "enrollment": 978,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02073474"
+      }
+    },
+    {
+      "study_id": "CT_NCT02898974",
+      "study_type": "Clinical Trial",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Medical Marijuana and Its Effects on Motor Function in People With Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT02898974",
+      "publication_year": 2017,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Marijuana",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Fatigue",
+          "Muscle Strength",
+          "Postural Stability"
+        ],
+        "outcome_measures": [
+          "Fatigue",
+          "Muscle Strength",
+          "Postural Stability"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02898974",
+        "enrollment": 22,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02898974"
+      }
+    },
+    {
+      "study_id": "CT_NCT00678795",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Parallel Group Study to Compare Sativex® With Placebo in the Treatment of Detrusor Overactivity in Patients With Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT00678795",
+      "publication_year": 2005,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex®",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in the Mean Daily Number of Incontinence Episodes at the End of Treatment"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in the Mean Daily Number of Incontinence Episodes at the End of Treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00678795",
+        "enrollment": 135,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00678795"
+      }
+    },
+    {
+      "study_id": "CT_NCT03186664",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "The Role of SAtivex® in Robotic-Rehabilitation",
+      "citation": "ClinicalTrials.gov NCTNCT03186664",
+      "publication_year": 2018,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Functional Independence Measure",
+          "10m walking test"
+        ],
+        "outcome_measures": [
+          "Functional Independence Measure",
+          "10m walking test"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03186664",
+        "enrollment": 40,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03186664"
+      }
+    },
+    {
+      "study_id": "CT_NCT01599234",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Study to Evaluate the Efficacy of Sativex in Relieving Symptoms of Spasticity Due to Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT01599234",
+      "publication_year": 2005,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in Mean Spasticity 0-10 Numerical Rating Scale (NRS) Score During the Last 14 Day of Treatment (End of Treatment)"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in Mean Spasticity 0-10 Numerical Rating Scale (NRS) Score During the Last 14 Day of Treatment (End of Treatment)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01599234",
+        "enrollment": 337,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01599234"
+      }
+    },
+    {
+      "study_id": "CT_NCT01538225",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Neurophysiological Study of Sativex in Multiple Sclerosis (MS) Spasticity",
+      "citation": "ClinicalTrials.gov NCTNCT01538225",
+      "publication_year": 2013,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex®",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "H/M reflex ratio"
+        ],
+        "outcome_measures": [
+          "H/M reflex ratio"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01538225",
+        "enrollment": 45,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01538225"
+      }
+    },
+    {
+      "study_id": "CT_NCT00391079",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Sativex Versus Placebo When Added to Existing Treatment for Central Neuropathic Pain in MS",
+      "citation": "ClinicalTrials.gov NCTNCT00391079",
+      "publication_year": 2008,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Mean Pain Due to MS NRS Score",
+          "Number of Patients With at Least 30% Improvement in Numerical Rating Scale (NRS) Pain Score From Baseline"
+        ],
+        "outcome_measures": [
+          "Change in Mean Pain Due to MS NRS Score",
+          "Number of Patients With at Least 30% Improvement in Numerical Rating Scale (NRS) Pain Score From Baseline"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00391079",
+        "enrollment": 339,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00391079"
+      }
+    },
+    {
+      "study_id": "CT_NCT00248378",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Short-Term Effects of Medicinal Cannabis Therapy on Spasticity in Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT00248378",
+      "publication_year": 2005,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Smoked Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Reduction in spasticity as indicated by the: Ashworth Spasticity Scale, Timed 25-ft Walk, and Grooved Pegboard Test"
+        ],
+        "outcome_measures": [
+          "Reduction in spasticity as indicated by the: Ashworth Spasticity Scale, Timed 25-ft Walk, and Grooved Pegboard Test"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00248378",
+        "enrollment": 30,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00248378"
+      }
+    },
+    {
+      "study_id": "CT_NCT01037088",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Effects of Vaporized Marijuana on Neuropathic Pain",
+      "citation": "ClinicalTrials.gov NCTNCT01037088",
+      "publication_year": 2012,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Mild dose cannabis, Low dose cannabis, Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Participants With 30% or Greater Reduction in Pain Intensity"
+        ],
+        "outcome_measures": [
+          "Participants With 30% or Greater Reduction in Pain Intensity"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01037088",
+        "enrollment": 44,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01037088"
+      }
+    },
+    {
+      "study_id": "CT_NCT00702468",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Evaluate the Maintenance of Effect After Long-term Treatment With Sativex® in Subjects With Symptoms of Spasticity Due to Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT00702468",
+      "publication_year": 2009,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Subjects Who Experience Treatment Failure."
+        ],
+        "outcome_measures": [
+          "Number of Subjects Who Experience Treatment Failure."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00702468",
+        "enrollment": 36,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00702468"
+      }
+    },
+    {
+      "study_id": "CT_NCT04657666",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Trial to Evaluate the Effect of Nabiximols Oromucosal Spray on Clinical Measures of Spasticity in Participants With Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT04657666",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Nabiximols",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in Lower Limb Muscle Tone-6 (LLMT-6)"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in Lower Limb Muscle Tone-6 (LLMT-6)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04657666",
+        "enrollment": 68,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04657666"
+      }
+    },
+    {
+      "study_id": "CT_NCT01604265",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Study of Sativex in the Treatment of Central Neuropathic Pain Due to Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT01604265",
+      "publication_year": 2002,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change From Baseline in the Mean Pain 0-10 Numerical Rating Scale Score at the End of Treatment (4 Weeks)"
+        ],
+        "outcome_measures": [
+          "Change From Baseline in the Mean Pain 0-10 Numerical Rating Scale Score at the End of Treatment (4 Weeks)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01604265",
+        "enrollment": 66,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01604265"
+      }
+    },
+    {
+      "study_id": "CT_NCT00959218",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Efficacy and Safety of the Pain Relieving Effect of Dronabinol in Central Neuropathic Pain Related to Multiple Sclerosis",
+      "citation": "ClinicalTrials.gov NCTNCT00959218",
+      "publication_year": 2010,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean change of baseline pain severity score on the 11-point Likert Numerical Rating Scale recorded in patient diary"
+        ],
+        "outcome_measures": [
+          "Mean change of baseline pain severity score on the 11-point Likert Numerical Rating Scale recorded in patient diary"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00959218",
+        "enrollment": 240,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00959218"
+      }
+    },
+    {
+      "study_id": "CT_NCT00681538",
+      "study_type": "RCT",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "A Study of the Safety and Effectiveness of Sativex®, for the Relief of Symptoms of Spasticity in Subjects, From Phase B, With Multiple Sclerosis (MS)",
+      "citation": "ClinicalTrials.gov NCTNCT00681538",
+      "publication_year": 2009,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex®",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The Change in Mean Spasticity Numerical Rating Scale (NRS) Score From Baseline to End of Treatment (Phase B)."
+        ],
+        "outcome_measures": [
+          "The Change in Mean Spasticity Numerical Rating Scale (NRS) Score From Baseline to End of Treatment (Phase B)."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00681538",
+        "enrollment": 572,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00681538"
+      }
+    },
+    {
+      "study_id": "CT_NCT03886753",
+      "study_type": "Clinical Trial",
+      "condition": "MULTIPLE_SCLEROSIS",
+      "study_title": "Pharmacokinetic (PK) and Pharmacodynamics (PD) Study of Ilera Specific Products",
+      "citation": "ClinicalTrials.gov NCTNCT03886753",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in symptoms"
+        ],
+        "outcome_measures": [
+          "Change in symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03886753",
+        "enrollment": 10,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03886753"
+      }
     }
-  ]
+  ],
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 1
+  }
 }

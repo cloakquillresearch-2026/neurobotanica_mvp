@@ -1,0 +1,123 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "MIGRAINE",
+  "phase": "3",
+  "priority": "Expansion",
+  "total_studies": 3,
+  "studies": [
+    {
+      "study_id": "CT_NCT06138171",
+      "study_type": "Clinical Trial",
+      "condition": "MIGRAINE",
+      "study_title": "Personality, Defences, Central Sensitization, and Trauma in Women With Chronic Migraine, Fibromyalgia, and Vulvodynia",
+      "citation": "ClinicalTrials.gov NCTNCT06138171",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Central sensitivity index",
+          "Traumatic experiences index",
+          "Personality traits",
+          "Defense mechanisms",
+          "Mental pain",
+          "Environmental sensitivity"
+        ],
+        "outcome_measures": [
+          "Central sensitivity index",
+          "Traumatic experiences index",
+          "Personality traits",
+          "Defense mechanisms",
+          "Mental pain",
+          "Environmental sensitivity"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT06138171",
+        "enrollment": 1006,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT06138171"
+      }
+    },
+    {
+      "study_id": "CT_NCT04360044",
+      "study_type": "RCT",
+      "condition": "MIGRAINE",
+      "study_title": "Efficacy of Inhaled Cannabis for Acute Migraine Treatment",
+      "citation": "ClinicalTrials.gov NCTNCT04360044",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sham Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Headache Pain Relief at 2 Hours Post-Treatment"
+        ],
+        "outcome_measures": [
+          "Headache Pain Relief at 2 Hours Post-Treatment"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04360044",
+        "enrollment": 92,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04360044"
+      }
+    },
+    {
+      "study_id": "CT_NCT00123201",
+      "study_type": "RCT",
+      "condition": "MIGRAINE",
+      "study_title": "Study to Evaluate the Efficacy and Safety of Dronabinol Metered Dose Inhaler (MDI) in Acute Treatment of Migraine Headache",
+      "citation": "ClinicalTrials.gov NCTNCT00123201",
+      "publication_year": 2007,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol MDI",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00123201",
+        "enrollment": null,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00123201"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 3,
+    "pubmed_added": 0,
+    "total_added": 3,
+    "expansion_date": "2025-12-23T23:42:12.326502"
+  }
+}

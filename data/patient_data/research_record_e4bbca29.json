@@ -1,0 +1,31 @@
+{
+  "research_id": "e4bbca29-f675-4ca4-a487-4166f4c922f2",
+  "deidentified_data": {
+    "demographics": {
+      "age_range": "45-54",
+      "experience_level": "occasional",
+      "thc_tolerance": "medium",
+      "gender_category": "M"
+    },
+    "treatment": {
+      "condition_category": "chronic_pain",
+      "treatment_duration_weeks": 8,
+      "delivery_method": "oral",
+      "dosage_range": "moderate"
+    },
+    "response": {
+      "efficacy_rating": 7,
+      "adverse_events_count": 2,
+      "adherence_level": "high",
+      "overall_satisfaction": 8
+    },
+    "_metadata": {
+      "deidentified_at": "2025-12-24T20:30:32.284106",
+      "consent_id": "8be2e9cc-c801-44c4-be2a-9886ea27d1eb",
+      "data_quality_score": 1.0,
+      "research_eligible": true
+    }
+  },
+  "storage_timestamp": "2025-12-24T20:30:32.284344",
+  "consent_id": "8be2e9cc-c801-44c4-be2a-9886ea27d1eb"
+}

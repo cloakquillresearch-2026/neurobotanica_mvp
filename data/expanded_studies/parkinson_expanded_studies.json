@@ -1,0 +1,49 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "PARKINSON",
+  "phase": "3",
+  "priority": "Expansion",
+  "total_studies": 1,
+  "studies": [
+    {
+      "study_id": "CT_NCT03886753",
+      "study_type": "Clinical Trial",
+      "condition": "PARKINSON",
+      "study_title": "Pharmacokinetic (PK) and Pharmacodynamics (PD) Study of Ilera Specific Products",
+      "citation": "ClinicalTrials.gov NCTNCT03886753",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in symptoms"
+        ],
+        "outcome_measures": [
+          "Change in symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03886753",
+        "enrollment": 10,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03886753"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 1,
+    "pubmed_added": 0,
+    "total_added": 1,
+    "expansion_date": "2025-12-23T23:42:02.331316"
+  }
+}

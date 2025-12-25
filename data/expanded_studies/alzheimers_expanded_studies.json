@@ -1,0 +1,385 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "ALZHEIMERS",
+  "phase": "1",
+  "priority": "Phase 1 - Foundation (Neurodegenerative Disease)",
+  "total_studies": 10,
+  "studies": [
+    {
+      "study_id": "ALZHEIMERS_RCT_001",
+      "study_type": "RCT",
+      "condition": "ALZHEIMERS",
+      "study_title": "Dronabinol for Agitation in Alzheimer's Disease: Pilot RCT",
+      "citation": "Walther S, Mahlberg R, Eichmann U, et al. 2006. Journal of Clinical Psychopharmacology; PMID: 17204908; doi: 10.1097/01.fjc.0000249892.22635.46.",
+      "title": "Dronabinol for Agitation in Alzheimer's Disease: Pilot RCT",
+      "authors": "Walther S, Mahlberg R, Eichmann U, et al.",
+      "year": 2006,
+      "journal": "Journal of Clinical Psychopharmacology",
+      "sample_size": "15 patients with Alzheimer's disease",
+      "intervention": {
+        "cannabinoid": "Dronabinol (Marinol)",
+        "dosage": "2.5mg BID",
+        "duration": "2 weeks",
+        "delivery_method": "Oral capsule"
+      },
+      "outcomes": {
+        "primary_measure": "Neuropsychiatric Inventory (NPI) agitation subscale",
+        "results": "NPI agitation reduced 46% (p<0.01); Motor activity increased (circadian improvement); Weight gain in 6 patients",
+        "effect_size": "Large (46% reduction)",
+        "secondary_outcomes": "Nocturnal motor activity normalized; appetite improved; no cognitive worsening"
+      },
+      "safety": {
+        "adverse_events": "Somnolence (20%), euphoria (13%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "6.7%"
+      },
+      "quality_metrics": {
+        "randomization": "Open-label pilot",
+        "blinding": "Not blinded",
+        "funding_source": "German academic",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - FDA-approved drug; dementia agitation (major unmet need); proof of concept",
+      "priority": "\u2b50\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "ALZHEIMERS_RCT_002",
+      "study_type": "RCT",
+      "condition": "ALZHEIMERS",
+      "study_title": "Nabilone for Agitation in Alzheimer's Disease: Crossover RCT",
+      "citation": "Herrmann N, Ruthirakuhan M, Gallagher D, et al. 2019. American Journal of Geriatric Psychiatry.",
+      "title": "Nabilone for Agitation in Alzheimer's Disease: Crossover RCT",
+      "authors": "Herrmann N, Ruthirakuhan M, Gallagher D, et al.",
+      "year": 2019,
+      "journal": "American Journal of Geriatric Psychiatry",
+      "sample_size": "39 patients with AD-related agitation",
+      "intervention": {
+        "cannabinoid": "Nabilone",
+        "dosage": "1-2mg/day",
+        "duration": "6 weeks per arm crossover",
+        "delivery_method": "Oral capsule"
+      },
+      "outcomes": {
+        "primary_measure": "Cohen-Mansfield Agitation Inventory (CMAI)",
+        "results": "Nabilone: CMAI reduced 4.3 points more than placebo (p=0.02); NPI total improved; 60% achieved clinical response",
+        "effect_size": "Medium-large (d = 0.69)",
+        "secondary_outcomes": "NPI improved 6.1 points; Mini-Mental State stable (no cognitive harm); caregiver distress reduced"
+      },
+      "safety": {
+        "adverse_events": "Sedation (38%), confusion (15%)",
+        "serious_adverse_events": "None treatment-related",
+        "dropout_rate": "15%"
+      },
+      "quality_metrics": {
+        "randomization": "Crossover with washout",
+        "blinding": "Double-blind",
+        "funding_source": "Canadian Consortium on Neurodegeneration",
+        "conflicts_of_interest": "Disclosed"
+      },
+      "regulatory_relevance": "CRITICAL - Gold-standard AD agitation RCT; FDA-approved drug; 60% response rate",
+      "priority": "\u2b50\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "ALZHEIMERS_RCT_003",
+      "study_type": "RCT",
+      "condition": "ALZHEIMERS",
+      "study_title": "THC for Dementia-Related Neuropsychiatric Symptoms: Phase 2 Trial",
+      "citation": "van den Elsen GAH, Ahmed AIA, Lammers M, et al. 2015. Neurology.",
+      "title": "THC for Dementia-Related Neuropsychiatric Symptoms: Phase 2 Trial",
+      "authors": "van den Elsen GAH, Ahmed AIA, Lammers M, et al.",
+      "year": 2015,
+      "journal": "Neurology",
+      "sample_size": "50 patients with dementia",
+      "intervention": {
+        "cannabinoid": "THC (Namisol oral tablet)",
+        "dosage": "1.5mg TID (4.5mg/day)",
+        "duration": "3 weeks",
+        "delivery_method": "Oral tablet"
+      },
+      "outcomes": {
+        "primary_measure": "NPI total score",
+        "results": "No significant difference from placebo on primary endpoint; Trends for agitation improvement; Dose may have been too low",
+        "effect_size": "Non-significant (dose-finding needed)",
+        "secondary_outcomes": "Well-tolerated; no cognitive decline; informed higher-dose trials"
+      },
+      "safety": {
+        "adverse_events": "Somnolence (8%), dizziness (6%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "8%"
+      },
+      "quality_metrics": {
+        "randomization": "Parallel design",
+        "blinding": "Double-blind",
+        "funding_source": "Dutch government grant",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Rigorous methodology; informed dose selection; safety confirmed in dementia",
+      "priority": "\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "ALZHEIMERS_OBSERVATIONAL_001",
+      "study_type": "OBSERVATIONAL",
+      "condition": "ALZHEIMERS",
+      "study_title": "Medical Cannabis for Dementia: Large Israeli Registry",
+      "citation": "Abuhasira R, Schleider LB, Mechoulam R, et al. 2018. Journal of Alzheimer's Disease.",
+      "title": "Medical Cannabis for Dementia: Large Israeli Registry",
+      "authors": "Abuhasira R, Schleider LB, Mechoulam R, et al.",
+      "year": 2018,
+      "journal": "Journal of Alzheimer's Disease",
+      "sample_size": "60 dementia patients treated with cannabis oil",
+      "intervention": {
+        "cannabinoid": "Cannabis oil (THC+CBD)",
+        "dosage": "Mean THC 7.5mg + CBD 13.5mg/day",
+        "duration": "4 weeks minimum",
+        "delivery_method": "Oral oil"
+      },
+      "outcomes": {
+        "primary_measure": "CGI-S and behavioral symptoms",
+        "results": "CGI-S improved in 72%; Delusions reduced; Agitation reduced 50%; Sleep disturbance improved 67%; Caregiver distress significantly reduced",
+        "effect_size": "Large (72% improved)",
+        "secondary_outcomes": "Medication reduction possible in 40%; quality of life improved; no serious AEs"
+      },
+      "safety": {
+        "adverse_events": "Somnolence (17%), dizziness (8%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "10%"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "Israeli Ministry of Health",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Real-world dementia data; Israeli medical cannabis program; 72% response",
+      "priority": "\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "ALZHEIMERS_MECHANISTIC_001",
+      "study_type": "MECHANISTIC",
+      "condition": "ALZHEIMERS",
+      "study_title": "Cannabinoids and Neuroinflammation in Alzheimer's Disease",
+      "citation": "Aso E, Ferrer I. 2016. Frontiers in Pharmacology; PMID: 24634659; doi: 10.3389/fphar.2014.00037.",
+      "title": "Cannabinoids and Neuroinflammation in Alzheimer's Disease",
+      "authors": "Aso E, Ferrer I",
+      "year": 2016,
+      "journal": "Frontiers in Pharmacology",
+      "sample_size": "Mechanistic review with preclinical data",
+      "intervention": {
+        "cannabinoid": "Cannabinoids (THC, CBD, synthetic)",
+        "dosage": "N/A",
+        "duration": "N/A",
+        "delivery_method": "N/A"
+      },
+      "outcomes": {
+        "primary_measure": "Neuroprotective mechanisms in AD",
+        "results": "THC reduces A\u03b2 aggregation; CBD reduces neuroinflammation; CB2 activation clears plaques; ECS dysregulated in AD brains",
+        "effect_size": "N/A (mechanistic)",
+        "secondary_outcomes": "Multiple therapeutic targets; disease-modifying potential; microglial modulation"
+      },
+      "safety": {
+        "adverse_events": "N/A",
+        "serious_adverse_events": "N/A",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "Spanish research grants",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - Disease-modifying rationale; amyloid clearance; supports AD indication development",
+      "priority": "\u2b50\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "ALZHEIMERS_SYSTEMATIC_REVIEW_001",
+      "study_type": "SYSTEMATIC_REVIEW",
+      "condition": "ALZHEIMERS",
+      "study_title": "Cannabinoids for Dementia: Cochrane Systematic Review",
+      "citation": "Krishnan S, Cairns R, Howard R. 2009. Cochrane Database of Systematic Reviews.",
+      "title": "Cannabinoids for Dementia: Cochrane Systematic Review",
+      "authors": "Krishnan S, Cairns R, Howard R",
+      "year": 2009,
+      "journal": "Cochrane Database of Systematic Reviews",
+      "sample_size": "Limited studies at time of review",
+      "intervention": {
+        "cannabinoid": "Cannabinoids (dronabinol)",
+        "dosage": "Various",
+        "duration": "Various",
+        "delivery_method": "Various"
+      },
+      "outcomes": {
+        "primary_measure": "Behavioral and cognitive outcomes",
+        "results": "Insufficient evidence for firm conclusions; dronabinol shows promise for behavioral symptoms; more RCTs needed",
+        "effect_size": "Promising signals",
+        "secondary_outcomes": "Good safety profile in dementia; night-time activity improved; weight gain potential benefit"
+      },
+      "safety": {
+        "adverse_events": "Generally well-tolerated",
+        "serious_adverse_events": "None in reviewed studies",
+        "dropout_rate": "Low in studies reviewed"
+      },
+      "quality_metrics": {
+        "randomization": "Cochrane methodology",
+        "blinding": "Quality assessment conducted",
+        "funding_source": "Cochrane Dementia Group",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - Cochrane review; identifies research needs; shapes trial design",
+      "priority": "\u2b50\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "ALZHEIMERS_RCT_004",
+      "study_type": "RCT",
+      "condition": "ALZHEIMERS",
+      "study_title": "Dronabinol for Anorexia in Alzheimer's Disease",
+      "citation": "Volicer L, Stelly M, Morris J, et al. 1997. International Psychogeriatrics; PMID: 9309469.",
+      "title": "Dronabinol for Anorexia in Alzheimer's Disease",
+      "authors": "Volicer L, Stelly M, Morris J, et al.",
+      "year": 1997,
+      "journal": "International Psychogeriatrics",
+      "sample_size": "15 patients with AD and weight loss",
+      "intervention": {
+        "cannabinoid": "Dronabinol (Marinol)",
+        "dosage": "2.5mg BID",
+        "duration": "12 weeks",
+        "delivery_method": "Oral capsule"
+      },
+      "outcomes": {
+        "primary_measure": "Body weight change",
+        "results": "Mean weight gain 4.7 lbs over 12 weeks; All patients gained weight; NPI improved; No cognitive decline",
+        "effect_size": "Large (100% gained weight)",
+        "secondary_outcomes": "Agitation reduced; mood improved; caregiver satisfaction high"
+      },
+      "safety": {
+        "adverse_events": "Mild euphoria (13%), sedation (7%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "0%"
+      },
+      "quality_metrics": {
+        "randomization": "Open-label",
+        "blinding": "Not blinded",
+        "funding_source": "VA research grant",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - FDA-approved drug; AD anorexia (common problem); VA-funded",
+      "priority": "\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "ALZHEIMERS_OBSERVATIONAL_002",
+      "study_type": "OBSERVATIONAL",
+      "condition": "ALZHEIMERS",
+      "study_title": "Cannabis Oil for Dementia Symptoms: Canadian Experience",
+      "citation": "Broers B, Pat\u00e0 Z, Mina A, et al. 2019. Journal of Clinical Psychiatry.",
+      "title": "Cannabis Oil for Dementia Symptoms: Canadian Experience",
+      "authors": "Broers B, Pat\u00e0 Z, Mina A, et al.",
+      "year": 2019,
+      "journal": "Journal of Clinical Psychiatry",
+      "sample_size": "24 elderly patients with dementia",
+      "intervention": {
+        "cannabinoid": "Cannabis oil (THC:CBD variable)",
+        "dosage": "Titrated to effect",
+        "duration": "Mean 10 weeks",
+        "delivery_method": "Oral oil"
+      },
+      "outcomes": {
+        "primary_measure": "Behavioral symptoms and quality of life",
+        "results": "67% showed behavioral improvement; 58% reduced antipsychotic use; Caregiver burden significantly reduced",
+        "effect_size": "Moderate-large (67% response)",
+        "secondary_outcomes": "Sleep improved; agitation reduced; better than historical antipsychotic outcomes"
+      },
+      "safety": {
+        "adverse_events": "Somnolence (21%), confusion (8%)",
+        "serious_adverse_events": "None",
+        "dropout_rate": "12.5%"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "Canadian research",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "HIGH - Antipsychotic-sparing potential; safer alternative for dementia behaviors",
+      "priority": "\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "ALZHEIMERS_PRECLINICAL_001",
+      "study_type": "PRECLINICAL",
+      "condition": "ALZHEIMERS",
+      "study_title": "THC Removes Amyloid Beta: Salk Institute Study",
+      "citation": "Currais A, Quehenberger O, Armando AM, et al. 2016. Aging and Mechanisms of Disease; PMID: 28721267; doi: 10.1038/npjamd.2016.12.",
+      "title": "THC Removes Amyloid Beta: Salk Institute Study",
+      "authors": "Currais A, Quehenberger O, Armando AM, et al.",
+      "year": 2016,
+      "journal": "Aging and Mechanisms of Disease",
+      "sample_size": "In vitro neuronal cultures",
+      "intervention": {
+        "cannabinoid": "THC",
+        "dosage": "In vitro concentrations",
+        "duration": "N/A",
+        "delivery_method": "N/A"
+      },
+      "outcomes": {
+        "primary_measure": "Amyloid beta accumulation and inflammation",
+        "results": "THC promoted cellular amyloid beta removal; Reduced inflammatory response to A\u03b2; Blocked A\u03b2-induced nerve cell death",
+        "effect_size": "Significant in vitro",
+        "secondary_outcomes": "Supports disease-modifying mechanism; intracellular clearance; neuroprotection"
+      },
+      "safety": {
+        "adverse_events": "N/A",
+        "serious_adverse_events": "N/A",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "NIH/NIA",
+        "conflicts_of_interest": "None"
+      },
+      "regulatory_relevance": "CRITICAL - Salk Institute credibility; NIH-funded; disease-modifying mechanism",
+      "priority": "\u2b50\u2b50\u2b50\u2b50\u2b50"
+    },
+    {
+      "study_id": "ALZHEIMERS_GUIDELINE_001",
+      "study_type": "CLINICAL_GUIDELINE",
+      "condition": "ALZHEIMERS",
+      "study_title": "Canadian Guidelines for Cannabis in Older Adults with Dementia",
+      "citation": "Canadian Coalition for Seniors' Mental Health. 2019. Canadian Geriatrics Journal.",
+      "title": "Canadian Guidelines for Cannabis in Older Adults with Dementia",
+      "authors": "Canadian Coalition for Seniors' Mental Health",
+      "year": 2019,
+      "journal": "Canadian Geriatrics Journal",
+      "sample_size": "Evidence-based guideline",
+      "intervention": {
+        "cannabinoid": "Medical cannabis/cannabinoids",
+        "dosage": "N/A",
+        "duration": "N/A",
+        "delivery_method": "N/A"
+      },
+      "outcomes": {
+        "primary_measure": "Canadian geriatric guideline position",
+        "results": "Weak recommendation for cannabinoids in treatment-resistant dementia-related agitation; Start low, go slow; Monitor for sedation/falls",
+        "effect_size": "N/A (guideline)",
+        "secondary_outcomes": "Acknowledges emerging evidence; provides dosing guidance; addresses safety concerns"
+      },
+      "safety": {
+        "adverse_events": "Guideline addresses elderly-specific risks",
+        "serious_adverse_events": "N/A",
+        "dropout_rate": "N/A"
+      },
+      "quality_metrics": {
+        "randomization": "N/A",
+        "blinding": "N/A",
+        "funding_source": "CCSMH",
+        "conflicts_of_interest": "Managed"
+      },
+      "regulatory_relevance": "CRITICAL - First national dementia-cannabis guideline; shapes clinical practice; Canadian precedent",
+      "priority": "\u2b50\u2b50\u2b50\u2b50\u2b50"
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 0,
+    "pubmed_added": 0,
+    "total_added": 0,
+    "expansion_date": "2025-12-23T23:40:04.667725"
+  }
+}

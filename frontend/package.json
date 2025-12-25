@@ -1,0 +1,75 @@
+{
+  "name": "neurobotanica-pos",
+  "version": "1.0.0",
+  "description": "NeuroBotanica Tablet POS Interface for Nevada Dispensaries",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export",
+    "build:static": "next build && next export",
+    "build:electron": "next build && next export && electron-builder",
+    "build:android": "npx cap add android && npx cap sync android && cd android && ./gradlew assembleDebug",
+    "build:ios": "npx cap add ios && npx cap sync ios"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@capacitor/core": "^5.0.0",
+    "@capacitor/android": "^5.0.0",
+    "@capacitor/ios": "^5.0.0",
+    "@capacitor/cli": "^5.0.0",
+    "electron": "^25.0.0",
+    "electron-builder": "^24.0.0",
+    "axios": "^1.6.0",
+    "tailwindcss": "^3.3.0",
+    "lucide-react": "^0.294.0",
+    "@headlessui/react": "^1.7.0",
+    "react-hook-form": "^7.48.0",
+    "swr": "^2.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
+  },
+  "main": "electron.js",
+  "homepage": "./",
+  "build": {
+    "appId": "com.neurobotanica.pos",
+    "productName": "NeuroBotanica POS",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "out/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.business"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "public/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "public/icon.png"
+    }
+  },
+  "capacitor": {
+    "appId": "com.neurobotanica.pos",
+    "appName": "NeuroBotanica POS",
+    "bundledWebRuntime": false,
+    "webDir": "out"
+  }
+}

@@ -3,7 +3,7 @@
   "condition": "GLAUCOMA",
   "phase": "3",
   "priority": "Phase 3 - Expansion (Classic Cannabis Indication)",
-  "total_studies": 17,
+  "total_studies": 19,
   "studies": [
     {
       "study_id": "GLAUCOMA_RCT_001",
@@ -634,6 +634,78 @@
       },
       "regulatory_relevance": "HIGH - Classic randomized evidence for oral synthetic cannabinoids lowering IOP; supports structure/activity and non-plant analog pathways",
       "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CT_NCT04596826",
+      "study_type": "RCT",
+      "condition": "GLAUCOMA",
+      "study_title": "The Effect of Dronabinol on Ocular Hemodynamics in Patients With Primary Open Angle Glaucoma",
+      "citation": "ClinicalTrials.gov NCTNCT04596826",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol 5 MG, Dronabinol 10 MG",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Optic nerve head blood flow"
+        ],
+        "outcome_measures": [
+          "Optic nerve head blood flow"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04596826",
+        "enrollment": 51,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04596826"
+      }
+    },
+    {
+      "study_id": "CT_NCT03886753",
+      "study_type": "Clinical Trial",
+      "condition": "GLAUCOMA",
+      "study_title": "Pharmacokinetic (PK) and Pharmacodynamics (PD) Study of Ilera Specific Products",
+      "citation": "ClinicalTrials.gov NCTNCT03886753",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in symptoms"
+        ],
+        "outcome_measures": [
+          "Change in symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03886753",
+        "enrollment": 10,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03886753"
+      }
     }
-  ]
+  ],
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 1
+  }
 }

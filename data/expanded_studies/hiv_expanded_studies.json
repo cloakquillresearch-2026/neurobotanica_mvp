@@ -1,0 +1,327 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "HIV",
+  "phase": "3",
+  "priority": "Expansion",
+  "total_studies": 9,
+  "studies": [
+    {
+      "study_id": "CT_NCT03066128",
+      "study_type": "RCT",
+      "condition": "HIV",
+      "study_title": "Point-of-care Viral Load Testing to Enable Streamlined Care and Task Shifting for Chronic HIV Care",
+      "citation": "ClinicalTrials.gov NCTNCT03066128",
+      "publication_year": 2018,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Composite measure of virological suppression and retention in care"
+        ],
+        "outcome_measures": [
+          "Composite measure of virological suppression and retention in care"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03066128",
+        "enrollment": 390,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03066128"
+      }
+    },
+    {
+      "study_id": "CT_NCT03886753",
+      "study_type": "Clinical Trial",
+      "condition": "HIV",
+      "study_title": "Pharmacokinetic (PK) and Pharmacodynamics (PD) Study of Ilera Specific Products",
+      "citation": "ClinicalTrials.gov NCTNCT03886753",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in symptoms"
+        ],
+        "outcome_measures": [
+          "Change in symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03886753",
+        "enrollment": 10,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03886753"
+      }
+    },
+    {
+      "study_id": "CT_NCT04096053",
+      "study_type": "RCT",
+      "condition": "HIV",
+      "study_title": "Transgender Education for Affirmative and Competent HIV and Healthcare",
+      "citation": "ClinicalTrials.gov NCTNCT04096053",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Workshop Recruitment Rate",
+          "Workshop Completion Rate",
+          "Survey completion rate",
+          "Satisfaction with the workshop"
+        ],
+        "outcome_measures": [
+          "Workshop Recruitment Rate",
+          "Workshop Completion Rate",
+          "Survey completion rate",
+          "Satisfaction with the workshop"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04096053",
+        "enrollment": 78,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04096053"
+      }
+    },
+    {
+      "study_id": "CT_NCT03633721",
+      "study_type": "RCT",
+      "condition": "HIV",
+      "study_title": "Acute Effects of Cannabis on Cognition and Mobility in Older HIV-infected and HIV-Un-infected Women",
+      "citation": "ClinicalTrials.gov NCTNCT03633721",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Acute Effects of Cannabis on Mobility Gait Speed (m/s)",
+          "Change in Acute Effects of Cannabis on Balance - Functional Reach (cm)",
+          "Change in Acute Effects of Cannabis on Cognition Using Sustained Attention Response Test (% Correct Suppressions)"
+        ],
+        "outcome_measures": [
+          "Change in Acute Effects of Cannabis on Mobility Gait Speed (m/s)",
+          "Change in Acute Effects of Cannabis on Balance - Functional Reach (cm)",
+          "Change in Acute Effects of Cannabis on Cognition Using Sustained Attention Response Test (% Correct Suppressions)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03633721",
+        "enrollment": 25,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03633721"
+      }
+    },
+    {
+      "study_id": "CT_NCT00000737",
+      "study_type": "RCT",
+      "condition": "HIV",
+      "study_title": "A Phase I/II Study to Evaluate Single Agent and Combination Therapy With Megestrol Acetate and Dronabinol for the Treatment of HIV-Wasting Syndrome",
+      "citation": "ClinicalTrials.gov NCTNCT00000737",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [],
+        "outcome_measures": [],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00000737",
+        "enrollment": 56,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00000737"
+      }
+    },
+    {
+      "study_id": "CT_NCT00642499",
+      "study_type": "RCT",
+      "condition": "HIV",
+      "study_title": "Dronabinol Versus Placebo in Treatment and Prevention of Highly Active Anti-Retroviral Therapy (HAART)-Related Nausea and Vomiting",
+      "citation": "ClinicalTrials.gov NCTNCT00642499",
+      "publication_year": 2005,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The absence of nausea as indicated by a visual analog scale (VAS) score < 5 mm"
+        ],
+        "outcome_measures": [
+          "The absence of nausea as indicated by a visual analog scale (VAS) score < 5 mm"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00642499",
+        "enrollment": 103,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00642499"
+      }
+    },
+    {
+      "study_id": "CT_NCT03099005",
+      "study_type": "RCT",
+      "condition": "HIV",
+      "study_title": "Effect of Cannabis and Endocannabinoids on HIV Neuropathic Pain",
+      "citation": "ClinicalTrials.gov NCTNCT03099005",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Phase 1 - Numerical Pain Rating Scale (NPRS)"
+        ],
+        "outcome_measures": [
+          "Phase 1 - Numerical Pain Rating Scale (NPRS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03099005",
+        "enrollment": 5,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03099005"
+      }
+    },
+    {
+      "study_id": "CT_NCT00079560",
+      "study_type": "RCT",
+      "condition": "HIV",
+      "study_title": "Comparing the Effects of Smoked and Oral Marijuana in Individuals With HIV/AIDS",
+      "citation": "ClinicalTrials.gov NCTNCT00079560",
+      "publication_year": 2005,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "daily caloric intake"
+        ],
+        "outcome_measures": [
+          "daily caloric intake"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00079560",
+        "enrollment": 30,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00079560"
+      }
+    },
+    {
+      "study_id": "CT_NCT04866004",
+      "study_type": "RCT",
+      "condition": "HIV",
+      "study_title": "Contingency Management for Cannabis Use for Persons With HIV",
+      "citation": "ClinicalTrials.gov NCTNCT04866004",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Contingency Management - Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Sustained cannabis abstinence for 28-days"
+        ],
+        "outcome_measures": [
+          "Sustained cannabis abstinence for 28-days"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04866004",
+        "enrollment": 25,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04866004"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 9,
+    "pubmed_added": 0,
+    "total_added": 9,
+    "expansion_date": "2025-12-23T23:42:17.463808"
+  }
+}

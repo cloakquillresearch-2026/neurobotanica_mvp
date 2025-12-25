@@ -1,5 +1,5 @@
 {
-  "validation_date": "2025-12-23T02:12:52.702929",
+  "validation_date": "2025-12-24T20:24:48.203259",
   "overall_status": "PASS",
   "errors": [],
   "warnings": [],
@@ -14,49 +14,85 @@
     "status": "PASS"
   },
   "quality_metrics": {
-    "total_correlations": 282,
-    "average_confidence": 0.692,
+    "total_correlations": 283,
+    "average_confidence": 0.6916,
     "quality_distribution": {
       "moderate": 240,
-      "good": 39,
-      "poor": 3
+      "good": 37,
+      "poor": 6
     },
-    "low_quality_count": 6,
+    "low_quality_count": 12,
     "low_quality_correlations": [
       {
-        "correlation_id": "TK2G_00048",
+        "correlation_id": "TK2G_00108",
         "quality": "moderate",
-        "confidence": 0.575,
+        "confidence": 0.5747570841014512,
         "direction": "tk_to_genomic"
       },
       {
-        "correlation_id": "TK2G_00110",
+        "correlation_id": "TK2G_00132",
         "quality": "moderate",
-        "confidence": 0.5866595804853861,
+        "confidence": 0.5938814023298176,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00133",
+        "quality": "poor",
+        "confidence": 0.5504150312758818,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00134",
+        "quality": "poor",
+        "confidence": 0.5504150312758818,
         "direction": "tk_to_genomic"
       },
       {
         "correlation_id": "TK2G_00140",
         "quality": "moderate",
-        "confidence": 0.5818365637708078,
+        "confidence": 0.5823302756561015,
         "direction": "tk_to_genomic"
       },
       {
-        "correlation_id": "TK2G_00165",
+        "correlation_id": "TK2G_00166",
         "quality": "moderate",
-        "confidence": 0.5959480091133351,
+        "confidence": 0.5999999999999999,
         "direction": "tk_to_genomic"
       },
       {
         "correlation_id": "TK2G_00167",
         "quality": "moderate",
-        "confidence": 0.5921944631189145,
+        "confidence": 0.5999999999999999,
         "direction": "tk_to_genomic"
       },
       {
-        "correlation_id": "TK2G_00201",
+        "correlation_id": "TK2G_00168",
+        "quality": "moderate",
+        "confidence": 0.5999999999999999,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00169",
+        "quality": "moderate",
+        "confidence": 0.5761964452756578,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00173",
         "quality": "poor",
-        "confidence": 0.5630186873360791,
+        "confidence": 0.5973015937807893,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00174",
+        "quality": "poor",
+        "confidence": 0.5889964850354299,
+        "direction": "tk_to_genomic"
+      },
+      {
+        "correlation_id": "TK2G_00199",
+        "quality": "poor",
+        "confidence": 0.5822129895286983,
         "direction": "tk_to_genomic"
       }
     ],
@@ -179,10 +215,18 @@
       ]
     },
     "correlations": {
-      "total": 282,
-      "tk_practices_covered": 25,
+      "total": 283,
+      "tk_practices_covered": 26,
       "genomic_targets_covered": 57,
-      "missing_tk_practices": []
+      "missing_tk_practices": [
+        "Hemp seed for appetite stimulation",
+        "Hemp seed oil for skin conditions",
+        "Hemp protein for muscle recovery",
+        "Hemp seed for constipation",
+        "Hemp for hypertension",
+        "Hemp fiber tea for diabetes",
+        "Hemp seed for lactation support"
+      ]
     },
     "status": "PASS"
   },

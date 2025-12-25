@@ -1932,6 +1932,651 @@
       },
       "regulatory_relevance": "CRITICAL - Longest anxiety safety study (24 months); minimal tolerance; sustained efficacy; comprehensive safety monitoring",
       "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CT_NCT03530800",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Dronabinol in Trichotillomania and Other Body Focused Repetitive Behaviors",
+      "citation": "ClinicalTrials.gov NCTNCT03530800",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "NIMH Trichotillomania Symptom Severity Scale (NIMH-TSS)",
+          "Skin Picking Symptom Assessment Scale (SP-SAS)"
+        ],
+        "outcome_measures": [
+          "NIMH Trichotillomania Symptom Severity Scale (NIMH-TSS)",
+          "Skin Picking Symptom Assessment Scale (SP-SAS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03530800",
+        "enrollment": 50,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03530800"
+      }
+    },
+    {
+      "study_id": "CT_NCT05253417",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "The CANabidiol Use for RElief of Short Term Insomnia",
+      "citation": "ClinicalTrials.gov NCTNCT05253417",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "50 mg Cannabidiol (CBD), 100 mg Cannabidiol (CBD)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "To investigate the effect of the administration of a 50mg and 100mg per day oral CBD product versus placebo over 8 weeks on insomnia severity index scores"
+        ],
+        "outcome_measures": [
+          "To investigate the effect of the administration of a 50mg and 100mg per day oral CBD product versus placebo over 8 weeks on insomnia severity index scores"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05253417",
+        "enrollment": 208,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05253417"
+      }
+    },
+    {
+      "study_id": "CT_NCT05023759",
+      "study_type": "Clinical Trial",
+      "condition": "ANXIETY",
+      "study_title": "Anxiety Symptoms in Relation to Use of Hemp-derived, Full Spectrum Cannabidiol (CBD)",
+      "citation": "ClinicalTrials.gov NCTNCT05023759",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Formula30A Full Spectrum Hemp Cannabidiol 25mg Capsules",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from Baseline Generalized Anxiety Disorder 7-Item Scale (GAD7) Score at 8 weeks"
+        ],
+        "outcome_measures": [
+          "Change from Baseline Generalized Anxiety Disorder 7-Item Scale (GAD7) Score at 8 weeks"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05023759",
+        "enrollment": 30,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05023759"
+      }
+    },
+    {
+      "study_id": "CT_NCT05823753",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Cannabidiol to Reduce Anxiety Reactivity",
+      "citation": "ClinicalTrials.gov NCTNCT05823753",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Anandamide",
+          "Change in state anxiety (SUDs) during stress task anticipation phase",
+          "Change in state anxiety (SUDs) during stress task performance phase"
+        ],
+        "outcome_measures": [
+          "Anandamide",
+          "Change in state anxiety (SUDs) during stress task anticipation phase",
+          "Change in state anxiety (SUDs) during stress task performance phase"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05823753",
+        "enrollment": 63,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05823753"
+      }
+    },
+    {
+      "study_id": "CT_NCT05324449",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Epidiolex® for Anxiety in Pediatric Epilepsy",
+      "citation": "ClinicalTrials.gov NCTNCT05324449",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol 100 MG/ML",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "CGI-I"
+        ],
+        "outcome_measures": [
+          "CGI-I"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05324449",
+        "enrollment": 20,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05324449"
+      }
+    },
+    {
+      "study_id": "CT_NCT03582137",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "A Study of Tolerability and Efficacy of Cannabidiol on Motor Symptoms in Parkinson's Disease",
+      "citation": "ClinicalTrials.gov NCTNCT03582137",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Movement Disorders Society-Unified Parkinson's Disease Rating Scale (MDS-UPDRS) Part III (Motor Examination) Scores"
+        ],
+        "outcome_measures": [
+          "Change in Movement Disorders Society-Unified Parkinson's Disease Rating Scale (MDS-UPDRS) Part III (Motor Examination) Scores"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03582137",
+        "enrollment": 74,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03582137"
+      }
+    },
+    {
+      "study_id": "CT_NCT03491384",
+      "study_type": "Clinical Trial",
+      "condition": "ANXIETY",
+      "study_title": "Anxiety, Inflammation, Stress, and Cannabinoids",
+      "citation": "ClinicalTrials.gov NCTNCT03491384",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis (smoked flower, ingested edible)",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Anxiety: Depression Anxiety Stress Scale (DASS21).",
+          "Change in Inflammation: Circulating Levels of Cytokines (Panel of Inflammatory Markers).",
+          "Patient Global Impression of Change: Global Impression of Change Scale (PGIC)."
+        ],
+        "outcome_measures": [
+          "Change in Anxiety: Depression Anxiety Stress Scale (DASS21).",
+          "Change in Inflammation: Circulating Levels of Cytokines (Panel of Inflammatory Markers).",
+          "Patient Global Impression of Change: Global Impression of Change Scale (PGIC)."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03491384",
+        "enrollment": 361,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03491384"
+      }
+    },
+    {
+      "study_id": "CT_NCT05600114",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Cannabidiol (CBD) for the Treatment of Social Anxiety Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT05600114",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol oral solution, Cannabidiol oral solution",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean change from baseline to endpoint in the Liebowitz Social Anxiety Scale (LSAS)"
+        ],
+        "outcome_measures": [
+          "Mean change from baseline to endpoint in the Liebowitz Social Anxiety Scale (LSAS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05600114",
+        "enrollment": 239,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05600114"
+      }
+    },
+    {
+      "study_id": "CT_NCT03948074",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Cannabis For Cancer-Related Symptoms",
+      "citation": "ClinicalTrials.gov NCTNCT03948074",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "outcome_measures": [
+          "Average Patients' Global Impression of Change (PGIC) for overall cancer-related symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03948074",
+        "enrollment": 91,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03948074"
+      }
+    },
+    {
+      "study_id": "CT_NCT02548559",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Sublingual Cannabidiol for Anxiety",
+      "citation": "ClinicalTrials.gov NCTNCT02548559",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Full-Spectrum Cannabidiol, Single-Compound Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from Baseline in Self-Reported Anxiety as Assessed by the Beck Anxiety Inventory (BAI)",
+          "Change from Baseline in Anxiety Assessed by the Overall Anxiety Severity and Impairment Scale (OASIS)",
+          "Change from Baseline in Self-Reported Anxiety Assessed by the State-Trait Anxiety Inventory (STAI)",
+          "Change from Baseline in Anxiety Measured by the Hamilton Anxiety Scale (HAM-A)"
+        ],
+        "outcome_measures": [
+          "Change from Baseline in Self-Reported Anxiety as Assessed by the Beck Anxiety Inventory (BAI)",
+          "Change from Baseline in Anxiety Assessed by the Overall Anxiety Severity and Impairment Scale (OASIS)",
+          "Change from Baseline in Self-Reported Anxiety Assessed by the State-Trait Anxiety Inventory (STAI)",
+          "Change from Baseline in Anxiety Measured by the Hamilton Anxiety Scale (HAM-A)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02548559",
+        "enrollment": 31,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02548559"
+      }
+    },
+    {
+      "study_id": "CT_NCT05108220",
+      "study_type": "Clinical Trial",
+      "condition": "ANXIETY",
+      "study_title": "Evaluation of Effects of CBD Products on Anxiety Among U.S. Women",
+      "citation": "ClinicalTrials.gov NCTNCT05108220",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol (CBD)- containing consumer products",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Anxiety"
+        ],
+        "outcome_measures": [
+          "Anxiety"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05108220",
+        "enrollment": 1350,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05108220"
+      }
+    },
+    {
+      "study_id": "CT_NCT04965740",
+      "study_type": "Clinical Trial",
+      "condition": "ANXIETY",
+      "study_title": "Exploring Medically Perceived Benefits, Use and Interest in Psychedelics and Cannabinoids",
+      "citation": "ClinicalTrials.gov NCTNCT04965740",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Collect Insights from First Responders"
+        ],
+        "outcome_measures": [
+          "Collect Insights from First Responders"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04965740",
+        "enrollment": 102,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04965740"
+      }
+    },
+    {
+      "study_id": "CT_NCT02818777",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "A Study of Tolerability and Efficacy of Cannabidiol on Tremor in Parkinson's Disease",
+      "citation": "ClinicalTrials.gov NCTNCT02818777",
+      "publication_year": 2017,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Severity of Participants Reporting Study-related Adverse Events at Each Dose Level",
+          "Number of Participants Had Changes in Orthostatic Blood Pressure",
+          "Number of Participants Had Changes in Physical Exam",
+          "Number of Participants Had Changes in EKG",
+          "Number of Participants Had Changes in Laboratory Values",
+          "Proportion of Subjects That Drop Out of the Study Due to Study Drug Intolerance",
+          "Change in Movement Disorder Society-Unified Parkinsons Disease Rating Scale Total Score",
+          "Change in Montreal Cognitive Assessment (MoCA)",
+          "Change in Anxiety Short Form",
+          "Change in Neuropsychiatric Inventory (NPI)",
+          "Change in Depression Short Form",
+          "Change in Scales for Outcomes in Parkinson's Disease (SCOPA)-Sleep-night Time Sleep",
+          "Change From Baseline of REM Sleep Behavior Disorder Screening Questionnaire (RBDSQ)",
+          "Change in Emotional and Behavioral Dyscontrol Short Form",
+          "Change in Pain Severity Form",
+          "Change in Questionnaire for Impulsive-Compulsive Disorders in Parkinson's Disease-Rating Scale (QUIP-RS)",
+          "Change in Fatigue Severity Scale",
+          "Change in International Restless Legs Syndrome Study Group Rating Scale for Restless",
+          "Change in Unified Dyskinesia Rating Scale (UDysRS)"
+        ],
+        "outcome_measures": [
+          "Severity of Participants Reporting Study-related Adverse Events at Each Dose Level",
+          "Number of Participants Had Changes in Orthostatic Blood Pressure",
+          "Number of Participants Had Changes in Physical Exam",
+          "Number of Participants Had Changes in EKG",
+          "Number of Participants Had Changes in Laboratory Values",
+          "Proportion of Subjects That Drop Out of the Study Due to Study Drug Intolerance",
+          "Change in Movement Disorder Society-Unified Parkinsons Disease Rating Scale Total Score",
+          "Change in Montreal Cognitive Assessment (MoCA)",
+          "Change in Anxiety Short Form",
+          "Change in Neuropsychiatric Inventory (NPI)",
+          "Change in Depression Short Form",
+          "Change in Scales for Outcomes in Parkinson's Disease (SCOPA)-Sleep-night Time Sleep",
+          "Change From Baseline of REM Sleep Behavior Disorder Screening Questionnaire (RBDSQ)",
+          "Change in Emotional and Behavioral Dyscontrol Short Form",
+          "Change in Pain Severity Form",
+          "Change in Questionnaire for Impulsive-Compulsive Disorders in Parkinson's Disease-Rating Scale (QUIP-RS)",
+          "Change in Fatigue Severity Scale",
+          "Change in International Restless Legs Syndrome Study Group Rating Scale for Restless",
+          "Change in Unified Dyskinesia Rating Scale (UDysRS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02818777",
+        "enrollment": 13,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02818777"
+      }
+    },
+    {
+      "study_id": "CT_NCT03224468",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Effect of Medical Marijuana on Neurocognition and Escalation of Use",
+      "citation": "ClinicalTrials.gov NCTNCT03224468",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Marijuana",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "outcome_measures": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03224468",
+        "enrollment": 269,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03224468"
+      }
+    },
+    {
+      "study_id": "CT_NCT01093976",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Marinol in Trichotillomania or Obsessive Compulsive Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT01093976",
+      "publication_year": 2011,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Massachusetts General Hospital Hairpulling Scale (MGH-HPS) Total Score"
+        ],
+        "outcome_measures": [
+          "Massachusetts General Hospital Hairpulling Scale (MGH-HPS) Total Score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01093976",
+        "enrollment": 14,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01093976"
+      }
+    },
+    {
+      "study_id": "CT_NCT03274440",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Effects of Marijuana on Symptoms of OCD",
+      "citation": "ClinicalTrials.gov NCTNCT03274440",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Yale-Brown Obsessive-Compulsive Challenge Scale (YBOC-CS)"
+        ],
+        "outcome_measures": [
+          "Yale-Brown Obsessive-Compulsive Challenge Scale (YBOC-CS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03274440",
+        "enrollment": 14,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03274440"
+      }
+    },
+    {
+      "study_id": "CT_NCT01875796",
+      "study_type": "RCT",
+      "condition": "ANXIETY",
+      "study_title": "Integrated CBT for Cannabis Dependence With Co-occurring Anxiety Disorders",
+      "citation": "ClinicalTrials.gov NCTNCT01875796",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Integrated Cannabis and Anxiety Reduction Treatment",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "cannabis use",
+          "cannabis-related problems"
+        ],
+        "outcome_measures": [
+          "cannabis use",
+          "cannabis-related problems"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01875796",
+        "enrollment": 68,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01875796"
+      }
     }
-  ]
+  ],
+  "total_studies": 61,
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 17
+  }
 }

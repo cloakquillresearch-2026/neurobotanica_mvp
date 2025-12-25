@@ -1598,6 +1598,87 @@
       },
       "regulatory_relevance": "CRITICAL - Combination therapy evidence; synergy with psychotherapy; JAMA publication; addresses augmentation strategy; relapse prevention",
       "priority": "⭐⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CT_NCT04965740",
+      "study_type": "Clinical Trial",
+      "condition": "DEPRESSION",
+      "study_title": "Exploring Medically Perceived Benefits, Use and Interest in Psychedelics and Cannabinoids",
+      "citation": "ClinicalTrials.gov NCTNCT04965740",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Collect Insights from First Responders"
+        ],
+        "outcome_measures": [
+          "Collect Insights from First Responders"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04965740",
+        "enrollment": 102,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04965740"
+      }
+    },
+    {
+      "study_id": "CT_NCT03224468",
+      "study_type": "RCT",
+      "condition": "DEPRESSION",
+      "study_title": "Effect of Medical Marijuana on Neurocognition and Escalation of Use",
+      "citation": "ClinicalTrials.gov NCTNCT03224468",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Marijuana",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "outcome_measures": [
+          "Mean Difference in Number of Cannabis Use Disorder Symptoms Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Depression Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Anxiety Subscale Scores From the HADS Averaged Over 2, 4, and 12 Weeks",
+          "Mean Difference in Pain Severity Scores on the BPI Average Over 2, 4, and 12 Weeks",
+          "Mean Difference in Sleep Scores on the AIS Averaged Over 2, 4, and 12 Weeks"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03224468",
+        "enrollment": 269,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03224468"
+      }
     }
-  ]
+  ],
+  "total_studies": 45,
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 2
+  }
 }

@@ -1,0 +1,257 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "ALZHEIMER",
+  "phase": "3",
+  "priority": "Expansion",
+  "total_studies": 7,
+  "studies": [
+    {
+      "study_id": "CT_NCT02118701",
+      "study_type": "RCT",
+      "condition": "ALZHEIMER",
+      "study_title": "SHARED DECISION MAKING IN LONG-TERM CARE FACILITIES",
+      "citation": "ClinicalTrials.gov NCTNCT02118701",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "The proportion of residents whose preferences and needs, together with the related actions to meet them, are known, documented and satisfied in their 'life-and-care plans'."
+        ],
+        "outcome_measures": [
+          "The proportion of residents whose preferences and needs, together with the related actions to meet them, are known, documented and satisfied in their 'life-and-care plans'."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02118701",
+        "enrollment": 40,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02118701"
+      }
+    },
+    {
+      "study_id": "CT_NCT03886753",
+      "study_type": "Clinical Trial",
+      "condition": "ALZHEIMER",
+      "study_title": "Pharmacokinetic (PK) and Pharmacodynamics (PD) Study of Ilera Specific Products",
+      "citation": "ClinicalTrials.gov NCTNCT03886753",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in symptoms"
+        ],
+        "outcome_measures": [
+          "Change in symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03886753",
+        "enrollment": 10,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03886753"
+      }
+    },
+    {
+      "study_id": "CT_NCT05477056",
+      "study_type": "Clinical Trial",
+      "condition": "ALZHEIMER",
+      "study_title": "Quality Improvement PrecivityAD Clinician Survey (QUIP I)",
+      "citation": "ClinicalTrials.gov NCTNCT05477056",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "evaluate patient selection for the blood test through analysis of clinician survey responses.",
+          "evaluate score interpretation for the Amyloid Probability Score (APS) through analysis of clinician survey responses."
+        ],
+        "outcome_measures": [
+          "evaluate patient selection for the blood test through analysis of clinician survey responses.",
+          "evaluate score interpretation for the Amyloid Probability Score (APS) through analysis of clinician survey responses."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05477056",
+        "enrollment": 366,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05477056"
+      }
+    },
+    {
+      "study_id": "CT_NCT02792257",
+      "study_type": "RCT",
+      "condition": "ALZHEIMER",
+      "study_title": "Trial of Dronabinol Adjunctive Treatment of Agitation in Alzheimer's Disease",
+      "citation": "ClinicalTrials.gov NCTNCT02792257",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol (Marinol\u00ae)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Symptoms of Agitation as Measured by the Pittsburgh Agitation Scale",
+          "Symptoms of Agitation as Measured by the Neuropsychiatric Inventory, Clinician Version"
+        ],
+        "outcome_measures": [
+          "Symptoms of Agitation as Measured by the Pittsburgh Agitation Scale",
+          "Symptoms of Agitation as Measured by the Neuropsychiatric Inventory, Clinician Version"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02792257",
+        "enrollment": 84,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02792257"
+      }
+    },
+    {
+      "study_id": "CT_NCT03328676",
+      "study_type": "RCT",
+      "condition": "ALZHEIMER",
+      "study_title": "The Effect of Cannabis on Dementia Related Agitation and Aggression",
+      "citation": "ClinicalTrials.gov NCTNCT03328676",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in score of Cohen-Mansfield Agitation Inventory (CMAI)"
+        ],
+        "outcome_measures": [
+          "Change in score of Cohen-Mansfield Agitation Inventory (CMAI)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03328676",
+        "enrollment": 64,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03328676"
+      }
+    },
+    {
+      "study_id": "CT_NCT05432206",
+      "study_type": "RCT",
+      "condition": "ALZHEIMER",
+      "study_title": "MEDical CANnabis for Improving Symptoms During Severe DEMentia Disorders in Long-term Care Facility in Geneva",
+      "citation": "ClinicalTrials.gov NCTNCT05432206",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis Sativa Oil",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Cohen-Mansfield Agitation Inventory Scale (CMAI)"
+        ],
+        "outcome_measures": [
+          "Cohen-Mansfield Agitation Inventory Scale (CMAI)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05432206",
+        "enrollment": 27,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05432206"
+      }
+    },
+    {
+      "study_id": "CT_NCT06570928",
+      "study_type": "RCT",
+      "condition": "ALZHEIMER",
+      "study_title": "Use of a Cannabinoids as a Treatment Strategy for Alzheimer's Disease",
+      "citation": "ClinicalTrials.gov NCTNCT06570928",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mini Mental State Exam (MMSE)"
+        ],
+        "outcome_measures": [
+          "Mini Mental State Exam (MMSE)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT06570928",
+        "enrollment": 72,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT06570928"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 7,
+    "pubmed_added": 0,
+    "total_added": 7,
+    "expansion_date": "2025-12-23T23:42:01.051063"
+  }
+}

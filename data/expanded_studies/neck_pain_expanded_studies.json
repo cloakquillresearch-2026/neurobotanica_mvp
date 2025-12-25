@@ -1,0 +1,89 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "NECK_PAIN",
+  "phase": "3",
+  "priority": "Expansion",
+  "total_studies": 2,
+  "studies": [
+    {
+      "study_id": "CT_NCT05581667",
+      "study_type": "RCT",
+      "condition": "NECK_PAIN",
+      "study_title": "The Immediate Effects of Post Isometric Relaxation Techniques",
+      "citation": "ClinicalTrials.gov NCTNCT05581667",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain threshold assessment",
+          "Pain severity assessment",
+          "Joint Range of Motion"
+        ],
+        "outcome_measures": [
+          "Pain threshold assessment",
+          "Pain severity assessment",
+          "Joint Range of Motion"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05581667",
+        "enrollment": 30,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05581667"
+      }
+    },
+    {
+      "study_id": "CT_NCT02892591",
+      "study_type": "RCT",
+      "condition": "NECK_PAIN",
+      "study_title": "Cannabis Versus Oxycodone for Pain Relief",
+      "citation": "ClinicalTrials.gov NCTNCT02892591",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis, Placebo for Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain Numeric Rating Scale (NRS) score (Spine Patients)",
+          "Pain Threshold (kPa) (Healthy Controls)"
+        ],
+        "outcome_measures": [
+          "Pain Numeric Rating Scale (NRS) score (Spine Patients)",
+          "Pain Threshold (kPa) (Healthy Controls)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02892591",
+        "enrollment": 33,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02892591"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 2,
+    "pubmed_added": 0,
+    "total_added": 2,
+    "expansion_date": "2025-12-23T23:42:15.062071"
+  }
+}

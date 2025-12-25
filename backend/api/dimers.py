@@ -16,7 +16,7 @@ import logging
 
 from fastapi import APIRouter, HTTPException, Depends, Query
 from pydantic import BaseModel, Field
-from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.orm import Session
 
 from backend.models.database import get_db
 from backend.services.dimer_predictor import (
@@ -201,7 +201,7 @@ class TriangulationResponse(BaseModel):
 @router.post("/predict/homodimer", response_model=DimerPredictionResponse)
 async def predict_homodimer(
     request: HomodimerRequest,
-    db: AsyncSession = Depends(get_db)
+    db: Session = Depends(get_db)
 ) -> DimerPredictionResponse:
     """Predict homodimer (A-A dimer) from a single monomer.
     
@@ -277,7 +277,7 @@ async def predict_homodimer(
 @router.post("/predict/heterodimer", response_model=DimerPredictionResponse)
 async def predict_heterodimer(
     request: HeterodimerRequest,
-    db: AsyncSession = Depends(get_db)
+    db: Session = Depends(get_db)
 ) -> DimerPredictionResponse:
     """Predict heterodimer (A-B dimer) from two monomers.
     
@@ -289,10 +289,10 @@ async def predict_heterodimer(
     """
     try:
         predictor = DimericPredictor()
-        linkage = None
+        linkage = LinkageType.METHYLENE  # Default
         if request.linkage_type:
             try:
-                linkage = LinkageType(request.linkage_type.upper())
+                linkage = LinkageType(request.linkage_type.lower())
             except ValueError:
                 pass  # Use default
         dimer_entry = {
@@ -351,7 +351,7 @@ async def predict_heterodimer(
 @router.post("/predict/bulk")
 async def predict_bulk_dimers(
     request: BulkPredictionRequest,
-    db: AsyncSession = Depends(get_db)
+    db: Session = Depends(get_db)
 ) -> Dict[str, Any]:
     """Generate bulk dimer predictions from a list of monomers.
     
@@ -364,33 +364,37 @@ async def predict_bulk_dimers(
     try:
         predictor = DimericPredictor()
         
-        # Build monomer dictionary
-        monomers = {
-            m.name: m.smiles for m in request.monomers
-        }
+        # Build monomer list as List[Tuple[str, str]] - (name, smiles)
+        monomer_list = [(m.name, m.smiles) for m in request.monomers]
         
         # Generate all combinations
         all_predictions = predictor.generate_all_combinations(
-            monomers,
-            include_homodimers=request.include_homodimers,
-            include_heterodimers=request.include_heterodimers
+            monomer_list,
+            include_homodimers=request.include_homodimers
         )
+        
+        # Filter heterodimers if not requested
+        if not request.include_heterodimers:
+            all_predictions = [
+                p for p in all_predictions 
+                if p.dimer_type == DimerType.HOMODIMER
+            ]
         
         # Rank predictions
         ranked = predictor.rank_predictions(all_predictions)[:request.top_n]
         
-        # Format response
+        # Format response - use correct attribute names from DimerPrediction
         results = []
         for pred in ranked:
             results.append({
                 "dimer_name": pred.dimer_name,
-                "dimer_smiles": pred.dimer_smiles,
+                "dimer_smiles": pred.predicted_smiles,
                 "dimer_type": pred.dimer_type.value,
                 "linkage_type": pred.linkage_type.value,
-                "monomer_a": pred.monomer_a_name,
-                "monomer_b": pred.monomer_b_name,
+                "monomer_a": pred.parent_1_name,
+                "monomer_b": pred.parent_2_name,
                 "formation_probability": pred.formation_probability,
-                "synergy_score": pred.synergy_score,
+                "synergy_score": pred.synergy_prediction,
                 "novelty_score": pred.novelty_score,
                 "therapeutic_potential": pred.therapeutic_potential
             })
@@ -409,7 +413,7 @@ async def predict_bulk_dimers(
 @router.post("/conformers", response_model=ConformerResponse)
 async def generate_dimer_conformers(
     request: ConformerRequest,
-    db: AsyncSession = Depends(get_db)
+    db: Session = Depends(get_db)
 ) -> ConformerResponse:
     """Generate 3D conformers for a dimer structure.
     
@@ -470,7 +474,7 @@ async def generate_dimer_conformers(
 @router.post("/triangulate", response_model=TriangulationResponse)
 async def triangulate_prediction(
     request: TriangulationRequest,
-    db: AsyncSession = Depends(get_db)
+    db: Session = Depends(get_db)
 ) -> TriangulationResponse:
     """Calculate triangulation score for a dimer prediction.
     
@@ -526,7 +530,7 @@ async def triangulate_prediction(
 @router.get("/{dimer_id}/triangulation", response_model=TriangulationResponse)
 async def get_dimer_triangulation(
     dimer_id: int,
-    db: AsyncSession = Depends(get_db)
+    db: Session = Depends(get_db)
 ) -> TriangulationResponse:
     """Get triangulation score for a stored dimer prediction.
     
@@ -580,7 +584,7 @@ async def list_linkage_types() -> Dict[str, Any]:
 
 @router.get("/statistics")
 async def get_dimer_statistics(
-    db: AsyncSession = Depends(get_db)
+    db: Session = Depends(get_db)
 ) -> Dict[str, Any]:
     """Get statistics about dimer predictions in the database."""
     # TODO: Implement database statistics

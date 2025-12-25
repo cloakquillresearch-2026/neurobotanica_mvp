@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   NeuroBotanica - Budtender Education Assistant
+   Premium Cannabis Education UI Theme
+   ============================================ */
+
+@layer base {
+  :root {
+    --color-cannabis-primary: #22c55e;
+    --color-cannabis-dark: #166534;
+    --color-healing-purple: #7c3aed;
+    --color-healing-blue: #3b82f6;
+    --color-healing-amber: #f59e0b;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-emerald-950 via-green-900 to-teal-900 min-h-screen;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Glass morphism cards */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl;
+  }
+
+  .glass-card-light {
+    @apply bg-white/90 backdrop-blur-lg border border-white/50 rounded-2xl shadow-xl;
+  }
+
+  /* Gradient buttons */
+  .btn-primary {
+    @apply bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold 
+           py-3 px-6 rounded-xl shadow-lg shadow-emerald-500/30
+           hover:from-emerald-400 hover:to-teal-400 hover:shadow-emerald-500/50
+           transform hover:scale-105 transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold 
+           py-2 px-4 rounded-lg shadow-lg shadow-purple-500/30
+           hover:from-purple-400 hover:to-indigo-400
+           transform hover:scale-105 transition-all duration-200;
+  }
+
+  .btn-healing {
+    @apply bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold 
+           py-2 px-4 rounded-lg shadow-lg shadow-amber-500/30
+           hover:from-amber-400 hover:to-orange-400
+           transform hover:scale-105 transition-all duration-200;
+  }
+
+  /* Condition pills */
+  .condition-pill {
+    @apply px-4 py-2 rounded-full font-medium text-sm cursor-pointer
+           transition-all duration-200 border-2;
+  }
+
+  .condition-pill-inactive {
+    @apply condition-pill bg-white/10 border-white/30 text-white/80
+           hover:bg-white/20 hover:border-white/50;
+  }
+
+  .condition-pill-active {
+    @apply condition-pill bg-gradient-to-r from-emerald-500 to-teal-500 
+           border-emerald-400 text-white shadow-lg shadow-emerald-500/30;
+  }
+
+  /* Product cards */
+  .product-card {
+    @apply glass-card-light p-5 hover:shadow-2xl hover:shadow-emerald-500/20 
+           transform hover:-translate-y-1 transition-all duration-300 cursor-pointer;
+  }
+
+  /* Match score badges */
+  .match-badge-high {
+    @apply bg-gradient-to-r from-emerald-500 to-green-500 text-white 
+           px-3 py-1 rounded-full text-sm font-bold shadow-lg;
+  }
+
+  .match-badge-medium {
+    @apply bg-gradient-to-r from-blue-500 to-cyan-500 text-white 
+           px-3 py-1 rounded-full text-sm font-bold shadow-lg;
+  }
+
+  .match-badge-low {
+    @apply bg-gradient-to-r from-amber-500 to-yellow-500 text-white 
+           px-3 py-1 rounded-full text-sm font-bold shadow-lg;
+  }
+
+  /* Terpene badges */
+  .terpene-badge {
+    @apply px-3 py-1.5 rounded-full text-xs font-semibold inline-flex items-center gap-1;
+  }
+
+  .terpene-myrcene { @apply bg-orange-100 text-orange-800 border border-orange-200; }
+  .terpene-limonene { @apply bg-yellow-100 text-yellow-800 border border-yellow-200; }
+  .terpene-pinene { @apply bg-green-100 text-green-800 border border-green-200; }
+  .terpene-linalool { @apply bg-purple-100 text-purple-800 border border-purple-200; }
+  .terpene-caryophyllene { @apply bg-amber-100 text-amber-800 border border-amber-200; }
+  .terpene-default { @apply bg-gray-100 text-gray-800 border border-gray-200; }
+
+  /* Educational info boxes */
+  .info-box {
+    @apply rounded-xl p-4 border-l-4;
+  }
+
+  .info-box-education {
+    @apply info-box bg-blue-50 border-blue-500 text-blue-900;
+  }
+
+  .info-box-warning {
+    @apply info-box bg-amber-50 border-amber-500 text-amber-900;
+  }
+
+  .info-box-success {
+    @apply info-box bg-emerald-50 border-emerald-500 text-emerald-900;
+  }
+
+  .info-box-clinical {
+    @apply info-box bg-purple-50 border-purple-500 text-purple-900;
+  }
+
+  /* Input styling */
+  .input-modern {
+    @apply w-full px-4 py-3 bg-white/90 border-2 border-gray-200 rounded-xl
+           focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/20 
+           transition-all duration-200 outline-none text-gray-800;
+  }
+
+  /* Stats cards */
+  .stat-card {
+    @apply bg-gradient-to-br from-white/20 to-white/5 backdrop-blur 
+           rounded-xl p-4 border border-white/20 text-center;
+  }
+
+  /* Animated background */
+  .animated-bg {
+    background: linear-gradient(-45deg, #065f46, #047857, #0d9488, #059669);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+  }
+
+  .text-glow-white {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* Animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.6); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #22c55e, #14b8a6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #16a34a, #0d9488);
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  @apply outline-none ring-4 ring-emerald-500/50;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply w-8 h-8 border-4 border-emerald-200 border-t-emerald-600 rounded-full;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

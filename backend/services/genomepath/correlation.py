@@ -1036,6 +1036,8 @@ class TKGenomicCorrelator:
                 "average_confidence": 0.0,
                 "quality_distribution": {},
                 "direction_distribution": {},
+                "total_genomic_hypotheses": 0,
+                "total_tk_correlations": 0,
             }
         
         # Calculate statistics

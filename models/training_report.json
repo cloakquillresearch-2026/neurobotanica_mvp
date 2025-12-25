@@ -1,5 +1,5 @@
 {
-  "training_date": "2025-12-23T13:54:57.962099",
+  "training_date": "2025-12-24T20:26:34.160057",
   "dataset": {
     "total_compounds": 1056,
     "clinical_studies": 0,
@@ -16,7 +16,7 @@
       "cv_std": 0.0249,
       "num_features": 16,
       "num_samples": 2145,
-      "training_time_seconds": 0.48,
+      "training_time_seconds": 0.47,
       "top_features": {
         "target_encoded": 0.154481601166475,
         "tpsa": 0.1373605670720118,
@@ -29,7 +29,7 @@
         "h_bond_acceptors": 0.022962414276054884,
         "h_bond_donors": 0.02279124265959003
       },
-      "created_at": "2025-12-23T13:54:56.554017"
+      "created_at": "2025-12-24T20:26:32.707474"
     },
     "dimer": {
       "model_name": "DimerPotential",
@@ -49,7 +49,7 @@
         "confidence_score": 7.133687643345636e-05,
         "enhanced_lipophilicity": 6.341072988484312e-05
       },
-      "created_at": "2025-12-23T13:54:57.609283"
+      "created_at": "2025-12-24T20:26:33.800483"
     },
     "patient": {
       "model_name": "PatientResponse",
@@ -60,7 +60,7 @@
       "cv_std": 0.0949,
       "num_features": 7,
       "num_samples": 100,
-      "training_time_seconds": 0.34,
+      "training_time_seconds": 0.35,
       "top_features": {
         "treatment_duration_days": 0.3954085456895932,
         "age_range_encoded": 0.1337548336322281,
@@ -70,7 +70,7 @@
         "study_quality_encoded": 0.07602080200177055,
         "adherence_score": 0.052358677542467084
       },
-      "created_at": "2025-12-23T13:54:57.957875"
+      "created_at": "2025-12-24T20:26:34.155726"
     }
   }
 }

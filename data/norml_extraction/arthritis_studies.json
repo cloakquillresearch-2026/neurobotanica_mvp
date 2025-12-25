@@ -1228,6 +1228,217 @@
       },
       "regulatory_relevance": "HIGH - Dual benefit (arthritis + sleep); polysomnography objective data; addresses sleep-pain cycle; common comorbidity",
       "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CT_NCT04402554",
+      "study_type": "Clinical Trial",
+      "condition": "ARTHRITIS",
+      "study_title": "Survey of Cannabis Use in Patients With Chronic Inflammatory Arthritis",
+      "citation": "ClinicalTrials.gov NCTNCT04402554",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis questionnaire",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "prevalence of cannabis use in patients with chronic inflammatory rheumatic conditions"
+        ],
+        "outcome_measures": [
+          "prevalence of cannabis use in patients with chronic inflammatory rheumatic conditions"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04402554",
+        "enrollment": 501,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04402554"
+      }
+    },
+    {
+      "study_id": "CT_NCT03693833",
+      "study_type": "RCT",
+      "condition": "ARTHRITIS",
+      "study_title": "CBD Treatment in Hand Osteoarthritis and Psoriatic Arthritis.",
+      "citation": "ClinicalTrials.gov NCTNCT03693833",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "VAS pain during the last 24 hours"
+        ],
+        "outcome_measures": [
+          "VAS pain during the last 24 hours"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03693833",
+        "enrollment": 136,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03693833"
+      }
+    },
+    {
+      "study_id": "CT_NCT04607603",
+      "study_type": "RCT",
+      "condition": "ARTHRITIS",
+      "study_title": "Efficacy of Cannabidiol in Knee Osteoarthritis",
+      "citation": "ClinicalTrials.gov NCTNCT04607603",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol Oral Product",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "WOMAC Pain Score (WOMAC) Pain score"
+        ],
+        "outcome_measures": [
+          "WOMAC Pain Score (WOMAC) Pain score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04607603",
+        "enrollment": 86,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04607603"
+      }
+    },
+    {
+      "study_id": "CT_NCT04749628",
+      "study_type": "RCT",
+      "condition": "ARTHRITIS",
+      "study_title": "Cannabidiol for Bilateral Total Knee Arthroplasty",
+      "citation": "ClinicalTrials.gov NCTNCT04749628",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Cumulative Opioid Usage in First 72 hours Postoperatively"
+        ],
+        "outcome_measures": [
+          "Cumulative Opioid Usage in First 72 hours Postoperatively"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04749628",
+        "enrollment": 37,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04749628"
+      }
+    },
+    {
+      "study_id": "CT_NCT04911127",
+      "study_type": "RCT",
+      "condition": "ARTHRITIS",
+      "study_title": "Therapeutic Response of Cannabidiol in Rheumatoid Arthritis",
+      "citation": "ClinicalTrials.gov NCTNCT04911127",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "200mg Cannabidiol by capsules twice daily, 400mg Cannabidiol by capsules twice daily",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from Baseline in Disease Activity Score (DAS28/ESR)",
+          "Tolerability as assessed by participant attrition"
+        ],
+        "outcome_measures": [
+          "Change from Baseline in Disease Activity Score (DAS28/ESR)",
+          "Tolerability as assessed by participant attrition"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04911127",
+        "enrollment": 67,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04911127"
+      }
+    },
+    {
+      "study_id": "CT_NCT06588972",
+      "study_type": "RCT",
+      "condition": "ARTHRITIS",
+      "study_title": "Analgesic Effects of a Treatment With Cannabis Sativa Extract in Patients With Knee Osteoarthritis - CANOA (Cannabis for Osteoarthritis)",
+      "citation": "ClinicalTrials.gov NCTNCT06588972",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis Sativa",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain levels"
+        ],
+        "outcome_measures": [
+          "Pain levels"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT06588972",
+        "enrollment": 45,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT06588972"
+      }
     }
-  ]
+  ],
+  "total_studies": 39,
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 6
+  }
 }

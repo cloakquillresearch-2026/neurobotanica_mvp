@@ -1,0 +1,373 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "SCHIZOPHRENIA",
+  "phase": "3",
+  "priority": "Expansion",
+  "total_studies": 10,
+  "studies": [
+    {
+      "study_id": "CT_NCT04166019",
+      "study_type": "RCT",
+      "condition": "SCHIZOPHRENIA",
+      "study_title": "Effect of a Peer-led Self-management Program for Recent-onset Psychosis",
+      "citation": "ClinicalTrials.gov NCTNCT04166019",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Questionnaire about the Process of Recovery (QPR)",
+          "Questionnaire about the Process of Recovery (QPR)",
+          "Questionnaire about the Process of Recovery (QPR)",
+          "Questionnaire about the Process of Recovery (QPR)",
+          "Questionnaire about the Process of Recovery (QPR)"
+        ],
+        "outcome_measures": [
+          "Questionnaire about the Process of Recovery (QPR)",
+          "Questionnaire about the Process of Recovery (QPR)",
+          "Questionnaire about the Process of Recovery (QPR)",
+          "Questionnaire about the Process of Recovery (QPR)",
+          "Questionnaire about the Process of Recovery (QPR)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04166019",
+        "enrollment": 180,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04166019"
+      }
+    },
+    {
+      "study_id": "CT_NCT01071135",
+      "study_type": "RCT",
+      "condition": "SCHIZOPHRENIA",
+      "study_title": "Quetiapine XR in Schizophrenic Patients",
+      "citation": "ClinicalTrials.gov NCTNCT01071135",
+      "publication_year": 2010,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Reduction in PANSS total score"
+        ],
+        "outcome_measures": [
+          "Reduction in PANSS total score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01071135",
+        "enrollment": 5,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01071135"
+      }
+    },
+    {
+      "study_id": "CT_NCT02811939",
+      "study_type": "RCT",
+      "condition": "SCHIZOPHRENIA",
+      "study_title": "Testing the Interactive Effects of Delta-9-Tetrahydrocannabinol and Pregnenolone: Sub-Study I",
+      "citation": "ClinicalTrials.gov NCTNCT02811939",
+      "publication_year": 2017,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Active Dronabinol, Placebo Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from Baseline: Positive and Negative Syndrome Scale (PANSS)"
+        ],
+        "outcome_measures": [
+          "Change from Baseline: Positive and Negative Syndrome Scale (PANSS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02811939",
+        "enrollment": 13,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02811939"
+      }
+    },
+    {
+      "study_id": "CT_NCT02319746",
+      "study_type": "RCT",
+      "condition": "SCHIZOPHRENIA",
+      "study_title": "COGNITIVE BEHAVIORAL THERAPY PROGRAM TO FIRST-EPISODE PSYCHOSIS PATIENTS AND CANNABIS ABUSE",
+      "citation": "ClinicalTrials.gov NCTNCT02319746",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cognitive-behavioral therapy program to first-episode psychosis patients and cannabis abuse",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Cannabis use reduction in the follow-up",
+          "Improvement in the development of psychotic disorder",
+          "Changes in the components of the endogenous cannabinoid system",
+          "Normalizing the possible alterations in the endogenous cannabinoid system"
+        ],
+        "outcome_measures": [
+          "Cannabis use reduction in the follow-up",
+          "Improvement in the development of psychotic disorder",
+          "Changes in the components of the endogenous cannabinoid system",
+          "Normalizing the possible alterations in the endogenous cannabinoid system"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02319746",
+        "enrollment": 88,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02319746"
+      }
+    },
+    {
+      "study_id": "CT_NCT01180374",
+      "study_type": "RCT",
+      "condition": "SCHIZOPHRENIA",
+      "study_title": "The Effects of Cannabidiol and \u2206-9-THC in Humans",
+      "citation": "ClinicalTrials.gov NCTNCT01180374",
+      "publication_year": 2014,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase EARLY_PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Behavioral Measures"
+        ],
+        "outcome_measures": [
+          "Behavioral Measures"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01180374",
+        "enrollment": 27,
+        "phase": "EARLY_PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01180374"
+      }
+    },
+    {
+      "study_id": "CT_NCT04945031",
+      "study_type": "Clinical Trial",
+      "condition": "SCHIZOPHRENIA",
+      "study_title": "The Study of Pharmacological Treatment Pattern for Cannabis-induced Psychosis",
+      "citation": "ClinicalTrials.gov NCTNCT04945031",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pharmacological treatment pattern for cannabis-induced psychosis"
+        ],
+        "outcome_measures": [
+          "Pharmacological treatment pattern for cannabis-induced psychosis"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04945031",
+        "enrollment": 317,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04945031"
+      }
+    },
+    {
+      "study_id": "CT_NCT00783185",
+      "study_type": "RCT",
+      "condition": "SCHIZOPHRENIA",
+      "study_title": "Dual Diagnosis (Psychosis and Cannabismisuse): Comparison of Specialized Treatment Versus Unspecified Treatment",
+      "citation": "ClinicalTrials.gov NCTNCT00783185",
+      "publication_year": 2010,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis-Consumption-Reduction-Training",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "PANSS Positive and Negative Symptom Scale"
+        ],
+        "outcome_measures": [
+          "PANSS Positive and Negative Symptom Scale"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00783185",
+        "enrollment": 50,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00783185"
+      }
+    },
+    {
+      "study_id": "CT_NCT04605393",
+      "study_type": "RCT",
+      "condition": "SCHIZOPHRENIA",
+      "study_title": "Does Cannabidiol Attenuate the Acute Effects of \u22069-tetrahydrocannabinol Intoxication in Individuals Diagnosed With Schizophrenia? A Double-blind, Randomised, Placebo-controlled Experimental Study",
+      "citation": "ClinicalTrials.gov NCTNCT04605393",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Hopkins Verbal Learning Test",
+          "Positive and Negative Syndrome Scale"
+        ],
+        "outcome_measures": [
+          "Hopkins Verbal Learning Test",
+          "Positive and Negative Syndrome Scale"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04605393",
+        "enrollment": 36,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04605393"
+      }
+    },
+    {
+      "study_id": "CT_NCT01964404",
+      "study_type": "RCT",
+      "condition": "SCHIZOPHRENIA",
+      "study_title": "Cannabis, Schizophrenia and Reward: Self-Medication and Agonist Treatment?",
+      "citation": "ClinicalTrials.gov NCTNCT01964404",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Brain Reward Circuit Activation on fMRI Scan",
+          "Resting State Connectivity Within the Brain Reward Circuitry"
+        ],
+        "outcome_measures": [
+          "Brain Reward Circuit Activation on fMRI Scan",
+          "Resting State Connectivity Within the Brain Reward Circuitry"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01964404",
+        "enrollment": 263,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01964404"
+      }
+    },
+    {
+      "study_id": "CT_NCT00588731",
+      "study_type": "RCT",
+      "condition": "SCHIZOPHRENIA",
+      "study_title": "Cannabidiol Treatment of Cognitive Dysfunction in Schizophrenia",
+      "citation": "ClinicalTrials.gov NCTNCT00588731",
+      "publication_year": 2013,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Verbal Short Term Memory"
+        ],
+        "outcome_measures": [
+          "Verbal Short Term Memory"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00588731",
+        "enrollment": 41,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00588731"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 10,
+    "pubmed_added": 0,
+    "total_added": 10,
+    "expansion_date": "2025-12-23T23:42:19.538731"
+  }
+}

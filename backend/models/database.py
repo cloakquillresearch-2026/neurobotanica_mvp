@@ -13,11 +13,11 @@ class Settings(BaseSettings):
     """Application settings loaded from environment."""
     database_url: str = "sqlite:///./neurobotanica_dev.db"
     secret_key: str = "development_secret_key_change_in_production"
-    debug: bool = True
+    app_debug: bool = True  # Renamed from 'debug' to avoid env var conflicts
     
     class Config:
         env_file = ".env"
-        extra = "allow"
+        extra = "ignore"  # Ignore extra env vars like DEBUG=WARN
 
 
 settings = Settings()

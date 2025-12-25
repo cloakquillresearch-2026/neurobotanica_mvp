@@ -3,7 +3,7 @@
   "condition": "TOURETTE_SYNDROME",
   "phase": "3",
   "priority": "Phase 3 - Expansion (Orphan Indication with RCT Evidence)",
-  "total_studies": 18,
+  "total_studies": 22,
   "studies": [
     {
       "study_id": "TS_RCT_001",
@@ -673,6 +673,166 @@
       },
       "regulatory_relevance": "HIGH - Pediatric/adolescent feasibility and tolerability; informs dosing/titration and safety monitoring",
       "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CT_NCT05184478",
+      "study_type": "RCT",
+      "condition": "TOURETTE_SYNDROME",
+      "study_title": "Is Medicinal Cannabis an Effective Treatment for Tourette Syndrome in Adolescents? a Pilot Study",
+      "citation": "ClinicalTrials.gov NCTNCT05184478",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medicinal cannabis (MC): THC 10mg/mL : CBD 15mg/mL, manufactured by Cann Group Ltd.",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Rate of study participant recruitment, calculated as the time required to reach a sample size of 10.",
+          "Participant withdrawal rate, calculated as the number of participants who withdraw from the trial as a proportion of the total number of participants randomized.",
+          "Study medication tolerability, as indicated by the proportion of participants who tolerate the protocol dosing schedule.",
+          "Participant adherence to the study medication dosing schedule, calculated as the proportion of participants who demonstrate acceptable medication compliance.",
+          "Study visit attendance, calculated as the proportion of visits completed across the study sample.",
+          "Blood test completion, calculated as the proportion of blood tests completed across the study sample.",
+          "Parent questionnaire completion, calculated as the proportion of parent-report questionnaires completed across the study sample.",
+          "Self-report questionnaire completion, calculated as the proportion of adolescent self-report questionnaires completed across the study sample.",
+          "Study design acceptability will be evaluated through a parent-completed study specific evaluation questionnaire completed at the end of the study."
+        ],
+        "outcome_measures": [
+          "Rate of study participant recruitment, calculated as the time required to reach a sample size of 10.",
+          "Participant withdrawal rate, calculated as the number of participants who withdraw from the trial as a proportion of the total number of participants randomized.",
+          "Study medication tolerability, as indicated by the proportion of participants who tolerate the protocol dosing schedule.",
+          "Participant adherence to the study medication dosing schedule, calculated as the proportion of participants who demonstrate acceptable medication compliance.",
+          "Study visit attendance, calculated as the proportion of visits completed across the study sample.",
+          "Blood test completion, calculated as the proportion of blood tests completed across the study sample.",
+          "Parent questionnaire completion, calculated as the proportion of parent-report questionnaires completed across the study sample.",
+          "Self-report questionnaire completion, calculated as the proportion of adolescent self-report questionnaires completed across the study sample.",
+          "Study design acceptability will be evaluated through a parent-completed study specific evaluation questionnaire completed at the end of the study."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05184478",
+        "enrollment": 10,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05184478"
+      }
+    },
+    {
+      "study_id": "CT_NCT05115318",
+      "study_type": "Clinical Trial",
+      "condition": "TOURETTE_SYNDROME",
+      "study_title": "The Effect of Medical Cannabis on Tics, Premonitory Urge and Psychiatric Comorbidity in Adults With Tourette Syndrome",
+      "citation": "ClinicalTrials.gov NCTNCT05115318",
+      "publication_year": 2021,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Medical Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in vocal and motor tics and disease burden",
+          "Change in premonitory urge",
+          "Subjective improvement of tics and Quality of life"
+        ],
+        "outcome_measures": [
+          "Change in vocal and motor tics and disease burden",
+          "Change in premonitory urge",
+          "Subjective improvement of tics and Quality of life"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05115318",
+        "enrollment": 18,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05115318"
+      }
+    },
+    {
+      "study_id": "CT_NCT03066193",
+      "study_type": "RCT",
+      "condition": "TOURETTE_SYNDROME",
+      "study_title": "Efficacy of a Therapeutic Combination of Dronabinol and PEA for Tourette Syndrome",
+      "citation": "ClinicalTrials.gov NCTNCT03066193",
+      "publication_year": 2018,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol and Palmitoylethanolamide",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Changes in Tic Severity"
+        ],
+        "outcome_measures": [
+          "Changes in Tic Severity"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03066193",
+        "enrollment": 17,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03066193"
+      }
+    },
+    {
+      "study_id": "CT_NCT03087201",
+      "study_type": "RCT",
+      "condition": "TOURETTE_SYNDROME",
+      "study_title": "CANNAbinoids in the Treatment of TICS (CANNA-TICS)",
+      "citation": "ClinicalTrials.gov NCTNCT03087201",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "nabiximols",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Response-rate to treatment according to YGTSS-TTS (Total Tic-Score of the Yale Global Tic Severity Scale [YGTSS])"
+        ],
+        "outcome_measures": [
+          "Response-rate to treatment according to YGTSS-TTS (Total Tic-Score of the Yale Global Tic Severity Scale [YGTSS])"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03087201",
+        "enrollment": 98,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03087201"
+      }
     }
-  ]
+  ],
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 4
+  }
 }

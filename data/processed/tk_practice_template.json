@@ -30,14 +30,7 @@
       "ISBN:1234567890"
     ],
     "community_consent_status": "One of: published_knowledge, public_domain, tramil_approved, explicit_consent_granted",
-    "attribution_notes": "Proper attribution to source community/tradition",
-    "neuroprotective_metadata": {
-      "excitotoxic_flag": false,
-      "excitotoxic_evidence_source": "Study ID or citation that proves excitotoxic protection",
-      "excitotoxic_reference_description": "One-line summary of the mechanistic finding",
-      "translation_notes": "How this mechanism maps into PTSD/fear-circuit claims",
-      "last_verified": "ISO date"
-    }
+    "attribution_notes": "Proper attribution to source community/tradition"
   },
   "example_non_sacred_practice": {
     "practice_name": "Cannabis for chronic pain relief",
@@ -65,7 +58,7 @@
     "community_consent_status": "published_knowledge",
     "attribution_notes": "Traditional Chinese Medicine historical records",
     "practice_id": "TK_0000",
-    "added_date": "2025-12-21T19:23:27.453056"
+    "added_date": "2025-12-23T23:47:15.726639"
   },
   "sacred_practice_warning": {
     "practice_name": "[PROTECTED - DO NOT INCLUDE IN DATABASE]",

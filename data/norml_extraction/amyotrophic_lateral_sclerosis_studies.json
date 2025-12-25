@@ -3,7 +3,7 @@
   "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
   "phase": "4",
   "priority": "Phase 4 - Emerging Indications Expansion",
-  "total_studies": 10,
+  "total_studies": 12,
   "studies": [
     {
       "study_id": "AMYOTROPHIC_LATERAL_SCLEROSIS_OBSERVATIONAL_001",
@@ -314,6 +314,78 @@
         "placebo_controlled": false
       },
       "notes": "Extracted from NORML ALS research library (references section)."
+    },
+    {
+      "study_id": "CT_NCT01776970",
+      "study_type": "RCT",
+      "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+      "study_title": "Safety and Efficacy on Spasticity Symptoms of a Cannabis Sativa Extract in Motor Neuron Disease",
+      "citation": "ClinicalTrials.gov NCTNCT01776970",
+      "publication_year": 2015,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis Sativa extract Oromucosal spray",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "modified 5 - points modified Ashworth scale (AS)."
+        ],
+        "outcome_measures": [
+          "modified 5 - points modified Ashworth scale (AS)."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01776970",
+        "enrollment": 60,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01776970"
+      }
+    },
+    {
+      "study_id": "CT_NCT00812851",
+      "study_type": "RCT",
+      "condition": "AMYOTROPHIC_LATERAL_SCLEROSIS",
+      "study_title": "Randomized Placebo-Controlled Crossover Trial With THC (Delta 9-Tetrahydrocannabinol) for the Treatment of Cramps in Amyotrophic Lateral Sclerosis (ALS)",
+      "citation": "ClinicalTrials.gov NCTNCT00812851",
+      "publication_year": 2008,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "severity of cramps"
+        ],
+        "outcome_measures": [
+          "severity of cramps"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00812851",
+        "enrollment": 24,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00812851"
+      }
     }
-  ]
+  ],
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 2
+  }
 }

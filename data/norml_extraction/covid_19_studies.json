@@ -182,6 +182,83 @@
         "retrospective cohort"
       ],
       "evidence_level": "Retrospective cohort with biochemical exposure confirmation; limited by small sample size and no COVID-negative control"
+    },
+    {
+      "study_id": "CT_NCT04997395",
+      "study_type": "RCT",
+      "condition": "COVID_19",
+      "study_title": "Feasibility of Cannabidiol for the Treatment of Long COVID",
+      "citation": "ClinicalTrials.gov NCTNCT04997395",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "MediCabilis Cannabis sativa 50",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Recruitment rate",
+          "Tolerability for the treatment of long COVID",
+          "Number of side effects"
+        ],
+        "outcome_measures": [
+          "Recruitment rate",
+          "Tolerability for the treatment of long COVID",
+          "Number of side effects"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04997395",
+        "enrollment": 12,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04997395"
+      }
+    },
+    {
+      "study_id": "CT_NCT04504877",
+      "study_type": "RCT",
+      "condition": "COVID_19",
+      "study_title": "Burnout and Distress preventiOn With caNnabidiol in Front-line Health Care workerS deAling wIth COVID-19",
+      "citation": "ClinicalTrials.gov NCTNCT04504877",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "aMBI-HSS: Abbreviated Maslach Burnout Inventory - Human Services Survey"
+        ],
+        "outcome_measures": [
+          "aMBI-HSS: Abbreviated Maslach Burnout Inventory - Human Services Survey"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04504877",
+        "enrollment": 120,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04504877"
+      }
     }
-  ]
+  ],
+  "total_studies": 8,
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 2
+  }
 }

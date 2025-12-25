@@ -1,0 +1,163 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "BACK_PAIN",
+  "phase": "3",
+  "priority": "Expansion",
+  "total_studies": 4,
+  "studies": [
+    {
+      "study_id": "CT_NCT05103475",
+      "study_type": "RCT",
+      "condition": "BACK_PAIN",
+      "study_title": "Rage Against the Pain to Address Chronic Low Back Pain Among Veterans",
+      "citation": "ClinicalTrials.gov NCTNCT05103475",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Program Initiation (e.g., Reach)",
+          "Program Participation (e.g., Sustained Engagement) - Average Number of Classes Attended",
+          "Program Participation (e.g., Sustained Engagement) - Number of Veterans Who Attend Majority of Classes"
+        ],
+        "outcome_measures": [
+          "Program Initiation (e.g., Reach)",
+          "Program Participation (e.g., Sustained Engagement) - Average Number of Classes Attended",
+          "Program Participation (e.g., Sustained Engagement) - Number of Veterans Who Attend Majority of Classes"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05103475",
+        "enrollment": 36,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05103475"
+      }
+    },
+    {
+      "study_id": "CT_NCT03138460",
+      "study_type": "Clinical Trial",
+      "condition": "BACK_PAIN",
+      "study_title": "Analysis of Orthopedic Patients Response to New Pain Modulating Substances and Drugs",
+      "citation": "ClinicalTrials.gov NCTNCT03138460",
+      "publication_year": 2018,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "standard medications crossed over to cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Brief pain inventory score (BPI)"
+        ],
+        "outcome_measures": [
+          "Brief pain inventory score (BPI)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03138460",
+        "enrollment": 100,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03138460"
+      }
+    },
+    {
+      "study_id": "CT_NCT02892591",
+      "study_type": "RCT",
+      "condition": "BACK_PAIN",
+      "study_title": "Cannabis Versus Oxycodone for Pain Relief",
+      "citation": "ClinicalTrials.gov NCTNCT02892591",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis, Placebo for Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain Numeric Rating Scale (NRS) score (Spine Patients)",
+          "Pain Threshold (kPa) (Healthy Controls)"
+        ],
+        "outcome_measures": [
+          "Pain Numeric Rating Scale (NRS) score (Spine Patients)",
+          "Pain Threshold (kPa) (Healthy Controls)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02892591",
+        "enrollment": 33,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02892591"
+      }
+    },
+    {
+      "study_id": "CT_NCT03522324",
+      "study_type": "Clinical Trial",
+      "condition": "BACK_PAIN",
+      "study_title": "Pain Research: Innovative Strategies With Marijuana",
+      "citation": "ClinicalTrials.gov NCTNCT03522324",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis Edible",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Pain Interference: Roland Morris Disability Questionnaire (RMDQ)",
+          "Inflammation: Circulating Levels of Cytokines",
+          "Flanker Inhibitory Control Attention Task (FICA) & International Shopping List Task (ISLT)",
+          "Functional Assessment of Cancer Therapy Cognitive Scale (FACT-Cog)"
+        ],
+        "outcome_measures": [
+          "Pain Interference: Roland Morris Disability Questionnaire (RMDQ)",
+          "Inflammation: Circulating Levels of Cytokines",
+          "Flanker Inhibitory Control Attention Task (FICA) & International Shopping List Task (ISLT)",
+          "Functional Assessment of Cancer Therapy Cognitive Scale (FACT-Cog)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03522324",
+        "enrollment": 268,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03522324"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 4,
+    "pubmed_added": 0,
+    "total_added": 4,
+    "expansion_date": "2025-12-23T23:42:13.357627"
+  }
+}

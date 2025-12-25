@@ -1,0 +1,255 @@
+{
+  "extraction_date": "2025-12-23",
+  "condition": "NEUROPATHIC_PAIN",
+  "phase": "3",
+  "priority": "Expansion",
+  "total_studies": 7,
+  "studies": [
+    {
+      "study_id": "CT_NCT05554146",
+      "study_type": "RCT",
+      "condition": "NEUROPATHIC_PAIN",
+      "study_title": "Pain Inflammation and Cannabis in HIV",
+      "citation": "ClinicalTrials.gov NCTNCT05554146",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in Pain Severity Score"
+        ],
+        "outcome_measures": [
+          "Change in Pain Severity Score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05554146",
+        "enrollment": 35,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05554146"
+      }
+    },
+    {
+      "study_id": "CT_NCT03372161",
+      "study_type": "RCT",
+      "condition": "NEUROPATHIC_PAIN",
+      "study_title": "Corticosteroid Lumbar Epidural Analgesia for Radiculopathy",
+      "citation": "ClinicalTrials.gov NCTNCT03372161",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Mean Change From Baseline (Day 1) to Week 4 in the Mean Numeric Pain Rating Scale (NPRS) Average Pain Score in the Affected Leg"
+        ],
+        "outcome_measures": [
+          "Mean Change From Baseline (Day 1) to Week 4 in the Mean Numeric Pain Rating Scale (NPRS) Average Pain Score in the Affected Leg"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03372161",
+        "enrollment": 401,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03372161"
+      }
+    },
+    {
+      "study_id": "CT_NCT01555983",
+      "study_type": "RCT",
+      "condition": "NEUROPATHIC_PAIN",
+      "study_title": "Vaporized Cannabis and Spinal Cord Injury Pain",
+      "citation": "ClinicalTrials.gov NCTNCT01555983",
+      "publication_year": 2014,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Vaporization of Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Participants Achieving a Reduction in Pain Intensity of 30% or More"
+        ],
+        "outcome_measures": [
+          "Number of Participants Achieving a Reduction in Pain Intensity of 30% or More"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT01555983",
+        "enrollment": 42,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT01555983"
+      }
+    },
+    {
+      "study_id": "CT_NCT07162454",
+      "study_type": "RCT",
+      "condition": "NEUROPATHIC_PAIN",
+      "study_title": "Effectiveness of CBD for Neuropathic Pain in Diabetic Foot Neuropathy",
+      "citation": "ClinicalTrials.gov NCTNCT07162454",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Group 2. Cannabidiol and Urea 10% formula.",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Assessment of neuropathic pain."
+        ],
+        "outcome_measures": [
+          "Assessment of neuropathic pain."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT07162454",
+        "enrollment": 23,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT07162454"
+      }
+    },
+    {
+      "study_id": "CT_NCT00254761",
+      "study_type": "RCT",
+      "condition": "NEUROPATHIC_PAIN",
+      "study_title": "Effects of Smoked Marijuana on Neuropathic Pain",
+      "citation": "ClinicalTrials.gov NCTNCT00254761",
+      "publication_year": 2006,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Score on a series of pain scales (heat pain threshold, VAS intensity, VAS unpleasantness, pain relief, neuropathic pain scale)."
+        ],
+        "outcome_measures": [
+          "Score on a series of pain scales (heat pain threshold, VAS intensity, VAS unpleasantness, pain relief, neuropathic pain scale)."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00254761",
+        "enrollment": 28,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00254761"
+      }
+    },
+    {
+      "study_id": "CT_NCT03099005",
+      "study_type": "RCT",
+      "condition": "NEUROPATHIC_PAIN",
+      "study_title": "Effect of Cannabis and Endocannabinoids on HIV Neuropathic Pain",
+      "citation": "ClinicalTrials.gov NCTNCT03099005",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Phase 1 - Numerical Pain Rating Scale (NPRS)"
+        ],
+        "outcome_measures": [
+          "Phase 1 - Numerical Pain Rating Scale (NPRS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03099005",
+        "enrollment": 5,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03099005"
+      }
+    },
+    {
+      "study_id": "CT_NCT00872144",
+      "study_type": "RCT",
+      "condition": "NEUROPATHIC_PAIN",
+      "study_title": "Sativex for Treatment of Chemotherapy Induced Neuropathic Pain",
+      "citation": "ClinicalTrials.gov NCTNCT00872144",
+      "publication_year": 2013,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Sativex",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in the NRS-PI from baseline to the final week of stable dose treatment)",
+          "Participants gaining a 30% or greater reduction in the NRS-PI"
+        ],
+        "outcome_measures": [
+          "Change in the NRS-PI from baseline to the final week of stable dose treatment)",
+          "Participants gaining a 30% or greater reduction in the NRS-PI"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT00872144",
+        "enrollment": 16,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT00872144"
+      }
+    }
+  ],
+  "expansion_metadata": {
+    "clinicaltrials_gov_added": 7,
+    "pubmed_added": 0,
+    "total_added": 7,
+    "expansion_date": "2025-12-23T23:42:16.047074"
+  }
+}

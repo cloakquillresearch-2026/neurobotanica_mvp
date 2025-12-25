@@ -3,7 +3,7 @@
   "condition": "PTSD",
   "phase": "1",
   "priority": "Phase 1 - Foundation (FDA Breakthrough Therapy)",
-  "total_studies": 10,
+  "total_studies": 23,
   "studies": [
     {
       "study_id": "PTSD_RCT_001",
@@ -374,6 +374,484 @@
       },
       "regulatory_relevance": "HIGH - CBD-specific; non-psychoactive option; 91% response; supports larger RCT",
       "priority": "⭐⭐⭐⭐"
+    },
+    {
+      "study_id": "CT_NCT05132699",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Enhancing Prolonged Exposure With Cannabidiol to Treat Posttraumatic Stress Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT05132699",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol (CBD) oral solution",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Clinician Administered PTSD Scale (CAPS-5)",
+          "Posttraumatic Stress Disorder Checklist (PCL-5)"
+        ],
+        "outcome_measures": [
+          "Clinician Administered PTSD Scale (CAPS-5)",
+          "Posttraumatic Stress Disorder Checklist (PCL-5)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05132699",
+        "enrollment": 21,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05132699"
+      }
+    },
+    {
+      "study_id": "CT_NCT04080427",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Effects of Delta9-tetrahydrocannabinol (THC) on Retention of Memory for Fear Extinction Learning in PTSD: R33 Study",
+      "citation": "ClinicalTrials.gov NCTNCT04080427",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol 7.5 milligram oral capsule",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Brain Measures",
+          "Psychophysiology",
+          "Expectancy Ratings",
+          "PTSD Checklist (PCL-5)",
+          "Clinician Administered PTSD Scale for Diagnostic and Statistical Manual (DSM)-5 (CAPS-5)",
+          "Subjective Units of Distress Scale (SUDS)"
+        ],
+        "outcome_measures": [
+          "Brain Measures",
+          "Psychophysiology",
+          "Expectancy Ratings",
+          "PTSD Checklist (PCL-5)",
+          "Clinician Administered PTSD Scale for Diagnostic and Statistical Manual (DSM)-5 (CAPS-5)",
+          "Subjective Units of Distress Scale (SUDS)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04080427",
+        "enrollment": 102,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04080427"
+      }
+    },
+    {
+      "study_id": "CT_NCT02517424",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Evaluating Safety and Efficacy of Cannabis in Participants With Chronic Posttraumatic Stress Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT02517424",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "High THC/Low CBD Cannabis, High THC/High CBD Cannabis, Low THC/Low CBD Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from baseline to end of Stage 1 in posttraumatic stress disorder symptoms via Clinician Administered PTSD Scale (CAPS) for Diagnostic and Statistical Manual of Mental Disorders (DSM)"
+        ],
+        "outcome_measures": [
+          "Change from baseline to end of Stage 1 in posttraumatic stress disorder symptoms via Clinician Administered PTSD Scale (CAPS) for Diagnostic and Statistical Manual of Mental Disorders (DSM)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02517424",
+        "enrollment": 6,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02517424"
+      }
+    },
+    {
+      "study_id": "CT_NCT02759185",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Pilot Study of the Safety and Efficacy of Four Different Potencies of Smoked Marijuana in 76 Veterans With PTSD",
+      "citation": "ClinicalTrials.gov NCTNCT02759185",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "High THC cannabis, High CBD cannabis, THC/CBD cannabis, Placebo cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Baseline CAPS-5 Total Severity Score",
+          "Stage 1 Primary Endpoint CAPS-5 Total Severity Scores (Visit 5)",
+          "Change in CAPS-5 Total Severity Scores From Baseline to Stage 1 Primary Endpoint (Visit 5)"
+        ],
+        "outcome_measures": [
+          "Baseline CAPS-5 Total Severity Score",
+          "Stage 1 Primary Endpoint CAPS-5 Total Severity Scores (Visit 5)",
+          "Change in CAPS-5 Total Severity Scores From Baseline to Stage 1 Primary Endpoint (Visit 5)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02759185",
+        "enrollment": 80,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02759185"
+      }
+    },
+    {
+      "study_id": "CT_NCT03008005",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Effects of Delta-9 Tetrahydrocannabinol (THC) on Retention of Memory for Fear Extinction Learning in PTSD: R61 Study",
+      "citation": "ClinicalTrials.gov NCTNCT03008005",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol Cap 5 milligrams (MG), Dronabinol Cap 10 milligrams (MG)",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE4",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Brain Measures",
+          "Expectancy Ratings"
+        ],
+        "outcome_measures": [
+          "Brain Measures",
+          "Expectancy Ratings"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03008005",
+        "enrollment": 46,
+        "phase": "PHASE4",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03008005"
+      }
+    },
+    {
+      "study_id": "CT_NCT04965740",
+      "study_type": "Clinical Trial",
+      "condition": "PTSD",
+      "study_title": "Exploring Medically Perceived Benefits, Use and Interest in Psychedelics and Cannabinoids",
+      "citation": "ClinicalTrials.gov NCTNCT04965740",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Collect Insights from First Responders"
+        ],
+        "outcome_measures": [
+          "Collect Insights from First Responders"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04965740",
+        "enrollment": 102,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04965740"
+      }
+    },
+    {
+      "study_id": "CT_NCT03248167",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Cannabidiol as a Treatment for AUD Comorbid With PTSD",
+      "citation": "ClinicalTrials.gov NCTNCT03248167",
+      "publication_year": 2022,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE1",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Number of Drinks Per Day",
+          "Number of Drinks Per Day",
+          "Number of Drinks Per Day",
+          "PCL-5 Total Score",
+          "PCL-5 Total Score",
+          "PCL-5 Total Score"
+        ],
+        "outcome_measures": [
+          "Number of Drinks Per Day",
+          "Number of Drinks Per Day",
+          "Number of Drinks Per Day",
+          "PCL-5 Total Score",
+          "PCL-5 Total Score",
+          "PCL-5 Total Score"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03248167",
+        "enrollment": 95,
+        "phase": "PHASE1",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03248167"
+      }
+    },
+    {
+      "study_id": "CT_NCT04504877",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Burnout and Distress preventiOn With caNnabidiol in Front-line Health Care workerS deAling wIth COVID-19",
+      "citation": "ClinicalTrials.gov NCTNCT04504877",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "aMBI-HSS: Abbreviated Maslach Burnout Inventory - Human Services Survey"
+        ],
+        "outcome_measures": [
+          "aMBI-HSS: Abbreviated Maslach Burnout Inventory - Human Services Survey"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT04504877",
+        "enrollment": 120,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT04504877"
+      }
+    },
+    {
+      "study_id": "CT_NCT02069366",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Cannabinoid Control of Fear Extinction Neural Circuits in Post-traumatic Stress Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT02069366",
+      "publication_year": 2019,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Brain Measures",
+          "Expectancy Ratings"
+        ],
+        "outcome_measures": [
+          "Brain Measures",
+          "Expectancy Ratings"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02069366",
+        "enrollment": 86,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02069366"
+      }
+    },
+    {
+      "study_id": "CT_NCT03518801",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Cannabidiol and Prolonged Exposure",
+      "citation": "ClinicalTrials.gov NCTNCT03518801",
+      "publication_year": 2025,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabidiol",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Clinician-Administered PTSD Scale DSM 5 (CAPS-5)"
+        ],
+        "outcome_measures": [
+          "Clinician-Administered PTSD Scale DSM 5 (CAPS-5)"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03518801",
+        "enrollment": 136,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03518801"
+      }
+    },
+    {
+      "study_id": "CT_NCT05226351",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Activation of the Endocannabinoid System and Cognition",
+      "citation": "ClinicalTrials.gov NCTNCT05226351",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Dronabinol 2.5 mg",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "extinction learning"
+        ],
+        "outcome_measures": [
+          "extinction learning"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05226351",
+        "enrollment": 192,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05226351"
+      }
+    },
+    {
+      "study_id": "CT_NCT03886753",
+      "study_type": "Clinical Trial",
+      "condition": "PTSD",
+      "study_title": "Pharmacokinetic (PK) and Pharmacodynamics (PD) Study of Ilera Specific Products",
+      "citation": "ClinicalTrials.gov NCTNCT03886753",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in symptoms"
+        ],
+        "outcome_measures": [
+          "Change in symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03886753",
+        "enrollment": 10,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03886753"
+      }
+    },
+    {
+      "study_id": "CT_NCT02004743",
+      "study_type": "RCT",
+      "condition": "PTSD",
+      "study_title": "Early Prevention of Post Traumatic Stress Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT02004743",
+      "publication_year": 2015,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Presence & severity of PTSD symptoms",
+          "Depressive symptoms"
+        ],
+        "outcome_measures": [
+          "Presence & severity of PTSD symptoms",
+          "Depressive symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02004743",
+        "enrollment": 99,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02004743"
+      }
     }
-  ]
+  ],
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 2
+  }
 }

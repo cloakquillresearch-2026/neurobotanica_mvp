@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "1.0",
-    "created_date": "2025-12-21T19:23:27.454996",
+    "created_date": "2025-12-23T23:47:15.737550",
     "total_practices": 30,
     "non_sacred_practices": 30,
     "sacred_practices_flagged": 0,
@@ -177,7 +177,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Traditional Chinese Medicine historical records",
       "practice_id": "TK_0000",
-      "added_date": "2025-12-21T19:23:27.453056"
+      "added_date": "2025-12-23T23:47:15.726639"
     },
     {
       "practice_name": "Cannabis oil for epilepsy",
@@ -197,16 +197,14 @@
       "ceremonial_significance": false,
       "traditional_dosage": "5-10 drops topically or orally",
       "preparation_notes": "Cannabis leaves macerated in sesame oil for 30 days",
-      "evidence_level": "published_knowledge",
+      "evidence_level": "historical_documentation",
       "literature_sources": [
-        "PMID:28412918",
-        "PMID:28813226",
-        "PMID:29511052"
+        "PMID:28412918"
       ],
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Ayurvedic pharmacopoeia",
       "practice_id": "TK_0001",
-      "added_date": "2025-12-21T19:23:27.453083"
+      "added_date": "2025-12-23T23:47:15.726668"
     },
     {
       "practice_name": "Hemp seed for appetite stimulation",
@@ -231,11 +229,8 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "Eastern European folk medicine tradition",
-      "training_risk_level": "high",
-      "suppress_from_training": true,
-      "risk_notes": "Awaiting metabolic biomarker linkage before modeling appetite stimulation claims",
       "practice_id": "TK_0002",
-      "added_date": "2025-12-21T19:23:27.453087"
+      "added_date": "2025-12-23T23:47:15.726673"
     },
     {
       "practice_name": "Cannabis topical for arthritis",
@@ -262,7 +257,7 @@
       "community_consent_status": "tramil_approved",
       "attribution_notes": "TRAMIL Caribbean Traditional Medicine Database",
       "practice_id": "TK_0003",
-      "added_date": "2025-12-21T19:23:27.453090"
+      "added_date": "2025-12-23T23:47:15.726675"
     },
     {
       "practice_name": "Cannabis tea for anxiety",
@@ -289,7 +284,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Brazilian ethnobotanical surveys",
       "practice_id": "TK_0004",
-      "added_date": "2025-12-21T19:23:27.453092"
+      "added_date": "2025-12-23T23:47:15.726678"
     },
     {
       "practice_name": "Cannabis resin for migraine",
@@ -317,7 +312,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Persian traditional medicine (Tibb) historical texts",
       "practice_id": "TK_0005",
-      "added_date": "2025-12-21T19:23:27.453583"
+      "added_date": "2025-12-23T23:47:15.735917"
     },
     {
       "practice_name": "Hemp fiber poultice for inflammation",
@@ -345,7 +340,7 @@
       "community_consent_status": "public_domain",
       "attribution_notes": "Slavic ethnomedicine tradition",
       "practice_id": "TK_0006",
-      "added_date": "2025-12-21T19:23:27.453590"
+      "added_date": "2025-12-23T23:47:15.735928"
     },
     {
       "practice_name": "Cannabis tincture for neuropathic pain",
@@ -373,7 +368,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Western herbal pharmacopoeia",
       "practice_id": "TK_0007",
-      "added_date": "2025-12-21T19:23:27.453593"
+      "added_date": "2025-12-23T23:47:15.735931"
     },
     {
       "practice_name": "Cannabis smoke for asthma",
@@ -400,7 +395,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Ayurvedic respiratory treatments",
       "practice_id": "TK_0008",
-      "added_date": "2025-12-21T19:23:27.453595"
+      "added_date": "2025-12-23T23:47:15.735934"
     },
     {
       "practice_name": "Hemp seed oil for skin conditions",
@@ -426,11 +421,8 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "European folk medicine tradition",
-      "training_risk_level": "high",
-      "suppress_from_training": true,
-      "risk_notes": "Need dermatology-grade dosing controls and NORML genomic anchors before training",
       "practice_id": "TK_0009",
-      "added_date": "2025-12-21T19:23:27.453598"
+      "added_date": "2025-12-23T23:47:15.735936"
     },
     {
       "practice_name": "Cannabis for glaucoma treatment",
@@ -456,7 +448,7 @@
       "community_consent_status": "tramil_approved",
       "attribution_notes": "TRAMIL Caribbean database - Jamaican traditional medicine",
       "practice_id": "TK_0010",
-      "added_date": "2025-12-21T19:23:27.453600"
+      "added_date": "2025-12-23T23:47:15.735938"
     },
     {
       "practice_name": "Cannabis compress for menstrual pain",
@@ -482,7 +474,7 @@
       "community_consent_status": "public_domain",
       "attribution_notes": "Mexican traditional medicine (curanderismo)",
       "practice_id": "TK_0011",
-      "added_date": "2025-12-21T19:23:27.453603"
+      "added_date": "2025-12-23T23:47:15.735940"
     },
     {
       "practice_name": "Hemp protein for muscle recovery",
@@ -507,11 +499,8 @@
       ],
       "community_consent_status": "published_knowledge",
       "attribution_notes": "TCM sports medicine tradition",
-      "training_risk_level": "medium",
-      "suppress_from_training": true,
-      "risk_notes": "Need biomarker data for muscle recovery claims before enabling model training",
       "practice_id": "TK_0012",
-      "added_date": "2025-12-21T19:23:27.453605"
+      "added_date": "2025-12-23T23:47:15.735943"
     },
     {
       "practice_name": "Cannabis for PTSD and trauma",
@@ -531,24 +520,20 @@
       "ceremonial_significance": false,
       "traditional_dosage": "As directed by traditional healer",
       "preparation_notes": "Used in tea or tincture form, under supervision",
-      "evidence_level": "published_knowledge",
+      "evidence_level": "ethnographic_documentation",
       "literature_sources": [
-        "PMID:24987795",
-        "PMID:25467221",
-        "PMID:33730032",
-        "PMID:29955551"
+        "PMID:30150929"
       ],
-      "community_consent_status": "published_knowledge",
-      "attribution_notes": "Published ethnographic accounts of non-ceremonial therapeutic uses",
       "neuroprotective_metadata": {
         "excitotoxic_flag": true,
-        "excitotoxic_evidence_source": "GLAUCOMA_MECHANISTIC_002",
-        "excitotoxic_reference_description": "Nucci et al. 2008 demonstrated cannabinoids protect retinal ganglion cells from glutamate excitotoxicity with 40% improved survival, forming the mechanistic basis for PTSD neuroprotection claims.",
-        "translation_notes": "Bridge glaucoma excitotoxic shielding into PTSD fear circuitry to justify aggression on hippocampal/amygdala targets.",
-        "last_verified": "2025-12-23"
+        "excitotoxic_evidence_source": "Traditional Native American medicine - neuroprotective effects documented in trauma recovery protocols",
+        "glutamate_modulation": true,
+        "oxidative_stress_protection": true
       },
+      "community_consent_status": "published_knowledge",
+      "attribution_notes": "Published ethnographic accounts of non-ceremonial therapeutic uses",
       "practice_id": "TK_0013",
-      "added_date": "2025-12-21T19:23:27.453607"
+      "added_date": "2025-12-23T23:47:15.735945"
     },
     {
       "practice_name": "Cannabis for multiple sclerosis spasticity",
@@ -575,7 +560,7 @@
       "community_consent_status": "public_domain",
       "attribution_notes": "Moroccan traditional medicine",
       "practice_id": "TK_0014",
-      "added_date": "2025-12-21T19:23:27.453609"
+      "added_date": "2025-12-23T23:47:15.735947"
     },
     {
       "practice_name": "Hemp seed for constipation",
@@ -600,11 +585,8 @@
       ],
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Korean traditional medicine (Hanbang)",
-      "training_risk_level": "medium",
-      "suppress_from_training": true,
-      "risk_notes": "Need validated GI transcriptomic targets before modeling constipation outcomes",
       "practice_id": "TK_0015",
-      "added_date": "2025-12-21T19:23:27.453611"
+      "added_date": "2025-12-23T23:47:15.735949"
     },
     {
       "practice_name": "Cannabis for nausea and vomiting",
@@ -630,7 +612,7 @@
       "community_consent_status": "public_domain",
       "attribution_notes": "Thai traditional culinary medicine",
       "practice_id": "TK_0016",
-      "added_date": "2025-12-21T19:23:27.453612"
+      "added_date": "2025-12-23T23:47:15.735951"
     },
     {
       "practice_name": "Cannabis salve for burns",
@@ -656,11 +638,8 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "Appalachian folk medicine",
-      "training_risk_level": "high",
-      "suppress_from_training": true,
-      "risk_notes": "Topical burn application lacks NORML-aligned genomic metadata",
       "practice_id": "TK_0017",
-      "added_date": "2025-12-21T19:23:27.453614"
+      "added_date": "2025-12-23T23:47:15.735952"
     },
     {
       "practice_name": "Cannabis for depression",
@@ -688,7 +667,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "South African ethnobotanical research",
       "practice_id": "TK_0018",
-      "added_date": "2025-12-21T19:23:27.453616"
+      "added_date": "2025-12-23T23:47:15.735954"
     },
     {
       "practice_name": "Hemp for hypertension",
@@ -712,11 +691,8 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "Nigerian traditional dietary practices",
-      "training_risk_level": "high",
-      "suppress_from_training": true,
-      "risk_notes": "Cardiovascular use flagged until dosage and study metadata improve",
       "practice_id": "TK_0019",
-      "added_date": "2025-12-21T19:23:27.453618"
+      "added_date": "2025-12-23T23:47:15.735957"
     },
     {
       "practice_name": "Cannabis for Alzheimer's neuroprotection",
@@ -744,7 +720,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Israeli medical cannabis research tradition",
       "practice_id": "TK_0020",
-      "added_date": "2025-12-21T19:23:27.453620"
+      "added_date": "2025-12-23T23:47:15.735959"
     },
     {
       "practice_name": "Hemp fiber tea for diabetes",
@@ -769,11 +745,8 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "Romanian folk medicine tradition",
-      "training_risk_level": "high",
-      "suppress_from_training": true,
-      "risk_notes": "Awaiting fasting glucose and D1/KV genomic links before including metabolic practice",
       "practice_id": "TK_0021",
-      "added_date": "2025-12-21T19:23:27.453622"
+      "added_date": "2025-12-23T23:47:15.735961"
     },
     {
       "practice_name": "Cannabis poultice for fractures and bone healing",
@@ -800,7 +773,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Tibetan medicine (Sowa Rigpa) historical texts",
       "practice_id": "TK_0022",
-      "added_date": "2025-12-21T19:23:27.453625"
+      "added_date": "2025-12-23T23:47:15.735963"
     },
     {
       "practice_name": "Cannabis for chemotherapy side effects",
@@ -828,7 +801,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Integrative oncology evidence base",
       "practice_id": "TK_0023",
-      "added_date": "2025-12-21T19:23:27.453627"
+      "added_date": "2025-12-23T23:47:15.735965"
     },
     {
       "practice_name": "Hemp root decoction for fever",
@@ -854,7 +827,7 @@
       "community_consent_status": "public_domain",
       "attribution_notes": "Ancient Greek pharmacopoeia (Dioscorides)",
       "practice_id": "TK_0024",
-      "added_date": "2025-12-21T19:23:27.453629"
+      "added_date": "2025-12-23T23:47:15.735967"
     },
     {
       "practice_name": "Cannabis for Parkinson's tremor",
@@ -881,7 +854,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Brazilian neurology research",
       "practice_id": "TK_0025",
-      "added_date": "2025-12-21T19:23:27.453630"
+      "added_date": "2025-12-23T23:47:15.735969"
     },
     {
       "practice_name": "Cannabis honey for cough and bronchitis",
@@ -901,16 +874,14 @@
       "ceremonial_significance": false,
       "traditional_dosage": "1 teaspoon 3-4 times daily",
       "preparation_notes": "Cannabis flowers infused in raw honey for 30 days, strained",
-      "evidence_level": "published_knowledge",
+      "evidence_level": "ethnographic_documentation",
       "literature_sources": [
-        "NORML:CACHEXIA_OBSERVATIONAL_002",
-        "NORML:CACHEXIA_OBSERVATIONAL_003",
-        "NORML:COVID19_PUBMED_34619044_RCT_CANDIDATE"
+        "ethnobotany_poland"
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "Polish folk medicine tradition",
       "practice_id": "TK_0026",
-      "added_date": "2025-12-21T19:23:27.453632"
+      "added_date": "2025-12-23T23:47:15.735971"
     },
     {
       "practice_name": "Hemp seed for lactation support",
@@ -935,11 +906,8 @@
       ],
       "community_consent_status": "public_domain",
       "attribution_notes": "German traditional midwifery",
-      "training_risk_level": "high",
-      "suppress_from_training": true,
-      "risk_notes": "Maternal care use requires additional consent and pharmacology data",
       "practice_id": "TK_0027",
-      "added_date": "2025-12-21T19:23:27.453636"
+      "added_date": "2025-12-23T23:47:15.735974"
     },
     {
       "practice_name": "Cannabis for fibromyalgia",
@@ -967,7 +935,7 @@
       "community_consent_status": "published_knowledge",
       "attribution_notes": "Spanish pain management research",
       "practice_id": "TK_0028",
-      "added_date": "2025-12-21T19:23:27.453637"
+      "added_date": "2025-12-23T23:47:15.735976"
     },
     {
       "practice_name": "Cannabis compress for sciatica",
@@ -995,7 +963,7 @@
       "community_consent_status": "public_domain",
       "attribution_notes": "Hungarian traditional medicine",
       "practice_id": "TK_0029",
-      "added_date": "2025-12-21T19:23:27.453639"
+      "added_date": "2025-12-23T23:47:15.735978"
     }
   ]
 }

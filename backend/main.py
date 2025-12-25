@@ -25,7 +25,7 @@ from backend.api import studies, compounds, fda_compliance, conformers
 from backend.api import omnipath
 from backend.api import evidence, receptor_affinity
 from backend.api import dimers
-from backend.routers import patentpath, terpenes, chempath, toxpath, regpath, security
+from backend.routers import patentpath, terpenes, chempath, toxpath, regpath, security, genomepath, biopath, clinpath, dispensary
 from backend.middleware.token_validation import TokenValidationMiddleware
 
 
@@ -47,21 +47,23 @@ app = FastAPI(
     **Patent Claims Support:**
     - FDA Schedule III compliance documentation (Claim 1j)
     - Pharmacology data packages with mechanism of action
-    - Comparative efficacy analysis from 320-study database
+    - Comparative efficacy analysis from 368-study database
     - CMC templates for cannabis pharmaceutical approval
     - 3D conformer generation for molecular modeling
     - Clinical evidence aggregation with confidence weighting
     - Receptor affinity data with full provenance tracking
+    - Trade Secret Engines: ChemPath, ToxPath, RegPath, BioPath, ClinPath, GenomePath
     
     **Data Assets:**
-    - 320 clinical studies across 16 conditions
+    - 368 clinical studies across 22+ conditions
     - 63 cannabinoid compounds with molecular descriptors
+    - 10,084 dimer/entourage validated entries
     - 3D conformer ensembles (ETKDG method)
     - Dimeric triangulation predictions
     - FDA-approved drug evidence (Epidiolex, Marinol, Cesamet, Sativex)
     - Receptor affinity database with assay-level provenance
     """,
-    version="0.2.0",
+    version="0.4.0",
     lifespan=lifespan
 )
 
@@ -93,6 +95,10 @@ app.include_router(terpenes.router, prefix="/api/v1", tags=["Terpene Analysis"])
 app.include_router(chempath.router, tags=["ChemPath"])
 app.include_router(toxpath.router, tags=["ToxPath"])
 app.include_router(regpath.router, tags=["RegPath"])
+app.include_router(genomepath.router, tags=["GenomePath"])  # Router already has /api/genomepath prefix
+app.include_router(biopath.router, prefix="/api/biopath", tags=["BioPath"])
+app.include_router(clinpath.router, prefix="/api/clinpath", tags=["ClinPath"])
+app.include_router(dispensary.router, prefix="/api/dispensary", tags=["Dispensary"])
 app.include_router(security.router, tags=["Security"])
 
 # Add token validation middleware (disabled by default for development)
@@ -109,21 +115,33 @@ async def root():
     """Root endpoint with API information."""
     return {
         "message": "🌿 NeuroBotanica API",
-        "version": "0.1.0",
+        "version": "0.4.0",
         "description": "Dimeric Cannabinoid Therapeutic Prediction System",
         "patent_claims": ["1j - FDA Schedule III Compliance Support"],
         "data_assets": {
-            "clinical_studies": 320,
-            "conditions": 16,
+            "clinical_studies": 368,
+            "conditions": 22,
             "compounds": 63,
+            "dimer_entourage_entries": 10084,
             "fda_approved_drugs": ["Epidiolex", "Marinol", "Cesamet", "Sativex"]
         },
+        "trade_secret_engines": [
+            "ChemPath", "ToxPath", "RegPath", 
+            "BioPath", "ClinPath", "GenomePath"
+        ],
         "endpoints": {
             "studies": "/api/v1/studies",
             "compounds": "/api/v1/compounds",
             "fda_compliance": "/api/v1/fda",
             "conformers": "/api/v1/conformers",
             "omnipath": "/api/v1/omnipath",
+            "dimers": "/api/dimers",
+            "chempath": "/api/chempath",
+            "toxpath": "/api/toxpath",
+            "regpath": "/api/regpath",
+            "genomepath": "/api/genomepath",
+            "biopath": "/api/biopath",
+            "clinpath": "/api/clinpath",
             "docs": "/docs"
         }
     }
@@ -131,19 +149,50 @@ async def root():
 
 @app.get("/health")
 async def health_check(db: Session = Depends(get_db)):
-    """Health check endpoint with database connectivity test."""
+    """Health check endpoint with database connectivity and ML model status."""
     from sqlalchemy import text
+    import logging
+    
+    logger = logging.getLogger(__name__)
+    
+    # Test database connection
     try:
-        # Test database connection
         db.execute(text("SELECT 1"))
         db_status = "connected"
     except Exception as e:
         db_status = f"error: {str(e)}"
     
+    # Check ML model availability
+    ml_models = {
+        "dimer_predictor": False,
+        "nextgen_dimer_model": False,
+        "therapeutic_model": False,
+        "patient_response_model": False
+    }
+    
+    try:
+        from backend.services.dimer_predictor import DimericPredictor, RDKIT_AVAILABLE
+        ml_models["dimer_predictor"] = True
+        ml_models["rdkit_available"] = RDKIT_AVAILABLE
+        
+        # Check if nextgen model loads
+        predictor = DimericPredictor()
+        ml_models["nextgen_dimer_model"] = predictor.nextgen_model is not None
+    except Exception as e:
+        logger.warning(f"ML model check failed: {e}")
+    
+    # Determine overall status
+    overall_status = "healthy"
+    if db_status != "connected":
+        overall_status = "degraded"
+    elif not ml_models.get("dimer_predictor"):
+        overall_status = "degraded"
+    
     return {
-        "status": "healthy" if db_status == "connected" else "degraded",
+        "status": overall_status,
         "database": db_status,
-        "version": "0.1.0",
+        "version": "0.4.0",
+        "ml_models": ml_models,
         "features": {
             "fda_compliance_module": True,
             "pharmacology_packages": True,
@@ -153,7 +202,15 @@ async def health_check(db: Session = Depends(get_db)):
             "patient_treatment_models": True,
             "omnipath_integration": True,
             "provenance_tracking": True,
-            "token_validation": os.getenv("NEUROBOTANICA_TOKEN_VALIDATION", "false").lower() == "true"
+            "token_validation": os.getenv("NEUROBOTANICA_TOKEN_VALIDATION", "false").lower() == "true",
+            "trade_secret_engines": {
+                "chempath": True,
+                "toxpath": True,
+                "regpath": True,
+                "biopath": True,
+                "clinpath": True,
+                "genomepath": True
+            }
         }
     }
 

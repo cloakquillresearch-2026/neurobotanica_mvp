@@ -3,7 +3,7 @@
   "condition": "AUTISM_SPECTRUM_DISORDER",
   "phase": "4",
   "priority": "Phase 4 - Emerging Indications Expansion",
-  "total_studies": 12,
+  "total_studies": 17,
   "studies": [
     {
       "study_id": "AUTISM_SPECTRUM_DISORDER_OBSERVATIONAL_001",
@@ -376,6 +376,196 @@
         "placebo_controlled": true
       },
       "notes": "Extracted from NORML autism spectrum disorder research library (references section)."
+    },
+    {
+      "study_id": "CT_NCT02956226",
+      "study_type": "RCT",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "Cannabinoids for Behavioral Problems in Children With ASD",
+      "citation": "ClinicalTrials.gov NCTNCT02956226",
+      "publication_year": 2018,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabinoids - 99% pure cannabinoids mix, Cannabinoids - whole plant extract",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE2",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change from baseline Home Situations Questionnaire-Autism Spectrum Disorder (HSQ-ASD) score, at three months. Within subject difference between the placebo condition and the whole plant extract condition.",
+          "Clinical Global Impression-Improvement scores (CGI-I ) at three months. Within subject difference between the placebo condition and the whole plant extract condition."
+        ],
+        "outcome_measures": [
+          "Change from baseline Home Situations Questionnaire-Autism Spectrum Disorder (HSQ-ASD) score, at three months. Within subject difference between the placebo condition and the whole plant extract condition.",
+          "Clinical Global Impression-Improvement scores (CGI-I ) at three months. Within subject difference between the placebo condition and the whole plant extract condition."
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT02956226",
+        "enrollment": 150,
+        "phase": "PHASE2",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT02956226"
+      }
+    },
+    {
+      "study_id": "CT_NCT05212493",
+      "study_type": "RCT",
+      "condition": "AUTISM_SPECTRUM_DISORDER",
+      "study_title": "The Effects of Medical Cannabis in Children With Autistic Spectrum Disorder",
+      "citation": "ClinicalTrials.gov NCTNCT05212493",
+      "publication_year": 2023,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis oil",
+        "delivery_method": "various",
+        "dosing_information": "Phase PHASE3",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Cannabinoids levels change",
+          "Changes in attention span",
+          "Changes in cognitive level",
+          "Comparison of efficacy between two different cannabis oil products",
+          "Changes in adaptive behavior",
+          "Changes in violent behavior"
+        ],
+        "outcome_measures": [
+          "Cannabinoids levels change",
+          "Changes in attention span",
+          "Changes in cognitive level",
+          "Comparison of efficacy between two different cannabis oil products",
+          "Changes in adaptive behavior",
+          "Changes in violent behavior"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05212493",
+        "enrollment": 128,
+        "phase": "PHASE3",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05212493"
+      }
+    },
+    {
+      "study_id": "CT_NCT03886753",
+      "study_type": "Clinical Trial",
+      "condition": "AUTISM",
+      "study_title": "Pharmacokinetic (PK) and Pharmacodynamics (PD) Study of Ilera Specific Products",
+      "citation": "ClinicalTrials.gov NCTNCT03886753",
+      "publication_year": 2020,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase N/A",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in symptoms"
+        ],
+        "outcome_measures": [
+          "Change in symptoms"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03886753",
+        "enrollment": 10,
+        "phase": "N/A",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03886753"
+      }
+    },
+    {
+      "study_id": "CT_NCT03677089",
+      "study_type": "RCT",
+      "condition": "AUTISM",
+      "study_title": "Extension for Community Healthcare Outcomes Autism Replication Evaluation",
+      "citation": "ClinicalTrials.gov NCTNCT03677089",
+      "publication_year": 2018,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Longitudinal Pattern of ASD Screening in PCP Charts",
+          "Longitudinal Pattern of Reported Co-occurring Medical Conditions Correctly Treated in PCP Charts"
+        ],
+        "outcome_measures": [
+          "Longitudinal Pattern of ASD Screening in PCP Charts",
+          "Longitudinal Pattern of Reported Co-occurring Medical Conditions Correctly Treated in PCP Charts"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT03677089",
+        "enrollment": 148,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT03677089"
+      }
+    },
+    {
+      "study_id": "CT_NCT05302167",
+      "study_type": "RCT",
+      "condition": "AUTISM",
+      "study_title": "Molehill Mountain Feasibility Study.",
+      "citation": "ClinicalTrials.gov NCTNCT05302167",
+      "publication_year": 2024,
+      "journal": "ClinicalTrials.gov",
+      "intervention": {
+        "cannabis_type": "cannabis/cannabinoids",
+        "cannabinoid_profile": "Cannabis mentioned in study text",
+        "delivery_method": "various",
+        "dosing_information": "Phase NA",
+        "treatment_duration": "clinical trial duration"
+      },
+      "outcomes": {
+        "key_findings": [
+          "Change in 7-item Generalised Anxiety Disorder Scale (GAD-7)",
+          "App acceptability/ feasibility survey"
+        ],
+        "outcome_measures": [
+          "Change in 7-item Generalised Anxiety Disorder Scale (GAD-7)",
+          "App acceptability/ feasibility survey"
+        ],
+        "adverse_events": [],
+        "evidence_rating": "medium",
+        "confidence_level": "medium"
+      },
+      "metadata": {
+        "nct_id": "NCT05302167",
+        "enrollment": 100,
+        "phase": "NA",
+        "source": "ClinicalTrials.gov",
+        "url": "https://clinicaltrials.gov/study/NCT05302167"
+      }
     }
-  ]
+  ],
+  "expansion_metadata": {
+    "last_expanded": null,
+    "total_expanded": 3
+  }
 }

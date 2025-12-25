@@ -1,0 +1,213 @@
+{
+  "extraction_date": "2025-12-24",
+  "condition": "THCV_METABOLIC",
+  "phase": "enhancement",
+  "priority": "Metabolic Disorders Research",
+  "total_studies": 7,
+  "studies": [
+    {
+    "study_id": "thcv_metabolic_2025_mendoza",
+    "title": "The role of tetrahydrocannabivarin (THCV) in metabolic disorders: A promising cannabinoid for diabetes and weight management",
+    "authors": "Mendoza S",
+    "journal": "AIMS Neurosci",
+    "year": 2025,
+    "doi": "10.3934/Neuroscience.2025003",
+    "pmid": "40270953",
+    "abstract": "Preclinical studies demonstrated that THCV improves insulin sensitivity, promotes glucose uptake, and restores insulin signaling in metabolic tissues. Animal models further revealed THCV's potential to suppress appetite, prevent hepatosteatosis, and improve metabolic parameters.",
+    "key_findings": [
+      "THCV improves insulin sensitivity",
+      "Promotes glucose uptake in metabolic tissues",
+      "Restores insulin signaling",
+      "Suppresses appetite",
+      "Prevents hepatosteatosis",
+      "Improves metabolic parameters"
+    ],
+    "conditions": ["diabetes", "obesity", "metabolic_syndrome", "insulin_resistance"],
+    "study_type": "review",
+    "sample_size": null,
+    "duration": null,
+    "thcv_dosage": null,
+    "outcomes": [
+      "Improved insulin sensitivity",
+      "Enhanced glucose metabolism",
+      "Appetite suppression",
+      "Hepatic protection"
+    ],
+    "evidence_level": "preclinical_review",
+    "relevance_score": 9
+  },
+  {
+    "study_id": "thcv_metabolic_2025_smith",
+    "title": "Weight Loss and Therapeutic Metabolic Effects of Tetrahydrocannabivarin (THCV)-Infused Mucoadhesive Strips",
+    "authors": "Smith GL",
+    "journal": "Cannabis",
+    "year": 2025,
+    "doi": "10.26828/cannabis/2024/000206",
+    "pmid": "39968488",
+    "abstract": "Two phytocannabinoids, tetrahydrocannabivarin (THCV), a CB1 neutral antagonist, and cannabidiol (CBD), a negative allosteric modulator of CB1, are expected to have therapeutic metabolic benefits, including weight loss. The study evaluated the efficacy of THCV-infused mucoadhesive strips for weight management.",
+    "key_findings": [
+      "THCV acts as CB1 neutral antagonist",
+      "Therapeutic metabolic benefits including weight loss",
+      "Mucoadhesive delivery system evaluated",
+      "Potential for metabolic disorder treatment"
+    ],
+    "conditions": ["obesity", "weight_management", "metabolic_disorders"],
+    "study_type": "preclinical",
+    "sample_size": null,
+    "duration": null,
+    "thcv_dosage": null,
+    "outcomes": [
+      "Weight loss",
+      "Metabolic benefits",
+      "CB1 receptor modulation"
+    ],
+    "evidence_level": "preclinical",
+    "relevance_score": 8
+  },
+  {
+    "study_id": "thcv_metabolic_2023_rao",
+    "title": "Comparative metabolism of THCA and THCV using UHPLC-Q-Exactive Orbitrap-MS",
+    "authors": "Rao Q, Zhang T, Pu QL, Li B, Zhao Q, Yan DM, Wu ZE, Li F",
+    "journal": "Xenobiotica",
+    "year": 2023,
+    "doi": "10.1080/00498254.2023.2194981",
+    "pmid": "36951512",
+    "abstract": "The relationship between the metabolic characterisation and bioactivity of THCA and THCV remains elusive. To explore the relationship between the metabolism of THCA and THCV and their underlying mechanism of activity, human/mouse liver microsomes were used to investigate their metabolism.",
+    "key_findings": [
+      "THCV metabolism characterized using advanced MS techniques",
+      "Comparative analysis with THCA",
+      "Human and mouse liver microsome studies",
+      "Metabolic pathways identified"
+    ],
+    "conditions": ["metabolism", "pharmacokinetics"],
+    "study_type": "pharmacokinetic",
+    "sample_size": null,
+    "duration": null,
+    "thcv_dosage": null,
+    "outcomes": [
+      "Metabolic characterization",
+      "Bioactivity-metabolism relationship",
+      "Species differences in metabolism"
+    ],
+    "evidence_level": "pharmacokinetic",
+    "relevance_score": 7
+  },
+  {
+    "study_id": "thcv_metabolic_2021_abioye",
+    "title": "delta9-Tetrahydrocannabivarin (THCV): a commentary on potential therapeutic benefit for the management of obesity and diabetes",
+    "authors": "Abioye A, Ayodele O, Marinkovic A, Patidar R, Akinwekomi A, Sanyaolu A",
+    "journal": "J Cannabis Res",
+    "year": 2021,
+    "doi": "10.1186/s42238-020-0016-7",
+    "pmid": "33526143",
+    "abstract": "The main advantage of THCV over THC is the lack of psychoactive effects. In rodent studies, THCV decreases appetite, increases satiety, and up-regulates energy metabolism, making it a clinically useful remedy for weight loss and management of obesity and type 2 diabetes.",
+    "key_findings": [
+      "THCV lacks psychoactive effects unlike THC",
+      "Decreases appetite in rodent studies",
+      "Increases satiety",
+      "Up-regulates energy metabolism",
+      "Potential for obesity and diabetes management"
+    ],
+    "conditions": ["obesity", "diabetes_type_2", "metabolic_syndrome"],
+    "study_type": "review",
+    "sample_size": null,
+    "duration": null,
+    "thcv_dosage": null,
+    "outcomes": [
+      "Appetite suppression",
+      "Increased satiety",
+      "Enhanced energy metabolism",
+      "Weight management",
+      "Diabetes management"
+    ],
+    "evidence_level": "preclinical_review",
+    "relevance_score": 9
+  },
+  {
+    "study_id": "thcv_metabolic_2020_tinto",
+    "title": "Synthesis of the Major Mammalian Metabolites of THCV",
+    "authors": "Tinto F, Villano R, Kostrzewa M, Ligresti A, Straker H, Manzo E",
+    "journal": "J Nat Prod",
+    "year": 2020,
+    "doi": "10.1021/acs.jnatprod.9b00831",
+    "pmid": "32649196",
+    "abstract": "A simple synthesis of the major oxidized metabolites in mammalian tissues of (-)-delta(9)-tetrahydrocannabivarin (THCV) has been accomplished by kinetic studies of allylic oxidation using SeO(2) on botanically derived THCV with the aim to yield primary and secondary metabolites.",
+    "key_findings": [
+      "Synthesis of THCV metabolites",
+      "Major mammalian metabolites identified",
+      "Allylic oxidation using SeO2",
+      "Primary and secondary metabolites characterized"
+    ],
+    "conditions": ["metabolism", "pharmacokinetics"],
+    "study_type": "chemical_synthesis",
+    "sample_size": null,
+    "duration": null,
+    "thcv_dosage": null,
+    "outcomes": [
+      "Metabolite identification",
+      "Synthetic pathways established",
+      "Metabolic profiling"
+    ],
+    "evidence_level": "chemical",
+    "relevance_score": 6
+  },
+  {
+    "study_id": "thcv_metabolic_2024_sempio",
+    "title": "LC-MS-MS quantification of delta8-THC, delta9-THC, THCV isomers and their main metabolites in human plasma",
+    "authors": "Sempio C, Campos-Palomino J, Klawitter J, Harrison A, Peters EN, MacNair L, Haghdoost M, Bonn-Miller M, Babalonis S, Huestis MA, Christians U, Klawitter J",
+    "journal": "J Anal Toxicol",
+    "year": 2024,
+    "doi": "10.1093/jat/bkae048",
+    "pmid": "38836589",
+    "abstract": "Of 534 plasma samples following controlled oral administration of delta8-THCV, 236 were positive for delta8-THCV. The study developed and validated a method for quantification of delta8-THC, delta9-THC, THCV isomers and their main metabolites in human plasma.",
+    "key_findings": [
+      "LC-MS-MS method for THCV quantification",
+      "Human plasma metabolite analysis",
+      "Controlled oral administration study",
+      "Metabolite profiling in plasma"
+    ],
+    "conditions": ["pharmacokinetics", "metabolism"],
+    "study_type": "pharmacokinetic",
+    "sample_size": 534,
+    "duration": null,
+    "thcv_dosage": null,
+    "outcomes": [
+      "Quantitative analysis method",
+      "Metabolite identification",
+      "Pharmacokinetic parameters",
+      "Bioavailability assessment"
+    ],
+    "evidence_level": "clinical_pharmacokinetic",
+    "relevance_score": 8
+  },
+  {
+    "study_id": "thcv_metabolic_2023_kowalczuk",
+    "title": "Tetrahydrocannabivarin (THCV) Protects Adipose-Derived Mesenchymal Stem Cells (ASC) against Endoplasmic Reticulum Stress Development and Reduces Inflammation during Adipogenesis",
+    "authors": "Kowalczuk A, Marycz K, Kornicka J, Groborz S, Meissner J, Mularczyk M",
+    "journal": "Int J Mol Sci",
+    "year": 2023,
+    "doi": "10.3390/ijms24087120",
+    "pmid": "37108282",
+    "abstract": "The endoplasmic reticulum (ER) fulfills essential duties in cell physiology, and impairment of this organelle's functions is associated with a wide number of metabolic diseases. When ER stress is generated in the adipose tissue, it is observed that the metabolism and adipogenesis are impaired.",
+    "key_findings": [
+      "THCV protects mesenchymal stem cells from ER stress",
+      "Reduces inflammation during adipogenesis",
+      "Protects against metabolic disease development",
+      "Adipose tissue protection"
+    ],
+    "conditions": ["metabolic_diseases", "inflammation", "adipogenesis"],
+    "study_type": "cellular",
+    "sample_size": null,
+    "duration": null,
+    "thcv_dosage": null,
+    "outcomes": [
+      "ER stress protection",
+      "Anti-inflammatory effects",
+      "Adipogenesis modulation",
+      "Metabolic disease prevention"
+    ],
+    "evidence_level": "cellular",
+    "relevance_score": 7
+  }
+  ]
+}
