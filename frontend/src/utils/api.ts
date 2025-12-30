@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || ''
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
@@ -29,10 +29,11 @@ export const dispensaryAPI = {
 
 // Adjuvant optimization
 export const adjuvantAPI = {
-  optimize: (compound: string, target: string, patientProfile?: any) =>
+  optimize: (compound: string, target: string, kingdom: string = 'cannabis', patientProfile?: any) =>
     api.post('/api/adjuvant/optimize', {
       primary_compound: compound,
       therapeutic_target: target,
+      kingdom: kingdom,
       patient_profile: patientProfile,
     }),
 }
