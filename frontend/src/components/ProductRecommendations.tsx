@@ -149,7 +149,115 @@ const ADJUVANT_DETAILS: Record<string, AdjuvantInfo> = {
     dosage: '250-500mg daily',
     timing: 'Take 30 min before exercise or morning',
     evidence: 'Multiple RCTs show increased fat burning and metabolic rate'
-  }
+  },
+  // MARINE KINGDOM ADJUVANTS
+  'Krill Oil': {
+    name: 'Krill Oil (Omega-3 + Astaxanthin)',
+    mechanism: 'Phospholipid-bound omega-3 + astaxanthin antioxidant + enhanced absorption',
+    dosage: '500-1000mg daily',
+    timing: 'Take with meals',
+    evidence: 'Superior bioavailability compared to fish oil, enhanced joint and cognitive support'
+  },
+  'Astaxanthin': {
+    name: 'Astaxanthin',
+    mechanism: 'Powerful antioxidant + mitochondrial protection + anti-inflammatory + crosses blood-brain barrier',
+    dosage: '4-12mg daily',
+    timing: 'Take with fatty meal',
+    evidence: 'Most powerful carotenoid antioxidant, supports eye, skin, and brain health'
+  },
+  'Marine Omega-3': {
+    name: 'Marine Omega-3 Concentrate',
+    mechanism: 'High-EPA/DHA ratio + phospholipid form + enhanced endocannabinoid system support',
+    dosage: '750-1500mg daily',
+    timing: 'Take with meals',
+    evidence: 'Clinical studies show superior cardiovascular and anti-inflammatory benefits'
+  },
+  // FUNGAL KINGDOM ADJUVANTS
+  'Reishi': {
+    name: 'Reishi Mushroom (Ganoderma lucidum)',
+    mechanism: 'Cortisol modulation + immune enhancement + triterpenes + polysaccharides',
+    dosage: '500-1000mg daily',
+    timing: 'Take with meals',
+    evidence: 'Traditional medicine validated by modern studies for stress and immune support'
+  },
+  'Lion Mane': {
+    name: 'Lion\'s Mane Mushroom (Hericium erinaceus)',
+    mechanism: 'NGF stimulation + myelin repair + cognitive enhancement + erinacines',
+    dosage: '500-1000mg daily',
+    timing: 'Take with meals',
+    evidence: 'Clinical studies show nerve regeneration and cognitive enhancement'
+  },
+  'Cordyceps': {
+    name: 'Cordyceps Mushroom (Cordyceps sinensis)',
+    mechanism: 'AMPK activation + mitochondrial enhancement + adenosine + cordycepin',
+    dosage: '500-1000mg daily',
+    timing: 'Take 30 min before exercise',
+    evidence: 'Olympic athletes use for endurance, clinical studies support energy production'
+  },
+  'Turkey Tail': {
+    name: 'Turkey Tail Mushroom (Trametes versicolor)',
+    mechanism: 'PSP/PSG polysaccharides + immune modulation + beta-glucans',
+    dosage: '500-1000mg daily',
+    timing: 'Take with meals',
+    evidence: 'Strong evidence for immune support and cancer adjunct therapy'
+  },
+  // PLANT KINGDOM ADJUVANTS
+  'Bacopa': {
+    name: 'Bacopa Monnieri',
+    mechanism: 'BDNF enhancement + synaptic plasticity + bacosides + antioxidant',
+    dosage: '150-300mg daily',
+    timing: 'Take with meals',
+    evidence: 'Ayurvedic herb with clinical validation for cognitive enhancement'
+  },
+  'Rhodiola': {
+    name: 'Rhodiola Rosea',
+    mechanism: 'Cortisol modulation + serotonin enhancement + salidrosides + rosavins',
+    dosage: '100-200mg daily',
+    timing: 'Take morning',
+    evidence: 'Adaptogenic herb with clinical studies for fatigue and mental performance'
+  },
+  'Holy Basil': {
+    name: 'Holy Basil (Tulsi)',
+    mechanism: 'Cortisol reduction + GABA enhancement + eugenol + ursolic acid',
+    dosage: '150-300mg daily',
+    timing: 'Take with meals',
+    evidence: 'Sacred herb with modern validation for stress and metabolic support'
+  },
+  'Gotu Kola': {
+    name: 'Gotu Kola (Centella asiatica)',
+    mechanism: 'Triterpenes + asiaticoside + cognitive enhancement + collagen synthesis',
+    dosage: '250-500mg daily',
+    timing: 'Take with meals',
+    evidence: 'Traditional wound healer with clinical studies for circulation and cognition'
+  },
+  'Milk Thistle': {
+    name: 'Milk Thistle (Silymarin)',
+    mechanism: 'Hepatoprotection + glutathione enhancement + antioxidant + silibinin',
+    dosage: '150-300mg daily',
+    timing: 'Take with meals',
+    evidence: 'Gold standard liver support with extensive clinical validation'
+  },
+  'Boswellia': {
+    name: 'Boswellia (Frankincense)',
+    mechanism: '5-LOX inhibition + AKBA + boswellic acids + COX-2 modulation',
+    dosage: '250-500mg daily',
+    timing: 'Take with meals',
+    evidence: 'Clinical studies show joint health and anti-inflammatory benefits'
+  },
+  'Quercetin': {
+    name: 'Quercetin',
+    mechanism: 'Flavonoid + antioxidant + mast cell stabilization + CYP modulation',
+    dosage: '250-500mg daily',
+    timing: 'Take with meals',
+    evidence: 'Bioflavonoid with clinical studies for allergies and cardiovascular health'
+  },
+  'Resveratrol': {
+    name: 'Resveratrol',
+    mechanism: 'SIRT1 activation + AMPK enhancement + antioxidant + phytoalexin',
+    dosage: '50-100mg daily',
+    timing: 'Take with meals',
+    evidence: 'Red wine compound with clinical studies for longevity and metabolic health'
+  },
 }
 
 export function ProductRecommendations({
@@ -190,6 +298,8 @@ export function ProductRecommendations({
             ADJUVANT_DETAILS['Magnesium Glycinate'],
             ADJUVANT_DETAILS['Curcumin'],
             ADJUVANT_DETAILS['Alpha-Lipoic Acid'],
+            ADJUVANT_DETAILS['Krill Oil'], // Marine kingdom
+            ADJUVANT_DETAILS['Boswellia'], // Plant kingdom
           ],
         })
       }
@@ -209,6 +319,8 @@ export function ProductRecommendations({
             ADJUVANT_DETAILS['L-Theanine'],
             ADJUVANT_DETAILS['Ashwagandha'],
             ADJUVANT_DETAILS['NAC'],
+            ADJUVANT_DETAILS['Reishi'], // Fungal kingdom
+            ADJUVANT_DETAILS['Holy Basil'], // Plant kingdom
           ],
         })
       }
@@ -227,6 +339,8 @@ export function ProductRecommendations({
           adjuvants: [
             ADJUVANT_DETAILS['Magnesium Glycinate'],
             ADJUVANT_DETAILS['L-Theanine'],
+            ADJUVANT_DETAILS['Reishi'], // Fungal kingdom
+            ADJUVANT_DETAILS['Holy Basil'], // Plant kingdom
           ],
         })
       }
@@ -246,6 +360,8 @@ export function ProductRecommendations({
             ADJUVANT_DETAILS['Omega-3'],
             ADJUVANT_DETAILS['NAC'],
             ADJUVANT_DETAILS['Phosphatidylserine'],
+            ADJUVANT_DETAILS['Lion Mane'], // Fungal kingdom
+            ADJUVANT_DETAILS['Rhodiola'], // Plant kingdom
           ],
         })
       }
@@ -263,6 +379,9 @@ export function ProductRecommendations({
           clinical_studies: 42,
           adjuvants: [
             ADJUVANT_DETAILS['Black Pepper Extract'],
+            ADJUVANT_DETAILS['Ginger'], // Plant kingdom
+            ADJUVANT_DETAILS['Reishi'], // Fungal kingdom
+            ADJUVANT_DETAILS['Turmeric'], // Plant kingdom
           ],
         })
       }
@@ -282,6 +401,8 @@ export function ProductRecommendations({
             ADJUVANT_DETAILS['Berberine'],
             ADJUVANT_DETAILS['EGCG'],
             ADJUVANT_DETAILS['Inositol'],
+            ADJUVANT_DETAILS['Cordyceps'], // Fungal kingdom
+            ADJUVANT_DETAILS['Green Tea Extract'], // Plant kingdom
           ],
         })
       }
@@ -301,6 +422,8 @@ export function ProductRecommendations({
           adjuvants: [
             ADJUVANT_DETAILS['L-Theanine'],
             ADJUVANT_DETAILS['Omega-3'],
+            ADJUVANT_DETAILS['Reishi'], // Fungal kingdom
+            ADJUVANT_DETAILS['Turmeric'], // Plant kingdom
           ],
         })
       }
