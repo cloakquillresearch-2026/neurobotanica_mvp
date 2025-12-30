@@ -258,6 +258,20 @@ const ADJUVANT_DETAILS: Record<string, AdjuvantInfo> = {
     timing: 'Take with meals',
     evidence: 'Red wine compound with clinical studies for longevity and metabolic health'
   },
+  'Ginger': {
+    name: 'Ginger',
+    mechanism: 'Anti-nausea + anti-inflammatory + gingerols + shogaols',
+    dosage: '500-1000mg daily',
+    timing: 'Take 30 min before meals',
+    evidence: 'Clinical studies show effectiveness for nausea and digestive support'
+  },
+  'Turmeric': {
+    name: 'Turmeric',
+    mechanism: 'Curcumin + anti-inflammatory + antioxidant + COX-2 inhibition',
+    dosage: '500-1000mg daily with black pepper',
+    timing: 'Take with meals',
+    evidence: 'Extensive studies support anti-inflammatory and joint health benefits'
+  },
 }
 
 export function ProductRecommendations({
@@ -402,7 +416,7 @@ export function ProductRecommendations({
             ADJUVANT_DETAILS['EGCG'],
             ADJUVANT_DETAILS['Inositol'],
             ADJUVANT_DETAILS['Cordyceps'], // Fungal kingdom
-            ADJUVANT_DETAILS['Green Tea Extract'], // Plant kingdom
+            ADJUVANT_DETAILS['EGCG'], // Plant kingdom
           ],
         })
       }
