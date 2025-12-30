@@ -95,3 +95,7 @@ credentials/
 *.key
 *.pem
 *_secret.json
+
+# Next.js build output
+frontend/.next/
+frontend/out/
