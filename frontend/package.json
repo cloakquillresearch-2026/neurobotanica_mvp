@@ -9,10 +9,10 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "build:static": "next build && next export",
-    "build:electron": "next build && next export && electron-builder",
-    "build:android": "npx cap add android && npx cap sync android && cd android && ./gradlew assembleDebug",
-    "build:ios": "npx cap add ios && npx cap sync ios"
+    "build:static": "next build",
+    "build:electron": "next build && electron-builder",
+    "build:android": "next build && npx cap add android && npx cap sync android && cd android && ./gradlew assembleDebug",
+    "build:ios": "next build && npx cap add ios && npx cap sync ios"
   },
   "dependencies": {
     "next": "^14.0.0",

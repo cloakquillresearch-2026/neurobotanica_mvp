@@ -1,0 +1,14 @@
+name = "neurobotanica-pos"
+compatibility_date = "2024-01-01"
+name = "neurobotanica-demo"
+compatibility_date = "2024-01-01"
+
+[env.demo.build]
+command = "npm run build:demo"
+cwd = "."
+
+[env.demo.build.environment_variables]
+NODE_ENV = "production"
+API_URL = "https://demo-api.neurobotanica.pages.dev"
+ENVIRONMENT = "demo"
+USE_MOCK_DATA = "true"
