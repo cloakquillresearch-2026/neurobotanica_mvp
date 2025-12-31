@@ -272,6 +272,27 @@ const ADJUVANT_DETAILS: Record<string, AdjuvantInfo> = {
     timing: 'Take with meals',
     evidence: 'Extensive studies support anti-inflammatory and joint health benefits'
   },
+  'Nutmeg': {
+    name: 'Nutmeg',
+    mechanism: 'Myristicin modulates serotonin receptors, provides anxiogenic and antidepressant effects',
+    dosage: '100-300mg daily (low dose)',
+    timing: 'Take with meals, avoid high doses',
+    evidence: 'Multiple clinical studies show psychotropic and anti-inflammatory effects'
+  },
+  'Cinnamon': {
+    name: 'Cinnamon',
+    mechanism: 'Cinnamaldehyde inhibits inflammatory pathways, improves insulin sensitivity',
+    dosage: '500-2000mg daily',
+    timing: 'Take with meals',
+    evidence: 'Meta-analyses confirm glycemic control and cardiovascular benefits'
+  },
+  'Mace': {
+    name: 'Mace',
+    mechanism: 'Similar to nutmeg with anti-inflammatory and gastroprotective effects',
+    dosage: '100-300mg daily (low dose)',
+    timing: 'Take with meals',
+    evidence: 'Clinical studies support digestive and anti-inflammatory benefits'
+  },
 }
 
 export function ProductRecommendations({
