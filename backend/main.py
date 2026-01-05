@@ -64,7 +64,7 @@ app = FastAPI(
     - Receptor affinity database with assay-level provenance
     """,
     version="0.4.0",
-    lifespan=lifespan
+    # lifespan=lifespan
 )
 
 # CORS middleware for frontend access
@@ -113,106 +113,60 @@ else:
 @app.get("/")
 async def root():
     """Root endpoint with API information."""
-    return {
-        "message": "🌿 NeuroBotanica API",
-        "version": "0.4.0",
-        "description": "Dimeric Cannabinoid Therapeutic Prediction System",
-        "patent_claims": ["1j - FDA Schedule III Compliance Support"],
-        "data_assets": {
-            "clinical_studies": 368,
-            "conditions": 22,
-            "compounds": 63,
-            "dimer_entourage_entries": 10084,
-            "fda_approved_drugs": ["Epidiolex", "Marinol", "Cesamet", "Sativex"]
-        },
-        "trade_secret_engines": [
-            "ChemPath", "ToxPath", "RegPath", 
-            "BioPath", "ClinPath", "GenomePath"
-        ],
-        "endpoints": {
-            "studies": "/api/v1/studies",
-            "compounds": "/api/v1/compounds",
-            "fda_compliance": "/api/v1/fda",
-            "conformers": "/api/v1/conformers",
-            "omnipath": "/api/v1/omnipath",
-            "dimers": "/api/dimers",
-            "chempath": "/api/chempath",
-            "toxpath": "/api/toxpath",
-            "regpath": "/api/regpath",
-            "genomepath": "/api/genomepath",
-            "biopath": "/api/biopath",
-            "clinpath": "/api/clinpath",
-            "docs": "/docs"
-        }
-    }
-
-
-@app.get("/health")
-async def health_check(db: Session = Depends(get_db)):
-    """Health check endpoint with database connectivity and ML model status."""
-    from sqlalchemy import text
-    import logging
-    
-    logger = logging.getLogger(__name__)
-    
-    # Test database connection
     try:
-        db.execute(text("SELECT 1"))
-        db_status = "connected"
-    except Exception as e:
-        db_status = f"error: {str(e)}"
-    
-    # Check ML model availability
-    ml_models = {
-        "dimer_predictor": False,
-        "nextgen_dimer_model": False,
-        "therapeutic_model": False,
-        "patient_response_model": False
-    }
-    
-    try:
-        from backend.services.dimer_predictor import DimericPredictor, RDKIT_AVAILABLE
-        ml_models["dimer_predictor"] = True
-        ml_models["rdkit_available"] = RDKIT_AVAILABLE
-        
-        # Check if nextgen model loads
-        predictor = DimericPredictor()
-        ml_models["nextgen_dimer_model"] = predictor.nextgen_model is not None
-    except Exception as e:
-        logger.warning(f"ML model check failed: {e}")
-    
-    # Determine overall status
-    overall_status = "healthy"
-    if db_status != "connected":
-        overall_status = "degraded"
-    elif not ml_models.get("dimer_predictor"):
-        overall_status = "degraded"
-    
-    return {
-        "status": overall_status,
-        "database": db_status,
-        "version": "0.4.0",
-        "ml_models": ml_models,
-        "features": {
-            "fda_compliance_module": True,
-            "pharmacology_packages": True,
-            "comparative_efficacy": True,
-            "schedule_iii_support": True,
-            "conformer_generation": True,
-            "patient_treatment_models": True,
-            "omnipath_integration": True,
-            "provenance_tracking": True,
-            "token_validation": os.getenv("NEUROBOTANICA_TOKEN_VALIDATION", "false").lower() == "true",
-            "trade_secret_engines": {
-                "chempath": True,
-                "toxpath": True,
-                "regpath": True,
-                "biopath": True,
-                "clinpath": True,
-                "genomepath": True
+        return {
+            "message": "🌿 NeuroBotanica API",
+            "version": "0.4.0",
+            "description": "Dimeric Cannabinoid Therapeutic Prediction System",
+            "patent_claims": ["1j - FDA Schedule III Compliance Support"],
+            "data_assets": {
+                "clinical_studies": 368,
+                "conditions": 22,
+                "compounds": 63,
+                "dimer_entourage_entries": 10084,
+                "fda_approved_drugs": ["Epidiolex", "Marinol", "Cesamet", "Sativex"]
+            },
+            "trade_secret_engines": [
+                "ChemPath", "ToxPath", "RegPath", 
+                "BioPath", "ClinPath", "GenomePath"
+            ],
+            "endpoints": {
+                "studies": "/api/v1/studies",
+                "compounds": "/api/v1/compounds",
+                "fda_compliance": "/api/v1/fda",
+                "conformers": "/api/v1/conformers",
+                "omnipath": "/api/v1/omnipath",
+                "dimers": "/api/dimers",
+                "chempath": "/api/chempath",
+                "toxpath": "/api/toxpath",
+                "regpath": "/api/regpath",
+                "genomepath": "/api/genomepath",
+                "biopath": "/api/biopath",
+                "clinpath": "/api/clinpath",
+                "docs": "/docs"
             }
         }
-    }
+    except Exception as e:
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.error(f"Error in root endpoint: {e}")
+        import traceback
+        traceback.print_exc()
+        return {"status": "error", "message": str(e)}
+
+
+@app.get("/test")
+async def test_endpoint():
+    """Simple test endpoint without database dependency."""
+    try:
+        return {"status": "ok", "message": "Test endpoint working"}
+    except Exception as e:
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.error(f"Error in test endpoint: {e}")
+        import traceback
+        traceback.print_exc()
+        return {"status": "error", "message": str(e)}
 
 
 @app.get("/api/v1/stats")
