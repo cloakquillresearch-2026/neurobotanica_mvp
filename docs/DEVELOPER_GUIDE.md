@@ -13,3 +13,10 @@ If any import fails:
 - If a PyPI package appears broken, consider adding a local shim for dev/testing and open an issue to fix the package in CI.
 
 Tracked issue: We maintain a temporary shim for `annotated_doc` to keep CI and local development working. See `docs/ISSUES/0001-remove-annotated-doc-shim.md` for the tracked removal plan and acceptance criteria. Remove the shim only after confirming the upstream package installs cleanly and tests pass without the shim.
+
+Rollback instructions (if removal causes CI failures):
+- Re-add the shim file(s) with the same minimal `Doc` stub in the repo and in `.venv/Lib/site-packages/annotated_doc/__init__.py` and commit immediately to restore CI green.
+- Mark the commit as a revert with a clear message (e.g., `revert: restore annotated_doc shim after upstream failure`).
+- Open an issue linking to the upstream package problem and add the `blocked` label and link to the revert PR.
+- Schedule follow-up to retry removal once upstream package demonstrates a stable release.
+
