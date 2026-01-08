@@ -78,6 +78,7 @@ jobs:
           pytest -q tests/test_e2e_smoke.py
 
       - name: Upload preview URL
+        if: steps.deploy.outputs.preview_url != ''
         uses: actions/upload-artifact@v4
         with:
           name: pages-preview-url
