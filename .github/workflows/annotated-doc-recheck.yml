@@ -1,0 +1,54 @@
+name: Re-check annotated_doc availability
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Weekly on Monday at 06:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  check-annotated-doc-install:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install in isolated venv
+        run: |
+          python -m venv .venv_check
+          . .venv_check/bin/activate
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install annotated-doc || true
+
+      - name: Run import smoke check
+        run: |
+          . .venv_check/bin/activate
+          python scripts/check_imports.py || true
+
+      - name: Upload import-smoke result
+        uses: actions/upload-artifact@v4
+        with:
+          name: annotated-doc-recheck-result
+          path: scripts/import_smoke_result.txt
+
+      - name: Notify on failure
+        if: failure()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Notify on success
+        if: success()
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
