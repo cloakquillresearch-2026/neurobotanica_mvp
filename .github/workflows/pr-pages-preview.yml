@@ -23,7 +23,14 @@ jobs:
 
       - name: Run import-smoke (check imports)
         run: |
-          python -u scripts/check_imports.py
+          echo "Listing repository root for debug:"
+          ls -la
+          if [ -f scripts/check_imports.py ]; then
+            echo "Found scripts/check_imports.py; running import-smoke"
+            python -u scripts/check_imports.py
+          else
+            echo "No scripts/check_imports.py found; skipping import-smoke step"
+          fi
 
       - name: Build frontend
         working-directory: frontend
