@@ -9,6 +9,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      TS_PS_001_PROTECT: ${{ github.ref == 'refs/heads/main' && 'true' || 'false' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
