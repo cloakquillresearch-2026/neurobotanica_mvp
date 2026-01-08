@@ -2,11 +2,6 @@ import os
 import time
 from typing import Dict, Any
 
-import httpx
-import jwt
-from jwt import PyJWKClient
-
-
 _JWKS_CACHE: dict[str, Any] = {}
 
 
@@ -54,6 +49,11 @@ def verify_id_token(token: str) -> Dict[str, Any]:
         raise RuntimeError("FIREBASE_PROJECT_ID is required for JWKS-based token verification")
 
     try:
+        # Lazy imports so tests which use FIREBASE_TEST_MODE do not require PyJWT/httpx
+        import httpx
+        import jwt
+        from jwt import PyJWKClient
+
         jwks_url = _get_jwks_url(project_id)
         jwk_client = PyJWKClient(jwks_url)
         signing_key = jwk_client.get_signing_key_from_jwt(token)

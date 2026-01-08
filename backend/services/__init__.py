@@ -36,6 +36,9 @@ from .provenance_tracker import (
     tracked_transaction
 )
 
+# Lightweight health monitor (kept minimal to avoid heavy deps)
+from . import health_monitor
+
 __all__ = [
     "ComparativeEfficacyAnalyzer",
     "ScheduleIIIDocumentationGenerator",
@@ -60,4 +63,7 @@ __all__ = [
     "reset_provenance_tracker",
     "track_provenance",
     "tracked_transaction"
+    ,
+    # Health monitor module
+    "health_monitor"
 ]
