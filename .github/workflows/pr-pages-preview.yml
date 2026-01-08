@@ -67,6 +67,16 @@ jobs:
             -d "{\"body\": \"Pages preview available: ${{ steps.deploy.outputs.preview_url }}\"}" \
             "https://api.github.com/repos/${{ github.repository }}/issues/${PR_NUMBER}/comments" || true
 
+      - name: Run E2E smoke tests (if deployed)
+        if: steps.deploy.outputs.preview_url != ''
+        env:
+          PAGES_PREVIEW_URL: ${{ steps.deploy.outputs.preview_url }}
+        run: |
+          echo "Running E2E smoke tests against $PAGES_PREVIEW_URL"
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pytest -q tests/test_e2e_smoke.py
+
       - name: Upload preview URL
         uses: actions/upload-artifact@v4
         with:
