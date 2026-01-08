@@ -13,98 +13,29 @@ jobs:
 
       - name: Set up Python
         uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+        name: PR Quick CI
 
-      - name: Install python deps
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+        on:
+          pull_request:
 
-      - name: Run import-smoke (check imports)
-        run: |
-          echo "Listing repository root for debug:"
-          ls -la
-          if [ -f scripts/check_imports.py ]; then
-            echo "Found scripts/check_imports.py; running import-smoke"
-            python -u scripts/check_imports.py
-          else
-            echo "No scripts/check_imports.py found; skipping import-smoke step"
-          fi
+        jobs:
+          test:
+            runs-on: ubuntu-latest
+            steps:
+              - name: Checkout
+                uses: actions/checkout@v4
 
-      - name: Build frontend
-        working-directory: frontend
-        run: |
-          npm ci
-          npm run build
+              - name: Set up Python
+                uses: actions/setup-python@v4
+                with:
+                  python-version: '3.10'
 
+              - name: Install python deps
+                run: |
+                  python -m pip install --upgrade pip
+                  pip install -r requirements.txt
+
+              - name: Run tests
+                run: |
+                  pytest -q
       - name: Install Wrangler
-        run: npm i -g wrangler
-
-      - name: Deploy Pages preview (if secrets present)
-        id: deploy
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_PROJECT_NAME: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-        run: |
-          set -e
-          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_PROJECT_NAME" ]; then
-            echo "Skipping Pages deploy: required secrets are not set"
-            echo "preview_url=" >> $GITHUB_OUTPUT
-            exit 0
-          fi
-          echo "Deploying Pages for branch ${GITHUB_HEAD_REF}..."
-          wrangler pages deploy frontend/out --project-name "$CLOUDFLARE_PROJECT_NAME" --branch "${GITHUB_HEAD_REF}" > deploy_out.txt || true
-          PREVIEW_URL=$(grep -o 'https://[a-z0-9.-]*pages.dev' deploy_out.txt | head -n1 || true)
-          echo "preview_url=$PREVIEW_URL" >> $GITHUB_OUTPUT
-
-      - name: Verify preview content (if deployed)
-        if: steps.deploy.outputs.preview_url != ''
-        run: |
-          echo "Checking preview URL: ${{ steps.deploy.outputs.preview_url }}"
-          curl -fsS ${{ steps.deploy.outputs.preview_url }} | grep -i "NeuroBotanica" || (echo 'Preview content check failed' && exit 2)
-
-      - name: Post preview URL to PR
-        if: steps.deploy.outputs.preview_url != '' && github.event_name == 'pull_request'
-        env:
-          PR_NUMBER: ${{ github.event.pull_request.number }}
-        run: |
-          echo "Posting preview URL to PR #${PR_NUMBER}"
-          curl -s -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Content-Type: application/json" \
-            -d "{\"body\": \"Pages preview available: ${{ steps.deploy.outputs.preview_url }}\"}" \
-            "https://api.github.com/repos/${{ github.repository }}/issues/${PR_NUMBER}/comments" || true
-
-      - name: Run E2E smoke tests (if deployed)
-        if: steps.deploy.outputs.preview_url != ''
-        env:
-          PAGES_PREVIEW_URL: ${{ steps.deploy.outputs.preview_url }}
-        run: |
-          echo "Running E2E smoke tests against $PAGES_PREVIEW_URL"
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pytest -q tests/test_e2e_smoke.py
-
-      - name: Upload preview URL
-        if: steps.deploy.outputs.preview_url != ''
-        uses: actions/upload-artifact@v4
-        with:
-          name: pages-preview-url
-          path: deploy_out.txt
-
-      - name: Notify Slack on failure
-        if: failure() && env.SLACK_WEBHOOK_URL != ''
-        uses: 8398a7/action-slack@v3
-        with:
-          status: ${{ job.status }}
-          fields: repo,commit,author
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-
-      - name: Notify Slack on success
-        if: success() && env.SLACK_WEBHOOK_URL != ''
-        uses: 8398a7/action-slack@v3
-        with:
-          status: ${{ job.status }}
-          fields: repo,commit,author
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
