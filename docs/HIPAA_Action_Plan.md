@@ -416,5 +416,4 @@ This action plan outlines the systematic implementation of HIPAA-compliant patie
 **Status**: Ready for implementation
 **Next Step**: Week 1 kickoff meeting
 **Document Version**: 1.0
-**Last Updated**: December 24, 2025</content>
-<parameter name="filePath">c:\Users\Dr. Contessa Petrini\OneDrive\Desktop\neurobotanica_project\HIPAA_Action_Plan.md
+**Last Updated**: December 24, 2025

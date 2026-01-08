@@ -400,5 +400,4 @@ The system is ready for immediate deployment to Nevada dispensaries, with the po
 
 ---
 
-*Powered by Cloak and Quill Research 501(c)(3) | Henderson, Nevada | Patent Portfolio: $684M-$1.026B Value*</content>
-<parameter name="filePath">c:\Users\Dr. Contessa Petrini\OneDrive\Desktop\neurobotanica_project\docs\NeuroBotanica_MVP_Overview.md
+*Powered by Cloak and Quill Research 501(c)(3) | Henderson, Nevada | Patent Portfolio: $684M-$1.026B Value*

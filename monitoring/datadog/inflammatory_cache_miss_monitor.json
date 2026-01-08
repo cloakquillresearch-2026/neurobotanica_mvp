@@ -1,0 +1,8 @@
+{
+  "name": "NeuroBotanica TS-PS-001 cache miss ratio high",
+  "type": "metric alert",
+  "query": "avg(last_5m):increase:neurobotanica_inflammatory_predict_cache_misses_total{*}.as_count() / (increase:neurobotanica_inflammatory_predict_cache_hits_total{*}.as_count() + increase:neurobotanica_inflammatory_predict_cache_misses_total{*}.as_count()) > 0.20",
+  "message": "High cache miss ratio for TS-PS-001 predictions (>20%). Check Redis connectivity, TTLs, and cache keys. @ops-team",
+  "tags": ["service:neurobotanica","team:ai"],
+  "options": {"notify_no_data": false}
+}

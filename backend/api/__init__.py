@@ -6,6 +6,7 @@ from . import conformers
 from . import omnipath
 from . import evidence
 from . import receptor_affinity
+from . import dimers
 
 __all__ = [
     "studies",
@@ -14,5 +15,6 @@ __all__ = [
     "conformers",
     "omnipath",
     "evidence",
-    "receptor_affinity"
+    "receptor_affinity",
+    "dimers"
 ]

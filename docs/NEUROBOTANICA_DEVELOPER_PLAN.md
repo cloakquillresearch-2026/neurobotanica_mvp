@@ -458,5 +458,4 @@ This developer plan provides a comprehensive framework for scaling NeuroBotanica
 **Version Control**: Semantic versioning (MAJOR.MINOR.PATCH)
 **Review Cycle**: Quarterly updates
 
-*Cloak and Quill Research 501(c)(3) | Henderson, Nevada | December 25, 2025*</content>
-<parameter name="filePath">c:\Users\Dr. Contessa Petrini\OneDrive\Desktop\neurobotanica_project\docs\NEUROBOTANICA_DEVELOPER_PLAN.md
+*Cloak and Quill Research 501(c)(3) | Henderson, Nevada | December 25, 2025*

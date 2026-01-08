@@ -267,5 +267,4 @@ This framework enables scaling the NeuroBotanica platform to 5-8 contract develo
 **Trade Secret Protection**: DTSA/UTSA Compliant
 **Competitive Advantage**: 10-16 years maintained
 
-*Cloak and Quill Research 501(c)(3) | Henderson, Nevada | December 25, 2025*</content>
-<parameter name="filePath">c:\Users\Dr. Contessa Petrini\OneDrive\Desktop\neurobotanica_project\docs\CONTRACTOR_DEVELOPMENT_SECURITY_GUIDE.md
+*Cloak and Quill Research 501(c)(3) | Henderson, Nevada | December 25, 2025*
