@@ -18,3 +18,6 @@ Actions taken:
 If any regressions appear, restore using the recorded backup (if available) or reintroduce a minimal shim until upstream packaging stabilizes.
 
 — Cloak and Quill Research
+
+Data directory preservation:
+- To avoid accidental deletions or CI failures caused by a missing folder, we added an empty `.gitkeep` file inside the `data/raw` directory. Keep this placeholder in the repository so automated scripts and workflows that expect `data/raw` to exist do not fail. If you intentionally want to remove `data/raw` in the future, first update CI/workflow scripts that assume its presence.
