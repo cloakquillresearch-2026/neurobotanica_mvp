@@ -9,12 +9,25 @@ class _StubInflammatorySynergyEngine:
     be injected in production deployments.
     """
 
-    def predict_inflammatory_synergy(self, *, biomarkers: Dict[str, float], condition_profile: Dict[str, Any], available_kingdoms: List[str]) -> Dict[str, Any]:
-        # Simple heuristic: pick 'cannabis' as primary if TNF-α or CRP elevated,
-        # otherwise choose the first available kingdom. Compute a mock score.
-        tnf = biomarkers.get('tnf_alpha', 0) or 0
-        crp = biomarkers.get('crp', 0) or 0
-        il6 = biomarkers.get('il6', 0) or 0
+    def predict_inflammatory_synergy(self, *args, **kwargs) -> Dict[str, Any]:
+        """Accept either positional (biomarkers, condition_profile, available_kingdoms)
+        or keyword args to be tolerant of different callers.
+        """
+        # Unpack positional or keyword parameters
+        if args:
+            # positional style: (biomarkers, condition_profile, available_kingdoms)
+            biomarkers = args[0] if len(args) > 0 else kwargs.get('biomarkers', {})
+            condition_profile = args[1] if len(args) > 1 else kwargs.get('condition_profile', {})
+            available_kingdoms = args[2] if len(args) > 2 else kwargs.get('available_kingdoms', ['cannabis', 'fungal', 'marine', 'plant'])
+        else:
+            biomarkers = kwargs.get('biomarkers', {})
+            condition_profile = kwargs.get('condition_profile', {})
+            available_kingdoms = kwargs.get('available_kingdoms', ['cannabis', 'fungal', 'marine', 'plant'])
+
+        # Simple heuristic and defensive defaults
+        tnf = (biomarkers.get('tnf_alpha') if isinstance(biomarkers, dict) else 0) or 0
+        crp = (biomarkers.get('crp') if isinstance(biomarkers, dict) else 0) or 0
+        il6 = (biomarkers.get('il6') if isinstance(biomarkers, dict) else 0) or 0
 
         primary = 'cannabis' if (tnf > 5 or crp > 3 or il6 > 2) and 'cannabis' in available_kingdoms else (available_kingdoms[0] if available_kingdoms else 'cannabis')
         secondary = [k for k in available_kingdoms if k != primary][:2]
@@ -38,6 +51,11 @@ class _StubInflammatorySynergyEngine:
 
         expected_reduction = {'tnf_alpha': raw_score * 10, 'crp': raw_score * 5}
 
+        # Provide a fallback warning when biomarkers are essentially empty
+        warning = None
+        if tnf == 0 and crp == 0 and il6 == 0:
+            warning = "Biomarkers appear empty — results are a heuristic fallback."
+
         return {
             'primary_kingdom': primary,
             'secondary_kingdoms': secondary,
@@ -46,7 +64,7 @@ class _StubInflammatorySynergyEngine:
             'recommended_compounds': recommended,
             'dosing_guidance': dosing,
             'expected_reduction': expected_reduction,
-            'warning': None,
+            'warning': warning,
         }
 
 

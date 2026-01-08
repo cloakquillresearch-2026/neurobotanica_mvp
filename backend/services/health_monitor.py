@@ -16,7 +16,12 @@ async def _compute_health() -> Dict[str, Any]:
         "errors": [],
         "results": {
             "ml_models": {"loaded": True},
-            "features": {"available": True}
+            "features": {
+                "available": True,
+                "trade_secret_engines": {
+                    "TS-PS-001": {"available": True, "protected": True}
+                }
+            }
         }
     }
 
