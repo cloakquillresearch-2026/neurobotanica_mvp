@@ -27,7 +27,7 @@ import logging
 
 from backend.models.patient import Patient
 from backend.models.database import get_db
-from backend.services.inflammatory_synergy_engine import get_inflammatory_synergy_engine
+from backend.services.engine_loader import load_inflammatory_engine
 from backend.services.adjuvant_optimizer import get_adjuvant_optimizer, PatientProfile as AdjuvantPatientProfile
 
 logger = logging.getLogger(__name__)
@@ -981,8 +981,8 @@ async def predict_inflammatory_synergy(
     **Reference**: TS-PS-001 Cross-Kingdom Inflammatory Synergy Engine Documentation
     """
     try:
-        # Initialize TS-PS-001 engine with access verification
-        engine = get_inflammatory_synergy_engine()
+        # Initialize TS-PS-001 engine with access verification (loader picks prod or stub)
+        engine = load_inflammatory_engine()
 
         # Extract biomarkers for prediction
         biomarkers = {
