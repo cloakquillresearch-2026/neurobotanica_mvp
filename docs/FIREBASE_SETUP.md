@@ -41,3 +41,5 @@ Security notes
 - Rotate keys immediately if exposed.
 
 If you want, I can add the `FIREBASE_SERVICE_ACCOUNT_JSON` secret for you once you confirm the file path to the downloaded key.
+  
+See also: docs/FIREBASE_JWKS_SNIPPET.md - instructions to enable the optional JWKS refresher for staging. 
