@@ -8,14 +8,20 @@ _JWKS_CACHE_TTL = 60 * 60  # seconds
 # Optional Prometheus metrics (lazy)
 _AUTH_VERIFY_ATTEMPTS = None
 _AUTH_VERIFY_FAILURES = None
+_AUTH_JWKS_LAST_REFRESH = None
+_AUTH_JWKS_REFRESH_DURATION = None
 try:
-    from prometheus_client import Counter
+    from prometheus_client import Counter, Gauge, Histogram
 
     _AUTH_VERIFY_ATTEMPTS = Counter("neurobotanica_auth_verify_attempts_total", "Auth verify attempts")
     _AUTH_VERIFY_FAILURES = Counter("neurobotanica_auth_verify_failures_total", "Auth verify failures")
+    _AUTH_JWKS_LAST_REFRESH = Gauge("neurobotanica_auth_jwks_last_refresh_timestamp", "Last JWKS refresh timestamp")
+    _AUTH_JWKS_REFRESH_DURATION = Histogram("neurobotanica_auth_jwks_refresh_seconds", "JWKS refresh duration seconds")
 except Exception:
     _AUTH_VERIFY_ATTEMPTS = None
     _AUTH_VERIFY_FAILURES = None
+    _AUTH_JWKS_LAST_REFRESH = None
+    _AUTH_JWKS_REFRESH_DURATION = None
 
 
 def _get_jwks_url(project_id: str) -> str:
@@ -149,3 +155,86 @@ def require_roles(*allowed_roles: str) -> Callable:
         return claims
 
     return _dep
+
+
+    # JWKS refresher background task and lifecycle helpers
+    _JWKS_REFRESH_TASK = None
+
+
+    async def _jwks_refresher_loop(period: int = 3600):
+        import asyncio
+        import logging
+        logger = logging.getLogger(__name__)
+
+        project_id = os.getenv("FIREBASE_PROJECT_ID")
+        if not project_id:
+            logger.info("JWKS refresher: FIREBASE_PROJECT_ID not set, skipping refresher.")
+            return
+
+        jwks_url = _get_jwks_url(project_id)
+        while True:
+            try:
+                start = time.time()
+                # Lazy import
+                from jwt import PyJWKClient
+
+                # Fetch and replace client
+                jwk_client = PyJWKClient(jwks_url)
+                _JWKS_CACHE[jwks_url] = {"client": jwk_client, "fetched_at": time.time()}
+
+                duration = time.time() - start
+                if _AUTH_JWKS_LAST_REFRESH:
+                    try:
+                        _AUTH_JWKS_LAST_REFRESH.set(time.time())
+                    except Exception:
+                        pass
+                if _AUTH_JWKS_REFRESH_DURATION:
+                    try:
+                        _AUTH_JWKS_REFRESH_DURATION.observe(duration)
+                    except Exception:
+                        pass
+
+                logger.debug("JWKS refreshed successfully in %.3fs", duration)
+            except Exception as e:
+                logger.warning("JWKS refresh failed: %s", e)
+            finally:
+                await asyncio.sleep(period)
+
+
+    async def start_jwks_refresher(app, period: int | None = None):
+        """Start JWKS refresher background task and attach to `app.state`."""
+        import asyncio
+        import logging
+        logger = logging.getLogger(__name__)
+
+        if period is None:
+            try:
+                period = int(os.getenv("FIREBASE_JWKS_REFRESH_SECONDS", "3600"))
+            except Exception:
+                period = 3600
+
+        global _JWKS_REFRESH_TASK
+        if _JWKS_REFRESH_TASK is not None:
+            return
+
+        _JWKS_REFRESH_TASK = asyncio.create_task(_jwks_refresher_loop(period))
+        try:
+            app.state._jwks_refresh_task = _JWKS_REFRESH_TASK
+        except Exception:
+            logger.debug("Could not attach JWKS task to app.state")
+
+
+    async def stop_jwks_refresher(app):
+        import asyncio
+        import logging
+        logger = logging.getLogger(__name__)
+
+        global _JWKS_REFRESH_TASK
+        task = getattr(app.state, "_jwks_refresh_task", None) or _JWKS_REFRESH_TASK
+        if task:
+            task.cancel()
+            try:
+                await task
+            except asyncio.CancelledError:
+                logger.debug("JWKS refresher task cancelled")
+        _JWKS_REFRESH_TASK = None

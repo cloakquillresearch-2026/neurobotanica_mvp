@@ -119,12 +119,36 @@ async def _start_monitor():
     except Exception as e:
         import logging
         logging.getLogger(__name__).warning(f"Failed to start health monitor: {e}")
+    # Try to start JWKS refresher if available (lazy import to avoid heavy deps at import-time)
+    try:
+        jwks_period = int(os.getenv("JWKS_REFRESH_PERIOD", "300"))
+        enable_jwks = os.getenv("ENABLE_JWKS_REFRESH", "true").lower() in ("1", "true", "yes")
+        if enable_jwks:
+            from backend.auth.firebase import start_jwks_refresher
+            try:
+                start_jwks_refresher(app, period_seconds=jwks_period)
+            except TypeError:
+                # backwards compatible: older signature may accept (app, period)
+                start_jwks_refresher(app, jwks_period)
+    except Exception:
+        # Don't fail startup if JWKS refresher isn't available or errors occur
+        pass
 
 
 @app.on_event("shutdown")
 async def _stop_monitor():
     try:
         await health_monitor.shutdown_monitor(app)
+    except Exception:
+        pass
+    # Try to stop JWKS refresher if it was started
+    try:
+        from backend.auth.firebase import stop_jwks_refresher
+        try:
+            stop_jwks_refresher(app)
+        except TypeError:
+            # older signatures may be different; call without args as a fallback
+            stop_jwks_refresher()
     except Exception:
         pass
 

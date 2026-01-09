@@ -28,6 +28,7 @@ import logging
 from backend.models.patient import Patient
 from backend.models.database import get_db
 from backend.services.inflammatory_synergy_engine import get_inflammatory_synergy_engine
+from backend.auth.firebase import require_roles
 from backend.services.adjuvant_optimizer import get_adjuvant_optimizer, PatientProfile as AdjuvantPatientProfile
 
 logger = logging.getLogger(__name__)
@@ -966,6 +967,7 @@ class InflammatorySynergyResponse(BaseModel):
 async def predict_inflammatory_synergy(
     request: InflammatorySynergyRequest,
     db: Session = Depends(get_db),
+    current_user = Depends(require_roles("ts-ps-001")),
 ) -> InflammatorySynergyResponse:
     """
     TS-PS-001 Cross-Kingdom Inflammatory Synergy Prediction
