@@ -119,12 +119,35 @@ async def _start_monitor():
     except Exception as e:
         import logging
         logging.getLogger(__name__).warning(f"Failed to start health monitor: {e}")
+    # Optionally start JWKS refresher for Firebase token verification
+    try:
+        import logging
+        if os.getenv("ENABLE_JWKS_REFRESH", "false").lower() == "true":
+            from backend.auth import firebase
+
+            period = int(os.getenv("JWKS_REFRESH_PERIOD", "3600"))
+            try:
+                await firebase.start_jwks_refresher(app, period)
+            except Exception as e:
+                logging.getLogger(__name__).warning(f"Failed to start JWKS refresher: {e}")
+    except Exception:
+        pass
 
 
 @app.on_event("shutdown")
 async def _stop_monitor():
     try:
         await health_monitor.shutdown_monitor(app)
+    except Exception:
+        pass
+    # Stop JWKS refresher if it was started
+    try:
+        from backend.auth import firebase
+
+        try:
+            await firebase.stop_jwks_refresher(app)
+        except Exception:
+            pass
     except Exception:
         pass
 
@@ -242,6 +265,25 @@ async def status():
     </html>
     """
     return HTMLResponse(html)
+
+
+# Internal debug endpoints (enable with ENABLE_JWKS_DEBUG=true)
+if os.getenv("ENABLE_JWKS_DEBUG", "false").lower() == "true":
+    from fastapi import APIRouter
+
+    debug_router = APIRouter(prefix="/internal/debug", tags=["internal"])
+
+    @debug_router.get("/jwks_cache")
+    async def jwks_cache():
+        try:
+            from backend.auth import firebase
+
+            snapshot = firebase.get_jwks_cache_snapshot()
+            return JSONResponse({"jwks_cache": snapshot})
+        except Exception as e:
+            return JSONResponse({"error": str(e)}, status_code=500)
+
+    app.include_router(debug_router)
 
 
 @app.get("/api/v1/stats")
