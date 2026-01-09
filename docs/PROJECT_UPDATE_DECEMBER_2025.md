@@ -261,6 +261,4 @@ The NeuroBotanica ecosystem has achieved MVP status on both the budtender applic
 
 *Document Version: 1.1*
 *Last Updated: December 30, 2025*
-*Next Review: January 15, 2026*</content>
-<parameter name="filePath">c:\Users\Dr. Contessa Petrini\OneDrive\Desktop\neurobotanica_project\docs\PROJECT_UPDATE_DECEMBER_2025.md</content>
-<parameter name="filePath">c:\Users\Dr. Contessa Petrini\OneDrive\Desktop\neurobotanica_project\docs\PROJECT_UPDATE_DECEMBER_2025.md
+*Next Review: January 15, 2026*

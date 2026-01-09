@@ -1,0 +1,11 @@
+{
+  "name": "NeuroBotanica TS-PS-001 high predict latency (95th)",
+  "type": "metric alert",
+  "query": "avg(last_5m):histogram_quantile(0.95, sum:neurobotanica_inflammatory_predict_latency_seconds_bucket{*} by (le, mode)) > 0.02",
+  "message": "95th percentile TS-PS-001 predict latency is high: {{value}}s. @ops-team Please investigate.\nRunbook: https://example.com/runbooks/ts-ps-001-latency",
+  "tags": ["service:neurobotanica","team:ai"],
+  "options": {
+    "notify_no_data": false,
+    "no_data_timeframe": 20
+  }
+}

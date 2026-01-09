@@ -1,0 +1,39 @@
+groups:
+  - name: neurobotanica-inflam.rules
+    rules:
+      - alert: NeuroBotanicaInflammatoryHighLatency
+        expr: |
+          histogram_quantile(0.95, sum(rate(neurobotanica_inflammatory_predict_latency_seconds_bucket[5m])) by (le, mode)) > 0.02
+        for: 2m
+        labels:
+          severity: page
+        annotations:
+          summary: "TS-PS-001 high predict latency (95th percentile > 20ms)"
+          description: |
+            The 95th percentile latency for TS-PS-001 prediction (mode={{ $labels.mode }})
+            exceeded 20ms for more than 2 minutes.
+            Query: histogram_quantile(0.95, sum(rate(neurobotanica_inflammatory_predict_latency_seconds_bucket[5m])) by (le, mode))
+
+      - alert: NeuroBotanicaInflammatoryCacheMissRatioHigh
+        expr: |
+          (increase(neurobotanica_inflammatory_predict_cache_misses_total[5m])
+           / (increase(neurobotanica_inflammatory_predict_cache_hits_total[5m]) + increase(neurobotanica_inflammatory_predict_cache_misses_total[5m]))) > 0.20
+        for: 5m
+        labels:
+          severity: page
+        annotations:
+          summary: "TS-PS-001 cache miss ratio high (>20%)"
+          description: |
+            More than 20% of TS-PS-001 prediction calls were cache misses in the last 5m.
+            Consider investigating cache availability or tuning keys/TTL.
+
+      - alert: NeuroBotanicaHealthDegraded
+        expr: neurobotanica_health_status > 0
+        for: 1m
+        labels:
+          severity: page
+        annotations:
+          summary: "NeuroBotanica health check degraded"
+          description: |
+            The aggregated health status reported by the background monitor indicates a degraded state.
+            Check the /health endpoint for details and escalate if persistent.

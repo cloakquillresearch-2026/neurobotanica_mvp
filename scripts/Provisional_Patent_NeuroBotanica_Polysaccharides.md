@@ -150,5 +150,4 @@ The platform is implemented as:
 
 ---
 
-This provisional patent application is filed to establish an early filing date for the described invention. A non-provisional application will be filed within 12 months.</content>
-<parameter name="filePath">c:\Users\Dr. Contessa Petrini\OneDrive\Desktop\neurobotanica_project\scripts\Provisional_Patent_NeuroBotanica_Polysaccharides.md
+This provisional patent application is filed to establish an early filing date for the described invention. A non-provisional application will be filed within 12 months.

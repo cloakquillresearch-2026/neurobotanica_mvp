@@ -97,8 +97,10 @@ flake8>=6.0.0                # Style guide enforcement
 # ============================================
 python-dotenv>=1.0.0         # Environment variable management
 tqdm>=4.65.0                 # Progress bars
-jsonschema>=4.18.0           # JSON schema validation
-
+jsonschema>=4.18.0           # JSON schema validationprometheus_client>=0.16.0    # Prometheus metrics client
+redis>=4.6.0                  # Optional Redis client for shared caching (opt-in via TS_PS_001_REDIS_URL)
+PyJWT>=2.8.0                 # JWT handling for token verification
+cryptography>=41.0.0         # Required by PyJWT for RS256 key handling
 # ============================================
 # JUPYTER (Optional - for interactive analysis)
 # ============================================

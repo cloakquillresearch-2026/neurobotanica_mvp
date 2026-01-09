@@ -83,6 +83,9 @@ class Patient(Base):
     cb1_receptor_variant = Column(String(50))
     has_genetic_data = Column(Boolean, default=False)
     
+    # TS-PS-001 Inflammatory Biomarkers (TRADE SECRET INTEGRATION)
+    inflammatory_biomarkers = Column(JSON)  # TNF-α, IL-6, CRP, IL-1β, ESR, etc.
+    
     # Treatment Goals
     primary_treatment_goal = Column(String(100))  # "pain relief", "anxiety reduction", etc.
     secondary_goals = Column(JSON)
@@ -118,7 +121,8 @@ class Patient(Base):
         ]
         optional_fields = [
             self.weight_category, self.current_medications, self.thc_tolerance,
-            self.preferred_delivery_methods, self.medical_history_summary
+            self.preferred_delivery_methods, self.medical_history_summary,
+            self.inflammatory_biomarkers  # TS-PS-001 addition
         ]
         
         required_complete = sum(1 for f in required_fields if f is not None) / len(required_fields)

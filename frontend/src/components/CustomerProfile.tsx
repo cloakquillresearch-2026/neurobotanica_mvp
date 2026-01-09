@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { dispensaryAPI } from '@/utils/api'
 
 interface CustomerProfileProps {
   customer: any
@@ -52,14 +53,53 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
   }, [customer])
 
   const handleSave = async () => {
-    const updatedCustomer = {
-      ...customer,
-      ...editForm,
-      age: parseInt(editForm.age as string) || undefined,
-      isNew: false,
+    try {
+      // Prepare profile data for API
+      const profileData = {
+        age: parseInt(editForm.age as string) || null,
+        biological_sex: "unspecified", // Default for dispensary
+        weight_kg: null, // Not collected in tablet interface
+        conditions: editForm.conditions.map((condition: string, index: number) => ({
+          name: condition,
+          severity: 7, // Default medium severity
+          is_primary: index === 0 // First condition is primary
+        })),
+        experience_level: editForm.experience_level,
+        administration_preferences: ["inhalation"], // Default
+        primary_goal: "pain_relief", // Could be enhanced to map from conditions
+      }
+
+      let savedProfile;
+      if (customer.customer_id && !customer.customer_id.startsWith('temp_')) {
+        // Update existing profile
+        savedProfile = await dispensaryAPI.updateProfile(customer.customer_id, profileData)
+      } else {
+        // Create new profile
+        savedProfile = await dispensaryAPI.createProfile(profileData)
+      }
+
+      const updatedCustomer = {
+        ...customer,
+        ...editForm,
+        age: parseInt(editForm.age as string) || undefined,
+        customer_id: savedProfile.data.profile_id,
+        isNew: false,
+      }
+
+      onProfileUpdate(updatedCustomer)
+      setIsEditing(false)
+    } catch (error) {
+      console.error('Failed to save customer profile:', error)
+      // Still update local state even if API fails
+      const updatedCustomer = {
+        ...customer,
+        ...editForm,
+        age: parseInt(editForm.age as string) || undefined,
+        isNew: false,
+      }
+      onProfileUpdate(updatedCustomer)
+      setIsEditing(false)
     }
-    onProfileUpdate(updatedCustomer)
-    setIsEditing(false)
   }
 
   const toggleCondition = (condition: string) => {

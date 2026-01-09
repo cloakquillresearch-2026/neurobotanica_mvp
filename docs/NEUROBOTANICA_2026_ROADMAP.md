@@ -418,5 +418,4 @@ The NeuroBotanica ecosystem stands at a critical inflection point with MVP compl
 
 ---
 
-*Document Version: 1.1 | Last Updated: December 31, 2025 | Next Review: January 7, 2026*</content>
-<filePath="c:\Users\Dr. Contessa Petrini\OneDrive\Desktop\neurobotanica_project\docs\NEUROBOTANICA_2026_ROADMAP.md
+*Document Version: 1.1 | Last Updated: December 31, 2025 | Next Review: January 7, 2026*

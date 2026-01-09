@@ -308,7 +308,7 @@ async def get_evidence_by_condition(
     cannabinoids = set()
     
     for study in studies:
-        direction = parse_outcome_direction(study.outcome_summary)
+        direction = parse_outcome_direction(study.results_summary)
         if direction == "favorable":
             favorable += 1
         elif direction == "negative":
@@ -318,9 +318,8 @@ async def get_evidence_by_condition(
         
         total_confidence += study.confidence_weight or 0.5
         
-        if study.cannabinoids_studied:
-            for cb in study.cannabinoids_studied:
-                cannabinoids.add(cb)
+        if study.cannabinoid:
+            cannabinoids.add(study.cannabinoid)
     
     avg_confidence = total_confidence / len(studies) if studies else 0
     favorable_ratio = favorable / len(studies) if studies else 0

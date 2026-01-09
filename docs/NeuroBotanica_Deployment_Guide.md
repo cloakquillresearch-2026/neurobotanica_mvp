@@ -923,5 +923,4 @@ async def log_requests(request: Request, call_next):
 
 ---
 
-*Powered by Cloak and Quill Research 501(c)(3) | Henderson, Nevada | Patent Portfolio: $684M-$1.026B Value*</content>
-<parameter name="filePath">c:\Users\Dr. Contessa Petrini\OneDrive\Desktop\neurobotanica_project\docs\NeuroBotanica_Deployment_Guide.md
+*Powered by Cloak and Quill Research 501(c)(3) | Henderson, Nevada | Patent Portfolio: $684M-$1.026B Value*

@@ -43,5 +43,16 @@ def get_db():
 
 
 def init_db():
-    """Initialize database tables."""
-    Base.metadata.create_all(bind=engine)
+    """Initialize database tables.
+
+    For local development using SQLite, drop and recreate tables to ensure
+    the schema matches current models (useful during rapid iteration).
+    In production (Postgres), this function intentionally only creates
+    missing tables and does not drop existing data.
+    """
+    # If using local sqlite dev DB, recreate schema to pick up model changes
+    if "sqlite" in settings.database_url and settings.database_url.startswith("sqlite:///./"):
+        Base.metadata.drop_all(bind=engine)
+        Base.metadata.create_all(bind=engine)
+    else:
+        Base.metadata.create_all(bind=engine)

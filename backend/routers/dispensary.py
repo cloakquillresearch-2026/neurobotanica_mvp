@@ -6,11 +6,15 @@ Use Case 4: Dispensary Personalized Recommendation System
 Endpoints:
 - POST /api/dispensary/recommend: Generate personalized product recommendations
 - POST /api/dispensary/profile: Create/update customer profile
+- POST /api/dispensary/profile/inflammatory: Create profile with inflammatory biomarkers
 - GET /api/dispensary/profile/{profile_id}: Get customer profile
 - POST /api/dispensary/feedback: Submit recommendation feedback
 - GET /api/dispensary/statistics: Get dispensary analytics
+- POST /api/dispensary/inflammatory-synergy: TS-PS-001 cross-kingdom synergy prediction
+- POST /api/dispensary/adjuvants/optimize: Optimize adjuvant selection
 
 Reference: NeuroBotanica Patent - Section 6: Use Case 4
+TS-PS-001: Cross-Kingdom Inflammatory Synergy Engine
 """
 
 from typing import Dict, List, Optional, Any, Tuple
@@ -21,12 +25,10 @@ from datetime import datetime
 import uuid
 import logging
 
+from backend.models.patient import Patient
 from backend.models.database import get_db
-from backend.services.adjuvant_optimizer import (
-    get_adjuvant_optimizer,
-    PatientProfile as AdjuvantPatientProfile,
-    AdjuvantRecommendation,
-)
+from backend.services.inflammatory_synergy_engine import get_inflammatory_synergy_engine
+from backend.services.adjuvant_optimizer import get_adjuvant_optimizer, PatientProfile as AdjuvantPatientProfile
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["Dispensary"])
@@ -63,6 +65,45 @@ class PositiveExperience(BaseModel):
     effect: str = Field(..., description="What worked well")
 
 
+class InflammatoryBiomarkers(BaseModel):
+    """Inflammatory biomarkers for TS-PS-001 synergy prediction."""
+    tnf_alpha: Optional[float] = Field(None, ge=0, le=100, description="TNF-α level (pg/mL)")
+    il6: Optional[float] = Field(None, ge=0, le=50, description="IL-6 level (pg/mL)")
+    crp: Optional[float] = Field(None, ge=0, le=20, description="CRP level (mg/L)")
+    il1b: Optional[float] = Field(None, ge=0, le=10, description="IL-1β level (pg/mL)")
+    esr: Optional[float] = Field(None, ge=0, le=100, description="ESR (mm/hr)")
+    fibrinogen: Optional[float] = Field(None, ge=0, le=700, description="Fibrinogen (mg/dL)")
+    homocysteine: Optional[float] = Field(None, ge=0, le=50, description="Homocysteine (µmol/L)")
+
+
+class InflammatoryProfileInput(BaseModel):
+    """Enhanced profile input with inflammatory biomarkers for TS-PS-001."""
+    # Basic demographics (from existing TabletProfileInput)
+    age: Optional[int] = Field(None, ge=18, le=120)
+    biological_sex: Optional[str] = Field(None, description="male, female, other, unspecified")
+
+    # Medical conditions
+    conditions: List[ConditionInput] = Field(default_factory=list)
+
+    # Inflammatory biomarkers (TS-PS-001 addition)
+    biomarkers: Optional[InflammatoryBiomarkers] = None
+
+    # Cannabis experience
+    experience_level: str = Field(
+        default="beginner",
+        description="naive, beginner, intermediate, regular, experienced"
+    )
+
+    # Preferences
+    administration_preferences: List[str] = Field(
+        default_factory=lambda: ["inhalation"],
+        description="inhalation, oral, topical"
+    )
+
+    # Goals
+    primary_goal: Optional[str] = Field(None, description="pain_relief, anxiety, sleep, inflammation, etc.")
+
+
 class CustomerProfileInput(BaseModel):
     """Full customer profile for recommendation engine."""
     # Demographics
@@ -94,6 +135,9 @@ class CustomerProfileInput(BaseModel):
     # Previous Experiences
     negative_experiences: List[NegativeExperience] = Field(default_factory=list)
     positive_experiences: List[PositiveExperience] = Field(default_factory=list)
+
+    # Goals
+    primary_goal: Optional[str] = Field(None, description="pain_relief, anxiety, sleep, inflammation, etc.")
 
 
 class ProductInput(BaseModel):
@@ -699,53 +743,58 @@ async def create_customer_profile(
 ) -> ProfileResponse:
     """
     Create or update a customer profile.
-    
-    Profiles are stored securely and used for personalized recommendations.
+
+    Profiles are stored in the database and used for personalized recommendations.
     """
-    profile_id = f"prof_{uuid.uuid4().hex[:12]}"
-    
-    # Calculate completeness
-    completeness = 0.0
-    if profile.age and profile.weight_kg:
-        completeness += 0.3
-    if profile.conditions:
-        completeness += 0.3
-    if profile.experience_level:
-        completeness += 0.2
-    if profile.administration_preferences:
-        completeness += 0.2
-    
-    # Store profile
-    _profiles[profile_id] = {
-        "profile": profile.model_dump(),
-        "created_at": datetime.utcnow().isoformat(),
-        "completeness": completeness,
+    try:
+        # Generate unique profile code
+        profile_code = f"NB-{uuid.uuid4().hex[:5].upper()}"
+
+        # Create new patient record
+        patient = Patient(
+            patient_hash=f"tablet_{uuid.uuid4().hex}",  # Temporary hash for tablet-created profiles
+            profile_code=profile_code,
+            age_range=profile.age and f"{(profile.age//10)*10}-{((profile.age//10)*10)+9}" or None,  # Convert to range
+            biological_sex=(getattr(profile, "biological_sex", None) or getattr(profile, "sex", None) or "unspecified"),
+            state_code="NV",  # Nevada pilot
+            jurisdiction_type="recreational",
+            primary_conditions=[cond.name for cond in profile.conditions if cond.is_primary],
+            secondary_conditions=[cond.name for cond in profile.conditions if not cond.is_primary],
+            condition_severity={cond.name: cond.severity for cond in profile.conditions},
+            cannabinoid_experience_level=profile.experience_level,
+            preferred_delivery_methods=profile.administration_preferences,
+            primary_treatment_goal=profile.primary_goal,
+            omnipath_consent_status="limited_consent",  # Default for dispensary
+            status="active"
+        )
+
+        # Calculate completeness
+        patient.profile_completeness = patient.calculate_completeness()
+
+        # Save to database
+        db.add(patient)
+        db.commit()
+        db.refresh(patient)
+
+        primary_condition = patient.primary_conditions[0] if patient.primary_conditions else None
+
+        return ProfileResponse(
+            profile_id=f"prof_{uuid.uuid4().hex[:6].upper()}",
+            created_at=patient.created_at.isoformat() if patient.created_at else datetime.utcnow().isoformat(),
+            completeness_score=patient.profile_completeness,
+            primary_condition=primary_condition,
+        )
+    except Exception as e:
+        logger.error(f"Profile creation failed: {e}")
+        db.rollback()  # Rollback on error
+        raise HTTPException(status_code=500, detail=f"Failed to create customer profile: {str(e)}")
+
+    return {
+        "profile": patient.to_recommendation_profile(),
+        "created_at": patient.created_at.isoformat() if patient.created_at else None,
+        "completeness": patient.profile_completeness,
+        "status": patient.status
     }
-    
-    primary_condition = None
-    for cond in profile.conditions:
-        if cond.is_primary:
-            primary_condition = cond.name
-            break
-    
-    return ProfileResponse(
-        profile_id=profile_id,
-        created_at=datetime.utcnow().isoformat(),
-        completeness_score=completeness,
-        primary_condition=primary_condition,
-    )
-
-
-@router.get("/profile/{profile_id}", response_model=Dict[str, Any])
-async def get_customer_profile(
-    profile_id: str,
-    db: Session = Depends(get_db),
-) -> Dict[str, Any]:
-    """Get a customer profile by ID."""
-    if profile_id not in _profiles:
-        raise HTTPException(status_code=404, detail="Profile not found")
-    
-    return _profiles[profile_id]
 
 
 @router.post("/feedback")
@@ -758,16 +807,22 @@ async def submit_feedback(
     
     Feedback is used to improve model accuracy and personalization.
     """
-    if feedback.recommendation_id not in _recommendations:
-        raise HTTPException(status_code=404, detail="Recommendation not found")
-    
-    # Store feedback
-    if feedback.recommendation_id not in _feedback:
-        _feedback[feedback.recommendation_id] = []
-    
-    _feedback[feedback.recommendation_id].append(feedback.model_dump())
-    
-    return {"status": "Feedback recorded", "recommendation_id": feedback.recommendation_id}
+    try:
+        if feedback.recommendation_id not in _recommendations:
+            raise HTTPException(status_code=404, detail="Recommendation not found")
+        
+        # Store feedback
+        if feedback.recommendation_id not in _feedback:
+            _feedback[feedback.recommendation_id] = []
+        
+        _feedback[feedback.recommendation_id].append(feedback.model_dump())
+        
+        return {"status": "Feedback recorded", "recommendation_id": feedback.recommendation_id}
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Feedback submission failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to submit feedback: {str(e)}")
 
 
 @router.get("/statistics")
@@ -775,19 +830,25 @@ async def get_dispensary_statistics(
     db: Session = Depends(get_db),
 ) -> Dict[str, Any]:
     """Get dispensary recommendation statistics."""
-    return {
-        "total_profiles": len(_profiles),
-        "total_recommendations": len(_recommendations),
-        "total_feedback_entries": sum(len(f) for f in _feedback.values()),
-        "clinical_studies_used": 398,
-        "conditions_covered": 22,
-        "trade_secret_engines": 6,
-        "pricing": {
-            "single_location": "$1,200/month",
-            "multi_location": "$900/month per location",
-            "enterprise": "$700/month per location",
-        },
-    }
+    try:
+        total_profiles = db.query(Patient).count()
+
+        return {
+            "total_profiles": total_profiles,
+            "total_recommendations": len(_recommendations),  # Keep in-memory for now
+            "total_feedback_entries": sum(len(f) for f in _feedback.values()),  # Keep in-memory for now
+            "clinical_studies_used": 398,
+            "conditions_covered": 22,
+            "trade_secret_engines": 6,
+            "pricing": {
+                "single_location": "$1,200/month",
+                "multi_location": "$900/month per location",
+                "enterprise": "$700/month per location",
+            },
+        }
+    except Exception as e:
+        logger.error(f"Statistics retrieval failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to retrieve statistics: {str(e)}")
 
 
 # =============================================================================
@@ -873,3 +934,146 @@ async def optimize_adjuvants(
     except Exception as e:
         logger.error(f"Adjuvant optimization failed: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# =============================================================================
+# TS-PS-001 Cross-Kingdom Inflammatory Synergy Engine Integration
+# =============================================================================
+
+class InflammatorySynergyRequest(BaseModel):
+    """Request for TS-PS-001 inflammatory synergy prediction."""
+    biomarkers: InflammatoryBiomarkers = Field(..., description="Inflammatory biomarker panel")
+    condition_profile: InflammatoryProfileInput = Field(..., description="Patient inflammatory profile")
+    available_kingdoms: List[str] = Field(
+        default_factory=lambda: ["cannabis", "fungal", "marine", "plant"],
+        description="Kingdoms to consider for synergy prediction"
+    )
+
+
+class InflammatorySynergyResponse(BaseModel):
+    """TS-PS-001 inflammatory synergy prediction response."""
+    primary_kingdom: str
+    secondary_kingdoms: List[str]
+    synergy_score: float
+    confidence_level: float
+    recommended_compounds: List[str]
+    dosing_guidance: Dict[str, Any]
+    expected_reduction: Dict[str, float]
+    warning: Optional[str] = None
+
+
+@router.post("/inflammatory-synergy", response_model=InflammatorySynergyResponse)
+async def predict_inflammatory_synergy(
+    request: InflammatorySynergyRequest,
+    db: Session = Depends(get_db),
+) -> InflammatorySynergyResponse:
+    """
+    TS-PS-001 Cross-Kingdom Inflammatory Synergy Prediction
+
+    Predicts optimal anti-inflammatory formulations using proprietary algorithms
+    that analyze biomarker profiles across Cannabis, Fungal, Marine, and Plant kingdoms.
+
+    **TRADE SECRET PROTECTION**: This endpoint implements TS-PS-001 algorithms
+    protected under 18 U.S.C. § 1836 (DTSA). Access is logged and monitored.
+
+    **Biomarker Requirements**: At minimum TNF-α, IL-6, CRP recommended for optimal predictions.
+
+    **Reference**: TS-PS-001 Cross-Kingdom Inflammatory Synergy Engine Documentation
+    """
+    try:
+        # Initialize TS-PS-001 engine with access verification
+        engine = get_inflammatory_synergy_engine()
+
+        # Extract biomarkers for prediction
+        biomarkers = {
+            'tnf_alpha': request.biomarkers.tnf_alpha or 0,
+            'il6': request.biomarkers.il6 or 0,
+            'crp': request.biomarkers.crp or 0,
+            'il1b': request.biomarkers.il1b or 0,
+        }
+
+        # Get inflammatory synergy prediction
+        prediction = engine.predict_inflammatory_synergy(
+            biomarkers=biomarkers,
+            condition_profile=request.condition_profile.model_dump(),
+            available_kingdoms=request.available_kingdoms
+        )
+
+        return InflammatorySynergyResponse(**prediction)
+
+    except PermissionError as e:
+        logger.warning(f"TS-PS-001 access denied: {e}")
+        raise HTTPException(status_code=403, detail="Access denied: TS-PS-001 trade secret protection")
+    except Exception as e:
+        logger.error(f"TS-PS-001 prediction failed: {e}")
+        raise HTTPException(status_code=500, detail=f"Inflammatory synergy prediction failed: {str(e)}")
+
+
+@router.post("/profile/inflammatory", response_model=ProfileResponse)
+async def create_inflammatory_profile(
+    profile: InflammatoryProfileInput,
+    db: Session = Depends(get_db),
+) -> ProfileResponse:
+    """
+    Create customer profile with inflammatory biomarkers for TS-PS-001 integration.
+
+    Enhanced profile creation that includes inflammatory biomarker data for
+    advanced synergy predictions using TS-PS-001 algorithms.
+    """
+    try:
+        # Generate unique profile code
+        profile_code = f"NB-IF-{uuid.uuid4().hex[:6].upper()}"
+
+        # Create patient record with inflammatory biomarkers
+        patient = Patient(
+            patient_hash=f"inflammatory_{uuid.uuid4().hex}",
+            profile_code=profile_code,
+            age_range=profile.age and f"{(profile.age//10)*10}-{((profile.age//10)*10)+9}" or None,
+            biological_sex=(getattr(profile, "biological_sex", None) or getattr(profile, "sex", None) or "unspecified"),
+            state_code="NV",
+            jurisdiction_type="recreational",
+            primary_conditions=[cond.name for cond in profile.conditions if cond.is_primary],
+            secondary_conditions=[cond.name for cond in profile.conditions if not cond.is_primary],
+            condition_severity={cond.name: cond.severity for cond in profile.conditions},
+            cannabinoid_experience_level=profile.experience_level,
+            preferred_delivery_methods=profile.administration_preferences,
+            primary_treatment_goal=profile.primary_goal,
+            omnipath_consent_status="limited_consent",
+            status="active"
+        )
+
+        # Add inflammatory biomarker data if provided
+        if profile.biomarkers:
+            # Store biomarkers in JSON field (would be normalized in production)
+            biomarker_data = {
+                'tnf_alpha': profile.biomarkers.tnf_alpha,
+                'il6': profile.biomarkers.il6,
+                'crp': profile.biomarkers.crp,
+                'il1b': profile.biomarkers.il1b,
+                'esr': profile.biomarkers.esr,
+                'fibrinogen': profile.biomarkers.fibrinogen,
+                'homocysteine': profile.biomarkers.homocysteine,
+            }
+            patient.inflammatory_biomarkers = biomarker_data
+
+        # Calculate completeness including biomarkers
+        patient.profile_completeness = patient.calculate_completeness()
+
+        # Save to database
+        db.add(patient)
+        db.commit()
+        db.refresh(patient)
+
+        primary_condition = patient.primary_conditions[0] if patient.primary_conditions else None
+
+        return ProfileResponse(
+            profile_id=patient.profile_code,
+            created_at=patient.created_at.isoformat() if patient.created_at else datetime.utcnow().isoformat(),
+            completeness_score=patient.profile_completeness,
+            primary_condition=primary_condition,
+        )
+
+    except Exception as e:
+        logger.error(f"Inflammatory profile creation failed: {e}")
+        db.rollback()
+        raise HTTPException(status_code=500, detail=f"Failed to create inflammatory profile: {str(e)}")

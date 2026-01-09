@@ -1,0 +1,19 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 3h
+  receiver: 'team-oncall'
+
+receivers:
+  - name: 'team-oncall'
+    email_configs:
+      - to: 'oncall@example.org'
+        send_resolved: true
+
+# Example integration notes:
+# - Replace email receiver with pagerduty_configs or slack_configs per your stack.
+# - Configure routes and silences in Alertmanager UI for on-call rotations and maintenance windows.

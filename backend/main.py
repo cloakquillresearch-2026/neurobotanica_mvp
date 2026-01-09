@@ -13,7 +13,8 @@ FastAPI application with:
 - Clinical Evidence API with confidence weighting
 - Receptor Affinity with provenance and heterogeneity analysis
 """
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends, HTTPException, Request
+from fastapi.responses import JSONResponse, HTMLResponse, PlainTextResponse
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 from sqlalchemy import func
@@ -22,6 +23,7 @@ import os
 
 from backend.models.database import get_db, init_db, engine, Base
 from backend.api import studies, compounds, fda_compliance, conformers
+from backend.services import health_monitor
 from backend.api import omnipath
 from backend.api import evidence, receptor_affinity
 from backend.api import dimers
@@ -101,6 +103,31 @@ app.include_router(clinpath.router, prefix="/api/clinpath", tags=["ClinPath"])
 app.include_router(dispensary.router, prefix="/api/dispensary", tags=["Dispensary"])
 app.include_router(security.router, tags=["Security"])
 
+# Ensure database schema matches models at import time for test/dev environments
+try:
+    init_db()
+except Exception as e:
+    import logging
+    logging.getLogger(__name__).warning(f"init_db at import failed: {e}")
+
+
+@app.on_event("startup")
+async def _start_monitor():
+    # start background health monitor
+    try:
+        await health_monitor.startup_monitor(app)
+    except Exception as e:
+        import logging
+        logging.getLogger(__name__).warning(f"Failed to start health monitor: {e}")
+
+
+@app.on_event("shutdown")
+async def _stop_monitor():
+    try:
+        await health_monitor.shutdown_monitor(app)
+    except Exception:
+        pass
+
 # Add token validation middleware (disabled by default for development)
 # Enable with NEUROBOTANICA_TOKEN_VALIDATION=true environment variable
 if os.getenv("NEUROBOTANICA_TOKEN_VALIDATION", "false").lower() == "true":
@@ -167,6 +194,54 @@ async def test_endpoint():
         import traceback
         traceback.print_exc()
         return {"status": "error", "message": str(e)}
+
+
+@app.get("/health")
+async def health(refresh: bool = False):
+    """Return cached health data. Use ?refresh=true to force an immediate live check.
+    Adds top-level backward-compatible keys: `ml_models` and `features`.
+    """
+    try:
+        data = await health_monitor.get_cached_health(force_refresh=refresh)
+        # Backwards-compatible top-level keys expected by older tests/clients
+        response = data.copy()
+        response['ml_models'] = data.get('results', {}).get('ml_models')
+        response['features'] = data.get('results', {}).get('features')
+        return JSONResponse(response)
+    except Exception as e:
+        return JSONResponse({'status': 'error', 'detail': str(e)}, status_code=500)
+
+
+@app.get("/metrics")
+async def metrics():
+    """Prometheus metrics endpoint. Returns 501 if prometheus_client is not installed."""
+    try:
+        from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
+    except Exception:
+        return JSONResponse({'status': 'unavailable', 'detail': 'prometheus_client not installed'}, status_code=501)
+
+    payload = generate_latest()
+    return PlainTextResponse(payload.decode('utf-8'), media_type=CONTENT_TYPE_LATEST)
+
+
+@app.get("/status")
+async def status():
+    """Simple HTML status UI showing basic health summary."""
+    data = await health_monitor.get_cached_health()
+    status_val = data.get('status', 'unknown')
+    checked_at = data.get('checked_at', '')
+    errors = data.get('errors', [])
+    html = f"""
+    <html>
+      <head><title>NeuroBotanica Status</title></head>
+      <body>
+        <h2>NeuroBotanica Status: {status_val}</h2>
+        <p>Last check: {checked_at}</p>
+        <p>Errors: {', '.join(errors) if errors else 'none'}</p>
+      </body>
+    </html>
+    """
+    return HTMLResponse(html)
 
 
 @app.get("/api/v1/stats")
