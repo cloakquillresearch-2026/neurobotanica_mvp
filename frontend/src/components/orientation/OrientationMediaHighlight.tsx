@@ -106,37 +106,41 @@ export function OrientationMediaHighlight({ lessons }: OrientationMediaHighlight
       </article>
 
       <div className="grid gap-6 lg:grid-cols-3">
-        {lessons.map((lesson) => (
-          <figure key={lesson.id} className="glass-card p-4 space-y-4 border border-white/10" aria-labelledby={`${lesson.id}-media-title`}>
-            <div className="relative w-full h-44 rounded-2xl overflow-hidden bg-black/30">
-              {lesson.media.type === 'image' ? (
-                <Image
-                  src={lesson.media.src}
-                  alt={lesson.media.alt}
-                  fill
-                  sizes="(min-width: 1024px) 30vw, 90vw"
-                  className="object-cover scale-[1.02]"
-                  priority={lesson.id === 'welcome'}
-                />
-              ) : (
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  preload="metadata"
-                  poster={lesson.media.src}
-                >
-                  <source src={lesson.media.src} />
-                </video>
-              )}
-            </div>
-            <figcaption className="space-y-1">
-              <p id={`${lesson.id}-media-title`} className="text-white font-semibold text-lg">
-                {lesson.title}
-              </p>
-              {lesson.media.caption && <p className="text-white/70 text-sm leading-relaxed">{lesson.media.caption}</p>}
-            </figcaption>
-          </figure>
-        ))}
+        {lessons.map((lesson) => {
+          const imageFitClass = lesson.media.fit === 'contain' ? 'object-contain p-4' : 'object-cover scale-[1.02]'
+          return (
+            <figure key={lesson.id} className="glass-card p-4 space-y-4 border border-white/10" aria-labelledby={`${lesson.id}-media-title`}>
+              <div className="relative w-full h-44 rounded-2xl overflow-hidden bg-black/30">
+                {lesson.media.type === 'image' ? (
+                  <Image
+                    src={lesson.media.src}
+                    alt={lesson.media.alt}
+                    fill
+                    sizes="(min-width: 1024px) 30vw, 90vw"
+                    className={imageFitClass}
+                    priority={lesson.id === 'welcome'}
+                  />
+                ) : (
+                  <video
+                    className="w-full h-full object-cover"
+                    controls
+                    preload="metadata"
+                    poster={lesson.media.poster}
+                  >
+                    <source src={lesson.media.src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+              </div>
+              <figcaption className="space-y-1">
+                <p id={`${lesson.id}-media-title`} className="text-white font-semibold text-lg">
+                  {lesson.title}
+                </p>
+                {lesson.media.caption && <p className="text-white/70 text-sm leading-relaxed">{lesson.media.caption}</p>}
+              </figcaption>
+            </figure>
+          )
+        })}
       </div>
     </section>
   )
