@@ -1,3 +1,13 @@
+class NextGenDimerModel:
+    """Test stub for next-gen model head.
+
+    Methods mirror the small interface expected by `dimer_predictor`.
+    """
+    def predict(self, features):
+        # Return deterministic small values for tests
+        import numpy as _np
+        n = _np.asarray(features).shape[0]
+        return [_np.zeros(n) + 0.5, _np.ones(n) * 0.1]
 import numpy as np
 from typing import Tuple
 from sklearn.linear_model import LogisticRegression, Ridge

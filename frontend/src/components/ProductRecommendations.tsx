@@ -1,13 +1,18 @@
-import { useState, useEffect } from 'react'
-import { dispensaryAPI, adjuvantAPI } from '@/utils/api'
+import { useState, useEffect, useCallback } from 'react'
+import { dispensaryAPI } from '@/utils/api'
+import type {
+  CustomerProfileData,
+  ConditionPayload,
+  InflammatorySynergyPayload,
+} from '@/types/customer'
 
 interface ProductRecommendationsProps {
-  customer: any
-  recommendations: any[]
-  onRecommendationsUpdate: (recommendations: any[]) => void
+  customer: CustomerProfileData | null
+  recommendations: Recommendation[]
+  onRecommendationsUpdate: (recommendations: Recommendation[]) => void
 }
 
-interface Recommendation {
+export interface Recommendation {
   product_id: string
   product_name: string
   product_type: string
@@ -26,6 +31,25 @@ interface AdjuvantInfo {
   dosage: string
   timing: string
   evidence: string
+}
+
+interface DosingGuidance {
+  primary?: string
+  preferred_route?: string
+  frequency?: string
+  notes?: string[]
+  history_summary?: string
+}
+
+interface SynergyResponse {
+  primary_kingdom: string
+  secondary_kingdoms: string[]
+  synergy_score: number
+  confidence_level: number
+  recommended_compounds: string[]
+  dosing_guidance?: DosingGuidance
+  expected_reduction?: Record<string, string | number>
+  warning?: string
 }
 
 const TERPENE_INFO: Record<string, { emoji: string; color: string; effect: string; description: string }> = {
@@ -295,22 +319,45 @@ const ADJUVANT_DETAILS: Record<string, AdjuvantInfo> = {
   },
 }
 
+const SANDBOX_SYNERGY: SynergyResponse = {
+  primary_kingdom: 'Cannabis',
+  secondary_kingdoms: ['Fungal', 'Plant'],
+  synergy_score: 0.82,
+  confidence_level: 0.78,
+  recommended_compounds: ['CBD', 'CBG', 'Linalool', 'Myrcene'],
+  dosing_guidance: {
+    primary: 'gentle_titration',
+    preferred_route: 'sublingual_tincture',
+    frequency: 'twice_daily',
+    notes: [
+      'Use tincture micro-doses to demonstrate slow onboarding',
+      'Pair with slow diaphragmatic breathing for anxiety spikes',
+    ],
+    history_summary: 'Sandbox persona with inflammatory biomarkers + anxiety'
+  },
+  expected_reduction: {
+    TNF_alpha: '-28% (6 weeks)',
+    IL6: '-22% (8 weeks)',
+    CRP: '-18% (6 weeks)',
+  },
+  warning: 'Sandbox data for training only. Do not dispense based on this panel.'
+}
+
 export function ProductRecommendations({
   customer,
   recommendations,
   onRecommendationsUpdate,
 }: ProductRecommendationsProps) {
   const [loading, setLoading] = useState(false)
-  const [expandedProduct, setExpandedProduct] = useState<string | null>(null)
   const [expandedAdjuvant, setExpandedAdjuvant] = useState<string | null>(null)
+  const [synergyData, setSynergyData] = useState<SynergyResponse | null>(null)
+  const [synergyLoading, setSynergyLoading] = useState(false)
+  const [synergyError, setSynergyError] = useState<string | null>(null)
 
-  useEffect(() => {
-    if (customer && !customer.isNew) {
-      fetchRecommendations()
+  const fetchRecommendations = useCallback(async () => {
+    if (!customer || customer.isNew) {
+      return
     }
-  }, [customer])
-
-  const fetchRecommendations = async () => {
     setLoading(true)
     try {
       const conditions = customer.conditions || []
@@ -469,7 +516,71 @@ export function ProductRecommendations({
     } finally {
       setLoading(false)
     }
-  }
+  }, [customer, onRecommendationsUpdate])
+
+  const fetchSynergyInsights = useCallback(async () => {
+    if (!customer) {
+      setSynergyData(null)
+      return
+    }
+
+    if (customer.isSandbox) {
+      setSynergyError(null)
+      setSynergyLoading(false)
+      setSynergyData(SANDBOX_SYNERGY)
+      return
+    }
+
+    const biomarkerPayload = Object.entries(customer.biomarkers || {})
+      .reduce<Record<string, number>>((acc, [key, value]) => {
+        const parsed = typeof value === 'string' ? parseFloat(value) : value
+        if (!Number.isNaN(parsed ?? NaN)) {
+          acc[key] = Number(parsed)
+        }
+        return acc
+      }, {})
+
+    const normalizedConditions: ConditionPayload[] = (customer.conditions || []).map((condition, index) => ({
+      name: condition,
+      severity: 7,
+      is_primary: index === 0,
+    }))
+
+    if (normalizedConditions.length === 0 && Object.keys(biomarkerPayload).length === 0) {
+      setSynergyData(null)
+      return
+    }
+
+    setSynergyLoading(true)
+    setSynergyError(null)
+    try {
+      const payload: InflammatorySynergyPayload = {
+        biomarkers: biomarkerPayload,
+        condition_profile: {
+          conditions: normalizedConditions,
+          experience_level: customer.experience_level || 'beginner',
+          administration_preferences: ['inhalation'],
+          primary_goal: normalizedConditions[0]?.name || 'inflammation',
+        },
+        available_kingdoms: ['cannabis', 'fungal', 'marine', 'plant'],
+      }
+      const response = await dispensaryAPI.predictInflammatorySynergy(payload)
+      setSynergyData(response.data)
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Unable to fetch TS-PS-001 insights right now.'
+      setSynergyError(message)
+    } finally {
+      setSynergyLoading(false)
+    }
+  }, [customer])
+
+  useEffect(() => {
+    fetchRecommendations()
+  }, [fetchRecommendations])
+
+  useEffect(() => {
+    fetchSynergyInsights()
+  }, [fetchSynergyInsights])
 
   const getMatchBadgeClass = (score: number) => {
     if (score >= 0.9) return 'match-badge-high'
@@ -477,33 +588,163 @@ export function ProductRecommendations({
     return 'match-badge-low'
   }
 
-  if (loading) {
+  const renderSynergyPanel = () => {
+    if (!customer) return null
+
     return (
-      <div className="text-center py-12">
-        <div className="spinner mx-auto mb-4"></div>
-        <p className="text-white/80 font-medium">Analyzing therapeutic profile...</p>
-        <p className="text-white/50 text-sm mt-1">Consulting 505+ clinical studies</p>
-      </div>
+      <section
+        className="bg-white/5 border border-white/10 rounded-2xl p-4"
+        aria-live="polite"
+        aria-label="TS-PS-001 insights"
+        data-testid="synergy-panel"
+      >
+        <div className="flex items-center gap-2 mb-3">
+          <span className="text-xl" aria-hidden="true">🧬</span>
+          <div>
+            <p className="font-semibold text-white">TS-PS-001 Cross-Kingdom Insights</p>
+            <p className="text-white/60 text-xs">Powered by inflammatory biomarkers + patient history</p>
+          </div>
+          {synergyLoading && (
+            <span className="ml-auto flex items-center gap-2 text-emerald-300 text-xs" role="status">
+              <span className="spinner w-4 h-4 border-2 border-emerald-200 border-t-transparent" aria-hidden="true" />
+              Computing…
+            </span>
+          )}
+        </div>
+
+        {customer.isSandbox && (
+          <p className="bg-amber-500/10 border border-amber-300/20 text-amber-200 text-xs rounded-lg px-3 py-2 mb-3">
+            Training preview: TS-PS-001 insights are simulated so you can practice without hitting production services.
+          </p>
+        )}
+
+        {synergyError && (
+          <div className="info-box-warning text-sm">
+            <strong className="block">Unable to load TS-PS-001 insights.</strong>
+            <span>{synergyError}</span>
+          </div>
+        )}
+
+        {!synergyError && !synergyLoading && !synergyData && (
+          <p className="text-white/70 text-sm">
+            Add biomarkers or conditions to unlock personalized cross-kingdom guidance.
+          </p>
+        )}
+
+        {synergyData && !synergyError && (
+          <div className="space-y-4 text-white/90">
+            <div className="grid gap-3 md:grid-cols-3">
+              <div className="bg-slate-900/60 rounded-xl p-3 border border-white/10">
+                <p className="text-xs text-white/50 uppercase font-semibold">Primary Kingdom</p>
+                <p className="text-lg font-bold text-white text-elevated">{synergyData.primary_kingdom}</p>
+                {synergyData.secondary_kingdoms?.length > 0 && (
+                  <p className="text-xs text-white/60 mt-1">
+                    Adjacent: {synergyData.secondary_kingdoms.join(', ')}
+                  </p>
+                )}
+              </div>
+              <div className="bg-slate-900/60 rounded-xl p-3 border border-white/10">
+                <p className="text-xs text-white/50 uppercase font-semibold">Synergy Score</p>
+                <p className="text-lg font-bold text-emerald-300" data-testid="synergy-score">
+                  {(synergyData.synergy_score * 100).toFixed(1)}%
+                </p>
+                <p className="text-xs text-white/60 mt-1">Confidence {Math.round((synergyData.confidence_level || 0) * 100)}%</p>
+              </div>
+              <div className="bg-slate-900/60 rounded-xl p-3 border border-white/10">
+                <p className="text-xs text-white/50 uppercase font-semibold">Dosing Strategy</p>
+                <p className="text-sm font-semibold text-white">
+                  {synergyData.dosing_guidance?.primary?.replace('_', ' ') || 'Standard titration'}
+                </p>
+                <p className="text-xs text-white/60 mt-1 capitalize">
+                  {synergyData.dosing_guidance?.preferred_route?.replace('_', ' ') || 'oral_tincture'} • {synergyData.dosing_guidance?.frequency || 'twice_daily'}
+                </p>
+              </div>
+            </div>
+
+            {synergyData.recommended_compounds?.length > 0 && (
+              <div>
+                <p className="text-xs text-white/50 uppercase font-semibold mb-2">Key Compounds</p>
+                <div className="flex flex-wrap gap-2">
+                  {synergyData.recommended_compounds.map((compound: string) => (
+                    <span key={compound} className="bg-white/10 border border-white/10 px-3 py-1 rounded-full text-xs">
+                      {compound}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {synergyData.expected_reduction && (
+              <div className="grid gap-3 md:grid-cols-2">
+                <div className="bg-slate-900/60 rounded-xl p-3 border border-white/10">
+                  <p className="text-xs text-white/50 uppercase font-semibold mb-2">Projected Biomarker Reduction</p>
+                  <ul className="space-y-1 text-sm">
+                    {Object.entries(synergyData.expected_reduction).map(([marker, value]) => (
+                      <li key={marker} className="flex justify-between text-white/80">
+                        <span className="uppercase tracking-wide text-xs">{marker}</span>
+                        <span>{value}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="bg-slate-900/60 rounded-xl p-3 border border-white/10">
+                  <p className="text-xs text-white/50 uppercase font-semibold mb-2">Care Notes</p>
+                  <ul className="text-sm space-y-1 text-white/80">
+                    {synergyData.dosing_guidance?.notes?.length
+                      ? synergyData.dosing_guidance.notes.map((note: string, idx: number) => (
+                        <li key={idx} className="flex gap-2">
+                          <span className="text-emerald-300">•</span>
+                          {note}
+                        </li>
+                      ))
+                      : <li>No additional cautions.</li>
+                    }
+                    {synergyData.dosing_guidance?.history_summary && (
+                      <li className="text-white/60 text-xs mt-2">History focus: {synergyData.dosing_guidance.history_summary}</li>
+                    )}
+                  </ul>
+                </div>
+              </div>
+            )}
+
+            {synergyData.warning && (
+              <div className="info-box-warning text-sm">
+                {synergyData.warning}
+              </div>
+            )}
+          </div>
+        )}
+      </section>
     )
   }
 
-  if (recommendations.length === 0) {
-    return (
-      <div className="text-center py-8">
-        <div className="text-4xl mb-3">🌿</div>
-        <p className="text-white/60">Select conditions to see therapeutic insights</p>
-      </div>
-    )
-  }
+  const renderRecommendationBody = () => {
+    if (loading) {
+      return (
+        <div className="text-center py-12">
+          <div className="spinner mx-auto mb-4" />
+          <p className="text-white/80 font-medium">Analyzing therapeutic profile...</p>
+          <p className="text-white/50 text-sm mt-1">Consulting 505+ clinical studies</p>
+        </div>
+      )
+    }
 
-  return (
-    <div className="space-y-4">
-      {/* Therapeutic Insights */}
-      {recommendations.map((product: Recommendation, index: number) => (
-        <div
-          key={product.product_id || index}
-          className="product-card overflow-hidden"
-        >
+    if (recommendations.length === 0) {
+      return (
+        <div className="text-center py-8">
+          <div className="text-4xl mb-3" aria-hidden="true">🌿</div>
+          <p className="text-white/60">Select conditions to see therapeutic insights</p>
+        </div>
+      )
+    }
+
+    return (
+      <div className="space-y-4">
+        {recommendations.map((product: Recommendation, index: number) => (
+          <div
+            key={product.product_id || index}
+            className="product-card overflow-hidden"
+          >
           {/* Product Header */}
           <div className="flex justify-between items-start mb-3">
             <div className="flex-1">
@@ -652,7 +893,15 @@ export function ProductRecommendations({
             </div>
           )}
         </div>
-      ))}
+        ))}
+      </div>
+    )
+  }
+
+  return (
+    <div className="space-y-5" aria-live="polite">
+      {renderSynergyPanel()}
+      {renderRecommendationBody()}
     </div>
   )
 }

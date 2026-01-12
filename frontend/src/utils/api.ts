@@ -1,6 +1,16 @@
 import axios from 'axios'
+import type {
+  CustomerProfilePayload,
+  TransactionPayload,
+  InflammatorySynergyPayload,
+  PatientProfilePayload,
+} from '@/types/customer'
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || ''
+const DEV_FALLBACK_API = 'http://127.0.0.1:8000'
+
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_URL ||
+  (process.env.NODE_ENV !== 'production' ? DEV_FALLBACK_API : '')
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
@@ -10,18 +20,20 @@ export const api = axios.create({
 // Dispensary API endpoints
 export const dispensaryAPI = {
   // Customer management
-  createProfile: (profile: any) => api.post('/api/dispensary/profile', profile),
+  createProfile: (profile: CustomerProfilePayload) => api.post('/api/dispensary/profile', profile),
   getProfile: (profileId: string) => api.get(`/api/dispensary/profile/${profileId}`),
-  updateProfile: (profileId: string, profile: any) => api.put(`/api/dispensary/profile/${profileId}`, profile),
+  updateProfile: (profileId: string, profile: CustomerProfilePayload) => api.put(`/api/dispensary/profile/${profileId}`, profile),
 
   // Transactions
-  createTransaction: (transaction: any) => api.post('/api/dispensary/transaction', transaction),
+  createTransaction: (transaction: TransactionPayload) => api.post('/api/dispensary/transaction', transaction),
 
   // Recommendations
-  getRecommendations: (data: any) => api.post('/api/dispensary/recommend', data),
+  getRecommendations: (data: Record<string, unknown>) => api.post('/api/dispensary/recommend', data),
+  predictInflammatorySynergy: (payload: InflammatorySynergyPayload) =>
+    api.post('/api/dispensary/inflammatory-synergy', payload),
 
   // Feedback
-  submitFeedback: (feedback: any) => api.post('/api/dispensary/feedback', feedback),
+  submitFeedback: (feedback: Record<string, unknown>) => api.post('/api/dispensary/feedback', feedback),
 
   // Analytics
   getStatistics: () => api.get('/api/dispensary/statistics'),
@@ -29,7 +41,12 @@ export const dispensaryAPI = {
 
 // Adjuvant optimization
 export const adjuvantAPI = {
-  optimize: (compound: string, target: string, kingdom: string = 'cannabis', patientProfile?: any) =>
+  optimize: (
+    compound: string,
+    target: string,
+    kingdom: string = 'cannabis',
+    patientProfile?: PatientProfilePayload,
+  ) =>
     api.post('/api/adjuvant/optimize', {
       primary_compound: compound,
       therapeutic_target: target,
@@ -39,15 +56,22 @@ export const adjuvantAPI = {
 }
 
 // General API utilities
-export const handleApiError = (error: any) => {
-  if (error.response) {
+export const handleApiError = (error: unknown) => {
+  if (error && typeof error === 'object' && 'response' in error && error.response) {
+    const detail = (error as { response: { data?: { detail?: string } } }).response?.data?.detail
     // Server responded with error status
-    throw new Error(error.response.data.detail || 'API request failed')
-  } else if (error.request) {
+    throw new Error(detail || 'API request failed')
+  }
+
+  if (error && typeof error === 'object' && 'request' in error && (error as { request?: unknown }).request) {
     // Network error
     throw new Error('Network error - check your connection')
-  } else {
+  }
+
+  if (error instanceof Error) {
     // Other error
     throw new Error(error.message || 'Unknown error occurred')
   }
+
+  throw new Error('Unknown error occurred')
 }

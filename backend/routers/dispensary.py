@@ -29,6 +29,7 @@ from backend.models.patient import Patient
 from backend.models.database import get_db
 from backend.services.engine_loader import load_inflammatory_engine
 from backend.services.adjuvant_optimizer import get_adjuvant_optimizer, PatientProfile as AdjuvantPatientProfile
+from backend.dependencies.auth import get_current_user, User
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["Dispensary"])
@@ -691,6 +692,7 @@ def get_recommendation_engine() -> DispensaryRecommendationEngine:
 async def generate_recommendations(
     request: RecommendationRequest,
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
 ) -> RecommendationResponse:
     """
     Generate personalized product recommendations.
@@ -740,6 +742,7 @@ async def generate_recommendations(
 async def create_customer_profile(
     profile: CustomerProfileInput,
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
 ) -> ProfileResponse:
     """
     Create or update a customer profile.
@@ -801,6 +804,7 @@ async def create_customer_profile(
 async def submit_feedback(
     feedback: FeedbackInput,
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
 ) -> Dict[str, str]:
     """
     Submit feedback on a recommendation.
@@ -828,6 +832,7 @@ async def submit_feedback(
 @router.get("/statistics")
 async def get_dispensary_statistics(
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
 ) -> Dict[str, Any]:
     """Get dispensary recommendation statistics."""
     try:
@@ -879,6 +884,7 @@ class AdjuvantResponse(BaseModel):
 async def optimize_adjuvants(
     request: AdjuvantRequest,
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
 ) -> AdjuvantResponse:
     """
     Optimize adjuvant selection for a cannabinoid therapy.
@@ -966,6 +972,7 @@ class InflammatorySynergyResponse(BaseModel):
 async def predict_inflammatory_synergy(
     request: InflammatorySynergyRequest,
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
 ) -> InflammatorySynergyResponse:
     """
     TS-PS-001 Cross-Kingdom Inflammatory Synergy Prediction
@@ -1013,6 +1020,7 @@ async def predict_inflammatory_synergy(
 async def create_inflammatory_profile(
     profile: InflammatoryProfileInput,
     db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user),
 ) -> ProfileResponse:
     """
     Create customer profile with inflammatory biomarkers for TS-PS-001 integration.

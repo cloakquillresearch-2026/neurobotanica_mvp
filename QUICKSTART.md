@@ -13,9 +13,9 @@
 - Click "Download" for your operating system
 - Install and open VS Code
 
-**B. Install Python 3.11+**
+**B. Install Python 3.11 or newer**
 - Go to: https://www.python.org/downloads/
-- Download Python 3.11 or newer
+- Download Python 3.11 or newer (tested with 3.13)
 - **IMPORTANT:** During installation, check the box "Add Python to PATH"
 - Verify: Open Command Prompt (Windows) or Terminal (Mac) and type:
   ```
@@ -49,7 +49,7 @@ You should now see the project files in the left sidebar!
 python -m venv venv
 venv\Scripts\activate
 pip install --upgrade pip
-pip install rdkit pandas numpy scikit-learn matplotlib seaborn pytest
+pip install -r ../requirements.txt
 ```
 
 **On Mac/Linux:**
@@ -57,7 +57,7 @@ pip install rdkit pandas numpy scikit-learn matplotlib seaborn pytest
 python3 -m venv venv
 source venv/bin/activate
 pip install --upgrade pip
-pip install rdkit pandas numpy scikit-learn matplotlib seaborn pytest
+pip install -r ../requirements.txt
 ```
 
 **Note:** Installation takes 5-10 minutes. RDKit is a large package.
@@ -90,7 +90,7 @@ Now VS Code will use your virtual environment for autocomplete and error checkin
 - **View data:** Open `data/training/neurobotanica_complete_dataset_63compounds.json`
 - **Edit code:** Open any `.py` file in `src/`
 - **Run analysis:** `python src/analysis/cannabinoid_analyzer.py`
-- **Run tests:** `pytest tests/ -v` (when you add tests)
+- **Run tests:** `pytest tests/ -v`
 
 ---
 

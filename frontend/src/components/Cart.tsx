@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ShoppingCart, Minus, Plus, Trash2, CreditCard } from 'lucide-react'
 import { dispensaryAPI } from '@/utils/api'
+import type { CustomerProfileData, TransactionPayload } from '@/types/customer'
 
 interface CartItem {
   product_id: string
@@ -14,7 +15,7 @@ interface CartItem {
 interface CartProps {
   items: CartItem[]
   onUpdateCart: (items: CartItem[]) => void
-  customer: any
+  customer: CustomerProfileData | null
 }
 
 export function Cart({ items, onUpdateCart, customer }: CartProps) {
@@ -41,9 +42,15 @@ export function Cart({ items, onUpdateCart, customer }: CartProps) {
 
     setIsProcessing(true)
     try {
-      const transaction = {
+      const transaction: TransactionPayload = {
         customer_id: customer.customer_id,
-        items: items,
+        items: items.map(({ product_id, price, quantity, thc_percent, cbd_percent }) => ({
+          product_id,
+          price,
+          quantity,
+          thc_percent,
+          cbd_percent,
+        })),
         total_amount: total,
         timestamp: new Date().toISOString(),
       }

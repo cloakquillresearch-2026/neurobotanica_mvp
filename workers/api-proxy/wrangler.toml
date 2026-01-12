@@ -1,0 +1,9 @@
+name = "neurobotanica-api-proxy"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+PLATFORM_PAGES_URL = "https://neurobotanica-mvp.pages.dev"
+
+[observability]
+enabled = false

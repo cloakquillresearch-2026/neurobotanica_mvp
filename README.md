@@ -67,7 +67,7 @@ NeuroBotanica is an AI-powered computational platform that predicts therapeutic 
 ### Prerequisites
 
 **Required Software:**
-- **Python 3.11+** - Core runtime for backend and ML
+- **Python 3.11 or newer** (tested with 3.13) - Core runtime for backend and ML
 - **Node.js 18+** - Frontend development and build tools
 - **Git** - Version control system
 - **VS Code** - Recommended IDE with extensions
@@ -138,15 +138,12 @@ yarn dev
 ### Testing Setup
 
 ```bash
-# Run backend tests
-pytest backend/tests/
+# Run all tests
+pytest tests/ -v
 
-# Run frontend tests
-cd frontend
-npm test
-
-# Run integration tests
-pytest tests/
+# Run specific test files
+pytest tests/test_installation.py
+pytest tests/test_dimer_prediction.py
 ```
 
 ---

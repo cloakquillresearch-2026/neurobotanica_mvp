@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import type { CustomerProfileData } from '@/types/customer'
 
 interface CustomerSearchProps {
-  onCustomerSelect: (customer: any) => void
+  onCustomerSelect: (customer: CustomerProfileData) => void
 }
 
 const COMMON_CONDITIONS = [
@@ -17,7 +18,7 @@ const COMMON_CONDITIONS = [
 
 export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
   const [searchTerm, setSearchTerm] = useState('')
-  const [searchResults, setSearchResults] = useState<any[]>([])
+  const [searchResults, setSearchResults] = useState<CustomerProfileData[]>([])
   const [isSearching, setIsSearching] = useState(false)
   const [showQuickStart, setShowQuickStart] = useState(true)
 
@@ -27,7 +28,7 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
     setIsSearching(true)
     setShowQuickStart(false)
     try {
-      const mockResults = [
+      const mockResults: CustomerProfileData[] = [
         {
           customer_id: '1',
           first_name: 'John',
@@ -48,7 +49,7 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
   }
 
   const handleNewConsultation = (preselectedConditions: string[] = []) => {
-    const newCustomer = {
+    const newCustomer: CustomerProfileData = {
       customer_id: Date.now().toString(),
       first_name: 'New',
       last_name: 'Customer',
@@ -128,7 +129,7 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
             </svg>
             <span>Returning Customers</span>
           </div>
-          {searchResults.map((customer: any) => (
+          {searchResults.map((customer) => (
             <button
               key={customer.customer_id}
               onClick={() => onCustomerSelect(customer)}

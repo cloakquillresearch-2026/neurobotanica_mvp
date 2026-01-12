@@ -20,16 +20,23 @@ def load_inflammatory_engine() -> Any:
       attempt to import that module and call `get_inflammatory_synergy_engine()`.
     - Otherwise fall back to the bundled stub `backend.services.inflammatory_synergy_engine`.
     """
-    # Try explicit path from env
-    path = os.getenv("INFLAMMATORY_ENGINE_PATH")
-    if path:
+    # Try explicit path from env, then default production engine module
+    candidates = []
+    env_path = os.getenv("INFLAMMATORY_ENGINE_PATH")
+    if env_path:
+        candidates.append(env_path)
+    default_module = "backend.services.ts_ps_001_engine"
+    if default_module not in candidates:
+        candidates.append(default_module)
+
+    for path in candidates:
         try:
             mod = importlib.import_module(path)
-            if hasattr(mod, "get_inflammatory_synergy_engine"):
+            factory = getattr(mod, "get_inflammatory_synergy_engine", None)
+            if callable(factory):
                 logger.info(f"Loading inflammatory engine from {path}")
-                return mod.get_inflammatory_synergy_engine()
-            else:
-                logger.warning(f"Module {path} does not expose get_inflammatory_synergy_engine()")
+                return factory()
+            logger.warning(f"Module {path} does not expose get_inflammatory_synergy_engine()")
         except Exception as e:
             logger.exception(f"Failed to import engine module '{path}': {e}")
 

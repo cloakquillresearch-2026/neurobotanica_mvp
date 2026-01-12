@@ -10,7 +10,7 @@ Endpoints:
 - POST /profiles/optimize - Get optimal profile for therapeutic goal
 """
 from typing import Dict, List, Optional
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Depends
 from pydantic import BaseModel, Field
 import logging
 
@@ -18,6 +18,7 @@ from ..services.terpene_analyzer import (
     TerpeneAnalyzer,
     EvidenceTier
 )
+from ..dependencies.auth import get_current_user, User
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/terpenes", tags=["Terpene Analysis"])
@@ -410,12 +411,18 @@ async def get_evidence_summary():
 # Strain/Product Analysis Endpoints
 # ============================================================================
 
+class StrainAnalysisRequest(BaseModel):
+    """Request model for full-strain analysis."""
+    strain_name: str
+    cannabinoid_profile: Dict[str, float]
+    terpene_profile: Dict[str, float]
+    min_evidence_tier: int = Field(3, ge=1, le=5)
+
+
 @router.post("/strain/analyze")
 async def analyze_strain(
-    strain_name: str,
-    cannabinoid_profile: Dict[str, float],
-    terpene_profile: Dict[str, float],
-    min_evidence_tier: int = Query(3, ge=1, le=5)
+    request: StrainAnalysisRequest,
+    current_user: User = Depends(get_current_user)
 ):
     """Analyze a cannabis strain's potential synergies.
     
@@ -423,6 +430,10 @@ async def analyze_strain(
     """
     try:
         analyzer = TerpeneAnalyzer()
+        strain_name = request.strain_name
+        cannabinoid_profile = request.cannabinoid_profile
+        terpene_profile = request.terpene_profile
+        min_evidence_tier = request.min_evidence_tier
         
         # Analyze synergies for each cannabinoid in the profile
         all_synergies = {}

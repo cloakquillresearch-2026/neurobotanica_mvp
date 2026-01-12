@@ -9,7 +9,7 @@ security = HTTPBearer()
 
 
 class User(BaseModel):
-    uid: str
+    uid: str | None = None
     email: str | None = None
     roles: List[str] = []
 
@@ -32,7 +32,11 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(s
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid or missing auth token")
 
     roles = _extract_roles_from_claims(claims)
-    return User(uid=claims.get("uid"), email=claims.get("email"), roles=roles)
+
+    # Firebase ID tokens may expose the user identifier under different keys
+    uid = claims.get("uid") or claims.get("user_id") or claims.get("sub")
+
+    return User(uid=uid, email=claims.get("email"), roles=roles)
 
 
 def require_roles(*required: str):

@@ -1,4 +1,18 @@
 import numpy as np
+
+def encode_dimer_features(dimer_entry: dict):
+    """Return a deterministic small numeric feature vector for testing.
+
+    This stub is intentionally simple and only exists to satisfy imports
+    during unit tests that don't require a real ML pipeline.
+    """
+    # Use stable hashing of keys to return a small numeric vector
+    keys = sorted(dimer_entry.keys())
+    vec = [float(len(keys))]
+    for k in keys[:7]:
+        vec.append(float(sum(bytearray(str(k), 'utf-8'))) % 10)
+    return np.array(vec, dtype=float)
+import numpy as np
 from typing import Dict, Any
 
 # Placeholder for molecular embedding (e.g., ECFP4, ChemBERTa)

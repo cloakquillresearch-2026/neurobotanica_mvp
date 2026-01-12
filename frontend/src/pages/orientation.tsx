@@ -1,4 +1,5 @@
-import { useCallback } from 'react'
+import { useCallback, useEffect } from 'react'
+import { getFirebaseAnalytics } from '@/lib/firebaseClient'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -24,6 +25,12 @@ export default function OrientationPage() {
     }
     router.push('/?sandbox=1')
   }, [router])
+
+  useEffect(() => {
+    getFirebaseAnalytics().catch(() => {
+      /* analytics optional */
+    })
+  }, [])
 
   return (
     <OrientationLayout>

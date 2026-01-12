@@ -2,6 +2,15 @@ import os
 import time
 from typing import Dict, Any, Callable
 
+# Ensure .env configuration is loaded for local/dev runs
+try:  # pragma: no cover - environment dependent
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except Exception:
+    # If python-dotenv is not available, continue with OS env only
+    pass
+
 _JWKS_CACHE: dict[str, Any] = {}
 _JWKS_CACHE_TTL = 60 * 60  # seconds
 
