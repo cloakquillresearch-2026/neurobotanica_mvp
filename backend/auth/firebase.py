@@ -5,12 +5,14 @@ from typing import Dict, Any, Callable
 _JWKS_CACHE: dict[str, Any] = {}
 _JWKS_CACHE_TTL = 60 * 60  # seconds
 
-# Optional Prometheus metrics (lazy)
+# Optional Prometheus metrics (lazy). Use importlib to avoid static import errors
 _AUTH_VERIFY_ATTEMPTS = None
 _AUTH_VERIFY_FAILURES = None
 try:
-    from prometheus_client import Counter
+    import importlib
 
+    _prom = importlib.import_module("prometheus_client")
+    Counter = getattr(_prom, "Counter")
     _AUTH_VERIFY_ATTEMPTS = Counter("neurobotanica_auth_verify_attempts_total", "Auth verify attempts")
     _AUTH_VERIFY_FAILURES = Counter("neurobotanica_auth_verify_failures_total", "Auth verify failures")
 except Exception:
@@ -37,26 +39,26 @@ def verify_id_token(token: str) -> Dict[str, Any]:
             return {"uid": f"{role}-uid", "email": f"{role}@example.com", "role": role}
         raise ValueError("Invalid test token")
 
-    # Try firebase_admin if available
+    # Try firebase_admin if available (import dynamically to avoid static analysis errors)
     try:
-        import firebase_admin  # type: ignore
-        from firebase_admin import auth as fb_auth  # type: ignore
+        import importlib
+        fb_mod = importlib.import_module("firebase_admin")
+        fb_auth = getattr(fb_mod, "auth")
 
-        if not firebase_admin._apps:
+        if not getattr(fb_mod, "_apps", None):
             cred_json = os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
             if cred_json:
                 import json
-                from firebase_admin import credentials
-
-                cred = credentials.Certificate(json.loads(cred_json))
-                firebase_admin.initialize_app(cred)
+                creds_mod = importlib.import_module("firebase_admin.credentials")
+                cred = creds_mod.Certificate(json.loads(cred_json))
+                fb_mod.initialize_app(cred)
             else:
                 raise RuntimeError("FIREBASE_SERVICE_ACCOUNT_JSON not set; cannot initialize firebase_admin")
 
         claims = fb_auth.verify_id_token(token)
         return claims
     except Exception:
-        # fallthrough to JWKS
+        # fallthrough to JWKS verification
         pass
 
     # JWKS verification path
@@ -65,17 +67,20 @@ def verify_id_token(token: str) -> Dict[str, Any]:
         raise RuntimeError("FIREBASE_PROJECT_ID is required for JWKS-based token verification")
 
     try:
-        # Lazy imports to avoid requiring PyJWT for tests using FIREBASE_TEST_MODE
-        import httpx
-        import jwt
-        from jwt import PyJWKClient
+        # Lazy dynamic imports to avoid requiring PyJWT for tests using FIREBASE_TEST_MODE
+        import importlib
 
-        # Increment attempt metric if available
+        jwt_mod = importlib.import_module("jwt")
+        PyJWKClient = getattr(jwt_mod, "PyJWKClient", None)
+
         if _AUTH_VERIFY_ATTEMPTS:
             try:
                 _AUTH_VERIFY_ATTEMPTS.inc()
             except Exception:
                 pass
+
+        if PyJWKClient is None:
+            raise RuntimeError("PyJWKClient not available; install PyJWT>=2.0.0")
 
         jwks_url = _get_jwks_url(project_id)
 
@@ -91,7 +96,7 @@ def verify_id_token(token: str) -> Dict[str, Any]:
         signing_key = jwk_client.get_signing_key_from_jwt(token)
         public_key = signing_key.key
 
-        claims = jwt.decode(
+        claims = jwt_mod.decode(
             token,
             public_key,
             algorithms=["RS256"],
@@ -149,3 +154,88 @@ def require_roles(*allowed_roles: str) -> Callable:
         return claims
 
     return _dep
+
+
+# JWKS refresher helpers -------------------------------------------------
+async def start_jwks_refresher(app, interval_seconds: int = 60 * 60):
+    """Start a background task on `app` that refreshes the JWKS cache periodically.
+
+    Controlled by the `ENABLE_JWKS_REFRESH` env var. The task is stored on
+    `app.state._jwks_refresher_task` so it can be cancelled on shutdown.
+    """
+    if os.getenv("ENABLE_JWKS_REFRESH", "false").lower() != "true":
+        return
+
+    if getattr(app.state, "_jwks_refresher_task", None):
+        return
+
+    import asyncio
+    import importlib
+
+    async def _runner():
+        import logging
+        logger = logging.getLogger("neurobotanica.auth.jwks_refresher")
+        while True:
+            try:
+                project_id = os.getenv("FIREBASE_PROJECT_ID")
+                if project_id:
+                    jwks_url = _get_jwks_url(project_id)
+                    jwt_mod = importlib.import_module("jwt")
+                    PyJWKClient = getattr(jwt_mod, "PyJWKClient", None)
+                    if PyJWKClient:
+                        jwk_client = PyJWKClient(jwks_url)
+                        _JWKS_CACHE[jwks_url] = {"client": jwk_client, "fetched_at": time.time()}
+                        # log cache update
+                        try:
+                            logger.info("JWKS refresher updated cache for %s", jwks_url)
+                        except Exception:
+                            pass
+            except Exception as e:
+                # don't let refresher crash the loop
+                try:
+                    logger.exception("JWKS refresher error: %s", e)
+                except Exception:
+                    pass
+                try:
+                    if _AUTH_VERIFY_FAILURES:
+                        _AUTH_VERIFY_FAILURES.inc()
+                except Exception:
+                    pass
+            await asyncio.sleep(interval_seconds)
+
+    task = asyncio.create_task(_runner())
+    app.state._jwks_refresher_task = task
+
+
+async def stop_jwks_refresher(app):
+    """Stop the background JWKS refresher task if present."""
+    task = getattr(app.state, "_jwks_refresher_task", None)
+    if not task:
+        return
+    try:
+        task.cancel()
+        import asyncio
+
+        try:
+            await task
+        except asyncio.CancelledError:
+            pass
+    finally:
+        try:
+            delattr(app.state, "_jwks_refresher_task")
+        except Exception:
+            pass
+
+
+def get_jwks_cache_snapshot() -> Dict[str, Any]:
+    """Return a serializable snapshot of the JWKS cache suitable for debugging.
+
+    Keys: jwks_url -> {fetched_at: float, client_present: bool}
+    """
+    snapshot: Dict[str, Any] = {}
+    for url, entry in _JWKS_CACHE.items():
+        snapshot[url] = {
+            "fetched_at": entry.get("fetched_at"),
+            "client_present": bool(entry.get("client"))
+        }
+    return snapshot
