@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --nb-canopy: #5bbf70;
+  --nb-deep-teal: #007c89;
+  --nb-indigo: #295980;
+  --nb-sand: #f3ebdc;
+  --nb-copper: #a2622a;
+  --nb-charcoal: #1e2629;
+  --nb-cream: #fff9f1;
+  --noise-data: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.12'/%3E%3C/svg%3E");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--nb-charcoal);
+  background-color: var(--nb-sand);
+  background-image: radial-gradient(circle at top, rgba(255, 255, 255, 0.85), transparent 65%), var(--noise-data);
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.paper-shell {
+  background: var(--nb-cream);
+  border-radius: 32px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.paper-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--noise-data);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.button-primary {
+  background-image: linear-gradient(135deg, #007c89 0%, #43b58a 55%, #a3d86f 100%);
+  color: white;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 12px 24px rgba(0, 124, 137, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px rgba(0, 124, 137, 0.45);
+}
+
+.button-ghost {
+  border: 1px solid rgba(41, 89, 128, 0.4);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: var(--nb-indigo);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 2vw, 2.75rem);
+  letter-spacing: -0.5px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
