@@ -53,12 +53,14 @@ export type CaseBrief = {
   title: string;
   description: string;
   results: string;
+  tags: string[];
 };
 
 export const caseBriefs: CaseBrief[] = [
   {
     title: 'Clinical Study',
     description: 'Analyzed therapeutic profiles',
-    results: '95% accuracy in predictions'
+    results: '95% accuracy in predictions',
+    tags: ['Clinical', 'Research', 'Validated']
   }
 ];
