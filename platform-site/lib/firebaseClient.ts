@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { getApps, initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
@@ -10,5 +10,10 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+const hasRequiredConfig = Object.values(firebaseConfig).every(Boolean);
+
+const app = hasRequiredConfig
+  ? getApps()[0] ?? initializeApp(firebaseConfig)
+  : null;
+
+export const auth = app ? getAuth(app) : null;
