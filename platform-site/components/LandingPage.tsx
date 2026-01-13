@@ -85,6 +85,22 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <section className="mt-10 rounded-3xl border border-teal/30 bg-gradient-to-r from-white via-cream to-teal/10 px-6 py-6 shadow-parchment flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div className="space-y-2">
+          <p className="text-xs font-mono uppercase tracking-[0.4em] text-indigo/60">Nevada pilot intake · Q1</p>
+          <h3 className="text-2xl font-display text-charcoal">Two dispensary + lab slots remain for February.</h3>
+          <p className="text-sm text-indigo/80 max-w-xl">
+            Includes budtender enablement, Workers edge deployment, and HIPAA-ready evidence packets delivered in under four weeks.
+          </p>
+        </div>
+        <div className="flex flex-col gap-3 sm:items-end">
+          <p className="text-sm font-mono text-indigo/70">Average onboarding timeline · <span className="font-semibold text-charcoal">4 weeks</span></p>
+          <Link href="#contact-form" className="button-primary text-center whitespace-nowrap">
+            Reserve pilot briefing
+          </Link>
+        </div>
+      </section>
+
       <section className="mt-24 bg-white/70 rounded-3xl border border-white/60 shadow-parchment">
         <div className="overflow-hidden">
           <div className="flex gap-12 whitespace-nowrap text-sm font-mono text-indigo/70 animate-[scroll_30s_linear_infinite] px-8 py-5">
@@ -207,7 +223,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="mt-24 rounded-[36px] border border-sand bg-cream px-8 py-12 shadow-parchment relative overflow-hidden">
+      <section id="contact-form" className="mt-24 rounded-[36px] border border-sand bg-cream px-8 py-12 shadow-parchment relative overflow-hidden">
         <div className="absolute inset-0 opacity-30 pointer-events-none">
           <HeroHalo />
         </div>

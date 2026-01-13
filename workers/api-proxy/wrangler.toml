@@ -7,3 +7,7 @@ PLATFORM_PAGES_URL = "https://neurobotanica-mvp.pages.dev"
 
 [observability]
 enabled = false
+
+[[routes]]
+pattern = "budtender.neuro-botanica.com/api/*"
+zone_id = "168b2fbf1b35c58643dea024628f42ae"
