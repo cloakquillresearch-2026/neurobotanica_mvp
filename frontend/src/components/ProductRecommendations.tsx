@@ -23,6 +23,30 @@ export interface Recommendation {
   terpene_profile?: string[]
   clinical_studies?: number
   adjuvants?: AdjuvantInfo[]
+  // D1-backed fields
+  condition?: string
+  category?: string
+  evidence_summary?: {
+    total_studies: number
+    study_types: string[]
+    avg_confidence: number
+  }
+  recommended_cannabinoids?: Array<{
+    cannabinoid: string
+    evidence_count: number
+    avg_confidence: number
+  }>
+  recommended_ratio?: string
+  delivery_methods?: string[]
+  dosing_guidance?: string | DosingGuidance
+  citations?: Array<{
+    study_id: string
+    study_type: string
+    citation: string
+    confidence_score: number
+    key_findings: string[]
+  }>
+  disclaimer?: string
 }
 
 interface AdjuvantInfo {
@@ -361,156 +385,72 @@ export function ProductRecommendations({
     setLoading(true)
     try {
       const conditions = customer.conditions || []
-      
-      // Build recommendations based on conditions
-      const mockRecommendations: Recommendation[] = []
-      
-      if (conditions.includes('chronic_pain') || conditions.includes('inflammation')) {
-        mockRecommendations.push({
-          product_id: 'PAIN_001',
-          product_name: 'High THC Indica Formulation',
-          product_type: 'Recommended Profile',
-          thc_percent: 18,
-          cbd_percent: 2,
-          confidence_score: 0.92,
-          therapeutic_rationale: 'Indica-dominant strains with high myrcene content provide effective pain relief through CB1 receptor activation and anti-inflammatory terpene synergy. The sedative properties also help with pain-related sleep disturbances.',
-          terpene_profile: ['Myrcene', 'Beta-Caryophyllene', 'Linalool'],
-          clinical_studies: 47,
-          adjuvants: [
-            ADJUVANT_DETAILS['Magnesium Glycinate'],
-            ADJUVANT_DETAILS['Curcumin'],
-            ADJUVANT_DETAILS['Alpha-Lipoic Acid'],
-            ADJUVANT_DETAILS['Krill Oil'], // Marine kingdom
-            ADJUVANT_DETAILS['Boswellia'], // Plant kingdom
-          ],
-        })
-      }
-      
-      if (conditions.includes('anxiety') || conditions.includes('ptsd')) {
-        mockRecommendations.push({
-          product_id: 'ANXIETY_001',
-          product_name: 'CBD-Dominant Calming Blend',
-          product_type: 'Recommended Profile',
-          thc_percent: 2,
-          cbd_percent: 20,
-          confidence_score: 0.89,
-          therapeutic_rationale: 'CBD-dominant formulations reduce anxiety by modulating serotonin receptors (5-HT1A) without psychoactive effects. Linalool and limonene terpenes provide additional anxiolytic support.',
-          terpene_profile: ['Linalool', 'Limonene', 'Pinene'],
-          clinical_studies: 63,
-          adjuvants: [
-            ADJUVANT_DETAILS['L-Theanine'],
-            ADJUVANT_DETAILS['Ashwagandha'],
-            ADJUVANT_DETAILS['NAC'],
-            ADJUVANT_DETAILS['Reishi'], // Fungal kingdom
-            ADJUVANT_DETAILS['Holy Basil'], // Plant kingdom
-          ],
-        })
-      }
-      
-      if (conditions.includes('insomnia')) {
-        mockRecommendations.push({
-          product_id: 'SLEEP_001',
-          product_name: 'Nighttime Rest Formula',
-          product_type: 'Recommended Profile',
-          thc_percent: 15,
-          cbd_percent: 5,
-          confidence_score: 0.87,
-          therapeutic_rationale: 'CBN-rich indica strains with high myrcene promote deep, restorative sleep. The sedative terpene profile helps reduce sleep latency and improves sleep quality without morning grogginess.',
-          terpene_profile: ['Myrcene', 'Linalool', 'Caryophyllene'],
-          clinical_studies: 31,
-          adjuvants: [
-            ADJUVANT_DETAILS['Magnesium Glycinate'],
-            ADJUVANT_DETAILS['L-Theanine'],
-            ADJUVANT_DETAILS['Reishi'], // Fungal kingdom
-            ADJUVANT_DETAILS['Holy Basil'], // Plant kingdom
-          ],
-        })
+
+      // Production: call D1-backed recommendations endpoint
+      if (conditions.length > 0) {
+        try {
+          const allRecommendations: Recommendation[] = []
+          
+          // Fetch recommendation for EACH condition
+          for (const condition of conditions) {
+            try {
+              const resp = await dispensaryAPI.getRecommendations({ 
+                condition: condition.toUpperCase(), 
+                severity: 'moderate' 
+              })
+              const data = resp.data
+              
+              const rec: Recommendation = {
+                product_id: `${condition.toUpperCase()}_REC`,
+                product_name: `${data.condition} Evidence-based Recommendation`,
+                product_type: data.category || 'Evidence-backed recommendation',
+                thc_percent: 0,
+                cbd_percent: 0,
+                confidence_score: data.confidence_score,
+                therapeutic_rationale: data.disclaimer || undefined,
+                terpene_profile: undefined,
+                clinical_studies: data.evidence_summary?.total_studies,
+                adjuvants: undefined,
+                condition: data.condition,
+                category: data.category,
+                evidence_summary: data.evidence_summary,
+                recommended_cannabinoids: data.recommended_cannabinoids,
+                recommended_ratio: data.recommended_ratio,
+                delivery_methods: data.delivery_methods,
+                dosing_guidance: data.dosing_guidance,
+                citations: data.citations,
+                disclaimer: data.disclaimer,
+              }
+              
+              allRecommendations.push(rec)
+            } catch (err) {
+              console.error(`Failed to fetch recommendation for ${condition}:`, err)
+              // Continue with other conditions even if one fails
+            }
+          }
+          
+          if (allRecommendations.length > 0) {
+            onRecommendationsUpdate(allRecommendations)
+            setLoading(false)
+            return
+          }
+        } catch (err) {
+          console.error('D1 recommendations request failed:', err)
+        }
       }
 
-      if (conditions.includes('depression')) {
-        mockRecommendations.push({
-          product_id: 'MOOD_001',
-          product_name: 'Mood Elevation Sativa',
-          product_type: 'Recommended Profile',
-          thc_percent: 12,
-          cbd_percent: 8,
-          confidence_score: 0.85,
-          therapeutic_rationale: 'Balanced sativa strains with limonene provide mood elevation and motivation. The moderate THC with CBD prevents anxiety while promoting positive mental state.',
-          terpene_profile: ['Limonene', 'Pinene', 'Beta-Caryophyllene'],
-          clinical_studies: 28,
-          adjuvants: [
-            ADJUVANT_DETAILS['Omega-3'],
-            ADJUVANT_DETAILS['NAC'],
-            ADJUVANT_DETAILS['Phosphatidylserine'],
-            ADJUVANT_DETAILS['Lion Mane'], // Fungal kingdom
-            ADJUVANT_DETAILS['Rhodiola'], // Plant kingdom
-          ],
-        })
-      }
+      // Fallback to mock if API not available or failed
+      const fallback: Recommendation[] = [{
+        product_id: 'FALLBACK_001',
+        product_name: 'Evidence lookup unavailable',
+        product_type: 'Fallback',
+        thc_percent: 0,
+        cbd_percent: 0,
+        confidence_score: 0,
+        therapeutic_rationale: 'Unable to retrieve evidence-backed recommendations at this time.',
+      }]
 
-      if (conditions.includes('nausea')) {
-        mockRecommendations.push({
-          product_id: 'NAUSEA_001',
-          product_name: 'Digestive Support Blend',
-          product_type: 'Recommended Profile',
-          thc_percent: 15,
-          cbd_percent: 3,
-          confidence_score: 0.91,
-          therapeutic_rationale: 'THC activates CB1 receptors in the gut-brain axis, reducing nausea and stimulating appetite. Limonene provides additional anti-nausea effects.',
-          terpene_profile: ['Limonene', 'Myrcene', 'Caryophyllene'],
-          clinical_studies: 42,
-          adjuvants: [
-            ADJUVANT_DETAILS['Black Pepper Extract'],
-            ADJUVANT_DETAILS['Ginger'], // Plant kingdom
-            ADJUVANT_DETAILS['Reishi'], // Fungal kingdom
-            ADJUVANT_DETAILS['Turmeric'], // Plant kingdom
-          ],
-        })
-      }
-
-      if (conditions.includes('weight_management')) {
-        mockRecommendations.push({
-          product_id: 'METABOLIC_001',
-          product_name: 'THCV Metabolic Formula',
-          product_type: 'Recommended Profile',
-          thc_percent: 5,
-          cbd_percent: 10,
-          confidence_score: 0.88,
-          therapeutic_rationale: 'THCV (tetrahydrocannabivarin) is known as "diet weed" - it suppresses appetite unlike THC, improves insulin sensitivity, and provides energizing effects. Combined with CBD for metabolic support without munchies.',
-          terpene_profile: ['Limonene', 'Pinene', 'Beta-Caryophyllene'],
-          clinical_studies: 23,
-          adjuvants: [
-            ADJUVANT_DETAILS['Berberine'],
-            ADJUVANT_DETAILS['EGCG'],
-            ADJUVANT_DETAILS['Inositol'],
-            ADJUVANT_DETAILS['Cordyceps'], // Fungal kingdom
-            ADJUVANT_DETAILS['EGCG'], // Plant kingdom
-          ],
-        })
-      }
-
-      // Default if no conditions match
-      if (mockRecommendations.length === 0) {
-        mockRecommendations.push({
-          product_id: 'BALANCED_001',
-          product_name: 'Balanced Wellness Profile',
-          product_type: 'Recommended Profile',
-          thc_percent: 10,
-          cbd_percent: 10,
-          confidence_score: 0.80,
-          therapeutic_rationale: 'A balanced 1:1 THC:CBD ratio provides therapeutic benefits with minimal psychoactive intensity. Ideal for new users or those seeking general wellness support.',
-          terpene_profile: ['Limonene', 'Pinene', 'Myrcene'],
-          clinical_studies: 55,
-          adjuvants: [
-            ADJUVANT_DETAILS['L-Theanine'],
-            ADJUVANT_DETAILS['Omega-3'],
-            ADJUVANT_DETAILS['Reishi'], // Fungal kingdom
-            ADJUVANT_DETAILS['Turmeric'], // Plant kingdom
-          ],
-        })
-      }
-
-      onRecommendationsUpdate(mockRecommendations)
+      onRecommendationsUpdate(fallback)
     } catch (error) {
       console.error('Failed to fetch recommendations:', error)
     } finally {
@@ -524,12 +464,8 @@ export function ProductRecommendations({
       return
     }
 
-    if (customer.isSandbox) {
-      setSynergyError(null)
-      setSynergyLoading(false)
-      setSynergyData(SANDBOX_SYNERGY)
-      return
-    }
+    setSynergyLoading(true)
+    setSynergyError(null)
 
     const biomarkerPayload = Object.entries(customer.biomarkers || {})
       .reduce<Record<string, number>>((acc, [key, value]) => {
@@ -611,12 +547,6 @@ export function ProductRecommendations({
             </span>
           )}
         </div>
-
-        {customer.isSandbox && (
-          <p className="bg-amber-500/10 border border-amber-300/20 text-amber-200 text-xs rounded-lg px-3 py-2 mb-3">
-            Training preview: TS-PS-001 insights are simulated so you can practice without hitting production services.
-          </p>
-        )}
 
         {synergyError && (
           <div className="info-box-warning text-sm">
@@ -764,32 +694,118 @@ export function ProductRecommendations({
           <div className="mb-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-4">
             <div className="text-sm font-medium text-gray-600 mb-2">Cannabinoid Profile</div>
             <div className="flex gap-4">
-              <div className="flex-1">
-                <div className="flex justify-between text-xs text-gray-500 mb-1">
-                  <span className="font-semibold text-orange-600">THC</span>
-                  <span>{product.thc_percent}%</span>
+              {product.recommended_cannabinoids && product.recommended_cannabinoids.length > 0 ? (
+                <div className="w-full">
+                  <div className="text-xs text-gray-500 mb-2">Recommended Cannabinoids</div>
+                  <div className="flex flex-wrap gap-2">
+                    {product.recommended_cannabinoids.map((c, i) => (
+                      <div key={i} className="bg-white rounded-lg p-3 border border-gray-100 text-sm">
+                        <div className="font-semibold text-gray-800">{c.cannabinoid}</div>
+                        <div className="text-gray-500 text-xs">{c.evidence_count} studies • avg {Math.round((c.avg_confidence || 0) * 100)}%</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-                  <div 
-                    className="bg-gradient-to-r from-orange-400 to-red-500 h-full rounded-full transition-all duration-500"
-                    style={{ width: `${Math.min(product.thc_percent * 4, 100)}%` }}
-                  />
-                </div>
-              </div>
-              <div className="flex-1">
-                <div className="flex justify-between text-xs text-gray-500 mb-1">
-                  <span className="font-semibold text-blue-600">CBD</span>
-                  <span>{product.cbd_percent}%</span>
-                </div>
-                <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-                  <div 
-                    className="bg-gradient-to-r from-blue-400 to-purple-500 h-full rounded-full transition-all duration-500"
-                    style={{ width: `${Math.min(product.cbd_percent * 4, 100)}%` }}
-                  />
-                </div>
-              </div>
+              ) : (
+                <>
+                  <div className="flex-1">
+                    <div className="flex justify-between text-xs text-gray-500 mb-1">
+                      <span className="font-semibold text-orange-600">THC</span>
+                      <span>{product.thc_percent}%</span>
+                    </div>
+                    <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+                      <div 
+                        className="bg-gradient-to-r from-orange-400 to-red-500 h-full rounded-full transition-all duration-500"
+                        style={{ width: `${Math.min(product.thc_percent * 4, 100)}%` }}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex justify-between text-xs text-gray-500 mb-1">
+                      <span className="font-semibold text-blue-600">CBD</span>
+                      <span>{product.cbd_percent}%</span>
+                    </div>
+                    <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+                      <div 
+                        className="bg-gradient-to-r from-blue-400 to-purple-500 h-full rounded-full transition-all duration-500"
+                        style={{ width: `${Math.min(product.cbd_percent * 4, 100)}%` }}
+                      />
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           </div>
+
+          {/* Evidence Summary (from D1) */}
+          {product.evidence_summary && (
+            <div className="mb-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl p-4 border border-emerald-200">
+              <div className="flex items-center gap-2 font-bold text-emerald-800 mb-2">
+                <span>📊</span> Evidence Summary
+              </div>
+              <div className="text-emerald-700 text-sm">
+                <strong>{product.evidence_summary.total_studies}</strong> clinical studies • {product.evidence_summary.study_types.join(', ')}
+              </div>
+              <div className="text-emerald-600 text-sm mt-1">
+                Average confidence: <strong>{Math.round(product.evidence_summary.avg_confidence * 100)}%</strong>
+              </div>
+            </div>
+          )}
+
+          {/* Recommended Ratio / Delivery / Dosing */}
+          {(product.recommended_ratio || product.delivery_methods || product.dosing_guidance) && (
+            <div className="mb-4 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-4">
+              {product.recommended_ratio && (
+                <div className="text-sm text-gray-700 mb-2">
+                  <span className="font-semibold text-gray-600">Recommended Ratio:</span> <strong className="text-gray-900">{product.recommended_ratio}</strong>
+                </div>
+              )}
+              {product.delivery_methods && (
+                <div className="text-sm text-gray-700 mb-2">
+                  <span className="font-semibold text-gray-600">Delivery:</span> {product.delivery_methods.join(', ')}
+                </div>
+              )}
+              {product.dosing_guidance && (
+                <div className="text-sm text-gray-700">
+                  <span className="font-semibold text-gray-600">Dosing:</span> {typeof product.dosing_guidance === 'string' ? product.dosing_guidance : (product.dosing_guidance as DosingGuidance).primary}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Citations */}
+          {product.citations && product.citations.length > 0 && (
+            <div className="mb-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
+              <div className="flex items-center gap-2 font-bold text-blue-800 mb-3">
+                <span>📚</span> Key Citations
+              </div>
+              <ul className="space-y-3">
+                {product.citations.slice(0,5).map((c, i) => (
+                  <li key={c.study_id || i} className="bg-white rounded-lg p-3 border border-blue-100">
+                    <div className="font-semibold text-gray-800 text-sm">{c.citation}</div>
+                    <div className="text-xs text-gray-500 mt-1">
+                      {c.study_type} • Confidence <strong className="text-blue-600">{Math.round((c.confidence_score || 0) * 100)}%</strong>
+                    </div>
+                    {c.key_findings && c.key_findings.length > 0 && (
+                      <div className="text-xs text-gray-600 mt-2 pl-3 border-l-2 border-blue-200">
+                        {c.key_findings.slice(0,2).join(' • ')}
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* Disclaimer (from D1) */}
+          {product.disclaimer && (
+            <div className="mb-4 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-xl p-4 border border-amber-200">
+              <div className="flex items-center gap-2 font-bold text-amber-800 mb-2">
+                <span>⚠️</span> Important Information
+              </div>
+              <p className="text-amber-700 text-sm leading-relaxed">{product.disclaimer}</p>
+            </div>
+          )}
 
           {/* Recommended Terpenes */}
           {product.terpene_profile && (
@@ -841,7 +857,7 @@ export function ProductRecommendations({
                 These supplements can enhance therapeutic outcomes when used alongside cannabis:
               </p>
               <div className="space-y-2">
-                {product.adjuvants.map((adj, i) => (
+                  {product.adjuvants.map((adj, i) => (
                   <div key={i}>
                     <button
                       onClick={() => setExpandedAdjuvant(
@@ -892,6 +908,8 @@ export function ProductRecommendations({
               </div>
             </div>
           )}
+ 
+          
         </div>
         ))}
       </div>

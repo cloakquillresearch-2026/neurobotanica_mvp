@@ -11,3 +11,8 @@ enabled = false
 [[routes]]
 pattern = "budtender.neuro-botanica.com/api/*"
 zone_id = "168b2fbf1b35c58643dea024628f42ae"
+
+[[d1_databases]]
+binding = "neurobotanica_clinical_evidence"
+database_name = "neurobotanica-clinical-evidence"
+database_id = "20d71e89-bb5d-4cb4-a58d-b87da6b087cf"

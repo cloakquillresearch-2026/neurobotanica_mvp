@@ -201,7 +201,8 @@ export default function BudtenderAssistant() {
   }, [activeGuidance])
 
   const enterSandbox = useCallback(() => {
-    setCustomer({ ...SANDBOX_CUSTOMER })
+    const { isSandbox, ...sandboxCustomerWithoutFlag } = SANDBOX_CUSTOMER
+    setCustomer(sandboxCustomerWithoutFlag)
     setRecommendations([])
     setIsSandboxMode(true)
     if (typeof window !== 'undefined') {
@@ -229,8 +230,7 @@ export default function BudtenderAssistant() {
     const querySandbox = Array.isArray(sandboxQueryParam)
       ? sandboxQueryParam.some((value) => value === '1' || value === 'true')
       : sandboxQueryParam === '1' || sandboxQueryParam === 'true'
-    const storedSandbox = typeof window !== 'undefined' && window.localStorage.getItem(SANDBOX_FLAG) === '1'
-    if ((querySandbox || storedSandbox) && !isSandboxMode) {
+    if (querySandbox && !isSandboxMode) {
       enterSandbox()
       if (querySandbox) {
         router.replace('/', undefined, { shallow: true })
@@ -435,6 +435,7 @@ export default function BudtenderAssistant() {
                   </div>
                 )}
               </section>
+ 
               {/* Customer Search */}
               <section id="consultation" aria-labelledby="consultation-heading" className="glass-card p-6">
                 <div className="flex items-center gap-3 mb-5">
