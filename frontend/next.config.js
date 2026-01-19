@@ -1,10 +1,12 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-  },
+  ...(process.env.NODE_ENV === 'production' && {
+    output: 'export',
+    trailingSlash: true,
+    images: {
+      unoptimized: true,
+    },
+  }),
   env: {
     API_URL: process.env.NODE_ENV === 'production'
       ? 'https://api.neurobotanica.com'

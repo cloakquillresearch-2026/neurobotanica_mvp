@@ -30,6 +30,10 @@ from backend.models.database import get_db
 from backend.services.engine_loader import load_inflammatory_engine
 from backend.services.adjuvant_optimizer import get_adjuvant_optimizer, PatientProfile as AdjuvantPatientProfile
 from backend.dependencies.auth import get_current_user, User
+from backend.services.mapping import get_cannabinoid_scores_for_condition
+from backend.models.database import SessionLocal
+from backend.models.study import ClinicalStudy
+from backend.services.confidence import compute_confidence_for_study, compute_overall_confidence
 
 logger = logging.getLogger(__name__)
 router = APIRouter(tags=["Dispensary"])
@@ -193,6 +197,7 @@ class ProductRecommendation(BaseModel):
     why_recommended: str
     expected_benefits: List[str]
     dosage_guidance: DosageGuidance
+    confidence: float = Field(default=0.0, ge=0.0, le=1.0, description="Confidence score based on clinical evidence")
     adjuvant_optimization: Optional[AdjuvantOptimization] = None
     contraindications: Optional[str] = None
 
@@ -272,13 +277,16 @@ class DispensaryRecommendationEngine:
         "migraine": {"THC": 0.7, "CBD": 0.65, "CBG": 0.5},
         "arthritis": {"CBD": 0.75, "THC": 0.7, "CBG": 0.6},
         "appetite": {"THC": 0.85, "CBG": 0.6, "CBD": 0.3},
+        "muscle_spasms": {"THC": 0.8, "CBD": 0.7, "CBG": 0.6, "CBN": 0.5},
+        "seizures": {"CBD": 0.95, "CBDV": 0.8, "THC": 0.3},
+        "weight_management": {"THC": 0.7, "CBG": 0.6, "CBD": 0.5},
     }
     
     # Terpene-condition correlations
     TERPENE_EFFECTS: Dict[str, Dict[str, Any]] = {
         "myrcene": {
             "effects": ["sedative", "muscle_relaxant", "anti_inflammatory"],
-            "conditions": ["insomnia", "chronic_pain", "inflammation"],
+            "conditions": ["insomnia", "chronic_pain", "inflammation", "muscle_spasms"],
             "anxiety_risk": 0.1,
         },
         "limonene": {
@@ -293,7 +301,7 @@ class DispensaryRecommendationEngine:
         },
         "linalool": {
             "effects": ["anxiolytic", "sedative", "anticonvulsant"],
-            "conditions": ["anxiety", "insomnia", "epilepsy"],
+            "conditions": ["anxiety", "insomnia", "epilepsy", "seizures"],
             "anxiety_risk": 0.0,
         },
         "pinene": {
@@ -387,20 +395,21 @@ class DispensaryRecommendationEngine:
         warnings = []
         
         # 1. Cannabinoid-condition match (0-40 points)
-        if primary_condition and primary_condition in self.CONDITION_EFFICACY:
-            efficacy = self.CONDITION_EFFICACY[primary_condition]
-            
+        if primary_condition:
+            # Prefer the curated mapping file; fall back to built-in table
+            efficacy = get_cannabinoid_scores_for_condition(primary_condition) or self.CONDITION_EFFICACY.get(primary_condition, {})
+
             # THC contribution
             if product.thc_percent > 0:
                 thc_score = efficacy.get("THC", 0.5) * min(product.thc_percent / 25, 1) * 20
                 score += thc_score
-            
+
             # CBD contribution
             if product.cbd_percent > 0:
                 cbd_score = efficacy.get("CBD", 0.5) * min(product.cbd_percent / 25, 1) * 20
                 score += cbd_score
                 reasons.append(f"CBD beneficial for {primary_condition}")
-            
+
             # CBG/CBN contribution
             if product.cbg_percent > 0:
                 score += efficacy.get("CBG", 0.4) * 5
@@ -578,6 +587,9 @@ class DispensaryRecommendationEngine:
         if warnings:
             contraindications = ". ".join(warnings)
         
+        # Compute per-recommendation confidence using clinical studies
+        conf = self._compute_product_confidence(product, primary_condition)
+
         return ProductRecommendation(
             rank=rank,
             time_of_day=time_of_day,
@@ -589,9 +601,50 @@ class DispensaryRecommendationEngine:
             why_recommended=why,
             expected_benefits=benefits,
             dosage_guidance=dosage,
+            confidence=round(conf, 2),
             adjuvant_optimization=adjuvant_opt,
             contraindications=contraindications,
         )
+
+    def _compute_product_confidence(self, product: ProductInput, primary_condition: Optional[str]) -> float:
+        """Compute a confidence score for a product recommendation based on matching clinical studies.
+
+        Strategy:
+        - Identify the prominent cannabinoids in the product (THC, CBD, CBG, CBN, etc.)
+        - Query the `clinical_studies` table for studies matching the `primary_condition` and those cannabinoids
+        - Compute per-study confidence via `compute_confidence_for_study` and average
+        - Fallback to `compute_overall_confidence(primary_condition)` when no specific studies found
+        """
+        try:
+            if not primary_condition:
+                return compute_overall_confidence()
+
+            # Determine present cannabinoids
+            present = []
+            if product.thc_percent and product.thc_percent > 0:
+                present.append("THC")
+            if product.cbd_percent and product.cbd_percent > 0:
+                present.append("CBD")
+            if product.cbg_percent and product.cbg_percent > 0:
+                present.append("CBG")
+            if product.cbn_percent and product.cbn_percent > 0:
+                present.append("CBN")
+
+            db = SessionLocal()
+            try:
+                query = db.query(ClinicalStudy).filter(ClinicalStudy.condition == primary_condition.upper())
+                if present:
+                    query = query.filter(ClinicalStudy.cannabinoid.in_(present))
+                studies = query.limit(200).all()
+                if not studies:
+                    return compute_overall_confidence(primary_condition)
+
+                weights = [compute_confidence_for_study(s) for s in studies]
+                return sum(weights) / len(weights)
+            finally:
+                db.close()
+        except Exception:
+            return compute_overall_confidence(primary_condition)
     
     def _get_dosage_guidance(
         self, product: ProductInput, profile: CustomerProfileInput

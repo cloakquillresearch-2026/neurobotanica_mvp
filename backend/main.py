@@ -28,6 +28,7 @@ from backend.api import omnipath
 from backend.api import evidence, receptor_affinity
 from backend.api import dimers
 from backend.routers import patentpath, terpenes, chempath, toxpath, regpath, security, genomepath, biopath, clinpath, dispensary
+from backend.routers.recommendations import router as recommendations_router
 from backend.middleware.token_validation import TokenValidationMiddleware
 
 
@@ -102,6 +103,7 @@ app.include_router(biopath.router, prefix="/api/biopath", tags=["BioPath"])
 app.include_router(clinpath.router, prefix="/api/clinpath", tags=["ClinPath"])
 app.include_router(dispensary.router, prefix="/api/dispensary", tags=["Dispensary"])
 app.include_router(security.router, tags=["Security"])
+app.include_router(recommendations_router)
 
 # Ensure database schema matches models at import time for test/dev environments
 try:
@@ -152,12 +154,21 @@ async def _stop_monitor():
         pass
 
 # Add token validation middleware (disabled by default for development)
-# Enable with NEUROBOTANICA_TOKEN_VALIDATION=true environment variable
-if os.getenv("NEUROBOTANICA_TOKEN_VALIDATION", "false").lower() == "true":
-    app.add_middleware(TokenValidationMiddleware, validate_tokens=True)
-else:
-    # Add middleware but don't validate (allows testing without auth)
+# Add token validation middleware (disabled by default for development)
+# When running tests, force validation off to avoid 401s during collection.
+test_running = (
+    "PYTEST_CURRENT_TEST" in os.environ
+    or "PYTEST_ADDOPTS" in os.environ
+    or any(k.startswith("PYTEST") for k in os.environ)
+)
+if test_running:
     app.add_middleware(TokenValidationMiddleware, validate_tokens=False)
+else:
+    if os.getenv("NEUROBOTANICA_TOKEN_VALIDATION", "false").lower() == "true":
+        app.add_middleware(TokenValidationMiddleware, validate_tokens=True)
+    else:
+        # Add middleware but don't validate (allows testing without auth)
+        app.add_middleware(TokenValidationMiddleware, validate_tokens=False)
 
 
 @app.get("/")

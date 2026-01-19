@@ -152,34 +152,81 @@ const NAV_LINKS = [
 
 const HEADER_METRICS = [
   { label: 'Clinical Studies', value: '505+', accent: 'text-emerald-300' },
-  { label: 'Adjuvants', value: '9', accent: 'text-purple-300' },
+  { label: 'Adjuvants', value: '15', accent: 'text-purple-300' },
   { label: 'Compounds', value: '63', accent: 'text-amber-300' }
 ]
 
 const SANDBOX_FLAG = 'nb_sandbox_mode'
 
-function SectionSkeleton({ lines = 4, hasBadge = false }: { lines?: number; hasBadge?: boolean }) {
+function OrientationPrompt() {
+  const [isComplete, setIsComplete] = useState<boolean | null>(null);
+  
+  // Check completion status (client-side only)
+  useEffect(() => {
+    const completed = localStorage.getItem('orientation_completed') === 'true';
+    setIsComplete(completed);
+  }, []);
+  
+  // Don't show anything during SSR
+  if (isComplete === null) return null;
+  
+  // Don't show if orientation is complete
+  if (isComplete) return null;
+  
   return (
-    <div className="glass-card p-6 animate-pulse" aria-hidden="true">
-      <div className="flex items-center gap-3 mb-4">
-        <div className="w-10 h-10 rounded-full bg-white/10" />
-        <div className="h-4 w-32 bg-white/20 rounded" />
-        {hasBadge && <div className="ml-auto h-5 w-20 bg-white/10 rounded-full" />}
+    <div className="bg-gradient-to-r from-purple-600 to-blue-600 border-2 border-purple-400 rounded-lg p-6 mb-6">
+      <div className="flex items-start gap-4">
+        <div className="flex-shrink-0">
+          <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        
+        <div className="flex-1">
+          <h3 className="text-2xl font-bold text-white mb-2">
+            Complete Orientation First
+          </h3>
+          <p className="text-white/90 mb-4">
+            This professional certification tool requires completion of a 15-minute orientation covering evidence-based recommendations, biomarker interpretation, and Nevada compliance requirements.
+          </p>
+          
+          <Link 
+            href="/orientation"
+            className="inline-flex items-center gap-2 bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+            Start Orientation
+          </Link>
+        </div>
       </div>
-      {Array.from({ length: lines }).map((_, idx) => (
-        <div key={idx} className="h-3 bg-white/10 rounded mb-3" />
-      ))}
     </div>
-  )
+  );
 }
 
 export default function BudtenderAssistant() {
+  // ✅ MOVE ALL useState HOOKS TO THE TOP (before any returns)
+  const [isHydrated, setIsHydrated] = useState(false)
   const [customer, setCustomer] = useState<CustomerProfileData | null>(null)
   const [recommendations, setRecommendations] = useState<Recommendation[]>([])
   const [isSandboxMode, setIsSandboxMode] = useState(false)
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
-  const [isHydrating, setIsHydrating] = useState(true)
+  const [customerSearchKey, setCustomerSearchKey] = useState(0)
   const router = useRouter()
+
+  // Mark as hydrated after first render
+  useEffect(() => {
+    setIsHydrated(true)
+  }, [])
+
+  // Check orientation completion status and redirect if needed (only after hydration)
+  useEffect(() => {
+    if (!isHydrated) return
+
+    // NO automatic redirects - just check status
+    // OrientationPrompt component will handle the UI
+  }, [isHydrated])
 
   // Dynamic guidance based on selected conditions
   const activeGuidance = useMemo<ConditionGuidance[]>(() => {
@@ -201,7 +248,7 @@ export default function BudtenderAssistant() {
   }, [activeGuidance])
 
   const enterSandbox = useCallback(() => {
-    const { isSandbox, ...sandboxCustomerWithoutFlag } = SANDBOX_CUSTOMER
+    const { ...sandboxCustomerWithoutFlag } = SANDBOX_CUSTOMER
     setCustomer(sandboxCustomerWithoutFlag)
     setRecommendations([])
     setIsSandboxMode(true)
@@ -217,11 +264,6 @@ export default function BudtenderAssistant() {
     if (typeof window !== 'undefined') {
       window.localStorage.removeItem(SANDBOX_FLAG)
     }
-  }, [])
-
-  useEffect(() => {
-    const timer = window.setTimeout(() => setIsHydrating(false), 650)
-    return () => window.clearTimeout(timer)
   }, [])
 
   useEffect(() => {
@@ -250,6 +292,20 @@ export default function BudtenderAssistant() {
     }
   }, [isMobileNavOpen])
 
+  // Show loading state while checking orientation or during SSR
+  if (!isHydrated) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="w-8 h-8 border-4 border-emerald-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+          <p className="text-white/70">
+            {!isHydrated ? 'Loading NeuroBotanica...' : 'Checking certification status...'}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   const closeMobileNav = () => setIsMobileNavOpen(false)
 
   return (
@@ -264,6 +320,9 @@ export default function BudtenderAssistant() {
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
+
+      {/* ADD THIS LINE - Orientation prompt at the top */}
+      <OrientationPrompt />
 
       {/* Header */}
       <header className="bg-black/30 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
@@ -382,21 +441,8 @@ export default function BudtenderAssistant() {
       )}
 
       {/* Main Content */}
-      <main id="main-content" className="container mx-auto px-4 py-6" aria-busy={isHydrating}>
-        {isHydrating ? (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="space-y-6">
-              <SectionSkeleton lines={5} />
-              <SectionSkeleton lines={6} />
-              <SectionSkeleton lines={4} />
-            </div>
-            <div className="space-y-6">
-              <SectionSkeleton lines={7} hasBadge />
-              <SectionSkeleton lines={5} />
-            </div>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <main id="main-content" className="container mx-auto px-4 py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           
             {/* Left Column */}
             <div className="space-y-6">
@@ -409,6 +455,25 @@ export default function BudtenderAssistant() {
                       <p className="text-white/70 text-sm">Any edits stay on this tablet only. Use this mode to rehearse without touching production data.</p>
                     </div>
                     <div className="flex gap-3 flex-wrap">
+                      <button
+                        onClick={() => {
+                          // Clear current customer data
+                          setCustomer(null);
+                          setRecommendations([]);
+                          setCustomerSearchKey(prev => prev + 1);
+                          
+                          // If in sandbox mode, generate new mock patient
+                          if (isSandboxMode) {
+                            enterSandbox();
+                          }
+                        }}
+                        className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        </svg>
+                        New Client
+                      </button>
                       <button type="button" className="btn-secondary" onClick={exitSandbox}>
                         Exit Sandbox
                       </button>
@@ -421,16 +486,32 @@ export default function BudtenderAssistant() {
                   <div className="flex flex-col gap-3">
                     <div>
                       <p className="text-sm uppercase tracking-wide text-white/60">Need practice?</p>
-                      <p className="text-white text-lg font-bold">Launch sandbox mode</p>
-                      <p className="text-white/70 text-sm">Loads a mock patient with preset biomarkers so you can rehearse the flow.</p>
+                      <p className="text-white text-lg font-bold">Practice Mode</p>
+                      <p className="text-white/70 text-sm">Try the recommendation tool with example patients (no real data).</p>
                     </div>
                     <div className="flex gap-3 flex-wrap">
-                      <button type="button" className="btn-primary" onClick={enterSandbox}>
-                        Start Sandbox Session
+                      <button
+                        onClick={() => {
+                          // Clear current customer data
+                          setCustomer(null);
+                          setRecommendations([]);
+                          setCustomerSearchKey(prev => prev + 1);
+                          
+                          // If in sandbox mode, generate new mock patient
+                          if (isSandboxMode) {
+                            enterSandbox();
+                          }
+                        }}
+                        className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        </svg>
+                        New Client
                       </button>
-                      <Link href="/orientation" className="text-sm text-white/80 underline-offset-4 hover:underline">
-                        Orientation lessons
-                      </Link>
+                      <button type="button" className="btn-primary" onClick={enterSandbox}>
+                        Start Practice Session
+                      </button>
                     </div>
                   </div>
                 )}
@@ -444,7 +525,7 @@ export default function BudtenderAssistant() {
                   </div>
                   <h2 id="consultation-heading" className="text-xl font-bold text-white">Customer Consultation</h2>
                 </div>
-                <CustomerSearch onCustomerSelect={setCustomer} />
+                <CustomerSearch key={customerSearchKey} onCustomerSelect={setCustomer} />
               </section>
 
               {/* Customer Profile */}
@@ -624,7 +705,6 @@ export default function BudtenderAssistant() {
               </section>
             </div>
           </div>
-        )}
       </main>
 
       {/* Footer */}

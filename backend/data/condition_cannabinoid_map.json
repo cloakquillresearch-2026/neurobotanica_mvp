@@ -1,0 +1,10 @@
+{
+  "inflammation": {"CBD": 0.85, "CBG": 0.75, "THC": 0.6, "CBC": 0.7},
+  "chronic_pain": {"THC": 0.8, "CBD": 0.7, "CBG": 0.6},
+  "anxiety": {"CBD": 0.9, "CBG": 0.6, "THC": 0.3},
+  "insomnia": {"CBN": 0.9, "THC": 0.7, "CBD": 0.4},
+  "epilepsy": {"CBD": 0.95, "CBDV": 0.8},
+  "muscle_spasms": {"THC": 0.8, "CBD": 0.7, "CBG": 0.6},
+  "seizures": {"CBD": 0.95, "CBDV": 0.8, "THC": 0.3},
+  "weight_management": {"THC": 0.7, "CBG": 0.6, "CBD": 0.5}
+}

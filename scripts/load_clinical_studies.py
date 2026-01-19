@@ -76,7 +76,11 @@ def is_fda_pivotal(study_data: dict) -> bool:
 
 def extract_fda_drug(study_data: dict) -> str:
     """Extract FDA drug reference from study data."""
-    cannabinoid = study_data.get("intervention", {}).get("cannabinoid", "") or ""
+    intervention = study_data.get("intervention", {})
+    if isinstance(intervention, str):
+        cannabinoid = intervention
+    else:
+        cannabinoid = intervention.get("cannabinoid", "") or ""
     title = study_data.get("study_title", "")
     relevance = study_data.get("regulatory_relevance", "")
     
@@ -136,9 +140,19 @@ def load_studies(json_path: str, db: Session) -> int:
         
         # Extract intervention details
         intervention = study_data.get("intervention", {})
+        # Normalize intervention when it's a simple string in some records
+        if isinstance(intervention, str):
+            intervention = {"cannabinoid": intervention}
         outcomes = study_data.get("outcomes", {})
+        # Normalize possible list values to dict for consistency
+        if not isinstance(outcomes, dict):
+            outcomes = {"results": outcomes} if outcomes else {}
         safety = study_data.get("safety", {})
+        if not isinstance(safety, dict):
+            safety = {}
         quality = study_data.get("quality_metrics", {})
+        if not isinstance(quality, dict):
+            quality = {}
         
         # Extract condition from study_id if not present (e.g., DEPRESSION_RCT_001 -> DEPRESSION)
         condition = study_data.get("condition")

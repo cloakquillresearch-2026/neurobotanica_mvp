@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Budtender D1 Test</title>
+    <style>
+      body{font-family:Inter,Arial;background:#0f172a;color:#fff;padding:30px}
+      .card{background:#0b1220;border:1px solid #1f2937;padding:20px;border-radius:12px;max-width:900px;margin:0 auto}
+      .badge{display:inline-block;background:#052e2e;padding:6px 10px;border-radius:8px;margin-left:10px}
+      .section{margin-top:14px}
+      .cite{background:#071018;padding:8px;border-radius:8px;margin-top:8px}
+      pre{white-space:pre-wrap}
+      button{background:#059669;border:none;padding:10px 14px;border-radius:8px;color:white;font-weight:600}
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Budtender D1 Sample</h1>
+      <p>Test fetching recommendation for <strong>ANXIETY</strong></p>
+      <div style="display:flex;gap:10px;margin-top:10px">
+        <select id="condition"><option>ANXIETY</option><option>CHRONIC PAIN</option></select>
+        <select id="severity"><option value="moderate">moderate</option><option value="mild">mild</option><option value="severe">severe</option></select>
+        <button id="go">Fetch Recommendation</button>
+      </div>
+
+      <div id="result" class="section"></div>
+    </div>
+
+    <script>
+      async function fetchRec() {
+        const condition = document.getElementById('condition').value
+        const severity = document.getElementById('severity').value
+        const result = document.getElementById('result')
+        result.innerHTML = '<p class="badge">Loading…</p>'
+        try {
+          const resp = await fetch('https://budtender.neuro-botanica.com/api/recommendations', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ condition, severity })
+          })
+          const data = await resp.json()
+          // Render
+          result.innerHTML = `
+            <h2>${data.condition} <span class="badge">${Math.round((data.confidence_score||0)*100)}% confidence</span></h2>
+            <div class="section"><strong>Evidence:</strong> Based on <strong>${data.evidence_summary?.total_studies || 0}</strong> studies (${(data.evidence_summary?.study_types || []).join(', ')}) — avg confidence ${Math.round((data.evidence_summary?.avg_confidence||0)*100)}%</div>
+            <div class="section"><strong>Recommended Cannabinoids:</strong> ${(data.recommended_cannabinoids||[]).map(c=>c.cannabinoid+` (${c.evidence_count} studies)`).join(', ')}</div>
+            <div class="section"><strong>Recommended ratio:</strong> ${data.recommended_ratio||'—'}</div>
+            <div class="section"><strong>Delivery:</strong> ${(data.delivery_methods||[]).join(', ')}</div>
+            <div class="section"><strong>Dosing:</strong> ${data.dosing_guidance||'—'}</div>
+            <div class="section"><strong>Citations:</strong>
+              ${(data.citations||[]).slice(0,5).map(c=>`<div class="cite"><div><strong>${c.citation}</strong></div><div class="text-xs">${c.study_type} • Confidence ${Math.round((c.confidence_score||0)*100)}%</div><div class="text-sm">${(c.key_findings||[]).slice(0,2).join('; ')}</div></div>`).join('')}
+            </div>
+            <div class="section" style="opacity:.8;font-size:.9em;margin-top:8px">${data.disclaimer||''}</div>
+          `
+        } catch(e) {
+          result.innerHTML = '<div class="section">Error fetching recommendation: '+e.message+'</div>'
+        }
+      }
+      document.getElementById('go').addEventListener('click', fetchRec)
+    </script>
+  </body>
+</html>

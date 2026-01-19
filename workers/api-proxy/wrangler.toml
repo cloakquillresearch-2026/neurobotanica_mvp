@@ -4,13 +4,14 @@ compatibility_date = "2024-01-01"
 
 [vars]
 PLATFORM_PAGES_URL = "https://neurobotanica-mvp.pages.dev"
+# API_BASE_URL removed - no longer proxying to Railway
 
 [observability]
 enabled = false
 
 [[routes]]
 pattern = "budtender.neuro-botanica.com/api/*"
-zone_id = "168b2fbf1b35c58643dea024628f42ae"
+zone_name = "neuro-botanica.com"
 
 [[d1_databases]]
 binding = "neurobotanica_clinical_evidence"

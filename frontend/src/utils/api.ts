@@ -28,7 +28,7 @@ export const dispensaryAPI = {
   createTransaction: (transaction: TransactionPayload) => api.post('/api/dispensary/transaction', transaction),
 
   // Recommendations
-  getRecommendations: (data: Record<string, unknown>) => api.post('/api/dispensary/recommend', data),
+  getRecommendations: (data: Record<string, unknown>) => api.post('/api/recommendations', data),
   predictInflammatorySynergy: (payload: InflammatorySynergyPayload) =>
     api.post('/api/dispensary/inflammatory-synergy', payload),
 
