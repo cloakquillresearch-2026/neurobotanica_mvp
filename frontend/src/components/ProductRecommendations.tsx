@@ -89,6 +89,8 @@ const CONDITION_OPTIONS = [
   { value: 'muscle_spasms', label: 'Muscle Spasms', emoji: '💪' },
   { value: 'seizures', label: 'Seizures', emoji: '⚡' },
 ]
+
+const TERPENE_INFO: Record<string, { emoji: string; color: string; effect: string; description: string }> = {
   'Myrcene': { emoji: '🥭', color: 'terpene-myrcene', effect: 'Relaxation', description: 'Enhances THC absorption, promotes sedation' },
   'Limonene': { emoji: '🍋', color: 'terpene-limonene', effect: 'Mood', description: 'Elevates mood, relieves stress and anxiety' },
   'Pinene': { emoji: '🌲', color: 'terpene-pinene', effect: 'Focus', description: 'Improves alertness, counteracts THC memory effects' },
@@ -435,17 +437,20 @@ export function ProductRecommendations({
                 <p className="text-white/60 text-sm">All conditions displayed below</p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {selectedConditions.map((condition, index) => {
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              {selectedConditions.map((condition) => {
                 const conditionOption = CONDITION_OPTIONS.find(opt => opt.value === condition)
                 return (
-                  <span
+                  <div
                     key={condition}
-                    className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 px-3 py-1 rounded-full text-sm text-emerald-200"
+                    className="bg-emerald-500/20 border border-emerald-500/30 p-3 rounded-lg text-sm text-emerald-200"
                   >
-                    <span>{conditionOption?.emoji || '🌿'}</span>
-                    <span>{conditionOption?.label || condition}</span>
-                  </span>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span>{conditionOption?.emoji || '🌿'}</span>
+                      <span className="font-semibold">{conditionOption?.label || condition}</span>
+                    </div>
+                    <p className="text-emerald-200/80 text-xs">Condition selected for analysis</p>
+                  </div>
                 )
               })}
             </div>

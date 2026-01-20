@@ -59,14 +59,41 @@ export const adjuvantAPI = {
 const NEUROBOTANICA_API_BASE = 'https://neurobotanica-api.contessapetrini.workers.dev'
 
 export const neurobotanicaAPI = {
-  checkHealth: () => fetch(`${NEUROBOTANICA_API_BASE}/api/neurobotanica/health`).then(res => res.json()),
+  checkHealth: async () => {
+    try {
+      const response = await fetch(`${NEUROBOTANICA_API_BASE}/api/neurobotanica/health`);
+      if (!response.ok) {
+        throw new Error(`Health check failed: ${response.status} ${response.statusText}`);
+      }
+      return await response.json();
+    } catch (error) {
+      console.error('NeuroBotanica health check failed:', error);
+      throw new Error('Unable to connect to NeuroBotanica API. Please check your internet connection.');
+    }
+  },
   
-  analyzeCompounds: (compoundIds: string[], demographics: Record<string, unknown> = {}, tier: string = 'computational_only', plantId?: string) =>
-    fetch(`${NEUROBOTANICA_API_BASE}/api/neurobotanica/analyze`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ compound_ids: compoundIds, demographics, customer_tier: tier, plant_id: plantId })
-    }).then(res => res.json()),
+  analyzeCompounds: async (compoundIds: string[], demographics: Record<string, unknown> = {}, tier: string = 'computational_only', plantId?: string) => {
+    try {
+      const response = await fetch(`${NEUROBOTANICA_API_BASE}/api/neurobotanica/analyze`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ compound_ids: compoundIds, demographics, customer_tier: tier, plant_id: plantId })
+      });
+      
+      if (!response.ok) {
+        const errorText = await response.text();
+        throw new Error(`Analysis failed: ${response.status} ${response.statusText} - ${errorText}`);
+      }
+      
+      return await response.json();
+    } catch (error) {
+      console.error('NeuroBotanica analysis failed:', error);
+      if (error instanceof TypeError && error.message.includes('fetch')) {
+        throw new Error('Network error - unable to connect to NeuroBotanica API. Please check your internet connection.');
+      }
+      throw error;
+    }
+  },
 }
 
 // General API utilities

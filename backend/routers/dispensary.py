@@ -1283,3 +1283,58 @@ async def get_recommendations(
     except Exception as e:
         logger.error(f"Recommendations failed for condition {request.get('condition')}: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to generate recommendations: {str(e)}")
+
+
+@router.get("/recommend")
+async def get_recommendations_simple(
+    customer_id: str = "test",
+    conditions: str = "anxiety",
+    db: Session = Depends(get_db),
+) -> Dict[str, Any]:
+    """
+    Simple GET endpoint for testing recommendations.
+    
+    Query parameters:
+    - customer_id: Customer identifier
+    - conditions: Comma-separated list of conditions
+    """
+    try:
+        condition_list = [c.strip().lower() for c in conditions.split(",")]
+        
+        # Get recommendations for first condition
+        primary_condition = condition_list[0]
+        condition_data = get_cannabinoid_scores_for_condition(primary_condition)
+        
+        if not condition_data:
+            # Fallback to static data
+            static_data = {
+                "anxiety": {"CBD": 0.9, "CBG": 0.6, "THC": 0.3},
+                "chronic_pain": {"THC": 0.8, "CBD": 0.7, "CBG": 0.6},
+                "insomnia": {"CBN": 0.85, "THC": 0.7, "CBD": 0.5},
+            }
+            condition_data = static_data.get(primary_condition, {"CBD": 0.8})
+        
+        # Build simple response
+        recommended_cannabinoids = []
+        for cannabinoid, score in list(condition_data.items())[:3]:  # Top 3
+            if score > 0.5:
+                recommended_cannabinoids.append({
+                    "cannabinoid": cannabinoid,
+                    "score": score,
+                    "evidence_count": 50,  # Mock
+                    "confidence": score
+                })
+        
+        return {
+            "recommendation_id": f"test_{customer_id}",
+            "customer_id": customer_id,
+            "conditions": condition_list,
+            "recommendations": recommended_cannabinoids,
+            "timestamp": datetime.utcnow().isoformat()
+        }
+        
+    except Exception as e:
+        logger.error(f"Simple recommendations failed: {e}")
+        import traceback
+        logger.error(traceback.format_exc())
+        raise HTTPException(status_code=500, detail=f"Failed to generate recommendations: {str(e)}")
