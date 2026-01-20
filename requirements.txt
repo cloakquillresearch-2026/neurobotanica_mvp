@@ -14,7 +14,7 @@ pydantic-settings>=2.0.0     # Settings management
 # ============================================
 sqlalchemy>=2.0.23           # ORM and database toolkit
 alembic>=1.13.0              # Database migrations
-# psycopg2-binary>=2.9.9     # PostgreSQL (uncomment for production)
+psycopg2-binary>=2.9.9     # PostgreSQL (uncomment for production)
 
 # ============================================
 # CORE CHEMISTRY & MOLECULAR ANALYSIS

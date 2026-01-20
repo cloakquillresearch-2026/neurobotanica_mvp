@@ -1,0 +1,11 @@
+name = "neurobotanica-api"
+main = "src/api/neurobotanica.js"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "neurobotanica"
+database_id = "your-database-id"  # Replace with actual D1 database ID
+
+[vars]
+ENVIRONMENT = "production"

@@ -1,82 +1,104 @@
 # NeuroBotanica 2026 Roadmap & Patent Preparation Plan
 
-**Date:** December 31, 2025  
-**Version:** 1.0  
-**Status:** MVP Complete, Patent Protected  
+**Date:** January 19, 2026 (Updated)  
+**Version:** 1.1  
+**Status:** MVP In Development, Patent Protected  
 **Next Filing Deadline:** March 1, 2026
 
 ---
 
 ## Executive Summary
 
-The NeuroBotanica ecosystem has achieved MVP status with both the Budtender Application and Discovery API platform fully functional. All 240 tests are passing, demonstrating robust implementation across the technical stack. The project is positioned for Q1 2026 scaling with strong patent protection (Cannabis patent filed December 22, 2025) and a clear path to enterprise adoption.
+The NeuroBotanica ecosystem is in active development with foundational elements in place, including patent protection and backend scaffolding. The Budtender Application has core features implemented, but the NeuroBotanica Discovery API platform requires significant development to achieve MVP status. The project aims for Q1 2026 completion with integrated database architecture, two-tier pricing, and market validation.
 
 **Key Milestones:**
-- **API Integration**: Complete Budtender ↔ NeuroBotanica API bridge
-- **Market Validation**: 10-15 beta dispensary partnerships
-- **Revenue Target**: $50K MRR by Q1 end
+- **Database Integration**: Implement integrated D1 schema with OmniPath core services
+- **Core Engines**: Build computational engines for terpene optimization and synergy predictions
+- **Market Validation**: 5-10 beta dispensary partnerships
+- **Revenue Target**: $11K+ MRR by Q1 end (combined VeriTrad/NeuroBotanica)
 - **Patent Filing**: Polysaccharide provisional patent (March 1, 2026)
 - **Future Vision**: Digital twins and self-driving laboratories (2027+)
 
 **Platform Evolution:**
-- **2026**: Enterprise scaling and market validation
-- **2027**: Autonomous experimental systems and digital twins
+- **2026**: MVP completion, database integration, and initial market validation
+- **2027**: Enterprise scaling, autonomous experimental systems, and digital twins
 - **2028+**: AI-driven botanical therapeutics revolution
 
 ---
 
 ## 🎯 NeuroBotanica MVP Development Roadmap (Q1 2026)
 
-### Week 1-2: API Integration & Testing
-**Priority: HIGH** - Critical bridge between Budtender app and NeuroBotanica API
+### Week 1-2: Database Architecture & Core Engines
+**Priority: HIGH** - Foundation for integrated platform
 
-#### 1. Connect Budtender App to Live API
-- Replace mock recommendations with real NeuroBotanica API calls
-- Test dimer predictions for customer therapeutic conditions
-- Validate adjuvant suggestions from research database
-- Implement confidence scoring from validated studies
+#### 1. Implement Integrated D1 Database Schema
+- Create all `omnipath_*` and `neurobotanica_*` tables with foreign keys
+- Set up indexes and triggers for performance and automation
+- Load mock data for testing (compounds, studies, consent artifacts)
+- Validate foreign key relationships and cultural hooks
 
-#### 2. Integration Testing Protocol
-```bash
-# Test API connectivity
-cd frontend && npm run test:integration
+#### 2. Build Core Computational Engines
+- Implement terpene optimization algorithms (TP-TS engine)
+- Develop synergy prediction models with cross-kingdom support
+- Integrate OmniPath for consent checks and benefit-sharing
+- Add confidence scoring and evidence-based validations
 
-# Validate recommendation accuracy
-python scripts/test_api_integration.py
-```
+#### 3. Backend API Development
+- Expand OmniPath FastAPI endpoints for predictions
+- Implement two-tier pricing logic in analysis logs
+- Add audit logging and HIPAA compliance features
+- Test API responses with mock inputs
 
-#### 3. Performance Optimization
-- Load testing (target: <2 second response times)
-- Cache optimization (85%+ hit rate)
-- Error handling and monitoring setup
+### Week 3-4: User Interface & Compliance
+**Priority: HIGH** - User-facing features and regulatory readiness
 
-### Week 3-4: Beta Customer Recruitment
-**Priority: HIGH** - Real-world validation and revenue generation
+#### 1. Frontend Dashboard Development
+- Build Next.js interfaces for formulation optimization
+- Implement customer subscription management (tier selection)
+- Add analytics views for usage tracking and revenue
+- Integrate with Budtender app for seamless recommendations
 
-#### 1. Target Acquisition Strategy
-- **Nevada Dispensaries**: 5 primary targets (local market penetration)
-- **California/Arizona**: 5-10 additional (expansion markets)
-- **Selection Criteria**: Tech-forward operations, high-volume dispensaries
+#### 2. Compliance & Security Implementation
+- Implement HIPAA de-identification in audit logs
+- Add multi-factor authentication and role-based access
+- Develop policy rules for consent and attribution enforcement
+- Conduct initial security testing and vulnerability scans
 
-#### 2. Onboarding Package Development
-- Complete API documentation
-- Integration guides for dispensary POS systems
-- Budtender training materials
-- Technical support protocols
+#### 3. Data Ingestion & Validation
+- Ingest botanical/genetic databases with TK flags
+- Validate clinical studies and biomarker data
+- Implement CYP450 interaction models
+- Test data integrity with OmniPath integrations
 
-#### 3. Analytics Implementation
-- Recommendation acceptance rate tracking
-- API performance metrics monitoring
-- Customer satisfaction survey system
+### Month 2: Testing, Integration & Beta Launch
+**Priority: HIGH** - Validation and market preparation
 
-### Month 2: Enterprise Readiness
-**Priority: MEDIUM** - Scale preparation and security hardening
+#### 1. Comprehensive Testing
+- Unit tests for all engines and APIs (target: 240+ tests passing)
+- Integration tests for database triggers and pricing logic
+- Load testing for <200ms response times
+- Validation of TK usage tracking and benefit-sharing
 
-#### 1. Security & Compliance
-- Penetration testing completion
-- SOC 2 compliance preparation
-- Multi-factor authentication implementation
-- HIPAA-compliant audit logging
+#### 2. Budtender Integration
+- Connect Budtender app to live NeuroBotanica APIs
+- Test dimer predictions and therapeutic recommendations
+- Implement real-time consent checks for TK-enhanced features
+- Validate confidence scoring from integrated databases
+
+#### 3. Beta Customer Onboarding
+- Develop API documentation and integration guides
+- Target 5 Nevada dispensaries for pilot partnerships
+- Create training materials for TK-enhanced tier usage
+- Set up analytics for recommendation acceptance rates
+
+### Month 2: MVP Completion & Market Validation
+**Priority: HIGH** - Finalize MVP and initiate revenue generation
+
+#### 1. MVP Finalization
+- Complete all core engines and UI features
+- Achieve 240+ passing tests across platform
+- Finalize two-tier pricing implementation
+- Prepare for VeriTrad integration (separate DB)
 
 #### 2. Scalability Engineering
 - 500+ concurrent user load testing
@@ -84,11 +106,35 @@ python scripts/test_api_integration.py
 - CDN configuration (Cloudflare Workers)
 - Auto-scaling configuration
 
-#### 3. Enterprise Features
+#### 3. Enterprise Features & Compliance
 - Multi-tenant customer isolation
-- Advanced analytics dashboard
+- Advanced analytics dashboard for usage/revenue tracking
 - Custom ML model training interfaces
-- Regulatory submission templates
+- Regulatory submission templates and HIPAA audit logging
+
+---
+
+## 🗄️ Database Architecture & Two-Tier Pricing Model (Updated January 2026)
+
+### Integrated Database Architecture
+- **Single D1 Database**: Consolidates OmniPath core tables (`omnipath_*`), NeuroBotanica platform tables (`neurobotanica_*`), and references VeriTrad tables via API (separate DB for Week 1 simplicity).
+- **Prefixes**: `omnipath_*` for shared infrastructure, `neurobotanica_*` for platform-specific data.
+- **Integration**: Foreign keys link to OmniPath for real-time consent and policy enforcement.
+- **Cultural Hooks**: Consent IDs, attribution metadata, and benefit-sharing triggers embedded throughout.
+- **Performance**: Optimized for <200ms global responses with Cloudflare KV caching.
+
+### Two-Tier Pricing Model
+- **Tier 1: Computational-Only (NO TK)**: Higher cost ($50K-150K/year), no traditional knowledge access, pure algorithmic predictions. Revenue: 100% to Cloak and Quill.
+- **Tier 2: TK-Enhanced (WITH TK)**: Lower cost ($30K-100K/year), includes traditional knowledge integration, community data, and cultural context. Revenue: 70/25/5 split (communities/STEM/infrastructure).
+- **Incentivization**: TK-Enhanced tier rewards ethical engagement, reducing barriers to cultural preservation.
+
+### Key Tables & Features
+- **OmniPath Core**: `omnipath_consent_artifacts`, `omnipath_benefit_sharing`, `omnipath_policy_rules`, `omnipath_audit_log`.
+- **NeuroBotanica Platform**: `neurobotanica_compounds` (with TK integration), `neurobotanica_formulations`, `neurobotanica_synergy_predictions`, `neurobotanica_customers`, `neurobotanica_analysis_log`.
+- **Automation**: SQL triggers for benefit-sharing, usage tracking, and audits.
+- **Implementation**: Indexes for performance, foreign keys for data integrity.
+
+**See [`docs/Integrated_Database_Schema_and_Pricing.md`](docs/Integrated_Database_Schema_and_Pricing.md) for full schema details.**
 
 ---
 
