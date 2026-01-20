@@ -178,6 +178,5 @@ CREATE INDEX IF NOT EXISTS idx_interactions_compound ON neurobotanica_drug_inter
 CREATE INDEX IF NOT EXISTS idx_interactions_drug ON neurobotanica_drug_interactions(drug_name);
 CREATE INDEX IF NOT EXISTS idx_demographic_compound ON neurobotanica_demographic_factors(compound_id);
 CREATE INDEX IF NOT EXISTS idx_synergy_compounds ON neurobotanica_synergy_predictions(compound_a_id, compound_b_id);
-CREATE INDEX IF NOT EXISTS idx_formulations_plant ON neurobotanica_formulations(plant_id);
 CREATE INDEX IF NOT EXISTS idx_audit_event ON omnipath_audit_log(event_type);
 CREATE INDEX IF NOT EXISTS idx_consent_status ON omnipath_consent_artifacts(consent_status);

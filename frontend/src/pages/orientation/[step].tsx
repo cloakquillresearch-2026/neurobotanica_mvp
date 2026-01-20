@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function OrientationStep() {
   const router = useRouter();
@@ -385,7 +385,7 @@ function CompletePage() {
         Congratulations! Orientation Complete
       </h1>
       <p className="text-xl text-gray-600">
-        You've completed all three modules and are ready to use NeuroBotanica at the counter.
+        You&apos;ve completed all three modules and are ready to use NeuroBotanica at the counter.
       </p>
 
       <div className="bg-white rounded-lg shadow-lg p-8 space-y-4">

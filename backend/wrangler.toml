@@ -1,11 +1,16 @@
 name = "neurobotanica-api"
-main = "src/api/neurobotanica.js"
+main = "../worker.js"
 compatibility_date = "2024-01-01"
 
 [[d1_databases]]
-binding = "DB"
+binding = "NEUROBOTANICA_DB"
 database_name = "neurobotanica"
-database_id = "your-database-id"  # Replace with actual D1 database ID
+database_id = "a2818297-ae0e-4514-bc1c-5dc2bb8599fc"
+
+[[kv_namespaces]]
+binding = "NEUROBOTANICA_CACHE"
+id = "586ffb1e74594be1bfa58f34b80158dd"
+preview_id = "586ffb1e74594be1bfa58f34b80158dd"
 
 [vars]
 ENVIRONMENT = "production"

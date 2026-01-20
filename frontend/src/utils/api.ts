@@ -28,7 +28,7 @@ export const dispensaryAPI = {
   createTransaction: (transaction: TransactionPayload) => api.post('/api/dispensary/transaction', transaction),
 
   // Recommendations
-  getRecommendations: (data: Record<string, unknown>) => api.post('/api/recommendations', data),
+  getRecommendations: (data: Record<string, unknown>) => api.post('/api/dispensary/recommend', data),
   predictInflammatorySynergy: (payload: InflammatorySynergyPayload) =>
     api.post('/api/dispensary/inflammatory-synergy', payload),
 
@@ -53,6 +53,20 @@ export const adjuvantAPI = {
       kingdom: kingdom,
       patient_profile: patientProfile,
     }),
+}
+
+// NeuroBotanica API endpoints (Cloudflare Workers)
+const NEUROBOTANICA_API_BASE = 'https://neurobotanica-api.contessapetrini.workers.dev'
+
+export const neurobotanicaAPI = {
+  checkHealth: () => fetch(`${NEUROBOTANICA_API_BASE}/api/neurobotanica/health`).then(res => res.json()),
+  
+  analyzeCompounds: (compoundIds: string[], demographics: Record<string, unknown> = {}, tier: string = 'computational_only', plantId?: string) =>
+    fetch(`${NEUROBOTANICA_API_BASE}/api/neurobotanica/analyze`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ compound_ids: compoundIds, demographics, customer_tier: tier, plant_id: plantId })
+    }).then(res => res.json()),
 }
 
 // General API utilities

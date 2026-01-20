@@ -21,6 +21,11 @@ export interface CustomerProfileData {
   last_visit?: string
   isNew?: boolean
   isSandbox?: boolean
+  selected_compounds?: string[]
+  tier?: string
+  gender?: string
+  weight?: number
+  demographics?: Record<string, unknown>
 }
 
 export interface ConditionPayload {

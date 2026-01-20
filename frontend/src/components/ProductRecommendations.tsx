@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { dispensaryAPI } from '@/utils/api'
+import { useNeuroBotanicaAnalysis } from '@/hooks/useNeuroBotanicaAnalysis'
 import type {
   CustomerProfileData,
   ConditionPayload,
@@ -76,7 +77,18 @@ interface SynergyResponse {
   warning?: string
 }
 
-const TERPENE_INFO: Record<string, { emoji: string; color: string; effect: string; description: string }> = {
+const CONDITION_OPTIONS = [
+  { value: 'chronic_pain', label: 'Chronic Pain', emoji: '🔥' },
+  { value: 'anxiety', label: 'Anxiety', emoji: '🧘' },
+  { value: 'insomnia', label: 'Insomnia', emoji: '🌙' },
+  { value: 'ptsd', label: 'PTSD', emoji: '💚' },
+  { value: 'nausea', label: 'Nausea', emoji: '🤢' },
+  { value: 'inflammation', label: 'Inflammation', emoji: '🔴' },
+  { value: 'depression', label: 'Depression', emoji: '☀️' },
+  { value: 'weight_management', label: 'Weight/Metabolism', emoji: '⚖️' },
+  { value: 'muscle_spasms', label: 'Muscle Spasms', emoji: '💪' },
+  { value: 'seizures', label: 'Seizures', emoji: '⚡' },
+]
   'Myrcene': { emoji: '🥭', color: 'terpene-myrcene', effect: 'Relaxation', description: 'Enhances THC absorption, promotes sedation' },
   'Limonene': { emoji: '🍋', color: 'terpene-limonene', effect: 'Mood', description: 'Elevates mood, relieves stress and anxiety' },
   'Pinene': { emoji: '🌲', color: 'terpene-pinene', effect: 'Focus', description: 'Improves alertness, counteracts THC memory effects' },
@@ -95,6 +107,9 @@ export function ProductRecommendations({
   const [synergyData, setSynergyData] = useState<SynergyResponse | null>(null)
   const [synergyLoading, setSynergyLoading] = useState(false)
   const [synergyError, setSynergyError] = useState<string | null>(null)
+
+  // NeuroBotanica analysis hook
+  const { analyze: analyzeNeuroBotanica, result: neurobotanicaResult, loading: neurobotanicaLoading, error: neurobotanicaError, tkConsentRequired } = useNeuroBotanicaAnalysis()
 
   const fetchRecommendations = useCallback(async () => {
     if (!customer || customer.isNew) {
@@ -227,6 +242,26 @@ export function ProductRecommendations({
       setSynergyLoading(false)
     }
   }, [customer])
+
+  const runNeuroBotanicaAnalysis = useCallback(async () => {
+    if (!customer) return
+
+    // Extract compound IDs from customer data (assuming they have selected compounds)
+    const compoundIds = customer.selected_compounds || ['cbd', 'thc'] // Default fallback
+    
+    // Extract demographics
+    const demographics = {
+      age: customer.age || 30,
+      gender: customer.gender || 'unknown',
+      weight: customer.weight,
+      ...customer.demographics
+    }
+
+    // Determine tier based on customer preferences or consent
+    const tier = customer.tier || 'computational_only'
+
+    await analyzeNeuroBotanica(compoundIds, demographics, tier)
+  }, [customer, analyzeNeuroBotanica])
 
   useEffect(() => {
     fetchRecommendations()
@@ -386,8 +421,37 @@ export function ProductRecommendations({
       )
     }
 
+    // Show all selected conditions at the top
+    const selectedConditions = customer?.conditions || []
+
     return (
       <div className="space-y-4">
+        {selectedConditions.length > 0 && (
+          <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-xl" aria-hidden="true">📋</span>
+              <div>
+                <p className="text-white font-semibold">Selected Conditions</p>
+                <p className="text-white/60 text-sm">All conditions displayed below</p>
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {selectedConditions.map((condition, index) => {
+                const conditionOption = CONDITION_OPTIONS.find(opt => opt.value === condition)
+                return (
+                  <span
+                    key={condition}
+                    className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-500/30 px-3 py-1 rounded-full text-sm text-emerald-200"
+                  >
+                    <span>{conditionOption?.emoji || '🌿'}</span>
+                    <span>{conditionOption?.label || condition}</span>
+                  </span>
+                )
+              })}
+            </div>
+          </div>
+        )}
+
         {recommendations.map((product: Recommendation, index: number) => (
           <div
             key={product.product_id || index}
@@ -634,9 +698,116 @@ export function ProductRecommendations({
     )
   }
 
+  const renderNeuroBotanicaPanel = () => {
+    if (!customer) return null
+
+    return (
+      <section className="bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 rounded-2xl p-6 border border-emerald-500/20">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+              <span className="text-2xl">🧬</span>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-white">NeuroBotanica Analysis</h3>
+              <p className="text-emerald-200/80 text-sm">AI-powered cannabis optimization</p>
+            </div>
+          </div>
+          <button
+            onClick={runNeuroBotanicaAnalysis}
+            disabled={neurobotanicaLoading}
+            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 disabled:bg-emerald-600/50 text-white rounded-lg font-medium transition-colors"
+          >
+            {neurobotanicaLoading ? 'Analyzing...' : 'Run Analysis'}
+          </button>
+        </div>
+
+        {tkConsentRequired && (
+          <div className="bg-amber-500/20 border border-amber-500/30 rounded-lg p-4 mb-4">
+            <div className="flex items-start gap-3">
+              <span className="text-amber-400 text-xl">⚠️</span>
+              <div>
+                <h4 className="text-amber-200 font-semibold mb-1">Traditional Knowledge Access Required</h4>
+                <p className="text-amber-200/80 text-sm">
+                  Enhanced analysis requires consent for traditional knowledge integration. 
+                  Please provide consent to access TK-enhanced features.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {neurobotanicaError && !tkConsentRequired && (
+          <div className="bg-red-500/20 border border-red-500/30 rounded-lg p-4 mb-4">
+            <p className="text-red-200">{neurobotanicaError}</p>
+          </div>
+        )}
+
+        {neurobotanicaResult && (
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {/* Interactions */}
+            <div className="bg-slate-900/60 rounded-xl p-4 border border-white/10">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xl">💊</span>
+                <h4 className="text-white font-semibold">Drug Interactions</h4>
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">{neurobotanicaResult.interactions.total_warnings}</div>
+              <p className="text-white/60 text-sm">warnings detected</p>
+            </div>
+
+            {/* Bias Correction */}
+            <div className="bg-slate-900/60 rounded-xl p-4 border border-white/10">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xl">⚖️</span>
+                <h4 className="text-white font-semibold">Bias Correction</h4>
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">{neurobotanicaResult.bias_correction.adjusted_dose_mg}mg</div>
+              <p className="text-white/60 text-sm">adjusted dose</p>
+            </div>
+
+            {/* Synergy */}
+            <div className="bg-slate-900/60 rounded-xl p-4 border border-white/10">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xl">🔗</span>
+                <h4 className="text-white font-semibold">Compound Synergy</h4>
+              </div>
+              <div className="text-2xl font-bold text-white mb-1">{(neurobotanicaResult.synergy.synergy_score * 100).toFixed(1)}%</div>
+              <p className="text-white/60 text-sm">
+                {neurobotanicaResult.synergy.tk_enhanced ? 'TK-enhanced' : 'computational'}
+              </p>
+            </div>
+
+            {/* Polysaccharides */}
+            <div className="bg-slate-900/60 rounded-xl p-4 border border-white/10 md:col-span-2 lg:col-span-3">
+              <div className="flex items-center gap-2 mb-3">
+                <span className="text-xl">🦠</span>
+                <h4 className="text-white font-semibold">Microbiome Effects</h4>
+              </div>
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="text-lg font-bold text-white mb-1">{neurobotanicaResult.polysaccharide_effects.effects}</div>
+                  <p className="text-white/60 text-sm">predicted modulation</p>
+                </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-emerald-400">{(neurobotanicaResult.polysaccharide_effects.confidence * 100).toFixed(1)}%</div>
+                  <p className="text-white/60 text-sm">confidence</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className="mt-4 text-xs text-white/40">
+          Processing time: {neurobotanicaResult?.processing_time_ms || 0}ms • TK Governance: Active
+        </div>
+      </section>
+    )
+  }
+
   return (
     <div className="space-y-5" aria-live="polite">
       {renderSynergyPanel()}
+      {renderNeuroBotanicaPanel()}
       {renderRecommendationBody()}
     </div>
   )
