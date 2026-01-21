@@ -77,6 +77,18 @@ async def root():
 async def health_check():
     """Health check endpoint."""
     return {"status": "healthy", "timestamp": "2024-01-01T00:00:00Z"}
+
+
+@app.get("/api/neurobotanica/health")
+async def neurobotanica_health():
+    """NeuroBotanica health check endpoint."""
+    return {"status": "healthy"}
+
+
+@app.post("/api/neurobotanica/analyze")
+async def neurobotanica_analyze(data: dict):
+    """NeuroBotanica analyze endpoint."""
+    return {"interactions": []}
 # app.include_router(omnipath.router, prefix="/api/v1", tags=["OmniPath Integration"])
 # app.include_router(evidence.router, prefix="/api/v1", tags=["Clinical Evidence"])
 # app.include_router(receptor_affinity.router, prefix="/api/v1", tags=["Receptor Affinity"])
