@@ -37,6 +37,10 @@ jobs:
         run: |
           if [ -f scripts/check_imports.py ]; then python scripts/check_imports.py || true; fi
 
+      - name: Setup test database
+        run: |
+          python scripts/setup_test_database.py
+
       - name: Run tests
         run: |
           pytest -q
