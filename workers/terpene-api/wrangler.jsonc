@@ -1,0 +1,15 @@
+{
+  "name": "terpene-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-01-21",
+  "compatibility_flags": ["nodejs_compat"],
+  "placement": {
+    "mode": "smart"
+  },
+  "routes": [
+    {
+      "pattern": "api.neurobotanica.com/terpene-analysis",
+      "zone_name": "neurobotanica.com"
+    }
+  ]
+}
