@@ -5,11 +5,5 @@
   "compatibility_flags": ["nodejs_compat"],
   "placement": {
     "mode": "smart"
-  },
-  "routes": [
-    {
-      "pattern": "api.neurobotanica.com/terpene-analysis",
-      "zone_name": "neurobotanica.com"
-    }
-  ]
+  }
 }
