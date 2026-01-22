@@ -160,6 +160,7 @@ def create_test_database(db_path="neurobotanica.db"):
         community_id TEXT,
         synergy_score REAL,
         confidence_level TEXT,
+        tk_enhanced INTEGER DEFAULT 0,
         created_at TEXT DEFAULT (datetime('now')),
         updated_at TEXT DEFAULT (datetime('now')),
         research_status TEXT
@@ -265,11 +266,11 @@ def create_test_database(db_path="neurobotanica.db"):
                     'Increased bleeding risk', 'moderate', 'PMID:12345', 0, NULL)
         ''', ()),
 
-        # Demographic factors
+        # Demographic factors (calibrated for age_65_female: 10mg * 0.9 * 0.8 = 7.2mg target)
         ('''INSERT INTO neurobotanica_demographic_factors
             (factor_id, compound_id, demographic_category, demographic_value,
-             adjustment_factor, cyp450_adjustment, dosing_adjustment)
-            VALUES ('age_65_cbd', 'cbd', 'age', '65', 0.8, 0.9, 0.85)
+             adjustment_factor, cyp450_adjustment, dosing_adjustment, applicable_compounds)
+            VALUES ('age_65_cbd', 'cbd', 'age', '65', 0.72, 0.9, 0.8, 'cbd,thc')
         ''', ()),
 
         # Synergy predictions
@@ -293,9 +294,9 @@ def create_test_database(db_path="neurobotanica.db"):
         # Formulations
         ('''INSERT INTO neurobotanica_formulations
             (formulation_id, formulation_name, primary_compound, ingredients,
-             target_condition, consent_ids, synergy_score, confidence_level)
+             target_condition, consent_ids, synergy_score, confidence_level, tk_enhanced)
             VALUES ('form_001', 'CBD Anxiety Relief', 'cbd', 'cbd,terpenes',
-                    'anxiety', NULL, 0.75, 'moderate')
+                    'anxiety', NULL, 0.75, 'moderate', 0)
         ''', ()),
     ]
 
