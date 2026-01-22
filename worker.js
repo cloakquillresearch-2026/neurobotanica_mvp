@@ -140,18 +140,6 @@ async function applyBiasCorrection(env, baseDose, compoundId, demographics, tier
     evidence: evidence
   };
 }
-    }
-  } catch (error) {
-    console.error('Bias correction query failed:', error);
-    adjustmentFactor = 1.0; // Fallback to no adjustment
-  }
-  
-  const adjustedDose = baseDose * adjustmentFactor;
-  return { 
-    adjusted_dose_mg: Math.round(adjustedDose * 100) / 100, 
-    factors_applied: { adjustment_factor: adjustmentFactor, demographics_considered: Object.keys(demographics) }
-  };
-}
 
 async function predictSynergy(env, a, b, tier) {
   // Cache check (optional - skip if cache not available)
