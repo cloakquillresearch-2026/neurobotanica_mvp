@@ -16,6 +16,24 @@ FastAPI application with:
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+# Import routers from backend.api
+from backend.api import omnipath, evidence, receptor_affinity, dimers
+
+# Import routers from backend.routers
+from backend.routers import (
+    patentpath,
+    terpenes,
+    chempath,
+    toxpath,
+    regpath,
+    genomepath,
+    biopath,
+    clinpath,
+    dispensary,
+    security,
+    recommendations
+)
+
 
 app = FastAPI(
     title="NeuroBotanica API",
@@ -89,21 +107,23 @@ async def neurobotanica_health():
 async def neurobotanica_analyze(data: dict):
     """NeuroBotanica analyze endpoint."""
     return {"interactions": []}
-# app.include_router(omnipath.router, prefix="/api/v1", tags=["OmniPath Integration"])
-# app.include_router(evidence.router, prefix="/api/v1", tags=["Clinical Evidence"])
-# app.include_router(receptor_affinity.router, prefix="/api/v1", tags=["Receptor Affinity"])
-# app.include_router(dimers.router, tags=["Dimers"])
-# app.include_router(patentpath.router, prefix="/api/v1", tags=["PatentPath Lite"])
-# app.include_router(terpenes.router, prefix="/api/v1", tags=["Terpene Analysis"])
-# app.include_router(chempath.router, tags=["ChemPath"])
-# app.include_router(toxpath.router, tags=["ToxPath"])
-# app.include_router(regpath.router, tags=["RegPath"])
-# app.include_router(genomepath.router, tags=["GenomePath"])  # Router already has /api/genomepath prefix
-# app.include_router(biopath.router, prefix="/api/biopath", tags=["BioPath"])
-# app.include_router(clinpath.router, prefix="/api/clinpath", tags=["ClinPath"])
-# app.include_router(dispensary.router, prefix="/api/dispensary", tags=["Dispensary"])
-# app.include_router(security.router, tags=["Security"])
-# app.include_router(recommendations_router)
+
+# Include routers
+app.include_router(omnipath.router, prefix="/api/v1", tags=["OmniPath Integration"])
+app.include_router(evidence.router, prefix="/api/v1", tags=["Clinical Evidence"])
+app.include_router(receptor_affinity.router, prefix="/api/v1", tags=["Receptor Affinity"])
+app.include_router(dimers.router, tags=["Dimers"])
+app.include_router(patentpath.router, prefix="/api/v1", tags=["PatentPath Lite"])
+app.include_router(terpenes.router, prefix="/api/v1", tags=["Terpene Analysis"])
+app.include_router(chempath.router, tags=["ChemPath"])
+app.include_router(toxpath.router, tags=["ToxPath"])
+app.include_router(regpath.router, tags=["RegPath"])
+app.include_router(genomepath.router, tags=["GenomePath"])  # Router already has /api/genomepath prefix
+app.include_router(biopath.router, prefix="/api/biopath", tags=["BioPath"])
+app.include_router(clinpath.router, prefix="/api/clinpath", tags=["ClinPath"])
+app.include_router(dispensary.router, prefix="/api/dispensary", tags=["Dispensary"])
+app.include_router(security.router, tags=["Security"])
+app.include_router(recommendations.router)
 
 # Ensure database schema matches models at import time for test/dev environments
 # try:
