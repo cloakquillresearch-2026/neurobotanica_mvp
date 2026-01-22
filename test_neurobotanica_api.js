@@ -6,10 +6,16 @@ async function testHealth() {
   try {
     const response = await fetch(`${API_BASE}/api/neurobotanica/health`);
     const data = await response.json();
-    console.log('Health check result:', data);
-    return data.status === 'healthy';
+    console.log('Health response:', data);
+    if (data.status === 'healthy' && data.engines.includes('interactions')) {
+      console.log('✅ Health test passed');
+      return true;
+    } else {
+      console.log('❌ Health test failed');
+      return false;
+    }
   } catch (error) {
-    console.error('Health check failed:', error);
+    console.log('❌ Health test error:', error.message);
     return false;
   }
 }
@@ -21,16 +27,22 @@ async function testAnalyze() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        compound_ids: ['cbd'],
-        customer_tier: 'computational_only',
-        demographics: { age: 30 }
+        compound_ids: ['cbd', 'thc'],
+        demographics: { age: 30, condition: 'weight_management' },
+        customer_tier: 'computational_only'
       })
     });
     const data = await response.json();
-    console.log('Analyze result:', JSON.stringify(data, null, 2));
-    return data.interactions !== undefined;
+    console.log('Analyze response:', data);
+    if (data.interactions && data.bias_correction && data.synergy) {
+      console.log('✅ Analyze test passed');
+      return true;
+    } else {
+      console.log('❌ Analyze test failed');
+      return false;
+    }
   } catch (error) {
-    console.error('Analyze test failed:', error);
+    console.log('❌ Analyze test error:', error.message);
     return false;
   }
 }
