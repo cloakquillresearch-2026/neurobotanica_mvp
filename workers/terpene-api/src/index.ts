@@ -130,14 +130,14 @@ async function applyBiasCorrection(env, baseDose, compoundId, demographics, tier
       const mappedCondition = conditionMap[demographics.condition];
       
       const stmt = env.NEUROBOTANICA_DB.prepare(`
-        SELECT adjustment_factor, evidence_summary 
-        FROM neurobotanica_demographic_factors 
-        WHERE compound_id = ? AND condition = ?
+        SELECT adjustment_factor, evidence_basis
+        FROM neurobotanica_demographic_factors
+        WHERE compound_id = ? AND demographic_group = ?
       `);
       const result = await stmt.bind(compoundId, mappedCondition).all();
       if (result.results.length > 0) {
         adjustmentFactor = result.results[0].adjustment_factor || 1.0;
-        evidence = result.results[0].evidence_summary || 'Evidence-based adjustment applied';
+        evidence = result.results[0].evidence_basis || 'Evidence-based adjustment applied';
       } else {
         // Fallback with evidence
         evidence = `No specific data available for ${mappedCondition}. Using standard adjustment.`;
@@ -147,14 +147,14 @@ async function applyBiasCorrection(env, baseDose, compoundId, demographics, tier
       if (demographics.age) {
         const ageGroup = demographics.age < 30 ? 'young' : demographics.age > 65 ? 'elderly' : 'adult';
         const stmt = env.NEUROBOTANICA_DB.prepare(`
-          SELECT adjustment_factor, evidence_summary
-          FROM neurobotanica_demographic_factors 
+          SELECT adjustment_factor, evidence_basis
+          FROM neurobotanica_demographic_factors
           WHERE compound_id = ? AND demographic_group = ?
         `);
         const result = await stmt.bind(compoundId, ageGroup).all();
         if (result.results.length > 0) {
           adjustmentFactor *= result.results[0].adjustment_factor || 1.0;
-          evidence = result.results[0].evidence_summary || evidence;
+          evidence = result.results[0].evidence_basis || evidence;
         }
       }
       
@@ -205,19 +205,19 @@ async function predictSynergy(env, a, b, tier) {
 
   try {
     const stmt = env.NEUROBOTANICA_DB.prepare(`
-      SELECT synergy_score, confidence_level, evidence_summary, tk_enhanced
+      SELECT synergy_score, confidence_score, clinical_evidence, tk_enhanced
       FROM neurobotanica_synergy_predictions
       WHERE (compound_a_id = ? AND compound_b_id = ?) OR (compound_a_id = ? AND compound_b_id = ?)
-      ORDER BY confidence_level DESC
+      ORDER BY confidence_score DESC
       LIMIT 1
     `);
     const result = await stmt.bind(a, b, b, a).all();
-    
+
     if (result.results.length > 0) {
       const data = result.results[0];
       synergyScore = data.synergy_score || 0.5;
       tkEnhanced = data.tk_enhanced || false;
-      evidence = data.evidence_summary || 'Database prediction';
+      evidence = data.clinical_evidence || 'Database prediction';
     } else {
       // Fallback calculation
       synergyScore = Math.random() * 0.4 + 0.3; // 0.3-0.7 range

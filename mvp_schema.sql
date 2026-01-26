@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS neurobotanica_synergy_predictions (
     requires_consent INTEGER,
     consent_verification_status TEXT,
     computation_date TEXT,
+    tk_enhanced INTEGER DEFAULT 0,
     created_at TEXT DEFAULT (datetime('now'))
 );
 
@@ -114,6 +115,7 @@ CREATE TABLE IF NOT EXISTS neurobotanica_compounds (
 -- Polysaccharides data
 CREATE TABLE IF NOT EXISTS neurobotanica_polysaccharides (
     polysaccharide_id TEXT PRIMARY KEY,
+    compound_id TEXT,
     polysaccharide_name TEXT NOT NULL,
     source_organism TEXT,
     chemical_structure TEXT,
@@ -128,6 +130,10 @@ CREATE TABLE IF NOT EXISTS neurobotanica_polysaccharides (
     scfa_production_profile TEXT,
     prebiotic_index REAL,
     clinical_evidence TEXT,
+    effect_type TEXT,
+    modulation_type TEXT,
+    confidence_score REAL DEFAULT 0.75,
+    tier_access INTEGER DEFAULT 1,
     requires_consent INTEGER,
     tk_consent_id TEXT,
     bc_benefit_sharing_pct REAL,
