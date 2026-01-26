@@ -105,6 +105,9 @@ export function ProductRecommendations({
   onRecommendationsUpdate,
 }: ProductRecommendationsProps) {
   const [loading, setLoading] = useState(false)
+  const [loadingMessage, setLoadingMessage] = useState('Loading recommendations...')
+  const [error, setError] = useState<string | null>(null)
+  const [retryCount, setRetryCount] = useState(0)
   const [expandedAdjuvant, setExpandedAdjuvant] = useState<string | null>(null)
   const [synergyData, setSynergyData] = useState<SynergyResponse | null>(null)
   const [synergyLoading, setSynergyLoading] = useState(false)
@@ -113,29 +116,45 @@ export function ProductRecommendations({
   // NeuroBotanica analysis hook
   const { analyze: analyzeNeuroBotanica, result: neurobotanicaResult, loading: neurobotanicaLoading, error: neurobotanicaError, tkConsentRequired } = useNeuroBotanicaAnalysis()
 
+  // Retry handler for failed requests
+  const handleRetry = useCallback(() => {
+    setRetryCount(prev => prev + 1)
+    setError(null)
+  }, [])
+
   const fetchRecommendations = useCallback(async () => {
     if (!customer || customer.isNew) {
       return
     }
     setLoading(true)
+    setError(null)
+    setLoadingMessage('Connecting to clinical evidence database...')
+
+    const startTime = Date.now()
+
     try {
       const conditions = customer.conditions || []
 
       // Production: call D1-backed recommendations endpoint
       if (conditions.length > 0) {
-        try {
-          const allRecommendations: Recommendation[] = []
-          
-          // Fetch recommendation for EACH condition
-          for (const condition of conditions) {
-            try {
-              const resp = await dispensaryAPI.getRecommendations({ 
-                condition: condition.toUpperCase(), 
-                severity: 'moderate' 
-              })
-              const data = resp.data
-              
-              const rec: Recommendation = {
+        const allRecommendations: Recommendation[] = []
+        const failedConditions: string[] = []
+
+        setLoadingMessage(`Analyzing ${conditions.length} condition${conditions.length > 1 ? 's' : ''}...`)
+
+        // Fetch recommendation for EACH condition in parallel for speed
+        const promises = conditions.map(async (condition) => {
+          try {
+            const resp = await dispensaryAPI.getRecommendations({
+              condition: condition.toUpperCase(),
+              severity: 'moderate'
+            })
+            const data = resp.data
+
+            return {
+              success: true,
+              condition,
+              recommendation: {
                 product_id: `${condition.toUpperCase()}_REC`,
                 product_name: `${data.condition} Evidence-based Recommendation`,
                 product_type: data.category || 'Evidence-backed recommendation',
@@ -155,22 +174,43 @@ export function ProductRecommendations({
                 dosing_guidance: data.dosing_guidance,
                 citations: data.citations,
                 disclaimer: data.disclaimer,
-              }
-              
-              allRecommendations.push(rec)
-            } catch (err) {
-              console.error(`Failed to fetch recommendation for ${condition}:`, err)
-              // Continue with other conditions even if one fails
+              } as Recommendation
             }
+          } catch (err) {
+            console.error(`Failed to fetch recommendation for ${condition}:`, err)
+            return { success: false, condition, error: err }
           }
-          
-          if (allRecommendations.length > 0) {
-            onRecommendationsUpdate(allRecommendations)
-            setLoading(false)
-            return
+        })
+
+        const results = await Promise.all(promises)
+
+        results.forEach(result => {
+          if (result.success && result.recommendation) {
+            allRecommendations.push(result.recommendation)
+          } else {
+            failedConditions.push(result.condition)
           }
-        } catch (err) {
-          console.error('D1 recommendations request failed:', err)
+        })
+
+        const elapsed = Date.now() - startTime
+        if (elapsed > 5000) {
+          console.warn(`Recommendations fetch took ${elapsed}ms (target: <10s)`)
+        }
+
+        if (allRecommendations.length > 0) {
+          onRecommendationsUpdate(allRecommendations)
+
+          // Show partial error if some conditions failed
+          if (failedConditions.length > 0) {
+            setError(`Some conditions could not be loaded: ${failedConditions.join(', ')}`)
+          }
+          setLoading(false)
+          return
+        }
+
+        // All conditions failed
+        if (failedConditions.length === conditions.length) {
+          setError('Unable to load recommendations. Please check your connection and try again.')
         }
       }
 
@@ -188,10 +228,12 @@ export function ProductRecommendations({
       onRecommendationsUpdate(fallback)
     } catch (error) {
       console.error('Failed to fetch recommendations:', error)
+      const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred'
+      setError(errorMessage)
     } finally {
       setLoading(false)
     }
-  }, [customer, onRecommendationsUpdate])
+  }, [customer, onRecommendationsUpdate, retryCount])
 
   const fetchSynergyInsights = useCallback(async () => {
     if (!customer) {
@@ -406,10 +448,27 @@ export function ProductRecommendations({
   const renderRecommendationBody = () => {
     if (loading) {
       return (
-        <div className="text-center py-12">
-          <div className="spinner mx-auto mb-4" />
-          <p className="text-white/80 font-medium">Analyzing therapeutic profile...</p>
+        <div className="text-center py-12" role="status" aria-live="polite">
+          <div className="spinner mx-auto mb-4" aria-hidden="true" />
+          <p className="text-white/80 font-medium">{loadingMessage}</p>
           <p className="text-white/50 text-sm mt-1">Consulting 505+ clinical studies</p>
+          <p className="text-white/40 text-xs mt-3">Target: &lt;10 seconds</p>
+        </div>
+      )
+    }
+
+    if (error && recommendations.length === 0) {
+      return (
+        <div className="text-center py-8" role="alert">
+          <div className="text-4xl mb-3" aria-hidden="true">⚠️</div>
+          <p className="text-red-400 font-medium mb-2">Unable to load recommendations</p>
+          <p className="text-white/60 text-sm mb-4">{error}</p>
+          <button
+            onClick={handleRetry}
+            className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-medium transition-colors"
+          >
+            Try Again
+          </button>
         </div>
       )
     }
@@ -423,11 +482,28 @@ export function ProductRecommendations({
       )
     }
 
+    // Show partial error banner if some conditions failed but we have results
+    const errorBanner = error && recommendations.length > 0 ? (
+      <div className="bg-amber-500/20 border border-amber-500/30 rounded-lg p-3 mb-4" role="alert">
+        <div className="flex items-center gap-2">
+          <span className="text-amber-400">⚠️</span>
+          <p className="text-amber-200 text-sm">{error}</p>
+          <button
+            onClick={handleRetry}
+            className="ml-auto text-amber-300 hover:text-amber-200 text-sm underline"
+          >
+            Retry
+          </button>
+        </div>
+      </div>
+    ) : null
+
     // Show all selected conditions at the top
     const selectedConditions = customer?.conditions || []
 
     return (
       <div className="space-y-4">
+        {errorBanner}
         {selectedConditions.length > 0 && (
           <div className="bg-white/5 border border-white/10 rounded-xl p-4">
             <div className="flex items-center gap-2 mb-3">

@@ -1,0 +1,21 @@
+name = "neurobotanica-api"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+ENVIRONMENT = "production"
+
+[[d1_databases]]
+binding = "NEUROBOTANICA_DB"
+database_name = "neurobotanica"
+database_id = "a2818297-ae0e-4514-bc1c-5dc2bb8599fc"
+
+[[kv_namespaces]]
+binding = "NEUROBOTANICA_CACHE"
+id = "586ffb1e74594be1bfa58f34b80158dd"
+preview_id = "586ffb1e74594be1bfa58f34b80158dd"
+
+# Production routes
+[[routes]]
+pattern = "api.neurobotanica.workers.dev/*"
+zone_name = "workers.dev"
