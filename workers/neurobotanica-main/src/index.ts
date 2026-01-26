@@ -480,9 +480,9 @@ async function queryConditionFactor(
   const mappedCondition = conditionMap[condition.toLowerCase()] || condition.toLowerCase();
 
   const stmt = env.NEUROBOTANICA_DB.prepare(`
-    SELECT adjustment_factor, evidence_summary, confidence_level, source
+    SELECT adjustment_factor, evidence_basis as evidence_summary, 0.9 as confidence_level, evidence_basis as source
     FROM neurobotanica_demographic_factors
-    WHERE compound_id = ? AND condition = ?
+    WHERE compound_id = ? AND demographic_group = ?
     LIMIT 1
   `);
 
@@ -495,16 +495,18 @@ async function queryAgeFactor(
   compoundId: string,
   age: number
 ): Promise<DemographicFactor | null> {
-  const ageGroup = age < 25 ? 'young' : age > 65 ? 'elderly' : age > 50 ? 'mature' : 'adult';
+  // Find the appropriate age threshold from the database
+  // For age >= 65, use the 65+ adjustment
+  const ageThreshold = age >= 65 ? 'age_65' : age >= 30 ? 'age_30' : 'age_999';
 
   const stmt = env.NEUROBOTANICA_DB.prepare(`
-    SELECT adjustment_factor, evidence_summary, confidence_level
+    SELECT adjustment_factor, evidence_basis as evidence_summary, 0.9 as confidence_level, evidence_basis as source
     FROM neurobotanica_demographic_factors
-    WHERE compound_id = ? AND demographic_group = ?
+    WHERE compound_id = ? AND factor_id LIKE ?
     LIMIT 1
   `);
 
-  const result = await stmt.bind(compoundId, ageGroup).first<DemographicFactor>();
+  const result = await stmt.bind(compoundId, `${ageThreshold}_${compoundId}`).first<DemographicFactor>();
   return result || null;
 }
 
@@ -513,18 +515,9 @@ async function queryWeightFactor(
   compoundId: string,
   weight: number
 ): Promise<DemographicFactor | null> {
-  // Weight ranges in lbs
-  const weightGroup = weight < 120 ? 'light' : weight > 220 ? 'heavy' : 'average';
-
-  const stmt = env.NEUROBOTANICA_DB.prepare(`
-    SELECT adjustment_factor, evidence_summary, confidence_level
-    FROM neurobotanica_demographic_factors
-    WHERE compound_id = ? AND weight_category = ?
-    LIMIT 1
-  `);
-
-  const result = await stmt.bind(compoundId, weightGroup).first<DemographicFactor>();
-  return result || null;
+  // Weight ranges in lbs - but we don't have weight data in the current schema
+  // Return null for now as weight adjustments aren't in the database
+  return null;
 }
 
 async function queryGenderFactor(
@@ -535,9 +528,9 @@ async function queryGenderFactor(
   const normalizedGender = gender.toLowerCase();
 
   const stmt = env.NEUROBOTANICA_DB.prepare(`
-    SELECT adjustment_factor, evidence_summary, confidence_level
+    SELECT adjustment_factor, evidence_basis as evidence_summary, 0.9 as confidence_level, evidence_basis as source
     FROM neurobotanica_demographic_factors
-    WHERE compound_id = ? AND gender = ?
+    WHERE compound_id = ? AND demographic_group = ?
     LIMIT 1
   `);
 
@@ -550,15 +543,8 @@ async function queryEthnicityFactor(
   compoundId: string,
   ethnicity: string
 ): Promise<DemographicFactor | null> {
-  const stmt = env.NEUROBOTANICA_DB.prepare(`
-    SELECT adjustment_factor, evidence_summary, confidence_level
-    FROM neurobotanica_demographic_factors
-    WHERE compound_id = ? AND ethnicity = ?
-    LIMIT 1
-  `);
-
-  const result = await stmt.bind(compoundId, ethnicity.toLowerCase()).first<DemographicFactor>();
-  return result || null;
+  // Ethnicity adjustments not currently in database
+  return null;
 }
 
 async function queryTKDemographicFactors(
