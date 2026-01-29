@@ -7,61 +7,61 @@
 export async function handleRequest(request: Request, env: any): Promise<Response> {
   const url = new URL(request.url);
 
-  // GET request for API info
-  if (request.method === 'GET') {
-    return new Response('NeuroBotanica Terpene Analysis API v1.0 - Ready', {
-      headers: { 'Content-Type': 'text/plain' }
-    });
-  }
+  // CORS headers for all responses
+  const corsHeaders = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, X-Consent-ID'
+  };
 
   // CORS preflight
   if (request.method === 'OPTIONS') {
-    return new Response(null, {
-      status: 200,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type'
-      }
-    });
+    return new Response(null, { status: 200, headers: corsHeaders });
   }
 
-  // Health check endpoint
-  if (url.pathname === '/api/neurobotanica/health') {
+  // Health check endpoint (GET /health or /api/neurobotanica/health)
+  if (request.method === 'GET' && (url.pathname === '/health' || url.pathname === '/api/neurobotanica/health')) {
     return new Response(JSON.stringify({
       status: 'healthy',
+      version: '1.0.0',
       engines: ['interactions', 'bias', 'synergy', 'plant', 'polysaccharides']
     }), {
-      headers: { 'Content-Type': 'application/json' }
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }
     });
   }
 
-  // Analyze endpoint
-  if (request.method === 'POST') {
-    try {
-      const reqBody = await request.json();
-      // Simple terpene analysis response
-      const analysis = {
-        terpenes: reqBody.terpenes || [],
-        strain: reqBody.strain || 'Unknown',
-        analysis: 'Terpene profile analyzed'
-      };
-      return new Response(JSON.stringify({ analysis }), {
-        headers: { 'Content-Type': 'application/json' }
-      });
-    } catch (error) {
-      return new Response(JSON.stringify({ error: 'Invalid request body' }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' }
-      });
-    }
+  // Root GET - API info
+  if (request.method === 'GET' && url.pathname === '/') {
+    return new Response(JSON.stringify({
+      name: 'NeuroBotanica Terpene Analysis API',
+      version: '1.0.0',
+      endpoints: [
+        'GET /health - Health check',
+        'GET /api/neurobotanica/health - Health check',
+        'POST /analyze - Simple terpene analysis',
+        'POST /api/neurobotanica/analyze - Full analysis with D1'
+      ]
+    }), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+    });
   }
 
-  // Health check endpoint
-  if (url.pathname === '/api/neurobotanica/health') {
+  // Full analysis endpoint (POST /api/neurobotanica/analyze)
+  if (request.method === 'POST' && (url.pathname === '/api/neurobotanica/analyze' || url.pathname === '/analyze')) {
     try {
       const reqBody = await request.json();
       const startTime = Date.now();
+
+      // Validate required fields
+      if (!reqBody.compound_ids || !Array.isArray(reqBody.compound_ids) || reqBody.compound_ids.length === 0) {
+        return new Response(JSON.stringify({
+          error: 'Invalid request',
+          details: 'compound_ids array is required'
+        }), {
+          status: 400,
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+        });
+      }
 
       // Phase 1: Interactions and Bias
       const interactions = await checkInteractions(env, reqBody.compound_ids, reqBody.customer_tier || 'computational_only');
@@ -82,18 +82,47 @@ export async function handleRequest(request: Request, env: any): Promise<Respons
       };
 
       return new Response(JSON.stringify(result), {
-        headers: { 'Content-Type': 'application/json' }
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       });
     } catch (error) {
       console.error('Analysis error:', error);
-      return new Response(JSON.stringify({ error: 'Analysis failed', details: error.message, stack: error.stack }), {
+      return new Response(JSON.stringify({
+        error: 'Analysis failed',
+        details: error.message
+      }), {
         status: 500,
-        headers: { 'Content-Type': 'application/json' }
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
       });
     }
   }
 
-  return new Response('Not Found', { status: 404 });
+  // Bias correction endpoint (POST /api/neurobotanica/bias-correction)
+  if (request.method === 'POST' && url.pathname === '/api/neurobotanica/bias-correction') {
+    try {
+      const reqBody = await request.json();
+      const result = await applyBiasCorrection(
+        env,
+        reqBody.base_dose || 10.0,
+        reqBody.compound_id || 'cbd',
+        reqBody.demographics || {},
+        reqBody.customer_tier || 'computational_only'
+      );
+      return new Response(JSON.stringify(result), {
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+      });
+    } catch (error) {
+      console.error('Bias correction error:', error);
+      return new Response(JSON.stringify({ error: 'Bias correction failed', details: error.message }), {
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+      });
+    }
+  }
+
+  return new Response(JSON.stringify({ error: 'Not Found', path: url.pathname }), {
+    status: 404,
+    headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+  });
 }
 
 export default {
@@ -130,14 +159,14 @@ async function applyBiasCorrection(env, baseDose, compoundId, demographics, tier
       const mappedCondition = conditionMap[demographics.condition];
       
       const stmt = env.NEUROBOTANICA_DB.prepare(`
-        SELECT adjustment_factor, evidence_summary 
-        FROM neurobotanica_demographic_factors 
-        WHERE compound_id = ? AND condition = ?
+        SELECT adjustment_factor, evidence_basis
+        FROM neurobotanica_demographic_factors
+        WHERE compound_id = ? AND demographic_group = ?
       `);
       const result = await stmt.bind(compoundId, mappedCondition).all();
       if (result.results.length > 0) {
         adjustmentFactor = result.results[0].adjustment_factor || 1.0;
-        evidence = result.results[0].evidence_summary || 'Evidence-based adjustment applied';
+        evidence = result.results[0].evidence_basis || 'Evidence-based adjustment applied';
       } else {
         // Fallback with evidence
         evidence = `No specific data available for ${mappedCondition}. Using standard adjustment.`;
@@ -147,14 +176,14 @@ async function applyBiasCorrection(env, baseDose, compoundId, demographics, tier
       if (demographics.age) {
         const ageGroup = demographics.age < 30 ? 'young' : demographics.age > 65 ? 'elderly' : 'adult';
         const stmt = env.NEUROBOTANICA_DB.prepare(`
-          SELECT adjustment_factor, evidence_summary
-          FROM neurobotanica_demographic_factors 
+          SELECT adjustment_factor, evidence_basis
+          FROM neurobotanica_demographic_factors
           WHERE compound_id = ? AND demographic_group = ?
         `);
         const result = await stmt.bind(compoundId, ageGroup).all();
         if (result.results.length > 0) {
           adjustmentFactor *= result.results[0].adjustment_factor || 1.0;
-          evidence = result.results[0].evidence_summary || evidence;
+          evidence = result.results[0].evidence_basis || evidence;
         }
       }
       
@@ -205,19 +234,19 @@ async function predictSynergy(env, a, b, tier) {
 
   try {
     const stmt = env.NEUROBOTANICA_DB.prepare(`
-      SELECT synergy_score, confidence_level, evidence_summary, tk_enhanced
+      SELECT synergy_score, confidence_score, clinical_evidence, requires_consent
       FROM neurobotanica_synergy_predictions
       WHERE (compound_a_id = ? AND compound_b_id = ?) OR (compound_a_id = ? AND compound_b_id = ?)
-      ORDER BY confidence_level DESC
+      ORDER BY confidence_score DESC
       LIMIT 1
     `);
     const result = await stmt.bind(a, b, b, a).all();
-    
+
     if (result.results.length > 0) {
       const data = result.results[0];
       synergyScore = data.synergy_score || 0.5;
-      tkEnhanced = data.tk_enhanced || false;
-      evidence = data.evidence_summary || 'Database prediction';
+      tkEnhanced = data.requires_consent === 1;
+      evidence = data.clinical_evidence || 'Database prediction';
     } else {
       // Fallback calculation
       synergyScore = Math.random() * 0.4 + 0.3; // 0.3-0.7 range
