@@ -1,5 +1,5 @@
 // test_neurobotanica_api.js
-const API_BASE = 'https://neurobotanica-api.contessapetrini.workers.dev';
+const API_BASE = 'https://api.neurobotanica.com';
 
 async function testHealth() {
   console.log('Testing health endpoint...');
