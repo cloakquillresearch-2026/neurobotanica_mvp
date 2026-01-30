@@ -845,12 +845,9 @@ async def create_customer_profile(
         db.rollback()  # Rollback on error
         raise HTTPException(status_code=500, detail=f"Failed to create customer profile: {str(e)}")
 
-    return {
-        "profile": patient.to_recommendation_profile(),
-        "created_at": patient.created_at.isoformat() if patient.created_at else None,
-        "completeness": patient.profile_completeness,
-        "status": patient.status
-    }
+    # No additional return here; the function returns a `ProfileResponse` above
+    # and exceptions raise an HTTPException. This block was unreachable and
+    # has been removed for clarity.
 
 
 @router.post("/feedback")

@@ -6,10 +6,18 @@
   "placement": {
     "mode": "smart"
   },
-  "routes": [
+  "d1_databases": [
     {
-      "pattern": "api.neurobotanica.com/terpene-analysis",
-      "zone_name": "neurobotanica.com"
+      "binding": "NEUROBOTANICA_DB",
+      "database_name": "neurobotanica",
+      "database_id": "a2818297-ae0e-4514-bc1c-5dc2bb8599fc"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "NEUROBOTANICA_CACHE",
+      "id": "586ffb1e74594be1bfa58f34b80158dd",
+      "preview_id": "586ffb1e74594be1bfa58f34b80158dd"
     }
   ]
 }
