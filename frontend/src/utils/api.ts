@@ -16,7 +16,7 @@ const API_BASE_URL =
 // Cloudflare Worker URLs
 const BUDTENDER_API_URL =
   process.env.NEXT_PUBLIC_BUDTENDER_API_URL ||
-  'https://api.neurobotanica.com'
+  'https://terpene-api.contessapetrini.workers.dev'
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
@@ -125,7 +125,7 @@ export const adjuvantAPI = {
 // NeuroBotanica API endpoints (Cloudflare Workers)
 const NEUROBOTANICA_API_BASE =
   process.env.NEXT_PUBLIC_NEUROBOTANICA_API_URL ||
-  'https://api.neurobotanica.com'
+  'https://terpene-api.contessapetrini.workers.dev'
 
 // Retry configuration
 const MAX_RETRIES = 3
