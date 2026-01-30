@@ -103,7 +103,7 @@ This patent milestone exists within the broader NeuroBotanica MVP development ef
 |-----------|--------|---------|
 | Patent Protection | COMPLETE | Polysaccharide provisional patent draft complete (March 1, 2026 filing deadline) |
 | Database Schema | COMPLETE | D1 database tables created (`neurobotanica_*`, `omnipath_*`) with foreign keys and indexes |
-| Worker Deployment | COMPLETE | Cloudflare Worker deployed at `https://neurobotanica-api.contessapetrini.workers.dev` |
+| Worker Deployment | COMPLETE | Cloudflare Worker deployed (routes configured for `api.neurobotanica.com`) |
 | Local Testing | COMPLETE | 272 passed tests (including integration tests for D1 queries) |
 | Core Infrastructure | COMPLETE | Basic API scaffolding with bias correction and synergy prediction functions |
 
