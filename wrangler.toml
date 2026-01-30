@@ -1,20 +1,19 @@
 name = "neurobotanica-api"
-main = "src/api/neurobotanica.py"
+main = "workers/entry.js"
 compatibility_date = "2024-01-19"
-compatibility_flags = ["python_workers"]
 
-[build]
-command = "pip install -r cf-requirements.txt"
+[env.production]
+# Production environment settings
 
-[vars]
+[env.production.vars]
 # Environment variables
 
-[[d1_databases]]
+[[env.production.d1_databases]]
 binding = "DB"
 database_name = "neurobotanica"
 database_id = "a2818297-ae0e-4514-bc1c-5dc2bb8599fc"
 
-[[kv_namespaces]]
+[[env.production.kv_namespaces]]
 binding = "CACHE"
 id = "586ffb1e74594be1bfa58f34b80158dd"
 preview_id = "586ffb1e74594be1bfa58f34b80158dd"
