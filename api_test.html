@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroBotanica API Test</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.0/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>NeuroBotanica API Test</h1>
+    <div id="results"></div>
+
+    <script>
+        const results = document.getElementById('results');
+
+        function log(message) {
+            results.innerHTML += '<p>' + message + '</p>';
+            console.log(message);
+        }
+
+        async function testAPI() {
+            const apiUrl = 'https://neurobotanica-api-production.contessapetrini.workers.dev';
+
+            try {
+                log('Testing API connectivity...');
+
+                // Test 1: Health check
+                log('Test 1: Health check');
+                const healthResponse = await axios.get(apiUrl + '/health');
+                log('Health check response: ' + JSON.stringify(healthResponse.data));
+
+                // Test 2: Create profile
+                log('Test 2: Create profile');
+                const profileData = {
+                    customer_name: "Test Customer",
+                    email: "test@example.com",
+                    phone: "555-0123",
+                    conditions: [{ name: "chronic_pain", severity: 7, is_primary: true }],
+                    experience_level: "intermediate",
+                    preferences: { delivery_methods: ["smoke", "vape"] }
+                };
+                const profileResponse = await axios.post(apiUrl + '/api/dispensary/profile', profileData);
+                log('Profile creation response: ' + JSON.stringify(profileResponse.data));
+
+                // Test 3: Inflammatory synergy
+                log('Test 3: Inflammatory synergy');
+                const synergyData = {
+                    biomarkers: { tnf_alpha: 8.5 },
+                    condition_profile: {
+                        conditions: [{ name: "chronic_pain", severity: 7, is_primary: true }],
+                        experience_level: "intermediate"
+                    },
+                    available_kingdoms: ["cannabis"]
+                };
+                const synergyResponse = await axios.post(apiUrl + '/api/dispensary/inflammatory-synergy', synergyData);
+                log('Inflammatory synergy response: ' + JSON.stringify(synergyResponse.data));
+
+                log('All tests passed!');
+
+            } catch (error) {
+                log('Error: ' + error.message);
+                if (error.response) {
+                    log('Response status: ' + error.response.status);
+                    log('Response data: ' + JSON.stringify(error.response.data));
+                }
+            }
+        }
+
+        // Run test when page loads
+        testAPI();
+    </script>
+</body>
+</html></content>
+<parameter name="filePath">c:\Users\Dr. Contessa Petrini\OneDrive\Desktop\neurobotanica_project\api_test.html
