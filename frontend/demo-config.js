@@ -7,7 +7,7 @@ export const DEMO_CONFIG = {
   showDebugInfo: false, // Set to true for development demos
 
   // Use mock data instead of live API calls
-  useMockData: true,
+  useMockData: false,
 
   // Demo API endpoint (can point to a demo backend or use client-side mocks)
   demoApiUrl: 'https://demo-api.neurobotanica.com',

@@ -15,6 +15,8 @@ interface EditFormState {
   first_name: string
   last_name: string
   age: string
+  gender: string
+  weight: string
   conditions: string[]
   experience_level: ExperienceLevel
   notes: string
@@ -60,6 +62,8 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
     first_name: customer.first_name || '',
     last_name: customer.last_name || '',
     age: customer.age?.toString() || '',
+    gender: customer.gender || '',
+    weight: customer.weight?.toString() || '',
     conditions: customer.conditions || [],
     experience_level: customer.experience_level || 'beginner',
     notes: customer.notes || '',
@@ -76,6 +80,8 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
       first_name: customer.first_name || '',
       last_name: customer.last_name || '',
       age: customer.age?.toString() || '',
+      gender: customer.gender || '',
+      weight: customer.weight?.toString() || '',
       conditions: customer.conditions || [],
       experience_level: customer.experience_level || 'beginner',
       notes: customer.notes || '',
@@ -119,6 +125,8 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
       ...customer,
       ...editForm,
       age: parseInt(editForm.age || '', 10) || undefined,
+      gender: editForm.gender || undefined,
+      weight: parseFloat(editForm.weight || '') || undefined,
       customer_id: profileId ?? customer.customer_id,
       isNew: false,
       conditions: editForm.conditions,
@@ -135,9 +143,11 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
 
       // Prepare profile data for API
       const profileData: CustomerProfilePayload = {
+        first_name: editForm.first_name || undefined,
+        last_name: editForm.last_name || undefined,
         age: parseInt(editForm.age || '', 10) || null,
-        biological_sex: 'unspecified', // Default for dispensary
-        weight_kg: null, // Not collected in tablet interface
+        biological_sex: editForm.gender || 'unspecified',
+        weight_kg: parseFloat(editForm.weight || '') || null,
         conditions: editForm.conditions.map((condition, index) => ({
           name: condition,
           severity: 7, // Default medium severity
@@ -147,6 +157,7 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
         administration_preferences: ['inhalation'], // Default
         primary_goal: 'pain_relief', // Could be enhanced to map from conditions
         biomarkers: biomarkerPayload,
+        notes: editForm.notes || undefined,
       }
 
       let savedProfile
@@ -253,6 +264,68 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
           onChange={(e) => setEditForm({ ...editForm, age: e.target.value })}
           placeholder="Enter age"
           className="input-modern"
+        />
+      </div>
+
+      {/* Name Inputs */}
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="block text-white/80 text-sm font-medium mb-2">
+            First Name <span className="text-white/40">(optional)</span>
+          </label>
+          <input
+            type="text"
+            value={editForm.first_name}
+            onChange={(e) => setEditForm({ ...editForm, first_name: e.target.value })}
+            placeholder="Enter first name"
+            className="input-modern"
+          />
+        </div>
+        <div>
+          <label className="block text-white/80 text-sm font-medium mb-2">
+            Last Name <span className="text-white/40">(optional)</span>
+          </label>
+          <input
+            type="text"
+            value={editForm.last_name}
+            onChange={(e) => setEditForm({ ...editForm, last_name: e.target.value })}
+            placeholder="Enter last name"
+            className="input-modern"
+          />
+        </div>
+      </div>
+
+      {/* Gender Selection */}
+      <div>
+        <label className="block text-white/80 text-sm font-medium mb-2">
+          Gender <span className="text-white/40">(optional)</span>
+        </label>
+        <select
+          value={editForm.gender}
+          onChange={(e) => setEditForm({ ...editForm, gender: e.target.value })}
+          className="input-modern"
+        >
+          <option value="">Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="non-binary">Non-binary</option>
+          <option value="other">Other</option>
+          <option value="prefer-not-to-say">Prefer not to say</option>
+        </select>
+      </div>
+
+      {/* Weight Input */}
+      <div>
+        <label className="block text-white/80 text-sm font-medium mb-2">
+          Weight (kg) <span className="text-white/40">(optional)</span>
+        </label>
+        <input
+          type="number"
+          value={editForm.weight}
+          onChange={(e) => setEditForm({ ...editForm, weight: e.target.value })}
+          placeholder="Enter weight in kg"
+          className="input-modern"
+          step="0.1"
         />
       </div>
 

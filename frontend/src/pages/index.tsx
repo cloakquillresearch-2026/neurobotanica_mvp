@@ -465,6 +465,23 @@ export default function BudtenderAssistant() {
                           // If in sandbox mode, generate new mock patient
                           if (isSandboxMode) {
                             enterSandbox();
+                          } else {
+                            // Create a new real customer profile
+                            const newCustomer: CustomerProfileData = {
+                              customer_id: `temp_${Date.now()}`,
+                              first_name: '',
+                              last_name: '',
+                              age: undefined,
+                              gender: '',
+                              weight: undefined,
+                              conditions: [],
+                              experience_level: 'beginner',
+                              notes: '',
+                              biomarkers: {},
+                              isNew: true,
+                              isSandbox: false
+                            };
+                            setCustomer(newCustomer);
                           }
                         }}
                         className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors"
@@ -500,6 +517,23 @@ export default function BudtenderAssistant() {
                           // If in sandbox mode, generate new mock patient
                           if (isSandboxMode) {
                             enterSandbox();
+                          } else {
+                            // Create a new real customer profile
+                            const newCustomer: CustomerProfileData = {
+                              customer_id: `temp_${Date.now()}`,
+                              first_name: '',
+                              last_name: '',
+                              age: undefined,
+                              gender: '',
+                              weight: undefined,
+                              conditions: [],
+                              experience_level: 'beginner',
+                              notes: '',
+                              biomarkers: {},
+                              isNew: true,
+                              isSandbox: false
+                            };
+                            setCustomer(newCustomer);
                           }
                         }}
                         className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors"

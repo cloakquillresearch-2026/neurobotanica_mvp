@@ -35,6 +35,8 @@ export interface ConditionPayload {
 }
 
 export interface CustomerProfilePayload {
+  first_name?: string
+  last_name?: string
   age: number | null
   biological_sex: string
   weight_kg: number | null
@@ -43,6 +45,7 @@ export interface CustomerProfilePayload {
   administration_preferences: string[]
   primary_goal: string
   biomarkers: Record<string, number>
+  notes?: string
 }
 
 export interface TransactionItemPayload {
