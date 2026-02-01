@@ -542,7 +542,7 @@ export function ProductRecommendations({
           <div className="flex justify-between items-start mb-3">
             <div className="flex-1">
               <div className="flex items-center gap-2 flex-wrap">
-                <h3 className="font-bold text-gray-800 text-lg">{product.product_name}</h3>
+                <h3 className="font-bold text-gray-800 text-lg">{product.product_name || 'Recommended Product'}</h3>
                 {product.confidence_score && (
                   <span className={getMatchBadgeClass(product.confidence_score)}>
                     {Math.round(product.confidence_score * 100)}% Match

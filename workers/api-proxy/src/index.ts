@@ -597,6 +597,172 @@ export default {
       }
     }
 
+    // Customer Search Endpoint
+    if (url.pathname === '/api/dispensary/search' && request.method === 'GET') {
+      const d1 = (env as any).DB;
+      if (!d1) {
+        return new Response(JSON.stringify({ error: 'D1 database not configured' }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+
+      try {
+        const query = url.searchParams.get('q') || '';
+        if (!query.trim()) {
+          return new Response(JSON.stringify({ customers: [] }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+        }
+
+        // Search dispensary_profiles table for customers matching the query
+        const searchResults = await d1.prepare(
+          `SELECT profile_id, profile_code, created_at, updated_at, completeness_score, primary_condition, data
+           FROM dispensary_profiles
+           WHERE data LIKE ? OR profile_code LIKE ?
+           ORDER BY updated_at DESC
+           LIMIT 10`
+        ).bind(`%${query}%`, `%${query}%`).all();
+
+        const customers = searchResults.results?.map(row => {
+          try {
+            const data = JSON.parse(row.data || '{}');
+            return {
+              customer_id: row.profile_id,
+              first_name: data.first_name || '',
+              last_name: data.last_name || '',
+              phone: data.phone || '',
+              conditions: data.conditions || [],
+              experience_level: data.experience_level || 'beginner',
+              age: data.age || undefined,
+              gender: data.gender || '',
+              weight: data.weight || undefined,
+              notes: data.notes || '',
+              biomarkers: data.biomarkers || {},
+              last_visit: row.updated_at,
+              isNew: false,
+              isSandbox: false
+            };
+          } catch (e) {
+            console.error('Error parsing customer data:', e);
+            return null;
+          }
+        }).filter(customer => customer !== null) || [];
+
+        return new Response(JSON.stringify({ customers }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      } catch (error) {
+        console.error('Error searching customers:', error);
+        return new Response(JSON.stringify({ error: 'Internal server error', details: (error as Error).message }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+    }
+
+    // Customer Profile CRUD Endpoints
+    if (url.pathname.startsWith('/api/dispensary/profile') && request.method === 'GET') {
+      const d1 = (env as any).DB;
+      if (!d1) {
+        return new Response(JSON.stringify({ error: 'D1 database not configured' }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+
+      try {
+        const profileId = url.pathname.split('/').pop();
+        if (!profileId) {
+          return new Response(JSON.stringify({ error: 'Profile ID required' }), { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+        }
+
+        const result = await d1.prepare(
+          'SELECT * FROM dispensary_profiles WHERE profile_id = ?'
+        ).bind(profileId).first();
+
+        if (!result) {
+          return new Response(JSON.stringify({ error: 'Profile not found' }), { status: 404, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+        }
+
+        const data = JSON.parse(result.data || '{}');
+        const customer = {
+          customer_id: result.profile_id,
+          first_name: data.first_name || '',
+          last_name: data.last_name || '',
+          phone: data.phone || '',
+          conditions: data.conditions || [],
+          experience_level: data.experience_level || 'beginner',
+          age: data.age || undefined,
+          gender: data.gender || '',
+          weight: data.weight || undefined,
+          notes: data.notes || '',
+          biomarkers: data.biomarkers || {},
+          last_visit: result.updated_at,
+          isNew: false,
+          isSandbox: false
+        };
+
+        return new Response(JSON.stringify(customer), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      } catch (error) {
+        console.error('Error getting profile:', error);
+        return new Response(JSON.stringify({ error: 'Internal server error', details: (error as Error).message }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+    }
+
+    if (url.pathname === '/api/dispensary/profile' && request.method === 'POST') {
+      const d1 = (env as any).DB;
+      if (!d1) {
+        return new Response(JSON.stringify({ error: 'D1 database not configured' }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+
+      try {
+        const rawText = await request.text();
+        const profileData = JSON.parse(rawText);
+
+        const profileId = profileData.customer_id || `profile_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        const profileCode = profileData.phone || `PC${Date.now()}`;
+
+        // Insert new profile
+        await d1.prepare(
+          `INSERT INTO dispensary_profiles (profile_id, profile_code, data, primary_condition, completeness_score)
+           VALUES (?, ?, ?, ?, ?)`
+        ).bind(
+          profileId,
+          profileCode,
+          JSON.stringify(profileData),
+          profileData.conditions?.[0] || null,
+          0.8 // Default completeness score
+        ).run();
+
+        return new Response(JSON.stringify({ customer_id: profileId }), { status: 201, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      } catch (error) {
+        console.error('Error creating profile:', error);
+        return new Response(JSON.stringify({ error: 'Internal server error', details: (error as Error).message }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+    }
+
+    if (url.pathname.startsWith('/api/dispensary/profile/') && request.method === 'PUT') {
+      const d1 = (env as any).DB;
+      if (!d1) {
+        return new Response(JSON.stringify({ error: 'D1 database not configured' }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+
+      try {
+        const profileId = url.pathname.split('/').pop();
+        if (!profileId) {
+          return new Response(JSON.stringify({ error: 'Profile ID required' }), { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+        }
+
+        const rawText = await request.text();
+        const profileData = JSON.parse(rawText);
+
+        // Update profile
+        await d1.prepare(
+          `UPDATE dispensary_profiles
+           SET data = ?, primary_condition = ?, updated_at = datetime('now'), completeness_score = ?
+           WHERE profile_id = ?`
+        ).bind(
+          JSON.stringify(profileData),
+          profileData.conditions?.[0] || null,
+          0.9, // Updated completeness score
+          profileId
+        ).run();
+
+        return new Response(JSON.stringify({ success: true }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      } catch (error) {
+        console.error('Error updating profile:', error);
+        return new Response(JSON.stringify({ error: 'Internal server error', details: (error as Error).message }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+    }
+
     // Other API requests: return 404 (no longer proxying to Railway)
     if (isApiRequest) {
       return new Response(JSON.stringify({ error: 'Endpoint not found' }), {

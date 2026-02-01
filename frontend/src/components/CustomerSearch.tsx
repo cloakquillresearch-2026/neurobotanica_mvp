@@ -102,26 +102,8 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
       setShowQuickStart(false)
     } catch (error) {
       console.error('Failed to create new client:', error)
-      // For now, still create the customer locally if API fails
-      const newCustomer: CustomerProfileData = {
-        customer_id: `temp_${Date.now()}`,
-        first_name: newClientName.first.trim(),
-        last_name: newClientName.last.trim(),
-        phone: '',
-        conditions: [],
-        experience_level: 'beginner',
-        age: undefined,
-        gender: '',
-        weight: undefined,
-        notes: '',
-        biomarkers: {},
-        isNew: true,
-        isSandbox: false
-      }
-      setShowNewClientModal(false)
-      setNewClientName({ first: '', last: '' })
-      onCustomerSelect(newCustomer)
-      setShowQuickStart(false)
+      // Show error to user instead of creating local customer
+      alert('Failed to save client to database. Please try again.')
     }
   }
 

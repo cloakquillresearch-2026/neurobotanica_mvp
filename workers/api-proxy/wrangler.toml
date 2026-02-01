@@ -17,3 +17,8 @@ zone_name = "neuro-botanica.com"
 binding = "neurobotanica_clinical_evidence"
 database_name = "neurobotanica-clinical-evidence"
 database_id = "20d71e89-bb5d-4cb4-a58d-b87da6b087cf"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "neurobotanica"
+database_id = "a2818297-ae0e-4514-bc1c-5dc2bb8599fc"
