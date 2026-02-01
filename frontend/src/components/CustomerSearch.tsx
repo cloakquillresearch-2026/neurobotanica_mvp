@@ -22,6 +22,8 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
   const [searchResults, setSearchResults] = useState<CustomerProfileData[]>([])
   const [isSearching, setIsSearching] = useState(false)
   const [showQuickStart, setShowQuickStart] = useState(true)
+  const [showNewClientModal, setShowNewClientModal] = useState(false)
+  const [newClientName, setNewClientName] = useState({ first: '', last: '' })
 
   const handleSearch = async (term: string) => {
     if (!term.trim()) return
@@ -41,24 +43,86 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
     }
   }
 
-  const handleNewConsultation = (preselectedConditions: string[] = []) => {
-    const newCustomer: CustomerProfileData = {
-      customer_id: `temp_${Date.now()}`,
-      first_name: '',
-      last_name: '',
-      phone: searchTerm || '',
-      conditions: preselectedConditions,
-      experience_level: 'beginner',
-      age: undefined,
-      gender: '',
-      weight: undefined,
-      notes: '',
-      biomarkers: {},
-      isNew: true,
-      isSandbox: false
+  const handleConditionSelect = (conditionId: string) => {
+    // This should only update the customer's conditions during consultation
+    // For now, just log - this will be handled by the parent component
+    console.log('Condition selected:', conditionId)
+  }
+
+  const handleNewClient = () => {
+    setShowNewClientModal(true)
+  }
+
+  const handleSaveNewClient = async () => {
+    if (!newClientName.first.trim() || !newClientName.last.trim()) return
+
+    try {
+      const newCustomer: CustomerProfileData = {
+        customer_id: `temp_${Date.now()}`,
+        first_name: newClientName.first.trim(),
+        last_name: newClientName.last.trim(),
+        phone: '',
+        conditions: [],
+        experience_level: 'beginner',
+        age: undefined,
+        gender: '',
+        weight: undefined,
+        notes: '',
+        biomarkers: {},
+        isNew: true,
+        isSandbox: false
+      }
+
+      // Save to database first
+      const response = await dispensaryAPI.createProfile({
+        first_name: newCustomer.first_name,
+        last_name: newCustomer.last_name,
+        age: newCustomer.age || null,
+        biological_sex: newCustomer.gender || '',
+        weight_kg: newCustomer.weight || null,
+        conditions: [],
+        experience_level: newCustomer.experience_level,
+        administration_preferences: [],
+        primary_goal: '',
+        biomarkers: Object.fromEntries(
+          Object.entries(newCustomer.biomarkers || {}).filter(([, value]) => value !== undefined)
+        ) as Record<string, number>,
+        notes: newCustomer.notes
+      })
+
+      // Update the customer ID with the one from the database
+      newCustomer.customer_id = response.data.customer_id
+
+      // Close modal and reset form
+      setShowNewClientModal(false)
+      setNewClientName({ first: '', last: '' })
+
+      // Select the customer to show consultation view
+      onCustomerSelect(newCustomer)
+      setShowQuickStart(false)
+    } catch (error) {
+      console.error('Failed to create new client:', error)
+      // For now, still create the customer locally if API fails
+      const newCustomer: CustomerProfileData = {
+        customer_id: `temp_${Date.now()}`,
+        first_name: newClientName.first.trim(),
+        last_name: newClientName.last.trim(),
+        phone: '',
+        conditions: [],
+        experience_level: 'beginner',
+        age: undefined,
+        gender: '',
+        weight: undefined,
+        notes: '',
+        biomarkers: {},
+        isNew: true,
+        isSandbox: false
+      }
+      setShowNewClientModal(false)
+      setNewClientName({ first: '', last: '' })
+      onCustomerSelect(newCustomer)
+      setShowQuickStart(false)
     }
-    onCustomerSelect(newCustomer)
-    setShowQuickStart(false)
   }
 
   return (
@@ -95,11 +159,25 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
             <span className="text-xl">⚡</span>
             <span className="font-bold text-white">Quick Start: What brings them in today?</span>
           </div>
+          
+          {/* New Client Button */}
+          <button
+            onClick={handleNewClient}
+            className="w-full mb-4 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-400 hover:to-indigo-400 text-white font-semibold rounded-xl transition-all border border-purple-400/30 shadow-lg"
+          >
+            <div className="flex items-center justify-center gap-2">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+              </svg>
+              + New Client
+            </div>
+          </button>
+          
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {COMMON_CONDITIONS.map((condition) => (
               <button
                 key={condition.id}
-                onClick={() => handleNewConsultation([condition.id])}
+                onClick={() => handleConditionSelect(condition.id)}
                 className={`group relative overflow-hidden bg-gradient-to-r ${condition.color} p-0.5 rounded-xl hover:scale-105 transition-all duration-200 shadow-lg`}
               >
                 <div className="bg-gray-900/90 rounded-[10px] p-3 h-full">
@@ -110,7 +188,7 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
             ))}
           </div>
           <button
-            onClick={() => handleNewConsultation()}
+            onClick={() => handleConditionSelect('general')}
             className="w-full mt-4 py-3 text-emerald-400 hover:text-white font-semibold bg-white/5 hover:bg-white/10 rounded-xl transition-all border border-white/10"
           >
             Start General Consultation →
@@ -167,7 +245,7 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
       {/* New Customer Button */}
       {searchTerm && searchResults.length === 0 && !isSearching && !showQuickStart && (
         <button
-          onClick={() => handleNewConsultation()}
+          onClick={() => handleConditionSelect('new')}
           className="btn-primary w-full flex items-center justify-center gap-2"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -175,6 +253,64 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
           </svg>
           Start New Consultation
         </button>
+      )}
+
+      {/* New Client Modal */}
+      {showNewClientModal && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+          <div className="bg-gray-900 rounded-xl p-6 w-full max-w-md border border-white/10">
+            <h3 className="text-xl font-bold text-white mb-4">New Client</h3>
+            
+            <div className="space-y-4">
+              <div>
+                <label className="block text-white/80 text-sm font-medium mb-2">
+                  First Name *
+                </label>
+                <input
+                  type="text"
+                  value={newClientName.first}
+                  onChange={(e) => setNewClientName(prev => ({ ...prev, first: e.target.value }))}
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-emerald-400"
+                  placeholder="Enter first name"
+                  autoFocus
+                />
+              </div>
+              
+              <div>
+                <label className="block text-white/80 text-sm font-medium mb-2">
+                  Last Name *
+                </label>
+                <input
+                  type="text"
+                  value={newClientName.last}
+                  onChange={(e) => setNewClientName(prev => ({ ...prev, last: e.target.value }))}
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-emerald-400"
+                  placeholder="Enter last name"
+                  onKeyPress={(e) => e.key === 'Enter' && handleSaveNewClient()}
+                />
+              </div>
+            </div>
+            
+            <div className="flex gap-3 mt-6">
+              <button
+                onClick={() => {
+                  setShowNewClientModal(false)
+                  setNewClientName({ first: '', last: '' })
+                }}
+                className="flex-1 py-2 px-4 bg-white/10 hover:bg-white/20 text-white/80 rounded-lg transition-colors"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleSaveNewClient}
+                disabled={!newClientName.first.trim() || !newClientName.last.trim()}
+                className="flex-1 py-2 px-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-semibold rounded-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Save Client
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   )
