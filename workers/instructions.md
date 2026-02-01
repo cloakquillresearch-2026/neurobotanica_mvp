@@ -12,40 +12,114 @@ This document provides **complete, unambiguous specifications** for the NeuroBot
 ## 🚨 CURRENT SITUATION (Feb 1, 2026)
 
 <aside>
-⚠️
+🔄
 
-**READ THIS FIRST.** A previous coding agent made changes that broke the app further and did not follow the workflow specification. You may need to revert their changes before proceeding.
+**PROGRESS UPDATE:** Commit `a7f7094` fixed the New Client modal UI, but clients are **not being saved to the database**. The form only fills in names locally — no API call is made to persist the customer.
 
 </aside>
 
-### What the Previous Agent Did Wrong
+### Recent Commits
 
-| Problem | Details |
+| Commit | Description |
 | --- | --- |
-| **Fabricated deployment claims** | Said "Status: ✅ Live" when agents cannot deploy |
-| **Misunderstood the UI flow** | Made condition buttons (🔥 Chronic Pain, 🧘 Anxiety) open registration forms — those buttons are for selecting conditions during consultation, NOT for creating new clients |
-| **Put form fields in wrong order** | Name fields are at the BOTTOM instead of the TOP |
-| **Didn't create a separate form** | The "+ New Client" button should open a modal/separate screen, not add fields to the existing view |
-| **Left analysis running on load** | "TS-PS-001 Cross-Kingdom Insights" shows "Computing..." before any customer is selected |
-| **Took 3 attempts to actually commit** | Initially claimed commits existed when they didn't |
+| `b13778b` | "fix: Improve dynamic calculations for synergy and microbiome scores" |
+| `a7f7094` | "fix: Implement correct '+ New Client' workflow with modal" |
+| `71a7ed9` | Previous broken fixes |
 
-### Commits That May Need Reverting
+### What's Working Now
 
-- `71a7ed9` — Contains the broken "fixes" described above
-- Check the commit history to understand what was changed
+- ✅ "+ New Client" button opens a modal with name fields
+- ✅ Name fields are at the TOP of the form
+- ✅ Condition buttons no longer open registration forms
 
-### Your First Task
+### What's Still Broken (Priority Order)
 
-**Fix Workflow 1: New Client Registration** — This is the most broken part.
+1. **🔴 P0: New clients not saved to database** — The modal collects name but doesn't call `POST /api/dispensary/profile`. Names are only stored in local state, not persisted.
+2. **🔴 P1: Customer search not working** — Cannot find previously created customers
+3. **🔴 P1: Synergy Score hardcoded** — Fix in `b13778b` deployed to Pages but **Worker not deployed** — still shows 50.0%
+4. **🔴 P1: Microbiome Modulation hardcoded** — Fix in `b13778b` deployed to Pages but **Worker not deployed** — still shows ~75%
+5. **🟡 P2: Notes not persisting** — Notes field doesn't save to database
+6. **🟡 P2: "undefined" in recommendations** — Missing product name
 
-When a user clicks "+ New Client":
+### Your Next Task
 
-1. A modal or new screen should appear with ONLY the registration form
-2. Name fields (First Name, Last Name) must be at the TOP
-3. No analysis should run until the user explicitly clicks "Run Analysis" later
-4. The consultation view (Experience Level, Conditions, Analysis panels) should be HIDDEN until after the client is saved
+**Fix the database save for New Client Registration.**
 
-Read the full specification in **Workflow 1** below.
+When user clicks "Save Client" in the modal:
+
+1. Call `POST /api/dispensary/profile` with customer data
+2. Receive back a `customer_id` from the API
+3. Store the `customer_id` and associate it with the current consultation
+4. THEN navigate to consultation view
+
+The frontend code in `CustomerSearch.tsx` needs to actually make the API call — right now it just updates local state.
+
+### 🚨 ROOT CAUSE: API Architecture Mismatch (Feb 1, 2026)
+
+**The synergy/microbiome fix will NEVER work with the current configuration.**
+
+#### The Problem
+
+The frontend in `frontend/src/utils/api.ts` is configured to call:
+
+```jsx
+const BUDTENDER_API_URL = 
+  process.env.NEXT_PUBLIC_BUDTENDER_API_URL ||
+  'https://budtender.neuro-botanica.com'
+```
+
+But [`budtender.neuro-botanica.com`](http://budtender.neuro-botanica.com) is the **Cloudflare Pages frontend** — NOT an API endpoint!
+
+#### Where the APIs Actually Live
+
+| File | Deployed URL | Synergy Value |
+| --- | --- | --- |
+| `workers/terpene-api/src/index.ts` | [`terpene-api.contessapetrini.workers.dev`](http://terpene-api.contessapetrini.workers.dev) | **Dynamic** (the fix in `b13778b`) |
+| `backend/src/api/neurobotanica.js` | FastAPI backend | **0.8** (hardcoded) |
+| `worker.js` / `worker.ts` | Unknown Worker | **0.5** (hardcoded base) |
+
+#### What Needs to Happen
+
+**Option A: Update the frontend API URL**
+
+Change `NEXT_PUBLIC_BUDTENDER_API_URL` environment variable to:
+
+```
+https://terpene-api.contessapetrini.workers.dev
+```
+
+**Option B: Deploy the terpene-api Worker to a better URL**
+
+```bash
+cd workers/terpene-api
+npx wrangler deploy
+```
+
+Then update the frontend to use that URL.
+
+**Option C: Fix the FastAPI backend**
+
+If the frontend should call the Python backend instead, remove hardcoded values from `backend/src/api/neurobotanica.js`.
+
+#### Why Previous Deploys Didn't Work
+
+1. Commit `b13778b` changed `workers/terpene-api/src/index.ts` ✔️
+2. Pages deployment uploaded frontend to [`budtender.neuro-botanica.com`](http://budtender.neuro-botanica.com) ✔️
+3. Frontend still calls [`budtender.neuro-botanica.com`](http://budtender.neuro-botanica.com) for API ❌
+4. That's NOT where the Worker API is deployed ❌
+5. Synergy values remain hardcoded ❌
+
+### ⚠️ CI Test Failures (Separate Issue)
+
+The Python tests are failing due to **missing database tables** in the test environment — NOT because of frontend changes. Tables missing:
+
+- `clinical_studies`
+- `patients`
+- `neurobotanica_demographic_factors`
+- `neurobotanica_drug_interactions`
+- `neurobotanica_compounds`
+
+**This is a CI configuration issue** that needs the test database to be migrated before pytest runs. It is separate from the Budtender app bugs.
 
 ### Deployment Reminder
 
