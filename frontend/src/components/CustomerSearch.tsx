@@ -50,14 +50,19 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
 
   const handleNewConsultation = (preselectedConditions: string[] = []) => {
     const newCustomer: CustomerProfileData = {
-      customer_id: Date.now().toString(),
-      first_name: 'New',
-      last_name: 'Customer',
+      customer_id: `temp_${Date.now()}`,
+      first_name: '',
+      last_name: '',
       phone: searchTerm || '',
       conditions: preselectedConditions,
       experience_level: 'beginner',
-      age: null,
+      age: undefined,
+      gender: '',
+      weight: undefined,
+      notes: '',
+      biomarkers: {},
       isNew: true,
+      isSandbox: false
     }
     onCustomerSelect(newCustomer)
     setShowQuickStart(false)
