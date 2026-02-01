@@ -70,6 +70,7 @@ budtenderApi.interceptors.response.use(
 // Dispensary API endpoints
 export const dispensaryAPI = {
   // Customer management (Cloudflare Worker - D1 backed)
+  searchProfiles: (query: string) => budtenderApi.get(`/api/dispensary/search?q=${encodeURIComponent(query)}`),
   createProfile: (profile: CustomerProfilePayload) => budtenderApi.post('/api/dispensary/profile', profile),
   getProfile: (profileId: string) => budtenderApi.get(`/api/dispensary/profile/${profileId}`),
   updateProfile: (profileId: string, profile: CustomerProfilePayload) => budtenderApi.put(`/api/dispensary/profile/${profileId}`, profile),

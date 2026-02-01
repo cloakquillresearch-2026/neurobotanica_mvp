@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { dispensaryAPI } from '@/utils/api'
 import type { CustomerProfileData } from '@/types/customer'
 
 interface CustomerSearchProps {
@@ -28,21 +29,13 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
     setIsSearching(true)
     setShowQuickStart(false)
     try {
-      const mockResults: CustomerProfileData[] = [
-        {
-          customer_id: '1',
-          first_name: 'John',
-          last_name: 'Smith',
-          phone: term,
-          conditions: ['chronic_pain', 'anxiety'],
-          experience_level: 'regular',
-          age: 42,
-          last_visit: '2025-12-20',
-        }
-      ]
-      setSearchResults(mockResults)
+      const response = await dispensaryAPI.searchProfiles(term)
+      const data = response.data
+      setSearchResults(data.customers || [])
     } catch (error) {
       console.error('Search failed:', error)
+      // If API fails, show empty results instead of mock data
+      setSearchResults([])
     } finally {
       setIsSearching(false)
     }
