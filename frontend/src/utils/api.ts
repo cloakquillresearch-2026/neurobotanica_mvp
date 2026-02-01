@@ -16,7 +16,7 @@ const API_BASE_URL =
 // Cloudflare Worker URLs
 const BUDTENDER_API_URL =
   process.env.NEXT_PUBLIC_BUDTENDER_API_URL ||
-  'https://terpene-api.contessapetrini.workers.dev'
+  'https://budtender.neuro-botanica.com'
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
