@@ -264,6 +264,17 @@ async function predictSynergy(env, a, b, tier) {
       } else if ((compoundA.includes('cbd') && compoundB.includes('cbg')) ||
                  (compoundA.includes('cbg') && compoundB.includes('cbd'))) {
         baseScore += 0.25; // CBD-CBG synergy
+      } else if ((compoundA.includes('thc') && compoundB.includes('cbg')) ||
+                 (compoundA.includes('cbg') && compoundB.includes('thc'))) {
+        baseScore += 0.2; // THC-CBG synergy
+      } else if ((compoundA.includes('cbd') && compoundB.includes('cannabigerol')) ||
+                 (compoundA.includes('cannabigerol') && compoundB.includes('cbd'))) {
+        baseScore += 0.25; // CBD-CBG (full name)
+      } else if ((compoundA.includes('thc') && compoundB.includes('cannabigerol')) ||
+                 (compoundA.includes('cannabigerol') && compoundB.includes('thc'))) {
+        baseScore += 0.2; // THC-CBG (full name)
+      } else if (compoundA.includes('terpene') && compoundB.includes('terpene')) {
+        baseScore += 0.15; // Terpene-terpene synergy
       } else if (compoundA === compoundB) {
         baseScore += 0.1; // Same compound has some synergy
       }
@@ -353,10 +364,20 @@ async function predictPolysaccharides(env, compoundIds, tier) {
   if (compound.includes('cbd')) {
     baseConfidence += 0.15; // CBD has well-documented microbiome effects
   } else if (compound.includes('cbg')) {
-    baseConfidence += 0.1;
+    baseConfidence += 0.12; // CBG also has microbiome effects
   } else if (compound.includes('thc')) {
-    baseConfidence += 0.05;
+    baseConfidence += 0.08; // THC has some microbiome effects
     modulation = 'variable'; // THC can have mixed effects
+  } else if (compound.includes('cannabigerol')) {
+    baseConfidence += 0.12; // CBG full name
+  } else if (compound.includes('cannabidiol')) {
+    baseConfidence += 0.15; // CBD full name
+  } else if (compound.includes('delta-9-tetrahydrocannabinol') || compound.includes('thc')) {
+    baseConfidence += 0.08; // THC full name
+    modulation = 'variable';
+  } else if (compound.includes('terpene')) {
+    baseConfidence += 0.1; // Terpenes can affect microbiome
+    modulation = 'beneficial';
   }
   
   // Add some randomization for realism (±0.05)
