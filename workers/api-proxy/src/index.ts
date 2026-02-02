@@ -36,6 +36,34 @@ interface ConditionData {
   evidence_count: number;
 }
 
+const extractPrimaryConditionName = (conditions: unknown): string | null => {
+  if (!Array.isArray(conditions) || conditions.length === 0) {
+    return null;
+  }
+
+  const pickName = (entry: any): string | null => {
+    if (!entry) {
+      return null;
+    }
+    if (typeof entry === 'string') {
+      return entry;
+    }
+    if (typeof entry === 'object' && typeof entry.name === 'string') {
+      return entry.name;
+    }
+    return null;
+  };
+
+  const primary = conditions.find((condition: any) => {
+    if (typeof condition === 'object' && condition !== null && 'is_primary' in condition) {
+      return Boolean(condition.is_primary);
+    }
+    return false;
+  });
+
+  return pickName(primary) ?? pickName(conditions[0]) ?? null;
+};
+
 // Single export default that handles both the D1-backed recommendations route and
 // the existing proxy behavior. This avoids duplicate `export default` declarations.
 
@@ -756,6 +784,7 @@ export default {
 
         const profileId = profileData.customer_id || `profile_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         const profileCode = profileData.phone || `PC${Date.now()}`;
+        const primaryCondition = extractPrimaryConditionName(profileData.conditions);
 
         // Insert new profile
         await d1.prepare(
@@ -765,7 +794,7 @@ export default {
           profileId,
           profileCode,
           JSON.stringify(profileData),
-          profileData.conditions?.[0] || null,
+          primaryCondition,
           0.8 // Default completeness score
         ).run();
 
@@ -791,6 +820,8 @@ export default {
         const rawText = await request.text();
         const profileData = JSON.parse(rawText);
 
+        const primaryCondition = extractPrimaryConditionName(profileData.conditions);
+
         // Update profile
         await d1.prepare(
           `UPDATE dispensary_profiles
@@ -798,7 +829,7 @@ export default {
            WHERE profile_id = ?`
         ).bind(
           JSON.stringify(profileData),
-          profileData.conditions?.[0] || null,
+          primaryCondition,
           0.9, // Updated completeness score
           profileId
         ).run();

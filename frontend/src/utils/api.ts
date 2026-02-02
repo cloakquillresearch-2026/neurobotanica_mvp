@@ -77,6 +77,8 @@ export const dispensaryAPI = {
 
   // Transactions (Cloudflare Worker API)
   createTransaction: (transaction: TransactionPayload) => budtenderApi.post('/api/dispensary/transaction', transaction),
+  getTransactions: (customerId: string) =>
+    budtenderApi.get(`/api/dispensary/transaction?customer_id=${encodeURIComponent(customerId)}`),
 
   // D1-backed Recommendations (Cloudflare Worker)
   getRecommendations: async (data: Record<string, unknown>) => {
