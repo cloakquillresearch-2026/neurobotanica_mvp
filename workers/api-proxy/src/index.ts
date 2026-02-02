@@ -610,15 +610,27 @@ export default {
         }
 
         const loweredQuery = query.toLowerCase();
-        const results = await d1.prepare(`
+        const terms = loweredQuery.split(/\s+/).filter(Boolean);
+        const searchTerms = terms.length > 0 ? terms : [loweredQuery];
+
+        const dataClause = searchTerms.map(() => 'LOWER(data) LIKE ?').join(' AND ');
+        const sql = `
           SELECT profile_id, profile_code, created_at, updated_at, completeness_score, primary_condition, data
           FROM dispensary_profiles
-          WHERE LOWER(data) LIKE ?
-            OR profile_id LIKE ?
+          WHERE (${dataClause})
+            OR LOWER(profile_id) LIKE ?
             OR LOWER(profile_code) LIKE ?
           ORDER BY updated_at DESC
           LIMIT 10
-        `).bind(`%${loweredQuery}%`, `%${query}%`, `%${loweredQuery}%`).all();
+        `;
+
+        const params = [
+          ...searchTerms.map(term => `%${term}%`),
+          `%${loweredQuery}%`,
+          `%${loweredQuery}%`
+        ];
+
+        const results = await d1.prepare(sql).bind(...params).all();
 
         const customers = results.results?.map(row => {
           try {
