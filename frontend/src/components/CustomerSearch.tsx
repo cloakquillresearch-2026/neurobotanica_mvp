@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import type { AxiosError } from 'axios'
 import { dispensaryAPI } from '@/utils/api'
 import type { CustomerProfileData } from '@/types/customer'
 
@@ -114,22 +115,23 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
       onCustomerSelect(newCustomer)
       setShowQuickStart(false)
     } catch (error) {
-      const status = (error as { response?: { status?: number; data?: any } })?.response?.status
-      const data = (error as { response?: { data?: any } })?.response?.data
+      const axiosError = error as AxiosError
+      const status = axiosError.response?.status
+      const data = axiosError.response?.data as Record<string, unknown> | undefined
       if (status === 409 && data?.customer_id) {
         const existingCustomer: CustomerProfileData = {
-          customer_id: data.customer_id,
-          first_name: data.existing?.first_name || newClientName.first.trim(),
-          last_name: data.existing?.last_name || newClientName.last.trim(),
-          phone: data.existing?.phone || newClientName.phone.trim(),
-          email: data.existing?.email || newClientName.email.trim(),
-          conditions: data.existing?.conditions || [],
-          experience_level: data.existing?.experience_level || 'beginner',
-          age: data.existing?.age || undefined,
-          gender: data.existing?.gender || '',
-          weight: data.existing?.weight || undefined,
-          notes: data.existing?.notes || '',
-          biomarkers: data.existing?.biomarkers || {},
+          customer_id: String(data.customer_id),
+          first_name: (data.existing as Record<string, unknown> | undefined)?.first_name as string || newClientName.first.trim(),
+          last_name: (data.existing as Record<string, unknown> | undefined)?.last_name as string || newClientName.last.trim(),
+          phone: (data.existing as Record<string, unknown> | undefined)?.phone as string || newClientName.phone.trim(),
+          email: (data.existing as Record<string, unknown> | undefined)?.email as string || newClientName.email.trim(),
+          conditions: (data.existing as Record<string, unknown> | undefined)?.conditions as string[] || [],
+          experience_level: (data.existing as Record<string, unknown> | undefined)?.experience_level as 'naive' | 'beginner' | 'intermediate' | 'regular' | 'experienced' || 'beginner',
+          age: (data.existing as Record<string, unknown> | undefined)?.age as number | undefined || undefined,
+          gender: (data.existing as Record<string, unknown> | undefined)?.gender as string || '',
+          weight: (data.existing as Record<string, unknown> | undefined)?.weight as number | undefined || undefined,
+          notes: (data.existing as Record<string, unknown> | undefined)?.notes as string || '',
+          biomarkers: (data.existing as Record<string, unknown> | undefined)?.biomarkers as Record<string, number> || {},
           isNew: false,
           isSandbox: false
         }

@@ -12,9 +12,9 @@ This document provides **complete, unambiguous specifications** for the NeuroBot
 ## 🚨 CURRENT SITUATION (Feb 1, 2026)
 
 <aside>
-🔄
+🔴
 
-**PROGRESS UPDATE:** Commit `a7f7094` fixed the New Client modal UI, but clients are **not being saved to the database**. The form only fills in names locally — no API call is made to persist the customer.
+**CONFIRMED (Feb 1, 2026 7:00 PM):** Save Client button does NOT call the API. Network tab shows only preflight `/profile` requests — no POST with `first_name`/`last_name`. The handler is either not connected or crashes before making the API call.
 
 </aside>
 
@@ -22,9 +22,10 @@ This document provides **complete, unambiguous specifications** for the NeuroBot
 
 | Commit | Description |
 | --- | --- |
+| `63e9731` | Debug logging added to CustomerProfile.tsx save handler |
+| `725d66c` | "fix: Address frontend issues per spec" |
 | `b13778b` | "fix: Improve dynamic calculations for synergy and microbiome scores" |
 | `a7f7094` | "fix: Implement correct '+ New Client' workflow with modal" |
-| `71a7ed9` | Previous broken fixes |
 
 ### What's Working Now
 
@@ -32,9 +33,28 @@ This document provides **complete, unambiguous specifications** for the NeuroBot
 - ✅ Name fields are at the TOP of the form
 - ✅ Condition buttons no longer open registration forms
 
+### What Agent Claimed vs Reality (Commit `725d66c`)
+
+| Agent Claimed | Reality (Verified by Human) |
+| --- | --- |
+| "✅ Hide + New Client in Practice Mode" | ❌ Button still visible in Practice Mode |
+| "✅ Stop Auto-Computing in Practice Mode" | ❌ "Computing..." still runs |
+| "✅ Name Fields Already at Top" | ❌ Name fields are at BOTTOM |
+| "✅ Conditions Already Hidden" | ❌ Conditions visible in registration modal |
+| "✅ API Call Already Implemented" | ❌ Network tab shows NO API call on Save |
+
+### What's STILL Wrong (Verified Feb 1, 2026 8:30 PM)
+
+- ❌ **Name fields are at the BOTTOM** — Should be at TOP, before conditions
+- ❌ **Conditions visible during registration** — Nausea, Depression, etc. should be HIDDEN until after client saved
+- ❌ **"Computing..." auto-runs** — TS-PS-001 starts computing on page load, should wait for "Run Analysis"
+- ❌ **Practice Mode has "+ New Client" button** — Button should be hidden in Practice/Sandbox mode
+- ❌ **No API call on Save Client** — Network tab shows only CSS files when form submitted
+- ❌ **Console errors** — 404 for `/icon-192.png`, TypeError on undefined
+
 ### What's Still Broken (Priority Order)
 
-1. **🔴 P0: New clients not saved to database** — The modal collects name but doesn't call `POST /api/dispensary/profile`. Names are only stored in local state, not persisted.
+1. **🔴 P0: New clients not saved to database** — API Worker deployed ✅, but frontend still only updates local state (no API call visible in Network tab)
 2. **🔴 P1: Customer search not working** — Cannot find previously created customers
 3. **🔴 P1: Synergy Score hardcoded** — Fix in `b13778b` deployed to Pages but **Worker not deployed** — still shows 50.0%
 4. **🔴 P1: Microbiome Modulation hardcoded** — Fix in `b13778b` deployed to Pages but **Worker not deployed** — still shows ~75%
@@ -45,18 +65,136 @@ This document provides **complete, unambiguous specifications** for the NeuroBot
 
 **Fix the database save for New Client Registration.**
 
-When user clicks "Save Client" in the modal:
+---
 
-1. Call `POST /api/dispensary/profile` with customer data
-2. Receive back a `customer_id` from the API
-3. Store the `customer_id` and associate it with the current consultation
-4. THEN navigate to consultation view
+## 🔴 ROOT CAUSE CONFIRMED (Feb 1, 2026 7:00 PM)
 
-The frontend code in `CustomerSearch.tsx` needs to actually make the API call — right now it just updates local state.
+### Problem: Save Client button does NOT call the API
 
-### 🚨 ROOT CAUSE: API Architecture Mismatch (Feb 1, 2026)
+**Evidence from Network tab:**
 
-**The synergy/microbiome fix will NEVER work with the current configuration.**
+- Only `preflight` requests to `/profile` are visible
+- NO `POST` request with `first_name`/`last_name` payload
+- The modal closes, but data only goes to local React state
+
+### What's Happening
+
+1. User clicks "+ New Client" → Modal opens ✅
+2. User enters name → Input fields work ✅
+3. User clicks "Save Client" → Modal closes ✅
+4. **API call to `POST /api/dispensary/profile`** → ❌ **NEVER HAPPENS**
+5. Name is stored in React state only → Lost on page refresh
+
+### Likely Cause
+
+The "Save Client" button in the New Client modal is probably calling a local state update function instead of the actual API save handler. The code needs to:
+
+```tsx
+// WRONG (current behavior)
+const handleSave = () => {
+  setCustomer({ ...customer, first_name, last_name })  // Local state only
+  setShowModal(false)
+}
+
+// CORRECT (needed behavior)  
+const handleSave = async () => {
+  const profileData = { first_name, last_name, /* other fields */ }
+  const result = await dispensaryAPI.createProfile(profileData)  // API CALL
+  setCustomer({ ...customer, customer_id: result.profile_id })
+  setShowModal(false)
+}
+```
+
+### Files to Check
+
+1. **Where is the New Client modal?**
+    - `frontend/src/pages/index.tsx` — likely contains `showNewClientModal` state
+    - `frontend/src/components/CustomerSearch.tsx` — may have the modal
+    - `frontend/src/components/NewClientModal.tsx` — if this exists
+2. **Find the Save button's onClick handler**
+    - Look for `onClick` on the "Save Client" button
+    - Trace what function it calls
+    - Verify it calls `dispensaryAPI.createProfile()`
+3. **Check `CustomerProfile.tsx`**
+    - The `handleSave` function exists and calls the API
+    - But is this component even used in the New Client modal?
+    - Or is there a DIFFERENT save handler for new clients?
+
+### Next Step for Coding Agent
+
+**Find the New Client modal code and wire the Save button to the API.**
+
+Don't assume `CustomerProfile.tsx`'s `handleSave` is being called. The New Client modal may have its own separate (broken) save handler that needs to be fixed or replaced.
+
+---
+
+## 🔧 EXACT FIX NEEDED (Feb 1, 2026)
+
+### The Good News
+
+The API call code **already exists** — it just isn't being called from the New Client modal.
+
+**Working code in `api.ts`:**
+
+```tsx
+createProfile: (profile) => budtenderApi.post('/api/dispensary/profile', profile)
+```
+
+**Working save handler in `CustomerProfile.tsx`:**
+
+```tsx
+savedProfile = await dispensaryAPI.createProfile(profileData)
+```
+
+### What You Need to Do
+
+1. **Open** `frontend/src/components/CustomerSearch.tsx` in VS Code
+2. **Find** the Save Client button's `onClick` handler. It probably looks like this:
+
+```tsx
+// WRONG (current behavior - only updates local state)
+onClick={() => {
+  setCustomer({ ...customer, first_name, last_name })
+  setShowModal(false)
+}}
+```
+
+1. **Change it** to call the API:
+
+```tsx
+// CORRECT (calls API to persist to database)
+onClick={async () => {
+  const result = await dispensaryAPI.createProfile({
+    first_name,
+    last_name,
+    // other fields from the form
+  })
+  setCustomer({ ...customer, customer_id: result.data.profile_id })
+  setShowModal(false)
+}}
+```
+
+1. **Make sure** `dispensaryAPI` is imported at the top of the file:
+
+```tsx
+import { dispensaryAPI } from '@/utils/api'
+```
+
+1. **Deploy** with Wrangler after pushing the commit:
+
+```bash
+cd frontend && npm run build && npx wrangler pages deploy ./out --project-name=neurobotanicabudtender
+```
+
+### Summary
+
+**One file, one change.** The infrastructure is already there — just wire the button to the existing API call.
+
+---
+
+### ✅ API Architecture Fixed (Feb 1, 2026)
+
+**The api-proxy Worker is now deployed with routes to [`budtender.neuro-botanica.com/api/*`](http://budtender.neuro-botanica.com/api/*).**
 
 #### The Problem
 

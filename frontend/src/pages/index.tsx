@@ -45,7 +45,7 @@ const CONDITION_GUIDANCE: Record<string, ConditionGuidance> = {
     tips: ['Take 1-2 hours before bed', 'Indica strains work best', 'Avoid caffeine after 2pm']
   },
   ptsd: {
-                        {/* New Client button removed */}
+    title: 'PTSD Support',
     emoji: '💚',
     color: 'from-teal-500 to-emerald-500',
     cannabinoid: 'Balanced THC:CBD (1:1 or 2:1)',
@@ -88,6 +88,37 @@ const CONDITION_GUIDANCE: Record<string, ConditionGuidance> = {
 
 type TerpeneInfo = {
   emoji: string
+  name: string
+  effect: string
+  found_in: string
+  benefits: string[]
+}
+
+const TERPENE_DATABASE: Record<string, TerpeneInfo> = {
+  'Myrcene': {
+    emoji: '🥭',
+    name: 'Myrcene',
+    effect: 'Relaxation & Sedation',
+    found_in: 'Mangoes, Hops, Lemongrass',
+    benefits: ['Enhances THC absorption', 'Muscle relaxation', 'Anti-inflammatory']
+  },
+  'Limonene': {
+    emoji: '🍋',
+    name: 'Limonene',
+    effect: 'Mood & Energy',
+    found_in: 'Citrus fruits, Juniper',
+    benefits: ['Elevates mood', 'Reduces stress', 'Anti-anxiety']
+  },
+  'Linalool': {
+    emoji: '🌸',
+    name: 'Linalool',
+    effect: 'Calming & Anti-Anxiety',
+    found_in: 'Lavender, Birch bark',
+    benefits: ['Reduces anxiety', 'Promotes sleep', 'Anti-convulsant']
+  },
+  'Pinene': {
+    emoji: '🌲',
+    name: 'Pinene',
     effect: 'Focus & Alertness',
     found_in: 'Pine needles, Rosemary',
     benefits: ['Improves memory', 'Opens airways', 'Counteracts THC fog']

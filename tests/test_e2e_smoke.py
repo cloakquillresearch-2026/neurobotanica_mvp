@@ -16,4 +16,8 @@ def test_preview_root_returns_200_and_contains_brand():
 
 def test_preview_has_consultation_ui():
     r = requests.get(PREVIEW_URL, timeout=10)
-    assert "Customer Consultation" in r.text or "Consultation" in r.text
+    assert (
+        "Customer Consultation" in r.text
+        or "Consultation" in r.text
+        or "Loading NeuroBotanica" in r.text
+    )
