@@ -34,8 +34,28 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
     setShowQuickStart(false)
     try {
       const response = await dispensaryAPI.searchProfiles(term)
-      const data = response.data
-      setSearchResults(data.customers || [])
+      const customers = (response.data?.customers as CustomerProfileData[] | undefined) || []
+
+      // Deduplicate by first/last name and keep the most recent entry
+      const deduped = Array.from(
+        customers.reduce<Map<string, CustomerProfileData>>((acc, customer) => {
+          const key = `${(customer.first_name || '').toLowerCase()}-${(customer.last_name || '').toLowerCase()}`
+          const previous = acc.get(key)
+          const currentVisit = customer.last_visit ? new Date(customer.last_visit).getTime() : 0
+          const previousVisit = previous?.last_visit ? new Date(previous.last_visit).getTime() : -1
+
+          if (!previous || currentVisit >= previousVisit) {
+            acc.set(key, {
+              ...customer,
+              conditions: customer.conditions || [],
+              biomarkers: customer.biomarkers || {},
+            })
+          }
+          return acc
+        }, new Map()).values()
+      )
+
+      setSearchResults(deduped)
     } catch (error) {
       console.error('Search failed:', error)
       // If API fails, show empty results instead of mock data
