@@ -851,6 +851,46 @@ export default {
       }
     }
 
+    if (url.pathname === '/api/dispensary/transaction' && request.method === 'GET') {
+      const d1 = (env as any).DB || (env as any).neurobotanica_clinical_evidence;
+      if (!d1) {
+        return new Response(JSON.stringify({ error: 'DB not configured' }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+
+      try {
+        const customerId = url.searchParams.get('customer_id');
+        let query = 'SELECT * FROM dispensary_transactions ORDER BY created_at DESC LIMIT 50';
+        const params: Array<string> = [];
+
+        if (customerId) {
+          query = 'SELECT * FROM dispensary_transactions WHERE customer_id = ? ORDER BY created_at DESC';
+          params.push(customerId);
+        }
+
+        const results = await d1.prepare(query).bind(...params).all();
+
+        const transactions = results.results?.map(row => {
+          try {
+            return {
+              ...row,
+              items: JSON.parse(row.products_json || '[]')
+            };
+          } catch (error) {
+            console.error('Failed to parse transaction items:', error);
+            return {
+              ...row,
+              items: []
+            };
+          }
+        }) || [];
+
+        return new Response(JSON.stringify({ transactions }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      } catch (error) {
+        console.error('Error fetching transactions:', error);
+        return new Response(JSON.stringify({ error: (error as Error).message }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+    }
+
     // Other API requests: return 404 (no longer proxying to Railway)
     if (isApiRequest) {
       return new Response(JSON.stringify({ error: 'Endpoint not found' }), {
