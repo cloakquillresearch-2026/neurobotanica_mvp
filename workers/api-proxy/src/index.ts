@@ -48,12 +48,11 @@ export default {
     const url = new URL(request.url);
     const isApiRequest = url.pathname.startsWith(apiPrefix);
 
-    // CORS helper headers - allow pages.dev domains
+    // CORS helper headers - allow any origin during development
     const corsHeaders = {
-      'Access-Control-Allow-Origin': request.headers.get('Origin')?.includes('pages.dev') ? request.headers.get('Origin') : '*',
-      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-      'Access-Control-Allow-Credentials': 'true',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Client-Version',
     };
 
     // Handle CORS preflight for general requests

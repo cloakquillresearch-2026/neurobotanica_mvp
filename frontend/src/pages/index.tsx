@@ -45,7 +45,7 @@ const CONDITION_GUIDANCE: Record<string, ConditionGuidance> = {
     tips: ['Take 1-2 hours before bed', 'Indica strains work best', 'Avoid caffeine after 2pm']
   },
   ptsd: {
-    title: 'PTSD Support',
+                        {/* New Client button removed */}
     emoji: '💚',
     color: 'from-teal-500 to-emerald-500',
     cannabinoid: 'Balanced THC:CBD (1:1 or 2:1)',
@@ -88,37 +88,6 @@ const CONDITION_GUIDANCE: Record<string, ConditionGuidance> = {
 
 type TerpeneInfo = {
   emoji: string
-  name: string
-  effect: string
-  found_in: string
-  benefits: string[]
-}
-
-const TERPENE_DATABASE: Record<string, TerpeneInfo> = {
-  'Myrcene': {
-    emoji: '🥭',
-    name: 'Myrcene',
-    effect: 'Relaxation & Sedation',
-    found_in: 'Mangoes, Hops, Lemongrass',
-    benefits: ['Enhances THC absorption', 'Muscle relaxation', 'Anti-inflammatory']
-  },
-  'Limonene': {
-    emoji: '🍋',
-    name: 'Limonene',
-    effect: 'Mood & Energy',
-    found_in: 'Citrus fruits, Juniper',
-    benefits: ['Elevates mood', 'Reduces stress', 'Anti-anxiety']
-  },
-  'Linalool': {
-    emoji: '💜',
-    name: 'Linalool',
-    effect: 'Calming & Anti-Anxiety',
-    found_in: 'Lavender, Birch bark',
-    benefits: ['Reduces anxiety', 'Promotes sleep', 'Anti-convulsant']
-  },
-  'Pinene': {
-    emoji: '🌲',
-    name: 'Pinene',
     effect: 'Focus & Alertness',
     found_in: 'Pine needles, Rosemary',
     benefits: ['Improves memory', 'Opens airways', 'Counteracts THC fog']
@@ -507,42 +476,6 @@ export default function BudtenderAssistant() {
                       <p className="text-white/70 text-sm">Try the recommendation tool with example patients (no real data).</p>
                     </div>
                     <div className="flex gap-3 flex-wrap">
-                      <button
-                        onClick={() => {
-                          // Clear current customer data
-                          setCustomer(null);
-                          setRecommendations([]);
-                          setCustomerSearchKey(prev => prev + 1);
-                          
-                          // If in sandbox mode, generate new mock patient
-                          if (isSandboxMode) {
-                            enterSandbox();
-                          } else {
-                            // Create a new real customer profile
-                            const newCustomer: CustomerProfileData = {
-                              customer_id: `temp_${Date.now()}`,
-                              first_name: '',
-                              last_name: '',
-                              age: undefined,
-                              gender: '',
-                              weight: undefined,
-                              conditions: [],
-                              experience_level: 'beginner',
-                              notes: '',
-                              biomarkers: {},
-                              isNew: true,
-                              isSandbox: false
-                            };
-                            setCustomer(newCustomer);
-                          }
-                        }}
-                        className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors"
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                        </svg>
-                        New Client
-                      </button>
                       <button type="button" className="btn-primary" onClick={enterSandbox}>
                         Start Practice Session
                       </button>
