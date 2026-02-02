@@ -165,7 +165,7 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
 
       console.log('profileData:', profileData)
       console.log('customer.customer_id:', customer.customer_id)
-      console.log('is temp id:', customer.customer_id.startsWith('temp_'))
+      console.log('is temp id:', customer.customer_id?.startsWith('temp_'))
 
       let savedProfile
       if (customer.customer_id && !customer.customer_id.startsWith('temp_')) {
@@ -178,7 +178,8 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
         savedProfile = await dispensaryAPI.createProfile(profileData)
       }
 
-      onProfileUpdate(buildUpdatedCustomer(savedProfile.data.profile_id))
+      const returnedId = savedProfile?.data?.customer_id || savedProfile?.data?.profile_id
+      onProfileUpdate(buildUpdatedCustomer(returnedId))
     } catch (error) {
       console.error('Failed to save customer profile:', error)
       // Still update local state even if API fails

@@ -95,7 +95,7 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
       console.log('Create profile response:', response?.data)
 
       // Update the customer ID with the one from the database
-      newCustomer.customer_id = response.data.customer_id
+      newCustomer.customer_id = response.data.customer_id || response.data.profile_id
       newCustomer.isNew = false
 
       // Close modal and reset form
