@@ -316,7 +316,7 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
               <button
                 onClick={() => {
                   setShowNewClientModal(false)
-                  setNewClientName({ first: '', last: '' })
+                  setNewClientName({ first: '', last: '', phone: '', email: '' })
                 }}
                 className="flex-1 py-2 px-4 bg-white/10 hover:bg-white/20 text-white/80 rounded-lg transition-colors"
               >
