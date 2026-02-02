@@ -107,7 +107,6 @@ export function ProductRecommendations({
   const [loading, setLoading] = useState(false)
   const [loadingMessage, setLoadingMessage] = useState('Loading recommendations...')
   const [error, setError] = useState<string | null>(null)
-  const [retryCount, setRetryCount] = useState(0)
   const [expandedAdjuvant, setExpandedAdjuvant] = useState<string | null>(null)
   const [synergyData, setSynergyData] = useState<SynergyResponse | null>(null)
   const [synergyLoading, setSynergyLoading] = useState(false)
@@ -116,12 +115,6 @@ export function ProductRecommendations({
 
   // NeuroBotanica analysis hook
   const { analyze: analyzeNeuroBotanica, result: neurobotanicaResult, loading: neurobotanicaLoading, error: neurobotanicaError, tkConsentRequired } = useNeuroBotanicaAnalysis()
-
-  // Retry handler for failed requests
-  const handleRetry = useCallback(() => {
-    setRetryCount(prev => prev + 1)
-    setError(null)
-  }, [])
 
   useEffect(() => {
     setHasRunAnalysis(false)
@@ -241,7 +234,13 @@ export function ProductRecommendations({
     } finally {
       setLoading(false)
     }
-  }, [customer, onRecommendationsUpdate, retryCount])
+  }, [customer, onRecommendationsUpdate])
+
+  // Retry handler for failed requests
+  const handleRetry = useCallback(() => {
+    setError(null)
+    fetchRecommendations()
+  }, [fetchRecommendations])
 
   const fetchSynergyInsights = useCallback(async () => {
     if (!customer) {
