@@ -598,9 +598,9 @@ export default {
 
     // Customer Search Endpoint
     if (url.pathname === '/api/dispensary/search' && request.method === 'GET') {
-      const d1 = (env as any).DB;
+      const d1 = (env as any).DB || (env as any).neurobotanica_clinical_evidence;
       if (!d1) {
-        return new Response(JSON.stringify({ error: 'D1 database not configured' }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+        return new Response(JSON.stringify({ error: 'DB not configured' }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
       }
 
       try {
@@ -609,32 +609,33 @@ export default {
           return new Response(JSON.stringify({ customers: [] }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
         }
 
-        // Search dispensary_profiles table for customers matching the query
-        const queryLower = query.toLowerCase();
-        const searchResults = await d1.prepare(
-          `SELECT profile_id, profile_code, created_at, updated_at, completeness_score, primary_condition, data
-           FROM dispensary_profiles
-           WHERE LOWER(data) LIKE ? OR LOWER(profile_code) LIKE ? OR profile_id LIKE ?
-           ORDER BY updated_at DESC
-           LIMIT 10`
-        ).bind(`%${queryLower}%`, `%${queryLower}%`, `%${query}%`).all();
+        const loweredQuery = query.toLowerCase();
+        const results = await d1.prepare(`
+          SELECT profile_id, profile_code, created_at, updated_at, completeness_score, primary_condition, data
+          FROM dispensary_profiles
+          WHERE LOWER(data) LIKE ?
+            OR profile_id LIKE ?
+            OR LOWER(profile_code) LIKE ?
+          ORDER BY updated_at DESC
+          LIMIT 10
+        `).bind(`%${loweredQuery}%`, `%${query}%`, `%${loweredQuery}%`).all();
 
-        const customers = searchResults.results?.map(row => {
+        const customers = results.results?.map(row => {
           try {
-            const data = JSON.parse(row.data || '{}');
+            const parsed = JSON.parse(row.data || '{}');
             return {
               customer_id: row.profile_id,
-              first_name: data.first_name || '',
-              last_name: data.last_name || '',
-              phone: data.phone || '',
-              email: data.email || '',
-              conditions: data.conditions || [],
-              experience_level: data.experience_level || 'beginner',
-              age: data.age || undefined,
-              gender: data.gender || '',
-              weight: data.weight || undefined,
-              notes: data.notes || '',
-              biomarkers: data.biomarkers || {},
+              first_name: parsed.first_name || '',
+              last_name: parsed.last_name || '',
+              phone: parsed.phone || '',
+              email: parsed.email || '',
+              conditions: parsed.conditions || [],
+              experience_level: parsed.experience_level || 'beginner',
+              age: parsed.age || undefined,
+              gender: parsed.gender || '',
+              weight: parsed.weight || undefined,
+              notes: parsed.notes || '',
+              biomarkers: parsed.biomarkers || {},
               last_visit: row.updated_at,
               isNew: false,
               isSandbox: false
@@ -643,7 +644,7 @@ export default {
             console.error('Error parsing customer data:', e);
             return null;
           }
-        }).filter(customer => customer !== null) || [];
+        }).filter((customer): customer is NonNullable<typeof customer> => customer !== null) || [];
 
         return new Response(JSON.stringify({ customers }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
       } catch (error) {
