@@ -14,6 +14,8 @@ interface CustomerProfileProps {
 interface EditFormState {
   first_name: string
   last_name: string
+  phone: string
+  email: string
   age: string
   gender: string
   weight: string
@@ -61,6 +63,8 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
   const [editForm, setEditForm] = useState<EditFormState>(() => ({
     first_name: customer.first_name || '',
     last_name: customer.last_name || '',
+    phone: customer.phone || '',
+    email: customer.email || '',
     age: customer.age?.toString() || '',
     gender: customer.gender || '',
     weight: customer.weight?.toString() || '',
@@ -79,6 +83,8 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
     setEditForm({
       first_name: customer.first_name || '',
       last_name: customer.last_name || '',
+      phone: customer.phone || '',
+      email: customer.email || '',
       age: customer.age?.toString() || '',
       gender: customer.gender || '',
       weight: customer.weight?.toString() || '',
@@ -148,6 +154,8 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
       const profileData: CustomerProfilePayload = {
         first_name: editForm.first_name || undefined,
         last_name: editForm.last_name || undefined,
+        phone: editForm.phone || undefined,
+        email: editForm.email || undefined,
         age: parseInt(editForm.age || '', 10) || null,
         biological_sex: editForm.gender || 'unspecified',
         weight_kg: parseFloat(editForm.weight || '') || null,
@@ -232,6 +240,28 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
             value={editForm.last_name}
             onChange={(e) => setEditForm({ ...editForm, last_name: e.target.value })}
             placeholder="Enter last name"
+            className="input-modern"
+          />
+        </div>
+      </div>
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="block text-white/80 text-sm font-medium mb-2">Phone</label>
+          <input
+            type="tel"
+            value={editForm.phone}
+            onChange={(e) => setEditForm({ ...editForm, phone: e.target.value })}
+            placeholder="Phone Number"
+            className="input-modern"
+          />
+        </div>
+        <div>
+          <label className="block text-white/80 text-sm font-medium mb-2">Email</label>
+          <input
+            type="email"
+            value={editForm.email}
+            onChange={(e) => setEditForm({ ...editForm, email: e.target.value })}
+            placeholder="Email Address"
             className="input-modern"
           />
         </div>

@@ -13,6 +13,7 @@ export interface CustomerProfileData {
   first_name?: string
   last_name?: string
   phone?: string
+  email?: string
   age?: number | null
   notes?: string
   conditions: string[]
@@ -37,6 +38,8 @@ export interface ConditionPayload {
 export interface CustomerProfilePayload {
   first_name?: string
   last_name?: string
+  phone?: string
+  email?: string
   age: number | null
   biological_sex: string
   weight_kg: number | null

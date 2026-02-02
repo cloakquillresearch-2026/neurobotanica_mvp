@@ -24,7 +24,7 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
   const [isSearching, setIsSearching] = useState(false)
   const [showQuickStart, setShowQuickStart] = useState(true)
   const [showNewClientModal, setShowNewClientModal] = useState(false)
-  const [newClientName, setNewClientName] = useState({ first: '', last: '' })
+  const [newClientName, setNewClientName] = useState({ first: '', last: '', phone: '', email: '' })
 
   const handleSearch = async (term: string) => {
     if (!term.trim()) return
@@ -63,7 +63,8 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
         customer_id: `temp_${Date.now()}`,
         first_name: newClientName.first.trim(),
         last_name: newClientName.last.trim(),
-        phone: '',
+        phone: newClientName.phone.trim(),
+        email: newClientName.email.trim(),
         conditions: [],
         experience_level: 'beginner',
         age: undefined,
@@ -79,6 +80,8 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
       const response = await dispensaryAPI.createProfile({
         first_name: newCustomer.first_name,
         last_name: newCustomer.last_name,
+        phone: newCustomer.phone,
+        email: newCustomer.email,
         age: newCustomer.age || null,
         biological_sex: newCustomer.gender || '',
         weight_kg: newCustomer.weight || null,
@@ -105,7 +108,7 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
 
       // Close modal and reset form
       setShowNewClientModal(false)
-      setNewClientName({ first: '', last: '' })
+      setNewClientName({ first: '', last: '', phone: '', email: '' })
 
       // Select the customer to show consultation view
       onCustomerSelect(newCustomer)
@@ -256,30 +259,54 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
             <h3 className="text-xl font-bold text-white mb-4">New Client</h3>
             
             <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-white/80 text-sm font-medium mb-2">
+                    First Name *
+                  </label>
+                  <input
+                    type="text"
+                    value={newClientName.first}
+                    onChange={(e) => setNewClientName(prev => ({ ...prev, first: e.target.value }))}
+                    className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-emerald-400"
+                    placeholder="First Name"
+                    autoFocus
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-white/80 text-sm font-medium mb-2">
+                    Last Name *
+                  </label>
+                  <input
+                    type="text"
+                    value={newClientName.last}
+                    onChange={(e) => setNewClientName(prev => ({ ...prev, last: e.target.value }))}
+                    className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-emerald-400"
+                    placeholder="Last Name"
+                  />
+                </div>
+              </div>
+
               <div>
-                <label className="block text-white/80 text-sm font-medium mb-2">
-                  First Name *
-                </label>
+                <label className="block text-white/80 text-sm font-medium mb-2">Phone</label>
                 <input
-                  type="text"
-                  value={newClientName.first}
-                  onChange={(e) => setNewClientName(prev => ({ ...prev, first: e.target.value }))}
+                  type="tel"
+                  value={newClientName.phone}
+                  onChange={(e) => setNewClientName(prev => ({ ...prev, phone: e.target.value }))}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-emerald-400"
-                  placeholder="Enter first name"
-                  autoFocus
+                  placeholder="(555) 555-5555"
                 />
               </div>
               
               <div>
-                <label className="block text-white/80 text-sm font-medium mb-2">
-                  Last Name *
-                </label>
+                <label className="block text-white/80 text-sm font-medium mb-2">Email</label>
                 <input
-                  type="text"
-                  value={newClientName.last}
-                  onChange={(e) => setNewClientName(prev => ({ ...prev, last: e.target.value }))}
+                  type="email"
+                  value={newClientName.email}
+                  onChange={(e) => setNewClientName(prev => ({ ...prev, email: e.target.value }))}
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-emerald-400"
-                  placeholder="Enter last name"
+                  placeholder="client@example.com"
                   onKeyPress={(e) => e.key === 'Enter' && handleSaveNewClient()}
                 />
               </div>

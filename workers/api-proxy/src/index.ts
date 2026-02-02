@@ -610,13 +610,14 @@ export default {
         }
 
         // Search dispensary_profiles table for customers matching the query
+        const queryLower = query.toLowerCase();
         const searchResults = await d1.prepare(
           `SELECT profile_id, profile_code, created_at, updated_at, completeness_score, primary_condition, data
            FROM dispensary_profiles
-           WHERE data LIKE ? OR profile_code LIKE ?
+           WHERE LOWER(data) LIKE ? OR LOWER(profile_code) LIKE ? OR profile_id LIKE ?
            ORDER BY updated_at DESC
            LIMIT 10`
-        ).bind(`%${query}%`, `%${query}%`).all();
+        ).bind(`%${queryLower}%`, `%${queryLower}%`, `%${query}%`).all();
 
         const customers = searchResults.results?.map(row => {
           try {
