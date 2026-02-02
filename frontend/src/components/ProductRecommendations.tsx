@@ -11,6 +11,7 @@ interface ProductRecommendationsProps {
   customer: CustomerProfileData | null
   recommendations: Recommendation[]
   onRecommendationsUpdate: (recommendations: Recommendation[]) => void
+  isSandboxMode?: boolean
 }
 
 export interface Recommendation {
@@ -103,6 +104,7 @@ export function ProductRecommendations({
   customer,
   recommendations,
   onRecommendationsUpdate,
+  isSandboxMode = false,
 }: ProductRecommendationsProps) {
   const [loading, setLoading] = useState(false)
   const [loadingMessage, setLoadingMessage] = useState('Loading recommendations...')
@@ -312,8 +314,10 @@ export function ProductRecommendations({
   }, [fetchRecommendations])
 
   useEffect(() => {
-    fetchSynergyInsights()
-  }, [fetchSynergyInsights])
+    if (!isSandboxMode) {
+      fetchSynergyInsights()
+    }
+  }, [fetchSynergyInsights, isSandboxMode])
 
   const getMatchBadgeClass = (score: number) => {
     if (score >= 0.9) return 'match-badge-high'

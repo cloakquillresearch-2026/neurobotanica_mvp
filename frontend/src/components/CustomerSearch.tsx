@@ -4,6 +4,7 @@ import type { CustomerProfileData } from '@/types/customer'
 
 interface CustomerSearchProps {
   onCustomerSelect: (customer: CustomerProfileData) => void
+  isSandboxMode?: boolean
 }
 
 const COMMON_CONDITIONS = [
@@ -17,7 +18,7 @@ const COMMON_CONDITIONS = [
   { id: 'weight_management', label: 'Metabolism', emoji: '⚖️', color: 'from-cyan-500 to-blue-500' },
 ]
 
-export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
+export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: CustomerSearchProps) {
   const [searchTerm, setSearchTerm] = useState('')
   const [searchResults, setSearchResults] = useState<CustomerProfileData[]>([])
   const [isSearching, setIsSearching] = useState(false)
@@ -142,18 +143,20 @@ export function CustomerSearch({ onCustomerSelect }: CustomerSearchProps) {
             <span className="font-bold text-white">Quick Start: What brings them in today?</span>
           </div>
           
-          {/* New Client Button */}
-          <button
-            onClick={handleNewClient}
-            className="w-full mb-4 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-400 hover:to-indigo-400 text-white font-semibold rounded-xl transition-all border border-purple-400/30 shadow-lg"
-          >
-            <div className="flex items-center justify-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-              </svg>
-              + New Client
-            </div>
-          </button>
+          {/* New Client Button - Hide in sandbox mode */}
+          {!isSandboxMode && (
+            <button
+              onClick={handleNewClient}
+              className="w-full mb-4 py-3 bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-400 hover:to-indigo-400 text-white font-semibold rounded-xl transition-all border border-purple-400/30 shadow-lg"
+            >
+              <div className="flex items-center justify-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                </svg>
+                + New Client
+              </div>
+            </button>
+          )}
           
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {COMMON_CONDITIONS.map((condition) => (

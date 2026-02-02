@@ -559,7 +559,7 @@ export default function BudtenderAssistant() {
                   </div>
                   <h2 id="consultation-heading" className="text-xl font-bold text-white">Customer Consultation</h2>
                 </div>
-                <CustomerSearch key={customerSearchKey} onCustomerSelect={setCustomer} />
+                <CustomerSearch key={customerSearchKey} onCustomerSelect={setCustomer} isSandboxMode={isSandboxMode} />
               </section>
 
               {/* Customer Profile */}
@@ -669,6 +669,7 @@ export default function BudtenderAssistant() {
                     customer={customer}
                     recommendations={recommendations}
                     onRecommendationsUpdate={setRecommendations}
+                    isSandboxMode={isSandboxMode}
                   />
                 </section>
               ) : (
