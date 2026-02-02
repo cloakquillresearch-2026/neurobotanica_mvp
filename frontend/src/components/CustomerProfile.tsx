@@ -112,6 +112,7 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
   }
 
   const handleSave = async () => {
+    console.log('Save handler called')
     const biomarkerPayload = Object.entries(editForm.biomarkers)
       .reduce<Record<string, number>>((acc, [key, value]) => {
         const parsed = parseFloat(value)
@@ -160,11 +161,17 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
         notes: editForm.notes || undefined,
       }
 
+      console.log('profileData:', profileData)
+      console.log('customer.customer_id:', customer.customer_id)
+      console.log('is temp id:', customer.customer_id.startsWith('temp_'))
+
       let savedProfile
       if (customer.customer_id && !customer.customer_id.startsWith('temp_')) {
+        console.log('Updating existing profile')
         // Update existing profile
         savedProfile = await dispensaryAPI.updateProfile(customer.customer_id, profileData)
       } else {
+        console.log('Creating new profile')
         // Create new profile
         savedProfile = await dispensaryAPI.createProfile(profileData)
       }
