@@ -11,7 +11,6 @@ interface ProductRecommendationsProps {
   customer: CustomerProfileData | null
   recommendations: Recommendation[]
   onRecommendationsUpdate: (recommendations: Recommendation[]) => void
-  isSandboxMode?: boolean
 }
 
 export interface Recommendation {
@@ -104,7 +103,6 @@ export function ProductRecommendations({
   customer,
   recommendations,
   onRecommendationsUpdate,
-  isSandboxMode = false,
 }: ProductRecommendationsProps) {
   const [loading, setLoading] = useState(false)
   const [loadingMessage, setLoadingMessage] = useState('Loading recommendations...')
@@ -365,7 +363,9 @@ export function ProductRecommendations({
 
         {!synergyError && !synergyLoading && !synergyData && (
           <p className="text-white/70 text-sm">
-            Add biomarkers or conditions to unlock personalized cross-kingdom guidance.
+            {hasRunAnalysis
+              ? 'Add biomarkers or conditions to unlock personalized cross-kingdom guidance.'
+              : 'Run Analysis to generate TS-PS-001 insights.'}
           </p>
         )}
 

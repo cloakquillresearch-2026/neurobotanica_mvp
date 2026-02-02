@@ -669,7 +669,6 @@ export default function BudtenderAssistant() {
                     customer={customer}
                     recommendations={recommendations}
                     onRecommendationsUpdate={setRecommendations}
-                    isSandboxMode={isSandboxMode}
                   />
                 </section>
               ) : (
