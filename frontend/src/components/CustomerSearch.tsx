@@ -58,6 +58,7 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
     if (!newClientName.first.trim() || !newClientName.last.trim()) return
 
     try {
+      console.log('Save Client clicked (new client modal)')
       const newCustomer: CustomerProfileData = {
         customer_id: `temp_${Date.now()}`,
         first_name: newClientName.first.trim(),
@@ -91,8 +92,11 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
         notes: newCustomer.notes
       })
 
+      console.log('Create profile response:', response?.data)
+
       // Update the customer ID with the one from the database
       newCustomer.customer_id = response.data.customer_id
+      newCustomer.isNew = false
 
       // Close modal and reset form
       setShowNewClientModal(false)

@@ -114,6 +114,7 @@ export function ProductRecommendations({
   const [synergyData, setSynergyData] = useState<SynergyResponse | null>(null)
   const [synergyLoading, setSynergyLoading] = useState(false)
   const [synergyError, setSynergyError] = useState<string | null>(null)
+  const [hasRunAnalysis, setHasRunAnalysis] = useState(false)
 
   // NeuroBotanica analysis hook
   const { analyze: analyzeNeuroBotanica, result: neurobotanicaResult, loading: neurobotanicaLoading, error: neurobotanicaError, tkConsentRequired } = useNeuroBotanicaAnalysis()
@@ -123,6 +124,13 @@ export function ProductRecommendations({
     setRetryCount(prev => prev + 1)
     setError(null)
   }, [])
+
+  useEffect(() => {
+    setHasRunAnalysis(false)
+    setSynergyData(null)
+    setSynergyError(null)
+    setSynergyLoading(false)
+  }, [customer])
 
   const fetchRecommendations = useCallback(async () => {
     if (!customer || customer.isNew) {
@@ -263,6 +271,7 @@ export function ProductRecommendations({
 
     if (normalizedConditions.length === 0 && Object.keys(biomarkerPayload).length === 0) {
       setSynergyData(null)
+      setSynergyLoading(false)
       return
     }
 
@@ -292,6 +301,9 @@ export function ProductRecommendations({
   const runNeuroBotanicaAnalysis = useCallback(async () => {
     if (!customer) return
 
+    setHasRunAnalysis(true)
+    await fetchSynergyInsights()
+
     // Extract compound IDs from customer data (assuming they have selected compounds)
     const compoundIds = customer.selected_compounds || ['cbd', 'thc'] // Default fallback
     
@@ -307,17 +319,12 @@ export function ProductRecommendations({
     const tier = customer.tier || 'computational_only'
 
     await analyzeNeuroBotanica(compoundIds, demographics, tier)
-  }, [customer, analyzeNeuroBotanica])
+  }, [customer, analyzeNeuroBotanica, fetchSynergyInsights])
 
   useEffect(() => {
     fetchRecommendations()
   }, [fetchRecommendations])
 
-  useEffect(() => {
-    if (!isSandboxMode) {
-      fetchSynergyInsights()
-    }
-  }, [fetchSynergyInsights, isSandboxMode])
 
   const getMatchBadgeClass = (score: number) => {
     if (score >= 0.9) return 'match-badge-high'

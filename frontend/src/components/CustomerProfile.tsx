@@ -101,6 +101,8 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
     { key: 'il1b', label: 'IL-1β', unit: 'pg/mL', helper: 'Neuroinflammation + immune response' },
   ]), [])
 
+  const isRegistration = Boolean(customer.isNew || customer.customer_id?.startsWith('temp_'))
+
   const handleBiomarkerChange = (field: string, value: string) => {
     setEditForm((prev) => ({
       ...prev,
@@ -200,6 +202,33 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
       <div role="status" aria-live="polite" className="sr-only">
         {saving ? 'Saving profile' : 'Profile ready'}
       </div>
+      {/* Name Inputs */}
+      <div className="grid grid-cols-2 gap-3">
+        <div>
+          <label className="block text-white/80 text-sm font-medium mb-2">
+            First Name <span className="text-white/40">(optional)</span>
+          </label>
+          <input
+            type="text"
+            value={editForm.first_name}
+            onChange={(e) => setEditForm({ ...editForm, first_name: e.target.value })}
+            placeholder="Enter first name"
+            className="input-modern"
+          />
+        </div>
+        <div>
+          <label className="block text-white/80 text-sm font-medium mb-2">
+            Last Name <span className="text-white/40">(optional)</span>
+          </label>
+          <input
+            type="text"
+            value={editForm.last_name}
+            onChange={(e) => setEditForm({ ...editForm, last_name: e.target.value })}
+            placeholder="Enter last name"
+            className="input-modern"
+          />
+        </div>
+      </div>
       {/* Experience Level Selection */}
       <div>
         <label className="block text-white/80 text-sm font-medium mb-3">
@@ -230,35 +259,37 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
       </div>
 
       {/* Conditions Selection */}
-      <div>
-        <label className="block text-white/80 text-sm font-medium mb-3">
-          Primary Conditions <span className="text-white/40">(tap to select)</span>
-        </label>
-        <div className="grid grid-cols-2 gap-2">
-          {CONDITION_OPTIONS.map((condition) => {
-            const isSelected = editForm.conditions.includes(condition.value)
-            return (
-              <button
-                key={condition.value}
-                onClick={() => toggleCondition(condition.value)}
-                className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
-                  isSelected
-                    ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/30'
-                    : 'bg-white/10 text-white/80 hover:bg-white/20 border border-white/20'
-                }`}
-              >
-                <span className="text-xl">{condition.emoji}</span>
-                <span className="font-medium text-sm">{condition.label}</span>
-                {isSelected && (
-                  <svg className="w-5 h-5 ml-auto" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                )}
-              </button>
-            )
-          })}
+      {!isRegistration && (
+        <div>
+          <label className="block text-white/80 text-sm font-medium mb-3">
+            Primary Conditions <span className="text-white/40">(tap to select)</span>
+          </label>
+          <div className="grid grid-cols-2 gap-2">
+            {CONDITION_OPTIONS.map((condition) => {
+              const isSelected = editForm.conditions.includes(condition.value)
+              return (
+                <button
+                  key={condition.value}
+                  onClick={() => toggleCondition(condition.value)}
+                  className={`flex items-center gap-3 p-3 rounded-xl transition-all duration-200 ${
+                    isSelected
+                      ? 'bg-gradient-to-r from-emerald-500 to-teal-500 text-white shadow-lg shadow-emerald-500/30'
+                      : 'bg-white/10 text-white/80 hover:bg-white/20 border border-white/20'
+                  }`}
+                >
+                  <span className="text-xl">{condition.emoji}</span>
+                  <span className="font-medium text-sm">{condition.label}</span>
+                  {isSelected && (
+                    <svg className="w-5 h-5 ml-auto" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  )}
+                </button>
+              )
+            })}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Age Input */}
       <div>
@@ -272,34 +303,6 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
           placeholder="Enter age"
           className="input-modern"
         />
-      </div>
-
-      {/* Name Inputs */}
-      <div className="grid grid-cols-2 gap-3">
-        <div>
-          <label className="block text-white/80 text-sm font-medium mb-2">
-            First Name <span className="text-white/40">(optional)</span>
-          </label>
-          <input
-            type="text"
-            value={editForm.first_name}
-            onChange={(e) => setEditForm({ ...editForm, first_name: e.target.value })}
-            placeholder="Enter first name"
-            className="input-modern"
-          />
-        </div>
-        <div>
-          <label className="block text-white/80 text-sm font-medium mb-2">
-            Last Name <span className="text-white/40">(optional)</span>
-          </label>
-          <input
-            type="text"
-            value={editForm.last_name}
-            onChange={(e) => setEditForm({ ...editForm, last_name: e.target.value })}
-            placeholder="Enter last name"
-            className="input-modern"
-          />
-        </div>
       </div>
 
       {/* Gender Selection */}
