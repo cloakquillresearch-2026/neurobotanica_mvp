@@ -57,6 +57,7 @@ export interface TransactionItemPayload {
   price: number
   thc_percent?: number
   cbd_percent?: number
+  product_name?: string
 }
 
 export interface TransactionPayload {
@@ -64,6 +65,8 @@ export interface TransactionPayload {
   items: TransactionItemPayload[]
   total_amount: number
   timestamp: string
+  notes?: string
+  status?: string
 }
 
 export interface ConditionProfilePayload {

@@ -112,6 +112,7 @@ export function ProductRecommendations({
   const [synergyLoading, setSynergyLoading] = useState(false)
   const [synergyError, setSynergyError] = useState<string | null>(null)
   const [hasRunAnalysis, setHasRunAnalysis] = useState(false)
+  const [isCompleting, setIsCompleting] = useState(false)
 
   // NeuroBotanica analysis hook
   const { analyze: analyzeNeuroBotanica, result: neurobotanicaResult, loading: neurobotanicaLoading, error: neurobotanicaError, tkConsentRequired } = useNeuroBotanicaAnalysis()
@@ -317,6 +318,40 @@ export function ProductRecommendations({
 
     await analyzeNeuroBotanica(compoundIds, demographics, tier)
   }, [customer, analyzeNeuroBotanica, fetchSynergyInsights])
+
+  const handleCompleteConsultation = useCallback(async () => {
+    if (!customer?.customer_id || recommendations.length === 0) {
+      alert('Select a customer and generate recommendations before completing the consultation.')
+      return
+    }
+
+    setIsCompleting(true)
+    const items = recommendations.map((rec, index) => ({
+      product_id: rec.product_id || `rec_${index}`,
+      product_name: rec.product_name || 'Recommendation',
+      quantity: 1,
+      price: 0,
+      thc_percent: rec.thc_percent,
+      cbd_percent: rec.cbd_percent,
+    }))
+
+    try {
+      await dispensaryAPI.createTransaction({
+        customer_id: customer.customer_id,
+        items,
+        total_amount: 0,
+        timestamp: new Date().toISOString(),
+        notes: `Consultation completed for ${customer.conditions?.join(', ') || 'general wellness'}`,
+        status: 'completed'
+      })
+      alert('Consultation saved successfully!')
+    } catch (error) {
+      console.error('Failed to complete consultation:', error)
+      alert('Failed to save consultation. Please try again.')
+    } finally {
+      setIsCompleting(false)
+    }
+  }, [customer, recommendations])
 
   useEffect(() => {
     fetchRecommendations()
@@ -785,6 +820,30 @@ export function ProductRecommendations({
           
         </div>
         ))}
+
+        {recommendations.length > 0 && customer && (
+          <div className="mt-8 flex justify-center border-t border-white/10 pt-6">
+            <button
+              onClick={handleCompleteConsultation}
+              disabled={isCompleting}
+              className="btn-primary px-8 py-4 text-lg shadow-xl shadow-emerald-500/20 flex items-center gap-3 disabled:opacity-70"
+            >
+              {isCompleting ? (
+                <>
+                  <span className="spinner w-5 h-5 border-2 border-white border-t-transparent" aria-hidden="true" />
+                  Saving Record...
+                </>
+              ) : (
+                <>
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Complete Consultation
+                </>
+              )}
+            </button>
+          </div>
+        )}
       </div>
     )
   }

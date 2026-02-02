@@ -75,8 +75,8 @@ export const dispensaryAPI = {
   getProfile: (profileId: string) => budtenderApi.get(`/api/dispensary/profile/${profileId}`),
   updateProfile: (profileId: string, profile: CustomerProfilePayload) => budtenderApi.put(`/api/dispensary/profile/${profileId}`, profile),
 
-  // Transactions (local API)
-  createTransaction: (transaction: TransactionPayload) => api.post('/api/dispensary/transaction', transaction),
+  // Transactions (Cloudflare Worker API)
+  createTransaction: (transaction: TransactionPayload) => budtenderApi.post('/api/dispensary/transaction', transaction),
 
   // D1-backed Recommendations (Cloudflare Worker)
   getRecommendations: async (data: Record<string, unknown>) => {
