@@ -179,11 +179,17 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
       }
 
       const returnedId = savedProfile?.data?.customer_id || savedProfile?.data?.profile_id
+
+      // FIX: Ensure we have an ID before updating state
+      if (!returnedId) {
+        throw new Error('API returned success but no profile_id')
+      }
+
       onProfileUpdate(buildUpdatedCustomer(returnedId))
     } catch (error) {
       console.error('Failed to save customer profile:', error)
-      // Still update local state even if API fails
-      onProfileUpdate(buildUpdatedCustomer())
+      // FIX: Show alert and DO NOT update local state
+      alert('Failed to save profile. Please check your connection.')
     } finally {
       setSaving(false)
     }

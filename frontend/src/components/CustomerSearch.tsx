@@ -94,8 +94,13 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
 
       console.log('Create profile response:', response?.data)
 
+      const returnedId = response?.data?.customer_id || response?.data?.profile_id || response?.data?.data?.customer_id || response?.data?.data?.profile_id
+      if (!returnedId) {
+        throw new Error('Missing customer id in create profile response')
+      }
+
       // Update the customer ID with the one from the database
-      newCustomer.customer_id = response.data.customer_id || response.data.profile_id
+      newCustomer.customer_id = returnedId
       newCustomer.isNew = false
 
       // Close modal and reset form
