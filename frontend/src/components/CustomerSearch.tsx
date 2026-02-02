@@ -114,6 +114,33 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
       onCustomerSelect(newCustomer)
       setShowQuickStart(false)
     } catch (error) {
+      const status = (error as { response?: { status?: number; data?: any } })?.response?.status
+      const data = (error as { response?: { data?: any } })?.response?.data
+      if (status === 409 && data?.customer_id) {
+        const existingCustomer: CustomerProfileData = {
+          customer_id: data.customer_id,
+          first_name: data.existing?.first_name || newClientName.first.trim(),
+          last_name: data.existing?.last_name || newClientName.last.trim(),
+          phone: data.existing?.phone || newClientName.phone.trim(),
+          email: data.existing?.email || newClientName.email.trim(),
+          conditions: data.existing?.conditions || [],
+          experience_level: data.existing?.experience_level || 'beginner',
+          age: data.existing?.age || undefined,
+          gender: data.existing?.gender || '',
+          weight: data.existing?.weight || undefined,
+          notes: data.existing?.notes || '',
+          biomarkers: data.existing?.biomarkers || {},
+          isNew: false,
+          isSandbox: false
+        }
+
+        setShowNewClientModal(false)
+        setNewClientName({ first: '', last: '', phone: '', email: '' })
+        onCustomerSelect(existingCustomer)
+        setShowQuickStart(false)
+        alert('Customer already exists. Loaded existing profile.')
+        return
+      }
       console.error('Failed to create new client:', error)
       // Show error to user instead of creating local customer
       alert('Failed to save client to database. Please try again.')

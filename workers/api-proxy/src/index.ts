@@ -709,6 +709,38 @@ export default {
         const rawText = await request.text();
         const profileData = JSON.parse(rawText);
 
+        const email = (profileData.email || '').toString().trim().toLowerCase();
+        const phone = (profileData.phone || '').toString().trim().toLowerCase();
+
+        if (email || phone) {
+          const emailPattern = email ? `%"email":"${email}%` : null;
+          const phonePattern = phone ? `%"phone":"${phone}%` : null;
+          const existing = await d1.prepare(
+            `SELECT profile_id, data
+             FROM dispensary_profiles
+             WHERE (${email ? 'LOWER(data) LIKE ?' : '1=0'}) OR (${phone ? 'LOWER(data) LIKE ?' : '1=0'})
+             LIMIT 1`
+          ).bind(
+            ...(email ? [emailPattern] : []),
+            ...(phone ? [phonePattern] : [])
+          ).first();
+
+          if (existing) {
+            let existingData: Record<string, unknown> = {};
+            try {
+              existingData = JSON.parse(existing.data || '{}');
+            } catch {
+              existingData = {};
+            }
+
+            return new Response(JSON.stringify({
+              error: 'Customer already exists',
+              customer_id: existing.profile_id,
+              existing: existingData
+            }), { status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+          }
+        }
+
         const profileId = profileData.customer_id || `profile_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         const profileCode = profileData.phone || `PC${Date.now()}`;
 
