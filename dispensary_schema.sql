@@ -28,11 +28,12 @@ CREATE TABLE IF NOT EXISTS dispensary_feedback (
 
 CREATE TABLE IF NOT EXISTS dispensary_transactions (
     transaction_id TEXT PRIMARY KEY,
-    profile_id TEXT,
-    status TEXT DEFAULT 'completed',
-    products TEXT, -- JSON array of products
+    customer_id TEXT,
     created_at TEXT DEFAULT (datetime('now')),
-    FOREIGN KEY (profile_id) REFERENCES dispensary_profiles(profile_id)
+    total_amount REAL,
+    products_json TEXT,
+    notes TEXT,
+    status TEXT DEFAULT 'completed'
 );
 
 CREATE TABLE IF NOT EXISTS inflammatory_profiles (

@@ -798,6 +798,59 @@ export default {
       }
     }
 
+    if (url.pathname === '/api/dispensary/transaction' && request.method === 'POST') {
+      const d1 = (env as any).DB || (env as any).neurobotanica_clinical_evidence;
+      if (!d1) {
+        return new Response(JSON.stringify({ error: 'DB not configured' }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+
+      try {
+        const data = await request.json();
+        const transactionId = `txn_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
+
+        await d1.prepare(`
+          CREATE TABLE IF NOT EXISTS dispensary_transactions (
+            transaction_id TEXT PRIMARY KEY,
+            customer_id TEXT,
+            created_at TEXT,
+            total_amount REAL,
+            products_json TEXT,
+            notes TEXT,
+            status TEXT
+          )
+        `).run();
+
+        await d1.prepare(`
+          INSERT INTO dispensary_transactions (
+            transaction_id,
+            customer_id,
+            created_at,
+            total_amount,
+            products_json,
+            notes,
+            status
+          ) VALUES (?, ?, ?, ?, ?, ?, ?)
+        `).bind(
+          transactionId,
+          data.customer_id || null,
+          new Date().toISOString(),
+          Number(data.total_amount ?? data.total ?? 0),
+          JSON.stringify(data.items || data.products || []),
+          data.notes || '',
+          data.status || 'completed'
+        ).run();
+
+        return new Response(JSON.stringify({
+          success: true,
+          transaction_id: transactionId,
+          message: 'Transaction recorded'
+        }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      } catch (error) {
+        console.error('Error recording transaction:', error);
+        return new Response(JSON.stringify({ error: (error as Error).message }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+    }
+
     // Other API requests: return 404 (no longer proxying to Railway)
     if (isApiRequest) {
       return new Response(JSON.stringify({ error: 'Endpoint not found' }), {
