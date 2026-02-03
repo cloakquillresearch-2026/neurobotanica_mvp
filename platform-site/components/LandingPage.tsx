@@ -104,7 +104,7 @@ export default function LandingPage() {
         <div className="flex flex-col gap-3 sm:items-end">
           <p className="text-sm font-mono text-indigo/70">Average onboarding timeline · <span className="font-semibold text-charcoal">4 weeks</span></p>
           <a
-            href="mailto:pilots@neuro-botanica.com?subject=Pilot%20Briefing%20Request"
+            href="mailto:contessapetrini@cloakquillresearch.org?subject=Pilot%20Briefing%20Request"
             className="button-primary text-center whitespace-nowrap"
           >
             Email for pilot briefing
