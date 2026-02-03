@@ -28,38 +28,44 @@ export type HeroMetric = {
 };
 
 export const heroMetrics: HeroMetric[] = [
-  { value: '500+', label: 'Studies Parsed', detail: 'Peer-reviewed + ethnobotanical corpus' },
+  { value: '505+', label: 'Studies Parsed', detail: 'Peer-reviewed + ethnobotanical corpus' },
   { value: '49.8%', label: 'Terpene Lift', detail: 'Accuracy boost over legacy tooling' },
   { value: '<10s', label: 'Edge Latency', detail: 'Cloudflare Workers global average' }
 ];
 
-export const partnerSeals: string[] = ['GuideStar · Silver', 'Cloudflare Impact', 'Stripe Nonprofit'];
+export const partnerSeals: string[] = ['GuideStar · Platinum', 'Cloudflare Impact', 'Stripe Nonprofit'];
 
 export type PlatformHighlight = {
   title: string;
   description: string;
   bullets: string[];
-  cta: string;
+  engines: string;
 };
 
 export const platformHighlights: PlatformHighlight[] = [
   {
     title: 'Evidence-Based',
-    description: 'Backed by peer-reviewed research with cultural provenance.',
-    bullets: ['TK validation engine', 'Clinical tiering', 'Bias-aware scoring'],
-    cta: 'See validation matrix'
+    description: 'Backed by peer-reviewed research with cultural provenance and ChemPath™ + BioPath™ validation.',
+    bullets: ['TK validation engine', 'Clinical tiering workflows', 'Bias-aware scoring models'],
+    engines: 'ChemPath™ · BioPath™'
   },
   {
     title: 'AI-Powered',
-    description: 'Cross-kingdom inference models tuned on cannabis-specific corpora.',
-    bullets: ['Cloudflare Workers edge', 'Federated learning ready', 'HIPAA-aligned logging'],
-    cta: 'Inspect architecture'
+    description: 'GenomePath™ inference models tuned on cannabis-specific corpora and cross-kingdom embeddings.',
+    bullets: ['Cloudflare Workers edge lattice', 'Federated learning ready'],
+    engines: 'GenomePath™'
   },
   {
     title: 'Comprehensive',
-    description: 'Terpene, cannabinoid, and polysaccharide dimers in one cockpit.',
+    description: 'RegPath™ keeps terpene, cannabinoid, and polysaccharide dimers in one cockpit with regulatory telemetry.',
     bullets: ['Budtender tablet mode', 'POS telemetry ingestion', 'Regulatory snapshots'],
-    cta: 'Preview cockpit'
+    engines: 'RegPath™'
+  },
+  {
+    title: "Cloak & Quill Research",
+    description: '501(c)(3) nonprofit stewarding NeuroBotanica for public benefit and open scientific access.',
+    bullets: ['Public-benefit stewardship', 'Nonprofit research oversight', 'Open evidence distribution to partners'],
+    engines: 'Public benefit charter'
   }
 ];
 
@@ -111,20 +117,28 @@ export const terpeneMetrics: TerpeneMetric[] = [
 
 export type CaseBrief = {
   title: string;
-  description: string;
-  results: string;
-  tags: string[];
-  outcome: string;
-  detail: string;
+  subtitle: string;
+  topic: string;
+  keyInsight: string;
+  solution: string;
+  citation: string;
 };
 
 export const caseBriefs: CaseBrief[] = [
   {
-    title: 'Clinical Study',
-    description: 'Analyzed therapeutic profiles',
-    results: '95% accuracy in predictions',
-    tags: ['Clinical', 'Research', 'Validated'],
-    outcome: '95% accuracy achieved',
-    detail: 'Comprehensive analysis of botanical therapeutic profiles'
+    title: 'Cannabis Therapeutics (JAMA Review 2026)',
+    subtitle: 'Evidence gap across U.S. clinicians',
+    topic: 'Therapeutic use of cannabis and cannabinoids',
+    keyInsight: 'Only 33% of clinicians feel confident in cannabis knowledge while 86% are requesting structured education.',
+    solution: 'NeuroBotanica’s tiered evidence engine (ChemPath™ + BioPath™) delivers clinician-ready packets with TK provenance.',
+    citation: 'Hsu M, et al. JAMA. 2026;335(4):345-359.'
+  },
+  {
+    title: 'Psilocybin Analogs & Cellular Longevity',
+    subtitle: 'Emory University · Discover Magazine 2026',
+    topic: 'Psilocybin analogs and anti-aging outcomes',
+    keyInsight: 'Metabolized psilocin extended human cell lifespan by 50%+ and preserved telomeres in vitro.',
+    solution: 'Our Compliant Analog Discovery workflow flags non-hallucinogenic variants for regulated therapeutic pipelines.',
+    citation: 'Source: Discover Magazine / Emory University research notes.'
   }
 ];
