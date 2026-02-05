@@ -1,247 +1,212 @@
 """
-ClinPath REST API Router
+ClinPath API Router — Therapeutic Prediction Endpoints
+File: backend/routers/clinpath.py
 
-Trade Secret: Exposes TS-CP-002 ($3.2B Clinical Trial Optimization Engine)
-via REST API with authentication and rate limiting.
+Integrates with neurobotanica_formulations, clinpath_predictions,
 
-CONFIDENTIAL - PREMIUM TIER ACCESS ONLY
 
-Endpoints:
-- POST /api/clinpath/optimize: Optimize clinical trial design
-- POST /api/clinpath/predict-approval: Predict approval probability
-- POST /api/clinpath/jurisdiction-sequence: Get optimal jurisdiction sequence
-- GET /api/clinpath/optimization/{id}: Retrieve optimization result
-- GET /api/clinpath/statistics: Get optimization statistics
+🔌 PLUG-IN POINTS marked where trained ML models replace rule-based MVP logic.
 """
 
-from typing import Dict, List, Optional, Any
-from fastapi import APIRouter, HTTPException, Depends, status, Request
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
-from sqlalchemy.orm import Session
-import uuid
+from typing import Optional
 from datetime import datetime
-import logging
-import os
+import hashlib
+import json
+import uuid
 
-from backend.models.database import get_db
-from backend.services.clinpath_optimizer import (
-    ClinicalTrialOptimizer,
-    TrialPhase,
-    RegulatoryPathway,
-)
-
-# Premium tier access control (enabled via environment variable)
-REQUIRE_PREMIUM = os.getenv("NEUROBOTANICA_REQUIRE_PREMIUM", "false").lower() == "true"
-
-if REQUIRE_PREMIUM:
-    from backend.middleware.token_validation import get_clinpath_user
-
-logger = logging.getLogger(__name__)
-router = APIRouter(tags=["ClinPath"])
+router = APIRouter(prefix="/api/clinpath", tags=["clinpath"])
 
 
-# =============================================================================
-# Request/Response Models
-# =============================================================================
+# ============================================================================
+# REQUEST/RESPONSE MODELS
+# ============================================================================
 
-class TrialOptimizationRequest(BaseModel):
-    """Request model for clinical trial optimization."""
-    compound_name: str = Field(..., description="Compound name")
-    indication: str = Field(..., description="Target indication")
-    target_jurisdictions: List[str] = Field(
-        default=["USA", "CAN", "EUR", "AUS"],
-        description="Target jurisdictions (ISO codes)"
-    )
-    budget_constraint_usd: Optional[float] = Field(None, description="Budget constraint in USD")
-    timeline_constraint_months: Optional[int] = Field(None, description="Timeline constraint in months")
-    use_tm_pathway: bool = Field(default=True, description="Consider traditional medicine pathways")
+class PatientProfile(BaseModel):
+    age_range: Optional[str] = None
+    sex: Optional[str] = None
+    genetic_ancestry: Optional[str] = "unknown"
+    cyp2c9_variant: Optional[str] = None
+    faah_variant: Optional[str] = None
 
 
-class ApprovalPredictionRequest(BaseModel):
-    """Request model for approval probability prediction."""
-    compound_name: str = Field(..., description="Compound name")
-    indication: str = Field(..., description="Target indication")
-    jurisdiction: str = Field(default="USA", description="Target jurisdiction")
-    evidence_strength: float = Field(default=0.7, ge=0.0, le=1.0, description="Evidence strength")
-    regulatory_precedents: int = Field(default=5, description="Number of regulatory precedents")
+class FormulationInput(BaseModel):
+    compound_ids: list[str]
+    cannabinoid_profile: dict
+    terpene_profile: dict
+    polysaccharide_profile: Optional[dict] = None
+    primary_indication: str
+    secondary_indications: Optional[list[str]] = None
 
 
-class JurisdictionSequenceRequest(BaseModel):
-    """Request model for jurisdiction sequencing."""
-    compound_name: str = Field(..., description="Compound name")
-    indication: str = Field(..., description="Target indication")
-    target_jurisdictions: List[str] = Field(..., description="Jurisdictions to sequence")
+class PredictionRequest(BaseModel):
+    patient: PatientProfile
+    formulation: FormulationInput
+    dispensary_id: Optional[str] = None
+    customer_id: Optional[str] = None
 
 
-class TrialOptimizationResponse(BaseModel):
-    """Response model for trial optimization."""
-    optimization_id: str
-    compound_name: str
-    indication: str
-    recommended_pathway: str
-    optimized_timeline_months: int
-    optimized_cost_usd: float
-    cost_savings_percent: float
-    timeline_savings_percent: float
-    approval_probability: float
-    jurisdiction_sequence: List[Dict[str, Any]]
-    phase_details: Dict[str, Any]
-    key_success_factors: List[str]
-    created_at: str
-
-
-class ApprovalPredictionResponse(BaseModel):
-    """Response model for approval prediction."""
+class TherapeuticPrediction(BaseModel):
     prediction_id: str
-    compound_name: str
-    indication: str
-    jurisdiction: str
-    approval_probability: float
-    confidence_interval: List[float]
-    key_factors: Dict[str, float]
-    recommendations: List[str]
+    formulation_id: str
+    anxiolytic_score: float
+    antidepressant_score: float
+    sedative_score: float
+    analgesic_score: float
+    memory_impact: float
+    focus_impact: float
+    neuroprotection_score: float
+    psychoactivity_risk: float
+    dependence_risk: float
+    sedation_risk: float
+    anxiety_risk: float
+    overall_confidence: float
+    evidence_quality: str
+    bias_correction_applied: bool = True
+    demographic_adjustment_factor: float = 1.0
+    model_version: str = "v1.0-mvp"
 
 
-# =============================================================================
-# API Endpoints
-# =============================================================================
+# ============================================================================
+# PREDICTION ENGINE (MVP — rule-based, placeholder for trained ML models)
+# ============================================================================
 
-@router.post("/optimize", response_model=TrialOptimizationResponse)
-async def optimize_clinical_trial(
-    request: TrialOptimizationRequest,
-    db: Session = Depends(get_db)
-) -> TrialOptimizationResponse:
-    """Optimize clinical trial design for a compound/indication.
-    
-    This endpoint applies ClinPath's proprietary optimization algorithms
-    to reduce costs (40-50%) and timelines (25-35%) while maximizing
-    approval probability.
-    
-    PREMIUM TIER: Requires authenticated access.
+def _hash_patient_profile(patient: PatientProfile) -> str:
+    """SHA-256 hash of demographics for privacy."""
+    profile_str = json.dumps({
+        "age_range": patient.age_range,
+        "sex": patient.sex,
+        "ancestry": patient.genetic_ancestry,
+    }, sort_keys=True)
+    return hashlib.sha256(profile_str.encode()).hexdigest()
+
+
+def _calculate_therapeutic_scores(
+    formulation: FormulationInput,
+    patient: PatientProfile,
+) -> dict:
     """
-    try:
-        optimizer = ClinicalTrialOptimizer()
-        
-        result = optimizer.optimize_trial(
-            compound_name=request.compound_name,
-            indication=request.indication,
-            target_jurisdictions=request.target_jurisdictions,
-            budget_constraint=request.budget_constraint_usd,
-            timeline_constraint=request.timeline_constraint_months,
-            use_tm_pathway=request.use_tm_pathway
-        )
-        
-        return TrialOptimizationResponse(
-            optimization_id=str(uuid.uuid4()),
-            compound_name=request.compound_name,
-            indication=request.indication,
-            recommended_pathway=result.recommended_pathway.value,
-            optimized_timeline_months=result.optimized_timeline_months,
-            optimized_cost_usd=result.optimized_cost_usd,
-            cost_savings_percent=result.cost_savings_percent,
-            timeline_savings_percent=result.timeline_savings_percent,
-            approval_probability=result.approval_probability,
-            jurisdiction_sequence=result.jurisdiction_sequence,
-            phase_details=result.phase_details,
-            key_success_factors=result.key_success_factors,
-            created_at=datetime.utcnow().isoformat()
-        )
-        
-    except Exception as e:
-        logger.error(f"ClinPath optimization error: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-@router.post("/predict-approval", response_model=ApprovalPredictionResponse)
-async def predict_approval_probability(
-    request: ApprovalPredictionRequest,
-    db: Session = Depends(get_db)
-) -> ApprovalPredictionResponse:
-    """Predict regulatory approval probability.
-    
-    Uses ClinPath's ML model trained on 3,500 regulatory decisions
-    to predict approval probability with 88-92% accuracy.
-    
-    PREMIUM TIER: Requires authenticated access.
+    MVP prediction engine using compound-effect mappings.
+    -------------------------------------------------------
+    🔌 PLUG-IN POINT: Replace this function with trained ML model
+       to achieve 88-92% accuracy target from patent spec.
     """
-    try:
-        optimizer = ClinicalTrialOptimizer()
-        
-        result = optimizer.predict_approval(
-            compound_name=request.compound_name,
-            indication=request.indication,
-            jurisdiction=request.jurisdiction,
-            evidence_strength=request.evidence_strength,
-            regulatory_precedents=request.regulatory_precedents
-        )
-        
-        return ApprovalPredictionResponse(
-            prediction_id=str(uuid.uuid4()),
-            compound_name=request.compound_name,
-            indication=request.indication,
-            jurisdiction=request.jurisdiction,
-            approval_probability=result.probability,
-            confidence_interval=result.confidence_interval,
-            key_factors=result.key_factors,
-            recommendations=result.recommendations
-        )
-        
-    except Exception as e:
-        logger.error(f"ClinPath approval prediction error: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    cp = formulation.cannabinoid_profile
+    tp = formulation.terpene_profile
 
+    thc = cp.get("THC", 0)
+    cbd = cp.get("CBD", 0)
+    cbg = cp.get("CBG", 0)
+    cbn = cp.get("CBN", 0)
+    myrcene = tp.get("myrcene", 0)
+    linalool = tp.get("linalool", 0)
+    limonene = tp.get("limonene", 0)
+    caryophyllene = tp.get("beta_caryophyllene", 0)
+    pinene = tp.get("pinene", 0)
 
-@router.post("/jurisdiction-sequence")
-async def get_jurisdiction_sequence(
-    request: JurisdictionSequenceRequest,
-    db: Session = Depends(get_db)
-) -> Dict[str, Any]:
-    """Get optimal jurisdiction approval sequence.
-    
-    Determines the optimal order for seeking regulatory approvals
-    across multiple jurisdictions to maximize success probability
-    and minimize time/cost.
-    
-    PREMIUM TIER: Requires authenticated access.
-    """
-    try:
-        optimizer = ClinicalTrialOptimizer()
-        
-        sequence = optimizer.optimize_jurisdiction_sequence(
-            compound_name=request.compound_name,
-            indication=request.indication,
-            target_jurisdictions=request.target_jurisdictions
-        )
-        
-        return {
-            "compound_name": request.compound_name,
-            "indication": request.indication,
-            "optimal_sequence": sequence,
-            "strategy": "Traditional medicine pathway optimization",
-            "created_at": datetime.utcnow().isoformat()
-        }
-        
-    except Exception as e:
-        logger.error(f"ClinPath jurisdiction sequence error: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    # --- Therapeutic scores (0-1) ---
+    anxiolytic = min(1.0, (cbd * 0.03) + (linalool * 0.15) + (cbg * 0.02))
+    antidepressant = min(1.0, (cbd * 0.02) + (limonene * 0.18) + (cbg * 0.03))
+    sedative = min(1.0, (thc * 0.015) + (myrcene * 0.2) + (cbn * 0.05) + (linalool * 0.1))
+    analgesic = min(1.0, (thc * 0.02) + (cbd * 0.025) + (caryophyllene * 0.15))
 
+    # --- Cognitive effects (-1 to +1) ---
+    memory_impact = max(-1.0, min(1.0, -0.02 * thc + 0.01 * cbd + 0.05 * pinene))
+    focus_impact = max(-1.0, min(1.0, -0.015 * thc + 0.02 * cbd + 0.04 * pinene + 0.03 * limonene))
+    neuroprotection = min(1.0, cbd * 0.03 + cbg * 0.04 + caryophyllene * 0.05)
 
-@router.get("/statistics")
-async def get_clinpath_statistics(
-    db: Session = Depends(get_db)
-) -> Dict[str, Any]:
-    """Get ClinPath optimization statistics.
-    
-    Returns aggregate statistics about trial optimizations performed.
-    """
+    # --- Side effects (0-1 probability) ---
+    psychoactivity_risk = min(1.0, thc * 0.04)
+    dependence_risk = min(1.0, thc * 0.008)
+    sedation_risk = min(1.0, (thc * 0.01) + (myrcene * 0.15) + (cbn * 0.04))
+    anxiety_risk = min(1.0, max(0, thc * 0.025 - cbd * 0.015))
+
+    # --- Confidence based on evidence coverage ---
+    known_compounds = sum(1 for v in [thc, cbd, cbg, cbn] if v > 0)
+    known_terpenes = sum(1 for v in [myrcene, linalool, limonene, caryophyllene, pinene] if v > 0)
+    confidence = min(1.0, 0.4 + (known_compounds * 0.08) + (known_terpenes * 0.06))
+
+    evidence = "high" if confidence >= 0.75 else ("medium" if confidence >= 0.55 else "low")
+
     return {
-        "total_optimizations": 0,
-        "average_cost_savings": "47.5%",
-        "average_timeline_savings": "35%",
-        "approval_prediction_accuracy": "88-92%",
-        "jurisdictions_covered": 194,
-        "tm_pathways_available": 87,
-        "regulatory_decisions_trained": 3500,
-        "trade_secret_value": "$3.2B",
-        "competitive_advantage_years": "10-12"
+        "anxiolytic_score": round(anxiolytic, 4),
+        "antidepressant_score": round(antidepressant, 4),
+        "sedative_score": round(sedative, 4),
+        "analgesic_score": round(analgesic, 4),
+        "memory_impact": round(memory_impact, 4),
+        "focus_impact": round(focus_impact, 4),
+        "neuroprotection_score": round(neuroprotection, 4),
+        "psychoactivity_risk": round(psychoactivity_risk, 4),
+        "dependence_risk": round(dependence_risk, 4),
+        "sedation_risk": round(sedation_risk, 4),
+        "anxiety_risk": round(anxiety_risk, 4),
+        "overall_confidence": round(confidence, 4),
+        "evidence_quality": evidence,
     }
+
+
+def _apply_demographic_correction(
+    scores: dict,
+    patient: PatientProfile,
+) -> tuple[dict, float]:
+    """
+    Apply demographic bias correction per patent Section 3.8.5.
+    -------------------------------------------------------
+    🔌 PLUG-IN POINT: Replace with BioPath 96% accuracy model.
+    """
+    factor = 1.0
+
+    # CYP2C9 poor metabolizer — higher cannabinoid exposure
+    if patient.cyp2c9_variant in ("*1/*3", "*3/*3"):
+        factor *= 1.3
+        scores["psychoactivity_risk"] = min(1.0, scores["psychoactivity_risk"] * 1.3)
+        scores["sedation_risk"] = min(1.0, scores["sedation_risk"] * 1.2)
+
+    # FAAH A/A variant — elevated endocannabinoid tone
+    if patient.faah_variant == "A/A":
+        scores["anxiolytic_score"] = min(1.0, scores["anxiolytic_score"] * 1.15)
+        factor *= 0.95
+
+    # Age correction (elderly)
+    if patient.age_range == "65+":
+        scores["sedation_risk"] = min(1.0, scores["sedation_risk"] * 1.4)
+        scores["psychoactivity_risk"] = min(1.0, scores["psychoactivity_risk"] * 1.25)
+        factor *= 1.2
+
+    return scores, round(factor, 4)
+
+
+# ============================================================================
+# ENDPOINTS
+# ============================================================================
+
+@router.post("/predict", response_model=TherapeuticPrediction)
+async def predict_therapeutic_profile(request: PredictionRequest):
+    """
+    Generate ClinPath therapeutic prediction for a formulation + patient.
+    This is the primary endpoint the Budtender UI calls.
+    """
+    prediction_id = f"cp_{uuid.uuid4().hex[:16]}"
+    formulation_id = f"form_{uuid.uuid4().hex[:16]}"
+    profile_hash = _hash_patient_profile(request.patient)
+
+    # Step 1: Calculate base therapeutic scores
+    scores = _calculate_therapeutic_scores(
+        request.formulation, request.patient
+    )
+
+    # Step 2: Apply demographic bias correction
+    scores, adjustment_factor = _apply_demographic_correction(
+        scores, request.patient
+    )
+
+    # Step 3: Build response
+    return TherapeuticPrediction(
+        prediction_id=prediction_id,
+        formulation_id=formulation_id,
+        **scores,
+        bias_correction_applied=True,
+        demographic_adjustment_factor=adjustment_factor,
+    )
+            indication=request.indication,

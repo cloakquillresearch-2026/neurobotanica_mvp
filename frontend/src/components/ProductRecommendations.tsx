@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import { dispensaryAPI } from '@/utils/api'
 import { useNeuroBotanicaAnalysis } from '@/hooks/useNeuroBotanicaAnalysis'
 import type {
@@ -6,6 +6,7 @@ import type {
   ConditionPayload,
   InflammatorySynergyPayload,
 } from '@/types/customer'
+import { conditionNames } from '@/utils/conditions'
 
 interface ProductRecommendationsProps {
   customer: CustomerProfileData | null
@@ -114,6 +115,8 @@ export function ProductRecommendations({
   const [hasRunAnalysis, setHasRunAnalysis] = useState(false)
   const [isCompleting, setIsCompleting] = useState(false)
 
+  const conditionList = useMemo(() => conditionNames(customer?.conditions), [customer?.conditions])
+
   // NeuroBotanica analysis hook
   const { analyze: analyzeNeuroBotanica, result: neurobotanicaResult, loading: neurobotanicaLoading, error: neurobotanicaError, tkConsentRequired } = useNeuroBotanicaAnalysis()
 
@@ -135,7 +138,7 @@ export function ProductRecommendations({
     const startTime = Date.now()
 
     try {
-      const conditions = customer.conditions || []
+      const conditions = conditionList
 
       // Production: call D1-backed recommendations endpoint
       if (conditions.length > 0) {
@@ -235,7 +238,7 @@ export function ProductRecommendations({
     } finally {
       setLoading(false)
     }
-  }, [customer, onRecommendationsUpdate])
+  }, [customer, onRecommendationsUpdate, conditionList])
 
   // Retry handler for failed requests
   const handleRetry = useCallback(() => {
@@ -261,7 +264,7 @@ export function ProductRecommendations({
         return acc
       }, {})
 
-    const normalizedConditions: ConditionPayload[] = (customer.conditions || []).map((condition, index) => ({
+    const normalizedConditions: ConditionPayload[] = conditionList.map((condition, index) => ({
       name: condition,
       severity: 7,
       is_primary: index === 0,
@@ -294,7 +297,7 @@ export function ProductRecommendations({
     } finally {
       setSynergyLoading(false)
     }
-  }, [customer])
+  }, [customer, conditionList])
 
   const runNeuroBotanicaAnalysis = useCallback(async () => {
     if (!customer) return
@@ -341,7 +344,7 @@ export function ProductRecommendations({
         items,
         total_amount: 0,
         timestamp: new Date().toISOString(),
-        notes: `Consultation completed for ${customer.conditions?.join(', ') || 'general wellness'}`,
+        notes: `Consultation completed for ${conditionList.join(', ') || 'general wellness'}`,
         status: 'completed'
       })
       alert('Consultation saved successfully!')
@@ -351,7 +354,7 @@ export function ProductRecommendations({
     } finally {
       setIsCompleting(false)
     }
-  }, [customer, recommendations])
+  }, [customer, recommendations, conditionList])
 
   useEffect(() => {
     fetchRecommendations()
@@ -544,7 +547,7 @@ export function ProductRecommendations({
     ) : null
 
     // Show all selected conditions at the top
-    const selectedConditions = customer?.conditions || []
+    const selectedConditions = conditionList
 
     return (
       <div className="space-y-4">

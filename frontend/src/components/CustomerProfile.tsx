@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
 import { dispensaryAPI } from '@/utils/api'
+import { conditionNames } from '@/utils/conditions'
 import { TransactionHistory } from './TransactionHistory'
 import type {
   CustomerProfileData,
@@ -70,7 +71,7 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
     age: customer.age?.toString() || '',
     gender: customer.gender || '',
     weight: customer.weight?.toString() || '',
-    conditions: customer.conditions || [],
+    conditions: conditionNames(customer.conditions),
     experience_level: customer.experience_level || 'beginner',
     notes: customer.notes || '',
     biomarkers: {
@@ -90,7 +91,7 @@ export function CustomerProfile({ customer, onProfileUpdate }: CustomerProfilePr
       age: customer.age?.toString() || '',
       gender: customer.gender || '',
       weight: customer.weight?.toString() || '',
-      conditions: customer.conditions || [],
+      conditions: conditionNames(customer.conditions),
       experience_level: customer.experience_level || 'beginner',
       notes: customer.notes || '',
       biomarkers: {

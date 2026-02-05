@@ -7,6 +7,7 @@ import { ProductRecommendations } from '@/components/ProductRecommendations'
 import type { Recommendation } from '@/components/ProductRecommendations'
 import { CustomerProfile } from '@/components/CustomerProfile'
 import type { CustomerProfileData } from '@/types/customer'
+import { conditionNames } from '@/utils/conditions'
 import { SANDBOX_CUSTOMER } from '@/content/sandbox/customer'
 
 // Condition-specific guidance data
@@ -215,6 +216,8 @@ export default function BudtenderAssistant() {
   const [customerSearchKey, setCustomerSearchKey] = useState(0)
   const router = useRouter()
 
+  const conditionList = useMemo(() => conditionNames(customer?.conditions), [customer?.conditions])
+
   // Mark as hydrated after first render
   useEffect(() => {
     setIsHydrated(true)
@@ -230,11 +233,11 @@ export default function BudtenderAssistant() {
 
   // Dynamic guidance based on selected conditions
   const activeGuidance = useMemo<ConditionGuidance[]>(() => {
-    if (!customer?.conditions?.length) return []
-    return customer.conditions
+    if (!conditionList.length) return []
+    return conditionList
       .map((condition) => CONDITION_GUIDANCE[condition as ConditionKey])
       .filter((guide): guide is ConditionGuidance => Boolean(guide))
-  }, [customer?.conditions])
+  }, [conditionList])
 
   // Get unique terpenes from active conditions
   const relevantTerpenes = useMemo<TerpeneInfo[]>(() => {
@@ -265,6 +268,34 @@ export default function BudtenderAssistant() {
       window.localStorage.removeItem(SANDBOX_FLAG)
     }
   }, [])
+
+  const handleNewClient = useCallback(() => {
+    setCustomer(null)
+    setRecommendations([])
+    setCustomerSearchKey((prev) => prev + 1)
+
+    if (isSandboxMode) {
+      enterSandbox()
+      return
+    }
+
+    const newCustomer: CustomerProfileData = {
+      customer_id: `temp_${Date.now()}`,
+      first_name: '',
+      last_name: '',
+      age: undefined,
+      gender: '',
+      weight: undefined,
+      conditions: [],
+      experience_level: 'beginner',
+      notes: '',
+      biomarkers: {},
+      isNew: true,
+      isSandbox: false
+    }
+
+    setCustomer(newCustomer)
+  }, [enterSandbox, isSandboxMode])
 
   useEffect(() => {
     if (!router.isReady) return
@@ -456,34 +487,7 @@ export default function BudtenderAssistant() {
                     </div>
                     <div className="flex gap-3 flex-wrap">
                       <button
-                        onClick={() => {
-                          // Clear current customer data
-                          setCustomer(null);
-                          setRecommendations([]);
-                          setCustomerSearchKey(prev => prev + 1);
-                          
-                          // If in sandbox mode, generate new mock patient
-                          if (isSandboxMode) {
-                            enterSandbox();
-                          } else {
-                            // Create a new real customer profile
-                            const newCustomer: CustomerProfileData = {
-                              customer_id: `temp_${Date.now()}`,
-                              first_name: '',
-                              last_name: '',
-                              age: undefined,
-                              gender: '',
-                              weight: undefined,
-                              conditions: [],
-                              experience_level: 'beginner',
-                              notes: '',
-                              biomarkers: {},
-                              isNew: true,
-                              isSandbox: false
-                            };
-                            setCustomer(newCustomer);
-                          }
-                        }}
+                        onClick={handleNewClient}
                         className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors"
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -507,6 +511,15 @@ export default function BudtenderAssistant() {
                       <p className="text-white/70 text-sm">Try the recommendation tool with example patients (no real data).</p>
                     </div>
                     <div className="flex gap-3 flex-wrap">
+                      <button
+                        onClick={handleNewClient}
+                        className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        </svg>
+                        New Client
+                      </button>
                       <button type="button" className="btn-primary" onClick={enterSandbox}>
                         Start Practice Session
                       </button>

@@ -236,7 +236,11 @@ async function predictSynergy(env, a, b, tier) {
 
   try {
     const stmt = env.NEUROBOTANICA_DB.prepare(`
-      SELECT synergy_score, confidence_score, clinical_evidence, tk_enhanced
+      SELECT synergy_score,
+             confidence_score,
+             clinical_evidence,
+             requires_consent,
+             consent_verification_status
       FROM neurobotanica_synergy_predictions
       WHERE (compound_a_id = ? AND compound_b_id = ?) OR (compound_a_id = ? AND compound_b_id = ?)
       ORDER BY confidence_score DESC
@@ -246,8 +250,9 @@ async function predictSynergy(env, a, b, tier) {
 
     if (result.results.length > 0) {
       const data = result.results[0];
-      synergyScore = data.synergy_score || 0.5;
-      tkEnhanced = data.tk_enhanced || false;
+      synergyScore = typeof data.synergy_score === 'number' ? data.synergy_score : 0.5;
+      const consentApproved = data.consent_verification_status === 'approved';
+      tkEnhanced = Boolean(data.requires_consent) && consentApproved;
       evidence = data.clinical_evidence || 'Database prediction';
     } else {
       // Dynamic fallback calculation based on compound properties
@@ -286,7 +291,7 @@ async function predictSynergy(env, a, b, tier) {
       evidence = `Dynamic prediction for ${a}-${b} combination - no database data available`;
     }
   } catch (error) {
-    console.error('Synergy query failed:', error);
+    console.error('Synergy query failed:', { compound_a: a, compound_b: b, error });
     synergyScore = 0.5;
     evidence = 'Query failed, using default prediction';
   }

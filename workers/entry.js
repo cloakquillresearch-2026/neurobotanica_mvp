@@ -12,6 +12,93 @@ function generateProfileCode() {
   return `NB-${Math.random().toString(36).substring(2, 7).toUpperCase()}`;
 }
 
+const TRANSACTION_COLUMNS = ['id', 'customer_id', 'profile_id', 'consultation_date', 'conditions', 'recommendations', 'notes', 'created_at'];
+const RANDOM_TXN_SQL = "printf('txn_%s', substr(hex(randomblob(8)), 1, 12))";
+let transactionTableReady = false;
+
+async function ensureTransactionTable(env) {
+  if (transactionTableReady) return;
+
+  try {
+    await env.DB.prepare(`
+      CREATE TABLE IF NOT EXISTS dispensary_transactions (
+        id TEXT PRIMARY KEY,
+        customer_id TEXT NOT NULL,
+        profile_id TEXT,
+        consultation_date TEXT NOT NULL,
+        conditions TEXT,
+        recommendations TEXT,
+        notes TEXT,
+        created_at TEXT DEFAULT (datetime('now')),
+        FOREIGN KEY (customer_id) REFERENCES dispensary_profiles(profile_id)
+      )
+    `).run();
+
+    const columnInfo = await env.DB.prepare('PRAGMA table_info(dispensary_transactions)').all();
+    const columns = new Set((columnInfo.results || []).map(col => (col.name || '').toLowerCase()));
+    const missing = TRANSACTION_COLUMNS.filter(col => !columns.has(col));
+
+    if (missing.length > 0) {
+      await env.DB.prepare(`
+        CREATE TABLE IF NOT EXISTS dispensary_transactions__new (
+          id TEXT PRIMARY KEY,
+          customer_id TEXT NOT NULL,
+          profile_id TEXT,
+          consultation_date TEXT NOT NULL,
+          conditions TEXT,
+          recommendations TEXT,
+          notes TEXT,
+          created_at TEXT DEFAULT (datetime('now')),
+          FOREIGN KEY (customer_id) REFERENCES dispensary_profiles(profile_id)
+        )
+      `).run();
+
+      const has = (name) => columns.has(name);
+      const idExpr = has('id') ? 'id' : has('transaction_id') ? 'transaction_id' : RANDOM_TXN_SQL;
+      const customerExpr = has('customer_id') ? 'customer_id' : has('profile_id') ? 'profile_id' : RANDOM_TXN_SQL;
+      const profileExpr = has('profile_id') ? 'profile_id' : 'NULL';
+      const consultationExpr = has('consultation_date') ? 'consultation_date' : has('created_at') ? 'created_at' : "datetime('now')";
+      const conditionsExpr = has('conditions') ? 'conditions' : "'[]'";
+      const recommendationsExpr = has('recommendations') ? 'recommendations' : has('products') ? 'products' : "'[]'";
+      const notesExpr = has('notes') ? 'notes' : "''";
+      const createdExpr = has('created_at') ? 'created_at' : "datetime('now')";
+
+      const insertSql = `
+        INSERT INTO dispensary_transactions__new (
+          id,
+          customer_id,
+          profile_id,
+          consultation_date,
+          conditions,
+          recommendations,
+          notes,
+          created_at
+        )
+        SELECT
+          ${idExpr} AS id,
+          ${customerExpr} AS customer_id,
+          ${profileExpr} AS profile_id,
+          ${consultationExpr} AS consultation_date,
+          ${conditionsExpr} AS conditions,
+          ${recommendationsExpr} AS recommendations,
+          ${notesExpr} AS notes,
+          ${createdExpr} AS created_at
+        FROM dispensary_transactions
+      `;
+
+      await env.DB.prepare(insertSql).run();
+      await env.DB.prepare('DROP TABLE dispensary_transactions').run();
+      await env.DB.prepare('ALTER TABLE dispensary_transactions__new RENAME TO dispensary_transactions').run();
+    }
+
+    transactionTableReady = true;
+  } catch (error) {
+    transactionTableReady = false;
+    console.error('Failed to synchronize dispensary_transactions schema:', error);
+    throw error;
+  }
+}
+
 // --- PROFILE ENDPOINTS ---
 
 // POST /api/dispensary/profile - Create customer profile
@@ -159,27 +246,68 @@ async function handleUpdateProfile(request, profileId, env) {
 // POST /api/dispensary/transaction - Create transaction
 async function handleCreateTransaction(request, env) {
   const body = await request.json();
-  const transactionId = `txn_${Math.random().toString(36).substring(2, 10).toUpperCase()}`;
+  const transactionId = body.id || body.transaction_id || `txn_${Math.random().toString(36).substring(2, 10).toUpperCase()}`;
+  const corsHeaders = {
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+  };
+
+  const customerId = body.customer_id || body.profile_id;
+  if (!customerId) {
+    return new Response(JSON.stringify({ detail: 'customer_id is required' }), {
+      status: 400,
+      headers: corsHeaders
+    });
+  }
 
   try {
-    await env.DB.prepare(
-      "INSERT INTO dispensary_transactions (transaction_id, profile_id, status, products) VALUES (?, ?, 'completed', ?)"
-    ).bind(transactionId, body.profile_id || null, JSON.stringify(body.products || [])).run();
+    await ensureTransactionTable(env);
+
+    const profileId = body.profile_id || customerId;
+    const consultationDate = body.consultation_date || body.timestamp || new Date().toISOString();
+    const recommendationItems = body.recommendations || body.items || body.products || [];
+    const attachedConditions = body.conditions || body.condition_profile || [];
+    const notes = body.notes || '';
+
+    await env.DB.prepare(`
+      INSERT INTO dispensary_transactions (
+        id,
+        customer_id,
+        profile_id,
+        consultation_date,
+        conditions,
+        recommendations,
+        notes
+      ) VALUES (?, ?, ?, ?, ?, ?, ?)
+    `).bind(
+      transactionId,
+      customerId,
+      profileId,
+      consultationDate,
+      JSON.stringify(attachedConditions),
+      JSON.stringify(recommendationItems),
+      notes
+    ).run();
 
     return new Response(JSON.stringify({
       transaction_id: transactionId,
-      status: 'completed',
-      created_at: new Date().toISOString(),
-      profile_id: body.profile_id || null,
-      products: body.products || []
+      customer_id: customerId,
+      profile_id: profileId,
+      consultation_date: consultationDate,
+      notes,
+      items: recommendationItems,
+      success: true
     }), {
       status: 200,
-      headers: { 'Content-Type': 'application/json' }
+      headers: corsHeaders
     });
   } catch (error) {
-    return new Response(JSON.stringify({ detail: 'Failed to create transaction' }), {
+    console.error('Failed to create transaction:', error);
+    return new Response(JSON.stringify({ detail: 'Failed to create transaction', error: error.message }), {
       status: 500,
-      headers: { 'Content-Type': 'application/json' }
+      headers: corsHeaders
     });
   }
 }

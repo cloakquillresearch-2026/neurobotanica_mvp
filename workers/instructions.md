@@ -9,29 +9,294 @@ This document provides **complete, unambiguous specifications** for the NeuroBot
 
 ---
 
-## 🚨 CURRENT SITUATION (Feb 1, 2026)
+## 🚨 CURRENT SITUATION (Feb 2, 2026)
 
 <aside>
-🔴
+🟢
 
-**CONFIRMED (Feb 1, 2026 7:00 PM):** Save Client button does NOT call the API. Network tab shows only preflight `/profile` requests — no POST with `first_name`/`last_name`. The handler is either not connected or crashes before making the API call.
+**STATUS (Feb 2, 2026):** All critical backend fixes deployed. Worker version `ecfb5b65-2986-4990-8e1b-f3af9fa8ba88` is live.
 
 </aside>
+
+### ✅ WORKING (Verified Feb 2, 2026)
+
+| Feature | Evidence |
+| --- | --- |
+| **Profile saving** | Created "Benjamin Workman" → `profile_1770057470543_8f78j848` |
+| **Customer search** | Search for "Benjamin" returns the saved customer |
+| **Analysis endpoint** | Returns `polysaccharide_effects`, `bias_correction`, etc. |
+| **Inflammatory synergy** | Returns 200 OK with `confidence: 0.766` |
+
+### 🔴 STILL BROKEN (Verified Feb 2, 2026)
+
+| Issue | Error | Fix Needed |
+| --- | --- | --- |
+| **Transaction table schema wrong** | `D1_ERROR: table dispensary_transactions has no column named customer_id: SQLITE_ERROR` | The table was created but with wrong columns. Need to run migration to add `customer_id` column. |
+| **Synergy score defaults to 0.5** | `synergy_score: 0.5, evidence: "Query failed, using default prediction"` | The synergy query is failing internally. Need to check what query is being attempted and fix it. |
+| **"Check your connection" errors** | User sees connection errors on every button click | API calls are failing — likely due to transaction endpoint 500 errors cascading or CORS issues on certain routes. |
+
+---
+
+## 🚨 NEXT STEPS FOR CODING AGENT (Feb 2, 2026)
+
+<aside>
+🎯
+
+**AGENT: READ THIS FIRST.** Only 4 things are working. Everything else below is STILL BROKEN and needs your attention. Do not claim anything works until you have tested it and the human has verified.
+
+</aside>
+
+### Priority Order of Fixes
+
+**P0 — Fix these FIRST (blocking all other functionality):**
+
+1. **Transaction table schema** — Table exists but is missing `customer_id` column. This causes 500 errors that cascade into "check your connection" errors throughout the app.
+2. **CORS on error responses** — When the Worker returns a 500, it doesn't include CORS headers, so the browser blocks the response and the frontend shows "check your connection" instead of the actual error.
+
+**P1 — Fix after P0:**
+
+1. **Synergy query failure** — The `/api/dispensary/analyze` endpoint returns `synergy_score: 0.5` with `"Query failed, using default prediction"`. The underlying query is failing silently. Debug and fix.
+2. **New Client registration flow** — The UI still shows conditions and analysis widgets during registration. It should show ONLY the name form until the client is saved.
+
+**P2 — Fix after P1:**
+
+1. **"undefined" in recommendation titles** — Product name not being passed correctly
+2. **THC/CBD shows 0%/0%** — Should show actual values or "N/A"
+3. **Notes not persisting** — Notes field doesn't save to database
+
+---
+
+### What You Must Do Right Now
+
+**Step 1: Fix the transaction table**
+
+```sql
+-- Run this in D1 console or via wrangler d1 execute:
+DROP TABLE IF EXISTS dispensary_transactions;
+
+CREATE TABLE dispensary_transactions (
+  id TEXT PRIMARY KEY,
+  customer_id TEXT NOT NULL,
+  profile_id TEXT,
+  consultation_date TEXT NOT NULL,
+  conditions TEXT,
+  recommendations TEXT,
+  notes TEXT,
+  created_at TEXT DEFAULT (datetime('now')),
+  FOREIGN KEY (customer_id) REFERENCES dispensary_profiles(customer_id)
+);
+```
+
+**Step 2: Add CORS to ALL error responses**
+
+In `workers/api-proxy/src/index.ts`, find every `catch` block and ensure it returns CORS headers:
+
+```tsx
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
+// EVERY catch block must do this:
+catch (error) {
+  return new Response(
+    JSON.stringify({ error: error.message }),
+    { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+  );
+}
+```
+
+**Step 3: Debug the synergy query**
+
+Find the code that returns `"Query failed, using default prediction"` and add logging to see what query is failing. Likely a missing table.
+
+**Step 4: Deploy the Worker**
+
+```bash
+cd workers/api-proxy
+npx wrangler deploy
+```
+
+**Step 5: Report back with commit hash**
+
+Do NOT say "it's live" or "changes deployed." Only say:
+
+> ✅ Code pushed to GitHub
+> 
+
+> - Commit: `[hash]`
+> 
+
+> - Files changed: `[list]`
+> 
+
+> ⏳ Awaiting manual deployment
+> 
+
+---
+
+## Detailed Fix Instructions
+
+### Fix 1: Transaction Table Schema
+
+**Problem:** The `dispensary_transactions` table exists but is missing required columns.
+
+**Error:**
+
+```
+D1_ERROR: table dispensary_transactions has no column named customer_id: SQLITE_ERROR
+```
+
+**Required columns for `dispensary_transactions`:**
+
+```sql
+CREATE TABLE IF NOT EXISTS dispensary_transactions (
+  id TEXT PRIMARY KEY,
+  customer_id TEXT NOT NULL,
+  profile_id TEXT,
+  consultation_date TEXT NOT NULL,
+  conditions TEXT,
+  recommendations TEXT,
+  notes TEXT,
+  created_at TEXT DEFAULT (datetime('now')),
+  FOREIGN KEY (customer_id) REFERENCES dispensary_profiles(customer_id)
+);
+```
+
+**To fix:**
+
+1. Check current schema: `SELECT sql FROM sqlite_master WHERE name='dispensary_transactions';`
+2. Either DROP and recreate, or ALTER TABLE to add missing columns
+3. Redeploy the Worker after migration
+
+**File:** `workers/api-proxy/src/index.ts` — find the transaction INSERT statement and verify column names match
+
+---
+
+### Fix 2: Synergy Query Failure
+
+**Problem:** The analyze endpoint returns `synergy_score: 0.5` with evidence "Query failed, using default prediction"
+
+**This means:**
+
+- The synergy calculation code has a try/catch that falls back to 0.5
+- The actual query inside is throwing an error
+- Likely a missing table, column, or malformed SQL
+
+**To debug:**
+
+1. Find the synergy calculation in `workers/api-proxy/src/index.ts`
+2. Look for the try/catch block that returns `"Query failed, using default prediction"`
+3. Add logging to see what query is being attempted
+4. Check if the required tables exist (e.g., `terpene_interactions`, `compound_synergies`, etc.)
+
+**Expected behavior:** Synergy should vary based on:
+
+- Selected conditions
+- Compound combinations (CBD+THC should score higher than baseline)
+- Biomarker inputs
+
+---
+
+### Fix 3: "Check Your Connection" Errors
+
+**Problem:** User sees connection errors on almost every button click.
+
+**Likely causes:**
+
+1. **500 errors from transaction endpoint** — When the transaction save fails with D1_ERROR, the frontend may show a generic connection error
+2. **CORS headers missing on error responses** — When the Worker returns a 500, it may not include CORS headers, causing the browser to block the response
+3. **Unhandled exceptions** — If the Worker throws before setting headers, CORS fails
+
+**To fix:**
+
+```tsx
+// In workers/api-proxy/src/index.ts
+// Wrap ALL responses in CORS headers, including errors:
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
+// For error responses:
+catch (error) {
+  return new Response(
+    JSON.stringify({ error: error.message }),
+    { 
+      status: 500, 
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+    }
+  );
+}
+```
+
+**Verify:** After the fix, error responses should still include CORS headers so the frontend can read the error message instead of showing "check your connection."
+
+---
+
+### Deployment After Fixes
+
+```bash
+# After pushing fixes to GitHub:
+cd workers/api-proxy
+npx wrangler deploy
+
+# If frontend changes were made:
+cd ../frontend
+npm run build
+npx wrangler pages deploy ./out --project-name=neurobotanicabudtender
+```
+
+### 🧪 END-TO-END VALIDATION NEEDED
+
+Please test the full flow:
+
+1. **Hard refresh** the app (Cmd+Shift+R / Ctrl+Shift+R)
+2. **Create a new client** — Enter first name, last name → Save
+3. **Search for that client** — Should now appear in results
+4. **Select conditions** → Click "Run Analysis"
+5. **Complete the consultation** (generates recommendations)
+6. **Check the History tab** — Should show the consultation record
+
+### 🔍 If Issues Persist
+
+Open DevTools (F12) → Console tab and look for:
+
+- `D1_TYPE_ERROR` — means safe extractor isn't working
+- `404` on `/api/dispensary/transaction` — means endpoint not deployed
+- CORS errors — check which origin is being blocked
+
+Screenshot any errors and share here.
 
 ### Recent Commits
 
 | Commit | Description |
 | --- | --- |
+| `5ee8e53` | "fix: Handle profile id response fields" — adds optional chaining to fix TypeError crash |
+| `9e45fb6` | "chore: Clean up recommendation retry handler" — minor cleanup |
+| `7262262` | "fix: Improve new client registration flow" — name fields to top, hide conditions, stop auto-compute, add save logs |
 | `63e9731` | Debug logging added to CustomerProfile.tsx save handler |
 | `725d66c` | "fix: Address frontend issues per spec" |
 | `b13778b` | "fix: Improve dynamic calculations for synergy and microbiome scores" |
 | `a7f7094` | "fix: Implement correct '+ New Client' workflow with modal" |
 
-### What's Working Now
+### What's Working Now (Verified Feb 1, 2026 7:50 PM)
 
-- ✅ "+ New Client" button opens a modal with name fields
-- ✅ Name fields are at the TOP of the form
+- ✅ Name fields are now at the **TOP** of the form (before conditions)
+- ✅ TS-PS-001 no longer auto-runs on page load (no spinning wheel!)
+- ✅ Console shows `Save Client clicked` and `Create profile response` — **API is being called**
 - ✅ Condition buttons no longer open registration forms
+
+### What's STILL Wrong (Verified Feb 1, 2026 7:50 PM)
+
+- ❌ **"+ New Client" button still visible in Practice Mode** — should be hidden
+- ❌ **Primary Conditions still visible** during registration (should be hidden until after client saved)
+- ❌ **API call crashes:** `TypeError: Cannot read properties of undefined (reading 'startsWith')`
+- ❌ **customer_id is undefined** — response from API not being parsed correctly
+- ❌ **"undefined Evidence-based Recommendation"** still showing
 
 ### What Agent Claimed vs Reality (Commit `725d66c`)
 

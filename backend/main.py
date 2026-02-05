@@ -128,6 +128,15 @@ try:
 except Exception:
     pass
 
+from backend.routers.clinpath import router as clinpath_router
+app.include_router(clinpath_router)
+
+from backend.routers.recommendations import router as recommendations_router
+app.include_router(recommendations_router)
+
+from backend.routers.persistence import router as persistence_router
+app.include_router(persistence_router)
+
 from fastapi import APIRouter
 
 
@@ -231,8 +240,6 @@ router_map = {
     "regpath": "/api/v1/regpath",
     "genomepath": "/api/genomepath",
     "biopath": "/api/biopath",
-    "clinpath": "/api/clinpath",
-    "recommendations": "/api/recommendations",
 }
 
 for name, prefix in router_map.items():

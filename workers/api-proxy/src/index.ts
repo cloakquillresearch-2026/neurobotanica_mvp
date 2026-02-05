@@ -6,6 +6,7 @@
 export interface Env {
   DB?: D1Database;
   API_BASE_URL?: string;
+  FASTAPI_BACKEND_URL?: string;
   PLATFORM_PAGES_URL?: string;
 }
 
@@ -64,6 +65,190 @@ const extractPrimaryConditionName = (conditions: unknown): string | null => {
   return pickName(primary) ?? pickName(conditions[0]) ?? null;
 };
 
+const safeParseJson = <T>(value: string | null | undefined, fallback: T): T => {
+  if (!value) {
+    return fallback;
+  }
+  try {
+    return JSON.parse(value) as T;
+  } catch {
+    return fallback;
+  }
+};
+
+const TRANSACTION_REQUIRED_COLUMNS = [
+  'id',
+  'customer_id',
+  'profile_id',
+  'consultation_date',
+  'conditions',
+  'recommendations',
+  'notes',
+  'created_at'
+];
+
+let transactionSchemaReady = false;
+
+const randomIdExpression = "printf('txn_%s', substr(hex(randomblob(8)), 1, 12))";
+
+const clinpathCorsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
+async function proxyClinpathToBackend(request: Request, env: Env, path: string): Promise<Response> {
+  const backendUrl = env.FASTAPI_BACKEND_URL || 'http://localhost:8000';
+  const targetUrl = `${backendUrl}${path}`;
+
+  try {
+    const body = request.method === 'GET' || request.method === 'HEAD'
+      ? undefined
+      : await request.text();
+
+    const backendResponse = await fetch(targetUrl, {
+      method: request.method,
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': request.headers.get('Authorization') || '',
+      },
+      body,
+    });
+
+    const responseBody = await backendResponse.text();
+
+    return new Response(responseBody, {
+      status: backendResponse.status,
+      headers: {
+        ...clinpathCorsHeaders,
+        'Content-Type': 'application/json',
+      },
+    });
+  } catch (error: any) {
+    return new Response(
+      JSON.stringify({
+        error: 'ClinPath backend unreachable',
+        detail: error?.message || String(error),
+      }),
+      {
+        status: 502,
+        headers: {
+          ...clinpathCorsHeaders,
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+  }
+}
+
+async function executeClinpathD1(env: Env, sql: string, params: any[] = []) {
+  const d1 = (env as any).DB;
+  if (!d1) {
+    throw new Error('D1 database not configured');
+  }
+  const stmt = d1.prepare(sql).bind(...params);
+  return await stmt.all();
+}
+
+async function ensureDispensaryTransactionTable(d1: D1Database) {
+  if (transactionSchemaReady) {
+    return;
+  }
+
+  await d1.prepare(`
+    CREATE TABLE IF NOT EXISTS dispensary_transactions (
+      id TEXT PRIMARY KEY,
+      customer_id TEXT NOT NULL,
+      profile_id TEXT,
+      consultation_date TEXT NOT NULL,
+      conditions TEXT,
+      recommendations TEXT,
+      notes TEXT,
+      created_at TEXT DEFAULT (datetime('now')),
+      FOREIGN KEY (customer_id) REFERENCES dispensary_profiles(profile_id)
+    )
+  `).run();
+
+  const columnInfo = await d1.prepare('PRAGMA table_info(dispensary_transactions)').all<any>();
+  const existingColumns = new Set(
+    (columnInfo.results || []).map((col: any) => (col.name || '').toLowerCase())
+  );
+
+  const missingColumns = TRANSACTION_REQUIRED_COLUMNS.filter(col => !existingColumns.has(col));
+
+  if (missingColumns.length > 0) {
+    await d1.prepare(`
+      CREATE TABLE IF NOT EXISTS dispensary_transactions__new (
+        id TEXT PRIMARY KEY,
+        customer_id TEXT NOT NULL,
+        profile_id TEXT,
+        consultation_date TEXT NOT NULL,
+        conditions TEXT,
+        recommendations TEXT,
+        notes TEXT,
+        created_at TEXT DEFAULT (datetime('now')),
+        FOREIGN KEY (customer_id) REFERENCES dispensary_profiles(profile_id)
+      )
+    `).run();
+
+    const hasColumn = (name: string) => existingColumns.has(name);
+
+    const idExpr = hasColumn('id') ? 'id'
+      : hasColumn('transaction_id') ? 'transaction_id'
+      : randomIdExpression;
+
+    const customerExpr = hasColumn('customer_id') ? 'customer_id'
+      : hasColumn('profile_id') ? 'profile_id'
+      : randomIdExpression;
+
+    const profileExpr = hasColumn('profile_id') ? 'profile_id' : 'NULL';
+
+    const consultationExpr = hasColumn('consultation_date') ? 'consultation_date'
+      : hasColumn('created_at') ? 'created_at'
+      : "datetime('now')";
+
+    const conditionsExpr = hasColumn('conditions') ? 'conditions'
+      : "'[]'";
+
+    const recommendationsExpr = hasColumn('recommendations') ? 'recommendations'
+      : hasColumn('products') ? 'products'
+      : "'[]'";
+
+    const notesExpr = hasColumn('notes') ? 'notes' : "''";
+
+    const createdExpr = hasColumn('created_at') ? 'created_at' : "datetime('now')";
+
+    const insertSql = `
+      INSERT INTO dispensary_transactions__new (
+        id,
+        customer_id,
+        profile_id,
+        consultation_date,
+        conditions,
+        recommendations,
+        notes,
+        created_at
+      )
+      SELECT
+        ${idExpr} AS id,
+        ${customerExpr} AS customer_id,
+        ${profileExpr} AS profile_id,
+        ${consultationExpr} AS consultation_date,
+        ${conditionsExpr} AS conditions,
+        ${recommendationsExpr} AS recommendations,
+        ${notesExpr} AS notes,
+        ${createdExpr} AS created_at
+      FROM dispensary_transactions
+    `;
+
+    await d1.prepare(insertSql).run();
+    await d1.prepare('DROP TABLE dispensary_transactions').run();
+    await d1.prepare('ALTER TABLE dispensary_transactions__new RENAME TO dispensary_transactions').run();
+  }
+
+  transactionSchemaReady = true;
+}
+
 // Single export default that handles both the D1-backed recommendations route and
 // the existing proxy behavior. This avoids duplicate `export default` declarations.
 
@@ -85,7 +270,312 @@ export default {
 
     // Handle CORS preflight for general requests
     if (request.method === 'OPTIONS') {
-      return new Response(null, { headers: corsHeaders });
+      const headers = url.pathname.startsWith('/api/clinpath')
+        ? clinpathCorsHeaders
+        : corsHeaders;
+      return new Response(null, { headers });
+    }
+
+    // ============================================================================
+    // CLINPATH PROXY ROUTES
+    // Added: February 5, 2026
+    // Routes /api/clinpath/* to FastAPI backend
+    // ============================================================================
+
+    if (url.pathname === '/api/clinpath/predict' && request.method === 'POST') {
+      return proxyClinpathToBackend(request, env, url.pathname + url.search);
+    }
+
+    if (url.pathname === '/api/clinpath/recommend' && request.method === 'POST') {
+      return proxyClinpathToBackend(request, env, url.pathname + url.search);
+    }
+
+    if (url.pathname === '/api/clinpath/symptoms' && request.method === 'GET') {
+      return proxyClinpathToBackend(request, env, url.pathname + url.search);
+    }
+
+    if (url.pathname === '/api/clinpath/persist/formulation' && request.method === 'POST') {
+      try {
+        const body = await request.json() as any;
+        const sql = `
+          INSERT INTO neurobotanica_formulations (
+            formulation_id, customer_id, dispensary_id,
+            compound_ids, cannabinoid_profile, terpene_profile,
+            polysaccharide_profile, predicted_efficacy, predicted_safety,
+            synergy_score, confidence_score, primary_indication,
+            secondary_indications, tk_flag, consent_id
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `;
+        await executeClinpathD1(env, sql, [
+          body.formulation_id,
+          body.customer_id || null,
+          body.dispensary_id || null,
+          JSON.stringify(body.compound_ids),
+          JSON.stringify(body.cannabinoid_profile),
+          JSON.stringify(body.terpene_profile),
+          body.polysaccharide_profile ? JSON.stringify(body.polysaccharide_profile) : null,
+          body.predicted_efficacy || null,
+          body.predicted_safety || null,
+          body.synergy_score || null,
+          body.confidence_score || null,
+          body.primary_indication || null,
+          body.secondary_indications ? JSON.stringify(body.secondary_indications) : null,
+          body.tk_flag || false,
+          body.consent_id || null,
+        ]);
+        return new Response(
+          JSON.stringify({ status: 'saved', formulation_id: body.formulation_id }),
+          { status: 200, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      } catch (error: any) {
+        return new Response(
+          JSON.stringify({ error: 'Failed to persist formulation', detail: error?.message || String(error) }),
+          { status: 500, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+    }
+
+    if (url.pathname === '/api/clinpath/persist/prediction' && request.method === 'POST') {
+      try {
+        const body = await request.json() as any;
+        const sql = `
+          INSERT INTO clinpath_predictions (
+            prediction_id, formulation_id, patient_profile_hash,
+            anxiolytic_score, antidepressant_score, sedative_score, analgesic_score,
+            memory_impact, focus_impact, neuroprotection_score,
+            psychoactivity_risk, dependence_risk, sedation_risk, anxiety_risk,
+            overall_confidence, evidence_quality, model_version
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `;
+        await executeClinpathD1(env, sql, [
+          body.prediction_id,
+          body.formulation_id,
+          body.patient_profile_hash,
+          body.anxiolytic_score,
+          body.antidepressant_score,
+          body.sedative_score,
+          body.analgesic_score,
+          body.memory_impact || null,
+          body.focus_impact || null,
+          body.neuroprotection_score || null,
+          body.psychoactivity_risk,
+          body.dependence_risk,
+          body.sedation_risk,
+          body.anxiety_risk,
+          body.overall_confidence,
+          body.evidence_quality,
+          body.model_version || 'v1.0-mvp',
+        ]);
+        return new Response(
+          JSON.stringify({ status: 'saved', prediction_id: body.prediction_id }),
+          { status: 200, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      } catch (error: any) {
+        return new Response(
+          JSON.stringify({ error: 'Failed to persist prediction', detail: error?.message || String(error) }),
+          { status: 500, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+    }
+
+    if (url.pathname === '/api/clinpath/persist/demographic' && request.method === 'POST') {
+      try {
+        const body = await request.json() as any;
+        const sql = `
+          INSERT INTO clinpath_demographic_factors (
+            factor_id, prediction_id,
+            cyp2c9_variant, faah_variant, cnr1_variant,
+            fucosidase_variant, dectin1_variant,
+            genetic_ancestry, bias_correction_applied,
+            demographic_adjustment_factor, equalized_odds_score
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `;
+        await executeClinpathD1(env, sql, [
+          body.factor_id,
+          body.prediction_id,
+          body.cyp2c9_variant || null,
+          body.faah_variant || null,
+          body.cnr1_variant || null,
+          body.fucosidase_variant || null,
+          body.dectin1_variant || null,
+          body.genetic_ancestry || 'unknown',
+          body.bias_correction_applied !== false,
+          body.demographic_adjustment_factor || 1.0,
+          body.equalized_odds_score || null,
+        ]);
+        return new Response(
+          JSON.stringify({ status: 'saved', factor_id: body.factor_id }),
+          { status: 200, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      } catch (error: any) {
+        return new Response(
+          JSON.stringify({ error: 'Failed to persist demographic factors', detail: error?.message || String(error) }),
+          { status: 500, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+    }
+
+    if (url.pathname === '/api/clinpath/persist/recommendation' && request.method === 'POST') {
+      try {
+        const body = await request.json() as any;
+        const sql = `
+          INSERT INTO budtender_recommendations (
+            recommendation_id, patient_age_range, patient_sex,
+            primary_symptom, secondary_symptoms, contraindications,
+            available_cultivars, recommended_cultivar_id, recommended_cultivar_name,
+            predicted_efficacy, confidence_score, rank,
+            formulation_id, clinpath_prediction_id,
+            budtender_id, dispensary_id, accepted
+          ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        `;
+        await executeClinpathD1(env, sql, [
+          body.recommendation_id,
+          body.patient_age_range || null,
+          body.patient_sex || null,
+          body.primary_symptom,
+          body.secondary_symptoms ? JSON.stringify(body.secondary_symptoms) : null,
+          body.contraindications ? JSON.stringify(body.contraindications) : null,
+          JSON.stringify(body.available_cultivars),
+          body.recommended_cultivar_id,
+          body.recommended_cultivar_name,
+          body.predicted_efficacy,
+          body.confidence_score,
+          body.rank || 1,
+          body.formulation_id || null,
+          body.clinpath_prediction_id || null,
+          body.budtender_id || null,
+          body.dispensary_id || null,
+          body.accepted !== undefined ? body.accepted : null,
+        ]);
+        return new Response(
+          JSON.stringify({ status: 'saved', recommendation_id: body.recommendation_id }),
+          { status: 200, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      } catch (error: any) {
+        return new Response(
+          JSON.stringify({ error: 'Failed to persist recommendation', detail: error?.message || String(error) }),
+          { status: 500, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+    }
+
+    if (url.pathname.match(/^\/api\/clinpath\/persist\/recommendation\/[^/]+\/accept$/)
+      && request.method === 'PUT') {
+      try {
+        const recommendationId = url.pathname.split('/')[5];
+        const body = await request.json() as any;
+        const accepted = body.accepted !== undefined ? body.accepted : true;
+
+        const sql = `
+          UPDATE budtender_recommendations
+          SET accepted = ?
+          WHERE recommendation_id = ?
+        `;
+        await executeClinpathD1(env, sql, [accepted, recommendationId]);
+        return new Response(
+          JSON.stringify({ status: 'updated', recommendation_id: recommendationId, accepted }),
+          { status: 200, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      } catch (error: any) {
+        return new Response(
+          JSON.stringify({ error: 'Failed to update recommendation', detail: error?.message || String(error) }),
+          { status: 500, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+    }
+
+    if (url.pathname.match(/^\/api\/clinpath\/persist\/history\/[^/]+$/)
+      && request.method === 'GET') {
+      try {
+        const dispensaryId = url.pathname.split('/')[5];
+        const limit = parseInt(url.searchParams.get('limit') || '50', 10);
+        const offset = parseInt(url.searchParams.get('offset') || '0', 10);
+
+        const sql = `
+          SELECT brd.*
+          FROM budtender_recommendation_details brd
+          JOIN budtender_recommendations br ON br.recommendation_id = brd.recommendation_id
+          WHERE br.dispensary_id = ?
+          ORDER BY brd.created_at DESC
+          LIMIT ? OFFSET ?
+        `;
+        const result = await executeClinpathD1(env, sql, [dispensaryId, limit, offset]);
+        return new Response(
+          JSON.stringify({ dispensary_id: dispensaryId, recommendations: result.results || [] }),
+          { status: 200, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      } catch (error: any) {
+        return new Response(
+          JSON.stringify({ error: 'Failed to retrieve history', detail: error?.message || String(error) }),
+          { status: 500, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+    }
+
+    if (url.pathname === '/api/clinpath/persist/analytics/top-cultivars'
+      && request.method === 'GET') {
+      try {
+        const dispensaryId = url.searchParams.get('dispensary_id');
+        const symptom = url.searchParams.get('symptom');
+        const limit = parseInt(url.searchParams.get('limit') || '10', 10);
+
+        let sql: string;
+        let params: any[];
+
+        if (dispensaryId || symptom) {
+          const conditions: string[] = [];
+          params = [];
+
+          sql = `
+            SELECT
+              hcr.recommended_cultivar_name,
+              hcr.primary_symptom,
+              COUNT(*) as times_recommended,
+              AVG(hcr.predicted_efficacy) as avg_efficacy,
+              AVG(hcr.confidence_score) as avg_confidence
+            FROM high_confidence_recommendations hcr
+            JOIN budtender_recommendations br ON br.recommendation_id = hcr.recommendation_id
+          `;
+
+          if (dispensaryId) {
+            conditions.push('br.dispensary_id = ?');
+            params.push(dispensaryId);
+          }
+          if (symptom) {
+            conditions.push('hcr.primary_symptom = ?');
+            params.push(symptom);
+          }
+
+          sql += ' WHERE ' + conditions.join(' AND ');
+          sql += ' GROUP BY recommended_cultivar_name, primary_symptom ORDER BY avg_efficacy DESC LIMIT ?';
+          params.push(limit);
+        } else {
+          sql = `
+            SELECT
+              recommended_cultivar_name,
+              primary_symptom,
+              COUNT(*) as times_recommended,
+              AVG(predicted_efficacy) as avg_efficacy,
+              AVG(confidence_score) as avg_confidence
+            FROM high_confidence_recommendations
+            GROUP BY recommended_cultivar_name, primary_symptom
+            ORDER BY avg_efficacy DESC
+            LIMIT ?
+          `;
+          params = [limit];
+        }
+
+        const result = await executeClinpathD1(env, sql, params);
+        return new Response(
+          JSON.stringify({ top_cultivars: result.results || [] }),
+          { status: 200, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      } catch (error: any) {
+        return new Response(
+          JSON.stringify({ error: 'Failed to retrieve analytics', detail: error?.message || String(error) }),
+          { status: 500, headers: { ...clinpathCorsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
     }
 
     // D1-backed route: POST /api/recommendations
@@ -834,7 +1324,12 @@ export default {
           profileId
         ).run();
 
-        return new Response(JSON.stringify({ success: true }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+        return new Response(JSON.stringify({
+          success: true,
+          profile_id: profileId,
+          customer_id: profileId,
+          updated_at: new Date().toISOString()
+        }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
       } catch (error) {
         console.error('Error updating profile:', error);
         return new Response(JSON.stringify({ error: 'Internal server error', details: (error as Error).message }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
@@ -849,43 +1344,42 @@ export default {
 
       try {
         const data = await request.json();
-        const transactionId = `txn_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
 
-        await d1.prepare(`
-          CREATE TABLE IF NOT EXISTS dispensary_transactions (
-            transaction_id TEXT PRIMARY KEY,
-            customer_id TEXT,
-            created_at TEXT,
-            total_amount REAL,
-            products_json TEXT,
-            notes TEXT,
-            status TEXT
-          )
-        `).run();
+        if (!data.customer_id) {
+          return new Response(JSON.stringify({ error: 'customer_id is required' }), { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+        }
+
+        await ensureDispensaryTransactionTable(d1);
+
+        const transactionId = data.id || data.transaction_id || `txn_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`;
+        const consultationDate = data.consultation_date || data.timestamp || new Date().toISOString();
+        const recommendationItems = data.items || data.recommendations || data.products || [];
+        const attachedConditions = data.conditions || data.condition_profile || [];
 
         await d1.prepare(`
           INSERT INTO dispensary_transactions (
-            transaction_id,
+            id,
             customer_id,
-            created_at,
-            total_amount,
-            products_json,
-            notes,
-            status
+            profile_id,
+            consultation_date,
+            conditions,
+            recommendations,
+            notes
           ) VALUES (?, ?, ?, ?, ?, ?, ?)
         `).bind(
           transactionId,
-          data.customer_id || null,
-          new Date().toISOString(),
-          Number(data.total_amount ?? data.total ?? 0),
-          JSON.stringify(data.items || data.products || []),
-          data.notes || '',
-          data.status || 'completed'
+          data.customer_id,
+          data.profile_id || data.customer_id,
+          consultationDate,
+          JSON.stringify(attachedConditions),
+          JSON.stringify(recommendationItems),
+          data.notes || ''
         ).run();
 
         return new Response(JSON.stringify({
           success: true,
           transaction_id: transactionId,
+          consultation_date: consultationDate,
           message: 'Transaction recorded'
         }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
       } catch (error) {
@@ -901,30 +1395,30 @@ export default {
       }
 
       try {
+        await ensureDispensaryTransactionTable(d1);
+
         const customerId = url.searchParams.get('customer_id');
-        let query = 'SELECT * FROM dispensary_transactions ORDER BY created_at DESC LIMIT 50';
+        let query = 'SELECT * FROM dispensary_transactions ORDER BY consultation_date DESC LIMIT 50';
         const params: Array<string> = [];
 
         if (customerId) {
-          query = 'SELECT * FROM dispensary_transactions WHERE customer_id = ? ORDER BY created_at DESC';
+          query = 'SELECT * FROM dispensary_transactions WHERE customer_id = ? ORDER BY consultation_date DESC';
           params.push(customerId);
         }
 
         const results = await d1.prepare(query).bind(...params).all();
 
         const transactions = results.results?.map(row => {
-          try {
-            return {
-              ...row,
-              items: JSON.parse(row.products_json || '[]')
-            };
-          } catch (error) {
-            console.error('Failed to parse transaction items:', error);
-            return {
-              ...row,
-              items: []
-            };
-          }
+          return {
+            transaction_id: row.id,
+            customer_id: row.customer_id,
+            profile_id: row.profile_id,
+            consultation_date: row.consultation_date,
+            created_at: row.created_at,
+            notes: row.notes || '',
+            conditions: safeParseJson(row.conditions, [] as unknown[]),
+            items: safeParseJson(row.recommendations, [] as unknown[])
+          };
         }) || [];
 
         return new Response(JSON.stringify({ transactions }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });

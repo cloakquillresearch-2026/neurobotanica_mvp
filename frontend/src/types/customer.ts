@@ -8,6 +8,8 @@ export interface BiomarkerValues {
   [key: string]: number | undefined
 }
 
+export type ConditionEntry = string | ConditionPayload
+
 export interface CustomerProfileData {
   customer_id: string
   first_name?: string
@@ -16,7 +18,7 @@ export interface CustomerProfileData {
   email?: string
   age?: number | null
   notes?: string
-  conditions: string[]
+  conditions: ConditionEntry[]
   experience_level: ExperienceLevel
   biomarkers?: BiomarkerValues
   last_visit?: string

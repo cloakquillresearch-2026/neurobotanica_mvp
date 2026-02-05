@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { AxiosError } from 'axios'
 import { dispensaryAPI } from '@/utils/api'
 import type { CustomerProfileData } from '@/types/customer'
+import { conditionNames } from '@/utils/conditions'
 
 interface CustomerSearchProps {
   onCustomerSelect: (customer: CustomerProfileData) => void
@@ -47,7 +48,7 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
           if (!previous || currentVisit >= previousVisit) {
             acc.set(key, {
               ...customer,
-              conditions: customer.conditions || [],
+              conditions: conditionNames(customer.conditions),
               biomarkers: customer.biomarkers || {},
             })
           }
@@ -251,40 +252,43 @@ export function CustomerSearch({ onCustomerSelect, isSandboxMode = false }: Cust
             </svg>
             <span>Returning Customers</span>
           </div>
-          {searchResults.map((customer) => (
-            <button
-              key={customer.customer_id}
-              onClick={() => onCustomerSelect(customer)}
-              className="w-full text-left p-4 bg-white/90 rounded-xl hover:shadow-xl hover:shadow-emerald-500/20 transition-all group"
-            >
-              <div className="flex justify-between items-start">
-                <div>
-                  <div className="font-bold text-gray-800 group-hover:text-emerald-700 transition-colors">
-                    {customer.first_name} {customer.last_name}
+          {searchResults.map((customer) => {
+            const displayConditions = conditionNames(customer.conditions)
+            return (
+              <button
+                key={customer.customer_id}
+                onClick={() => onCustomerSelect(customer)}
+                className="w-full text-left p-4 bg-white/90 rounded-xl hover:shadow-xl hover:shadow-emerald-500/20 transition-all group"
+              >
+                <div className="flex justify-between items-start">
+                  <div>
+                    <div className="font-bold text-gray-800 group-hover:text-emerald-700 transition-colors">
+                      {customer.first_name} {customer.last_name}
+                    </div>
+                    <div className="text-gray-500 text-sm">{customer.phone}</div>
                   </div>
-                  <div className="text-gray-500 text-sm">{customer.phone}</div>
+                  <div className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">
+                    Last: {customer.last_visit}
+                  </div>
                 </div>
-                <div className="text-xs text-gray-400 bg-gray-100 px-2 py-1 rounded-full">
-                  Last: {customer.last_visit}
-                </div>
-              </div>
-              {customer.conditions && customer.conditions.length > 0 && (
-                <div className="flex flex-wrap gap-2 mt-3">
-                  {customer.conditions.map((condition: string, index: number) => {
-                    const condInfo = COMMON_CONDITIONS.find(c => c.id === condition)
-                    return (
-                      <span
-                        key={index}
-                        className={`text-xs px-2 py-1 rounded-full bg-gradient-to-r ${condInfo?.color || 'from-gray-400 to-gray-500'} text-white`}
-                      >
-                        {condInfo?.emoji} {condInfo?.label || condition}
-                      </span>
-                    )
-                  })}
-                </div>
-              )}
-            </button>
-          ))}
+                {displayConditions.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {displayConditions.map((condition, index) => {
+                      const condInfo = COMMON_CONDITIONS.find(c => c.id === condition)
+                      return (
+                        <span
+                          key={index}
+                          className={`text-xs px-2 py-1 rounded-full bg-gradient-to-r ${condInfo?.color || 'from-gray-400 to-gray-500'} text-white`}
+                        >
+                          {condInfo?.emoji} {condInfo?.label || condition}
+                        </span>
+                      )
+                    })}
+                  </div>
+                )}
+              </button>
+            )
+          })}
         </div>
       )}
 
