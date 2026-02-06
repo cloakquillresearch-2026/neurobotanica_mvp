@@ -76,6 +76,329 @@ const safeParseJson = <T>(value: string | null | undefined, fallback: T): T => {
   }
 };
 
+const getD1Database = (env: Env): D1Database => {
+  const d1 = (env as any).DB || (env as any).neurobotanica_clinical_evidence;
+  if (!d1) {
+    throw new Error('D1 database not configured');
+  }
+  return d1 as D1Database;
+};
+
+const sanitizeString = (value: unknown): string =>
+  typeof value === 'string' ? value.trim() : '';
+
+async function verifyConsent(d1: D1Database, consentId: string) {
+  const stmt = d1.prepare('SELECT consent_status FROM omnipath_consent_artifacts WHERE consent_id = ?');
+  const result = await stmt.bind(consentId).all<any>();
+  return result.results?.[0]?.consent_status === 'active';
+}
+
+async function queryTKData(d1: D1Database, a: string, b: string) {
+  const stmt = d1.prepare(
+    'SELECT consent_id FROM neurobotanica_synergy_predictions WHERE compound_a_id = ? AND compound_b_id = ? AND requires_consent = 1'
+  );
+  const result = await stmt.bind(a, b).all<any>();
+  return result.results?.[0];
+}
+
+async function checkInteractions(d1: D1Database, compoundIds: string[], tier: string) {
+  if (tier === 'tk_enhanced') {
+    const consentValid = await verifyConsent(d1, 'sample_consent_id');
+    if (!consentValid) {
+      throw new Error('TK consent denied');
+    }
+  }
+
+  if (!compoundIds.length) {
+    return { warnings: [], total_warnings: 0 };
+  }
+
+  const placeholders = compoundIds.map(() => '?').join(',');
+  try {
+    const stmt = d1.prepare(
+      `SELECT warning, compound_id, interacting_compound_id
+       FROM neurobotanica_drug_interactions
+       WHERE compound_id IN (${placeholders}) OR interacting_compound_id IN (${placeholders})
+       LIMIT 25`
+    );
+    const result = await stmt.bind(...compoundIds, ...compoundIds).all<any>();
+    const warnings = (result.results || []).map((row: any) => row.warning || 'Potential interaction detected');
+    return { warnings, total_warnings: warnings.length };
+  } catch (error) {
+    console.error('Interaction query failed:', error);
+    return { warnings: [], total_warnings: 0 };
+  }
+}
+
+async function applyBiasCorrection(
+  d1: D1Database,
+  baseDose: number,
+  compoundId: string,
+  demographics: Record<string, unknown>,
+  tier: string
+) {
+  let adjustmentFactor = 1.0;
+  let evidence = 'Standard adjustment applied';
+
+  try {
+    const condition = sanitizeString((demographics as any).condition);
+    if (condition && ['weight_management', 'muscle_spasms'].includes(condition)) {
+      const conditionMap: Record<string, string> = {
+        weight_management: 'metabolism',
+        muscle_spasms: 'spasms',
+      };
+      const mappedCondition = conditionMap[condition];
+      const stmt = d1.prepare(
+        `SELECT adjustment_factor, evidence_basis
+         FROM neurobotanica_demographic_factors
+         WHERE compound_id = ? AND demographic_group = ?`
+      );
+      const result = await stmt.bind(compoundId, mappedCondition).all<any>();
+      if (result.results?.length) {
+        adjustmentFactor = result.results[0].adjustment_factor || 1.0;
+        evidence = result.results[0].evidence_basis || 'Evidence-based adjustment applied';
+      } else {
+        evidence = `No specific data available for ${mappedCondition}. Using standard adjustment.`;
+      }
+    } else {
+      const age = (demographics as any).age;
+      if (typeof age === 'number') {
+        const ageGroup = age < 30 ? 'young' : age > 65 ? 'elderly' : 'adult';
+        const stmt = d1.prepare(
+          `SELECT adjustment_factor, evidence_basis
+           FROM neurobotanica_demographic_factors
+           WHERE compound_id = ? AND demographic_group = ?`
+        );
+        const result = await stmt.bind(compoundId, ageGroup).all<any>();
+        if (result.results?.length) {
+          adjustmentFactor *= result.results[0].adjustment_factor || 1.0;
+          evidence = result.results[0].evidence_basis || evidence;
+        }
+      }
+
+      const weight = (demographics as any).weight;
+      if (typeof weight === 'number') {
+        const weightFactor = weight < 150 ? 0.9 : weight > 250 ? 1.1 : 1.0;
+        adjustmentFactor *= weightFactor;
+        evidence += ` Weight-based adjustment applied (${weight}lbs).`;
+      }
+
+      const gender = sanitizeString((demographics as any).gender).toLowerCase();
+      if (gender === 'female') {
+        adjustmentFactor *= 0.95;
+        evidence += ' Gender-based adjustment applied.';
+      }
+    }
+  } catch (error) {
+    console.error('Bias correction query failed:', error);
+    adjustmentFactor = 1.0;
+    evidence = 'Query failed, using standard adjustment.';
+  }
+
+  const adjustedDose = baseDose * adjustmentFactor;
+  return {
+    adjusted_dose_mg: Math.round(adjustedDose * 100) / 100,
+    factors_applied: { adjustment_factor: adjustmentFactor, demographics_considered: Object.keys(demographics) },
+    evidence,
+  };
+}
+
+async function predictSynergy(d1: D1Database, a: string, b: string, tier: string) {
+  let synergyScore = 0.5;
+  let tkEnhanced = false;
+  let evidence = 'Computational prediction';
+
+  try {
+    const stmt = d1.prepare(
+      `SELECT synergy_score, confidence_score, clinical_evidence, requires_consent, consent_verification_status
+       FROM neurobotanica_synergy_predictions
+       WHERE (compound_a_id = ? AND compound_b_id = ?) OR (compound_a_id = ? AND compound_b_id = ?)
+       ORDER BY confidence_score DESC
+       LIMIT 1`
+    );
+    const result = await stmt.bind(a, b, b, a).all<any>();
+
+    if (result.results?.length) {
+      const data = result.results[0];
+      synergyScore = typeof data.synergy_score === 'number' ? data.synergy_score : 0.5;
+      const consentApproved = data.consent_verification_status === 'approved';
+      tkEnhanced = Boolean(data.requires_consent) && consentApproved;
+      evidence = data.clinical_evidence || 'Database prediction';
+    } else {
+      const compoundA = a.toLowerCase();
+      const compoundB = b.toLowerCase();
+      let baseScore = 0.4;
+
+      if ((compoundA.includes('cbd') && compoundB.includes('thc')) || (compoundA.includes('thc') && compoundB.includes('cbd'))) {
+        baseScore += 0.3;
+      } else if ((compoundA.includes('cbd') && compoundB.includes('cbg')) || (compoundA.includes('cbg') && compoundB.includes('cbd'))) {
+        baseScore += 0.25;
+      } else if ((compoundA.includes('thc') && compoundB.includes('cbg')) || (compoundA.includes('cbg') && compoundB.includes('thc'))) {
+        baseScore += 0.2;
+      } else if (compoundA === compoundB) {
+        baseScore += 0.1;
+      }
+
+      const randomFactor = (Math.random() - 0.5) * 0.2;
+      synergyScore = Math.max(0.1, Math.min(0.9, baseScore + randomFactor));
+      evidence = `Dynamic prediction for ${a}-${b} combination - no database data available`;
+    }
+  } catch (error) {
+    console.error('Synergy query failed:', { compound_a: a, compound_b: b, error });
+    synergyScore = 0.5;
+    evidence = 'Query failed, using default prediction';
+  }
+
+  if (tier === 'tk_enhanced' && !tkEnhanced) {
+    try {
+      const tkData = await queryTKData(d1, a, b);
+      if (tkData && await verifyConsent(d1, tkData.consent_id)) {
+        synergyScore = Math.min(synergyScore + 0.2, 1.0);
+        tkEnhanced = true;
+        evidence += ' (TK-enhanced)';
+      }
+    } catch (error) {
+      console.error('TK enhancement failed:', error);
+    }
+  }
+
+  return { synergy_score: synergyScore, tk_enhanced: tkEnhanced, evidence };
+}
+
+async function predictPolysaccharides(d1: D1Database, compoundIds: string[], tier: string) {
+  const compoundId = compoundIds[0] || 'cbd';
+  const tierLevel = tier === 'tk_enhanced' ? 2 : 1;
+
+  try {
+    const stmt = d1.prepare(
+      `SELECT effect_type, confidence_score, modulation_type
+       FROM neurobotanica_polysaccharides
+       WHERE compound_id = ? AND tier_access <= ?
+       ORDER BY confidence_score DESC
+       LIMIT 1`
+    );
+    const result = await stmt.bind(compoundId, tierLevel).all<any>();
+    if (result.results?.length) {
+      const data = result.results[0];
+      return {
+        effects: data.effect_type || 'microbiome_modulation',
+        confidence: data.confidence_score || 0.85,
+        modulation: data.modulation_type || 'beneficial',
+      };
+    }
+  } catch (error) {
+    console.error('Polysaccharide query failed:', error);
+  }
+
+  const compound = compoundId.toLowerCase();
+  let baseConfidence = 0.6;
+  let modulation = 'beneficial';
+
+  if (compound.includes('cbd') || compound.includes('cannabidiol')) {
+    baseConfidence += 0.15;
+  } else if (compound.includes('cbg') || compound.includes('cannabigerol')) {
+    baseConfidence += 0.12;
+  } else if (compound.includes('thc') || compound.includes('delta-9-tetrahydrocannabinol')) {
+    baseConfidence += 0.08;
+    modulation = 'variable';
+  } else if (compound.includes('terpene')) {
+    baseConfidence += 0.1;
+  }
+
+  const randomFactor = (Math.random() - 0.5) * 0.1;
+  const confidence = Math.max(0.4, Math.min(0.95, baseConfidence + randomFactor));
+
+  return { effects: 'microbiome_modulation', confidence, modulation };
+}
+
+const categoryToKingdom: Record<string, string> = {
+  'anti-inflammatory': 'cannabis',
+  'neurological': 'cannabis',
+  'pain': 'cannabis',
+  'anxiety': 'cannabis',
+  'sleep': 'cannabis',
+  'trauma': 'cannabis',
+  'gastrointestinal': 'plant',
+  'digestive': 'plant',
+  'immunomodulatory': 'fungal',
+  'immune': 'fungal',
+  'marine': 'marine',
+  'plant': 'plant',
+  'fungal': 'fungal',
+  'cannabis': 'cannabis'
+};
+
+const mapCategoryToKingdom = (category?: string | null): string | null => {
+  if (!category) {
+    return null;
+  }
+  const key = category.toLowerCase().trim();
+  return categoryToKingdom[key] || null;
+};
+
+const mapCompoundToKingdom = (compoundClass?: string | null, source?: string | null): string => {
+  const combined = `${compoundClass || ''} ${source || ''}`.toLowerCase();
+  if (combined.includes('fungal') || combined.includes('mushroom') || combined.includes('reishi')) {
+    return 'fungal';
+  }
+  if (combined.includes('marine') || combined.includes('algae') || combined.includes('sea')) {
+    return 'marine';
+  }
+  if (combined.includes('plant') || combined.includes('botanical') || combined.includes('herb')) {
+    return 'plant';
+  }
+  if (combined.includes('cannabinoid') || combined.includes('cannabis')) {
+    return 'cannabis';
+  }
+  return 'cannabis';
+};
+
+async function resolveCompounds(d1: D1Database, compoundIds: string[]) {
+  if (!compoundIds.length) {
+    return [];
+  }
+
+  const placeholders = compoundIds.map(() => '?').join(',');
+  const stmt = d1.prepare(
+    `SELECT compound_id, compound_name, compound_class, source
+     FROM neurobotanica_compounds
+     WHERE compound_id IN (${placeholders}) OR compound_name IN (${placeholders})
+     LIMIT 20`
+  );
+
+  const result = await stmt.bind(...compoundIds, ...compoundIds).all<any>();
+  return (result.results || []).map((row: any) => ({
+    ...row,
+    kingdom: mapCompoundToKingdom(row.compound_class, row.source)
+  }));
+}
+
+async function fetchConditionEvidence(d1: D1Database, condition: string) {
+  if (!condition) {
+    return null;
+  }
+
+  const normalized = condition.toUpperCase();
+  const conditionRow = await d1.prepare(
+    'SELECT condition_name, category, recommended_cannabinoids, evidence_count FROM conditions WHERE UPPER(condition_name) = ? OR UPPER(condition_name) LIKE ?'
+  ).bind(normalized, `%${normalized}%`).first<any>();
+
+  const studies = await d1.prepare(
+    'SELECT study_id, study_type, citation, confidence_score FROM clinical_studies WHERE UPPER(condition) = ? OR UPPER(condition) LIKE ? ORDER BY confidence_score DESC LIMIT 10'
+  ).bind(normalized, `%${normalized}%`).all<any>();
+
+  const avgConfidence = (studies.results || []).reduce((acc: number, row: any) => acc + (row.confidence_score || 0), 0) / Math.max(1, studies.results?.length || 1);
+
+  return {
+    condition: conditionRow?.condition_name || condition,
+    category: conditionRow?.category || null,
+    recommended_cannabinoids: conditionRow?.recommended_cannabinoids || null,
+    evidence_count: conditionRow?.evidence_count || studies.results?.length || 0,
+    studies: studies.results || [],
+    avg_confidence: Math.round(avgConfidence * 100) / 100,
+  };
+}
+
 const TRANSACTION_REQUIRED_COLUMNS = [
   'id',
   'customer_id',
@@ -578,6 +901,57 @@ export default {
       }
     }
 
+    // D1-backed route: POST /api/dispensary/analyze
+    if (url.pathname === '/api/dispensary/analyze' && request.method === 'POST') {
+      try {
+        const d1 = getD1Database(env);
+        const startTime = Date.now();
+        const body = await request.json<any>();
+
+        const compoundIds = Array.isArray(body.compound_ids) ? body.compound_ids : [];
+        if (!compoundIds.length) {
+          return new Response(JSON.stringify({
+            error: 'Invalid request',
+            details: 'compound_ids array is required'
+          }), { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+        }
+
+        const demographics = (body.demographics || {}) as Record<string, unknown>;
+        const tier = body.customer_tier || 'computational_only';
+        const plantId = body.plant_id;
+
+        const interactions = await checkInteractions(d1, compoundIds, tier);
+        const biasCorrected = await applyBiasCorrection(d1, 10.0, compoundIds[0], demographics, tier);
+        const synergy = await predictSynergy(d1, compoundIds[0], compoundIds[1] || compoundIds[0], tier);
+        const polysaccharideEffects = await predictPolysaccharides(d1, compoundIds, tier);
+
+        const compoundProfiles = await resolveCompounds(d1, compoundIds);
+        const conditionName = sanitizeString((demographics as any).condition || (demographics as any).primary_condition);
+        const conditionEvidence = await fetchConditionEvidence(d1, conditionName);
+
+        const plant_profile = {
+          plant_id: plantId || null,
+          compounds: compoundProfiles,
+          condition_evidence: conditionEvidence,
+        };
+
+        return new Response(JSON.stringify({
+          interactions,
+          bias_correction: biasCorrected,
+          synergy,
+          plant_profile,
+          polysaccharide_effects: polysaccharideEffects,
+          processing_time_ms: Date.now() - startTime,
+        }), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      } catch (error: any) {
+        console.error('Dispensary analyze error:', error);
+        return new Response(JSON.stringify({
+          error: 'Analysis failed',
+          details: error?.message || String(error)
+        }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
+      }
+    }
+
     // D1-backed route: POST /api/recommendations
     if (url.pathname === '/api/recommendations' && request.method === 'POST') {
       // Support different binding names: prefer `DB`, fallback to known binding `neurobotanica_clinical_evidence`
@@ -614,15 +988,15 @@ export default {
 
         // Get condition metadata - try multiple ways to find the condition
         let conditionQuery = await d1.prepare(
-          'SELECT * FROM conditions WHERE condition_id = ? OR UPPER(condition_name) = ? OR condition_name LIKE ?'
-        ).bind(normalizedCondition, normalizedCondition, `%${condition}%`).first<ConditionData>();
+          'SELECT * FROM conditions WHERE condition_id = ? OR UPPER(condition_name) = ? OR UPPER(condition_name) LIKE ?'
+        ).bind(normalizedCondition, normalizedCondition, `%${normalizedCondition}%`).first<ConditionData>();
 
         // If not found in conditions table, create a synthetic condition entry
         if (!conditionQuery) {
           // Check if there are any studies for this condition
           const studyCheck = await d1.prepare(
-            'SELECT COUNT(*) as count FROM clinical_studies WHERE UPPER(condition) = ? OR condition LIKE ?'
-          ).bind(normalizedCondition, `%${condition}%`).first();
+            'SELECT COUNT(*) as count FROM clinical_studies WHERE UPPER(condition) = ? OR UPPER(condition) LIKE ?'
+          ).bind(normalizedCondition, `%${normalizedCondition}%`).first();
 
           if (studyCheck && studyCheck.count > 0) {
             // Create synthetic condition metadata
@@ -666,9 +1040,9 @@ export default {
         let studies: Study[] = [];
 
         if (condition.toUpperCase() === 'INFLAMMATION') {
-          // Aggregate data from inflammation-related conditions
-          const inflammationConditions = ['ARTHRITIS', 'IBD_CROHNS', 'DERMATOLOGY'];
-          const inflammationStudies = [];
+          // Aggregate data from inflammation-related conditions (including direct inflammation studies)
+          const inflammationConditions = ['INFLAMMATION', 'ARTHRITIS', 'IBD_CROHNS', 'DERMATOLOGY'];
+          const inflammationStudies: Study[] = [];
 
           for (const inflCondition of inflammationConditions) {
             const conditionStudies = await d1.prepare(`
@@ -713,10 +1087,10 @@ export default {
               citation,
               confidence_score
             FROM clinical_studies
-            WHERE UPPER(condition) = ? OR condition LIKE ?
+            WHERE UPPER(condition) = ? OR UPPER(condition) LIKE ?
             ORDER BY confidence_score DESC
             LIMIT 20
-          `).bind(normalizedCondition, `%${condition}%`).all<Study>();
+          `).bind(normalizedCondition, `%${normalizedCondition}%`).all<Study>();
 
           studies = studiesResult.results || [];
         }
@@ -882,6 +1256,80 @@ export default {
           dosing_guidance = severity === 'mild' ? 'Start with 5-10mg, increase gradually' : severity === 'severe' ? 'Consider 20-40mg, consult healthcare provider' : 'Start with 10-20mg, adjust as needed';
         }
 
+        const experienceLevelRaw = body.preferences?.experience_level ?? (body as any).experience_level ?? 'beginner';
+        const experienceLevel = experienceLevelRaw.toString().toLowerCase().trim();
+
+        const firstTimeGuidance = {
+          title: 'First-Time User',
+          notes: [
+            'Recommend low THC products',
+            'Consider CBD-dominant options or balanced 1:1 ratios',
+            'Start low, go slow'
+          ]
+        };
+
+        const experienceGuidanceMap: Record<string, { title: string; notes: string[] }> = {
+          'first time': firstTimeGuidance,
+          'first-time': firstTimeGuidance,
+          'naive': firstTimeGuidance,
+          'beginner': {
+            title: 'Getting Started',
+            notes: [
+              'Start with low-THC products (under 15%) and increase gradually',
+              'CBD-dominant strains reduce anxiety risk from THC',
+              'Wait 15–30 min after inhalation, 60–90 min after edibles before re-dosing',
+              'Keep a simple journal: strain, dose, effects — helps us refine recommendations'
+            ]
+          },
+          'occasional': {
+            title: 'Building Your Profile',
+            notes: [
+              'Your tolerance resets partially between sessions — start lower than your last dose',
+              'Terpene profiles matter more than THC% for targeting specific symptoms',
+              'Mixing delivery methods (e.g., vape for onset + edible for duration) can improve coverage',
+              "Let us know what worked and what didn't so we can sharpen your recommendations"
+            ]
+          },
+          'intermediate': {
+            title: 'Building Your Profile',
+            notes: [
+              'Your tolerance resets partially between sessions — start lower than your last dose',
+              'Terpene profiles matter more than THC% for targeting specific symptoms',
+              'Mixing delivery methods (e.g., vape for onset + edible for duration) can improve coverage',
+              "Let us know what worked and what didn't so we can sharpen your recommendations"
+            ]
+          },
+          'regular': {
+            title: 'Optimizing Your Regimen',
+            notes: [
+              'Consider a 48-hour tolerance reset if effects are diminishing',
+              'Rotating strains with different terpene profiles reduces tolerance buildup',
+              'Adjuvant supplements (magnesium, omega-3) can enhance cannabinoid efficacy by 25–35%',
+              'Consistent daily dosing often outperforms as-needed use for chronic conditions'
+            ]
+          },
+          'experienced': {
+            title: 'Advanced Insights',
+            notes: [
+              'Minor cannabinoids (CBG, CBN, THCV) offer targeted effects beyond THC/CBD',
+              'Entourage effect optimization: match terpene-cannabinoid ratios to your condition profile',
+              'Consider time-of-day stratification: energizing profiles AM, sedating profiles PM',
+              'Your usage history qualifies you for our advanced cross-kingdom synergy analysis'
+            ]
+          },
+          'expert': {
+            title: 'Advanced Insights',
+            notes: [
+              'Minor cannabinoids (CBG, CBN, THCV) offer targeted effects beyond THC/CBD',
+              'Entourage effect optimization: match terpene-cannabinoid ratios to your condition profile',
+              'Consider time-of-day stratification: energizing profiles AM, sedating profiles PM',
+              'Your usage history qualifies you for our advanced cross-kingdom synergy analysis'
+            ]
+          }
+        };
+
+        const experience_guidance = experienceGuidanceMap[experienceLevel] || experienceGuidanceMap.beginner;
+
         // Build response with REAL data
         const recommendation = {
           condition: conditionQuery.condition_name,
@@ -895,6 +1343,7 @@ export default {
           recommended_ratio: recommendedCannabinoids.length >= 2 ? `${recommendedCannabinoids[0].cannabinoid}:${recommendedCannabinoids[1].cannabinoid} (2:1 to 1:1)` : recommendedCannabinoids[0]?.cannabinoid || 'CBD',
           delivery_methods: ['Tincture', 'Vaporizer', 'Edible'],
           dosing_guidance,
+          experience_guidance,
           citations: studies.slice(0,5).map(s => ({ study_id: s.study_id, study_type: s.study_type, citation: s.citation, confidence_score: s.confidence_score, key_findings: (() => { try { return JSON.parse(s.key_findings || '[]').slice(0,2) } catch(e) { return [] } })() })),
           confidence_score: Math.round(avgConfidence * 100) / 100,
           disclaimer: 'These recommendations are based on clinical evidence and should not replace medical advice. Consult a healthcare provider before starting any new treatment.'
@@ -911,8 +1360,10 @@ export default {
     // TS-PS-001 Inflammatory Synergy Endpoint
     if (url.pathname === '/api/dispensary/inflammatory-synergy' && request.method === 'POST') {
       // Support different binding names: prefer `DB`, fallback to known binding `neurobotanica_clinical_evidence`
-      const d1 = (env as any).DB || (env as any).neurobotanica_clinical_evidence;
-      if (!d1) {
+      let d1: D1Database;
+      try {
+        d1 = getD1Database(env);
+      } catch (error) {
         return new Response(JSON.stringify({ error: 'D1 database not configured' }), { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
       }
 
@@ -932,163 +1383,52 @@ export default {
 
         const biomarkers = body.biomarkers || {};
         const condition_profile = body.condition_profile || {};
-        const available_kingdoms = body.available_kingdoms || ['cannabis', 'fungal', 'plant'];
+        const available_kingdoms = body.available_kingdoms || ['cannabis', 'fungal', 'plant', 'marine'];
 
-        // Check if biomarkers are provided
-        const hasBiomarkers = Object.values(biomarkers).some(v => v !== undefined && v !== null && v !== 0);
         const conditions = condition_profile.conditions || [];
-        const hasConditions = conditions.length > 0;
-        const primaryCondition = conditions[0]?.name?.toLowerCase() || '';
+        const primaryCondition = sanitizeString(conditions[0]?.name).toLowerCase();
+        const conditionEvidence = await fetchConditionEvidence(d1, primaryCondition);
 
-        let synergy_score = 0.3; // Default moderate synergy
-        let confidence_level = 0.4; // Default confidence
-        let biomarker_score = 0; // Initialize biomarker score
-        let primary_kingdom = 'cannabis';
+        const recommendedCannabinoidsRaw = sanitizeString(conditionEvidence?.recommended_cannabinoids || 'CBD');
+        const recommendedTokens = recommendedCannabinoidsRaw.split(',').map(token => token.trim()).filter(Boolean);
 
-        if (hasBiomarkers) {
-          // Use biomarker-based logic
-          const tnf_score = (biomarkers.tnf_alpha || 0) / 20.0;
-          const il6_score = (biomarkers.il6 || 0) / 10.0;
-          const crp_score = (biomarkers.crp || 0) / 10.0;
-          const il1b_score = (biomarkers.il1b || 0) / 5.0;
-
-          biomarker_score = Math.min(1.0, (tnf_score + il6_score + crp_score + il1b_score) / 4.0);
-
-          // Experience level adjustment
-          const experience = condition_profile.experience_level || 'beginner';
-          const expMultiplier = { 'beginner': 0.8, 'intermediate': 0.9, 'regular': 0.95, 'experienced': 1.0 }[experience] || 0.8;
-
-          synergy_score = biomarker_score * expMultiplier;
-          confidence_level = Math.min(0.95, biomarker_score * 0.85);
-
-          // Determine primary kingdom based on biomarker profile
-          if (biomarkers.tnf_alpha && biomarkers.tnf_alpha > 15) {
-            primary_kingdom = 'plant'; // High TNF-α favors curcumin
-          } else if (biomarkers.il6 && biomarkers.il6 > 8) {
-            primary_kingdom = 'fungal'; // High IL-6 favors β-glucan
-          } else {
-            primary_kingdom = 'cannabis';
+        const resolvedCompounds = await resolveCompounds(d1, recommendedTokens.length ? recommendedTokens : ['CBD']);
+        const compoundsByKingdom = new Map<string, number>();
+        resolvedCompounds.forEach(compound => {
+          const kingdom = (compound.kingdom || '').toLowerCase();
+          if (!kingdom) {
+            return;
           }
-        }
+          compoundsByKingdom.set(kingdom, (compoundsByKingdom.get(kingdom) || 0) + 1);
+        });
 
-        // ENHANCED TS-PS-001: Integrate clinical database for evidence-based recommendations
-        let evidenceBasedKingdom = null;
-        let evidenceBasedCompounds = null;
-        let clinicalConfidence = 0;
+        const categoryKingdom = mapCategoryToKingdom(conditionEvidence?.category || null);
+        const primary_kingdom = Array.from(compoundsByKingdom.entries())
+          .filter(([kingdom]) => available_kingdoms.includes(kingdom))
+          .sort((a, b) => b[1] - a[1])[0]?.[0]
+          || (categoryKingdom && available_kingdoms.includes(categoryKingdom) ? categoryKingdom : null)
+          || 'cannabis';
 
-        if (hasConditions) {
-          // Query clinical database for evidence-based kingdom selection
-          const conditionStudies = await d1.prepare('SELECT intervention, outcomes, confidence_score FROM clinical_studies WHERE condition = ? ORDER BY confidence_score DESC LIMIT 10').bind(primaryCondition).all();
+        const recommended_compounds = resolvedCompounds
+          .filter(compound => (compound.kingdom || '').toLowerCase() === primary_kingdom)
+          .map(compound => compound.compound_name || compound.compound_id)
+          .filter(Boolean)
+          .slice(0, 3);
 
-          if (conditionStudies.results && conditionStudies.results.length > 0) {
-            // Analyze intervention data to determine most evidenced kingdom
-            const kingdomEvidence = { cannabis: 0, fungal: 0, plant: 0, marine: 0 };
-            let totalEvidenceScore = 0;
+        const compoundIds = resolvedCompounds.map(compound => compound.compound_id).filter(Boolean);
+        const synergy = await predictSynergy(d1, compoundIds[0] || 'cbd', compoundIds[1] || compoundIds[0] || 'cbd', 'computational_only');
 
-            // conditionStudies.results.forEach(study => {
-            //   try {
-            //     const intervention = typeof study.intervention === 'string'
-            //       ? JSON.parse(study.intervention)
-            //       : study.intervention;
+        const biomarkerValues = Object.values(biomarkers).filter(value => typeof value === 'number' && value > 0) as number[];
+        const biomarkerAverage = biomarkerValues.length ? biomarkerValues.reduce((acc, v) => acc + v, 0) / biomarkerValues.length : 0;
 
-            //     // Extract compound information and map to kingdoms
-            //     const compounds = intervention?.compounds || [intervention?.cannabinoid_type].filter(Boolean);
+        const confidence_level = Math.min(0.95, Math.max(0.45, (conditionEvidence?.avg_confidence || 0.4) + (synergy.synergy_score * 0.2)));
 
-            //     compounds.forEach((compound: any) => {
-            //       const compoundName = typeof compound === 'string' ? compound.toLowerCase() :
-            //                          compound?.name?.toLowerCase() || '';
-
-            //       // Map compounds to kingdoms based on clinical evidence
-            //       if (compoundName.includes('cbd') || compoundName.includes('thc') || compoundName.includes('cannabinoid')) {
-            //         kingdomEvidence.cannabis += study.confidence_score || 0;
-            //       } else if (compoundName.includes('curcumin') || compoundName.includes('quercetin') || compoundName.includes('turmeric')) {
-            //         kingdomEvidence.plant += study.confidence_score || 0;
-            //       } else if (compoundName.includes('reishi') || compoundName.includes('lion') || compoundName.includes('mushroom')) {
-            //         kingdomEvidence.fungal += study.confidence_score || 0;
-            //       } else if (compoundName.includes('fucoidan') || compoundName.includes('astaxanthin')) {
-            //         kingdomEvidence.marine += study.confidence_score || 0;
-            //       }
-
-            //       totalEvidenceScore += study.confidence_score || 0;
-            //     });
-            //   } catch (e) {
-            //     // Skip malformed intervention data
-            //   }
-            // });
-
-            // Select kingdom with highest evidence score
-            if (totalEvidenceScore > 0) {
-              const bestKingdom = 'cannabis';
-
-              evidenceBasedKingdom = bestKingdom;
-              clinicalConfidence = 0.8;
-
-              const evidenceCompounds = {
-                cannabis: ['CBD'],
-                plant: ['Curcumin'],
-                fungal: ['Reishi'],
-                marine: ['Fucoidan']
-              };
-
-              evidenceBasedCompounds = evidenceCompounds[bestKingdom];
-            }
-          }
-        }
-
-        // Use evidence-based kingdom if available, otherwise fall back to algorithmic logic
-        if (evidenceBasedKingdom) {
-          primary_kingdom = evidenceBasedKingdom;
-          synergy_score = Math.max(synergy_score, clinicalConfidence * 0.8); // Boost synergy with clinical evidence
-          confidence_level = Math.max(confidence_level, clinicalConfidence);
-        }
-
-        const compoundMap = {
-          cannabis: ['CBD', 'CBG', 'beta-caryophyllene'],
-          fungal: ['Lions Mane glucan', 'Reishi extract'],
-          marine: ['Fucoidan', 'Astaxanthin'],
-          plant: ['Curcumin', 'Quercetin']
-        };
-
-        const recommended_compounds = compoundMap[primary_kingdom as keyof typeof compoundMap] || ['CBD'];
-
-        // Calculate expected reductions - integrate clinical data when available
-        let reduction_multiplier = synergy_score;
-        let evidenceBasedReductions = null;
-
-        if (!hasBiomarkers) {
-          // Try to get evidence-based reductions from clinical outcomes
-          if (evidenceBasedKingdom && clinicalConfidence > 0) {
-            // Use clinical confidence to adjust reduction estimates
-            reduction_multiplier = clinicalConfidence * 0.8; // More conservative with clinical data
-
-            // Evidence-based reduction estimates by kingdom
-            const kingdomReductions = {
-              plant: { tnf_alpha: 45, il6: 40, crp: 50, il1b: 35 }, // Curcumin/Quercetin effects
-              fungal: { tnf_alpha: 35, il6: 45, crp: 40, il1b: 30 }, // Mushroom extracts
-              cannabis: { tnf_alpha: 30, il6: 35, crp: 35, il1b: 25 }, // Cannabinoids
-              marine: { tnf_alpha: 40, il6: 38, crp: 45, il1b: 32 }  // Marine compounds
-            };
-
-            evidenceBasedReductions = kingdomReductions[evidenceBasedKingdom as keyof typeof kingdomReductions];
-          } else {
-            // Fall back to condition-based estimates
-            if (primaryCondition.includes('inflammation') || primaryCondition.includes('arthritis')) {
-              reduction_multiplier = 0.6;
-            } else if (primaryCondition.includes('anxiety') || primaryCondition.includes('stress')) {
-              reduction_multiplier = 0.4;
-            } else if (primaryCondition.includes('sleep') || primaryCondition.includes('insomnia')) {
-              reduction_multiplier = 0.5;
-            } else {
-              reduction_multiplier = 0.5;
-            }
-          }
-        }
-
+        const reductionMultiplier = biomarkerAverage > 0 ? Math.min(0.75, 0.25 + synergy.synergy_score * 0.6) : 0.35 + synergy.synergy_score * 0.4;
         const expected_reduction = {
-          tnf_alpha: 40,
-          il6: 35,
-          crp: 45,
-          il1b: 30
+          tnf_alpha: Math.round((biomarkers.tnf_alpha || 10) * reductionMultiplier),
+          il6: Math.round((biomarkers.il6 || 5) * reductionMultiplier),
+          crp: Math.round((biomarkers.crp || 7) * reductionMultiplier),
+          il1b: Math.round((biomarkers.il1b || 3) * reductionMultiplier)
         };
 
         const dosing_guidance = {
@@ -1100,11 +1440,13 @@ export default {
 
         const result = {
           primary_kingdom,
-          synergy_score: Math.round(synergy_score * 100) / 100,
-          confidence_level: 0.65,
-          recommended_compounds,
+          secondary_kingdoms: available_kingdoms.filter(k => k !== primary_kingdom).slice(0, 2),
+          synergy_score: Math.round(synergy.synergy_score * 100) / 100,
+          confidence_level: Math.round(confidence_level * 100) / 100,
+          recommended_compounds: recommended_compounds.length ? recommended_compounds : ['CBD'],
           dosing_guidance,
-          expected_reduction
+          expected_reduction,
+          evidence_summary: conditionEvidence
         };
 
         return new Response(JSON.stringify(result), { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } });
@@ -1239,9 +1581,14 @@ export default {
       try {
         const rawText = await request.text();
         const profileData = JSON.parse(rawText);
+        const normalizedNotes = typeof profileData.notes === 'string' ? profileData.notes : '';
+        const normalizedProfileData = {
+          ...profileData,
+          notes: normalizedNotes,
+        };
 
-        const email = (profileData.email || '').toString().trim().toLowerCase();
-        const phone = (profileData.phone || '').toString().trim().toLowerCase();
+        const email = (normalizedProfileData.email || '').toString().trim().toLowerCase();
+        const phone = (normalizedProfileData.phone || '').toString().trim().toLowerCase();
 
         if (email || phone) {
           const emailPattern = email ? `%"email":"${email}%` : null;
@@ -1272,9 +1619,9 @@ export default {
           }
         }
 
-        const profileId = profileData.customer_id || `profile_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        const profileCode = profileData.phone || `PC${Date.now()}`;
-        const primaryCondition = extractPrimaryConditionName(profileData.conditions);
+        const profileId = normalizedProfileData.customer_id || `profile_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        const profileCode = normalizedProfileData.phone || `PC${Date.now()}`;
+        const primaryCondition = extractPrimaryConditionName(normalizedProfileData.conditions);
 
         // Insert new profile
         await d1.prepare(
@@ -1283,7 +1630,7 @@ export default {
         ).bind(
           profileId,
           profileCode,
-          JSON.stringify(profileData),
+          JSON.stringify(normalizedProfileData),
           primaryCondition,
           0.8 // Default completeness score
         ).run();
@@ -1309,8 +1656,13 @@ export default {
 
         const rawText = await request.text();
         const profileData = JSON.parse(rawText);
+        const normalizedNotes = typeof profileData.notes === 'string' ? profileData.notes : '';
+        const normalizedProfileData = {
+          ...profileData,
+          notes: normalizedNotes,
+        };
 
-        const primaryCondition = extractPrimaryConditionName(profileData.conditions);
+        const primaryCondition = extractPrimaryConditionName(normalizedProfileData.conditions);
 
         // Update profile
         await d1.prepare(
@@ -1318,7 +1670,7 @@ export default {
            SET data = ?, primary_condition = ?, updated_at = datetime('now'), completeness_score = ?
            WHERE profile_id = ?`
         ).bind(
-          JSON.stringify(profileData),
+          JSON.stringify(normalizedProfileData),
           primaryCondition,
           0.9, // Updated completeness score
           profileId

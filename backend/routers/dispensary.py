@@ -22,6 +22,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel, Field
 from sqlalchemy.orm import Session
 from datetime import datetime
+import asyncio
 import uuid
 import logging
 
@@ -1055,6 +1056,9 @@ async def predict_inflammatory_synergy(
             condition_profile=request.condition_profile.model_dump(),
             available_kingdoms=request.available_kingdoms
         )
+
+        if asyncio.iscoroutine(prediction):
+            prediction = await prediction
 
         return InflammatorySynergyResponse(**prediction)
 

@@ -1,88 +1,172 @@
+from __future__ import annotations
+
 from typing import Any, Dict, List, Optional
+import logging
+
+from backend.routers import persistence as d1_persistence
+
+logger = logging.getLogger(__name__)
 
 
-class _StubInflammatorySynergyEngine:
-    """TS-PS-001 development stub with heuristic scoring and personalization."""
+class InflammatorySynergyEngine:
+    """TS-PS-001 engine backed by D1 with heuristic fallback."""
 
-    MARKER_THRESHOLDS: Dict[str, Dict[str, float]] = {
-        'tnf_alpha': {'moderate': 5.0, 'severe': 20.0},
-        'il6': {'moderate': 2.0, 'severe': 10.0},
-        'crp': {'moderate': 1.0, 'severe': 10.0},
-        'il1b': {'moderate': 0.8, 'severe': 5.0},
-    }
-    MARKER_WEIGHTS: Dict[str, float] = {
-        'tnf_alpha': 0.4,
-        'il6': 0.25,
-        'crp': 0.25,
-        'il1b': 0.1,
-    }
-    EXPERIENCE_ADJUSTMENTS: Dict[str, float] = {
-        'naive': -0.15,
-        'beginner': -0.08,
-        'intermediate': 0.0,
-        'regular': 0.05,
-        'experienced': 0.08,
-    }
-    KINGDOM_COMPOUNDS: Dict[str, List[str]] = {
-        'cannabis': ['CBD', 'CBG', 'β-caryophyllene'],
-        'fungal': ["Lion's Mane β-glucan", 'Reishi extract'],
-        'marine': ['Fucoidan', 'Astaxanthin'],
-        'plant': ['Curcumin', 'Quercetin'],
-    }
+    DEFAULT_KINGDOMS = ["cannabis", "fungal", "marine", "plant"]
 
-    def predict_inflammatory_synergy(self, *args, **kwargs) -> Dict[str, Any]:
+    async def predict_inflammatory_synergy(self, *args, **kwargs) -> Dict[str, Any]:
         if args:
-            biomarkers = args[0] if len(args) > 0 else kwargs.get('biomarkers', {})
-            condition_profile = args[1] if len(args) > 1 else kwargs.get('condition_profile', {})
-            kingdoms = args[2] if len(args) > 2 else kwargs.get('available_kingdoms')
+            biomarkers = args[0] if len(args) > 0 else kwargs.get("biomarkers", {})
+            condition_profile = args[1] if len(args) > 1 else kwargs.get("condition_profile", {})
+            kingdoms = args[2] if len(args) > 2 else kwargs.get("available_kingdoms")
         else:
-            biomarkers = kwargs.get('biomarkers', {})
-            condition_profile = kwargs.get('condition_profile', {})
-            kingdoms = kwargs.get('available_kingdoms')
+            biomarkers = kwargs.get("biomarkers", {})
+            condition_profile = kwargs.get("condition_profile", {})
+            kingdoms = kwargs.get("available_kingdoms")
 
         available_kingdoms = self._normalize_kingdoms(kingdoms)
-        biomarker_scores = self._calculate_biomarker_scores(biomarkers)
-        biomarker_score = self._weighted_average(biomarker_scores)
-        condition_score = self._condition_score(condition_profile)
-        goal_alignment = self._goal_alignment(condition_profile)
-        experience_level = (condition_profile.get('experience_level') or 'beginner').lower()
-        experience_adjustment = self.EXPERIENCE_ADJUSTMENTS.get(experience_level, -0.05)
+        primary_condition = self._primary_condition(condition_profile)
 
-        synergy_base = (0.55 * biomarker_score) + (0.3 * condition_score) + (0.15 * goal_alignment)
-        synergy_score = self._clamp(synergy_base + experience_adjustment, 0.05, 0.99)
+        try:
+            condition_evidence = await self._fetch_condition_evidence(primary_condition)
+            recommended_tokens = self._tokenize_recommendations(
+                condition_evidence.get("recommended_cannabinoids") if condition_evidence else None
+            )
+            compound_rows = await self._resolve_compounds(recommended_tokens or ["CBD"])
+            primary_kingdom = self._select_primary_kingdom(compound_rows, available_kingdoms)
+            recommended_compounds = self._pick_recommended_compounds(compound_rows, primary_kingdom)
 
-        kingdom_scores = self._kingdom_scores(biomarker_scores, condition_profile, available_kingdoms)
-        primary_kingdom = self._select_primary_kingdom(kingdom_scores, available_kingdoms)
-        secondary_kingdoms = self._select_secondary_kingdoms(kingdom_scores, primary_kingdom)
-        recommended_compounds = self.KINGDOM_COMPOUNDS.get(primary_kingdom, ['Standard Botanical Extract'])
-        dosing_guidance = self._dosing_guidance(experience_level, condition_profile, biomarkers)
-        expected_reduction = self._expected_reduction(biomarkers, synergy_score)
+            synergy = await self._predict_synergy(compound_rows)
+            confidence_level = self._combine_confidence(
+                synergy.get("synergy_score", 0.5),
+                condition_evidence.get("avg_confidence") if condition_evidence else None,
+            )
+            expected_reduction = self._expected_reduction(biomarkers, synergy.get("synergy_score", 0.5))
 
-        warning = None
-        if not any((value or 0) for value in biomarkers.values()):
-            warning = "Biomarkers appear empty — results are a heuristic fallback."
-        elif biomarker_score < 0.15 and condition_score < 0.2:
-            warning = "Limited inflammatory signals detected; leaning on patient history."
+            return {
+                "primary_kingdom": primary_kingdom,
+                "secondary_kingdoms": [k for k in available_kingdoms if k != primary_kingdom][:2],
+                "synergy_score": round(synergy.get("synergy_score", 0.5), 4),
+                "confidence_level": round(confidence_level, 4),
+                "recommended_compounds": recommended_compounds or ["CBD"],
+                "dosing_guidance": self._dosing_guidance(primary_kingdom),
+                "expected_reduction": expected_reduction,
+                "warning": None,
+            }
+        except Exception as exc:
+            logger.warning("D1-backed TS-PS-001 failed, using heuristic fallback: %s", exc)
+            return self._fallback_prediction(biomarkers, condition_profile, available_kingdoms)
 
-        confidence_level = self._clamp(0.55 + (synergy_score * 0.4), 0.55, 0.98)
+    async def _fetch_condition_evidence(self, condition: str) -> Dict[str, Any]:
+        if not condition:
+            return {}
+
+        normalized = condition.upper()
+        condition_row = await self._execute(
+            "SELECT condition_name, category, recommended_cannabinoids, evidence_count FROM conditions WHERE UPPER(condition_name) = ? OR condition_name LIKE ?",
+            [normalized, f"%{condition}%"],
+        )
+        condition_data = (condition_row.get("results") or [None])[0]
+
+        studies = await self._execute(
+            "SELECT study_id, study_type, citation, confidence_score FROM clinical_studies WHERE UPPER(condition) = ? OR condition LIKE ? ORDER BY confidence_score DESC LIMIT 10",
+            [normalized, f"%{condition}%"],
+        )
+        study_rows = studies.get("results") or []
+        avg_confidence = sum(row.get("confidence_score", 0) for row in study_rows) / max(1, len(study_rows))
 
         return {
-            'primary_kingdom': primary_kingdom,
-            'secondary_kingdoms': secondary_kingdoms,
-            'synergy_score': round(synergy_score, 4),
-            'confidence_level': round(confidence_level, 4),
-            'recommended_compounds': recommended_compounds,
-            'dosing_guidance': dosing_guidance,
-            'expected_reduction': expected_reduction,
-            'warning': warning,
+            "condition": (condition_data or {}).get("condition_name", condition),
+            "category": (condition_data or {}).get("category"),
+            "recommended_cannabinoids": (condition_data or {}).get("recommended_cannabinoids"),
+            "evidence_count": (condition_data or {}).get("evidence_count", len(study_rows)),
+            "avg_confidence": round(avg_confidence, 2),
         }
 
-    # ------------------------------------------------------------------
-    # Helper methods
+    async def _resolve_compounds(self, tokens: List[str]) -> List[Dict[str, Any]]:
+        if not tokens:
+            return []
+        placeholders = ",".join(["?"] * len(tokens))
+        result = await self._execute(
+            f"SELECT compound_id, compound_name, kingdom FROM neurobotanica_compounds WHERE compound_id IN ({placeholders}) OR compound_name IN ({placeholders}) LIMIT 20",
+            tokens + tokens,
+        )
+        return result.get("results") or []
+
+    async def _predict_synergy(self, compounds: List[Dict[str, Any]]) -> Dict[str, Any]:
+        compound_ids = [c.get("compound_id") for c in compounds if c.get("compound_id")]
+        if not compound_ids:
+            return {"synergy_score": 0.5, "evidence": "Default prediction"}
+
+        a = compound_ids[0]
+        b = compound_ids[1] if len(compound_ids) > 1 else compound_ids[0]
+        result = await self._execute(
+            "SELECT synergy_score, clinical_evidence FROM neurobotanica_synergy_predictions WHERE (compound_a_id = ? AND compound_b_id = ?) OR (compound_a_id = ? AND compound_b_id = ?) ORDER BY confidence_score DESC LIMIT 1",
+            [a, b, b, a],
+        )
+        row = (result.get("results") or [None])[0]
+        if row:
+            return {
+                "synergy_score": row.get("synergy_score", 0.5),
+                "evidence": row.get("clinical_evidence") or "Database prediction",
+            }
+
+        return {"synergy_score": 0.5, "evidence": "No database match"}
+
+    def _combine_confidence(self, synergy_score: float, evidence_confidence: Optional[float]) -> float:
+        base = evidence_confidence or 0.5
+        return max(0.45, min(0.95, base + (synergy_score * 0.2)))
+
+    def _expected_reduction(self, biomarkers: Dict[str, Any], synergy_score: float) -> Dict[str, float]:
+        multiplier = 0.25 + (synergy_score * 0.5)
+        reduction: Dict[str, float] = {}
+        for marker, value in biomarkers.items():
+            if not value:
+                continue
+            reduction[marker] = round(float(value) * multiplier, 2)
+        if not reduction:
+            reduction = {
+                "tnf_alpha": round(10 * synergy_score, 2),
+                "crp": round(5 * synergy_score, 2),
+            }
+        return reduction
+
+    def _dosing_guidance(self, kingdom: str) -> Dict[str, str]:
+        return {
+            "cannabis": "25-50mg CBD daily",
+            "fungal": "500mg extract daily",
+            "marine": "200-400mg daily",
+            "plant": "500-1000mg Curcumin daily",
+        }.get(kingdom, "25-50mg CBD daily")
+
+    def _tokenize_recommendations(self, raw: Optional[str]) -> List[str]:
+        if not raw:
+            return []
+        return [token.strip() for token in raw.split(",") if token.strip()]
+
+    def _select_primary_kingdom(self, compounds: List[Dict[str, Any]], available: List[str]) -> str:
+        counts: Dict[str, int] = {}
+        for compound in compounds:
+            kingdom = (compound.get("kingdom") or "").lower()
+            if kingdom:
+                counts[kingdom] = counts.get(kingdom, 0) + 1
+        if not counts:
+            return available[0] if available else "cannabis"
+        ordered = sorted(counts.items(), key=lambda item: item[1], reverse=True)
+        for kingdom, _count in ordered:
+            if kingdom in available:
+                return kingdom
+        return ordered[0][0]
+
+    def _pick_recommended_compounds(self, compounds: List[Dict[str, Any]], kingdom: str) -> List[str]:
+        return [
+            c.get("compound_name") or c.get("compound_id")
+            for c in compounds
+            if (c.get("kingdom") or "").lower() == kingdom
+        ][:3]
 
     def _normalize_kingdoms(self, kingdoms: Optional[List[str]]) -> List[str]:
         if not kingdoms:
-            return ['cannabis', 'fungal', 'marine', 'plant']
+            return self.DEFAULT_KINGDOMS
         seen: List[str] = []
         for k in kingdoms:
             if not isinstance(k, str):
@@ -90,171 +174,47 @@ class _StubInflammatorySynergyEngine:
             normalized = k.lower().strip()
             if normalized and normalized not in seen:
                 seen.append(normalized)
-        return seen or ['cannabis']
+        return seen or self.DEFAULT_KINGDOMS
 
-    def _calculate_biomarker_scores(self, biomarkers: Any) -> Dict[str, float]:
-        scores: Dict[str, float] = {}
-        data = biomarkers if isinstance(biomarkers, dict) else {}
-        for marker, thresholds in self.MARKER_THRESHOLDS.items():
-            value = data.get(marker) or 0.0
-            moderate = thresholds['moderate']
-            severe = thresholds['severe']
-            if severe <= 0:
-                scores[marker] = 0.0
-                continue
-            if value <= 0:
-                norm = 0.0
-            elif value <= moderate:
-                norm = (value / max(moderate, 1e-6)) * 0.5
-            elif value >= severe:
-                norm = 1.0
-            else:
-                norm = 0.5 + ((value - moderate) / max(severe - moderate, 1e-6)) * 0.5
-            scores[marker] = self._clamp(norm, 0.0, 1.0)
-        return scores
-
-    def _weighted_average(self, scores: Dict[str, float]) -> float:
-        total_weight = sum(self.MARKER_WEIGHTS.values())
-        if total_weight == 0:
-            return 0.0
-        aggregate = 0.0
-        for marker, weight in self.MARKER_WEIGHTS.items():
-            aggregate += weight * scores.get(marker, 0.0)
-        return aggregate / total_weight
-
-    def _condition_score(self, profile: Dict[str, Any]) -> float:
-        conditions = profile.get('conditions') if isinstance(profile, dict) else None
+    def _primary_condition(self, profile: Dict[str, Any]) -> str:
+        conditions = profile.get("conditions") if isinstance(profile, dict) else None
         if not isinstance(conditions, list) or not conditions:
-            return 0.0
-        capped = []
-        primary_bonus = 0.0
-        for condition in conditions:
-            severity = min(10, max(0, int(condition.get('severity', 0)))) if isinstance(condition, dict) else 0
-            capped.append(severity)
-            if condition.get('is_primary') and severity >= 7:
-                primary_bonus = max(primary_bonus, 0.12)
-        base_score = (sum(capped) / (10 * len(capped))) if capped else 0.0
-        return self._clamp(base_score + primary_bonus, 0.0, 1.0)
+            return ""
+        first = conditions[0]
+        if isinstance(first, dict):
+            return str(first.get("name") or "")
+        if isinstance(first, str):
+            return first
+        return ""
 
-    def _goal_alignment(self, profile: Dict[str, Any]) -> float:
-        goal = (profile.get('primary_goal') or '').lower() if isinstance(profile, dict) else ''
-        if not goal:
-            return 0.35
-        if 'inflamm' in goal:
-            return 1.0
-        if 'pain' in goal or 'autoimmune' in goal:
-            return 0.75
-        if 'sleep' in goal or 'anxiety' in goal:
-            return 0.5
-        return 0.4
+    async def _execute(self, sql: str, params: List[Any]) -> Dict[str, Any]:
+        try:
+            return await d1_persistence.db.execute(sql, params)
+        except Exception as exc:
+            logger.warning("D1 execute failed: %s", exc)
+            return {"results": []}
 
-    def _kingdom_scores(self, biomarker_scores: Dict[str, float], profile: Dict[str, Any], kingdoms: List[str]) -> Dict[str, float]:
-        scores = {k: 0.0 for k in kingdoms}
-        keywords = ' '.join(
-            condition.get('name', '')
-            for condition in (profile.get('conditions') or [])
-            if isinstance(condition, dict)
-        ).lower()
-
-        for kingdom in scores:
-            if kingdom == 'cannabis':
-                scores[kingdom] += (biomarker_scores.get('tnf_alpha', 0.0) * 0.6)
-                scores[kingdom] += (biomarker_scores.get('il6', 0.0) * 0.3)
-                if 'pain' in keywords:
-                    scores[kingdom] += 0.1
-            elif kingdom == 'fungal':
-                scores[kingdom] += (biomarker_scores.get('il1b', 0.0) * 0.5)
-                scores[kingdom] += (self._condition_score(profile) * 0.3)
-                if 'immune' in keywords or 'auto' in keywords:
-                    scores[kingdom] += 0.15
-            elif kingdom == 'marine':
-                scores[kingdom] += (biomarker_scores.get('crp', 0.0) * 0.7)
-                if 'cardio' in keywords or 'vascular' in keywords:
-                    scores[kingdom] += 0.1
-            elif kingdom == 'plant':
-                scores[kingdom] += (biomarker_scores.get('il6', 0.0) * 0.4)
-                if 'gut' in keywords or 'digest' in keywords:
-                    scores[kingdom] += 0.1
-        return scores
-
-    def _select_primary_kingdom(self, scores: Dict[str, float], available: List[str]) -> str:
-        if not scores:
-            return available[0] if available else 'cannabis'
-        ordered = sorted(scores.items(), key=lambda item: item[1], reverse=True)
-        top_score = ordered[0][1]
-        tied = [k for k, v in ordered if v == top_score]
-        for candidate in ordered:
-            if candidate[1] == top_score:
-                # prefer cannabis when tied for regulatory familiarity
-                if candidate[0] == 'cannabis' or len(tied) == 1:
-                    return candidate[0]
-        return ordered[0][0]
-
-    def _select_secondary_kingdoms(self, scores: Dict[str, float], primary: str) -> List[str]:
-        ordered = sorted(
-            ((k, v) for k, v in scores.items() if k != primary),
-            key=lambda item: item[1],
-            reverse=True,
-        )
-        return [k for k, v in ordered if v > 0][:2]
-
-    def _dosing_guidance(self, experience_level: str, profile: Dict[str, Any], biomarkers: Dict[str, Any]) -> Dict[str, Any]:
-        preferences = profile.get('administration_preferences') if isinstance(profile, dict) else None
-        preferred_route = (preferences[0] if preferences else 'oral_tincture') or 'oral_tincture'
-        preferred_route = preferred_route.replace(' ', '_')
-
-        low_experience = {'naive', 'beginner'}
-        primary_plan = 'start_low_titrate' if experience_level in low_experience else 'standard_titrate'
-        frequency = 'as_needed_microdose' if 'inhale' in preferred_route or 'vape' in preferred_route else 'twice_daily_with_food'
-
-        notes: List[str] = []
-        if experience_level in low_experience:
-            notes.append('Limited cannabinoid experience noted; begin with micro-dosing titration.')
-        if any((biomarkers.get(marker) or 0) > self.MARKER_THRESHOLDS[marker]['severe'] for marker in self.MARKER_THRESHOLDS):
-            notes.append('Severe biomarker elevation detected; schedule follow-up labs in 14 days.')
-
-        history_summary = self._history_summary(profile)
-        guidance: Dict[str, Any] = {
-            'primary': primary_plan,
-            'frequency': frequency,
-            'preferred_route': preferred_route,
-            'notes': notes,
+    def _fallback_prediction(
+        self,
+        biomarkers: Dict[str, Any],
+        condition_profile: Dict[str, Any],
+        available_kingdoms: List[str],
+    ) -> Dict[str, Any]:
+        primary_kingdom = available_kingdoms[0] if available_kingdoms else "cannabis"
+        synergy_score = 0.55
+        confidence_level = 0.6
+        expected_reduction = self._expected_reduction(biomarkers, synergy_score)
+        return {
+            "primary_kingdom": primary_kingdom,
+            "secondary_kingdoms": [k for k in available_kingdoms if k != primary_kingdom][:2],
+            "synergy_score": round(synergy_score, 4),
+            "confidence_level": round(confidence_level, 4),
+            "recommended_compounds": ["CBD"],
+            "dosing_guidance": self._dosing_guidance(primary_kingdom),
+            "expected_reduction": expected_reduction,
+            "warning": "D1 unavailable; using heuristic fallback.",
         }
-        if history_summary:
-            guidance['history_summary'] = history_summary
-        return guidance
-
-    def _history_summary(self, profile: Dict[str, Any]) -> Optional[str]:
-        conditions = profile.get('conditions') if isinstance(profile, dict) else None
-        if not isinstance(conditions, list) or not conditions:
-            return None
-        ordered = sorted(
-            [c for c in conditions if isinstance(c, dict)],
-            key=lambda c: c.get('severity', 0),
-            reverse=True,
-        )
-        top = ordered[:2]
-        if not top:
-            return None
-        parts = [f"{c.get('name', 'condition')} (sev {c.get('severity', 0)})" for c in top]
-        return ', '.join(parts)
-
-    def _expected_reduction(self, biomarkers: Dict[str, Any], synergy_score: float) -> Dict[str, float]:
-        reduction: Dict[str, float] = {}
-        multiplier = 0.25 + (synergy_score * 0.5)
-        for marker, value in biomarkers.items():
-            if not value:
-                continue
-            reduction[marker] = round(value * multiplier, 2)
-        if not reduction:
-            reduction['tnf_alpha'] = round(10 * synergy_score, 2)
-            reduction['crp'] = round(5 * synergy_score, 2)
-        return reduction
-
-    @staticmethod
-    def _clamp(value: float, lower: float, upper: float) -> float:
-        return max(lower, min(upper, value))
 
 
-def get_inflammatory_synergy_engine() -> _StubInflammatorySynergyEngine:
-    return _StubInflammatorySynergyEngine()
+def get_inflammatory_synergy_engine() -> InflammatorySynergyEngine:
+    return InflammatorySynergyEngine()
