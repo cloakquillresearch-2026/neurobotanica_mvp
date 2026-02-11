@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1.1: Why Most Cannabis Recommendations Are Guesswork</title>
+  
+  <!-- Reuse your existing styles if you have them -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  
+  <style>
+    /* Simple course-specific styles */
+    .course-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .course-nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 30px;
+    }
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      margin: 30px 0;
+      background: #000;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .lesson-text {
+      line-height: 1.8;
+      font-size: 18px;
+    }
+    
+    .lesson-actions {
+      margin-top: 50px;
+      display: flex;
+      gap: 20px;
+    }
+    
+    button, .next-lesson-btn {
+      padding: 15px 30px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+    }
+    
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    
+    .next-lesson-btn {
+      background: #2196F3;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="course-container">
+    <nav class="course-nav">
+      <a href="../index.html">← Back to Course</a>
+      <span>Module 1 - Lesson 1.1</span>
+    </nav>
+    
+    <main class="lesson-content">
+      <h1>Lesson 1.1: Why Most Cannabis Recommendations Are Guesswork</h1>
+      
+      <!-- Video will go here -->
+      <div class="video-container">
+        <p style="color: white; text-align: center; padding: 50px;">
+          VIDEO PLACEHOLDER - Add YouTube embed when ready
+        </p>
+      </div>
+      
+      <!-- Lesson Content -->
+      <div class="lesson-text">
+        <h2>The THC Percentage Myth</h2>
+        <p>Most dispensaries sell cannabis based on THC percentage alone. Customers walk in asking for "the strongest stuff," believing higher THC = better effects.</p>
+        
+        <p><strong>The problem?</strong> Clinical research shows this is completely wrong.</p>
+        
+        <p>Two products with identical THC percentages can produce completely different effects based on:</p>
+        <ul>
+          <li>Terpene profiles</li>
+          <li>Minor cannabinoid content (CBG, CBN, CBC)</li>
+          <li>The entourage effect</li>
+          <li>Individual endocannabinoid system variations</li>
+        </ul>
+        
+        <h2>What Clinical Research Actually Tells Us</h2>
+        <p>The NeuroBotanica database contains 505+ peer-reviewed studies on cannabis therapeutics. Here's what they consistently show:</p>
+        
+        <ul>
+          <li><strong>Dose-response is non-linear:</strong> More THC doesn't always mean stronger effects</li>
+          <li><strong>Whole-plant medicine outperforms isolates:</strong> The entourage effect is real</li>
+          <li><strong>Terpenes modulate cannabinoid effects:</strong> Myrcene + THC = sedation; Limonene + THC = energy</li>
+          <li><strong>Individual variation is huge:</strong> Genetics, tolerance, and ECS health all matter</li>
+        </ul>
+        
+        <h2>Your Role as an Evidence-Based Budtender</h2>
+        <p>Your job is to help customers find the right product for their specific needs, not sell them the highest THC percentage. This course will teach you how to:</p>
+        
+        <ul>
+          <li>Read cannabinoid and terpene profiles like a scientist</li>
+          <li>Match products to customer health goals</li>
+          <li>Explain complex science in accessible language</li>
+          <li>Make recommendations backed by clinical evidence</li>
+        </ul>
+      </div>
+      
+      <!-- Lesson Actions -->
+      <div class="lesson-actions">
+        <button id="mark-complete" onclick="markComplete()">Mark as Complete</button>
+        <a href="lesson-1-2.html" class="next-lesson-btn">Next Lesson →</a>
+      </div>
+    </main>
+  </div>
+  
+  <script>
+    // Simple progress tracking (localStorage for MVP)
+    function markComplete() {
+      // Save to localStorage
+      localStorage.setItem('lesson-1-1-complete', 'true');
+      
+      // Update button
+      const button = document.getElementById('mark-complete');
+      button.textContent = '✓ Completed';
+      button.disabled = true;
+      
+      // Show success message
+      alert('Lesson marked as complete! Great work.');
+    }
+    
+    // Check if already completed on page load
+    window.addEventListener('DOMContentLoaded', function() {
+      if (localStorage.getItem('lesson-1-1-complete') === 'true') {
+        const button = document.getElementById('mark-complete');
+        button.textContent = '✓ Completed';
+        button.disabled = true;
+      }
+    });
+  </script>
+</body>
+</html>
