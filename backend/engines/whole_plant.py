@@ -304,6 +304,21 @@ class WholePlantAnalyzer:
                     "year": year,
                 }
             )
+            # Fallback: if no filtered studies, return top N by confidence_score
+            if not evidence:
+                cursor.execute(
+                    """
+                    SELECT study_id, study_type, intervention, key_findings, citation,
+                           confidence_score, sample_size, publication_year
+                    FROM neurobotanica_clinical_studies
+                    WHERE LOWER(condition) = ?
+                    ORDER BY confidence_score DESC
+                    LIMIT ?
+                    """,
+                    (condition.lower(), top_n),
+                )
+                evidence = cursor.fetchall()
+            return evidence
         return evidence
 
     # ------------------------------------------------------------------
@@ -427,16 +442,19 @@ class WholePlantAnalyzer:
                 "preferred_ratio": ("cbd", "thc", 1.2),
                 "boost": {"cbc": 0.25, "cbg": 0.25, "beta_caryophyllene": 0.2},
                 "max_thc": 0.6,
+                "ratio_floor": 0.15,
             },
             "fibromyalgia": {
                 "preferred_ratio": ("cbd", "thc", 1.8),
                 "boost": {"cbd": 0.4, "cbg": 0.15, "cbn": 0.15},
                 "max_thc": 0.5,
+                "ratio_floor": 0.15,
             },
             "depression": {
                 "preferred_ratio": ("thc", "cbd", 0.8),
                 "boost": {"thcv": 0.2, "cbd": 0.2, "limonene": 0.1},
                 "max_thc": 0.65,
+                "ratio_floor": 0.10,
             },
             "migraine": {
                 "preferred_ratio": ("thc", "cbd", 1.2),
@@ -449,6 +467,7 @@ class WholePlantAnalyzer:
                 "preferred_ratio": ("cbd", "thc", 1.5),
                 "boost": {"cbc": 0.2, "cbg": 0.2},
                 "max_thc": 0.6,
+                "ratio_floor": 0.15,
             },
             "neuropathy": {
                 "preferred_ratio": ("thc", "cbd", 1.0),
@@ -471,6 +490,7 @@ class WholePlantAnalyzer:
                 "preferred_ratio": ("thc", "cbd", 1.1),
                 "boost": {"thc": 0.25, "cbd": 0.25},
                 "max_thc": 0.65,
+                "ratio_floor": 0.15,
             },
             "autism": {
                 "preferred_ratio": ("cbd", "thc", 3.0),
@@ -481,6 +501,7 @@ class WholePlantAnalyzer:
                 "preferred_ratio": ("thc", "cbd", 0.9),
                 "boost": {"thcv": 0.3, "cbd": 0.2},
                 "max_thc": 0.6,
+                "ratio_floor": 0.10,
             },
             "menstrual_pain": {
                 "preferred_ratio": ("thc", "cbd", 1.2),
