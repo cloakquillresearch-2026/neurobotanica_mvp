@@ -91,6 +91,8 @@ class DrugInteractionChecker:
         Returns:
             Dict with warnings, severity, and recommendations.
         """
+        if not drug_names:
+            return {"warnings": [], "total_warnings": 0, "processing_time_ms": 0}
         interactions = []
         for compound_id in compound_ids:
             for drug_name in drug_names:
@@ -101,7 +103,6 @@ class DrugInteractionChecker:
                         consent_valid = self._verify_consent(interaction.get("consent_id"))
                         if not consent_valid:
                             continue  # Skip if consent revoked
-                    
                     interactions.append({
                         "compound": compound_id,
                         "drug": drug_name,
@@ -111,10 +112,8 @@ class DrugInteractionChecker:
                         "evidence_level": interaction["evidence_level"],
                         "citations": interaction["citations"]
                     })
-        
         # Log to audit for HIPAA compliance
         self._log_audit("drug_interaction_check", {"compound_ids": compound_ids, "drug_names": drug_names}, len(interactions) > 0)
-        
         return {
             "warnings": interactions,
             "total_warnings": len(interactions),

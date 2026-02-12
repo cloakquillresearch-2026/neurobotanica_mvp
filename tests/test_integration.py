@@ -23,6 +23,7 @@ def test_full_analysis_computational():
     response = client.post("/api/neurobotanica/analyze", json=request_data)
     assert response.status_code == 200
     data = response.json()
+    print("debug_timings_ms:", data.get("debug_timings_ms"))
     assert "interactions" in data
     assert "bias_correction" in data
     assert "synergy" in data
