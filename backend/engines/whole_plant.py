@@ -442,6 +442,8 @@ class WholePlantAnalyzer:
                 "preferred_ratio": ("thc", "cbd", 1.2),
                 "boost": {"thc": 0.3, "cbg": 0.2, "beta_caryophyllene": 0.2},
                 "max_thc": 0.7,
+                "ratio_floor": 0.20,
+                "thc_dominant_bonus": {"threshold": 0.50, "weight": 0.25},
             },
             "arthritis": {
                 "preferred_ratio": ("cbd", "thc", 1.5),
@@ -452,6 +454,8 @@ class WholePlantAnalyzer:
                 "preferred_ratio": ("thc", "cbd", 1.0),
                 "boost": {"cbn": 0.2, "cbg": 0.2},
                 "max_thc": 0.6,
+                "ratio_floor": 0.15,
+                "thc_dominant_bonus": {"threshold": 0.55, "weight": 0.25},
             },
             "epilepsy": {
                 "preferred_ratio": ("cbd", "thc", 4.0),
@@ -482,11 +486,15 @@ class WholePlantAnalyzer:
                 "preferred_ratio": ("thc", "cbd", 1.2),
                 "boost": {"thc": 0.3, "cbd": 0.2},
                 "max_thc": 0.7,
+                "ratio_floor": 0.20,
+                "thc_dominant_bonus": {"threshold": 0.60, "weight": 0.30},
             },
             "cancer_pain": {
                 "preferred_ratio": ("thc", "cbd", 1.5),
                 "boost": {"thc": 0.35, "cbg": 0.2},
                 "max_thc": 0.75,
+                "ratio_floor": 0.25,
+                "thc_dominant_bonus": {"threshold": 0.60, "weight": 0.30},
             },
             "parkinsons": {
                 "preferred_ratio": ("cbd", "thc", 1.3),
@@ -497,6 +505,8 @@ class WholePlantAnalyzer:
                 "preferred_ratio": ("thc", "cbd", 1.0),
                 "boost": {"thc": 0.3, "cbd": 0.3},
                 "max_thc": 0.7,
+                "ratio_floor": 0.15,
+                "thc_dominant_bonus": {"threshold": 0.55, "weight": 0.25},
             },
             "alzheimer": {
                 "preferred_ratio": ("cbd", "thc", 1.7),
@@ -507,10 +517,14 @@ class WholePlantAnalyzer:
                 "preferred_ratio": ("thc", "cbd", 1.4),
                 "boost": {"thc": 0.35, "cbg": 0.15},
                 "max_thc": 0.75,
+                "ratio_floor": 0.20,
+                "thc_dominant_bonus": {"threshold": 0.60, "weight": 0.30},
             },
             "appetite_loss": {
                 "preferred_ratio": ("thc", "cbd", 1.8),
                 "boost": {"thc": 0.4, "cbn": 0.2},
                 "max_thc": 0.8,
+                "ratio_floor": 0.25,
+                "thc_dominant_bonus": {"threshold": 0.60, "weight": 0.30},
             },
         }
