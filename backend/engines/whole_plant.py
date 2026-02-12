@@ -258,7 +258,7 @@ class WholePlantAnalyzer:
         return matches[:6]
 
     def _get_clinical_evidence(
-        self, condition: str, cannabinoid_profile: Dict[str, float]
+        self, condition: str, cannabinoid_profile: Dict[str, float], top_n: int = 6
     ) -> List[Dict[str, Any]]:
         if not self.db:
             return []
@@ -270,15 +270,15 @@ class WholePlantAnalyzer:
             if not cursor.fetchone():
                 return []
             cursor.execute(
-                """
+                f"""
                 SELECT study_id, study_type, intervention, key_findings, citation,
                        confidence_score, sample_size, publication_year
                 FROM neurobotanica_clinical_studies
                 WHERE LOWER(condition) = ?
                 ORDER BY confidence_score DESC, sample_size DESC
-                LIMIT 6
+                LIMIT ?
                 """,
-                (condition.lower(),),
+                (condition.lower(), top_n),
             )
         except sqlite3.Error:
             return []
@@ -304,21 +304,34 @@ class WholePlantAnalyzer:
                     "year": year,
                 }
             )
-            # Fallback: if no filtered studies, return top N by confidence_score
-            if not evidence:
-                cursor.execute(
-                    """
-                    SELECT study_id, study_type, intervention, key_findings, citation,
-                           confidence_score, sample_size, publication_year
-                    FROM neurobotanica_clinical_studies
-                    WHERE LOWER(condition) = ?
-                    ORDER BY confidence_score DESC
-                    LIMIT ?
-                    """,
-                    (condition.lower(), top_n),
-                )
-                evidence = cursor.fetchall()
-            return evidence
+        # Fallback: if no filtered studies, return top N by confidence_score
+        if not evidence:
+            cursor.execute(
+                """
+                SELECT study_id, study_type, intervention, key_findings, citation,
+                       confidence_score, sample_size, publication_year
+                FROM neurobotanica_clinical_studies
+                WHERE LOWER(condition) = ?
+                ORDER BY confidence_score DESC
+                LIMIT ?
+                """,
+                (condition.lower(), top_n),
+            )
+            evidence = [
+                {
+                    "study": row[0],
+                    "study_id": row[0],
+                    "type": row[1],
+                    "citation": row[4],
+                    "summary": row[3],
+                    "finding": row[3],
+                    "confidence_score": float(row[5] or 0.6),
+                    "sample_size": row[6],
+                    "year": row[7],
+                }
+                for row in cursor.fetchall()
+            ]
+        return evidence
         return evidence
 
     # ------------------------------------------------------------------
@@ -420,36 +433,43 @@ class WholePlantAnalyzer:
                 "preferred_ratio": ("cbd", "thc", 2.0),
                 "boost": {"cbd": 0.6, "cbg": 0.2, "cbn": 0.1},
                 "max_thc": 0.35,
+                    "thc_dominant_bonus": None,
             },
             "chronic_pain": {
                 "preferred_ratio": ("thc", "cbd", 1.0),
                 "boost": {"cbg": 0.2, "cbc": 0.15, "thcv": 0.15},
                 "max_thc": 0.7,
+                    "thc_dominant_bonus": None,
                 "ratio_floor": 0.2,
                 "thc_dominant_bonus": {"threshold": 0.55, "weight": 0.35},
             },
             "sleep": {
                 "preferred_ratio": ("cbn", "thc", 0.5),
+                    "thc_dominant_bonus": None,
                 "boost": {"cbn": 0.4, "myrcene": 0.1, "linalool": 0.1},
                 "max_thc": 0.6,
             },
             "ptsd": {
                 "preferred_ratio": ("cbd", "thc", 1.5),
+                    "thc_dominant_bonus": None,
                 "boost": {"cbd": 0.4, "thcv": 0.2, "cbg": 0.1},
                 "max_thc": 0.5,
             },
             "inflammation": {
                 "preferred_ratio": ("cbd", "thc", 1.2),
+                    "thc_dominant_bonus": None,
                 "boost": {"cbc": 0.25, "cbg": 0.25, "beta_caryophyllene": 0.2},
                 "max_thc": 0.6,
                 "ratio_floor": 0.15,
             },
             "fibromyalgia": {
+                    "thc_dominant_bonus": None,
                 "preferred_ratio": ("cbd", "thc", 1.8),
                 "boost": {"cbd": 0.4, "cbg": 0.15, "cbn": 0.15},
                 "max_thc": 0.5,
                 "ratio_floor": 0.15,
             },
+                    "thc_dominant_bonus": None,
             "depression": {
                 "preferred_ratio": ("thc", "cbd", 0.8),
                 "boost": {"thcv": 0.2, "cbd": 0.2, "limonene": 0.1},
