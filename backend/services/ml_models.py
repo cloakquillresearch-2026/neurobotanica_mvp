@@ -448,10 +448,49 @@ class PatientResponseModel(BaseModel):
 
 class DimerPotentialModel(BaseModel):
     """Model for predicting dimer therapeutic potential.
-    
+
     Uses combined features from both parent compounds plus dimer-specific features.
+
+    Interaction classification logic:
+    - CBD-containing pairs are checked for NAM (negative allosteric modulation)
+      before any effect_size thresholding, because CBD attenuates CB1 agonism
+      regardless of combined effect_size magnitude.
+    - Non-NAM pairs are classified as synergistic, additive, or unknown based
+      on effect_size thresholds derived from literature benchmarks.
     """
-    
+
+    # Compounds known to act as CB1 negative allosteric modulators (NAMs).
+    # When paired with a CB1 agonist, the interaction should be labeled
+    # "attenuation" regardless of combined effect_size.
+    CB1_NAM_COMPOUNDS: frozenset = frozenset({"CBD", "cannabidiol"})
+
+    # Compounds where CB1 agonism is the PRIMARY pharmacological mechanism.
+    # CBG is intentionally excluded: its dominant actions are PPARγ, α2-adrenoceptor,
+    # and TRPV channels. CBD's NAM effect at CB1 does not dominate CBD-CBG interactions —
+    # the validated mechanism is PPARγ/5-HT1A (Mammana et al. 2019, PMC6915685).
+    # The NAM check in _classify_interaction_effect uses this set, not CB1_AGONISTS.
+    CB1_PRIMARY_AGONISTS: frozenset = frozenset({
+        "THC", "tetrahydrocannabinol",
+        "CBN", "cannabinol",
+        "AEA", "anandamide",
+        "2-AG", "2-arachidonoylglycerol",
+    })
+
+    # Broader CB1 agonist set for completeness and future use.
+    CB1_AGONISTS: frozenset = frozenset({
+        "THC", "tetrahydrocannabinol",
+        "CBN", "cannabinol",
+        "CBG", "cannabigerol",
+        "AEA", "anandamide",
+        "2-AG", "2-arachidonoylglycerol",
+    })
+
+    # Effect_size thresholds for non-NAM pairs.
+    # Derived from validation: THC-CBN (additive, 0.65) and CBD-CBG (synergistic, 0.80).
+    SYNERGY_THRESHOLD: float = 0.75   # effect_size >= 0.75 → synergistic
+    ADDITIVE_THRESHOLD: float = 0.50  # 0.50 <= effect_size < 0.75 → additive
+                                       # effect_size < 0.50 → unknown
+
     def __init__(
         self,
         n_estimators: int = 150,
@@ -460,7 +499,7 @@ class DimerPotentialModel(BaseModel):
         random_state: int = 42
     ):
         super().__init__("DimerPotential")
-        
+
         self.model = GradientBoostingRegressor(
             n_estimators=n_estimators,
             learning_rate=learning_rate,
@@ -470,7 +509,11 @@ class DimerPotentialModel(BaseModel):
             min_samples_split=3
         )
         self.random_state = random_state
-    
+
+    # ------------------------------------------------------------------
+    # Training
+    # ------------------------------------------------------------------
+
     def train(
         self,
         X: pd.DataFrame,
@@ -482,27 +525,29 @@ class DimerPotentialModel(BaseModel):
         import time
         start_time = time.time()
         self.feature_names = list(X.columns)
-        # Scale features
+
         X_scaled = self.scaler.fit_transform(X)
-        # Split
+
         X_train, X_test, y_train, y_test = train_test_split(
             X_scaled, y,
             test_size=test_size,
             random_state=self.random_state
         )
-        # Train
+
         if sample_weights is not None:
-            w_train = sample_weights.iloc[X_train.index] if hasattr(X_train, 'index') else sample_weights[:len(X_train)]
+            w_train = (
+                sample_weights.iloc[X_train.index]
+                if hasattr(X_train, "index")
+                else sample_weights[: len(X_train)]
+            )
             self.model.fit(X_train, y_train, sample_weight=w_train)
         else:
             self.model.fit(X_train, y_train)
-        # Evaluate
+
         train_score = self.model.score(X_train, y_train)
         test_score = self.model.score(X_test, y_test)
-        # Cross-validation
-        from sklearn.model_selection import KFold
+
         if sample_weights is not None:
-            # Manual cross-validation to support sample weights
             kf = KFold(n_splits=5, shuffle=True, random_state=self.random_state)
             cv_scores = []
             for train_idx, test_idx in kf.split(X_scaled):
@@ -515,18 +560,18 @@ class DimerPotentialModel(BaseModel):
                     max_depth=self.model.max_depth,
                     random_state=self.random_state,
                     subsample=self.model.subsample,
-                    min_samples_split=self.model.min_samples_split
+                    min_samples_split=self.model.min_samples_split,
                 )
                 model_cv.fit(X_tr, y_tr, sample_weight=w_tr)
-                score = model_cv.score(X_te, y_te)
-                cv_scores.append(score)
+                cv_scores.append(model_cv.score(X_te, y_te))
             cv_scores = np.array(cv_scores)
         else:
             cv_scores = cross_val_score(
-                self.model, X_scaled, y,
-                cv=5, scoring='r2'
+                self.model, X_scaled, y, cv=5, scoring="r2"
             )
+
         training_time = time.time() - start_time
+
         self.metrics = ModelMetrics(
             model_name=self.model_name,
             model_version=self.MODEL_VERSION,
@@ -538,62 +583,221 @@ class DimerPotentialModel(BaseModel):
             num_features=len(self.feature_names),
             num_samples=len(X),
             training_time_seconds=training_time,
-            feature_importances=self._get_feature_importances()
+            feature_importances=self._get_feature_importances(),
         )
+
         self.is_trained = True
         logger.info(f"Dimer model trained: R²={test_score:.4f}")
         return self.metrics
-    
+
+    # ------------------------------------------------------------------
+    # Prediction
+    # ------------------------------------------------------------------
+
     def predict_with_uncertainty(self, X: pd.DataFrame) -> PredictionResult:
         """Predict dimer potential with uncertainty."""
         if not self.is_trained:
             raise ValueError("Model not trained")
-        
+
         X_scaled = self.scaler.transform(X)
-        
-        # Ensemble predictions
+
         estimator_predictions = np.array([
             estimator[0].predict(X_scaled)
             for estimator in self.model.estimators_
         ])
-        
+
         mean_pred = estimator_predictions.mean(axis=0)
         std_pred = estimator_predictions.std(axis=0)
-        
         mean_pred = np.clip(mean_pred, 0.0, 1.0)
-        
+
         return PredictionResult(
             prediction=mean_pred,
             uncertainty=std_pred,
             confidence_interval_lower=np.clip(mean_pred - 1.96 * std_pred, 0, 1),
-            confidence_interval_upper=np.clip(mean_pred + 1.96 * std_pred, 0, 1)
+            confidence_interval_upper=np.clip(mean_pred + 1.96 * std_pred, 0, 1),
         )
-    
+
+    # ------------------------------------------------------------------
+    # Interaction classification
+    # ------------------------------------------------------------------
+
+    def _classify_interaction_effect(
+        self,
+        effect_size: float,
+        parent_1: str,
+        parent_2: str,
+    ) -> str:
+        """Classify the interaction type for a cannabinoid pair.
+
+        Classification priority:
+        1. NAM check — if one compound is a CB1 NAM (e.g. CBD) and the other
+           is in CB1_PRIMARY_AGONISTS (THC, CBN, endocannabinoids), return
+           "attenuation" regardless of effect_size. CBG is intentionally excluded
+           from CB1_PRIMARY_AGONISTS because its dominant mechanism is PPARγ /
+           α2-adrenoceptor, not CB1; the CBD-CBG interaction is experimentally
+           synergistic (Mammana et al. 2019).
+        2. Homodimer check — both parents identical → no experimental homodimer
+           data exists in literature; return "unknown".
+        3. Effect_size thresholds for remaining pairs:
+           >= SYNERGY_THRESHOLD  → "synergistic"
+           >= ADDITIVE_THRESHOLD → "additive"
+           <  ADDITIVE_THRESHOLD → "unknown"
+
+        Args:
+            effect_size: Predicted effect_size from the regressor (0–1).
+            parent_1: Name/identifier of the first parent compound.
+            parent_2: Name/identifier of the second parent compound.
+
+        Returns:
+            One of: "synergistic", "additive", "attenuation", "unknown".
+        """
+        p1 = parent_1.strip()
+        p2 = parent_2.strip()
+
+        # --- NAM check ---------------------------------------------------
+        p1_is_nam = p1 in self.CB1_NAM_COMPOUNDS
+        p2_is_nam = p2 in self.CB1_NAM_COMPOUNDS
+        p1_is_primary = p1 in self.CB1_PRIMARY_AGONISTS
+        p2_is_primary = p2 in self.CB1_PRIMARY_AGONISTS
+
+        # NAM check: only fires when partner compound's primary mechanism is CB1.
+        # CBG is excluded from CB1_PRIMARY_AGONISTS for this reason.
+        if (p1_is_nam and p2_is_primary) or (p2_is_nam and p1_is_primary):
+            return "attenuation"
+
+        # --- Homodimer check ---------------------------------------------
+        if p1 == p2:
+            return "unknown"
+
+        # --- Effect_size thresholds --------------------------------------
+        if effect_size >= self.SYNERGY_THRESHOLD:
+            return "synergistic"
+        if effect_size >= self.ADDITIVE_THRESHOLD:
+            return "additive"
+        return "unknown"
+
+    # ------------------------------------------------------------------
+    # Ranking
+    # ------------------------------------------------------------------
+
     def rank_dimers(
         self,
         dimers: List[Dict],
-        X: pd.DataFrame
+        X: pd.DataFrame,
     ) -> List[Dict]:
-        """Rank dimers by predicted therapeutic potential."""
+        """Rank dimers by predicted therapeutic potential.
+
+        Each entry in the returned list includes:
+        - therapeutic_potential: regressor mean prediction
+        - uncertainty: estimator std
+        - confidence_interval: [lower, upper] at 95%
+        - interaction_effect: classified label from _classify_interaction_effect()
+        - interaction_evidence_note: human-readable rationale for the label
+
+        Args:
+            dimers: List of dicts with keys "dimer_name", "parent_1_name",
+                    "parent_2_name" (all optional; fallback to index).
+            X: Feature DataFrame aligned to dimers list order.
+
+        Returns:
+            List of dicts sorted descending by therapeutic_potential.
+        """
         result = self.predict_with_uncertainty(X)
-        
+
         ranked = []
         for i, dimer in enumerate(dimers):
-            if i < len(result.prediction):
-                ranked.append({
-                    "dimer_name": dimer.get("dimer_name", f"Dimer_{i}"),
-                    "therapeutic_potential": float(result.prediction[i]),
-                    "uncertainty": float(result.uncertainty[i]),
-                    "confidence_interval": [
-                        float(result.confidence_interval_lower[i]),
-                        float(result.confidence_interval_upper[i])
-                    ],
-                    "parent_1": dimer.get("parent_1_name", ""),
-                    "parent_2": dimer.get("parent_2_name", "")
-                })
-        
+            if i >= len(result.prediction):
+                break
+
+            parent_1 = dimer.get("parent_1_name", "")
+            parent_2 = dimer.get("parent_2_name", "")
+            effect_size = float(result.prediction[i])
+
+            interaction_effect = self._classify_interaction_effect(
+                effect_size=effect_size,
+                parent_1=parent_1,
+                parent_2=parent_2,
+            )
+
+            evidence_note = self._interaction_evidence_note(
+                interaction_effect=interaction_effect,
+                parent_1=parent_1,
+                parent_2=parent_2,
+                effect_size=effect_size,
+            )
+
+            ranked.append({
+                "dimer_name": dimer.get("dimer_name", f"Dimer_{i}"),
+                "parent_1": parent_1,
+                "parent_2": parent_2,
+                "therapeutic_potential": effect_size,
+                "uncertainty": float(result.uncertainty[i]),
+                "confidence_interval": [
+                    float(result.confidence_interval_lower[i]),
+                    float(result.confidence_interval_upper[i]),
+                ],
+                "interaction_effect": interaction_effect,
+                "interaction_evidence_note": evidence_note,
+            })
+
         ranked.sort(key=lambda x: x["therapeutic_potential"], reverse=True)
         return ranked
+
+    def _interaction_evidence_note(
+        self,
+        interaction_effect: str,
+        parent_1: str,
+        parent_2: str,
+        effect_size: float,
+    ) -> str:
+        """Return a brief human-readable rationale for the interaction label.
+
+        Intended for model card output, dispensary UI tooltips, and audit logs.
+        Not for patient-facing copy without clinical review.
+        """
+        if interaction_effect == "attenuation":
+            nam = parent_1 if parent_1 in self.CB1_NAM_COMPOUNDS else parent_2
+            agonist = parent_2 if parent_1 in self.CB1_NAM_COMPOUNDS else parent_1
+            return (
+                f"{nam} is a CB1 negative allosteric modulator (NAM; apparent KB "
+                f"79–138 nM). {agonist} is a CB1-primary agonist; co-presentation "
+                f"is expected to attenuate CB1 agonist activity regardless of "
+                f"combined effect_size. "
+                f"Ref: Thomas et al. 2007 (PMID 17245363); Laprairie et al. 2015 "
+                f"(PMC4621983)."
+            )
+
+        if interaction_effect == "synergistic":
+            return (
+                f"effect_size {effect_size:.2f} exceeds synergy threshold "
+                f"({self.SYNERGY_THRESHOLD}). Consistent with documented entourage "
+                f"or complementary multi-target activity. Confirm mechanism pathway "
+                f"(CB receptor vs. PPARγ/TRP/5-HT1A) before clinical use."
+            )
+
+        if interaction_effect == "additive":
+            return (
+                f"effect_size {effect_size:.2f} in additive range "
+                f"[{self.ADDITIVE_THRESHOLD}, {self.SYNERGY_THRESHOLD}). "
+                f"Compounds likely share receptor mechanism (e.g. both CB1/CB2 "
+                f"partial agonists). Combined output is consistent with summation "
+                f"of individual activities."
+            )
+
+        # unknown
+        if parent_1 == parent_2:
+            return (
+                f"Homodimer ({parent_1}-{parent_2}): no experimental pharmacology "
+                f"data exists for this covalent or co-presentation pair in the "
+                f"literature. In silico prediction only; effect_size {effect_size:.2f} "
+                f"cannot be validated. Do not use for clinical decisions."
+            )
+
+        return (
+            f"effect_size {effect_size:.2f} below additive threshold "
+            f"({self.ADDITIVE_THRESHOLD}). Insufficient signal to classify "
+            f"interaction direction. Additional experimental data required."
+        )
 
 
 class ModelRegistry:
