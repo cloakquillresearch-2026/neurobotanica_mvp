@@ -74,22 +74,8 @@ export default function LandingPage() {
             ))}
           </motion.div>
         </motion.div>
-        <div className="relative lg:pt-4">
-          <div className="paper-shell p-10 bg-cream">
-            <HeroHalo />
-            <div className="relative z-10 flex flex-col items-center text-center gap-4 lg:-mt-2">
-              <div className="relative flex items-center justify-center">
-                <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full border border-sand/70 bg-white/80 shadow-copper flex items-center justify-center p-6">
-                  <Image src="/emblem-mark.svg" alt="NeuroBotanica emblem" width={160} height={160} className="drop-shadow-2xl" />
-                </div>
-                <div className="absolute inset-0 rounded-full border border-white/40 blur-2xl opacity-50" aria-hidden="true" />
-              </div>
-              <div className="flex flex-wrap justify-center gap-3 text-sm font-mono text-indigo">
-                <span className="px-3 py-1 rounded-full border border-teal/20">Edge @ 285 PoPs</span>
-                <span className="px-3 py-1 rounded-full border border-teal/20">Stripe Nonprofit</span>
-              </div>
-            </div>
-          </div>
+        <div className="flex flex-col items-center justify-center py-8">
+          <Image src="/neurobotanica_logo_1b.png" alt="NeuroBotanica logo" width={220} height={220} className="object-contain mb-2" />
         </div>
       </section>
 
