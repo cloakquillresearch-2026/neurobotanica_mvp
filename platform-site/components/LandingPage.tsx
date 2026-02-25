@@ -55,17 +55,21 @@ export default function LandingPage() {
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-wrap gap-4">
             <a href="#neurobotanica-video" className="button-ghost">
-              See NeuroBotanica in 60s
+              See NeuroBotanica in 90s
             </a>
           </motion.div>
           <motion.div variants={fadeUp} id="neurobotanica-video" className="w-full">
-            <div className="relative aspect-video w-full rounded-3xl border border-indigo/30 bg-gradient-to-br from-charcoal via-indigo/80 to-canopy/30 overflow-hidden">
-              <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top,_rgba(67,181,138,0.5),_transparent_65%)]" />
-              <div className="relative z-10 flex h-full w-full items-center justify-center text-center px-6">
-                <p className="text-white/80 text-base sm:text-lg">
-                  60-second overview video placeholder. Drop the final Vimeo or YouTube embed here once the cut is ready and this anchor will auto-play it.
-                </p>
-              </div>
+            <div className="relative aspect-video w-full rounded-3xl border border-indigo/30 bg-gradient-to-br from-charcoal via-indigo/80 to-canopy/30 overflow-hidden flex items-center justify-center">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/688YILcxjI4?autoplay=0&rel=0"
+                title="NeuroBotanica 90-second overview video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="rounded-3xl w-full h-full"
+              ></iframe>
             </div>
           </motion.div>
           <motion.div variants={fadeUp} className="grid gap-4 sm:grid-cols-3">
